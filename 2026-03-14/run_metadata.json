@@ -1,0 +1,20 @@
+{
+  "date": "2026-03-14",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.MA"
+  ],
+  "candidate_count": 3,
+  "supplementary_count": 1,
+  "focus_titles": [
+    "Location Aware Embedding for Geotargeting in Sponsored Search Advertising",
+    "Robust Self-Training with Closed-loop Label Correction for Learning from Noisy Labels"
+  ],
+  "focus_status": {
+    "Location Aware Embedding for Geotargeting in Sponsored Search Advertising": "completed",
+    "Robust Self-Training with Closed-loop Label Correction for Learning from Noisy Labels": "completed"
+  }
+}
