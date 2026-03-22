@@ -1,0 +1,5 @@
+{
+  "feishu": "completed",
+  "wecom": "failed",
+  "wecom_error": "name 'build_technical_details_text' is not defined"
+}

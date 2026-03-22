@@ -1,0 +1,18 @@
+{
+  "date": "2026-03-19",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 2,
+  "supplementary_count": 0,
+  "focus_titles": [
+    "Off-Policy Learning with Limited Supply",
+    "OCP: Orthogonal Constrained Projection for Sparse Scaling in Industrial Commodity Recommendation"
+  ],
+  "focus_status": {
+    "Off-Policy Learning with Limited Supply": "completed",
+    "OCP: Orthogonal Constrained Projection for Sparse Scaling in Industrial Commodity Recommendation": "completed"
+  }
+}

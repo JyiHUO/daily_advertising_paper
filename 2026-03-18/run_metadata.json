@@ -1,0 +1,18 @@
+{
+  "date": "2026-03-18",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 6,
+  "supplementary_count": 4,
+  "focus_titles": [
+    "Transfer Learning for Contextual Joint Assortment-Pricing under Cross-Market Heterogeneity",
+    "Variational Rectification Inference for Learning with Noisy Labels"
+  ],
+  "focus_status": {
+    "Transfer Learning for Contextual Joint Assortment-Pricing under Cross-Market Heterogeneity": "completed",
+    "Variational Rectification Inference for Learning with Noisy Labels": "completed"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "date": "2026-03-17",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.MA"
+  ],
+  "candidate_count": 8,
+  "supplementary_count": 6,
+  "focus_titles": [
+    "Online Semi-infinite Linear Programming: Efficient Algorithms via Function Approximation",
+    "A Practical Algorithm for Feature-Rich, Non-Stationary Bandit Problems"
+  ],
+  "focus_status": {
+    "Online Semi-infinite Linear Programming: Efficient Algorithms via Function Approximation": "completed",
+    "A Practical Algorithm for Feature-Rich, Non-Stationary Bandit Problems": "completed"
+  }
+}
