@@ -1,0 +1,20 @@
+{
+  "date": "2026-03-16",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.MA"
+  ],
+  "candidate_count": 5,
+  "supplementary_count": 3,
+  "focus_titles": [
+    "Robust and Computationally Efficient Linear Contextual Bandits under Adversarial Corruption and Heavy-Tailed Noise",
+    "Embedding-Aware Feature Discovery: Bridging Latent Representations and Interpretable Features in Event Sequences"
+  ],
+  "focus_status": {
+    "Robust and Computationally Efficient Linear Contextual Bandits under Adversarial Corruption and Heavy-Tailed Noise": "completed",
+    "Embedding-Aware Feature Discovery: Bridging Latent Representations and Interpretable Features in Event Sequences": "completed"
+  }
+}
