@@ -1,0 +1,20 @@
+{
+  "date": "2026-03-15",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.MA"
+  ],
+  "candidate_count": 4,
+  "supplementary_count": 2,
+  "focus_titles": [
+    "Structure-Dependent Regret and Constraint Violation Bounds for Online Convex Optimization with Time-Varying Constraints",
+    "MBD: A Model-Based Debiasing Framework Across User, Content, and Model Dimensions"
+  ],
+  "focus_status": {
+    "Structure-Dependent Regret and Constraint Violation Bounds for Online Convex Optimization with Time-Varying Constraints": "completed",
+    "MBD: A Model-Based Debiasing Framework Across User, Content, and Model Dimensions": "completed"
+  }
+}
