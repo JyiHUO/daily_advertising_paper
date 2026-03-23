@@ -1,0 +1,20 @@
+{
+  "date": "2026-03-13",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.MA"
+  ],
+  "candidate_count": 7,
+  "supplementary_count": 5,
+  "focus_titles": [
+    "Competition-Aware CPC Forecasting with Near-Market Coverage",
+    "Bridging Sequential and Contextual Features with a Dual-View of Fine-grained Core-Behaviors and Global Interest-Distribution"
+  ],
+  "focus_status": {
+    "Competition-Aware CPC Forecasting with Near-Market Coverage": "completed",
+    "Bridging Sequential and Contextual Features with a Dual-View of Fine-grained Core-Behaviors and Global Interest-Distribution": "completed"
+  }
+}
