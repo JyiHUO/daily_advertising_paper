@@ -1,0 +1,32 @@
+{
+  "date": "2026-03-12",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.MA"
+  ],
+  "candidate_count": 8,
+  "supplementary_count": 0,
+  "focus_titles": [
+    "The Privacy-Utility Trade-Off of Location Tracking in Ad Personalization",
+    "Simultaneous estimation of multiple discrete unimodal distributions under stochastic order constraints",
+    "Quantized Inference for OneRec-V2",
+    "Entropy Guided Diversification and Preference Elicitation in Agentic Recommendation Systems",
+    "Leveraging Phytolith Research using Artificial Intelligence",
+    "LLM BiasScope: A Real-Time Bias Analysis Platform for Comparative LLM Evaluation",
+    "CogSearch: A Cognitive-Aligned Multi-Agent Framework for Proactive Decision Support in E-Commerce Search",
+    "AdaFuse: Accelerating Dynamic Adapter Inference via Token-Level Pre-Gating and Fused Kernel Optimization"
+  ],
+  "focus_status": {
+    "The Privacy-Utility Trade-Off of Location Tracking in Ad Personalization": "completed",
+    "Simultaneous estimation of multiple discrete unimodal distributions under stochastic order constraints": "completed",
+    "Quantized Inference for OneRec-V2": "completed",
+    "Entropy Guided Diversification and Preference Elicitation in Agentic Recommendation Systems": "completed",
+    "Leveraging Phytolith Research using Artificial Intelligence": "completed",
+    "LLM BiasScope: A Real-Time Bias Analysis Platform for Comparative LLM Evaluation": "completed",
+    "CogSearch: A Cognitive-Aligned Multi-Agent Framework for Proactive Decision Support in E-Commerce Search": "completed",
+    "AdaFuse: Accelerating Dynamic Adapter Inference via Token-Level Pre-Gating and Fused Kernel Optimization": "completed"
+  }
+}
