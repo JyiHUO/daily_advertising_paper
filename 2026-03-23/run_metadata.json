@@ -1,0 +1,20 @@
+{
+  "date": "2026-03-23",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.MA"
+  ],
+  "candidate_count": 6,
+  "supplementary_count": 4,
+  "focus_titles": [
+    "One Model, Two Markets: Bid-Aware Generative Recommendation",
+    "TagLLM: A Fine-Grained Tag Generation Approach for Note Recommendation"
+  ],
+  "focus_status": {
+    "One Model, Two Markets: Bid-Aware Generative Recommendation": "completed",
+    "TagLLM: A Fine-Grained Tag Generation Approach for Note Recommendation": "completed"
+  }
+}
