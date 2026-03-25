@@ -1,0 +1,20 @@
+{
+  "date": "2026-03-24",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.MA"
+  ],
+  "candidate_count": 4,
+  "supplementary_count": 3,
+  "focus_titles": [
+    "Efficient Hallucination Detection: Adaptive Bayesian Estimation of Semantic Entropy with Guided Semantic Exploration",
+    "KARMA: Knowledge-Action Regularized Multimodal Alignment for Personalized Search at Taobao"
+  ],
+  "focus_status": {
+    "Efficient Hallucination Detection: Adaptive Bayesian Estimation of Semantic Entropy with Guided Semantic Exploration": "completed",
+    "KARMA: Knowledge-Action Regularized Multimodal Alignment for Personalized Search at Taobao": "completed"
+  }
+}

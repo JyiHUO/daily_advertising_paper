@@ -4,18 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-03-23
+- **日期**：2026-03-24
 - **分类**：cs.IR + cs.AI + cs.LG + cs.CL + cs.MA
-- **候选论文数**：6
+- **候选论文数**：4
 - **必读论文**：
-  - One Model, Two Markets: Bid-Aware Generative Recommendation
-  - TagLLM: A Fine-Grained Tag Generation Approach for Note Recommendation
-- **日报路径**：[2026-03-23/daily_report.md](2026-03-23/daily_report.md)
+  - Efficient Hallucination Detection: Adaptive Bayesian Estimation of Semantic Entropy with Guided Semantic Exploration
+  - KARMA: Knowledge-Action Regularized Multimodal Alignment for Personalized Search at Taobao
+- **日报路径**：[2026-03-24/daily_report.md](2026-03-24/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-03-24 | cs.IR + cs.AI + cs.LG + cs.CL + cs.MA | 4 | 1 | Efficient Hallucination Detection: Adaptive Bayesian Estimation of Semantic Entropy with Guided Semantic Exploration | [2026-03-24/daily_report.md](2026-03-24/daily_report.md) |
+|  |  |  | 2 | KARMA: Knowledge-Action Regularized Multimodal Alignment for Personalized Search at Taobao |  |
 | 2026-03-23 | cs.IR + cs.AI + cs.LG + cs.CL + cs.MA | 6 | 1 | One Model, Two Markets: Bid-Aware Generative Recommendation | [2026-03-23/daily_report.md](2026-03-23/daily_report.md) |
 |  |  |  | 2 | TagLLM: A Fine-Grained Tag Generation Approach for Note Recommendation |  |
 | 2026-03-19 | cs.IR + cs.AI + cs.LG | 2 | 1 | Off-Policy Learning with Limited Supply | [2026-03-19/daily_report.md](2026-03-19/daily_report.md) |
