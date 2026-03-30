@@ -1,0 +1,103 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-27/downloaded_pdfs/agenticrs-architecture-system-design-for-agentic-recommender-systems.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-27/assets/figure_candidates/agenticrs-architecture-system-design-for-agentic-recommender-systems",
+  "candidates": [
+    {
+      "id": "page-2-block-35",
+      "page_index": 2,
+      "caption": "Figure 1: The architecure of agentic recommender systems.",
+      "clip": [
+        18.0,
+        18.0,
+        594.0,
+        267.6984558105469
+      ],
+      "clip_area": 143826.310546875,
+      "kind": "captioned_figure",
+      "score": 42.5980701171875,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-27/assets/figure_candidates/agenticrs-architecture-system-design-for-agentic-recommender-systems/01-p3-captioned_figure.png",
+      "filename": "01-p3-captioned_figure.png"
+    },
+    {
+      "id": "page-1-block-7",
+      "page_index": 1,
+      "caption": "2.2 Core requirements for the AutoModel architecture",
+      "clip": [
+        18.0,
+        87.91348999023438,
+        594.0,
+        444.2334899902344
+      ],
+      "clip_area": 205240.32,
+      "kind": "captioned_figure",
+      "score": 41.280448,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-27/assets/figure_candidates/agenticrs-architecture-system-design-for-agentic-recommender-systems/02-p2-captioned_figure.png",
+      "filename": "02-p2-captioned_figure.png"
+    },
+    {
+      "id": "page-1-block-10",
+      "page_index": 1,
+      "caption": "3 AutoModel Architecture",
+      "clip": [
+        18.0,
+        260.006171875,
+        594.0,
+        616.326171875
+      ],
+      "clip_area": 205240.32,
+      "kind": "captioned_figure",
+      "score": 41.280448,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-27/assets/figure_candidates/agenticrs-architecture-system-design-for-agentic-recommender-systems/03-p2-captioned_figure.png",
+      "filename": "03-p2-captioned_figure.png"
+    },
+    {
+      "id": "page-1-block-11",
+      "page_index": 1,
+      "caption": "3.1 Overview",
+      "clip": [
+        18.0,
+        284.4225537109375,
+        594.0,
+        640.7425537109375
+      ],
+      "clip_area": 205240.32,
+      "kind": "captioned_figure",
+      "score": 22.280448,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-27/assets/figure_candidates/agenticrs-architecture-system-design-for-agentic-recommender-systems/04-p2-captioned_figure.png",
+      "filename": "04-p2-captioned_figure.png"
+    },
+    {
+      "id": "page-0-region-upper-right",
+      "page_index": 0,
+      "caption": "第 1 页右上区域主图候选",
+      "clip": [
+        318.24,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 82992.7296,
+      "kind": "layout_region_right_top",
+      "score": 10.92214144,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-27/assets/figure_candidates/agenticrs-architecture-system-design-for-agentic-recommender-systems/05-p1-layout_region_right_top.png",
+      "filename": "05-p1-layout_region_right_top.png"
+    },
+    {
+      "id": "page-1-region-upper-right",
+      "page_index": 1,
+      "caption": "第 2 页右上区域主图候选",
+      "clip": [
+        318.24,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 82992.7296,
+      "kind": "layout_region_right_top",
+      "score": 10.92214144,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-27/assets/figure_candidates/agenticrs-architecture-system-design-for-agentic-recommender-systems/06-p2-layout_region_right_top.png",
+      "filename": "06-p2-layout_region_right_top.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-27/assets/figure_candidates/agenticrs-architecture-system-design-for-agentic-recommender-systems/contact-sheet.svg"
+}

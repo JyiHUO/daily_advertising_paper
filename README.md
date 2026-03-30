@@ -4,18 +4,24 @@
 
 ## 最新日报
 
-- **日期**：2026-03-24
+- **日期**：2026-03-27
 - **分类**：cs.IR + cs.AI + cs.LG + cs.CL + cs.MA
 - **候选论文数**：4
 - **必读论文**：
-  - Efficient Hallucination Detection: Adaptive Bayesian Estimation of Semantic Entropy with Guided Semantic Exploration
-  - KARMA: Knowledge-Action Regularized Multimodal Alignment for Personalized Search at Taobao
-- **日报路径**：[2026-03-24/daily_report.md](2026-03-24/daily_report.md)
+  - AgenticRS-Architecture: System Design for Agentic Recommender Systems
+  - Adversarial Bandit Optimization with Globally Bounded Perturbations to Linear Losses
+  - An LP-based Sampling Policy for Multi-Armed Bandits with Side-Observations and Stochastic Availability
+  - QuitoBench: A High-Quality Open Time Series Forecasting Benchmark
+- **日报路径**：[2026-03-27/daily_report.md](2026-03-27/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-03-27 | cs.IR + cs.AI + cs.LG + cs.CL + cs.MA | 4 | 1 | AgenticRS-Architecture: System Design for Agentic Recommender Systems | [2026-03-27/daily_report.md](2026-03-27/daily_report.md) |
+|  |  |  | 2 | Adversarial Bandit Optimization with Globally Bounded Perturbations to Linear Losses |  |
+|  |  |  | 3 | An LP-based Sampling Policy for Multi-Armed Bandits with Side-Observations and Stochastic Availability |  |
+|  |  |  | 4 | QuitoBench: A High-Quality Open Time Series Forecasting Benchmark |  |
 | 2026-03-24 | cs.IR + cs.AI + cs.LG + cs.CL + cs.MA | 4 | 1 | Efficient Hallucination Detection: Adaptive Bayesian Estimation of Semantic Entropy with Guided Semantic Exploration | [2026-03-24/daily_report.md](2026-03-24/daily_report.md) |
 |  |  |  | 2 | KARMA: Knowledge-Action Regularized Multimodal Alignment for Personalized Search at Taobao |  |
 | 2026-03-23 | cs.IR + cs.AI + cs.LG + cs.CL + cs.MA | 6 | 1 | One Model, Two Markets: Bid-Aware Generative Recommendation | [2026-03-23/daily_report.md](2026-03-23/daily_report.md) |

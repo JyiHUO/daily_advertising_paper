@@ -1,0 +1,107 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-27/downloaded_pdfs/an-lp-based-sampling-policy-for-multi-armed-bandits-with-side-observations-and-s.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-27/assets/figure_candidates/an-lp-based-sampling-policy-for-multi-armed-bandits-with-side-observations-and-s",
+  "candidates": [
+    {
+      "id": "page-3-block-13",
+      "page_index": 3,
+      "caption": "In this section, we first outline the UCB-LP framework, which motivates our design. Subsequently, we detail the pro- posed UCB-LP-A policy (Algorithm 1).",
+      "clip": [
+        18.0,
+        201.9664990234375,
+        594.0,
+        558.2864990234375
+      ],
+      "clip_area": 205240.32,
+      "kind": "captioned_figure",
+      "score": 29.280448,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-27/assets/figure_candidates/an-lp-based-sampling-policy-for-multi-armed-bandits-with-side-observations-and-s/01-p4-captioned_figure.png",
+      "filename": "01-p4-captioned_figure.png"
+    },
+    {
+      "id": "page-6-embedded-2-0",
+      "page_index": 6,
+      "caption": "Fig. 3: Regret comparison for a simulated social network generated using Barab´asi–Albert (BA) model with m = 3 .",
+      "clip": [
+        386.52899169921875,
+        38.54228973388672,
+        575.0357666015625,
+        171.68902587890625
+      ],
+      "clip_area": 25099.061819470953,
+      "kind": "embedded_image_with_caption",
+      "xref": 448,
+      "score": 23.27887846466079,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-27/assets/figure_candidates/an-lp-based-sampling-policy-for-multi-armed-bandits-with-side-observations-and-s/02-p7-embedded_image_with_caption.png",
+      "filename": "02-p7-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-6-embedded-0-0",
+      "page_index": 6,
+      "caption": "Fig. 3: Regret comparison for a simulated social network generated using Barab´asi–Albert (BA) model with m = 3 .",
+      "clip": [
+        36.9640007019043,
+        38.54228973388672,
+        225.4707489013672,
+        171.68902587890625
+      ],
+      "clip_area": 25099.05826406952,
+      "kind": "embedded_image_with_caption",
+      "xref": 446,
+      "score": 23.27887842515633,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-27/assets/figure_candidates/an-lp-based-sampling-policy-for-multi-armed-bandits-with-side-observations-and-s/03-p7-embedded_image_with_caption.png",
+      "filename": "03-p7-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-6-embedded-1-0",
+      "page_index": 6,
+      "caption": "Fig. 3: Regret comparison for a simulated social network generated using Barab´asi–Albert (BA) model with m = 3 .",
+      "clip": [
+        211.7469940185547,
+        38.54228973388672,
+        400.25372314453125,
+        171.68902587890625
+      ],
+      "clip_area": 25099.05572449707,
+      "kind": "embedded_image_with_caption",
+      "xref": 447,
+      "score": 23.278878396938858,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-27/assets/figure_candidates/an-lp-based-sampling-policy-for-multi-armed-bandits-with-side-observations-and-s/04-p7-embedded_image_with_caption.png",
+      "filename": "04-p7-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-2-embedded-0-0",
+      "page_index": 2,
+      "caption": "Fig. 1: Example of a social network with 2 activation sets and side information.",
+      "clip": [
+        85.27200317382812,
+        332.5769958496094,
+        263.7120056152344,
+        465.11700439453125
+      ],
+      "clip_area": 23650.439448339865,
+      "kind": "embedded_image_with_caption",
+      "xref": 439,
+      "score": 18.26278266053711,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-27/assets/figure_candidates/an-lp-based-sampling-policy-for-multi-armed-bandits-with-side-observations-and-s/05-p3-embedded_image_with_caption.png",
+      "filename": "05-p3-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-7-block-5",
+      "page_index": 7,
+      "caption": "Fig. 5: Example routing problem and regret comparison.",
+      "clip": [
+        26.964000701904297,
+        286.3567199707031,
+        322.0247497558594,
+        431.6419982910156
+      ],
+      "clip_area": 42867.98304770375,
+      "kind": "image_block_with_caption",
+      "score": 12.476310922752264,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-27/assets/figure_candidates/an-lp-based-sampling-policy-for-multi-armed-bandits-with-side-observations-and-s/06-p8-image_block_with_caption.png",
+      "filename": "06-p8-image_block_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-27/assets/figure_candidates/an-lp-based-sampling-policy-for-multi-armed-bandits-with-side-observations-and-s/contact-sheet.svg"
+}

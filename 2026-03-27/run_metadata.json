@@ -1,0 +1,24 @@
+{
+  "date": "2026-03-27",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.MA"
+  ],
+  "candidate_count": 4,
+  "supplementary_count": 0,
+  "focus_titles": [
+    "AgenticRS-Architecture: System Design for Agentic Recommender Systems",
+    "Adversarial Bandit Optimization with Globally Bounded Perturbations to Linear Losses",
+    "An LP-based Sampling Policy for Multi-Armed Bandits with Side-Observations and Stochastic Availability",
+    "QuitoBench: A High-Quality Open Time Series Forecasting Benchmark"
+  ],
+  "focus_status": {
+    "AgenticRS-Architecture: System Design for Agentic Recommender Systems": "completed",
+    "Adversarial Bandit Optimization with Globally Bounded Perturbations to Linear Losses": "completed",
+    "An LP-based Sampling Policy for Multi-Armed Bandits with Side-Observations and Stochastic Availability": "completed",
+    "QuitoBench: A High-Quality Open Time Series Forecasting Benchmark": "completed"
+  }
+}

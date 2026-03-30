@@ -1,0 +1,71 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-24/downloaded_pdfs/karma-knowledge-action-regularized-multimodal-alignment-for-personalized-search-.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-24/downloaded_pdfs/karma-knowledge-action-regularized-multimodal-alignment-for-personalized-search-figure-candidates",
+  "candidates": [
+    {
+      "id": "page-0-region-upper-right",
+      "page_index": 0,
+      "caption": "第 1 页右上区域主图候选",
+      "clip": [
+        318.24,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 82992.7296,
+      "kind": "layout_region_right_top",
+      "score": 10.92214144,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-24/downloaded_pdfs/karma-knowledge-action-regularized-multimodal-alignment-for-personalized-search-figure-candidates/01-p1-layout_region_right_top.png",
+      "filename": "01-p1-layout_region_right_top.png"
+    },
+    {
+      "id": "page-1-region-upper-right",
+      "page_index": 1,
+      "caption": "第 2 页右上区域主图候选",
+      "clip": [
+        318.24,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 82992.7296,
+      "kind": "layout_region_right_top",
+      "score": 10.92214144,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-24/downloaded_pdfs/karma-knowledge-action-regularized-multimodal-alignment-for-personalized-search-figure-candidates/02-p2-layout_region_right_top.png",
+      "filename": "02-p2-layout_region_right_top.png"
+    },
+    {
+      "id": "page-0-region-upper-full",
+      "page_index": 0,
+      "caption": "第 1 页上半页主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 173352.96000000002,
+      "kind": "layout_region_upper_page",
+      "score": 7.926144000000001,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-24/downloaded_pdfs/karma-knowledge-action-regularized-multimodal-alignment-for-personalized-search-figure-candidates/03-p1-layout_region_upper_page.png",
+      "filename": "03-p1-layout_region_upper_page.png"
+    },
+    {
+      "id": "page-1-region-upper-full",
+      "page_index": 1,
+      "caption": "第 2 页上半页主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 173352.96000000002,
+      "kind": "layout_region_upper_page",
+      "score": 7.926144000000001,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-24/downloaded_pdfs/karma-knowledge-action-regularized-multimodal-alignment-for-personalized-search-figure-candidates/04-p2-layout_region_upper_page.png",
+      "filename": "04-p2-layout_region_upper_page.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-24/downloaded_pdfs/karma-knowledge-action-regularized-multimodal-alignment-for-personalized-search-figure-candidates/contact-sheet.svg"
+}

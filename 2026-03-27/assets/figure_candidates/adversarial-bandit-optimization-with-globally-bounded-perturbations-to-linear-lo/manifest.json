@@ -1,0 +1,71 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-27/downloaded_pdfs/adversarial-bandit-optimization-with-globally-bounded-perturbations-to-linear-lo.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-27/assets/figure_candidates/adversarial-bandit-optimization-with-globally-bounded-perturbations-to-linear-lo",
+  "candidates": [
+    {
+      "id": "page-0-region-upper-right",
+      "page_index": 0,
+      "caption": "第 1 页右上区域主图候选",
+      "clip": [
+        309.40000000000003,
+        151.56,
+        577.0,
+        471.52000000000004
+      ],
+      "clip_area": 85621.296,
+      "kind": "layout_region_right_top",
+      "score": 10.951347733333334,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-27/assets/figure_candidates/adversarial-bandit-optimization-with-globally-bounded-perturbations-to-linear-lo/01-p1-layout_region_right_top.png",
+      "filename": "01-p1-layout_region_right_top.png"
+    },
+    {
+      "id": "page-1-region-upper-right",
+      "page_index": 1,
+      "caption": "第 2 页右上区域主图候选",
+      "clip": [
+        309.40000000000003,
+        151.56,
+        577.0,
+        471.52000000000004
+      ],
+      "clip_area": 85621.296,
+      "kind": "layout_region_right_top",
+      "score": 10.951347733333334,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-27/assets/figure_candidates/adversarial-bandit-optimization-with-globally-bounded-perturbations-to-linear-lo/02-p2-layout_region_right_top.png",
+      "filename": "02-p2-layout_region_right_top.png"
+    },
+    {
+      "id": "page-0-region-upper-full",
+      "page_index": 0,
+      "caption": "第 1 页上半页主图候选",
+      "clip": [
+        18.0,
+        151.56,
+        577.0,
+        471.52000000000004
+      ],
+      "clip_area": 178857.64,
+      "kind": "layout_region_upper_page",
+      "score": 7.987307111111111,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-27/assets/figure_candidates/adversarial-bandit-optimization-with-globally-bounded-perturbations-to-linear-lo/03-p1-layout_region_upper_page.png",
+      "filename": "03-p1-layout_region_upper_page.png"
+    },
+    {
+      "id": "page-1-region-upper-full",
+      "page_index": 1,
+      "caption": "第 2 页上半页主图候选",
+      "clip": [
+        18.0,
+        151.56,
+        577.0,
+        471.52000000000004
+      ],
+      "clip_area": 178857.64,
+      "kind": "layout_region_upper_page",
+      "score": 7.987307111111111,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-27/assets/figure_candidates/adversarial-bandit-optimization-with-globally-bounded-perturbations-to-linear-lo/04-p2-layout_region_upper_page.png",
+      "filename": "04-p2-layout_region_upper_page.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-27/assets/figure_candidates/adversarial-bandit-optimization-with-globally-bounded-perturbations-to-linear-lo/contact-sheet.svg"
+}
