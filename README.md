@@ -4,20 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-03-27
+- **日期**：2026-03-31
 - **分类**：cs.IR + cs.AI + cs.LG + cs.CL + cs.MA
-- **候选论文数**：4
+- **候选论文数**：5
 - **必读论文**：
-  - AgenticRS-Architecture: System Design for Agentic Recommender Systems
-  - Adversarial Bandit Optimization with Globally Bounded Perturbations to Linear Losses
-  - An LP-based Sampling Policy for Multi-Armed Bandits with Side-Observations and Stochastic Availability
-  - QuitoBench: A High-Quality Open Time Series Forecasting Benchmark
-- **日报路径**：[2026-03-27/daily_report.md](2026-03-27/daily_report.md)
+  - RCLRec: Reverse Curriculum Learning for Modeling Sparse Conversions in Generative Recommendation
+  - Hidden Ads: Behavior Triggered Semantic Backdoors for Advertisement Injection in Vision Language Models
+- **日报路径**：[2026-03-31/daily_report.md](2026-03-31/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-03-31 | cs.IR + cs.AI + cs.LG + cs.CL + cs.MA | 5 | 1 | RCLRec: Reverse Curriculum Learning for Modeling Sparse Conversions in Generative Recommendation | [2026-03-31/daily_report.md](2026-03-31/daily_report.md) |
+|  |  |  | 2 | Hidden Ads: Behavior Triggered Semantic Backdoors for Advertisement Injection in Vision Language Models |  |
 | 2026-03-27 | cs.IR + cs.AI + cs.LG + cs.CL + cs.MA | 4 | 1 | AgenticRS-Architecture: System Design for Agentic Recommender Systems | [2026-03-27/daily_report.md](2026-03-27/daily_report.md) |
 |  |  |  | 2 | Adversarial Bandit Optimization with Globally Bounded Perturbations to Linear Losses |  |
 |  |  |  | 3 | An LP-based Sampling Policy for Multi-Armed Bandits with Side-Observations and Stochastic Availability |  |
