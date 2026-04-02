@@ -10,8 +10,8 @@
   "candidate_count": 5,
   "supplementary_count": 0,
   "focus_titles": [
-    "RCLRec: Reverse Curriculum Learning for Modeling Sparse Conversions in Generative Recommendation",
-    "Hidden Ads: Behavior Triggered Semantic Backdoors for Advertisement Injection in Vision Language Models"
+    "Hidden Ads: Behavior Triggered Semantic Backdoors for Advertisement Injection in Vision Language Models",
+    "RCLRec: Reverse Curriculum Learning for Modeling Sparse Conversions in Generative Recommendation"
   ],
   "focus_status": {
     "Hidden Ads: Behavior Triggered Semantic Backdoors for Advertisement Injection in Vision Language Models": "completed",

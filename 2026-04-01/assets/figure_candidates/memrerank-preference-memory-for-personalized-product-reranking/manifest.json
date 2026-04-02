@@ -1,0 +1,119 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-01/downloaded_pdfs/memrerank-preference-memory-for-personalized-product-reranking.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-01/assets/figure_candidates/memrerank-preference-memory-for-personalized-product-reranking",
+  "candidates": [
+    {
+      "id": "page-7-embedded-1-0",
+      "page_index": 7,
+      "caption": "Figure 2: Impact of purchase history length on downstream personalized product reranking accuracy without explicit memory extraction. The vertical axis varies the number of within-category products, and the horizontal axis varies the number of cross-category products.",
+      "clip": [
+        77.29299926757812,
+        242.5464324951172,
+        282.706298828125,
+        420.0400085449219
+      ],
+      "clip_area": 36459.54110719124,
+      "page_area": 501156.9211820215,
+      "text_density": 0.05370338504646249,
+      "kind": "embedded_image_with_caption",
+      "xref": 390,
+      "score": 41.40510601230213,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-01/assets/figure_candidates/memrerank-preference-memory-for-personalized-product-reranking/01-p8-embedded_image_with_caption.png",
+      "filename": "01-p8-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-7-embedded-0-0",
+      "page_index": 7,
+      "caption": "第 8 页内嵌图片候选",
+      "clip": [
+        77.29299926757812,
+        58.86778259277344,
+        282.70526123046875,
+        234.19403076171875
+      ],
+      "clip_area": 36014.16121785017,
+      "page_area": 501156.9211820215,
+      "text_density": 0.030264555241233938,
+      "kind": "embedded_image",
+      "xref": 389,
+      "score": 5.400157346865002,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-01/assets/figure_candidates/memrerank-preference-memory-for-personalized-product-reranking/02-p8-embedded_image.png",
+      "filename": "02-p8-embedded_image.png"
+    },
+    {
+      "id": "page-6-embedded-1-0",
+      "page_index": 6,
+      "caption": "第 7 页内嵌图片候选",
+      "clip": [
+        65.9530029296875,
+        206.92352294921875,
+        294.04827880859375,
+        346.6330261230469
+      ],
+      "clip_area": 31867.077669339254,
+      "page_area": 501156.9211820215,
+      "text_density": 0.06815248283610587,
+      "kind": "embedded_image",
+      "xref": 388,
+      "score": 5.354078640770436,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-01/assets/figure_candidates/memrerank-preference-memory-for-personalized-product-reranking/03-p7-embedded_image.png",
+      "filename": "03-p7-embedded_image.png"
+    },
+    {
+      "id": "page-6-embedded-0-0",
+      "page_index": 6,
+      "caption": "第 7 页内嵌图片候选",
+      "clip": [
+        65.9530029296875,
+        58.863502502441406,
+        294.04827880859375,
+        198.572998046875
+      ],
+      "clip_area": 31867.075929110404,
+      "page_area": 501156.9211820215,
+      "text_density": 0.038604086285318466,
+      "kind": "embedded_image",
+      "xref": 387,
+      "score": 5.35407862143456,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-01/assets/figure_candidates/memrerank-preference-memory-for-personalized-product-reranking/04-p7-embedded_image.png",
+      "filename": "04-p7-embedded_image.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        151.54020263671873,
+        281.6852404785156,
+        471.45840820312503
+      ],
+      "clip_area": 84357.70896823303,
+      "kind": "layout_region_left_top",
+      "page_area": 501156.9211820215,
+      "text_density": 0.5588732874316706,
+      "score": -11.06269212257519,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-01/assets/figure_candidates/memrerank-preference-memory-for-personalized-product-reranking/05-p1-layout_region_left_top.png",
+      "filename": "05-p1-layout_region_left_top.png"
+    },
+    {
+      "id": "page-1-region-upper-left",
+      "page_index": 1,
+      "caption": "第 2 页左上区域主图候选",
+      "clip": [
+        18.0,
+        151.54020263671873,
+        281.6852404785156,
+        471.45840820312503
+      ],
+      "clip_area": 84357.70896823303,
+      "kind": "layout_region_left_top",
+      "page_area": 501156.9211820215,
+      "text_density": 0.766024713052513,
+      "score": -11.06269212257519,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-01/assets/figure_candidates/memrerank-preference-memory-for-personalized-product-reranking/06-p2-layout_region_left_top.png",
+      "filename": "06-p2-layout_region_left_top.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-01/assets/figure_candidates/memrerank-preference-memory-for-personalized-product-reranking/contact-sheet.svg"
+}

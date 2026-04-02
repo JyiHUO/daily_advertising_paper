@@ -1,0 +1,20 @@
+{
+  "date": "2026-04-01",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.MA"
+  ],
+  "candidate_count": 4,
+  "supplementary_count": 0,
+  "focus_titles": [
+    "Monodense Deep Neural Model for Determining Item Price Elasticity",
+    "MemRerank: Preference Memory for Personalized Product Reranking"
+  ],
+  "focus_status": {
+    "Monodense Deep Neural Model for Determining Item Price Elasticity": "completed",
+    "MemRerank: Preference Memory for Personalized Product Reranking": "completed"
+  }
+}

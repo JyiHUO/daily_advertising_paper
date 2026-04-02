@@ -40,22 +40,23 @@
       }
     },
     "selected_figure": {
-      "id": "page-1-embedded-0-0",
-      "page_index": 1,
-      "caption": "第 2 页内嵌图片候选",
+      "id": "page-4-drawing-cluster-0",
+      "page_index": 4,
+      "caption": "第 5 页矢量图主图候选",
       "clip": [
-        305.8800048828125,
-        59.996337890625,
-        569.998046875,
-        342.8890075683594
+        301.8800048828125,
+        57.99578857421875,
+        574.009033203125,
+        313.94757080078125
       ],
-      "clip_area": 74717.05800922588,
-      "kind": "embedded_image",
-      "xref": 480,
-      "score": 7.830189533435843,
-      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-31/assets/figure_candidates/hidden-ads-behavior-triggered-semantic-backdoors-for-advertisement-injection-in-/05-p2-embedded_image.png",
-      "filename": "05-p2-embedded_image.png",
-      "selection_reason": "这张图最直接展示了论文核心方法与行为差异：上中下三部分分别对比传统后门、正常使用和作者提出的 Hidden Ads，清楚呈现了触发条件、VLM 响应变化以及“语义+意图”双重触发后插入广告语的机制。它不是实验结果图，而是方法/攻击行为总览图，最能代表论文主旨。相比页面级裁剪，这个内嵌图更完整、聚焦、可读性更好。",
+      "clip_area": 69651.90979416668,
+      "page_area": 484704.0,
+      "text_density": 0.1455464080539431,
+      "kind": "drawing_cluster",
+      "score": 4.841125625587489,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-31/assets/figure_candidates/hidden-ads-behavior-triggered-semantic-backdoors-for-advertisement-injection-in-/03-p5-drawing_cluster.png",
+      "filename": "03-p5-drawing_cluster.png",
+      "selection_reason": "该图是完整、聚焦的三层攻击框架总览，直接展示 Hidden Ads 的核心方法与威胁路径：硬提示、软提示、微调三种植入层级，以及与 VLM 的关系和控制边界。相比带 caption 的版本，这个候选正文噪声更少、图形主体更完整清晰，更适合作为日报主架构图。其他候选要么是行为示例图、要么含大量正文，不如这张能代表论文方法全貌。",
       "selection_confidence": "high"
     }
   },
@@ -100,22 +101,24 @@
       }
     },
     "selected_figure": {
-      "id": "page-1-region-upper-full",
-      "page_index": 1,
-      "caption": "第 2 页上半页主图候选",
+      "id": "page-2-drawing-caption-53",
+      "page_index": 2,
+      "caption": "Figure 2: Overview of RCLRec. It uses a Reverse Curriculum Prefix Module (RCPM) to select conversion-relevant interactions from history as a decoder-side prefix, and is trained with a curriculum quality-aware loss.",
       "clip": [
-        18.0,
-        142.56,
-        594.0,
-        443.52000000000004
+        61.019996643066406,
+        67.68330383300781,
+        550.9971923828125,
+        269.6277770996094
       ],
-      "clip_area": 173352.96000000002,
-      "kind": "layout_region_upper_page",
-      "score": 7.926144000000001,
-      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-31/assets/figure_candidates/rclrec-reverse-curriculum-learning-for-modeling-sparse-conversions-in-generative/05-p2-layout_region_upper_page.png",
-      "filename": "05-p2-layout_region_upper_page.png",
-      "selection_reason": "该图中左上包含论文的核心方法总览图（Figure 1），能看到编码器/解码器、Reverse curriculum 相关模块以及信息流，属于方法框架示意；相比其他候选，page-3-block-35 是实验曲线和表格，page-0 的几个区域基本没有主图内容，page-1-region-upper-right 主要是正文公式。虽然该候选裁剪中还带有部分正文，但仍是最能代表论文核心方法的一张。",
-      "selection_confidence": "medium"
+      "clip_area": 98948.18670630956,
+      "page_area": 484704.0,
+      "text_density": 0.2751709389119412,
+      "kind": "drawing_cluster_with_caption",
+      "score": 44.389167962020295,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-31/assets/figure_candidates/rclrec-reverse-curriculum-learning-for-modeling-sparse-conversions-in-generative/02-p3-drawing_cluster_with_caption.png",
+      "filename": "02-p3-drawing_cluster_with_caption.png",
+      "selection_reason": "这是论文的明确方法总览图（Figure 2: Overview of RCLRec），直接展示了RCLRec的整体架构，包括Reverse Curriculum Prefix Module、Curriculum Quality-Aware Loss以及与encoder/decoder的信息流关系，最能代表论文核心方法。相比Figure 1更偏动机+对比示意，这张图对模块组成和训练流程表达更完整；虽然带少量caption文字，但主体图完整清晰，仍明显优于实验曲线图。",
+      "selection_confidence": "high"
     }
   }
 ]

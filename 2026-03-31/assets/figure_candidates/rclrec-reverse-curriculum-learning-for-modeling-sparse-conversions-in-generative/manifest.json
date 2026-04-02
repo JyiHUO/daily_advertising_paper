@@ -3,84 +3,112 @@
   "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-31/assets/figure_candidates/rclrec-reverse-curriculum-learning-for-modeling-sparse-conversions-in-generative",
   "candidates": [
     {
-      "id": "page-3-block-35",
+      "id": "page-1-drawing-caption-46",
+      "page_index": 1,
+      "caption": "Figure 1: (a) Multi-behavior history–target semantic rele- vance. (b) Standard GR method. (c) Behavior-wise relevance statistics showing that conversions are preceded by more coherent clusters of related items. (d) Our proposed RCLRec.",
+      "clip": [
+        41.80500030517578,
+        67.68766021728516,
+        306.03619384765625,
+        223.64434814453125
+      ],
+      "clip_area": 41208.62179194839,
+      "page_area": 484704.0,
+      "text_density": 0.22487734900260337,
+      "kind": "drawing_cluster_with_caption",
+      "score": 49.76523263530989,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-31/assets/figure_candidates/rclrec-reverse-curriculum-learning-for-modeling-sparse-conversions-in-generative/01-p2-drawing_cluster_with_caption.png",
+      "filename": "01-p2-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-2-drawing-caption-53",
+      "page_index": 2,
+      "caption": "Figure 2: Overview of RCLRec. It uses a Reverse Curriculum Prefix Module (RCPM) to select conversion-relevant interactions from history as a decoder-side prefix, and is trained with a curriculum quality-aware loss.",
+      "clip": [
+        61.019996643066406,
+        67.68330383300781,
+        550.9971923828125,
+        269.6277770996094
+      ],
+      "clip_area": 98948.18670630956,
+      "page_area": 484704.0,
+      "text_density": 0.2751709389119412,
+      "kind": "drawing_cluster_with_caption",
+      "score": 44.389167962020295,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-31/assets/figure_candidates/rclrec-reverse-curriculum-learning-for-modeling-sparse-conversions-in-generative/02-p3-drawing_cluster_with_caption.png",
+      "filename": "02-p3-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-1-drawing-cluster-0",
+      "page_index": 1,
+      "caption": "第 2 页矢量图主图候选",
+      "clip": [
+        43.80500030517578,
+        69.68766021728516,
+        304.03619384765625,
+        221.64434814453125
+      ],
+      "clip_area": 39543.87026606948,
+      "page_area": 484704.0,
+      "text_density": 0.21284367437083973,
+      "kind": "drawing_cluster",
+      "score": 6.468755874039277,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-31/assets/figure_candidates/rclrec-reverse-curriculum-learning-for-modeling-sparse-conversions-in-generative/03-p2-drawing_cluster.png",
+      "filename": "03-p2-drawing_cluster.png"
+    },
+    {
+      "id": "page-3-drawing-cluster-0",
+      "page_index": 3,
+      "caption": "第 4 页矢量图主图候选",
+      "clip": [
+        313.9679870605469,
+        210.3548583984375,
+        562.1689453125,
+        309.97027587890625
+      ],
+      "clip_area": 24724.642075320706,
+      "page_area": 484704.0,
+      "text_density": 0.2048204867996174,
+      "kind": "drawing_cluster",
+      "score": 2.7854890373042984,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-31/assets/figure_candidates/rclrec-reverse-curriculum-learning-for-modeling-sparse-conversions-in-generative/04-p4-drawing_cluster.png",
+      "filename": "04-p4-drawing_cluster.png"
+    },
+    {
+      "id": "page-2-drawing-cluster-0",
+      "page_index": 2,
+      "caption": "第 3 页矢量图主图候选",
+      "clip": [
+        63.019996643066406,
+        69.68330383300781,
+        548.9971923828125,
+        267.6277770996094
+      ],
+      "clip_area": 96196.50003028417,
+      "page_area": 484704.0,
+      "text_density": 0.26498685981628756,
+      "kind": "drawing_cluster",
+      "score": -0.030361588640761994,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-31/assets/figure_candidates/rclrec-reverse-curriculum-learning-for-modeling-sparse-conversions-in-generative/05-p3-drawing_cluster.png",
+      "filename": "05-p3-drawing_cluster.png"
+    },
+    {
+      "id": "page-3-drawing-caption-35",
       "page_index": 3,
       "caption": "Figure 3: Scalability and sensitivity of curriculum length 𝑘 .",
       "clip": [
-        18.0,
-        18.0,
-        594.0,
-        281.12774658203125
+        311.9679870605469,
+        208.3548583984375,
+        564.1689453125,
+        311.97027587890625
       ],
-      "clip_area": 151561.58203125,
-      "kind": "captioned_figure",
-      "score": 16.684017578125,
-      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-31/assets/figure_candidates/rclrec-reverse-curriculum-learning-for-modeling-sparse-conversions-in-generative/01-p4-captioned_figure.png",
-      "filename": "01-p4-captioned_figure.png"
-    },
-    {
-      "id": "page-0-region-upper-right",
-      "page_index": 0,
-      "caption": "第 1 页右上区域主图候选",
-      "clip": [
-        318.24,
-        142.56,
-        594.0,
-        443.52000000000004
-      ],
-      "clip_area": 82992.7296,
-      "kind": "layout_region_right_top",
-      "score": 10.92214144,
-      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-31/assets/figure_candidates/rclrec-reverse-curriculum-learning-for-modeling-sparse-conversions-in-generative/02-p1-layout_region_right_top.png",
-      "filename": "02-p1-layout_region_right_top.png"
-    },
-    {
-      "id": "page-1-region-upper-right",
-      "page_index": 1,
-      "caption": "第 2 页右上区域主图候选",
-      "clip": [
-        318.24,
-        142.56,
-        594.0,
-        443.52000000000004
-      ],
-      "clip_area": 82992.7296,
-      "kind": "layout_region_right_top",
-      "score": 10.92214144,
-      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-31/assets/figure_candidates/rclrec-reverse-curriculum-learning-for-modeling-sparse-conversions-in-generative/03-p2-layout_region_right_top.png",
-      "filename": "03-p2-layout_region_right_top.png"
-    },
-    {
-      "id": "page-0-region-upper-full",
-      "page_index": 0,
-      "caption": "第 1 页上半页主图候选",
-      "clip": [
-        18.0,
-        142.56,
-        594.0,
-        443.52000000000004
-      ],
-      "clip_area": 173352.96000000002,
-      "kind": "layout_region_upper_page",
-      "score": 7.926144000000001,
-      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-31/assets/figure_candidates/rclrec-reverse-curriculum-learning-for-modeling-sparse-conversions-in-generative/04-p1-layout_region_upper_page.png",
-      "filename": "04-p1-layout_region_upper_page.png"
-    },
-    {
-      "id": "page-1-region-upper-full",
-      "page_index": 1,
-      "caption": "第 2 页上半页主图候选",
-      "clip": [
-        18.0,
-        142.56,
-        594.0,
-        443.52000000000004
-      ],
-      "clip_area": 173352.96000000002,
-      "kind": "layout_region_upper_page",
-      "score": 7.926144000000001,
-      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-31/assets/figure_candidates/rclrec-reverse-curriculum-learning-for-modeling-sparse-conversions-in-generative/05-p2-layout_region_upper_page.png",
-      "filename": "05-p2-layout_region_upper_page.png"
+      "clip_area": 26131.907578250393,
+      "page_area": 484704.0,
+      "text_density": 0.2131498617027288,
+      "kind": "drawing_cluster_with_caption",
+      "score": -2.6986371735165022,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-31/assets/figure_candidates/rclrec-reverse-curriculum-learning-for-modeling-sparse-conversions-in-generative/06-p4-drawing_cluster_with_caption.png",
+      "filename": "06-p4-drawing_cluster_with_caption.png"
     }
   ],
   "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-03-31/assets/figure_candidates/rclrec-reverse-curriculum-learning-for-modeling-sparse-conversions-in-generative/contact-sheet.svg"
