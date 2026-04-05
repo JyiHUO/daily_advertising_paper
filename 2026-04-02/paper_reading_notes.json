@@ -1,0 +1,74 @@
+[
+  {
+    "title": "UniMixer: A Unified Architecture for Scaling Laws in Recommendation Systems",
+    "status": "llm_failed",
+    "reason": "LLM 分析失败: Error code: 502",
+    "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-02/downloaded_pdfs/unimixer-a-unified-architecture-for-scaling-laws-in-recommendation-systems.pdf",
+    "analysis": {
+      "pick_reason": "推荐系统统一架构与Scaling Law研究，作者包含Kun Gai（快手/阿里广告技术团队常见作者），可能与广告排序模型同构",
+      "background": "UniMixer: A Unified Architecture for Scaling Laws in Recommendation Systems 值得关注，但当前只能给保守判断。LLM 分析失败: Error code: 502",
+      "core_points": [],
+      "ad_transfer": {
+        "best_layer": "待确认",
+        "value": "存在一定启发，但需要 PDF 支撑。",
+        "risk": "信息不完整。"
+      }
+    },
+    "selected_figure": {
+      "id": "page-4-drawing-caption-29",
+      "page_index": 4,
+      "caption": "Figure 2: The UniMixer architecture for scaling laws in recommendation systems.",
+      "clip": [
+        109.8010025024414,
+        145.8813934326172,
+        502.18817138671875,
+        350.6669921875
+      ],
+      "clip_area": 80355.24132370006,
+      "page_area": 484704.0,
+      "text_density": 0.11303533317672441,
+      "kind": "drawing_cluster_with_caption",
+      "score": 84.91071602410432,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-02/assets/figure_candidates/unimixer-a-unified-architecture-for-scaling-laws-in-recommendation-systems/01-p5-drawing_cluster_with_caption.png",
+      "filename": "01-p5-drawing_cluster_with_caption.png",
+      "selection_reason": "该图是完整且聚焦的主架构图，标题直接表明为“UniMixer architecture”，清楚展示了Embedding Layer、Token-Specific Linear Layer、UniMixer Block、UniMixing/PerToken SwiGLU、任务塔以及左右分支（UniMixing 与 UniMixing-Lite）之间的模块关系与信息流，最能代表论文核心方法。相比之下，Figure 1 和 Figure 4 都是 scaling law 结果曲线，不是方法总览；page-4-block-29 虽然也是同一图，但包含较多正文噪声，不如当前这个裁剪干净。",
+      "selection_confidence": "high"
+    }
+  },
+  {
+    "title": "MOON3.0: Reasoning-aware Multimodal Representation Learning for E-commerce Product Understanding",
+    "status": "llm_failed",
+    "reason": "LLM 分析失败: Error code: 502",
+    "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-02/downloaded_pdfs/moon3-0-reasoning-aware-multimodal-representation-learning-for-e-commerce-produc.pdf",
+    "analysis": {
+      "pick_reason": "电商产品理解的多模态表示学习，作者团队（Jian Xu, Bo Zheng等）来自阿里巴巴广告/搜索团队，与广告商品理解相关",
+      "background": "MOON3.0: Reasoning-aware Multimodal Representation Learning for E-commerce Product Understanding 值得关注，但当前只能给保守判断。LLM 分析失败: Error code: 502",
+      "core_points": [],
+      "ad_transfer": {
+        "best_layer": "待确认",
+        "value": "存在一定启发，但需要 PDF 支撑。",
+        "risk": "信息不完整。"
+      }
+    },
+    "selected_figure": {
+      "id": "page-3-drawing-caption-85",
+      "page_index": 3,
+      "caption": "Figure 3: Pipeline of our MOON3.0 . Each element in the training triplet (query, positive, and negative items) is represented in three modalities: image-only, text-only, and multimodal (image and text). “Attr.” denotes product attributes.",
+      "clip": [
+        55.087310791015625,
+        68.84536743164062,
+        557.04296875,
+        412.1872863769531
+      ],
+      "clip_area": 172342.41882909462,
+      "page_area": 484704.0,
+      "text_density": 0.33411405835114005,
+      "kind": "drawing_cluster_with_caption",
+      "score": 35.13066864415057,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-02/assets/figure_candidates/moon3-0-reasoning-aware-multimodal-representation-learning-for-e-commerce-produc/01-p4-drawing_cluster_with_caption.png",
+      "filename": "01-p4-drawing_cluster_with_caption.png",
+      "selection_reason": "该候选是明确的主方法图，caption直接标注为“Pipeline of our MOON3.0”，图中完整展示了输入三元组、多模态编码、LLM、融合、reasoning-aware embedding、奖励系统与联合对比学习/强化学习等核心模块及信息流，最能代表论文方法全貌。虽然文字较多、面积较大，但图主体完整且模块关系清晰。其余候选均为Figure 2的属性对比示意，只展示案例/现象，不是模型架构总览。",
+      "selection_confidence": "high"
+    }
+  }
+]

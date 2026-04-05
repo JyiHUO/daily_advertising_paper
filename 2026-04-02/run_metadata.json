@@ -1,0 +1,20 @@
+{
+  "date": "2026-04-02",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL",
+    "cs.MA"
+  ],
+  "candidate_count": 2,
+  "supplementary_count": 0,
+  "focus_titles": [
+    "UniMixer: A Unified Architecture for Scaling Laws in Recommendation Systems",
+    "MOON3.0: Reasoning-aware Multimodal Representation Learning for E-commerce Product Understanding"
+  ],
+  "focus_status": {
+    "UniMixer: A Unified Architecture for Scaling Laws in Recommendation Systems": "llm_failed",
+    "MOON3.0: Reasoning-aware Multimodal Representation Learning for E-commerce Product Understanding": "llm_failed"
+  }
+}

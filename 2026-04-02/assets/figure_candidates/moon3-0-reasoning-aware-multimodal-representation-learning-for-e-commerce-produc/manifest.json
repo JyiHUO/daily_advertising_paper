@@ -1,0 +1,119 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-02/downloaded_pdfs/moon3-0-reasoning-aware-multimodal-representation-learning-for-e-commerce-produc.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-02/assets/figure_candidates/moon3-0-reasoning-aware-multimodal-representation-learning-for-e-commerce-produc",
+  "candidates": [
+    {
+      "id": "page-3-drawing-caption-85",
+      "page_index": 3,
+      "caption": "Figure 3: Pipeline of our MOON3.0 . Each element in the training triplet (query, positive, and negative items) is represented in three modalities: image-only, text-only, and multimodal (image and text). “Attr.” denotes product attributes.",
+      "clip": [
+        55.087310791015625,
+        68.84536743164062,
+        557.04296875,
+        412.1872863769531
+      ],
+      "clip_area": 172342.41882909462,
+      "page_area": 484704.0,
+      "text_density": 0.33411405835114005,
+      "kind": "drawing_cluster_with_caption",
+      "score": 35.13066864415057,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-02/assets/figure_candidates/moon3-0-reasoning-aware-multimodal-representation-learning-for-e-commerce-produc/01-p4-drawing_cluster_with_caption.png",
+      "filename": "01-p4-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-1-drawing-caption-31",
+      "page_index": 1,
+      "caption": "Figure 2: Comparison of fine-grained attributes among the query, the ground-truth product (denoted as “GT Product”), and a similar product. “ → ” denotes the cosine similarity between their representations.",
+      "clip": [
+        176.8614044189453,
+        78.84384155273438,
+        311.0736999511719,
+        204.94078063964844
+      ],
+      "clip_area": 16923.75965444208,
+      "page_area": 484704.0,
+      "text_density": 0.0860259114823644,
+      "kind": "drawing_cluster_with_caption",
+      "score": 29.82648708499638,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-02/assets/figure_candidates/moon3-0-reasoning-aware-multimodal-representation-learning-for-e-commerce-produc/02-p2-drawing_cluster_with_caption.png",
+      "filename": "02-p2-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-4-1",
+      "page_index": 1,
+      "caption": "Figure 2: Comparison of fine-grained attributes among the query, the ground-truth product (denoted as “GT Product”), and a similar product. “ → ” denotes the cosine similarity between their representations.",
+      "clip": [
+        197.6036834716797,
+        87.49897003173828,
+        296.9275207519531,
+        186.8227996826172
+      ],
+      "clip_area": 9865.223894297495,
+      "page_area": 484704.0,
+      "text_density": 0.07932517013360248,
+      "kind": "embedded_image_with_caption",
+      "xref": 665,
+      "score": 23.10961359882553,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-02/assets/figure_candidates/moon3-0-reasoning-aware-multimodal-representation-learning-for-e-commerce-produc/03-p2-embedded_image_with_caption.png",
+      "filename": "03-p2-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-4-0",
+      "page_index": 1,
+      "caption": "Figure 2: Comparison of fine-grained attributes among the query, the ground-truth product (denoted as “GT Product”), and a similar product. “ → ” denotes the cosine similarity between their representations.",
+      "clip": [
+        183.5616455078125,
+        79.8447494506836,
+        282.8854675292969,
+        179.1685791015625
+      ],
+      "clip_area": 9865.222378736129,
+      "page_area": 484704.0,
+      "text_density": 0.11366439953620737,
+      "kind": "embedded_image_with_caption",
+      "xref": 665,
+      "score": 21.089749609813516,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-02/assets/figure_candidates/moon3-0-reasoning-aware-multimodal-representation-learning-for-e-commerce-produc/04-p2-embedded_image_with_caption.png",
+      "filename": "04-p2-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-3-0",
+      "page_index": 1,
+      "caption": "Figure 2: Comparison of fine-grained attributes among the query, the ground-truth product (denoted as “GT Product”), and a similar product. “ → ” denotes the cosine similarity between their representations.",
+      "clip": [
+        222.5655059814453,
+        79.12854766845703,
+        321.88934326171875,
+        178.45237731933594
+      ],
+      "clip_area": 9865.223894297495,
+      "page_area": 484704.0,
+      "text_density": 0.11836233406195983,
+      "kind": "embedded_image_with_caption",
+      "xref": 664,
+      "score": 20.80787355510794,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-02/assets/figure_candidates/moon3-0-reasoning-aware-multimodal-representation-learning-for-e-commerce-produc/05-p2-embedded_image_with_caption.png",
+      "filename": "05-p2-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-15-0",
+      "page_index": 1,
+      "caption": "Figure 2: Comparison of fine-grained attributes among the query, the ground-truth product (denoted as “GT Product”), and a similar product. “ → ” denotes the cosine similarity between their representations.",
+      "clip": [
+        186.626708984375,
+        109.83171844482422,
+        319.28912353515625,
+        223.74624633789062
+      ],
+      "clip_area": 15112.17632270651,
+      "page_area": 484704.0,
+      "text_density": 0.19000685317847435,
+      "kind": "embedded_image_with_caption",
+      "xref": 674,
+      "score": 16.567501879543833,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-02/assets/figure_candidates/moon3-0-reasoning-aware-multimodal-representation-learning-for-e-commerce-produc/06-p2-embedded_image_with_caption.png",
+      "filename": "06-p2-embedded_image_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-02/assets/figure_candidates/moon3-0-reasoning-aware-multimodal-representation-learning-for-e-commerce-produc/contact-sheet.svg"
+}

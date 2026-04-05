@@ -4,18 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-04-01
+- **日期**：2026-04-02
 - **分类**：cs.IR + cs.AI + cs.LG + cs.CL + cs.MA
-- **候选论文数**：4
+- **候选论文数**：2
 - **必读论文**：
-  - Monodense Deep Neural Model for Determining Item Price Elasticity
-  - MemRerank: Preference Memory for Personalized Product Reranking
-- **日报路径**：[2026-04-01/daily_report.md](2026-04-01/daily_report.md)
+  - UniMixer: A Unified Architecture for Scaling Laws in Recommendation Systems
+  - MOON3.0: Reasoning-aware Multimodal Representation Learning for E-commerce Product Understanding
+- **日报路径**：[2026-04-02/daily_report.md](2026-04-02/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-04-02 | cs.IR + cs.AI + cs.LG + cs.CL + cs.MA | 2 | 1 | UniMixer: A Unified Architecture for Scaling Laws in Recommendation Systems | [2026-04-02/daily_report.md](2026-04-02/daily_report.md) |
+|  |  |  | 2 | MOON3.0: Reasoning-aware Multimodal Representation Learning for E-commerce Product Understanding |  |
 | 2026-04-01 | cs.IR + cs.AI + cs.LG + cs.CL + cs.MA | 4 | 1 | Monodense Deep Neural Model for Determining Item Price Elasticity | [2026-04-01/daily_report.md](2026-04-01/daily_report.md) |
 |  |  |  | 2 | MemRerank: Preference Memory for Personalized Product Reranking |  |
 | 2026-03-31 | cs.IR + cs.AI + cs.LG + cs.CL + cs.MA | 5 | 1 | Hidden Ads: Behavior Triggered Semantic Backdoors for Advertisement Injection in Vision Language Models | [2026-03-31/daily_report.md](2026-03-31/daily_report.md) |

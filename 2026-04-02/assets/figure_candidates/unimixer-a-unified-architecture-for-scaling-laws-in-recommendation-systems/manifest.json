@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-02/downloaded_pdfs/unimixer-a-unified-architecture-for-scaling-laws-in-recommendation-systems.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-02/assets/figure_candidates/unimixer-a-unified-architecture-for-scaling-laws-in-recommendation-systems",
+  "candidates": [
+    {
+      "id": "page-4-drawing-caption-29",
+      "page_index": 4,
+      "caption": "Figure 2: The UniMixer architecture for scaling laws in recommendation systems.",
+      "clip": [
+        109.8010025024414,
+        145.8813934326172,
+        502.18817138671875,
+        350.6669921875
+      ],
+      "clip_area": 80355.24132370006,
+      "page_area": 484704.0,
+      "text_density": 0.11303533317672441,
+      "kind": "drawing_cluster_with_caption",
+      "score": 84.91071602410432,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-02/assets/figure_candidates/unimixer-a-unified-architecture-for-scaling-laws-in-recommendation-systems/01-p5-drawing_cluster_with_caption.png",
+      "filename": "01-p5-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-0-drawing-caption-26",
+      "page_index": 0,
+      "caption": "Figure 1: The scaling laws between AUC and Parameters for the present UniMixer/UniMixer-Lite and RankMixer architectures. The x-axis is presented on a logarithmic scale.",
+      "clip": [
+        149.4010009765625,
+        536.8827514648438,
+        462.5973815917969,
+        689.1240234375
+      ],
+      "clip_area": 47681.41536209546,
+      "page_area": 484704.0,
+      "text_density": 0.10882972973579579,
+      "kind": "drawing_cluster_with_caption",
+      "score": 70.80000971987555,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-02/assets/figure_candidates/unimixer-a-unified-architecture-for-scaling-laws-in-recommendation-systems/02-p1-drawing_cluster_with_caption.png",
+      "filename": "02-p1-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-4-block-29",
+      "page_index": 4,
+      "caption": "Figure 2: The UniMixer architecture for scaling laws in recommendation systems.",
+      "clip": [
+        111.58600463867188,
+        24.921466064453114,
+        500.4160400390625,
+        333.7214660644531
+      ],
+      "clip_area": 120070.71493164064,
+      "page_area": 484704.0,
+      "text_density": 0.28282140300644115,
+      "kind": "captioned_figure",
+      "score": 61.83071581961353,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-02/assets/figure_candidates/unimixer-a-unified-architecture-for-scaling-laws-in-recommendation-systems/03-p5-captioned_figure.png",
+      "filename": "03-p5-captioned_figure.png"
+    },
+    {
+      "id": "page-10-drawing-caption-39",
+      "page_index": 10,
+      "caption": "Figure 4: The scaling laws between AUC and Parameters/FLOPs for UniMixer-2-Blocks/UniMixer- Lite-2-Blocks and RankMixer architectures. The x-axis is presented on a logarithmic scale.",
+      "clip": [
+        109.8010025024414,
+        225.21180725097656,
+        502.197265625,
+        411.822998046875
+      ],
+      "clip_area": 73225.53392516135,
+      "page_area": 484704.0,
+      "text_density": 0.15541091211972266,
+      "kind": "drawing_cluster_with_caption",
+      "score": 49.28896231642954,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-02/assets/figure_candidates/unimixer-a-unified-architecture-for-scaling-laws-in-recommendation-systems/04-p11-drawing_cluster_with_caption.png",
+      "filename": "04-p11-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-0-block-26",
+      "page_index": 0,
+      "caption": "Figure 1: The scaling laws between AUC and Parameters for the present UniMixer/UniMixer-Lite and RankMixer architectures. The x-axis is presented on a logarithmic scale.",
+      "clip": [
+        77.4,
+        363.32579345703124,
+        534.6012817382813,
+        672.1257934570312
+      ],
+      "clip_area": 141183.75580078128,
+      "page_area": 484704.0,
+      "text_density": 0.4088626564155012,
+      "kind": "captioned_figure",
+      "score": 42.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-02/assets/figure_candidates/unimixer-a-unified-architecture-for-scaling-laws-in-recommendation-systems/05-p1-captioned_figure.png",
+      "filename": "05-p1-captioned_figure.png"
+    },
+    {
+      "id": "page-5-drawing-caption-24",
+      "page_index": 5,
+      "caption": "Figure 3: (a) The global mixing weights of different methods. (b) Equivalent parameteri- zation of the rule-based TokenMixer.",
+      "clip": [
+        90.0,
+        55.997154235839844,
+        304.1988830566406,
+        207.11102294921875
+      ],
+      "clip_area": 32368.421892773593,
+      "page_area": 484704.0,
+      "text_density": 0.07437172842442062,
+      "kind": "drawing_cluster_with_caption",
+      "score": 28.35964913214193,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-02/assets/figure_candidates/unimixer-a-unified-architecture-for-scaling-laws-in-recommendation-systems/06-p6-drawing_cluster_with_caption.png",
+      "filename": "06-p6-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-02/assets/figure_candidates/unimixer-a-unified-architecture-for-scaling-laws-in-recommendation-systems/contact-sheet.svg"
+}
