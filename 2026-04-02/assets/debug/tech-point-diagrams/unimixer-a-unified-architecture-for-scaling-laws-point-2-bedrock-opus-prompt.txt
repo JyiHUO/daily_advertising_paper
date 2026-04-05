@@ -1,0 +1,44 @@
+任务：根据一篇论文里的单个技术点，直接生成一张 SVG 技术讲解图。
+
+要求：
+- 只讲一个最重要的创新点。
+- 图里最多 3-5 个主要模块，最多 6 条短标签。
+- 不要画密集网格、长流程、大量重复元素。
+- 优先用大模块、箭头、对比、小分镜表达。
+- 文字尽量短，像标签，不像段落。
+- 参考技术细节、通俗讲解和例子，但不要把所有信息都画进去。
+- 不要输出 JSON，不要输出 markdown 代码块，不要输出解释文字，只输出一个完整 SVG 文档。
+- SVG 必须自包含，可直接渲染；不要引用外部资源，不要使用脚本，不要使用 foreignObject。
+
+论文标题：
+UniMixer: A Unified Architecture for Scaling Laws in Recommendation Systems
+
+论文摘要背景：
+{
+  "background": "推荐/广告排序模型近年来借鉴LLM的Scaling Law思路，试图通过堆叠更多层、更大参数来持续提升AUC。目前业界主流有三类scaling模块：基于异构Attention的(如HiFormer、FAT)、基于TokenMixer的(如RankMixer)、基于FM的(如Wukong)，三者设计哲学和结构差异很大，缺乏统一认识，导致研究者难以判断哪种结构scaling效率最优、也无法同时利用各方优势。UniMixer由快手广告团队提出，旨在建立一个统一理论框架将三类方法连接起来，并设计出兼具三方优点、参数效率和计算效率都更优的轻量模块UniMixing-Lite，在快手广告用户留存预估场景上线后30天累计活跃天数(CAD)平均提升超过15%。",
+  "pick_reason": "快手广告团队提出的推荐系统统一Scaling架构UniMixer，将Attention、TokenMixer、FM三大主流排序模型scaling模块统一到一个理论框架下，并在快手广告投放场景(用户留存预估)取得了显著的离线和在线收益。该工作直接应用于广告排序模型，对广告CTR/CVR预估模型的架构设计和参数效率优化有极强的参考价值。"
+}
+
+已选主图信息：
+{
+  "caption": "Figure 2: The UniMixer architecture for scaling laws in recommendation systems.",
+  "selection_reason": "该图是完整且聚焦的主架构图，标题直接表明为“UniMixer architecture”，清楚展示了Embedding Layer、Token-Specific Linear Layer、UniMixer Block、UniMixing/PerToken SwiGLU、任务塔以及左右分支（UniMixing 与 UniMixing-Lite）之间的模块关系与信息流，最能代表论文核心方法。相比之下，Figure 1 和 Figure 4 都是 scaling law 结果曲线，不是方法总览；page-4-block-29 虽然也是同一图，但包含较多正文噪声，不如当前这个裁剪干净。",
+  "kind": "drawing_cluster_with_caption"
+}
+
+技术点输入：
+{
+  "title": "统一理论框架连接三类方法",
+  "technical_detail": "论文将UniMixing模块表达为：输出 = reshape(G(X, W-G) * 局部混合矩阵 * 输入)，其中G是全局混合模式，局部混合矩阵是每个block各自的投影。在这个框架下：(1)异构Attention的局部混合对应Value投影、全局混合对应softmax(QK转置/根号d)；(2)TokenMixer的局部混合是恒等矩阵、全局混合是固定置换矩阵G；(3)FM/Wukong的全局混合对应XX转置(即输入自交叉)、Value矩阵不依赖X。三者只是在全局混合模式G和局部投影W-B上的不同选择。",
+  "plain_explanation": "这三类方法表面上设计完全不同，但统一来看都在做同一件事：先对每个特征块做一次局部变换(类似Attention里的Value投影)，再用某种全局权重把不同块的信息混合起来(类似Attention权重矩阵)。Attention用QK内积算全局权重且权重依赖输入，TokenMixer用固定的洗牌规则，FM用输入自身的外积。UniMixer把全局权重做成可学习的参数矩阵，同时保留了每个block独立的局部投影，相当于同时拥有了Attention的可学习性和TokenMixer的低成本。",
+  "example": "对于同一组16个异构特征token的输入：Attention会为每个token算Q、K、V，然后用16x16的注意力分数矩阵加权V；TokenMixer直接用固定的16x16置换矩阵重排；FM用输入外积得到16x16交互矩阵。UniMixer则学习一个16x16的全局矩阵G(满足双随机、稀疏、对称约束)，同时每个block有独立的局部投影矩阵，训练时通过温度退火让G逐渐变稀疏。"
+}
+
+输出要求：
+输出要求：
+- 只输出一个完整 SVG 文档，不要输出 JSON、markdown 代码块或解释。
+- 只讲一个最重要的创新点。
+- 图里最多 3-5 个主要模块，最多 6 条短标签。
+- 不要画密集网格、长流程、大量重复元素。
+- 优先用大模块、箭头、对比、小分镜表达。
+- SVG 必须自包含，可直接渲染；不要引用外部资源，不要使用脚本，不要使用 foreignObject。

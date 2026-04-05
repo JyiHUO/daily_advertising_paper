@@ -1,0 +1,124 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e74c3c"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#27ae60"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8f9fa"/>
+      <stop offset="100%" stop-color="#e9ecef"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" rx="16" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#2c3e50">SiameseNorm：解锁深度方向的 Scaling 能力</text>
+  <text x="450" y="68" text-anchor="middle" font-size="13" fill="#7f8c8d">同时运行两条路径，调和 Pre-Norm 与 Post-Norm 的矛盾</text>
+
+  <!-- ==================== LEFT: SiameseNorm Dual Stream ==================== -->
+  <!-- Container box -->
+  <rect x="40" y="90" width="500" height="430" rx="14" fill="white" stroke="#bdc3c7" stroke-width="1.5" opacity="0.9"/>
+  <text x="290" y="118" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">SiameseNorm 双流机制（每一层）</text>
+
+  <!-- Input -->
+  <rect x="220" y="138" width="140" height="36" rx="8" fill="#ecf0f1" stroke="#95a5a6" stroke-width="1.5"/>
+  <text x="290" y="161" text-anchor="middle" font-size="13" font-weight="bold" fill="#555">输入特征</text>
+
+  <!-- Split arrows -->
+  <line x1="250" y1="174" x2="140" y2="210" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="330" y1="174" x2="440" y2="210" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Y Stream (left) - Pre-Norm style -->
+  <rect x="60" y="210" width="160" height="50" rx="10" fill="#3498db" fill-opacity="0.15" stroke="#3498db" stroke-width="2"/>
+  <text x="140" y="232" text-anchor="middle" font-size="14" font-weight="bold" fill="#2980b9">Y 流</text>
+  <text x="140" y="249" text-anchor="middle" font-size="11" fill="#2980b9">Pre-Norm 风格 · 训练稳定</text>
+
+  <!-- X Stream (right) - Post-Norm style -->
+  <rect x="360" y="210" width="160" height="50" rx="10" fill="#e67e22" fill-opacity="0.15" stroke="#e67e22" stroke-width="2"/>
+  <text x="440" y="232" text-anchor="middle" font-size="14" font-weight="bold" fill="#d35400">X 流</text>
+  <text x="440" y="249" text-anchor="middle" font-size="11" fill="#d35400">Post-Norm 风格 · 性能强</text>
+
+  <!-- Cross-interaction arrows -->
+  <path d="M 180,260 C 180,295 290,285 290,310" stroke="#3498db" stroke-width="2" fill="none" marker-end="url(#arrow)" stroke-dasharray="6,3"/>
+  <text x="205" y="288" font-size="10" fill="#3498db" font-weight="bold">RMSNorm(Y)→X</text>
+
+  <!-- UniMixer Block in center -->
+  <rect x="200" y="310" width="180" height="48" rx="10" fill="#8e44ad" fill-opacity="0.18" stroke="#8e44ad" stroke-width="2"/>
+  <text x="290" y="340" text-anchor="middle" font-size="14" font-weight="bold" fill="#8e44ad">UniMixer Block</text>
+
+  <!-- Output arrows from block back to both streams -->
+  <path d="M 240,358 C 200,380 140,370 140,395" stroke="#3498db" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 340,358 C 380,380 440,370 440,395" stroke="#e67e22" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <!-- Updated streams -->
+  <rect x="60" y="395" width="160" height="40" rx="8" fill="#3498db" fill-opacity="0.1" stroke="#3498db" stroke-width="1.5"/>
+  <text x="140" y="420" text-anchor="middle" font-size="12" fill="#2980b9">Y' = Y + 残差</text>
+
+  <rect x="360" y="395" width="160" height="40" rx="8" fill="#e67e22" fill-opacity="0.1" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="440" y="420" text-anchor="middle" font-size="12" fill="#d35400">X' = Norm(X + 残差)</text>
+
+  <!-- Merge -->
+  <line x1="140" y1="435" x2="250" y2="468" stroke="#3498db" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="440" y1="435" x2="330" y2="468" stroke="#e67e22" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="220" y="465" width="140" height="38" rx="8" fill="#2ecc71" fill-opacity="0.2" stroke="#27ae60" stroke-width="2"/>
+  <text x="290" y="489" text-anchor="middle" font-size="13" font-weight="bold" fill="#27ae60">融合输出</text>
+
+  <!-- Key insight label -->
+  <rect x="70" y="310" width="110" height="48" rx="8" fill="#fff3cd" stroke="#f0c040" stroke-width="1.2"/>
+  <text x="125" y="331" text-anchor="middle" font-size="10" fill="#856404" font-weight="bold">每层交换信息</text>
+  <text x="125" y="347" text-anchor="middle" font-size="10" fill="#856404">梯度不衰减</text>
+
+  <!-- ==================== RIGHT: Comparison ==================== -->
+  <rect x="570" y="90" width="300" height="430" rx="14" fill="white" stroke="#bdc3c7" stroke-width="1.5" opacity="0.9"/>
+  <text x="720" y="118" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">深度 Scaling 对比</text>
+
+  <!-- RankMixer (fails) -->
+  <rect x="590" y="140" width="260" height="155" rx="10" fill="#e74c3c" fill-opacity="0.06" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="600" y="163" font-size="13" font-weight="bold" fill="#e74c3c">✗ RankMixer（无 SiameseNorm）</text>
+
+  <!-- Bar chart for RankMixer -->
+  <rect x="620" y="195" width="60" height="70" rx="4" fill="#e74c3c" fill-opacity="0.5"/>
+  <text x="650" y="245" text-anchor="middle" font-size="11" fill="white" font-weight="bold">2层</text>
+  <text x="650" y="280" text-anchor="middle" font-size="11" fill="#c0392b" font-weight="bold">.7478</text>
+
+  <rect x="710" y="203" width="60" height="62" rx="4" fill="#e74c3c" fill-opacity="0.35"/>
+  <text x="740" y="245" text-anchor="middle" font-size="11" fill="white" font-weight="bold">4层</text>
+  <text x="740" y="280" text-anchor="middle" font-size="11" fill="#c0392b" font-weight="bold">.7467</text>
+
+  <text x="790" y="230" font-size="20" fill="#e74c3c" font-weight="bold">↓</text>
+  <text x="790" y="250" font-size="10" fill="#c0392b">退化!</text>
+
+  <!-- UniMixer-Lite (succeeds) -->
+  <rect x="590" y="310" width="260" height="195" rx="10" fill="#27ae60" fill-opacity="0.06" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="600" y="333" font-size="13" font-weight="bold" fill="#27ae60">✓ UniMixer-Lite（SiameseNorm）</text>
+
+  <!-- Bar chart for UniMixer-Lite -->
+  <rect x="605" y="368" width="52" height="75" rx="4" fill="#27ae60" fill-opacity="0.4"/>
+  <text x="631" y="415" text-anchor="middle" font-size="10" fill="white" font-weight="bold">2层</text>
+  <text x="631" y="458" text-anchor="middle" font-size="11" fill="#1e8449" font-weight="bold">.7492</text>
+
+  <rect x="672" y="355" width="52" height="88" rx="4" fill="#27ae60" fill-opacity="0.55"/>
+  <text x="698" y="415" text-anchor="middle" font-size="10" fill="white" font-weight="bold">4层</text>
+  <text x="698" y="458" text-anchor="middle" font-size="11" fill="#1e8449" font-weight="bold">.7508</text>
+
+  <rect x="739" y="353" width="52" height="90" rx="4" fill="#27ae60" fill-opacity="0.7"/>
+  <text x="765" y="415" text-anchor="middle" font-size="10" fill="white" font-weight="bold">8层</text>
+  <text x="765" y="458" text-anchor="middle" font-size="11" fill="#1e8449" font-weight="bold">.7509</text>
+
+  <text x="808" y="385" font-size="20" fill="#27ae60" font-weight="bold">↑</text>
+  <text x="808" y="403" font-size="9" fill="#1e8449">持续</text>
+  <text x="808" y="415" font-size="9" fill="#1e8449">提升</text>
+
+  <!-- Bottom takeaway -->
+  <rect x="110" y="545" width="680" height="52" rx="12" fill="#8e44ad" fill-opacity="0.1" stroke="#8e44ad" stroke-width="1.8"/>
+  <text x="450" y="569" text-anchor="middle" font-size="15" font-weight="bold" fill="#6c3483">核心洞察：双流耦合 = Pre-Norm 的稳定性 + Post-Norm 的表达力 → 深度可扩展</text>
+  <text x="450" y="588" text-anchor="middle" font-size="12" fill="#7f8c8d">快手广告场景：用户留存预估 30天累计活跃天数(CAD) 平均提升 &gt;15%</text>
+</svg>

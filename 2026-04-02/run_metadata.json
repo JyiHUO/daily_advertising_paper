@@ -14,7 +14,7 @@
     "MOON3.0: Reasoning-aware Multimodal Representation Learning for E-commerce Product Understanding"
   ],
   "focus_status": {
-    "UniMixer: A Unified Architecture for Scaling Laws in Recommendation Systems": "llm_failed",
-    "MOON3.0: Reasoning-aware Multimodal Representation Learning for E-commerce Product Understanding": "llm_failed"
+    "UniMixer: A Unified Architecture for Scaling Laws in Recommendation Systems": "completed",
+    "MOON3.0: Reasoning-aware Multimodal Representation Learning for E-commerce Product Understanding": "completed"
   }
 }

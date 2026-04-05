@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2563EB"/>
+    </marker>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366F1;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" rx="16" fill="#F8FAFC"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E293B">UniMixer：统一框架连接三大 Scaling 方法</text>
+  <text x="450" y="68" text-anchor="middle" font-size="14" fill="#64748B">Output = reshape( G(X) · W_local · Input )  — 全局混合 × 局部投影</text>
+
+  <!-- Central formula box -->
+  <rect x="260" y="88" width="380" height="52" rx="12" fill="url(#grad1)" opacity="0.12" stroke="#6366F1" stroke-width="1.5"/>
+  <text x="450" y="113" text-anchor="middle" font-size="15" font-weight="bold" fill="#4338CA">统一公式：G（全局混合）× W（局部投影）× X</text>
+  <text x="450" y="131" text-anchor="middle" font-size="12" fill="#6366F1">三类方法 = 不同的 G 和 W 选择</text>
+
+  <!-- ========== Three method boxes ========== -->
+  <!-- Attention -->
+  <g transform="translate(60, 175)">
+    <rect width="230" height="200" rx="14" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+    <rect width="230" height="38" rx="14" fill="#F59E0B"/>
+    <rect x="0" y="24" width="230" height="14" fill="#F59E0B"/>
+    <text x="115" y="27" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">① 异构 Attention</text>
+    <text x="115" y="27" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">① 异构 Attention</text>
+
+    <!-- Global mixing illustration -->
+    <text x="18" y="62" font-size="12" font-weight="bold" fill="#92400E">全局混合 G：</text>
+    <rect x="15" y="72" width="80" height="80" rx="6" fill="#FDE68A" stroke="#D97706" stroke-width="1.2"/>
+    <!-- Heatmap-like small squares -->
+    <rect x="20" y="77" width="16" height="16" rx="2" fill="#F59E0B" opacity="0.9"/>
+    <rect x="40" y="77" width="16" height="16" rx="2" fill="#F59E0B" opacity="0.4"/>
+    <rect x="60" y="77" width="16" height="16" rx="2" fill="#F59E0B" opacity="0.2"/>
+    <rect x="20" y="97" width="16" height="16" rx="2" fill="#F59E0B" opacity="0.3"/>
+    <rect x="40" y="97" width="16" height="16" rx="2" fill="#F59E0B" opacity="0.85"/>
+    <rect x="60" y="97" width="16" height="16" rx="2" fill="#F59E0B" opacity="0.5"/>
+    <rect x="20" y="117" width="16" height="16" rx="2" fill="#F59E0B" opacity="0.15"/>
+    <rect x="40" y="117" width="16" height="16" rx="2" fill="#F59E0B" opacity="0.6"/>
+    <rect x="60" y="117" width="16" height="16" rx="2" fill="#F59E0B" opacity="0.95"/>
+    <text x="50" y="168" text-anchor="middle" font-size="11" fill="#92400E">softmax(QKᵀ/√d)</text>
+    <text x="50" y="182" text-anchor="middle" font-size="10" fill="#B45309">依赖输入 X</text>
+
+    <!-- Local projection -->
+    <text x="120" y="62" font-size="12" font-weight="bold" fill="#92400E">局部投影 W：</text>
+    <rect x="120" y="72" width="95" height="80" rx="6" fill="#FEF9C3" stroke="#D97706" stroke-width="1.2"/>
+    <text x="167" y="105" text-anchor="middle" font-size="28" fill="#D97706" font-weight="bold">V</text>
+    <text x="167" y="126" text-anchor="middle" font-size="11" fill="#92400E">= W_v · X</text>
+    <text x="167" y="168" text-anchor="middle" font-size="11" fill="#92400E">Value 投影</text>
+    <text x="167" y="182" text-anchor="middle" font-size="10" fill="#B45309">每层独立</text>
+  </g>
+
+  <!-- TokenMixer -->
+  <g transform="translate(335, 175)">
+    <rect width="230" height="200" rx="14" fill="#DBEAFE" stroke="#3B82F6" stroke-width="2"/>
+    <rect width="230" height="38" rx="14" fill="#3B82F6"/>
+    <rect x="0" y="24" width="230" height="14" fill="#3B82F6"/>
+    <text x="115" y="27" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">② TokenMixer</text>
+
+    <text x="18" y="62" font-size="12" font-weight="bold" fill="#1E40AF">全局混合 G：</text>
+    <rect x="15" y="72" width="80" height="80" rx="6" fill="#BFDBFE" stroke="#2563EB" stroke-width="1.2"/>
+    <!-- Permutation pattern -->
+    <rect x="60" y="77" width="16" height="16" rx="2" fill="#3B82F6" opacity="0.9"/>
+    <rect x="20" y="97" width="16" height="16" rx="2" fill="#3B82F6" opacity="0.9"/>
+    <rect x="40" y="117" width="16" height="16" rx="2" fill="#3B82F6" opacity="0.9"/>
+    <!-- other cells empty -->
+    <rect x="20" y="77" width="16" height="16" rx="2" fill="#3B82F6" opacity="0.08"/>
+    <rect x="40" y="77" width="16" height="16" rx="2" fill="#3B82F6" opacity="0.08"/>
+    <rect x="40" y="97" width="16" height="16" rx="2" fill="#3B82F6" opacity="0.08"/>
+    <rect x="60" y="97" width="16" height="16" rx="2" fill="#3B82F6" opacity="0.08"/>
+    <rect x="20" y="117" width="16" height="16" rx="2" fill="#3B82F6" opacity="0.08"/>
+    <rect x="60" y="117" width="16" height="16" rx="2" fill="#3B82F6" opacity="0.08"/>
+    <text x="55" y="168" text-anchor="middle" font-size="11" fill="#1E40AF">固定置换矩阵</text>
+    <text x="55" y="182" text-anchor="middle" font-size="10" fill="#2563EB">不依赖 X</text>
+
+    <text x="120" y="62" font-size="12" font-weight="bold" fill="#1E40AF">局部投影 W：</text>
+    <rect x="120" y="72" width="95" height="80" rx="6" fill="#EFF6FF" stroke="#2563EB" stroke-width="1.2"/>
+    <text x="167" y="105" text-anchor="middle" font-size="28" fill="#2563EB" font-weight="bold">I</text>
+    <text x="167" y="126" text-anchor="middle" font-size="11" fill="#1E40AF">= 恒等矩阵</text>
+    <text x="167" y="168" text-anchor="middle" font-size="11" fill="#1E40AF">无额外投影</text>
+    <text x="167" y="182" text-anchor="middle" font-size="10" fill="#2563EB">零参数</text>
+  </g>
+
+  <!-- FM / Wukong -->
+  <g transform="translate(610, 175)">
+    <rect width="230" height="200" rx="14" fill="#F3E8FF" stroke="#9333EA" stroke-width="2"/>
+    <rect width="230" height="38" rx="14" fill="#9333EA"/>
+    <rect x="0" y="24" width="230" height="14" fill="#9333EA"/>
+    <text x="115" y="27" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">③ FM / Wukong</text>
+
+    <text x="18" y="62" font-size="12" font-weight="bold" fill="#581C87">全局混合 G：</text>
+    <rect x="15" y="72" width="80" height="80" rx="6" fill="#E9D5FF" stroke="#7C3AED" stroke-width="1.2"/>
+    <!-- Outer product pattern -->
+    <rect x="20" y="77" width="16" height="16" rx="2" fill="#9333EA" opacity="0.7"/>
+    <rect x="40" y="77" width="16" height="16" rx="2" fill="#9333EA" opacity="0.5"/>
+    <rect x="60" y="77" width="16" height="16" rx="2" fill="#9333EA" opacity="0.3"/>
+    <rect x="20" y="97" width="16" height="16" rx="2" fill="#9333EA" opacity="0.5"/>
+    <rect x="40" y="97" width="16" height="16" rx="2" fill="#9333EA" opacity="0.6"/>
+    <rect x="60" y="97" width="16" height="16" rx="2" fill="#9333EA" opacity="0.4"/>
+    <rect x="20" y="117" width="16" height="16" rx="2" fill="#9333EA" opacity="0.3"/>
+    <rect x="40" y="117" width="16" height="16" rx="2" fill="#9333EA" opacity="0.4"/>
+    <rect x="60" y="117" width="16" height="16" rx="2" fill="#9333EA" opacity="0.8"/>
+    <text x="55" y="168" text-anchor="middle" font-size="11" fill="#581C87">XXᵀ 输入外积</text>
+    <text x="55" y="182" text-anchor="middle" font-size="10" fill="#7C3AED">依赖输入 X</text>

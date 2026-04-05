@@ -1,0 +1,157 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="gOrig" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff6b6b" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#ff6b6b" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="gLite" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4ecdc4" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#4ecdc4" stop-opacity="0.05"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2d9e8f"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" rx="16" fill="#fafafa"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#2c3e50">UniMixing-Lite 轻量化设计</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#7f8c8d">核心思想：基矩阵线性组合 + 低秩分解 → 参数骤降，性能更优</text>
+
+  <!-- ===== LEFT: Original UniMixing ===== -->
+  <rect x="30" y="85" width="400" height="440" rx="14" fill="url(#gOrig)" stroke="#ff6b6b" stroke-width="2"/>
+  <text x="230" y="112" text-anchor="middle" font-size="17" font-weight="bold" fill="#e74c3c">原版 UniMixing</text>
+
+  <!-- Local matrices - many independent blocks -->
+  <text x="230" y="145" text-anchor="middle" font-size="13" font-weight="bold" fill="#555">局部矩阵 W_B（每block独立）</text>
+
+  <!-- Draw 5 independent matrices -->
+  <g transform="translate(55, 160)">
+    <rect width="48" height="48" rx="4" fill="#ff6b6b" fill-opacity="0.25" stroke="#e74c3c" stroke-width="1.5"/>
+    <text x="24" y="30" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="bold">W₁</text>
+  </g>
+  <g transform="translate(115, 160)">
+    <rect width="48" height="48" rx="4" fill="#ff6b6b" fill-opacity="0.25" stroke="#e74c3c" stroke-width="1.5"/>
+    <text x="24" y="30" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="bold">W₂</text>
+  </g>
+  <g transform="translate(175, 160)">
+    <rect width="48" height="48" rx="4" fill="#ff6b6b" fill-opacity="0.25" stroke="#e74c3c" stroke-width="1.5"/>
+    <text x="24" y="30" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="bold">W₃</text>
+  </g>
+  <text x="248" y="190" font-size="20" fill="#999">…</text>
+  <g transform="translate(275, 160)">
+    <rect width="48" height="48" rx="4" fill="#ff6b6b" fill-opacity="0.25" stroke="#e74c3c" stroke-width="1.5"/>
+    <text x="24" y="30" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="bold">W₁₂₈</text>
+  </g>
+
+  <text x="230" y="232" text-anchor="middle" font-size="11" fill="#e74c3c">128 个独立 6×6 矩阵 = 4608 参数</text>
+
+  <!-- Global matrix - big square -->
+  <text x="230" y="268" text-anchor="middle" font-size="13" font-weight="bold" fill="#555">全局矩阵 W_G</text>
+  <rect x="130" y="280" width="200" height="100" rx="6" fill="#ff6b6b" fill-opacity="0.2" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="230" y="335" text-anchor="middle" font-size="14" fill="#c0392b" font-weight="bold">128 × 128</text>
+  <text x="230" y="400" text-anchor="middle" font-size="11" fill="#e74c3c">= 16384 参数</text>
+
+  <!-- Total params -->
+  <rect x="120" y="430" width="220" height="40" rx="8" fill="#e74c3c" fill-opacity="0.12" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="230" y="455" text-anchor="middle" font-size="14" font-weight="bold" fill="#c0392b">总参数: 6.57M → AUC 0.7485</text>
+
+  <!-- ===== CENTER ARROW ===== -->
+  <g transform="translate(440, 260)">
+    <polygon points="0,30 30,0 30,18 80,18 80,42 30,42 30,60" fill="#2d9e8f" fill-opacity="0.8"/>
+    <text x="40" y="80" text-anchor="middle" font-size="12" fill="#2d9e8f" font-weight="bold">压缩</text>
+  </g>
+
+  <!-- ===== RIGHT: UniMixing-Lite ===== -->
+  <rect x="530" y="85" width="345" height="440" rx="14" fill="url(#gLite)" stroke="#4ecdc4" stroke-width="2.5"/>
+  <text x="702" y="112" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a8a7f">UniMixing-Lite ✨</text>
+
+  <!-- Base matrices (palette analogy) -->
+  <text x="702" y="145" text-anchor="middle" font-size="13" font-weight="bold" fill="#555">① 基矩阵"调色板" + 权重混合</text>
+
+  <!-- 4 base matrices -->
+  <g transform="translate(555, 160)">
+    <rect width="40" height="40" rx="4" fill="#4ecdc4" fill-opacity="0.35" stroke="#1a8a7f" stroke-width="1.5"/>
+    <text x="20" y="26" text-anchor="middle" font-size="10" fill="#1a8a7f" font-weight="bold">Z₁</text>
+  </g>
+  <g transform="translate(605, 160)">
+    <rect width="40" height="40" rx="4" fill="#45b7aa" fill-opacity="0.35" stroke="#1a8a7f" stroke-width="1.5"/>
+    <text x="20" y="26" text-anchor="middle" font-size="10" fill="#1a8a7f" font-weight="bold">Z₂</text>
+  </g>
+  <g transform="translate(655, 160)">
+    <rect width="40" height="40" rx="4" fill="#3da89c" fill-opacity="0.35" stroke="#1a8a7f" stroke-width="1.5"/>
+    <text x="20" y="26" text-anchor="middle" font-size="10" fill="#1a8a7f" font-weight="bold">Z₃</text>
+  </g>
+  <g transform="translate(705, 160)">
+    <rect width="40" height="40" rx="4" fill="#35998e" fill-opacity="0.35" stroke="#1a8a7f" stroke-width="1.5"/>
+    <text x="20" y="26" text-anchor="middle" font-size="10" fill="#1a8a7f" font-weight="bold">Z₄</text>
+  </g>
+
+  <!-- Weight vector -->
+  <text x="800" y="175" font-size="11" fill="#555">×</text>
+  <g transform="translate(815, 162)">
+    <rect width="42" height="36" rx="4" fill="#ffeaa7" stroke="#fdcb6e" stroke-width="1.5"/>
+    <text x="21" y="16" text-anchor="middle" font-size="9" fill="#d68910" font-weight="bold">ω_i</text>
+    <text x="21" y="30" text-anchor="middle" font-size="8" fill="#d68910">(4维)</text>
+  </g>
+
+  <!-- Formula line -->
+  <text x="702" y="222" text-anchor="middle" font-size="12" fill="#1a8a7f" font-weight="bold">W_B^i = ω₁Z₁ + ω₂Z₂ + ω₃Z₃ + ω₄Z₄</text>
+  <text x="702" y="242" text-anchor="middle" font-size="11" fill="#1a8a7f">4 基矩阵 + 128 权重 = 656 参数</text>
+
+  <!-- Low-rank decomposition -->
+  <text x="702" y="278" text-anchor="middle" font-size="13" font-weight="bold" fill="#555">② 全局矩阵低秩分解</text>
+
+  <!-- A_G -->
+  <rect x="580" y="292" width="55" height="90" rx="5" fill="#4ecdc4" fill-opacity="0.25" stroke="#1a8a7f" stroke-width="1.5"/>
+  <text x="607" y="342" text-anchor="middle" font-size="11" fill="#1a8a7f" font-weight="bold">A_G</text>
+  <text x="607" y="358" text-anchor="middle" font-size="9" fill="#777">128×16</text>
+
+  <!-- multiplication sign -->
+  <text x="650" y="342" text-anchor="middle" font-size="18" fill="#555">×</text>
+
+  <!-- B_G -->
+  <rect x="668" y="310" width="90" height="55" rx="5" fill="#4ecdc4" fill-opacity="0.25" stroke="#1a8a7f" stroke-width="1.5"/>
+  <text x="713" y="340" text-anchor="middle" font-size="11" fill="#1a8a7f" font-weight="bold">B_G</text>
+  <text x="713" y="356" text-anchor="middle" font-size="9" fill="#777">16×128</text>
+
+  <!-- equals -->
+  <text x="773" y="342" text-anchor="middle" font-size="18" fill="#555">=</text>
+
+  <!-- Result -->
+  <rect x="790" y="302" width="70" height="70" rx="5" fill="#4ecdc4" fill-opacity="0.15" stroke="#1a8a7f" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="825" y="340" text-anchor="middle" font-size="10" fill="#1a8a7f" font-weight="bold">W_G</text>
+  <text x="825" y="356" text-anchor="middle" font-size="9" fill="#777">128×128</text>
+
+  <text x="702" y="405" text-anchor="middle" font-size="11" fill="#1a8a7f">参数: 16384 → 4096</text>
+
+  <!-- Sinkhorn note -->
+  <rect x="595" y="415" width="215" height="24" rx="12" fill="#dfe6e9" stroke="#b2bec3" stroke-width="1"/>
+  <text x="702" y="432" text-anchor="middle" font-size="10" fill="#636e72">🔄 Sinkhorn-Knopp 保证双随机性</text>
+
+  <!-- Total params -->
+  <rect x="588" y="460" width="230" height="40" rx="8" fill="#1a8a7f" fill-opacity="0.15" stroke="#1a8a7f" stroke-width="2"/>
+  <text x="703" y="485" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a8a7f">总参数: 4.97M → AUC 0.7502 🏆</text>
+
+  <!-- ===== BOTTOM: Comparison bar ===== -->
+  <rect x="80" y="548" width="740" height="55" rx="12" fill="#2c3e50" fill-opacity="0.06" stroke="#2c3e50" stroke-width="1" stroke-opacity="0.2"/>
+
+  <!-- Original bar -->
+  <rect x="120" y="560" width="300" height="18" rx="9" fill="#ff6b6b" fill-opacity="0.5"/>
+  <text x="270" y="574" text-anchor="middle" font-size="10" fill="#fff" font-weight="bold">原版 6.57M 参数</text>
+
+  <!-- Lite bar -->
+  <rect x="120" y="582" width="227" height="18" rx="9" fill="#4ecdc4" fill-opacity="0.7"/>
+  <text x="233" y="596" text-anchor="middle" font-size="10" fill="#fff" font-weight="bold">Lite 4.97M 参数</text>
+
+  <text x="460" y="574" font-size="11" fill="#e74c3c" font-weight="bold">AUC 0.7485</text>
+  <text x="460" y="596" font-size="11" fill="#1a8a7f" font-weight="bold">AUC 0.7502 ↑</text>
+
+  <text x="600" y="585" font-size="14" font-weight="bold" fill="#2c3e50">参数 -24%，效果更好！</text>
+
+</svg>

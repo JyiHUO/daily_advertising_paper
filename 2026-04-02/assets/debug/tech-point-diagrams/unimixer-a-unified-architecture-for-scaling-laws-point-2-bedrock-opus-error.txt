@@ -1,0 +1,1 @@
+provider=bedrock-opus 返回了不完整 SVG，疑似输出被截断

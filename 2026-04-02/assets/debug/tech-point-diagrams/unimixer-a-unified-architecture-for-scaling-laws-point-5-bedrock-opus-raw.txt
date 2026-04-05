@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="950" viewBox="0 0 1400 950">
+  <title>SiameseNorm：双流设计解锁深度Scaling</title>
+  <desc>展示SiameseNorm如何通过X流(Post-Norm风格)和Y流(Pre-Norm风格)的耦合，解决推荐模型堆叠层数时性能退化的问题</desc>
+  
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3B82F6"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#F59E0B"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#EF4444"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#10B981"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FAFBFF"/>
+      <stop offset="100%" stop-color="#F0F4FF"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+    <filter id="shadowLight" x="-3%" y="-3%" width="108%" height="108%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1400" height="950" fill="url(#bgGrad)" rx="12"/>
+  
+  <!-- Title -->
+  <text x="700" y="48" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="#1E293B">SiameseNorm：双流耦合，解锁深度 Scaling</text>
+  <text x="700" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#64748B">Pre-Norm 稳定训练 + Post-Norm 保留梯度强度 → 堆叠更多层不退化</text>
+
+  <!-- ==================== LEFT: Problem ==================== -->
+  <rect x="40" y="105" width="380" height="420" rx="16" fill="white" stroke="#E2E8F0" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="40" y="105" width="380" height="48" rx="16" fill="#FEE2E2"/>
+  <rect x="40" y="137" width="380" height="16" fill="#FEE2E2"/>
+  <text x="230" y="137" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#DC2626">❌ 问题：层数越多反而越差</text>
+
+  <!-- Pre-Norm box -->
+  <rect x="65" y="170" width="155" height="70" rx="10" fill="#FFF7ED" stroke="#FDBA74" stroke-width="1.5"/>
+  <text x="142" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#C2410C">Pre-Norm</text>
+  <text x="142" y="218" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#9A3412">训练稳定 ✓</text>
+  <text x="142" y="233" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#DC2626">性能有天花板 ✗</text>
+
+  <!-- Post-Norm box -->
+  <rect x="240" y="170" width="155" height="70" rx="10" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.5"/>
+  <text x="317" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1D4ED8">Post-Norm</text>
+  <text x="317" y="218" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#1E40AF">性能上限高 ✓</text>
+  <text x="317" y="233" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#DC2626">训练不稳定 ✗</text>
+
+  <!-- VS -->
+  <text x="230" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#94A3B8">VS</text>
+
+  <!-- RankMixer degradation chart -->
+  <text x="230" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#475569">RankMixer 堆叠层数实验</text>
+  
+  <!-- Mini bar chart -->
+  <g transform="translate(80, 290)">
+    <!-- Axis -->
+    <line x1="30" y1="0" x2="30" y2="180" stroke="#CBD5E1" stroke-width="1"/>
+    <line x1="30" y1="180" x2="310" y2="180" stroke="#CBD5E1" stroke-width="1"/>
+    
+    <!-- Y axis labels -->
+    <text x="25" y="10" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#94A3B8">.7480</text>
+    <text x="25" y="95" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#94A3B8">.7473</text>
+    <text x="25" y="180" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#94A3B8">.7467</text>
+    
+    <!-- Grid lines -->
+    <line x1="30" y1="90" x2="310" y2="90" stroke="#F1F5F9" stroke-width="1" stroke-dasharray="4,3"/>
+    
+    <!-- 2层 bar - tall (good) -->
+    <rect x="80" y="15" width="60" height="165" rx="6" fill="#93C5FD" opacity="0.8"/>
+    <text x="110" y="8" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#3B82F6">.7478</text>
+    <text x="110" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#475569">2层</text>
+    
+    <!-- 4层 bar - shorter (worse!) -->
+    <rect x="190" y="100" width="60" height="80" rx="6" fill="#FCA5A5" opacity="0.8"/>
+    <text x="220" y="93" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#EF4444">.7467</text>
+    <text x="220" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#475569">4层</text>
+    
+    <!-- Downward arrow -->
+    <path d="M 165 70 L 185 95" stroke="#EF4444" stroke-width="2.5" marker-end="url(#arrowRed)" fill="none"/>
+    <text x="185" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#EF4444">-0.1%↓</text>
+  </g>
+
+  <!-- ==================== CENTER: SiameseNorm mechanism ==================== -->
+  <rect x="460" y="105" width="500" height="720" rx="16" fill="white" stroke="#E2E8F0" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="460" y="105" width="500" height="48" rx="16" fill="#DBEAFE"/>
+  <rect x="460" y="137" width="500" height="16" fill="#DBEAFE"/>
+  <text x="710" y="137" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1D4ED8">✨ SiameseNorm 核心机制</text>
+
+  <!-- Input -->
+  <rect x="630" y="168" width="160" height="36" rx="8" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="710" y="192" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#475569">输入特征</text>
+
+  <!-- Split arrow -->
+  <line x1="710" y1="204" x2="710" y2="225" stroke="#94A3B8" stroke-width="2"/>
+  <line x1="710" y1="225" x2="580" y2="225" stroke="#F59E0B" stroke-width="2"/>
+  <line x1="710" y1="225" x2="840" y2="225" stroke="#3B82F6" stroke-width="2"/>
+  <line x1="580" y1="225" x2="580" y2="245" stroke="#F59E0B" stroke-width="2" marker-end="url(#arrowOrange)"/>
+  <line x1="840" y1="225" x2="840" y2="245" stroke="#3B82F6" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <!-- ===== Layer Block (one layer of SiameseNorm) ===== -->
+  <rect x="480" y="250" width="460" height="430" rx="14" fill="#FAFBFF" stroke="#C7D2FE" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="710" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#6366F1" font-weight="bold">── 每层重复 ──</text>
+
+  <!-- Y Flow (left, orange) -->
+  <rect x="510" y="290" width="140" height="44" rx="10" fill="#FFF7ED" stroke="#F59E0B" stroke-width="2"/>
+  <text x="580" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#D97706">Y 流</text>
+  <text x="580" y="326" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#92400E">Post-Norm 风格</text>
+
+  <!-- X Flow (right, blue) -->
+  <rect x="770" y="290" width="140" height="44" rx="10" fill="#EFF6FF" stroke="#3B82F6" stroke-width="2"/>
+  <text x="840" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#2563EB">X 流</text>
+  <text x="840" y="326" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#1E3A5F">Pre-Norm 风格</text>
+
+  <!-- Y → RMSNorm -->
+  <line x1="580" y1="334" x2="580" y2="370" stroke="#F59E0B" stroke-width="2" marker-end="url(#arrowOrange)"/>
+  <rect x="520" y="370" width="120" height="34" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="580" y="393" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#B45309">RMSNorm</text>
+
+  <!-- RMSNorm output → add to X flow (cross connection) -->
+  <line x1="640" y1="387" x2="770" y2="387" stroke="#8B5CF6" stroke-width="2.5" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+  <circle cx="770" cy="387" r="14" fill="#EDE9FE" stroke="#8B5CF6" stroke-width="2"/>
+  <text x="770" y="392" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#7C3AED">+</text>
+  <text x="705" y="378" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#7C3AED" font-weight="bold">信息注入</text>
+
+  <!-- X flow goes into UniMixer -->
+  <line x1="840" y1="334" x2="840" y2="370" stroke="#3B82F6" stroke-width="2"/>
+  <line x1="840" y1="370" x2="840" y2="387" stroke="#3B82F6" stroke-width="2"/>
+  <line x1="784" y1="387" x2="840" y2="387" stroke="#3B82F6" stroke-width="0"/>
+  <line x1="840" y1="401" x2="840" y2="430" stroke="#3B82F6" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <!-- UniMixer block -->
+  <rect x="640" y="430" width="200" height="50" rx="12" fill="#818CF8" stroke="#6366F1" stroke-width="2" filter="url(#shadowLight)"/>
+  <text x="740" y="461" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">UniMixer Block</text>
+  <line x1="740" y1="430" x2="840" y2="430" stroke="transparent"/>
+
+  <!-- UniMixer output splits to both flows -->
+  <line x1="740" y1="480" x2="740" y2="510" stroke="#6366F1" stroke-width="2"/>
+  <line x1="740" y1="510" x2="580" y2="510" stroke="#F59E0B" stroke-width="2"/>
+  <line x1="740" y1="510" x2="840" y2="510" stroke="#3B82F6" stroke-width="2"/>

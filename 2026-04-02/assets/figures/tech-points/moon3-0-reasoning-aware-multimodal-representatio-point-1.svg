@@ -1,0 +1,119 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#555">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#2563eb">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <linearGradient id="gInput" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fef3c7"/>
+      <stop offset="100%" style="stop-color:#fde68a"/>
+    </linearGradient>
+    <linearGradient id="gThink" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#dbeafe"/>
+      <stop offset="100%" style="stop-color:#93c5fd"/>
+    </linearGradient>
+    <linearGradient id="gEmb" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#d1fae5"/>
+      <stop offset="100%" style="stop-color:#6ee7b7"/>
+    </linearGradient>
+    <filter id="shadow" x="-3%" y="-3%" width="106%" height="106%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="520" rx="16" fill="#f8fafc"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">MOON3.0 核心创新：先推理，再嵌入</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#64748b">Reasoning-aware Embedding — 让模型"想清楚"再生成向量</text>
+
+  <!-- ===== MODULE 1: Input ===== -->
+  <rect x="30" y="90" width="160" height="160" rx="14" fill="url(#gInput)" stroke="#f59e0b" stroke-width="2" filter="url(#shadow)"/>
+  <text x="110" y="115" text-anchor="middle" font-size="15" font-weight="bold" fill="#92400e">📷 商品输入</text>
+  <!-- mini sweater icon -->
+  <rect x="55" y="128" width="110" height="70" rx="8" fill="#fff" stroke="#d97706" stroke-width="1.5"/>
+  <text x="110" y="155" text-anchor="middle" font-size="11" fill="#78350f">🧶 红色毛衣图片</text>
+  <text x="110" y="172" text-anchor="middle" font-size="10" fill="#92400e">+ 标题文字</text>
+  <text x="110" y="190" text-anchor="middle" font-size="9" fill="#a16207">"女士冬季红色甜美毛衣"</text>
+  <text x="110" y="237" text-anchor="middle" font-size="11" fill="#78350f" font-weight="bold">图 + 文</text>
+
+  <!-- Arrow 1 -->
+  <line x1="190" y1="170" x2="240" y2="170" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- ===== MODULE 2: MLLM + Think ===== -->
+  <rect x="248" y="80" width="310" height="195" rx="14" fill="url(#gThink)" stroke="#2563eb" stroke-width="2" filter="url(#shadow)"/>
+  <text x="403" y="107" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e40af">🧠 MLLM 推理阶段</text>
+
+  <!-- Think tag box -->
+  <rect x="268" y="118" width="270" height="140" rx="10" fill="#fff" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="283" y="140" font-size="13" font-weight="bold" fill="#2563eb">&lt;think&gt;</text>
+
+  <text x="288" y="162" font-size="11.5" fill="#1e3a5f">类目: 针织衫</text>
+  <text x="288" y="180" font-size="11.5" fill="#1e3a5f">颜色: 红色</text>
+  <text x="288" y="198" font-size="11.5" fill="#dc2626" font-weight="bold">设计: 蝴蝶结, 心形纽扣, 蕾丝领</text>
+  <text x="288" y="216" font-size="11.5" fill="#1e3a5f">风格: 甜美</text>
+
+  <text x="283" y="248" font-size="13" font-weight="bold" fill="#2563eb">&lt;/think&gt;</text>
+
+  <!-- key insight callout -->
+  <rect x="430" y="130" width="100" height="42" rx="8" fill="#eff6ff" stroke="#60a5fa" stroke-width="1"/>
+  <text x="480" y="148" text-anchor="middle" font-size="10" fill="#1d4ed8">自回归生成</text>
+  <text x="480" y="163" text-anchor="middle" font-size="10" fill="#1d4ed8">结构化属性</text>
+
+  <!-- Arrow 2 -->
+  <line x1="558" y1="175" x2="615" y2="175" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="587" y="165" text-anchor="middle" font-size="10" fill="#64748b">基于推理</text>
+
+  <!-- ===== MODULE 3: Embedding ===== -->
+  <rect x="623" y="100" width="245" height="150" rx="14" fill="url(#gEmb)" stroke="#059669" stroke-width="2" filter="url(#shadow)"/>
+  <text x="745" y="128" text-anchor="middle" font-size="16" font-weight="bold" fill="#065f46">📐 嵌入生成</text>
+
+  <!-- emb token -->
+  <rect x="660" y="142" width="170" height="40" rx="8" fill="#fff" stroke="#10b981" stroke-width="2"/>
+  <text x="745" y="160" text-anchor="middle" font-size="13" font-weight="bold" fill="#059669">&lt;|emb|&gt; token</text>
+  <text x="745" y="175" text-anchor="middle" font-size="10" fill="#047857">最后一层隐状态 → 256d</text>
+
+  <text x="745" y="205" text-anchor="middle" font-size="11" fill="#065f46">嵌入 = f(推理结果)</text>
+  <text x="745" y="225" text-anchor="middle" font-size="10" fill="#047857" font-style="italic">细粒度属性已编码其中</text>
+
+  <!-- ===== 对比区：传统 vs MOON3.0 ===== -->
+  <text x="450" y="315" text-anchor="middle" font-size="17" font-weight="bold" fill="#334155">🆚 传统方法 vs MOON3.0 对比</text>
+
+  <!-- Traditional -->
+  <rect x="45" y="335" width="370" height="155" rx="12" fill="#fff1f2" stroke="#e11d48" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="360" text-anchor="middle" font-size="14" font-weight="bold" fill="#be123c">❌ 传统：直接取embedding</text>
+
+  <!-- Two sweaters close -->
+  <rect x="70" y="375" width="130" height="50" rx="8" fill="#fff" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="135" y="395" text-anchor="middle" font-size="11" fill="#991b1b">红色毛衣A</text>
+  <text x="135" y="410" text-anchor="middle" font-size="9" fill="#b91c1c">蝴蝶结+蕾丝领</text>
+
+  <rect x="260" y="375" width="130" height="50" rx="8" fill="#fff" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="325" y="395" text-anchor="middle" font-size="11" fill="#991b1b">红色毛衣B</text>
+  <text x="325" y="410" text-anchor="middle" font-size="9" fill="#b91c1c">圆形纽扣</text>
+
+  <text x="230" y="446" text-anchor="middle" font-size="20" fill="#dc2626">≈</text>
+  <text x="230" y="472" text-anchor="middle" font-size="12" fill="#be123c">相似度极高，无法区分！</text>
+
+  <!-- MOON3.0 -->
+  <rect x="480" y="335" width="385" height="155" rx="12" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" filter="url(#shadow)"/>
+  <text x="672" y="360" text-anchor="middle" font-size="14" font-weight="bold" fill="#15803d">✅ MOON3.0：先推理再嵌入</text>
+
+  <rect x="505" y="375" width="145" height="50" rx="8" fill="#fff" stroke="#86efac" stroke-width="1.5"/>
+  <text x="577" y="393" text-anchor="middle" font-size="11" fill="#166534">红色毛衣A</text>
+  <text x="577" y="408" text-anchor="middle" font-size="9" fill="#15803d" font-weight="bold">→ 蝴蝶结,蕾丝领</text>
+
+  <rect x="700" y="375" width="145" height="50" rx="8" fill="#fff" stroke="#86efac" stroke-width="1.5"/>
+  <text x="772" y="393" text-anchor="middle" font-size="11" fill="#166534">红色毛衣B</text>
+  <text x="772" y="408" text-anchor="middle" font-size="9" fill="#15803d" font-weight="bold">→ 圆形纽扣</text>
+
+  <text x="672" y="446" text-anchor="middle" font-size="20" fill="#16a34a">≠</text>
+  <text x="672" y="472" text-anchor="middle" font-size="12" fill="#15803d">属性不同 → 向量拉开距离 ✓</text>
+
+  <!-- Highlight the key insight -->
+  <rect x="280" y="498" width="340" height="18" rx="4" fill="#fef9c3"/>
+  <text x="450" y="512" text-anchor="middle" font-size="12" font-weight="bold" fill="#854d0e">关键：embedding 在"看完"推理后才生成</text>
+</svg>

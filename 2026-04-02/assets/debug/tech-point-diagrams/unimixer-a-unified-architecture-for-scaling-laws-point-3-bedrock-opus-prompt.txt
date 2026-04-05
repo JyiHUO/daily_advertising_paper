@@ -1,0 +1,44 @@
+任务：根据一篇论文里的单个技术点，直接生成一张 SVG 技术讲解图。
+
+要求：
+- 只讲一个最重要的创新点。
+- 图里最多 3-5 个主要模块，最多 6 条短标签。
+- 不要画密集网格、长流程、大量重复元素。
+- 优先用大模块、箭头、对比、小分镜表达。
+- 文字尽量短，像标签，不像段落。
+- 参考技术细节、通俗讲解和例子，但不要把所有信息都画进去。
+- 不要输出 JSON，不要输出 markdown 代码块，不要输出解释文字，只输出一个完整 SVG 文档。
+- SVG 必须自包含，可直接渲染；不要引用外部资源，不要使用脚本，不要使用 foreignObject。
+
+论文标题：
+UniMixer: A Unified Architecture for Scaling Laws in Recommendation Systems
+
+论文摘要背景：
+{
+  "background": "推荐/广告排序模型近年来借鉴LLM的Scaling Law思路，试图通过堆叠更多层、更大参数来持续提升AUC。目前业界主流有三类scaling模块：基于异构Attention的(如HiFormer、FAT)、基于TokenMixer的(如RankMixer)、基于FM的(如Wukong)，三者设计哲学和结构差异很大，缺乏统一认识，导致研究者难以判断哪种结构scaling效率最优、也无法同时利用各方优势。UniMixer由快手广告团队提出，旨在建立一个统一理论框架将三类方法连接起来，并设计出兼具三方优点、参数效率和计算效率都更优的轻量模块UniMixing-Lite，在快手广告用户留存预估场景上线后30天累计活跃天数(CAD)平均提升超过15%。",
+  "pick_reason": "快手广告团队提出的推荐系统统一Scaling架构UniMixer，将Attention、TokenMixer、FM三大主流排序模型scaling模块统一到一个理论框架下，并在快手广告投放场景(用户留存预估)取得了显著的离线和在线收益。该工作直接应用于广告排序模型，对广告CTR/CVR预估模型的架构设计和参数效率优化有极强的参考价值。"
+}
+
+已选主图信息：
+{
+  "caption": "Figure 2: The UniMixer architecture for scaling laws in recommendation systems.",
+  "selection_reason": "该图是完整且聚焦的主架构图，标题直接表明为“UniMixer architecture”，清楚展示了Embedding Layer、Token-Specific Linear Layer、UniMixer Block、UniMixing/PerToken SwiGLU、任务塔以及左右分支（UniMixing 与 UniMixing-Lite）之间的模块关系与信息流，最能代表论文核心方法。相比之下，Figure 1 和 Figure 4 都是 scaling law 结果曲线，不是方法总览；page-4-block-29 虽然也是同一图，但包含较多正文噪声，不如当前这个裁剪干净。",
+  "kind": "drawing_cluster_with_caption"
+}
+
+技术点输入：
+{
+  "title": "UniMixing-Lite的轻量化设计",
+  "technical_detail": "针对UniMixing中局部矩阵W-B数量多导致参数冗余、全局矩阵W-G尺寸大的问题，UniMixing-Lite做了两项压缩：(1)局部矩阵用基矩阵线性组合生成——定义b个基矩阵Z-1到Z-b，每个block的W-B由block特定的权重向量omega对这些基矩阵加权求和得到，大幅减少独立参数；(2)全局矩阵用低秩分解W-G=A-G*B-G替代，A-G和B-G的秩r远小于block数。两者都通过Sinkhorn-Knopp迭代保证双随机性。实验显示Lite版本在参数仅38M时AUC超过了100M参数的RankMixer和普通UniMixer。",
+  "plain_explanation": "原版UniMixer每个block都有自己的局部交互矩阵，block多了参数就冗余。Lite版本的做法类似于'调色板'——准备少量基础颜色(基矩阵)，每个block根据自己的配方(权重向量)混合出自己需要的颜色(局部矩阵)。全局矩阵则用低秩近似压缩，类似用两个瘦长矩阵相乘来代替一个大方阵。两个压缩叠加后参数量大幅下降，但因为Sinkhorn-Knopp操作仍能保证矩阵的稀疏性和归一化，性能反而更好。",
+  "example": "768维输入切成128个block，每个block大小6。原版需要128个独立的6x6矩阵(共128x36=4608个参数)。Lite版只定义4个基矩阵(4x36=144个参数)加128个4维权重向量(512个参数)，总共656个参数生成128个不同的6x6矩阵。全局128x128矩阵用秩16分解为128x16乘16x128，参数从16384降到4096。实验中4个基矩阵、秩128的Lite配置在4.97M参数下AUC达到0.7502，超过了6.57M参数的原版UniMixer的0.7485。"
+}
+
+输出要求：
+输出要求：
+- 只输出一个完整 SVG 文档，不要输出 JSON、markdown 代码块或解释。
+- 只讲一个最重要的创新点。
+- 图里最多 3-5 个主要模块，最多 6 条短标签。
+- 不要画密集网格、长流程、大量重复元素。
+- 优先用大模块、箭头、对比、小分镜表达。
+- SVG 必须自包含，可直接渲染；不要引用外部资源，不要使用脚本，不要使用 foreignObject。
