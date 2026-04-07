@@ -1,151 +1,142 @@
-<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
   <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#555">
-      <polygon points="0 0, 10 3.5, 0 7"/>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4B5563"/>
     </marker>
-    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#2D7DD2">
-      <polygon points="0 0, 10 3.5, 0 7"/>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2563EB"/>
     </marker>
-    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#45B764">
-      <polygon points="0 0, 10 3.5, 0 7"/>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#059669"/>
     </marker>
-    <linearGradient id="fadeGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#FF6B6B" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#FF6B6B" stop-opacity="0.15"/>
+    <marker id="arrowOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#EA580C"/>
+    </marker>
+    <linearGradient id="fadeRed" x1="0" x2="1">
+      <stop offset="0%" stop-color="#FCA5A5" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#FCA5A5" stop-opacity="0.15"/>
     </linearGradient>
+    <linearGradient id="fadeBlue" x1="0" x2="1">
+      <stop offset="0%" stop-color="#93C5FD" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#93C5FD" stop-opacity="0.15"/>
+    </linearGradient>
+    <style>
+      .title{font:700 28px "Arial",sans-serif; fill:#111827}
+      .subtitle{font:500 15px "Arial",sans-serif; fill:#6B7280}
+      .label{font:700 18px "Arial",sans-serif; fill:#111827}
+      .small{font:600 15px "Arial",sans-serif; fill:#374151}
+      .tiny{font:600 14px "Arial",sans-serif; fill:#4B5563}
+      .box{fill:#FFFFFF; stroke:#D1D5DB; stroke-width:2}
+      .soft{fill:#F9FAFB; stroke:#E5E7EB; stroke-width:2}
+      .blue{fill:#EFF6FF; stroke:#93C5FD; stroke-width:2}
+      .green{fill:#ECFDF5; stroke:#86EFAC; stroke-width:2}
+      .orange{fill:#FFF7ED; stroke:#FDBA74; stroke-width:2}
+      .shadow{filter:url(#none)}
+    </style>
   </defs>
 
-  <!-- Background -->
-  <rect width="900" height="620" rx="16" fill="#F7F8FC"/>
+  <rect width="1200" height="720" fill="#FFFFFF"/>
 
-  <!-- Title -->
-  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#222">多头模态融合：缓解推理链中的注意力稀释</text>
-  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#888">Multi-Head Modality Fusion — MOON3.0 核心创新</text>
+  <text x="60" y="60" class="title">长推理会“忘图忘文” → 多头融合把细节补回来</text>
+  <text x="60" y="92" class="subtitle">MOON3.0 的关键点：以推理结果为主干，但按子空间分别补视觉 / 文本 / 交互信息</text>
 
-  <!-- ===== LEFT: Problem illustration ===== -->
-  <!-- Attention fade bar -->
-  <text x="30" y="100" font-size="14" font-weight="bold" fill="#C0392B">❶ 问题：推理越长，注意力越稀释</text>
-  <rect x="30" y="112" width="320" height="28" rx="6" fill="url(#fadeGrad)"/>
-  <text x="40" y="131" font-size="11" fill="#fff" font-weight="bold">图文注意力强</text>
-  <text x="280" y="131" font-size="11" fill="#C0392B">注意力衰减 →</text>
-  <text x="30" y="158" font-size="11" fill="#999">自回归生成 30 个属性 token 后，last token 已"忘记"蝴蝶结纹理</text>
+  <!-- Left mini panel: problem -->
+  <rect x="60" y="130" rx="20" ry="20" width="300" height="500" class="soft"/>
+  <text x="90" y="175" class="label">1. 推理越长，原始细节越淡</text>
 
-  <!-- ===== MAIN DIAGRAM ===== -->
-  <!-- Source features row -->
-  <text x="30" y="200" font-size="14" font-weight="bold" fill="#2D7DD2">❷ 解法：回头"补课"原始图文特征</text>
+  <!-- chain -->
+  <rect x="90" y="220" rx="12" ry="12" width="60" height="42" fill="#DBEAFE" stroke="#93C5FD"/>
+  <rect x="165" y="220" rx="12" ry="12" width="60" height="42" fill="#DBEAFE" stroke="#93C5FD"/>
+  <rect x="240" y="220" rx="12" ry="12" width="60" height="42" fill="#DBEAFE" stroke="#93C5FD"/>
+  <line x1="150" y1="241" x2="165" y2="241" stroke="#9CA3AF" stroke-width="3" marker-end="url(#arrow)"/>
+  <line x1="225" y1="241" x2="240" y2="241" stroke="#9CA3AF" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="96" y="248" class="tiny">attr</text>
+  <text x="171" y="248" class="tiny">attr</text>
+  <text x="246" y="248" class="tiny">attr</text>
 
-  <!-- Image tokens box -->
-  <rect x="40" y="220" width="150" height="70" rx="12" fill="#DCEEFB" stroke="#2D7DD2" stroke-width="2"/>
-  <text x="115" y="248" text-anchor="middle" font-size="13" font-weight="bold" fill="#2D7DD2">🖼 图像 tokens</text>
-  <text x="115" y="268" text-anchor="middle" font-size="11" fill="#555">均值池化 → v</text>
+  <!-- fading attention -->
+  <text x="92" y="305" class="small">last token</text>
+  <rect x="90" y="325" rx="14" ry="14" width="210" height="58" fill="#EEF2FF" stroke="#A5B4FC" stroke-width="2"/>
+  <text x="130" y="360" class="label" fill="#3730A3">reasoning state</text>
 
-  <!-- Text tokens box -->
-  <rect x="220" y="220" width="150" height="70" rx="12" fill="#E8F5E9" stroke="#45B764" stroke-width="2"/>
-  <text x="295" y="248" text-anchor="middle" font-size="13" font-weight="bold" fill="#45B764">📝 文本 tokens</text>
-  <text x="295" y="268" text-anchor="middle" font-size="11" fill="#555">均值池化 → t</text>
+  <!-- image/text sources -->
+  <rect x="90" y="435" rx="14" ry="14" width="88" height="88" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/>
+  <rect x="104" y="450" width="60" height="42" rx="8" fill="#FCA5A5" opacity="0.9"/>
+  <circle cx="118" cy="463" r="5" fill="#FFF"/>
+  <path d="M106 488 L123 470 L136 482 L147 472 L163 488" fill="none" stroke="#FFF" stroke-width="3"/>
+  <text x="115" y="540" text-anchor="middle" class="tiny">image</text>
 
-  <!-- Last token box -->
-  <rect x="400" y="220" width="160" height="70" rx="12" fill="#FFF3E0" stroke="#F39C12" stroke-width="2"/>
-  <text x="480" y="248" text-anchor="middle" font-size="13" font-weight="bold" fill="#E67E22">🔚 Last Token</text>
-  <text x="480" y="268" text-anchor="middle" font-size="11" fill="#555">推理后的基础表示 b</text>
+  <rect x="212" y="435" rx="14" ry="14" width="88" height="88" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/>
+  <line x1="228" y1="458" x2="284" y2="458" stroke="#9CA3AF" stroke-width="4"/>
+  <line x1="228" y1="476" x2="276" y2="476" stroke="#9CA3AF" stroke-width="4"/>
+  <line x1="228" y1="494" x2="266" y2="494" stroke="#9CA3AF" stroke-width="4"/>
+  <text x="256" y="540" text-anchor="middle" class="tiny">text</text>
 
-  <!-- Arrows down from sources -->
-  <line x1="115" y1="290" x2="115" y2="330" stroke="#2D7DD2" stroke-width="2" marker-end="url(#arrowBlue)"/>
-  <line x1="295" y1="290" x2="295" y2="330" stroke="#45B764" stroke-width="2" marker-end="url(#arrowGreen)"/>
-  <line x1="480" y1="290" x2="480" y2="330" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 196 355 C 170 390, 155 405, 136 432" stroke="url(#fadeRed)" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <path d="M 210 355 C 225 390, 240 405, 256 432" stroke="url(#fadeRed)" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <text x="94" y="585" class="small" fill="#DC2626">细粒度属性被冲淡</text>
 
-  <!-- Gate row -->
-  <rect x="30" y="335" width="540" height="55" rx="10" fill="#F0E6FF" stroke="#8E44AD" stroke-width="1.5" stroke-dasharray="6,3"/>
-  <text x="50" y="358" font-size="12" font-weight="bold" fill="#8E44AD">门控计算</text>
-  <!-- Existence score -->
-  <rect x="150" y="342" width="120" height="36" rx="8" fill="#fff" stroke="#8E44AD" stroke-width="1.5"/>
-  <text x="210" y="356" text-anchor="middle" font-size="10" fill="#8E44AD">模态存在分数</text>
-  <text x="210" y="370" text-anchor="middle" font-size="9" fill="#999">σ(‖v‖₂), σ(‖t‖₂)</text>
-  <!-- Consistency gate -->
-  <rect x="290" y="342" width="130" height="36" rx="8" fill="#fff" stroke="#8E44AD" stroke-width="1.5"/>
-  <text x="355" y="356" text-anchor="middle" font-size="10" fill="#8E44AD">一致性门控</text>
-  <text x="355" y="370" text-anchor="middle" font-size="9" fill="#999">cos(b, v) · cos(b, t)</text>
-  <!-- Base repr pass through -->
-  <rect x="440" y="342" width="110" height="36" rx="8" fill="#fff" stroke="#E67E22" stroke-width="1.5"/>
-  <text x="495" y="364" text-anchor="middle" font-size="10" fill="#E67E22">基础表示 b</text>
+  <!-- Middle panel: fix -->
+  <rect x="400" y="130" rx="20" ry="20" width="370" height="500" class="box"/>
+  <text x="430" y="175" class="label">2. 主干 + 回看原始模态</text>
 
-  <!-- Arrow down to multi-head -->
-  <line x1="300" y1="390" x2="300" y2="420" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
-  <line x1="480" y1="390" x2="480" y2="510" stroke="#E67E22" stroke-width="2" stroke-dasharray="5,3"/>
+  <rect x="440" y="215" rx="14" ry="14" width="290" height="62" fill="#EEF2FF" stroke="#A5B4FC" stroke-width="2"/>
+  <text x="585" y="252" text-anchor="middle" class="label" fill="#3730A3">base: last token</text>
 
-  <!-- ===== MULTI-HEAD BLOCK ===== -->
-  <text x="30" y="438" font-size="14" font-weight="bold" fill="#6C3483">❸ 多头子空间融合</text>
+  <rect x="440" y="325" rx="14" ry="14" width="120" height="110" class="blue"/>
+  <text x="500" y="360" text-anchor="middle" class="small">visual pool</text>
+  <text x="500" y="395" text-anchor="middle" class="tiny">存在 + 相似度门控</text>
 
-  <!-- Multi-head container -->
-  <rect x="30" y="445" width="540" height="90" rx="14" fill="#FAFAFA" stroke="#6C3483" stroke-width="2"/>
+  <rect x="610" y="325" rx="14" ry="14" width="120" height="110" class="green"/>
+  <text x="670" y="360" text-anchor="middle" class="small">text pool</text>
+  <text x="670" y="395" text-anchor="middle" class="tiny">存在 + 相似度门控</text>
 
-  <!-- Head 1 -->
-  <rect x="50" y="458" width="105" height="64" rx="10" fill="#E8DAEF" stroke="#6C3483" stroke-width="1.5"/>
-  <text x="102" y="478" text-anchor="middle" font-size="11" font-weight="bold" fill="#6C3483">Head 1</text>
-  <text x="102" y="494" text-anchor="middle" font-size="9" fill="#555">w₁·v + w₂·t</text>
-  <text x="102" y="508" text-anchor="middle" font-size="9" fill="#555">+ w₃·(v⊙t)</text>
+  <path d="M585 277 L500 325" stroke="#2563EB" stroke-width="3.5" fill="none" marker-end="url(#arrowBlue)"/>
+  <path d="M585 277 L670 325" stroke="#059669" stroke-width="3.5" fill="none" marker-end="url(#arrowGreen)"/>
 
-  <!-- Head 2 -->
-  <rect x="175" y="458" width="105" height="64" rx="10" fill="#E8DAEF" stroke="#6C3483" stroke-width="1.5"/>
-  <text x="227" y="478" text-anchor="middle" font-size="11" font-weight="bold" fill="#6C3483">Head 2</text>
-  <text x="227" y="494" text-anchor="middle" font-size="9" fill="#2D7DD2">🖼 高视觉权重</text>
-  <text x="227" y="508" text-anchor="middle" font-size="9" fill="#888">补回纹理</text>
+  <rect x="475" y="485" rx="16" ry="16" width="220" height="90" class="orange"/>
+  <text x="585" y="522" text-anchor="middle" class="label" fill="#9A3412">H heads</text>
+  <text x="585" y="552" text-anchor="middle" class="tiny">每个子空间单独分配权重</text>
 
-  <!-- Head ... -->
-  <text x="320" y="495" text-anchor="middle" font-size="22" fill="#6C3483">···</text>
+  <path d="M500 435 L545 485" stroke="#2563EB" stroke-width="3.5" fill="none" marker-end="url(#arrowBlue)"/>
+  <path d="M670 435 L625 485" stroke="#059669" stroke-width="3.5" fill="none" marker-end="url(#arrowGreen)"/>
+  <path d="M585 277 L585 485" stroke="#7C3AED" stroke-width="3.5" fill="none" marker-end="url(#arrow)"/>
 
-  <!-- Head H -->
-  <rect x="370" y="458" width="105" height="64" rx="10" fill="#E8DAEF" stroke="#6C3483" stroke-width="1.5"/>
-  <text x="422" y="478" text-anchor="middle" font-size="11" font-weight="bold" fill="#6C3483">Head H</text>
-  <text x="422" y="494" text-anchor="middle" font-size="9" fill="#45B764">📝 高交叉权重</text>
-  <text x="422" y="508" text-anchor="middle" font-size="9" fill="#888">补回交叉语义</text>
+  <!-- Right panel: result -->
+  <rect x="810" y="130" rx="20" ry="20" width="330" height="500" class="soft"/>
+  <text x="840" y="175" class="label">3. 不是一个总开关，而是分头补细节</text>
 
-  <!-- Label: different heads focus differently -->
-  <text x="502" y="480" font-size="10" fill="#6C3483" font-style="italic">每个子空间</text>
-  <text x="502" y="495" font-size="10" fill="#6C3483" font-style="italic">独立决定</text>
-  <text x="502" y="510" font-size="10" fill="#6C3483" font-style="italic">补多少信息</text>
+  <!-- heads illustration -->
+  <rect x="850" y="235" rx="12" ry="12" width="250" height="58" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+  <text x="885" y="270" class="small">head A</text>
+  <rect x="950" y="248" rx="8" ry="8" width="44" height="16" fill="#60A5FA"/>
+  <rect x="1002" y="248" rx="8" ry="8" width="28" height="16" fill="#34D399"/>
+  <rect x="1038" y="248" rx="8" ry="8" width="46" height="16" fill="#FB923C"/>
 
-  <!-- Arrow down to final -->
-  <line x1="300" y1="535" x2="300" y2="555" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="850" y="315" rx="12" ry="12" width="250" height="58" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+  <text x="885" y="350" class="small">head B</text>
+  <rect x="950" y="328" rx="8" ry="8" width="26" height="16" fill="#60A5FA"/>
+  <rect x="984" y="328" rx="8" ry="8" width="58" height="16" fill="#34D399"/>
+  <rect x="1050" y="328" rx="8" ry="8" width="30" height="16" fill="#FB923C"/>
 
-  <!-- Plus sign -->
-  <circle cx="390" cy="550" r="14" fill="#fff" stroke="#E67E22" stroke-width="2"/>
-  <text x="390" y="555" text-anchor="middle" font-size="18" font-weight="bold" fill="#E67E22">+</text>
-  <line x1="480" y1="510" x2="404" y2="548" stroke="#E67E22" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+  <rect x="850" y="395" rx="12" ry="12" width="250" height="58" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+  <text x="885" y="430" class="small">head C</text>
+  <rect x="950" y="408" rx="8" ry="8" width="34" height="16" fill="#60A5FA"/>
+  <rect x="992" y="408" rx="8" ry="8" width="24" height="16" fill="#34D399"/>
+  <rect x="1024" y="408" rx="8" ry="8" width="60" height="16" fill="#FB923C"/>
 
-  <!-- ===== FINAL OUTPUT ===== -->
-  <rect x="170" y="565" width="260" height="44" rx="14" fill="#2C3E50" stroke="#1ABC9C" stroke-width="2.5"/>
-  <text x="300" y="584" text-anchor="middle" font-size="13" font-weight="bold" fill="#1ABC9C">r = b + gate · Σ(wₕ · features)</text>
-  <text x="300" y="600" text-anchor="middle" font-size="11" fill="#ECF0F1">融合后 256-d Embedding</text>
+  <line x1="695" y1="530" x2="850" y2="530" stroke="#EA580C" stroke-width="4" marker-end="url(#arrowOrange)"/>
+  <rect x="850" y="495" rx="16" ry="16" width="250" height="72" fill="#EEF2FF" stroke="#A5B4FC" stroke-width="2.5"/>
+  <text x="975" y="525" text-anchor="middle" class="label" fill="#1D4ED8">final embedding</text>
+  <text x="975" y="550" text-anchor="middle" class="tiny">保留推理语义，也找回商品细节</text>
 
-  <!-- Arrow from plus to final -->
-  <line x1="300" y1="555" x2="300" y2="563" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <!-- ===== RIGHT SIDE: Key insight panel ===== -->
-  <rect x="600" y="200" width="280" height="400" rx="16" fill="#fff" stroke="#ddd" stroke-width="1.5"/>
-  <text x="740" y="230" text-anchor="middle" font-size="15" font-weight="bold" fill="#2C3E50">💡 核心直觉</text>
-
-  <!-- Before/After comparison -->
-  <rect x="620" y="250" width="240" height="70" rx="10" fill="#FFEBEE"/>
-  <text x="640" y="272" font-size="12" font-weight="bold" fill="#C0392B">❌ 之前：只用 Last Token</text>
-  <text x="640" y="292" font-size="11" fill="#555">红毛衣 ≈ 红毛衣+蝴蝶结+蕾丝领</text>
-  <text x="640" y="308" font-size="10" fill="#999">细粒度差异被淹没</text>
-
-  <rect x="620" y="335" width="240" height="70" rx="10" fill="#E8F5E9"/>
-  <text x="640" y="357" font-size="12" font-weight="bold" fill="#27AE60">✅ 现在：多头融合补课</text>
-  <text x="640" y="377" font-size="11" fill="#555">推理语义 + 蝴蝶结纹理 + 蕾丝领</text>
-  <text x="640" y="393" font-size="10" fill="#999">各子空间各取所需</text>
-
-  <!-- Analogy -->
-  <rect x="620" y="425" width="240" height="80" rx="10" fill="#FFF8E1" stroke="#F39C12" stroke-width="1"/>
-  <text x="640" y="448" font-size="11" font-weight="bold" fill="#E67E22">🎯 比喻</text>
-  <text x="640" y="468" font-size="11" fill="#555">写完分析笔记后</text>
-  <text x="640" y="484" font-size="11" fill="#555">回头翻原始材料"补课"</text>
-  <text x="640" y="500" font-size="10" fill="#999">每个阅卷老师关注不同细节</text>
-
-  <!-- Key numbers -->
-  <rect x="620" y="520" width="240" height="60" rx="10" fill="#EDE7F6"/>
-  <text x="640" y="542" font-size="11" font-weight="bold" fill="#6C3483">⊙ Hadamard 积 = 图文交叉特征</text>
-  <text x="640" y="560" font-size="11" fill="#6C3483">H 个子空间 → H 组独立权重</text>
-  <text x="640" y="576" font-size="10" fill="#999">模态缺失时存在分数自动归零</text>
+  <!-- legend -->
+  <g transform="translate(850,590)">
+    <rect x="0" y="0" width="14" height="14" rx="4" fill="#60A5FA"/>
+    <text x="22" y="12" class="tiny">视觉</text>
+    <rect x="78" y="0" width="14" height="14" rx="4" fill="#34D399"/>
+    <text x="100" y="12" class="tiny">文本</text>
+    <rect x="156" y="0" width="14" height="14" rx="4" fill="#FB923C"/>
+    <text x="178" y="12" class="tiny">图文交互</text>
+  </g>
 </svg>

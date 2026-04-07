@@ -1,155 +1,164 @@
-<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
   <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#555">
-      <polygon points="0 0, 10 3.5, 0 7"/>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#4B5563"/>
     </marker>
-    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#2e7d32">
-      <polygon points="0 0, 10 3.5, 0 7"/>
+    <marker id="arrowBlue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#2563EB"/>
     </marker>
-    <marker id="arrowOrange" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#e65100">
-      <polygon points="0 0, 10 3.5, 0 7"/>
+    <marker id="arrowGreen" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#059669"/>
     </marker>
-    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#f5f7fa"/>
-      <stop offset="100%" stop-color="#e8edf3"/>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#F8FBFF"/>
+      <stop offset="100%" stop-color="#F3F7F6"/>
     </linearGradient>
-    <filter id="shadow" x="-3%" y="-3%" width="106%" height="106%">
-      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.15"/>
-    </filter>
+    <style>
+      .title{font:700 30px Arial, Helvetica, sans-serif; fill:#111827}
+      .subtitle{font:500 16px Arial, Helvetica, sans-serif; fill:#6B7280}
+      .label{font:700 20px Arial, Helvetica, sans-serif; fill:#111827}
+      .small{font:600 16px Arial, Helvetica, sans-serif; fill:#374151}
+      .tiny{font:600 14px Arial, Helvetica, sans-serif; fill:#4B5563}
+      .box{fill:#FFFFFF; stroke:#D1D5DB; stroke-width:2}
+      .soft{fill:#F9FAFB; stroke:#E5E7EB; stroke-width:2}
+      .blue{fill:#EEF4FF; stroke:#93C5FD; stroke-width:2.5}
+      .green{fill:#ECFDF5; stroke:#86EFAC; stroke-width:2.5}
+      .amber{fill:#FFF7ED; stroke:#FDBA74; stroke-width:2.5}
+      .red{fill:#FEF2F2; stroke:#FCA5A5; stroke-width:2.5}
+      .pill{fill:#F3F4F6; stroke:#D1D5DB; stroke-width:1.5}
+    </style>
   </defs>
 
-  <!-- Background -->
-  <rect width="900" height="620" fill="url(#bgGrad)" rx="12"/>
+  <rect width="1200" height="760" fill="url(#bg)"/>
 
-  <!-- Title -->
-  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a237e">MOON3.0: 对比 + 强化联合学习框架</text>
-  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#666">采样多条推理轨迹 → 综合打分 → 强化最优路径 + 对比保持区分性</text>
+  <text x="600" y="54" text-anchor="middle" class="title">MOON3.0：让推理自己竞争，再用奖励选出更好的表示</text>
+  <text x="600" y="82" text-anchor="middle" class="subtitle">核心点：对比学习 + 强化学习联合优化同一组推理轨迹</text>
 
-  <!-- ===== LEFT: Input & Sampling ===== -->
-  <!-- Product input -->
-  <rect x="30" y="90" width="160" height="100" rx="14" fill="#fff" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
-  <text x="110" y="115" text-anchor="middle" font-size="13" font-weight="bold" fill="#1565c0">🔍 商品输入</text>
-  <text x="110" y="138" text-anchor="middle" font-size="11" fill="#444">红色毛衣</text>
-  <text x="110" y="155" text-anchor="middle" font-size="11" fill="#444">图片 + 文本</text>
-  <text x="110" y="178" text-anchor="middle" font-size="10" fill="#888">（查询/正/负三元组）</text>
+  <!-- Left input -->
+  <g transform="translate(40,140)">
+    <rect x="0" y="0" rx="22" ry="22" width="240" height="470" class="box"/>
+    <text x="120" y="42" text-anchor="middle" class="label">同一商品输入</text>
 
-  <!-- Arrow to sampling -->
-  <line x1="190" y1="140" x2="240" y2="140" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="28" y="78" width="184" height="150" rx="16" class="soft"/>
+    <rect x="46" y="96" width="148" height="114" rx="10" fill="#FDE68A" stroke="#F59E0B" stroke-width="2"/>
+    <path d="M84 126 Q120 86 156 126 L166 146 Q154 170 120 178 Q86 170 74 146 Z" fill="#EF4444" opacity="0.88"/>
+    <path d="M104 116 Q120 102 136 116" fill="none" stroke="#FCE7F3" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="113" cy="137" r="4" fill="#FDE68A"/>
+    <circle cx="127" cy="145" r="4" fill="#FDE68A"/>
+    <circle cx="121" cy="159" r="4" fill="#FDE68A"/>
+    <text x="120" y="254" text-anchor="middle" class="small">红色毛衣</text>
 
-  <!-- ===== CENTER: 8 Trajectories ===== -->
-  <rect x="250" y="78" width="210" height="260" rx="16" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
-  <text x="355" y="102" text-anchor="middle" font-size="14" font-weight="bold" fill="#0d47a1">MLLM 采样 G=8 轨迹</text>
+    <rect x="28" y="290" width="184" height="138" rx="16" class="soft"/>
+    <text x="50" y="324" class="tiny">query / item</text>
+    <rect x="46" y="340" width="148" height="54" rx="10" fill="#FFFFFF" stroke="#D1D5DB"/>
+    <text x="120" y="372" text-anchor="middle" class="small">图像 + 标题</text>
 
-  <!-- Trajectory cards -->
-  <!-- Traj 1 - bad -->
-  <rect x="268" y="115" width="175" height="38" rx="8" fill="#ffcdd2" stroke="#c62828" stroke-width="1.2"/>
-  <text x="278" y="132" font-size="10" fill="#b71c1c" font-weight="bold">轨迹①</text>
-  <text x="278" y="146" font-size="9.5" fill="#555">颜色:红色  →  检索排名差 ✗</text>
+    <path d="M240 235 L290 235" stroke="#4B5563" stroke-width="3.2" marker-end="url(#arrow)"/>
+  </g>
 
-  <!-- Traj 3 - best -->
-  <rect x="268" y="162" width="175" height="52" rx="8" fill="#c8e6c9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="278" y="179" font-size="10" fill="#1b5e20" font-weight="bold">轨迹③ ⭐ 最优</text>
-  <text x="278" y="193" font-size="9.5" fill="#333">针织衫; 红色; 蝴蝶结;</text>
-  <text x="278" y="206" font-size="9.5" fill="#333">心形纽扣; 蕾丝领 → rank=1 ✓</text>
+  <!-- Middle sampling -->
+  <g transform="translate(300,120)">
+    <rect x="0" y="0" rx="24" ry="24" width="310" height="520" class="blue"/>
+    <text x="155" y="44" text-anchor="middle" class="label">采样 8 条推理轨迹</text>
 
-  <!-- Traj 5 - verbose -->
-  <rect x="268" y="223" width="175" height="38" rx="8" fill="#fff9c4" stroke="#f9a825" stroke-width="1.2"/>
-  <text x="278" y="240" font-size="10" fill="#e65100" font-weight="bold">轨迹⑤</text>
-  <text x="278" y="254" font-size="9.5" fill="#555">200 tokens 冗长描述 → 超长 ✗</text>
+    <g transform="translate(26,84)">
+      <rect x="0" y="0" width="258" height="84" rx="16" class="green"/>
+      <text x="18" y="30" class="small">① 只说“红色”</text>
+      <rect x="18" y="44" width="88" height="24" rx="12" class="pill"/>
+      <text x="62" y="61" text-anchor="middle" class="tiny">太粗糙</text>
+      <rect x="140" y="44" width="92" height="24" rx="12" class="pill"/>
+      <text x="186" y="61" text-anchor="middle" class="tiny">检索差</text>
+    </g>
 
-  <!-- Other trajectories hint -->
-  <text x="355" y="285" text-anchor="middle" font-size="11" fill="#78909c">… 轨迹②④⑥⑦⑧ …</text>
-  <text x="355" y="302" text-anchor="middle" font-size="10" fill="#90a4ae">每条生成属性序列 + embedding</text>
+    <g transform="translate(26,190)">
+      <rect x="0" y="0" width="258" height="108" rx="16" class="amber"/>
+      <text x="18" y="30" class="small">③ 结构化属性</text>
+      <text x="18" y="56" class="tiny">类目 / 颜色 / 蕾丝领 / 蝴蝶结 / 纽扣</text>
+      <rect x="18" y="70" width="94" height="24" rx="12" fill="#DCFCE7" stroke="#86EFAC"/>
+      <text x="65" y="87" text-anchor="middle" class="tiny">检索最好</text>
+      <rect x="132" y="70" width="92" height="24" rx="12" fill="#DCFCE7" stroke="#86EFAC"/>
+      <text x="178" y="87" text-anchor="middle" class="tiny">属性准确</text>
+    </g>
 
-  <!-- Curved arrow from trajectories down-right to reward -->
-  <line x1="460" y1="210" x2="510" y2="210" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+    <g transform="translate(26,322)">
+      <rect x="0" y="0" width="258" height="84" rx="16" class="red"/>
+      <text x="18" y="30" class="small">⑤ 200 token 长描述</text>
+      <rect x="18" y="44" width="92" height="24" rx="12" class="pill"/>
+      <text x="64" y="61" text-anchor="middle" class="tiny">太啰嗦</text>
+      <rect x="138" y="44" width="94" height="24" rx="12" class="pill"/>
+      <text x="185" y="61" text-anchor="middle" class="tiny">长度罚分</text>
+    </g>
 
-  <!-- ===== RIGHT-TOP: Reward System ===== -->
-  <rect x="520" y="78" width="350" height="200" rx="16" fill="#fff" stroke="#e65100" stroke-width="2.5" filter="url(#shadow)"/>
-  <text x="695" y="103" text-anchor="middle" font-size="15" font-weight="bold" fill="#e65100">📊 四维奖励系统</text>
+    <text x="155" y="462" text-anchor="middle" class="small">每条轨迹 → 属性序列 + embedding</text>
+    <path d="M310 260 L360 260" stroke="#2563EB" stroke-width="3.4" marker-end="url(#arrowBlue)"/>
+  </g>
 
-  <!-- 4 reward bars -->
-  <!-- Format -->
-  <rect x="540" y="118" width="140" height="30" rx="6" fill="#e8f5e9" stroke="#43a047" stroke-width="1.5"/>
-  <text x="548" y="137" font-size="11" fill="#2e7d32" font-weight="bold">✅ 格式奖励</text>
-  <text x="686" y="137" font-size="10" fill="#666">结构是否正确 0/1</text>
+  <!-- Right reward and learning -->
+  <g transform="translate(660,120)">
+    <rect x="0" y="0" rx="24" ry="24" width="500" height="520" class="box"/>
+    <text x="250" y="44" text-anchor="middle" class="label">奖励打分 + 联合更新</text>
 
-  <!-- Length -->
-  <rect x="540" y="155" width="140" height="30" rx="6" fill="#fff3e0" stroke="#ef6c00" stroke-width="1.5"/>
-  <text x="548" y="174" font-size="11" fill="#e65100" font-weight="bold">📏 长度奖励</text>
-  <text x="686" y="174" font-size="10" fill="#666">token数是否合理 0/1</text>
+    <!-- reward -->
+    <rect x="26" y="82" width="210" height="220" rx="18" class="soft"/>
+    <text x="131" y="116" text-anchor="middle" class="small">综合奖励</text>
 
-  <!-- Retrieval -->
-  <rect x="540" y="192" width="140" height="30" rx="6" fill="#e3f2fd" stroke="#1565c0" stroke-width="1.5"/>
-  <text x="548" y="211" font-size="11" fill="#0d47a1" font-weight="bold">🔎 检索奖励</text>
-  <text x="686" y="211" font-size="10" fill="#666">embedding检索排名</text>
+    <rect x="44" y="136" width="78" height="32" rx="16" class="pill"/>
+    <text x="83" y="157" text-anchor="middle" class="tiny">格式</text>
 
-  <!-- Attribute quality -->
-  <rect x="540" y="229" width="140" height="30" rx="6" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="1.5"/>
-  <text x="548" y="248" font-size="11" fill="#6a1b9a" font-weight="bold">💎 属性质量</text>
-  <text x="686" y="248" font-size="10" fill="#666">MLLM评估一致性</text>
+    <rect x="140" y="136" width="78" height="32" rx="16" class="pill"/>
+    <text x="179" y="157" text-anchor="middle" class="tiny">长度</text>
 
-  <!-- Arrow from reward to advantage -->
-  <line x1="695" y1="278" x2="695" y2="310" stroke="#e65100" stroke-width="2" marker-end="url(#arrowOrange)"/>
+    <rect x="44" y="186" width="78" height="32" rx="16" fill="#DBEAFE" stroke="#93C5FD"/>
+    <text x="83" y="207" text-anchor="middle" class="tiny">检索</text>
 
-  <!-- Advantage box -->
-  <rect x="600" y="315" width="190" height="40" rx="10" fill="#fff8e1" stroke="#f57f17" stroke-width="2"/>
-  <text x="695" y="340" text-anchor="middle" font-size="12" font-weight="bold" fill="#e65100">加权求和 → 组内归一化 → Advantage</text>
+    <rect x="140" y="186" width="78" height="32" rx="16" fill="#DCFCE7" stroke="#86EFAC"/>
+    <text x="179" y="207" text-anchor="middle" class="tiny">属性质</text>
 
-  <!-- ===== BOTTOM: Two Loss Streams ===== -->
-  <!-- Arrow down from advantage -->
-  <line x1="695" y1="355" x2="695" y2="395" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M58 248 H204" stroke="#9CA3AF" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <text x="131" y="276" text-anchor="middle" class="tiny">加权后组内归一化</text>
 
-  <!-- Split into two paths -->
-  <!-- GRPO Loss -->
-  <rect x="530" y="400" width="155" height="70" rx="14" fill="#ffccbc" stroke="#d84315" stroke-width="2.5" filter="url(#shadow)"/>
-  <text x="607" y="425" text-anchor="middle" font-size="13" font-weight="bold" fill="#bf360c">GRPO 损失</text>
-  <text x="607" y="445" text-anchor="middle" font-size="11" fill="#555">PPO-clip 优化策略</text>
-  <text x="607" y="460" text-anchor="middle" font-size="12" font-weight="bold" fill="#d84315">权重 = 1.0</text>
+    <!-- choose -->
+    <rect x="260" y="82" width="214" height="220" rx="18" class="blue"/>
+    <text x="367" y="116" text-anchor="middle" class="small">高分轨迹被强化</text>
 
-  <!-- Contrastive Loss -->
-  <rect x="715" y="400" width="155" height="70" rx="14" fill="#bbdefb" stroke="#1565c0" stroke-width="2.5" filter="url(#shadow)"/>
-  <text x="792" y="425" text-anchor="middle" font-size="13" font-weight="bold" fill="#0d47a1">InfoNCE 对比损失</text>
-  <text x="792" y="445" text-anchor="middle" font-size="11" fill="#555">保持 embedding 区分性</text>
-  <text x="792" y="460" text-anchor="middle" font-size="12" font-weight="bold" fill="#1565c0">权重 = 0.1</text>
+    <g transform="translate(286,144)">
+      <rect x="0" y="0" width="164" height="20" rx="10" fill="#E5E7EB"/>
+      <rect x="0" y="0" width="54" height="20" rx="10" fill="#9CA3AF"/>
+      <text x="174" y="15" class="tiny">轨迹①</text>
+    </g>
+    <g transform="translate(286,182)">
+      <rect x="0" y="0" width="164" height="20" rx="10" fill="#E5E7EB"/>
+      <rect x="0" y="0" width="146" height="20" rx="10" fill="#10B981"/>
+      <text x="174" y="15" class="tiny">轨迹③</text>
+    </g>
+    <g transform="translate(286,220)">
+      <rect x="0" y="0" width="164" height="20" rx="10" fill="#E5E7EB"/>
+      <rect x="0" y="0" width="22" height="20" rx="10" fill="#F87171"/>
+      <text x="174" y="15" class="tiny">轨迹⑤</text>
+    </g>
 
-  <!-- Split arrows -->
-  <line x1="670" y1="395" x2="607" y2="400" stroke="#d84315" stroke-width="1.8"/>
-  <line x1="720" y1="395" x2="792" y2="400" stroke="#1565c0" stroke-width="1.8"/>
+    <path d="M236 192 L260 192" stroke="#4B5563" stroke-width="3" marker-end="url(#arrow)"/>
 
-  <!-- Merge arrow to final -->
-  <line x1="607" y1="470" x2="607" y2="500" stroke="#d84315" stroke-width="1.5"/>
-  <line x1="792" y1="470" x2="792" y2="500" stroke="#1565c0" stroke-width="1.5"/>
-  <line x1="607" y1="500" x2="792" y2="500" stroke="#555" stroke-width="2"/>
-  <line x1="700" y1="500" x2="700" y2="530" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+    <!-- bottom dual update -->
+    <rect x="44" y="344" width="180" height="116" rx="18" class="green"/>
+    <text x="134" y="388" text-anchor="middle" class="label" style="font-size:24px">GRPO / PPO-clip</text>
+    <text x="134" y="420" text-anchor="middle" class="small">学会偏好高分推理</text>
 
-  <!-- Final loss -->
-  <rect x="610" y="535" width="180" height="45" rx="12" fill="#1a237e" filter="url(#shadow)"/>
-  <text x="700" y="557" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">L = 0.1·L_CL + 1.0·L_GRPO</text>
-  <text x="700" y="573" text-anchor="middle" font-size="10" fill="#bbdefb">联合优化最终损失</text>
+    <rect x="278" y="344" width="180" height="116" rx="18" class="amber"/>
+    <text x="368" y="388" text-anchor="middle" class="label" style="font-size:24px">InfoNCE</text>
+    <text x="368" y="420" text-anchor="middle" class="small">保持 embedding 可分</text>
 
-  <!-- ===== BOTTOM-LEFT: Key Insight ===== -->
-  <rect x="30" y="400" width="460" height="85" rx="14" fill="#e8eaf6" stroke="#3949ab" stroke-width="2" filter="url(#shadow)"/>
-  <text x="260" y="425" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a237e">💡 核心思想</text>
-  <text x="260" y="448" text-anchor="middle" font-size="12" fill="#333">模型自主探索多种属性拆解方式，综合打分后</text>
-  <text x="260" y="468" text-anchor="middle" font-size="12" fill="#333">强化最优推理路径（如轨迹③），抑制差路径（如轨迹①⑤）</text>
+    <path d="M367 302 L367 332" stroke="#4B5563" stroke-width="3.2" marker-end="url(#arrow)"/>
+    <path d="M367 332 L134 332 L134 344" stroke="#059669" stroke-width="3" fill="none" marker-end="url(#arrowGreen)"/>
+    <path d="M367 332 L368 332 L368 344" stroke="#D97706" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
 
-  <!-- Green highlight arrow pointing to best traj -->
-  <path d="M 443 182 C 468 182, 475 165, 475 150 L 475 135 C 475 120, 468 110, 465 108" fill="none" stroke="#2e7d32" stroke-width="2.2" stroke-dasharray="5,3" marker-end="url(#arrowGreen)"/>
-  <text x="488" y="155" font-size="10" fill="#2e7d32" font-weight="bold">强化 ↑</text>
+    <rect x="126" y="478" width="250" height="28" rx="14" fill="#111827"/>
+    <text x="251" y="497" text-anchor="middle" style="font:700 15px Arial, Helvetica, sans-serif; fill:#FFFFFF">最终：0.1 × 对比损失 + 1.0 × RL损失</text>
+  </g>
 
-  <!-- Red X on bad trajectories -->
-  <text x="448" y="142" font-size="16" fill="#c62828">✗</text>
-  <text x="448" y="251" font-size="16" fill="#e65100">✗</text>
-
-  <!-- Feedback loop hint -->
-  <path d="M 530 440 Q 500 440, 500 370 Q 500 310, 460 300" fill="none" stroke="#78909c" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
-  <text x="485" y="370" font-size="9" fill="#78909c" transform="rotate(-90, 485, 370)">反馈优化</text>
-
-  <!-- Embedding arrow from center down -->
-  <path d="M 355 340 L 355 370 Q 355 385, 370 385 L 520 440" fill="none" stroke="#546e7a" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <text x="380" y="375" font-size="9" fill="#78909c">各轨迹embedding</text>
-
-  <!-- Bottom signature -->
-  <text x="450" y="608" text-anchor="middle" font-size="10" fill="#aaa">MOON3.0 — Reasoning-aware Multimodal Representation Learning (Alibaba)</text>
+  <!-- bottom takeaway -->
+  <g transform="translate(150,665)">
+    <rect x="0" y="0" width="900" height="54" rx="18" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="2"/>
+    <text x="450" y="35" text-anchor="middle" class="label" style="font-size:24px">不是“照答案学”一次，而是“试 8 次 → 打分 → 强化好推理”</text>
+  </g>
 </svg>

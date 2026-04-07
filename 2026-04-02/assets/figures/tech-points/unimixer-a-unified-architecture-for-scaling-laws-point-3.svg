@@ -1,157 +1,130 @@
-<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
   <defs>
-    <linearGradient id="gOrig" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#ff6b6b" stop-opacity="0.15"/>
-      <stop offset="100%" stop-color="#ff6b6b" stop-opacity="0.05"/>
-    </linearGradient>
-    <linearGradient id="gLite" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4ecdc4" stop-opacity="0.15"/>
-      <stop offset="100%" stop-color="#4ecdc4" stop-opacity="0.05"/>
-    </linearGradient>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#4b5563"/>
     </marker>
-    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#2d9e8f"/>
-    </marker>
+    <style>
+      .title{font:700 32px sans-serif; fill:#111827}
+      .label{font:600 20px sans-serif; fill:#111827}
+      .small{font:500 17px sans-serif; fill:#374151}
+      .tiny{font:500 15px sans-serif; fill:#6b7280}
+      .box{stroke:#cbd5e1; stroke-width:2; rx:22; ry:22}
+      .arrow{stroke:#4b5563; stroke-width:3; fill:none; marker-end:url(#arrow)}
+      .num{font:700 18px sans-serif; fill:#0f172a}
+    </style>
   </defs>
 
-  <!-- Background -->
-  <rect width="900" height="620" rx="16" fill="#fafafa"/>
+  <rect width="1200" height="720" fill="#ffffff"/>
 
-  <!-- Title -->
-  <text x="450" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#2c3e50">UniMixing-Lite 轻量化设计</text>
-  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#7f8c8d">核心思想：基矩阵线性组合 + 低秩分解 → 参数骤降，性能更优</text>
+  <text x="600" y="54" text-anchor="middle" class="title">UniMixing-Lite：少量“基矩阵”生成很多 block</text>
 
-  <!-- ===== LEFT: Original UniMixing ===== -->
-  <rect x="30" y="85" width="400" height="440" rx="14" fill="url(#gOrig)" stroke="#ff6b6b" stroke-width="2"/>
-  <text x="230" y="112" text-anchor="middle" font-size="17" font-weight="bold" fill="#e74c3c">原版 UniMixing</text>
+  <!-- Left panel -->
+  <rect x="60" y="110" width="480" height="540" class="box" fill="#f8fafc"/>
+  <text x="300" y="150" text-anchor="middle" class="label">原版：每个 block 一套矩阵</text>
 
-  <!-- Local matrices - many independent blocks -->
-  <text x="230" y="145" text-anchor="middle" font-size="13" font-weight="bold" fill="#555">局部矩阵 W_B（每block独立）</text>
+  <!-- many local matrices -->
+  <g transform="translate(105,210)">
+    <rect x="0" y="0" width="82" height="82" rx="12" fill="#fecaca" stroke="#ef4444" stroke-width="2"/>
+    <path d="M14 14 H68 M14 41 H68 M14 68 H68 M14 14 V68 M41 14 V68 M68 14 V68" stroke="#ef4444" stroke-width="1.5" opacity="0.7"/>
+    <text x="41" y="102" text-anchor="middle" class="small">W₁</text>
 
-  <!-- Draw 5 independent matrices -->
-  <g transform="translate(55, 160)">
-    <rect width="48" height="48" rx="4" fill="#ff6b6b" fill-opacity="0.25" stroke="#e74c3c" stroke-width="1.5"/>
-    <text x="24" y="30" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="bold">W₁</text>
-  </g>
-  <g transform="translate(115, 160)">
-    <rect width="48" height="48" rx="4" fill="#ff6b6b" fill-opacity="0.25" stroke="#e74c3c" stroke-width="1.5"/>
-    <text x="24" y="30" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="bold">W₂</text>
-  </g>
-  <g transform="translate(175, 160)">
-    <rect width="48" height="48" rx="4" fill="#ff6b6b" fill-opacity="0.25" stroke="#e74c3c" stroke-width="1.5"/>
-    <text x="24" y="30" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="bold">W₃</text>
-  </g>
-  <text x="248" y="190" font-size="20" fill="#999">…</text>
-  <g transform="translate(275, 160)">
-    <rect width="48" height="48" rx="4" fill="#ff6b6b" fill-opacity="0.25" stroke="#e74c3c" stroke-width="1.5"/>
-    <text x="24" y="30" text-anchor="middle" font-size="10" fill="#c0392b" font-weight="bold">W₁₂₈</text>
+    <rect x="108" y="0" width="82" height="82" rx="12" fill="#fecaca" stroke="#ef4444" stroke-width="2"/>
+    <path d="M122 14 H176 M122 41 H176 M122 68 H176 M122 14 V68 M149 14 V68 M176 14 V68" stroke="#ef4444" stroke-width="1.5" opacity="0.7"/>
+    <text x="149" y="102" text-anchor="middle" class="small">W₂</text>
+
+    <rect x="216" y="0" width="82" height="82" rx="12" fill="#fecaca" stroke="#ef4444" stroke-width="2"/>
+    <path d="M230 14 H284 M230 41 H284 M230 68 H284 M230 14 V68 M257 14 V68 M284 14 V68" stroke="#ef4444" stroke-width="1.5" opacity="0.7"/>
+    <text x="257" y="102" text-anchor="middle" class="small">W₃</text>
+
+    <text x="354" y="50" text-anchor="middle" class="label" fill="#ef4444">…</text>
+
+    <rect x="390" y="0" width="82" height="82" rx="12" fill="#fecaca" stroke="#ef4444" stroke-width="2"/>
+    <path d="M404 14 H458 M404 41 H458 M404 68 H458 M404 14 V68 M431 14 V68 M458 14 V68" stroke="#ef4444" stroke-width="1.5" opacity="0.7"/>
+    <text x="431" y="102" text-anchor="middle" class="small">W₁₂₈</text>
   </g>
 
-  <text x="230" y="232" text-anchor="middle" font-size="11" fill="#e74c3c">128 个独立 6×6 矩阵 = 4608 参数</text>
-
-  <!-- Global matrix - big square -->
-  <text x="230" y="268" text-anchor="middle" font-size="13" font-weight="bold" fill="#555">全局矩阵 W_G</text>
-  <rect x="130" y="280" width="200" height="100" rx="6" fill="#ff6b6b" fill-opacity="0.2" stroke="#e74c3c" stroke-width="1.5"/>
-  <text x="230" y="335" text-anchor="middle" font-size="14" fill="#c0392b" font-weight="bold">128 × 128</text>
-  <text x="230" y="400" text-anchor="middle" font-size="11" fill="#e74c3c">= 16384 参数</text>
-
-  <!-- Total params -->
-  <rect x="120" y="430" width="220" height="40" rx="8" fill="#e74c3c" fill-opacity="0.12" stroke="#e74c3c" stroke-width="1.5"/>
-  <text x="230" y="455" text-anchor="middle" font-size="14" font-weight="bold" fill="#c0392b">总参数: 6.57M → AUC 0.7485</text>
-
-  <!-- ===== CENTER ARROW ===== -->
-  <g transform="translate(440, 260)">
-    <polygon points="0,30 30,0 30,18 80,18 80,42 30,42 30,60" fill="#2d9e8f" fill-opacity="0.8"/>
-    <text x="40" y="80" text-anchor="middle" font-size="12" fill="#2d9e8f" font-weight="bold">压缩</text>
+  <!-- big global -->
+  <g transform="translate(150,390)">
+    <rect x="0" y="0" width="300" height="170" rx="18" fill="#fee2e2" stroke="#ef4444" stroke-width="2.5"/>
+    <text x="150" y="42" text-anchor="middle" class="label">大矩阵 W-G</text>
+    <rect x="40" y="62" width="220" height="84" rx="10" fill="#fff" stroke="#f87171" stroke-width="1.8"/>
+    <path d="M58 78 H242 M58 98 H242 M58 118 H242 M58 138 H242
+             M58 78 V138 M98 78 V138 M138 78 V138 M178 78 V138 M218 78 V138" 
+          stroke="#f87171" stroke-width="1.2" opacity="0.8"/>
+    <text x="150" y="160" text-anchor="middle" class="small">参数多，重复高</text>
   </g>
 
-  <!-- ===== RIGHT: UniMixing-Lite ===== -->
-  <rect x="530" y="85" width="345" height="440" rx="14" fill="url(#gLite)" stroke="#4ecdc4" stroke-width="2.5"/>
-  <text x="702" y="112" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a8a7f">UniMixing-Lite ✨</text>
+  <!-- right panel -->
+  <rect x="660" y="110" width="480" height="540" class="box" fill="#f0fdf4"/>
+  <text x="900" y="150" text-anchor="middle" class="label">Lite：共享基底 + 低秩分解</text>
 
-  <!-- Base matrices (palette analogy) -->
-  <text x="702" y="145" text-anchor="middle" font-size="13" font-weight="bold" fill="#555">① 基矩阵"调色板" + 权重混合</text>
+  <!-- palette -->
+  <g transform="translate(705,205)">
+    <rect x="0" y="0" width="78" height="78" rx="12" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+    <path d="M13 13 H65 M13 39 H65 M13 65 H65 M13 13 V65 M39 13 V65 M65 13 V65" stroke="#2563eb" stroke-width="1.4" opacity="0.7"/>
+    <text x="39" y="99" text-anchor="middle" class="small">Z₁</text>
 
-  <!-- 4 base matrices -->
-  <g transform="translate(555, 160)">
-    <rect width="40" height="40" rx="4" fill="#4ecdc4" fill-opacity="0.35" stroke="#1a8a7f" stroke-width="1.5"/>
-    <text x="20" y="26" text-anchor="middle" font-size="10" fill="#1a8a7f" font-weight="bold">Z₁</text>
-  </g>
-  <g transform="translate(605, 160)">
-    <rect width="40" height="40" rx="4" fill="#45b7aa" fill-opacity="0.35" stroke="#1a8a7f" stroke-width="1.5"/>
-    <text x="20" y="26" text-anchor="middle" font-size="10" fill="#1a8a7f" font-weight="bold">Z₂</text>
-  </g>
-  <g transform="translate(655, 160)">
-    <rect width="40" height="40" rx="4" fill="#3da89c" fill-opacity="0.35" stroke="#1a8a7f" stroke-width="1.5"/>
-    <text x="20" y="26" text-anchor="middle" font-size="10" fill="#1a8a7f" font-weight="bold">Z₃</text>
-  </g>
-  <g transform="translate(705, 160)">
-    <rect width="40" height="40" rx="4" fill="#35998e" fill-opacity="0.35" stroke="#1a8a7f" stroke-width="1.5"/>
-    <text x="20" y="26" text-anchor="middle" font-size="10" fill="#1a8a7f" font-weight="bold">Z₄</text>
+    <rect x="95" y="0" width="78" height="78" rx="12" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+    <path d="M108 13 H160 M108 39 H160 M108 65 H160 M108 13 V65 M134 13 V65 M160 13 V65" stroke="#2563eb" stroke-width="1.4" opacity="0.7"/>
+    <text x="134" y="99" text-anchor="middle" class="small">Z₂</text>
+
+    <rect x="190" y="0" width="78" height="78" rx="12" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+    <path d="M203 13 H255 M203 39 H255 M203 65 H255 M203 13 V65 M229 13 V65 M255 13 V65" stroke="#2563eb" stroke-width="1.4" opacity="0.7"/>
+    <text x="229" y="99" text-anchor="middle" class="small">Z₃</text>
+
+    <rect x="285" y="0" width="78" height="78" rx="12" fill="#bfdbfe" stroke="#2563eb" stroke-width="2"/>
+    <path d="M298 13 H350 M298 39 H350 M298 65 H350 M298 13 V65 M324 13 V65 M350 13 V65" stroke="#2563eb" stroke-width="1.4" opacity="0.7"/>
+    <text x="324" y="99" text-anchor="middle" class="small">Z₄</text>
   </g>
 
-  <!-- Weight vector -->
-  <text x="800" y="175" font-size="11" fill="#555">×</text>
-  <g transform="translate(815, 162)">
-    <rect width="42" height="36" rx="4" fill="#ffeaa7" stroke="#fdcb6e" stroke-width="1.5"/>
-    <text x="21" y="16" text-anchor="middle" font-size="9" fill="#d68910" font-weight="bold">ω_i</text>
-    <text x="21" y="30" text-anchor="middle" font-size="8" fill="#d68910">(4维)</text>
+  <!-- omega to generated blocks -->
+  <g transform="translate(760,332)">
+    <rect x="0" y="0" width="110" height="52" rx="14" fill="#dbeafe" stroke="#3b82f6" stroke-width="2"/>
+    <text x="55" y="33" text-anchor="middle" class="small">ω(block)</text>
+
+    <line x1="110" y1="26" x2="185" y2="26" class="arrow"/>
+
+    <rect x="185" y="-15" width="90" height="90" rx="12" fill="#bbf7d0" stroke="#16a34a" stroke-width="2"/>
+    <path d="M200 -1 H260 M200 28 H260 M200 57 H260 M200 -1 V57 M230 -1 V57 M260 -1 V57" stroke="#16a34a" stroke-width="1.4" opacity="0.7"/>
+    <text x="230" y="99" text-anchor="middle" class="small">W-B</text>
   </g>
 
-  <!-- Formula line -->
-  <text x="702" y="222" text-anchor="middle" font-size="12" fill="#1a8a7f" font-weight="bold">W_B^i = ω₁Z₁ + ω₂Z₂ + ω₃Z₃ + ω₄Z₄</text>
-  <text x="702" y="242" text-anchor="middle" font-size="11" fill="#1a8a7f">4 基矩阵 + 128 权重 = 656 参数</text>
+  <!-- low rank -->
+  <g transform="translate(735,455)">
+    <rect x="0" y="0" width="90" height="130" rx="14" fill="#fde68a" stroke="#d97706" stroke-width="2"/>
+    <text x="45" y="72" text-anchor="middle" class="label">A</text>
 
-  <!-- Low-rank decomposition -->
-  <text x="702" y="278" text-anchor="middle" font-size="13" font-weight="bold" fill="#555">② 全局矩阵低秩分解</text>
+    <text x="115" y="74" text-anchor="middle" class="label">×</text>
 
-  <!-- A_G -->
-  <rect x="580" y="292" width="55" height="90" rx="5" fill="#4ecdc4" fill-opacity="0.25" stroke="#1a8a7f" stroke-width="1.5"/>
-  <text x="607" y="342" text-anchor="middle" font-size="11" fill="#1a8a7f" font-weight="bold">A_G</text>
-  <text x="607" y="358" text-anchor="middle" font-size="9" fill="#777">128×16</text>
+    <rect x="145" y="28" width="180" height="74" rx="14" fill="#fde68a" stroke="#d97706" stroke-width="2"/>
+    <text x="235" y="73" text-anchor="middle" class="label">B</text>
 
-  <!-- multiplication sign -->
-  <text x="650" y="342" text-anchor="middle" font-size="18" fill="#555">×</text>
+    <line x1="330" y1="65" x2="395" y2="65" class="arrow"/>
 
-  <!-- B_G -->
-  <rect x="668" y="310" width="90" height="55" rx="5" fill="#4ecdc4" fill-opacity="0.25" stroke="#1a8a7f" stroke-width="1.5"/>
-  <text x="713" y="340" text-anchor="middle" font-size="11" fill="#1a8a7f" font-weight="bold">B_G</text>
-  <text x="713" y="356" text-anchor="middle" font-size="9" fill="#777">16×128</text>
+    <rect x="395" y="6" width="70" height="118" rx="14" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+    <text x="430" y="72" text-anchor="middle" class="label">W-G</text>
+  </g>
 
-  <!-- equals -->
-  <text x="773" y="342" text-anchor="middle" font-size="18" fill="#555">=</text>
+  <!-- sinkhorn badge -->
+  <g transform="translate(948,356)">
+    <rect x="0" y="0" width="140" height="48" rx="24" fill="#ecfeff" stroke="#0891b2" stroke-width="2"/>
+    <text x="70" y="31" text-anchor="middle" class="small">Sinkhorn</text>
+  </g>
 
-  <!-- Result -->
-  <rect x="790" y="302" width="70" height="70" rx="5" fill="#4ecdc4" fill-opacity="0.15" stroke="#1a8a7f" stroke-width="1" stroke-dasharray="5,3"/>
-  <text x="825" y="340" text-anchor="middle" font-size="10" fill="#1a8a7f" font-weight="bold">W_G</text>
-  <text x="825" y="356" text-anchor="middle" font-size="9" fill="#777">128×128</text>
+  <!-- center comparison arrow -->
+  <line x1="560" y1="380" x2="630" y2="380" stroke="#10b981" stroke-width="6" marker-end="url(#arrow)"/>
+  <text x="595" y="355" text-anchor="middle" class="label" fill="#10b981">压缩</text>
 
-  <text x="702" y="405" text-anchor="middle" font-size="11" fill="#1a8a7f">参数: 16384 → 4096</text>
+  <!-- bottom numbers -->
+  <g transform="translate(120,610)">
+    <circle cx="0" cy="0" r="7" fill="#ef4444"/>
+    <text x="18" y="6" class="small">局部：128×36 = 4608</text>
+  </g>
+  <g transform="translate(690,610)">
+    <circle cx="0" cy="0" r="7" fill="#16a34a"/>
+    <text x="18" y="6" class="small">4×36 + 128×4 = 656</text>
+  </g>
 
-  <!-- Sinkhorn note -->
-  <rect x="595" y="415" width="215" height="24" rx="12" fill="#dfe6e9" stroke="#b2bec3" stroke-width="1"/>
-  <text x="702" y="432" text-anchor="middle" font-size="10" fill="#636e72">🔄 Sinkhorn-Knopp 保证双随机性</text>
-
-  <!-- Total params -->
-  <rect x="588" y="460" width="230" height="40" rx="8" fill="#1a8a7f" fill-opacity="0.15" stroke="#1a8a7f" stroke-width="2"/>
-  <text x="703" y="485" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a8a7f">总参数: 4.97M → AUC 0.7502 🏆</text>
-
-  <!-- ===== BOTTOM: Comparison bar ===== -->
-  <rect x="80" y="548" width="740" height="55" rx="12" fill="#2c3e50" fill-opacity="0.06" stroke="#2c3e50" stroke-width="1" stroke-opacity="0.2"/>
-
-  <!-- Original bar -->
-  <rect x="120" y="560" width="300" height="18" rx="9" fill="#ff6b6b" fill-opacity="0.5"/>
-  <text x="270" y="574" text-anchor="middle" font-size="10" fill="#fff" font-weight="bold">原版 6.57M 参数</text>
-
-  <!-- Lite bar -->
-  <rect x="120" y="582" width="227" height="18" rx="9" fill="#4ecdc4" fill-opacity="0.7"/>
-  <text x="233" y="596" text-anchor="middle" font-size="10" fill="#fff" font-weight="bold">Lite 4.97M 参数</text>
-
-  <text x="460" y="574" font-size="11" fill="#e74c3c" font-weight="bold">AUC 0.7485</text>
-  <text x="460" y="596" font-size="11" fill="#1a8a7f" font-weight="bold">AUC 0.7502 ↑</text>
-
-  <text x="600" y="585" font-size="14" font-weight="bold" fill="#2c3e50">参数 -24%，效果更好！</text>
-
+  <!-- subtle callout -->
+  <text x="900" y="640" text-anchor="middle" class="tiny">更少参数，性能不降反升</text>
 </svg>

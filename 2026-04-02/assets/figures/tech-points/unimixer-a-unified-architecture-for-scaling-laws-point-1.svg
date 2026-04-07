@@ -1,153 +1,116 @@
-<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
   <defs>
-    <marker id="arrowR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4B5563"/>
     </marker>
-    <marker id="arrowD" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:0.15" />
-      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:0.15" />
-    </linearGradient>
-    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#43e97b;stop-opacity:0.15" />
-      <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:0.15" />
-    </linearGradient>
+    <style>
+      .title{font:700 32px "Arial","Helvetica",sans-serif; fill:#111827}
+      .subtitle{font:600 18px "Arial","Helvetica",sans-serif; fill:#374151}
+      .label{font:700 20px "Arial","Helvetica",sans-serif; fill:#111827}
+      .small{font:600 17px "Arial","Helvetica",sans-serif; fill:#374151}
+      .tiny{font:600 16px "Arial","Helvetica",sans-serif; fill:#6B7280}
+      .box{stroke:#CBD5E1; stroke-width:2}
+      .arrow{stroke:#4B5563; stroke-width:3; fill:none; marker-end:url(#arrow)}
+      .dashed{stroke-dasharray:8 7}
+    </style>
   </defs>
 
-  <!-- Background -->
-  <rect width="900" height="620" rx="16" fill="#fafbff"/>
+  <rect width="1200" height="700" fill="#F8FAFC"/>
 
-  <!-- Title -->
-  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#2d3748">TokenMixer 的参数化等价发现</text>
-  <text x="450" y="68" text-anchor="middle" font-size="13" fill="#718096">固定"洗牌"操作 → 可学习的参数化矩阵 → Kronecker 积分解</text>
+  <text x="600" y="58" text-anchor="middle" class="title">TokenMixer = 可分解的“洗牌矩阵”</text>
+  <text x="600" y="88" text-anchor="middle" class="subtitle">把固定重排，变成可学习的全局 × 局部混合</text>
 
-  <!-- ===== LEFT: Before (Big Permutation Matrix) ===== -->
-  <rect x="30" y="95" width="260" height="500" rx="14" fill="url(#grad2)" stroke="#f5576c" stroke-width="1.5" stroke-dasharray="6,3"/>
-  <text x="160" y="122" text-anchor="middle" font-size="15" font-weight="bold" fill="#c53030">❶ 原始 TokenMixer</text>
+  <!-- Left panel -->
+  <rect x="60" y="140" rx="22" ry="22" width="320" height="430" fill="#FFFFFF" class="box"/>
+  <text x="220" y="185" text-anchor="middle" class="label">原始 TokenMixer</text>
+  <text x="220" y="215" text-anchor="middle" class="small">固定洗牌</text>
 
-  <!-- Input vector -->
-  <rect x="70" y="145" width="180" height="50" rx="8" fill="#fff" stroke="#a0aec0" stroke-width="1.5"/>
-  <text x="160" y="167" text-anchor="middle" font-size="12" fill="#2d3748">展平输入向量</text>
-  <text x="160" y="183" text-anchor="middle" font-size="11" fill="#718096">768 维 (16 token × 48d)</text>
+  <!-- input vector -->
+  <rect x="110" y="260" width="220" height="44" rx="10" fill="#DBEAFE" stroke="#93C5FD" stroke-width="2"/>
+  <rect x="110" y="260" width="55" height="44" rx="10" fill="#93C5FD"/>
+  <rect x="165" y="260" width="55" height="44" fill="#BFDBFE"/>
+  <rect x="220" y="260" width="55" height="44" fill="#93C5FD"/>
+  <rect x="275" y="260" width="55" height="44" rx="10" fill="#BFDBFE"/>
+  <text x="220" y="288" text-anchor="middle" class="small" fill="#1E3A8A">x (flattened tokens)</text>
 
-  <!-- Arrow down -->
-  <line x1="160" y1="195" x2="160" y2="228" stroke="#555" stroke-width="1.8" marker-end="url(#arrowD)"/>
-  <text x="175" y="218" font-size="10" fill="#e53e3e">× W_perm</text>
+  <!-- big permutation matrix -->
+  <rect x="125" y="350" width="190" height="140" rx="14" fill="#FEE2E2" stroke="#FCA5A5" stroke-width="2"/>
+  <!-- sparse pattern -->
+  <g stroke="#DC2626" stroke-width="4" stroke-linecap="round">
+    <line x1="145" y1="370" x2="145" y2="370"/>
+    <line x1="173" y1="392" x2="173" y2="392"/>
+    <line x1="201" y1="414" x2="201" y2="414"/>
+    <line x1="229" y1="436" x2="229" y2="436"/>
+    <line x1="257" y1="458" x2="257" y2="458"/>
+    <line x1="285" y1="480" x2="285" y2="480"/>
 
-  <!-- Big matrix -->
-  <rect x="80" y="232" width="160" height="160" rx="6" fill="#fff3f3" stroke="#e53e3e" stroke-width="2"/>
-  <!-- Grid lines to suggest big matrix -->
-  <g stroke="#fca5a5" stroke-width="0.5" opacity="0.6">
-    <line x1="80" y1="252" x2="240" y2="252"/><line x1="80" y1="272" x2="240" y2="272"/>
-    <line x1="80" y1="292" x2="240" y2="292"/><line x1="80" y1="312" x2="240" y2="312"/>
-    <line x1="80" y1="332" x2="240" y2="332"/><line x1="80" y1="352" x2="240" y2="352"/>
-    <line x1="80" y1="372" x2="240" y2="372"/>
-    <line x1="100" y1="232" x2="100" y2="392"/><line x1="120" y1="232" x2="120" y2="392"/>
-    <line x1="140" y1="232" x2="140" y2="392"/><line x1="160" y1="232" x2="160" y2="392"/>
-    <line x1="180" y1="232" x2="180" y2="392"/><line x1="200" y1="232" x2="200" y2="392"/>
-    <line x1="220" y1="232" x2="220" y2="392"/>
+    <line x1="285" y1="370" x2="285" y2="370"/>
+    <line x1="257" y1="392" x2="257" y2="392"/>
+    <line x1="229" y1="414" x2="229" y2="414"/>
+    <line x1="201" y1="436" x2="201" y2="436"/>
+    <line x1="173" y1="458" x2="173" y2="458"/>
+    <line x1="145" y1="480" x2="145" y2="480"/>
   </g>
-  <!-- Scattered 1s -->
-  <g font-size="9" fill="#e53e3e" font-weight="bold">
-    <text x="85" y="249">1</text><text x="125" y="269">1</text><text x="205" y="289">1</text>
-    <text x="165" y="309">1</text><text x="105" y="329">1</text><text x="225" y="349">1</text>
-    <text x="145" y="369">1</text><text x="185" y="389">1</text>
+  <text x="220" y="425" text-anchor="middle" class="small" fill="#991B1B">Wperm</text>
+  <text x="220" y="515" text-anchor="middle" class="tiny">大矩阵，固定不可学</text>
+
+  <line x1="220" y1="304" x2="220" y2="340" class="arrow"/>
+
+  <!-- center decomposition -->
+  <line x1="400" y1="355" x2="525" y2="355" class="arrow dashed"/>
+  <text x="462" y="336" text-anchor="middle" class="label" fill="#7C3AED">Kronecker 分解</text>
+  <text x="462" y="384" text-anchor="middle" class="small">Wperm = G ⊗ I</text>
+
+  <!-- Right panel -->
+  <rect x="560" y="140" rx="22" ry="22" width="580" height="430" fill="#FFFFFF" class="box"/>
+  <text x="850" y="185" text-anchor="middle" class="label">参数化 TokenMixer</text>
+  <text x="850" y="215" text-anchor="middle" class="small">学“块间” + “块内”</text>
+
+  <!-- G -->
+  <rect x="620" y="270" width="200" height="180" rx="18" fill="#EDE9FE" stroke="#C4B5FD" stroke-width="2"/>
+  <text x="720" y="305" text-anchor="middle" class="label" fill="#5B21B6">G</text>
+  <text x="720" y="335" text-anchor="middle" class="small">全局块间混合</text>
+  <g stroke="#7C3AED" stroke-width="3">
+    <line x1="660" y1="365" x2="780" y2="365"/>
+    <line x1="660" y1="400" x2="780" y2="400"/>
+    <line x1="660" y1="435" x2="780" y2="435"/>
+    <line x1="680" y1="345" x2="680" y2="455"/>
+    <line x1="720" y1="345" x2="720" y2="455"/>
+    <line x1="760" y1="345" x2="760" y2="455"/>
   </g>
-  <text x="160" y="312" text-anchor="middle" font-size="28" fill="#e53e3e" opacity="0.12" font-weight="bold">768²</text>
-  <text x="160" y="410" text-anchor="middle" font-size="11" fill="#c53030" font-weight="bold">768 × 768 置换矩阵</text>
+  <circle cx="680" cy="365" r="7" fill="#7C3AED"/>
+  <circle cx="720" cy="400" r="7" fill="#7C3AED"/>
+  <circle cx="760" cy="435" r="7" fill="#7C3AED"/>
+  <circle cx="760" cy="365" r="7" fill="#7C3AED"/>
 
-  <!-- Problem label -->
-  <rect x="60" y="430" width="200" height="50" rx="8" fill="#fff5f5" stroke="#fc8181" stroke-width="1"/>
-  <text x="160" y="450" text-anchor="middle" font-size="12" fill="#c53030" font-weight="bold">⚠ 固定、不可学习</text>
-  <text x="160" y="468" text-anchor="middle" font-size="11" fill="#c53030">参数量 ~ L⁴ 爆炸</text>
+  <!-- I -->
+  <rect x="870" y="270" width="210" height="180" rx="18" fill="#DCFCE7" stroke="#86EFAC" stroke-width="2"/>
+  <text x="975" y="305" text-anchor="middle" class="label" fill="#166534">I</text>
+  <text x="975" y="335" text-anchor="middle" class="small">局部块内混合</text>
 
-  <!-- ===== CENTER: Arrow of equivalence ===== -->
-  <line x1="300" y1="345" x2="350" y2="345" stroke="#764ba2" stroke-width="3" marker-end="url(#arrowR)"/>
-  <text x="325" y="332" text-anchor="middle" font-size="20" fill="#764ba2" font-weight="bold">≡</text>
-  <text x="325" y="365" text-anchor="middle" font-size="10" fill="#764ba2">等价分解</text>
-
-  <!-- ===== RIGHT: After (Kronecker Decomposition) ===== -->
-  <rect x="360" y="95" width="520" height="500" rx="14" fill="url(#grad3)" stroke="#38a169" stroke-width="1.5" stroke-dasharray="6,3"/>
-  <text x="620" y="122" text-anchor="middle" font-size="15" font-weight="bold" fill="#276749">❷ Kronecker 积分解 → 可学习!</text>
-
-  <!-- Formula bar -->
-  <rect x="400" y="140" width="440" height="44" rx="10" fill="#fff" stroke="#68d391" stroke-width="2"/>
-  <text x="620" y="160" text-anchor="middle" font-size="15" fill="#2d3748">W<tspan font-size="10" dy="4">perm</tspan><tspan dy="-4"> = </tspan></text>
-  <text x="620" y="160" text-anchor="middle" font-size="15" fill="#2d3748" dx="42">G  ⊗  I</text>
-  <text x="580" y="175" text-anchor="middle" font-size="10" fill="#718096">全局</text>
-  <text x="660" y="175" text-anchor="middle" font-size="10" fill="#718096">局部</text>
-
-  <!-- G matrix (Global) -->
-  <rect x="410" y="210" width="170" height="200" rx="12" fill="#fff" stroke="#4299e1" stroke-width="2.5"/>
-  <text x="495" y="237" text-anchor="middle" font-size="14" font-weight="bold" fill="#2b6cb0">G — 全局交互</text>
-  <text x="495" y="257" text-anchor="middle" font-size="11" fill="#718096">block 间信息交换</text>
-
-  <!-- Small matrix visual -->
-  <rect x="445" y="268" width="100" height="100" rx="4" fill="#ebf8ff" stroke="#90cdf4" stroke-width="1.5"/>
-  <g stroke="#bee3f8" stroke-width="0.5">
-    <line x1="445" y1="293" x2="545" y2="293"/><line x1="445" y1="318" x2="545" y2="318"/>
-    <line x1="445" y1="343" x2="545" y2="343"/>
-    <line x1="470" y1="268" x2="470" y2="368"/><line x1="495" y1="268" x2="495" y2="368"/>
-    <line x1="520" y1="268" x2="520" y2="368"/>
+  <g transform="translate(905,355)">
+    <rect x="0" y="0" width="52" height="52" rx="10" fill="#BBF7D0" stroke="#22C55E" stroke-width="2"/>
+    <rect x="62" y="0" width="52" height="52" rx="10" fill="#BBF7D0" stroke="#22C55E" stroke-width="2"/>
+    <rect x="124" y="0" width="52" height="52" rx="10" fill="#BBF7D0" stroke="#22C55E" stroke-width="2"/>
+    <text x="26" y="33" text-anchor="middle" class="small" fill="#166534">6×6</text>
+    <text x="88" y="33" text-anchor="middle" class="small" fill="#166534">6×6</text>
+    <text x="150" y="33" text-anchor="middle" class="small" fill="#166534">6×6</text>
   </g>
-  <text x="495" y="330" text-anchor="middle" font-size="22" fill="#2b6cb0" opacity="0.3" font-weight="bold">16²</text>
 
-  <rect x="440" y="377" width="110" height="26" rx="6" fill="#ebf8ff" stroke="#63b3ed" stroke-width="1"/>
-  <text x="495" y="395" text-anchor="middle" font-size="12" font-weight="bold" fill="#2b6cb0">16 × 16</text>
+  <!-- bottom summary -->
+  <rect x="650" y="485" width="400" height="56" rx="14" fill="#FEF3C7" stroke="#FCD34D" stroke-width="2"/>
+  <text x="850" y="520" text-anchor="middle" class="label" fill="#92400E">从“大洗牌”到“小模块可学习”</text>
 
-  <!-- Kronecker symbol -->
-  <text x="598" y="320" text-anchor="middle" font-size="36" fill="#764ba2" font-weight="bold">⊗</text>
+  <!-- connecting arrows inside right panel -->
+  <line x1="820" y1="360" x2="860" y2="360" class="arrow"/>
+  <line x1="720" y1="452" x2="720" y2="485" class="arrow"/>
+  <line x1="975" y1="452" x2="975" y2="485" class="arrow"/>
+  <line x1="720" y1="513" x2="820" y2="513" class="arrow"/>
+  <line x1="975" y1="513" x2="880" y2="513" class="arrow"/>
 
-  <!-- I matrices (Local) -->
-  <rect x="630" y="210" width="230" height="200" rx="12" fill="#fff" stroke="#48bb78" stroke-width="2.5"/>
-  <text x="745" y="237" text-anchor="middle" font-size="14" font-weight="bold" fill="#276749">I — 局部交互</text>
-  <text x="745" y="257" text-anchor="middle" font-size="11" fill="#718096">block 内特征混合</text>
-
-  <!-- Multiple small matrices -->
-  <g>
-    <rect x="655" y="272" width="48" height="48" rx="3" fill="#f0fff4" stroke="#68d391" stroke-width="1.5"/>
-    <line x1="655" y1="288" x2="703" y2="288" stroke="#c6f6d5" stroke-width="0.5"/>
-    <line x1="655" y1="304" x2="703" y2="304" stroke="#c6f6d5" stroke-width="0.5"/>
-    <line x1="671" y1="272" x2="671" y2="320" stroke="#c6f6d5" stroke-width="0.5"/>
-    <line x1="687" y1="272" x2="687" y2="320" stroke="#c6f6d5" stroke-width="0.5"/>
-    <text x="679" y="302" text-anchor="middle" font-size="10" fill="#276749">6²</text>
-  </g>
-  <g>
-    <rect x="715" y="272" width="48" height="48" rx="3" fill="#f0fff4" stroke="#68d391" stroke-width="1.5"/>
-    <text x="739" y="302" text-anchor="middle" font-size="10" fill="#276749">6²</text>
-  </g>
-  <g>
-    <rect x="775" y="272" width="48" height="48" rx="3" fill="#f0fff4" stroke="#68d391" stroke-width="1.5"/>
-    <text x="799" y="302" text-anchor="middle" font-size="10" fill="#276749">6²</text>
-  </g>
-  <text x="745" y="342" text-anchor="middle" font-size="11" fill="#718096">… × 128 个小块</text>
-
-  <rect x="680" y="357" width="130" height="26" rx="6" fill="#f0fff4" stroke="#48bb78" stroke-width="1"/>
-  <text x="745" y="375" text-anchor="middle" font-size="12" font-weight="bold" fill="#276749">每个 6 × 6</text>
-
-  <!-- Benefit box -->
-  <rect x="400" y="430" width="440" height="100" rx="12" fill="#fff" stroke="#38a169" stroke-width="2"/>
-  <!-- Check marks -->
-  <text x="425" y="460" font-size="16" fill="#38a169">✓</text>
-  <text x="448" y="461" font-size="13" fill="#2d3748" font-weight="bold">参数可学习</text>
-  <text x="448" y="479" font-size="11" fill="#718096">模型自动学最优特征交叉模式</text>
-
-  <text x="425" y="505" font-size="16" fill="#38a169">✓</text>
-  <text x="448" y="506" font-size="13" fill="#2d3748" font-weight="bold">参数量大幅压缩</text>
-  <text x="448" y="522" font-size="11" fill="#718096">768² → 16² + 128 × 6² = 4,864</text>
-
-  <!-- Compression ratio highlight -->
-  <rect x="700" y="455" width="125" height="65" rx="10" fill="url(#grad1)"/>
-  <text x="762" y="482" text-anchor="middle" font-size="14" fill="#fff" font-weight="bold">压缩 120×</text>
-  <text x="762" y="503" text-anchor="middle" font-size="11" fill="#e9d8fd">589K → 4.8K</text>
-
-  <!-- Bottom summary -->
-  <rect x="140" y="570" width="620" height="36" rx="10" fill="#764ba2" opacity="0.9"/>
-  <text x="450" y="594" text-anchor="middle" font-size="14" fill="#fff" font-weight="bold">核心洞察: 固定洗牌 = 置换矩阵 = G ⊗ I → 参数化 + 高效可学习</text>
+  <!-- bottom comparison -->
+  <rect x="120" y="610" width="960" height="52" rx="16" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="2"/>
+  <text x="600" y="643" text-anchor="middle" class="small">
+    参数量：L⁴  →  T⁴ + (D/T)²
+  </text>
 </svg>

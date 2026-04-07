@@ -1,0 +1,11 @@
+{
+  "report_date": "2026-04-02",
+  "provider": "gpt54",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 4141,
+  "focus_titles": [
+    "UniMixer: A Unified Architecture for Scaling Laws in Recommendation Systems",
+    "MOON3.0: Reasoning-aware Multimodal Representation Learning for E-commerce Product Understanding"
+  ]
+}
