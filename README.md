@@ -4,18 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-04-06
+- **日期**：2026-04-07
 - **分类**：cs.IR + cs.AI + cs.LG + cs.CL
 - **候选论文数**：2
 - **必读论文**：
-  - VALOR: Value-Aware Revenue Uplift Modeling with Treatment-Gated Representation for B2B Sales
-  - MBGR: Multi-Business Prediction for Generative Recommendation at Meituan
-- **日报路径**：[2026-04-06/daily_report.md](2026-04-06/daily_report.md)
+  - Semantic IDs for Recommender Systems at Snapchat: Use Cases, Technical Challenges, and Design Choices
+  - SLSREC: Self-Supervised Contrastive Learning for Adaptive Fusion of Long- and Short-Term User Interests
+- **日报路径**：[2026-04-07/daily_report.md](2026-04-07/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-04-07 | cs.IR + cs.AI + cs.LG + cs.CL | 2 | 1 | Semantic IDs for Recommender Systems at Snapchat: Use Cases, Technical Challenges, and Design Choices | [2026-04-07/daily_report.md](2026-04-07/daily_report.md) |
+|  |  |  | 2 | SLSREC: Self-Supervised Contrastive Learning for Adaptive Fusion of Long- and Short-Term User Interests |  |
 | 2026-04-06 | cs.IR + cs.AI + cs.LG + cs.CL | 2 | 1 | VALOR: Value-Aware Revenue Uplift Modeling with Treatment-Gated Representation for B2B Sales | [2026-04-06/daily_report.md](2026-04-06/daily_report.md) |
 |  |  |  | 2 | MBGR: Multi-Business Prediction for Generative Recommendation at Meituan |  |
 | 2026-04-03 | cs.IR + cs.AI + cs.LG + cs.CL | 0 | 1 | 无 | [2026-04-03/daily_report.md](2026-04-03/daily_report.md) |

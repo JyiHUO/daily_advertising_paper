@@ -1,0 +1,140 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f0c29"/>
+      <stop offset="50%" stop-color="#1a1a4e"/>
+      <stop offset="100%" stop-color="#24243e"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFCC02"/>
+      <stop offset="100%" stop-color="#FF9500"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4FC3F7"/>
+      <stop offset="100%" stop-color="#2196F3"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#66BB6A"/>
+      <stop offset="100%" stop-color="#2E7D32"/>
+    </linearGradient>
+    <linearGradient id="purple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#CE93D8"/>
+      <stop offset="100%" stop-color="#7B1FA2"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#FFCC02"/>
+    </marker>
+    <marker id="arrowW" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#fff"/>
+    </marker>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bg)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#FFCC02" font-size="22" font-weight="bold" filter="url(#glow)">Semantic ID 作为排序辅助特征 — 冷启动破解</text>
+  <text x="450" y="65" text-anchor="middle" fill="#aaa" font-size="13">Snapchat Ads Ranking · 新广告无需历史曝光即可精准预估</text>
+
+  <!-- ===== LEFT: New Ad Item ===== -->
+  <rect x="30" y="100" width="200" height="110" rx="14" fill="none" stroke="#FF9500" stroke-width="2" opacity="0.8"/>
+  <text x="130" y="127" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">🆕 新运动鞋广告</text>
+  <text x="130" y="152" text-anchor="middle" fill="#bbb" font-size="12">原子ID: #9,832,471</text>
+  <text x="130" y="172" text-anchor="middle" fill="#ff6b6b" font-size="11" font-weight="bold">❌ 随机初始化 Embedding</text>
+  <text x="130" y="192" text-anchor="middle" fill="#ff6b6b" font-size="11">无历史梯度 → 预估不准</text>
+
+  <!-- Arrow down from new ad to Qwen -->
+  <line x1="130" y1="210" x2="130" y2="250" stroke="#FFCC02" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ===== CENTER-LEFT: Qwen + RQ-VAE block ===== -->
+  <rect x="40" y="255" width="180" height="95" rx="14" fill="url(#purple)" opacity="0.85"/>
+  <text x="130" y="283" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">Qwen Embedding</text>
+  <text x="130" y="302" text-anchor="middle" fill="#e0e0e0" font-size="12">文本元数据 → 语义向量</text>
+  <line x1="130" y1="312" x2="130" y2="318" stroke="#fff" stroke-width="1" opacity="0.4"/>
+  <text x="130" y="335" text-anchor="middle" fill="#fff" font-size="13" font-weight="bold">↓ RQ-VAE 量化</text>
+
+  <!-- Arrow right to SID codes -->
+  <line x1="220" y1="302" x2="290" y2="302" stroke="#FFCC02" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- ===== CENTER: SID Code Sequence (the key innovation visual) ===== -->
+  <rect x="295" y="240" width="280" height="130" rx="16" fill="rgba(255,255,255,0.06)" stroke="#4FC3F7" stroke-width="1.5"/>
+  <text x="435" y="268" text-anchor="middle" fill="#4FC3F7" font-size="15" font-weight="bold">SID 码序列（由粗到细）</text>
+
+  <!-- Three hierarchical code blocks -->
+  <rect x="315" y="285" width="72" height="60" rx="10" fill="url(#blue)" opacity="0.9"/>
+  <text x="351" y="310" text-anchor="middle" fill="#fff" font-size="20">🏃</text>
+  <text x="351" y="335" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">体育</text>
+
+  <text x="397" y="318" text-anchor="middle" fill="#FFCC02" font-size="18">→</text>
+
+  <rect x="410" y="285" width="72" height="60" rx="10" fill="url(#blue)" opacity="0.75"/>
+  <text x="446" y="310" text-anchor="middle" fill="#fff" font-size="20">👟</text>
+  <text x="446" y="335" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">鞋类</text>
+
+  <text x="492" y="318" text-anchor="middle" fill="#FFCC02" font-size="18">→</text>
+
+  <rect x="505" y="285" width="55" height="60" rx="10" fill="url(#blue)" opacity="0.6"/>
+  <text x="532" y="310" text-anchor="middle" fill="#fff" font-size="16">🏃‍♂️</text>
+  <text x="532" y="335" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">跑步</text>
+
+  <!-- Shared prefix annotation -->
+  <rect x="305" y="355" width="262" height="22" rx="6" fill="rgba(76,175,80,0.2)" stroke="#66BB6A" stroke-width="1"/>
+  <text x="436" y="371" text-anchor="middle" fill="#66BB6A" font-size="11">✅ 同类商品已充分训练这些码的 Embedding</text>
+
+  <!-- Arrow right to Ranking Model -->
+  <line x1="575" y1="305" x2="620" y2="305" stroke="#FFCC02" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- ===== RIGHT: Ranking Model ===== -->
+  <rect x="625" y="225" width="240" height="165" rx="16" fill="rgba(255,255,255,0.06)" stroke="url(#green)" stroke-width="2"/>
+  <text x="745" y="255" text-anchor="middle" fill="#66BB6A" font-size="15" font-weight="bold">排序模型</text>
+
+  <!-- Feature concat visual -->
+  <rect x="645" y="270" width="200" height="30" rx="6" fill="rgba(255,204,2,0.15)" stroke="#FFCC02" stroke-width="1"/>
+  <text x="745" y="290" text-anchor="middle" fill="#FFCC02" font-size="12">SID码 作为类别特征拼入</text>
+
+  <rect x="645" y="308" width="200" height="26" rx="6" fill="rgba(255,255,255,0.08)"/>
+  <text x="745" y="326" text-anchor="middle" fill="#ccc" font-size="11">+ 上下文/用户特征 + 其他</text>
+
+  <text x="745" y="360" text-anchor="middle" fill="#fff" font-size="13">↓</text>
+  <text x="745" y="378" text-anchor="middle" fill="#4FC3F7" font-size="13" font-weight="bold">精准 CTR 预估 ✅</text>
+
+  <!-- ===== BOTTOM: Comparison / Results ===== -->
+  <!-- VS divider -->
+  <line x1="50" y1="420" x2="850" y2="420" stroke="#555" stroke-width="1" stroke-dasharray="6,4"/>
+
+  <!-- Left: Without SID -->
+  <rect x="50" y="445" width="360" height="150" rx="14" fill="rgba(255,107,107,0.08)" stroke="#ff6b6b" stroke-width="1.5"/>
+  <text x="230" y="475" text-anchor="middle" fill="#ff6b6b" font-size="16" font-weight="bold">❌ 无 SID（传统原子ID）</text>
+  <text x="230" y="502" text-anchor="middle" fill="#e88" font-size="13">新广告 = 随机 Embedding</text>
+  <text x="230" y="525" text-anchor="middle" fill="#e88" font-size="13">长尾物品训练不足</text>
+  <text x="230" y="548" text-anchor="middle" fill="#e88" font-size="13">DPA 商品高速更替 → 大量冷启动</text>
+  <text x="230" y="578" text-anchor="middle" fill="#999" font-size="12">嵌入表参数爆炸 · 泛化能力弱</text>
+
+  <!-- Right: With SID -->
+  <rect x="480" y="445" width="380" height="150" rx="14" fill="rgba(102,187,106,0.08)" stroke="#66BB6A" stroke-width="1.5"/>
+  <text x="670" y="475" text-anchor="middle" fill="#66BB6A" font-size="16" font-weight="bold">✅ 加入 SID 辅助特征</text>
+
+  <!-- Metric pills -->
+  <rect x="505" y="492" width="155" height="28" rx="8" fill="rgba(76,175,80,0.25)"/>
+  <text x="582" y="511" text-anchor="middle" fill="#a5d6a7" font-size="12" font-weight="bold">Ads AUC +0.028%</text>
+
+  <rect x="672" y="492" width="170" height="28" rx="8" fill="rgba(76,175,80,0.35)"/>
+  <text x="757" y="511" text-anchor="middle" fill="#c8e6c9" font-size="12" font-weight="bold">DPA Cart AUC +0.67%</text>
+
+  <rect x="505" y="530" width="155" height="28" rx="8" fill="rgba(76,175,80,0.25)"/>
+  <text x="582" y="549" text-anchor="middle" fill="#a5d6a7" font-size="12" font-weight="bold">好友推荐 +1.8~4.9%</text>
+
+  <rect x="672" y="530" width="170" height="28" rx="8" fill="rgba(76,175,80,0.2)"/>
+  <text x="757" y="549" text-anchor="middle" fill="#a5d6a7" font-size="12" font-weight="bold">负向操作 ↓3~5%</text>
+
+  <text x="670" y="582" text-anchor="middle" fill="#ccc" font-size="12">语义码共享 → 新品即刻泛化</text>
+
+  <!-- Central VS badge -->
+  <circle cx="440" cy="520" r="22" fill="#24243e" stroke="#FFCC02" stroke-width="2"/>
+  <text x="440" y="526" text-anchor="middle" fill="#FFCC02" font-size="14" font-weight="bold">VS</text>
+
+</svg>

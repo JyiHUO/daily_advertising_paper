@@ -1,0 +1,119 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="longGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="shortGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="gateGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+    <linearGradient id="itemGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="fusionGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#db2777"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <marker id="arrowWhite" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad)" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="42" text-anchor="middle" fill="#e2e8f0" font-size="20" font-weight="bold">目标物品自适应门控融合</text>
+  <text x="400" y="65" text-anchor="middle" fill="#64748b" font-size="13">SLSRec: 根据候选物品动态调整长短期兴趣权重</text>
+
+  <!-- ========== Left: Long-term Interest ========== -->
+  <rect x="60" y="130" width="160" height="70" rx="14" fill="url(#longGrad)" filter="url(#shadow)" opacity="0.95"/>
+  <text x="140" y="160" text-anchor="middle" fill="#fff" font-size="16" font-weight="bold">长期兴趣 u<tspan baseline-shift="sub" font-size="11">L</tspan></text>
+  <text x="140" y="182" text-anchor="middle" fill="#bfdbfe" font-size="12">📱 一直爱数码</text>
+
+  <!-- ========== Right: Short-term Interest ========== -->
+  <rect x="580" y="130" width="160" height="70" rx="14" fill="url(#shortGrad)" filter="url(#shadow)" opacity="0.95"/>
+  <text x="660" y="160" text-anchor="middle" fill="#fff" font-size="16" font-weight="bold">短期兴趣 u<tspan baseline-shift="sub" font-size="11">S</tspan></text>
+  <text x="660" y="182" text-anchor="middle" fill="#fef3c7" font-size="12">🎧 刚逛耳机</text>
+
+  <!-- ========== Center: Candidate Item ========== -->
+  <rect x="310" y="115" width="180" height="60" rx="14" fill="url(#itemGrad)" filter="url(#shadow)" opacity="0.95"/>
+  <text x="400" y="143" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">候选物品 v<tspan baseline-shift="sub" font-size="11">T</tspan></text>
+  <text x="400" y="162" text-anchor="middle" fill="#d1fae5" font-size="12">决定融合比例的关键</text>
+
+  <!-- Arrows from 3 boxes to Gate -->
+  <!-- Long to Gate -->
+  <path d="M140 200 L140 270 Q140 285 155 285 L295 285" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrowWhite)"/>
+  <!-- Short to Gate -->
+  <path d="M660 200 L660 270 Q660 285 645 285 L505 285" fill="none" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrowWhite)"/>
+  <!-- Item to Gate -->
+  <line x1="400" y1="175" x2="400" y2="258" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrowWhite)"/>
+
+  <!-- ========== Gate Module ========== -->
+  <rect x="295" y="260" width="210" height="65" rx="16" fill="url(#gateGrad)" filter="url(#shadow)"/>
+  <text x="400" y="288" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">🔀 自适应门控</text>
+  <text x="400" y="310" text-anchor="middle" fill="#ddd6fe" font-size="13">α = σ( W·[u<tspan baseline-shift="sub" font-size="10">L</tspan>, u<tspan baseline-shift="sub" font-size="10">S</tspan>, v<tspan baseline-shift="sub" font-size="10">T</tspan>] + b )</text>
+
+  <!-- Arrow from Gate down -->
+  <line x1="400" y1="325" x2="400" y2="360" stroke="#a78bfa" stroke-width="2.5" marker-end="url(#arrowPurple)"/>
+
+  <!-- ========== Fusion Formula ========== -->
+  <rect x="250" y="362" width="300" height="50" rx="14" fill="url(#fusionGrad)" filter="url(#shadow)" opacity="0.95"/>
+  <text x="400" y="392" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">u<tspan baseline-shift="sub" font-size="11">LS</tspan> = α·u<tspan baseline-shift="sub" font-size="11">L</tspan> + (1−α)·u<tspan baseline-shift="sub" font-size="11">S</tspan></text>
+
+  <!-- ========== Two Comparison Scenarios ========== -->
+  <!-- Scenario A: headphones -->
+  <rect x="60" y="455" width="310" height="110" rx="14" fill="#1e293b" stroke="#f59e0b" stroke-width="2" filter="url(#shadow)"/>
+  <text x="215" y="483" text-anchor="middle" fill="#fbbf24" font-size="14" font-weight="bold">🎧 候选：新耳机</text>
+
+  <!-- Alpha bar background -->
+  <rect x="90" y="498" width="250" height="22" rx="11" fill="#334155"/>
+  <!-- Short portion (70%) -->
+  <rect x="90" y="498" width="175" height="22" rx="11" fill="#f59e0b" opacity="0.85"/>
+  <!-- Long portion overlay (30%) right side -->
+  <rect x="265" y="498" width="75" height="22" rx="11" fill="#3b82f6" opacity="0.85"/>
+
+  <text x="177" y="514" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">短期 70%</text>
+  <text x="303" y="514" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">长期 30%</text>
+
+  <text x="215" y="545" text-anchor="middle" fill="#94a3b8" font-size="13">α = 0.3 → 侧重短期</text>
+
+  <!-- Scenario B: phone case -->
+  <rect x="430" y="455" width="310" height="110" rx="14" fill="#1e293b" stroke="#3b82f6" stroke-width="2" filter="url(#shadow)"/>
+  <text x="585" y="483" text-anchor="middle" fill="#60a5fa" font-size="14" font-weight="bold">📱 候选：手机壳</text>
+
+  <!-- Alpha bar background -->
+  <rect x="460" y="498" width="250" height="22" rx="11" fill="#334155"/>
+  <!-- Long portion (70%) -->
+  <rect x="460" y="498" width="175" height="22" rx="11" fill="#3b82f6" opacity="0.85"/>
+  <!-- Short portion (30%) right side -->
+  <rect x="635" y="498" width="75" height="22" rx="11" fill="#f59e0b" opacity="0.85"/>
+
+  <text x="547" y="514" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">长期 70%</text>
+  <text x="673" y="514" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">短期 30%</text>
+
+  <text x="585" y="545" text-anchor="middle" fill="#94a3b8" font-size="13">α = 0.7 → 侧重长期</text>
+
+  <!-- Arrows from fusion to scenarios -->
+  <path d="M330 412 L215 450" fill="none" stroke="#a78bfa" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowPurple)"/>
+  <path d="M470 412 L585 450" fill="none" stroke="#a78bfa" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowPurple)"/>
+
+  <!-- Bottom insight label -->
+  <text x="400" y="590" text-anchor="middle" fill="#475569" font-size="12" font-style="italic">核心：同一用户面对不同商品，门控自动切换长/短期兴趣主导</text>
+</svg>

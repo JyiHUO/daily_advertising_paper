@@ -1,0 +1,164 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#555">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#2e9e5a">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#d44">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8f9ff"/>
+      <stop offset="100%" stop-color="#eef1fa"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bgGrad)" rx="18"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#222">SLSRec: 四组三元组对比学习 — 解耦长短期兴趣</text>
+  <text x="450" y="68" text-anchor="middle" font-size="14" fill="#666">核心：双向对称拉近同类、推远异类，强制长短期表示在语义空间分开</text>
+
+  <!-- ===== Left: Supervision Anchors ===== -->
+  <rect x="40" y="100" width="240" height="200" rx="16" fill="#fff" stroke="#b0b8d9" stroke-width="2"/>
+  <text x="160" y="128" text-anchor="middle" font-size="15" font-weight="bold" fill="#3a4a8a">监督锚点（均值Embedding）</text>
+
+  <!-- UL-hat -->
+  <rect x="65" y="148" width="190" height="54" rx="10" fill="#dce6ff" stroke="#6b85d1" stroke-width="1.5"/>
+  <text x="160" y="170" text-anchor="middle" font-size="14" font-weight="bold" fill="#3a4a8a">Û_L （长期锚点）</text>
+  <text x="160" y="190" text-anchor="middle" font-size="11" fill="#555">前k-1个Session物品均值</text>
+
+  <!-- US-hat -->
+  <rect x="65" y="218" width="190" height="54" rx="10" fill="#fff4d6" stroke="#d4a017" stroke-width="1.5"/>
+  <text x="160" y="240" text-anchor="middle" font-size="14" font-weight="bold" fill="#8a6d00">Û_S （短期锚点）</text>
+  <text x="160" y="260" text-anchor="middle" font-size="11" fill="#555">第k个Session物品均值</text>
+
+  <!-- ===== Right: Encoder Outputs ===== -->
+  <rect x="620" y="100" width="240" height="200" rx="16" fill="#fff" stroke="#b0b8d9" stroke-width="2"/>
+  <text x="740" y="128" text-anchor="middle" font-size="15" font-weight="bold" fill="#3a4a8a">编码器输出</text>
+
+  <!-- uL -->
+  <rect x="645" y="148" width="190" height="54" rx="10" fill="#dce6ff" stroke="#6b85d1" stroke-width="1.5"/>
+  <text x="740" y="170" text-anchor="middle" font-size="14" font-weight="bold" fill="#3a4a8a">u_L （长期表示）</text>
+  <text x="740" y="190" text-anchor="middle" font-size="11" fill="#555">长期编码器输出</text>
+
+  <!-- uS -->
+  <rect x="645" y="218" width="190" height="54" rx="10" fill="#fff4d6" stroke="#d4a017" stroke-width="1.5"/>
+  <text x="740" y="240" text-anchor="middle" font-size="14" font-weight="bold" fill="#8a6d00">u_S （短期表示）</text>
+  <text x="740" y="260" text-anchor="middle" font-size="11" fill="#555">短期编码器输出</text>
+
+  <!-- ===== Center: 4 Triplet Losses ===== -->
+  <rect x="310" y="105" width="280" height="270" rx="18" fill="#fff" stroke="#888" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="450" y="132" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">四组三元组损失</text>
+
+  <!-- Triplet 1 -->
+  <g transform="translate(330, 148)">
+    <rect width="240" height="48" rx="8" fill="#e8ffe8" stroke="#2e9e5a" stroke-width="1.5"/>
+    <text x="120" y="20" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a6e35">① 锚: Û_S</text>
+    <text x="120" y="38" text-anchor="middle" font-size="11" fill="#333">
+      <tspan fill="#2e9e5a" font-weight="bold">正: u_S</tspan>  ←拉近  |  <tspan fill="#d44" font-weight="bold">负: u_L</tspan>  →推远
+    </text>
+  </g>
+
+  <!-- Triplet 2 -->
+  <g transform="translate(330, 204)">
+    <rect width="240" height="48" rx="8" fill="#e8ffe8" stroke="#2e9e5a" stroke-width="1.5"/>
+    <text x="120" y="20" text-anchor="middle" font-size="12" font-weight="bold" fill="#1a6e35">② 锚: Û_L</text>
+    <text x="120" y="38" text-anchor="middle" font-size="11" fill="#333">
+      <tspan fill="#2e9e5a" font-weight="bold">正: u_L</tspan>  ←拉近  |  <tspan fill="#d44" font-weight="bold">负: u_S</tspan>  →推远
+    </text>
+  </g>
+
+  <!-- Triplet 3 -->
+  <g transform="translate(330, 260)">
+    <rect width="240" height="48" rx="8" fill="#fff0f0" stroke="#d44" stroke-width="1.5"/>
+    <text x="120" y="20" text-anchor="middle" font-size="12" font-weight="bold" fill="#a22">③ 锚: u_L</text>
+    <text x="120" y="38" text-anchor="middle" font-size="11" fill="#333">
+      <tspan fill="#2e9e5a" font-weight="bold">正: Û_L</tspan>  ←拉近  |  <tspan fill="#d44" font-weight="bold">负: Û_S</tspan>  →推远
+    </text>
+  </g>
+
+  <!-- Triplet 4 -->
+  <g transform="translate(330, 316)">
+    <rect width="240" height="48" rx="8" fill="#fff0f0" stroke="#d44" stroke-width="1.5"/>
+    <text x="120" y="20" text-anchor="middle" font-size="12" font-weight="bold" fill="#a22">④ 锚: u_S</text>
+    <text x="120" y="38" text-anchor="middle" font-size="11" fill="#333">
+      <tspan fill="#2e9e5a" font-weight="bold">正: Û_S</tspan>  ←拉近  |  <tspan fill="#d44" font-weight="bold">负: Û_L</tspan>  →推远
+    </text>
+  </g>
+
+  <!-- Arrows from left to center -->
+  <line x1="280" y1="175" x2="328" y2="220" stroke="#6b85d1" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="280" y1="245" x2="328" y2="250" stroke="#d4a017" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Arrows from right to center -->
+  <line x1="620" y1="175" x2="572" y2="220" stroke="#6b85d1" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="620" y1="245" x2="572" y2="250" stroke="#d4a017" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ===== Bottom: Loss formula and Embedding Space ===== -->
+
+  <!-- Loss box -->
+  <rect x="60" y="420" width="340" height="170" rx="14" fill="#fff" stroke="#888" stroke-width="1.5"/>
+  <text x="230" y="450" text-anchor="middle" font-size="15" font-weight="bold" fill="#333">总损失</text>
+  <text x="230" y="480" text-anchor="middle" font-size="14" fill="#444">L_con = Σ(①+②+③+④)</text>
+  <text x="230" y="510" text-anchor="middle" font-size="16" font-weight="bold" fill="#3a4a8a">L_total = L_main + λ · L_con</text>
+  <text x="230" y="540" text-anchor="middle" font-size="12" fill="#888">Triplet Loss: d(锚,正) + α &lt; d(锚,负)</text>
+  <text x="230" y="565" text-anchor="middle" font-size="12" fill="#888">α = margin，强制正负例间隔</text>
+
+  <!-- Arrow down from center to loss -->
+  <line x1="450" y1="378" x2="350" y2="418" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ===== Embedding Space Visualization ===== -->
+  <rect x="460" y="420" width="400" height="170" rx="14" fill="#f5f7ff" stroke="#aab" stroke-width="1.5"/>
+  <text x="660" y="448" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">训练效果：语义空间分离</text>
+
+  <!-- Before -->
+  <text x="550" y="478" text-anchor="middle" font-size="12" font-weight="bold" fill="#888">训练前(纠缠)</text>
+  <circle cx="530" cy="518" r="14" fill="#dce6ff" stroke="#6b85d1" stroke-width="2"/>
+  <text x="530" y="523" text-anchor="middle" font-size="10" fill="#3a4a8a" font-weight="bold">u_L</text>
+  <circle cx="558" cy="530" r="14" fill="#fff4d6" stroke="#d4a017" stroke-width="2"/>
+  <text x="558" y="535" text-anchor="middle" font-size="10" fill="#8a6d00" font-weight="bold">u_S</text>
+  <!-- overlap indicator -->
+  <text x="544" y="568" text-anchor="middle" font-size="20" fill="#d44">✗</text>
+
+  <!-- Arrow -->
+  <line x1="590" y1="525" x2="650" y2="525" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="620" y="518" text-anchor="middle" font-size="11" fill="#555">对比学习</text>
+
+  <!-- After -->
+  <text x="760" y="478" text-anchor="middle" font-size="12" font-weight="bold" fill="#333">训练后(分离)</text>
+  <!-- Long-term cluster -->
+  <circle cx="700" cy="518" r="16" fill="#dce6ff" stroke="#6b85d1" stroke-width="2"/>
+  <text x="700" y="523" text-anchor="middle" font-size="10" fill="#3a4a8a" font-weight="bold">u_L</text>
+  <circle cx="700" cy="550" r="10" fill="#dce6ff" stroke="#6b85d1" stroke-width="1.5" opacity="0.6"/>
+  <text x="700" y="554" text-anchor="middle" font-size="8" fill="#3a4a8a">Û_L</text>
+
+  <!-- Short-term cluster -->
+  <circle cx="810" cy="518" r="16" fill="#fff4d6" stroke="#d4a017" stroke-width="2"/>
+  <text x="810" y="523" text-anchor="middle" font-size="10" fill="#8a6d00" font-weight="bold">u_S</text>
+  <circle cx="810" cy="550" r="10" fill="#fff4d6" stroke="#d4a017" stroke-width="1.5" opacity="0.6"/>
+  <text x="810" y="554" text-anchor="middle" font-size="8" fill="#8a6d00">Û_S</text>
+
+  <!-- Green pull lines -->
+  <line x1="700" y1="534" x2="700" y2="540" stroke="#2e9e5a" stroke-width="2"/>
+  <line x1="810" y1="534" x2="810" y2="540" stroke="#2e9e5a" stroke-width="2"/>
+
+  <!-- Red push line -->
+  <line x1="720" y1="518" x2="790" y2="518" stroke="#d44" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="755" y="513" text-anchor="middle" font-size="16" fill="#d44">⟷</text>
+
+  <text x="755" y="568" text-anchor="middle" font-size="20" fill="#2e9e5a">✓</text>
+
+  <!-- Legend -->
+  <circle cx="475" cy="598" r="7" fill="#dce6ff" stroke="#6b85d1" stroke-width="1.5"/>
+  <text x="490" y="603" font-size="11" fill="#3a4a8a">长期</text>
+  <circle cx="535" cy="598" r="7" fill="#fff4d6" stroke="#d4a017" stroke-width="1.5"/>
+  <text x="550" y="603" font-size="11" fill="#8a6d00">短期</text>
+  <line x1="600" y1="598" x2="630" y2="598" stroke="#2e9e5a" stroke-width="2"/>
+  <text x="640" y="603" font-size="11" fill="#2e9e5a">拉近</text>
+  <line x1="680" y1="598" x2="710" y2="598" stroke="#d44" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="720" y="603" font-size="11" fill="#d44">推远</text>
+</svg>

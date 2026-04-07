@@ -1,0 +1,95 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2640"/>
+    </linearGradient>
+    <linearGradient id="barFull" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4fc3f7"/>
+      <stop offset="100%" stop-color="#29b6f6"/>
+    </linearGradient>
+    <linearGradient id="barShort" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff5252"/>
+      <stop offset="100%" stop-color="#d32f2f"/>
+    </linearGradient>
+    <linearGradient id="barLong" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffb74d"/>
+      <stop offset="100%" stop-color="#ff9800"/>
+    </linearGradient>
+    <linearGradient id="barMask" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ab47bc"/>
+      <stop offset="100%" stop-color="#8e24aa"/>
+    </linearGradient>
+    <linearGradient id="barCL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#66bb6a"/>
+      <stop offset="100%" stop-color="#43a047"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="520" fill="url(#bgGrad)" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" fill="#e0e0e0" font-size="20" font-weight="bold">SLSRec 消融实验：短期兴趣是推荐精度的主要驱动力</text>
+  <text x="400" y="60" text-anchor="middle" fill="#90a4ae" font-size="13">Taobao 数据集 AUC 对比 — 去掉哪个模块影响最大？</text>
+
+  <!-- Chart area -->
+  <!-- Y-axis labels -->
+  <text x="135" y="108" text-anchor="end" fill="#78909c" font-size="11">AUC</text>
+
+  <!-- Bars -->
+  <!-- 1. Full Model: 0.9076 -->
+  <rect x="155" y="100" width="440" height="56" rx="6" fill="#1e2d48" stroke="#2a3f5f" stroke-width="1"/>
+  <rect x="160" y="108" width="410" height="40" rx="5" fill="url(#barFull)" opacity="0.9" filter="url(#glow)"/>
+  <text x="170" y="134" fill="#fff" font-size="15" font-weight="bold">完整模型 (Full SLSRec)</text>
+  <text x="560" y="134" fill="#fff" font-size="18" font-weight="bold">0.9076</text>
+
+  <!-- 2. w/o Short-term: 0.6559 -->
+  <rect x="155" y="170" width="440" height="56" rx="6" fill="#1e2d48" stroke="#2a3f5f" stroke-width="1"/>
+  <rect x="160" y="178" width="296" height="40" rx="5" fill="url(#barShort)" opacity="0.9" filter="url(#glow)"/>
+  <text x="170" y="204" fill="#fff" font-size="15" font-weight="bold">去掉短期编码器</text>
+  <text x="446" y="204" fill="#ff8a80" font-size="18" font-weight="bold">0.6559</text>
+
+  <!-- Drop arrow for short-term -->
+  <line x1="620" y1="128" x2="620" y2="198" stroke="#ff5252" stroke-width="2.5" marker-end="url(#arrowRed)"/>
+  <text x="680" y="168" text-anchor="middle" fill="#ff5252" font-size="22" font-weight="bold">↓ 27.7%</text>
+  <text x="680" y="186" text-anchor="middle" fill="#ef9a9a" font-size="11">近乎随机</text>
+
+  <!-- 3. w/o Long-term: 0.8639 -->
+  <rect x="155" y="240" width="440" height="56" rx="6" fill="#1e2d48" stroke="#2a3f5f" stroke-width="1"/>
+  <rect x="160" y="248" width="390" height="40" rx="5" fill="url(#barLong)" opacity="0.85"/>
+  <text x="170" y="274" fill="#fff" font-size="15" font-weight="bold">去掉长期编码器</text>
+  <text x="540" y="274" fill="#ffe0b2" font-size="18" font-weight="bold">0.8639</text>
+  <text x="680" y="274" text-anchor="middle" fill="#ffb74d" font-size="16" font-weight="bold">↓ 4.8%</text>
+
+  <!-- 4. w/o Category Mask -->
+  <rect x="155" y="310" width="440" height="56" rx="6" fill="#1e2d48" stroke="#2a3f5f" stroke-width="1"/>
+  <rect x="160" y="318" width="400" height="40" rx="5" fill="url(#barMask)" opacity="0.8"/>
+  <text x="170" y="344" fill="#fff" font-size="15" font-weight="bold">去掉类别掩码</text>
+  <text x="550" y="344" fill="#e1bee7" font-size="18" font-weight="bold">0.8875</text>
+  <text x="680" y="344" text-anchor="middle" fill="#ab47bc" font-size="16" font-weight="bold">↓ 2.2%</text>
+
+  <!-- 5. w/o Contrastive Learning -->
+  <rect x="155" y="380" width="440" height="56" rx="6" fill="#1e2d48" stroke="#2a3f5f" stroke-width="1"/>
+  <rect x="160" y="388" width="405" height="40" rx="5" fill="url(#barCL)" opacity="0.8"/>
+  <text x="170" y="414" fill="#fff" font-size="15" font-weight="bold">去掉对比学习</text>
+  <text x="555" y="414" fill="#c8e6c9" font-size="18" font-weight="bold">0.8946</text>
+  <text x="680" y="414" text-anchor="middle" fill="#66bb6a" font-size="16" font-weight="bold">↓ 1.4%</text>
+
+  <!-- Insight Box -->
+  <rect x="80" y="456" width="640" height="52" rx="10" fill="#263238" stroke="#4fc3f7" stroke-width="1.5" opacity="0.9"/>
+  <text x="105" y="478" fill="#4fc3f7" font-size="16" font-weight="bold">💡 核心发现：</text>
+  <text x="245" y="478" fill="#e0e0e0" font-size="14">短期兴趣 = 推荐主驱动力；长期偏好 = 不可替代的补充</text>
+  <text x="245" y="496" fill="#90a4ae" font-size="12">对比学习 &amp; 类别掩码：锦上添花，优化表示质量</text>
+
+  <!-- Impact ranking indicator -->
+  <text x="760" y="140" text-anchor="middle" fill="#4fc3f7" font-size="10">基准线</text>
+  <text x="760" y="200" text-anchor="middle" fill="#ff5252" font-size="11" font-weight="bold">影响最大</text>
+  <text x="760" y="274" text-anchor="middle" fill="#ffb74d" font-size="10">重要补充</text>
+  <text x="760" y="344" text-anchor="middle" fill="#ab47bc" font-size="10">噪声过滤</text>
+  <text x="760" y="414" text-anchor="middle" fill="#66bb6a" font-size="10">表示优化</text>
+</svg>

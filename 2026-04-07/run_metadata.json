@@ -1,0 +1,19 @@
+{
+  "date": "2026-04-07",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL"
+  ],
+  "candidate_count": 2,
+  "supplementary_count": 0,
+  "focus_titles": [
+    "Semantic IDs for Recommender Systems at Snapchat: Use Cases, Technical Challenges, and Design Choices",
+    "SLSREC: Self-Supervised Contrastive Learning for Adaptive Fusion of Long- and Short-Term User Interests"
+  ],
+  "focus_status": {
+    "Semantic IDs for Recommender Systems at Snapchat: Use Cases, Technical Challenges, and Design Choices": "completed",
+    "SLSREC: Self-Supervised Contrastive Learning for Adaptive Fusion of Long- and Short-Term User Interests": "completed"
+  }
+}
