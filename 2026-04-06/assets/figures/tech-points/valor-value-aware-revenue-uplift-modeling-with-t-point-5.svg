@@ -1,0 +1,118 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrW" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2563EB"/>
+    </marker>
+    <linearGradient id="gVal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2563EB"/>
+      <stop offset="100%" stop-color="#1E40AF"/>
+    </linearGradient>
+    <linearGradient id="gLeg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9CA3AF"/>
+      <stop offset="100%" stop-color="#6B7280"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" rx="18" fill="#F8FAFC"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E293B">VALOR 混合路由部署 &amp; A/B 实验结果</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#64748B">核心创新：双模型季度Pacing + 90天冷却闭环</text>
+
+  <!-- ===== LEFT: Pipeline ===== -->
+  <!-- Accounts Pool -->
+  <rect x="40" y="100" width="200" height="60" rx="12" fill="#E0E7FF" stroke="#818CF8" stroke-width="2"/>
+  <text x="140" y="126" text-anchor="middle" font-size="15" font-weight="bold" fill="#3730A3">10,000 待分配账户</text>
+  <text x="140" y="145" text-anchor="middle" font-size="12" fill="#6366F1">VALOR uplift 打分排序</text>
+
+  <!-- Split Arrow -->
+  <line x1="140" y1="160" x2="140" y2="195" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Split Box -->
+  <rect x="30" y="200" width="220" height="36" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="140" y="224" text-anchor="middle" font-size="13" font-weight="600" fill="#92400E">按分数切分 Top 25% / 剩余</text>
+
+  <!-- Two branches -->
+  <!-- VALOR branch (left) -->
+  <line x1="90" y1="236" x2="90" y2="280" stroke="#2563EB" stroke-width="2.5" marker-end="url(#arrW)"/>
+  <rect x="20" y="285" width="150" height="70" rx="14" fill="url(#gVal)"/>
+  <text x="95" y="314" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">VALOR 排序</text>
+  <text x="95" y="334" text-anchor="middle" font-size="11" fill="#BFDBFE">Top 25% 高价值</text>
+  <text x="95" y="349" text-anchor="middle" font-size="10" fill="#93C5FD">季度前期优先消耗</text>
+
+  <!-- Legacy branch (right) -->
+  <line x1="190" y1="236" x2="190" y2="280" stroke="#6B7280" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="120" y="285" width="150" height="70" rx="14" fill="url(#gLeg)" transform="translate(60,0)"/>
+  <text x="245" y="314" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">倾向性模型</text>
+  <text x="245" y="334" text-anchor="middle" font-size="11" fill="#E5E7EB">剩余 75% 补充</text>
+  <text x="245" y="349" text-anchor="middle" font-size="10" fill="#D1D5DB">平滑季度线索供给</text>
+
+  <!-- Merge to BDR -->
+  <line x1="95" y1="355" x2="170" y2="400" stroke="#2563EB" stroke-width="2" marker-end="url(#arrW)"/>
+  <line x1="245" y1="355" x2="170" y2="400" stroke="#6B7280" stroke-width="2" marker-end="url(#arr)"/>
+
+  <rect x="110" y="400" width="120" height="50" rx="25" fill="#ECFDF5" stroke="#10B981" stroke-width="2"/>
+  <text x="170" y="422" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">BDR</text>
+  <text x="170" y="438" text-anchor="middle" font-size="11" fill="#047857">销售人员跟进</text>
+
+  <!-- Cooling period -->
+  <line x1="170" y1="450" x2="170" y2="495" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="70" y="500" width="200" height="50" rx="12" fill="#FFF1F2" stroke="#F43F5E" stroke-width="2"/>
+  <text x="170" y="522" text-anchor="middle" font-size="13" font-weight="bold" fill="#BE123C">🕐 90天冷却期</text>
+  <text x="170" y="540" text-anchor="middle" font-size="11" fill="#E11D48">ARR 因果归因窗口</text>
+
+  <!-- Feedback loop -->
+  <path d="M 70,525 Q 20,525 20,460 Q 20,140 40,120" fill="none" stroke="#8B5CF6" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arr)"/>
+  <text x="8" y="340" font-size="11" fill="#7C3AED" transform="rotate(-90, 8, 340)">数据回流训练</text>
+
+  <!-- ===== RIGHT: A/B Results Comparison ===== -->
+  <rect x="420" y="100" width="450" height="460" rx="16" fill="#fff" stroke="#E2E8F0" stroke-width="2"/>
+  <text x="645" y="132" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E293B">A/B 实验结果对比</text>
+  <text x="645" y="152" text-anchor="middle" font-size="12" fill="#94A3B8">4个月 RCT · 全球云服务商长尾项目</text>
+
+  <!-- Metric 1: Opportunity Rate -->
+  <text x="450" y="195" font-size="13" font-weight="600" fill="#475569">机会创建率</text>
+
+  <!-- VALOR bar -->
+  <rect x="450" y="210" width="308" height="38" rx="8" fill="#2563EB" opacity="0.9"/>
+  <text x="465" y="235" font-size="15" font-weight="bold" fill="#fff">VALOR  17.6%</text>
+
+  <!-- Control bar -->
+  <rect x="450" y="255" width="163" height="38" rx="8" fill="#9CA3AF"/>
+  <text x="465" y="280" font-size="15" font-weight="bold" fill="#fff">对照组  9.3%</text>
+
+  <!-- Delta label -->
+  <text x="780" y="250" text-anchor="middle" font-size="22" font-weight="bold" fill="#059669">+8.3pp</text>
+  <text x="780" y="270" text-anchor="middle" font-size="12" fill="#10B981">绝对提升</text>
+
+  <!-- Divider -->
+  <line x1="440" y1="310" x2="850" y2="310" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- Metric 2: Revenue per Account -->
+  <text x="450" y="345" font-size="13" font-weight="600" fill="#475569">单账户增量收入</text>
+
+  <!-- VALOR bar -->
+  <rect x="450" y="360" width="350" height="48" rx="10" fill="url(#gVal)"/>
+  <text x="470" y="390" font-size="18" font-weight="bold" fill="#fff">$1,185</text>
+
+  <!-- Control bar -->
+  <rect x="450" y="418" width="132" height="48" rx="10" fill="url(#gLeg)"/>
+  <text x="470" y="448" font-size="18" font-weight="bold" fill="#fff">$445</text>
+
+  <!-- 2.7x badge -->
+  <circle cx="790" cy="405" r="42" fill="#ECFDF5" stroke="#10B981" stroke-width="3"/>
+  <text x="790" y="400" text-anchor="middle" font-size="26" font-weight="bold" fill="#059669">2.7×</text>
+  <text x="790" y="420" text-anchor="middle" font-size="11" font-weight="600" fill="#047857">提升</text>
+
+  <!-- Bottom insight -->
+  <rect x="440" y="485" width="410" height="55" rx="10" fill="#FEF9C3" stroke="#FACC15" stroke-width="1.5"/>
+  <text x="645" y="508" text-anchor="middle" font-size="13" font-weight="bold" fill="#854D0E">💡 关键洞察</text>
+  <text x="645" y="528" text-anchor="middle" font-size="12" fill="#92400E">收入提升 2.7× &gt; 机会提升 1.89× → 找到了更高价值的可说服客户</text>
+
+  <!-- Annotation: annual -->
+  <text x="645" y="575" text-anchor="middle" font-size="14" font-weight="600" fill="#1E40AF">预计年化增量收入 $30M</text>
+</svg>

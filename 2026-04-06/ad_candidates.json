@@ -1,0 +1,5568 @@
+{
+  "screening_result": "ok",
+  "focus_papers": [
+    {
+      "title": "VALOR: Value-Aware Revenue Uplift Modeling with Treatment-Gated Representation for B2B Sales",
+      "authors": [
+        "Vamshi Guduguntla",
+        "Kavin Soni",
+        "Debanshu Das"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02472.pdf",
+      "summary": "",
+      "paper_type": "strong_transfer_paper",
+      "relevance_score": 75,
+      "match_reason": "收入提升建模(Revenue Uplift)与B2B销售相关，涉及商业化价值估计，与广告转化价值建模有一定同构性",
+      "company_hits": [],
+      "recommended_action": "进入重点讲解",
+      "is_focus": true
+    },
+    {
+      "title": "MBGR: Multi-Business Prediction for Generative Recommendation at Meituan",
+      "authors": [
+        "Changhao Li",
+        "Junwei Yin",
+        "Zhilin Zeng",
+        "Senjie Kou",
+        "Shuli Wang",
+        "Wenshuai Chen",
+        "Yinhua Zhu",
+        "Haitao Wang",
+        "Xingxing Wang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02684.pdf",
+      "summary": "",
+      "paper_type": "company_priority_paper",
+      "relevance_score": 50,
+      "match_reason": "美团工业级多业务生成式推荐系统，涉及商业化流量分发，与广告排序/推荐高度同构",
+      "company_hits": [
+        "Meituan"
+      ],
+      "recommended_action": "进入重点讲解",
+      "is_focus": true
+    }
+  ],
+  "formal_candidates": [],
+  "backup_candidates": [
+    {
+      "title": "VALOR: Value-Aware Revenue Uplift Modeling with Treatment-Gated Representation for B2B Sales",
+      "authors": [
+        "Vamshi Guduguntla",
+        "Kavin Soni",
+        "Debanshu Das"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02472.pdf",
+      "summary": "",
+      "paper_type": "strong_transfer_paper",
+      "relevance_score": 75,
+      "match_reason": "收入提升建模(Revenue Uplift)与B2B销售相关，涉及商业化价值估计，与广告转化价值建模有一定同构性",
+      "company_hits": [],
+      "recommended_action": "进入重点讲解",
+      "is_focus": true
+    },
+    {
+      "title": "MBGR: Multi-Business Prediction for Generative Recommendation at Meituan",
+      "authors": [
+        "Changhao Li",
+        "Junwei Yin",
+        "Zhilin Zeng",
+        "Senjie Kou",
+        "Shuli Wang",
+        "Wenshuai Chen",
+        "Yinhua Zhu",
+        "Haitao Wang",
+        "Xingxing Wang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02684.pdf",
+      "summary": "",
+      "paper_type": "company_priority_paper",
+      "relevance_score": 50,
+      "match_reason": "美团工业级多业务生成式推荐系统，涉及商业化流量分发，与广告排序/推荐高度同构",
+      "company_hits": [
+        "Meituan"
+      ],
+      "recommended_action": "进入重点讲解",
+      "is_focus": true
+    }
+  ],
+  "excluded_papers": [
+    {
+      "title": "Eligibility-Aware Evidence Synthesis: An Agentic Framework for Clinical Trial Meta-Analysis",
+      "authors": [
+        "Yao Zhao",
+        "Zhiyue Zhang",
+        "Yanxun Xu"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02678.pdf",
+      "summary": "",
+      "paper_type": "company_priority_paper",
+      "relevance_score": 70,
+      "match_reason": "临床试验元分析Agent框架，与计算广告无关",
+      "company_hits": [
+        "Meta"
+      ],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Speaking of Language: Reflections on Metalanguage Research in NLP",
+      "authors": [
+        "Nathan Schneider",
+        "Antonios Anastasopoulos"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02645.pdf",
+      "summary": "",
+      "paper_type": "company_priority_paper",
+      "relevance_score": 70,
+      "match_reason": "NLP元语言研究，与计算广告无关",
+      "company_hits": [
+        "Meta"
+      ],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "HyperFitS -- Hypernetwork Fitting Spectra for metabolic quantification of ${}^1$H MR spectroscopic imaging",
+      "authors": [
+        "Paul J. Weiser",
+        "Gulnur Ungan",
+        "Amirmohammad Shamaei",
+        "Georg Langs",
+        "Wolfgang Bogner",
+        "Malte Hoffmann",
+        "Antoine Klauser",
+        "Ovidiu C. Andronesi"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03150.pdf",
+      "summary": "",
+      "paper_type": "company_priority_paper",
+      "relevance_score": 70,
+      "match_reason": "医学影像光谱分析，与广告无关",
+      "company_hits": [
+        "Meta"
+      ],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Transfer Learning for Meta-analysis Under Covariate Shift",
+      "authors": [
+        "Zilong Wang",
+        "Ali Abdeen",
+        "Turgay Ayer"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02656.pdf",
+      "summary": "",
+      "paper_type": "company_priority_paper",
+      "relevance_score": 70,
+      "match_reason": "统计元分析迁移学习论文，与计算广告无关",
+      "company_hits": [
+        "Meta"
+      ],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Principled and Scalable Diversity-Aware Retrieval via Cardinality-Constrained Binary Quadratic Programming",
+      "authors": [
+        "Qiheng Lu",
+        "Nicholas D. Sidiropoulos"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02554.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 12,
+      "match_reason": "多样性检索优化，虽与召回有一定关联但无广告上下文",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "User-Aware Conditional Generative Total Correlation Learning for Multi-Modal Recommendation",
+      "authors": [
+        "Jing Du",
+        "Zesheng Ye",
+        "Congbo Ma",
+        "Feng Liu",
+        "Flora. D. Salim"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03014.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 10,
+      "match_reason": "多模态推荐论文，无广告相关语义",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Bilateral Intent-Enhanced Sequential Recommendation with Embedding Perturbation-Based Contrastive Learning",
+      "authors": [
+        "Shanfan Zhang",
+        "Yongyi Lin",
+        "Yuan Rao"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02833.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 10,
+      "match_reason": "序列推荐论文，无广告业务上下文",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Jump Start or False Start? A Theoretical and Empirical Evaluation of LLM-initialized Bandits",
+      "authors": [
+        "Adam Bayley",
+        "Xiaodan Zhu",
+        "Raquel Aoki",
+        "Yanshuai Cao",
+        "Kevin H. Wilson"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02527.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 10,
+      "match_reason": "LLM初始化的bandit理论研究，无摘要且标题未提及广告/推荐等业务上下文，按规则排除",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "LiME: Lightweight Mixture of Experts for Efficient Multimodal Multi-task Learning",
+      "authors": [
+        "Md Kowsher",
+        "Haris Mansoor",
+        "Nusrat Jahan Prottasha",
+        "Ozlem Garibay",
+        "Victor Zhu",
+        "Zhengping Ji",
+        "Chen Chen"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02338.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 8,
+      "match_reason": "MoE多任务学习，但无广告/推荐业务上下文",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Prompt Compression in the Wild: Measuring Latency, Rate Adherence, and Quality for Faster LLM Inference",
+      "authors": [
+        "Cornelius Kummer",
+        "Lena Jurkschat",
+        "Michael Färber",
+        "Sahar Vahdati"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02985.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 5,
+      "match_reason": "LLM推理加速的prompt压缩，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Synapse: Evolving Job-Person Fit with Explainable Two-phase Retrieval and LLM-guided Genetic Resume Optimization",
+      "authors": [
+        "Ansel Kaplan Erol",
+        "Seohee Yoon",
+        "Keenan Hom",
+        "Xisheng Zhang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02539.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 5,
+      "match_reason": "求职匹配系统，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Holos: A Web-Scale LLM-Based Multi-Agent System for the Agentic Web",
+      "authors": [
+        "Xiaohang Nie",
+        "Zihan Guo",
+        "Zicai Cui",
+        "Jiachi Yang",
+        "Zeyi Chen",
+        "Leheyi De",
+        "Yu Zhang",
+        "Junwei Liao",
+        "Bo Huang",
+        "Yingxuan Yang",
+        "Zhi Han",
+        "Zimian Peng",
+        "Linyao Chen",
+        "Wenzheng Tom Tang",
+        "Zongkai Liu",
+        "Tao Zhou",
+        "Botao Amber Hu",
+        "Shuyang Tang",
+        "Jianghao Lin",
+        "Weiwen Liu",
+        "Muning Wen",
+        "Yuanjian Zhou",
+        "Weinan Zhang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02334.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 5,
+      "match_reason": "Web级多智能体系统，虽然作者中有Jianghao Lin和Weinan Zhang等推荐/广告领域知名学者，但标题和摘要无广告相关内容，属于通用agent论文",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Feature Attribution Stability Suite: How Stable Are Post-Hoc Attributions?",
+      "authors": [
+        "Kamalasankari Subramaniakuppusamy",
+        "Jugal Gajjar"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02532.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 5,
+      "match_reason": "特征归因稳定性研究，通用ML可解释性工具，与广告无直接关联",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Efficient Logistic Regression with Mixture of Sigmoids",
+      "authors": [
+        "Federico Di Gennaro",
+        "Saptarshi Chakraborty",
+        "Nikita Zhivotovskiy"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02920.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 5,
+      "match_reason": "纯机器学习方法论文，无广告相关内容",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Modeling and Controlling Deployment Reliability under Temporal Distribution Shift",
+      "authors": [
+        "Naimur Rahman",
+        "Naazreen Tabassum"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02351.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 5,
+      "match_reason": "部署可靠性与分布偏移，通用ML问题，与广告无直接关联",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Contextual Intelligence The Next Leap for Reinforcement Learning",
+      "authors": [
+        "André Biedenkapp"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02348.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 5,
+      "match_reason": "纯强化学习理论论文，无广告业务上下文",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Reinforcement Learning from Human Feedback: A Statistical Perspective",
+      "authors": [
+        "Pangpang Liu",
+        "Chengchun Shi",
+        "Will Wei Sun"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02507.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 5,
+      "match_reason": "RLHF统计视角，纯理论/LLM对齐方向，无广告业务上下文",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Self-Optimizing Multi-Agent Systems for Deep Research",
+      "authors": [
+        "Arthur Câmara",
+        "Vincent Slot",
+        "Jakub Zavrel"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02988.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 3,
+      "match_reason": "多智能体系统用于深度研究，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "AnnoRetrieve: Efficient Structured Retrieval for Unstructured Document Analysis",
+      "authors": [
+        "Teng Lin",
+        "Yuyu Luo",
+        "Nan Tang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02690.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 3,
+      "match_reason": "文档分析检索，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "SelRoute: Query-Type-Aware Routing for Long-Term Conversational Memory Retrieval",
+      "authors": [
+        "Matthew McKee"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02431.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 3,
+      "match_reason": "对话记忆检索路由，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "PRISM: LLM-Guided Semantic Clustering for High-Precision Topics",
+      "authors": [
+        "Connor Douglas",
+        "Utkucan Balci",
+        "Joseph Aylett-Bullock"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03180.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 3,
+      "match_reason": "语义聚类主题发现，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "AutoVerifier: An Agentic Automated Verification Framework Using Large Language Models",
+      "authors": [
+        "Yuntao Du",
+        "Minh Dinh",
+        "Kaiyuan Zhang",
+        "Ninghui Li"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02617.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 3,
+      "match_reason": "LLM自动验证框架，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "InfoSeeker: A Scalable Hierarchical Parallel Agent Framework for Web Information Seeking",
+      "authors": [
+        "Ka Yiu Lee",
+        "Yuxuan Huang",
+        "Zhiyuan He",
+        "Huichi Zhou",
+        "Weilin Luo",
+        "Kun Shao",
+        "Meng Fang",
+        "Jun Wang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02971.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 3,
+      "match_reason": "Web信息检索agent框架，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Let's Have a Conversation: Designing and Evaluating LLM Agents for Interactive Optimization",
+      "authors": [
+        "Joshua Drossman",
+        "Alexandre Jacquillat",
+        "Sébastien Martin"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02666.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 3,
+      "match_reason": "交互式优化LLM Agent，无广告业务上下文",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Gradient Boosting within a Single Attention Layer",
+      "authors": [
+        "Saleh Sargolzaei"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03190.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 3,
+      "match_reason": "注意力机制与梯度提升结合的理论研究，与计算广告无直接关联",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Co-Evolution of Policy and Internal Reward for Language Agents",
+      "authors": [
+        "Xinyu Wang",
+        "Hanwei Wu",
+        "Jingwei Song",
+        "Shuyuan Zhang",
+        "Jiayi Zhang",
+        "Fanqi Kong",
+        "Tung Sum Thomas Kwok",
+        "Xiao-Wen Chang",
+        "Yuyu Luo",
+        "Chenglin Wu",
+        "Bang Liu"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03098.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 3,
+      "match_reason": "语言智能体RL训练，无广告业务上下文",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "JoyAI-LLM Flash: Advancing Mid-Scale LLMs with Token Efficiency",
+      "authors": [
+        "Aichen Cai",
+        "Anmeng Zhang",
+        "Anyu Li",
+        "Bo Zhang",
+        "Bohua Cai",
+        "Chang Li",
+        "Changjian Jiang",
+        "Changkai Lu",
+        "Chao Xue",
+        "Chaocai Liang",
+        "Cheng Zhang",
+        "Dongkai Liu",
+        "Fei Wang",
+        "Guoqiang Huang",
+        "Haijian Ke",
+        "Han Lin",
+        "Hao Wang",
+        "Ji Miao",
+        "Jiacheng Zhang",
+        "Jialong Shi",
+        "Jifeng Zhu",
+        "Jingjing Qian",
+        "Junhui Luo",
+        "Junwu Xiong",
+        "Lam So",
+        "Liang Huang",
+        "Ming Ke",
+        "Mingyang Li",
+        "Panfeng Shi",
+        "Peng Hao",
+        "Qi Wang",
+        "Qian Lai",
+        "Qiaoqiao Yuan",
+        "Qingyu Yin",
+        "Qiong Cao",
+        "Qixiang Wang",
+        "Rongcheng Bian",
+        "Rongduo Han",
+        "Shaoqiang Zheng",
+        "Shi Hu",
+        "Shi Suo",
+        "Shijie Ren",
+        "Shijin Zhang",
+        "Shiying Fan",
+        "Shuai Xie",
+        "Tianyi Zhang",
+        "Wei Liu",
+        "Wentao Tan",
+        "Xianghan Meng",
+        "Xiaodong He",
+        "Xing Pan",
+        "Xiran Wang",
+        "Xuyang Peng",
+        "Ya Zhang",
+        "Yang Liu",
+        "Yangyang Duan",
+        "Yanxu Chen",
+        "Yicheng Gong",
+        "Yidan Huang",
+        "Yifei Liu",
+        "Yinhao Bai",
+        "Yongqiang Liu",
+        "Yuesong Zhang",
+        "Yuqi Zhang",
+        "Zerui Xie",
+        "Zhenfang Wang",
+        "Zhennan Shen",
+        "Zheyuan Liu",
+        "Zhuwei Zeng"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03044.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 3,
+      "match_reason": "中等规模LLM训练效率优化，与计算广告无直接关联",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "LLM+Graph@VLDB'2025 Workshop Summary",
+      "authors": [
+        "Yixiang Fang",
+        "Arijit Khan",
+        "Tianxing Wu",
+        "Da Yan",
+        "Shu Wang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02861.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 3,
+      "match_reason": "LLM与图数据库研讨会综述，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Communication-free Sampling and 4D Hybrid Parallelism for Scalable Mini-batch GNN Training",
+      "authors": [
+        "Cunyang Wei",
+        "Siddharth Singh",
+        "Aishwarya Sarkar",
+        "Daniel Nichols",
+        "Tisha Patel",
+        "Aditya K. Ranjan",
+        "Sayan Ghosh",
+        "Ali Jannesari",
+        "Nathan R. Tallent",
+        "Abhinav Bhatele"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02651.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 3,
+      "match_reason": "GNN训练并行化，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Generative AI Use in Entrepreneurship: An Integrative Review and an Empowerment-Entrapment Framework",
+      "authors": [
+        "Jackson G. Lu",
+        "Gerui Gloria Zhao",
+        "Anna Manyi Zheng"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02567.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 3,
+      "match_reason": "生成式AI在创业中的应用综述，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "OPRIDE: Offline Preference-based Reinforcement Learning via In-Dataset Exploration",
+      "authors": [
+        "Yiqin Yang",
+        "Hao Hu",
+        "Yihuan Mao",
+        "Jin Zhang",
+        "Chengjie Wu",
+        "Yuhua Jiang",
+        "Xu Yang",
+        "Runpeng Xie",
+        "Yi Fan",
+        "Bo Liu",
+        "Yang Gao",
+        "Bo Xu",
+        "Chongjie Zhang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02349.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 3,
+      "match_reason": "离线偏好RL理论，无广告或推荐业务上下文",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "DSBD: Dual-Aligned Structural Basis Distillation for Graph Domain Adaptation",
+      "authors": [
+        "Yingxu Wang",
+        "Kunyu Zhang",
+        "Jiaxin Huang",
+        "Mengzhu Wang",
+        "Mingyan Xiao",
+        "Siyang Gao",
+        "Nan Yin"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03154.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 3,
+      "match_reason": "图域适应方法，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "FluxMoE: Decoupling Expert Residency for High-Performance MoE Serving",
+      "authors": [
+        "Qingxiu Liu",
+        "Cyril Y. He",
+        "Hanser Jiang",
+        "Zion Wang",
+        "Alan Zhao",
+        "Patrick P. C. Lee"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02715.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 3,
+      "match_reason": "MoE模型服务优化，属于系统层面工作，无广告业务上下文",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Causal-Audit: A Framework for Risk Assessment of Assumption Violations in Time-Series Causal Discovery",
+      "authors": [
+        "Marco Ruiz",
+        "Miguel Arana-Catania",
+        "David R. Ardila",
+        "Rodrigo Ventura"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02488.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 3,
+      "match_reason": "时间序列因果发现框架，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Homophily-aware Supervised Contrastive Counterfactual Augmented Fair Graph Neural Network",
+      "authors": [
+        "Mahdi Tavassoli Kejani",
+        "Fadi Dornaika",
+        "Charlotte Laclau",
+        "Jean-Michel Loubes"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02342.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 3,
+      "match_reason": "公平性图神经网络，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "SIEVE: Sample-Efficient Parametric Learning from Natural Language",
+      "authors": [
+        "Parth Asawa",
+        "Alexandros G. Dimakis",
+        "Matei Zaharia"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02339.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 3,
+      "match_reason": "自然语言参数学习，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Reinforcement Learning-based Knowledge Distillation with LLM-as-a-Judge",
+      "authors": [
+        "Yiyang Shen",
+        "Lifu Tu",
+        "Weiran Wang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02621.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 3,
+      "match_reason": "RL知识蒸馏与LLM评判，无广告或推荐业务上下文",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "WSVD: Weighted Low-Rank Approximation for Fast and Efficient Execution of Low-Precision Vision-Language Models",
+      "authors": [
+        "Haiyu Wang",
+        "Yutong Wang",
+        "Jack Jiang",
+        "Sai Qian Zhang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02570.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 3,
+      "match_reason": "视觉语言模型压缩加速，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Financial Anomaly Detection for the Canadian Market",
+      "authors": [
+        "Luigi Caputi",
+        "Nicholas Meadows"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02549.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 3,
+      "match_reason": "金融异常检测，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Evaluating Small Language Models for Front-Door Routing: A Harmonized Benchmark and Synthetic-Traffic Experiment",
+      "authors": [
+        "Warren Johnson",
+        "Charles Lee"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02367.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 3,
+      "match_reason": "小语言模型路由评估，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Chart-RL: Policy Optimization Reinforcement Learning for Enhanced Visual Reasoning in Chart Question Answering with Vision Language Models",
+      "authors": [
+        "Yunfei Bai",
+        "Amit Dhanda",
+        "Shekhar Jain"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03157.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "图表问答的视觉推理，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Agentic-MME: What Agentic Capability Really Brings to Multimodal Intelligence?",
+      "authors": [
+        "Qianshan Wei",
+        "Yishan Yang",
+        "Siyi Wang",
+        "Jinglin Chen",
+        "Binyu Wang",
+        "Jiaming Wang",
+        "Shuang Chen",
+        "Zechen Li",
+        "Yang Shi",
+        "Yuqi Tang",
+        "Weining Wang",
+        "Yi Yu",
+        "Chaoyou Fu",
+        "Qi Li",
+        "Yi-Fan Zhang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03016.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "多模态agent评测，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Multi-Turn Reinforcement Learning for Tool-Calling Agents with Iterative Reward Calibration",
+      "authors": [
+        "Wachiravit Modecrua",
+        "Krittanon Kaewtawee",
+        "Krittin Pachtrachai",
+        "Touchapon Kraisingkorn"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02869.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "工具调用agent的RL训练，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Aligning Progress and Feasibility: A Neuro-Symbolic Dual Memory Framework for Long-Horizon LLM Agents",
+      "authors": [
+        "Bin Wen",
+        "Ruoxuan Zhang",
+        "Yang Chen",
+        "Hongxia Xie",
+        "Lan-Zhe Guo"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02734.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "LLM Agent框架，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Understanding the Nature of Generative AI as Threshold Logic in High-Dimensional Space",
+      "authors": [
+        "Ilya Levin"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02476.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "纯AI理论论文，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Xpertbench: Expert Level Tasks with Rubrics-Based Evaluation",
+      "authors": [
+        "Xue Liu",
+        "Xin Ma",
+        "Yuxin Ma",
+        "Yongchang Peng",
+        "Duo Wang",
+        "Zhoufutu Wen",
+        "Ge Zhang",
+        "Kaiyuan Zhang",
+        "Xinyu Chen",
+        "Tianci He",
+        "Jiani Hou",
+        "Liang Hu",
+        "Ziyun Huang",
+        "Yongzhe Hui",
+        "Jianpeng Jiao",
+        "Chennan Ju",
+        "Yingru Kong",
+        "Yiran Li",
+        "Mengyun Liu",
+        "Luyao Ma",
+        "Fei Ni",
+        "Yiqing Ni",
+        "Yueyan Qiu",
+        "Yanle Ren",
+        "Zilin Shi",
+        "Zaiyuan Wang",
+        "Wenjie Yue",
+        "Shiyu Zhang",
+        "Xinyi Zhang",
+        "Kaiwen Zhao",
+        "Zhenwei Zhu",
+        "Shanshan Wu",
+        "Qi Zhao",
+        "Wenhao Huang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02368.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "LLM评测基准论文，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "InCoder-32B-Thinking: Industrial Code World Model for Thinking",
+      "authors": [
+        "Jian Yang",
+        "Wei Zhang",
+        "Jiajun Wu",
+        "Junhang Cheng",
+        "Tuney Zheng",
+        "Fanglin Xu",
+        "Weicheng Gu",
+        "Lin Jing",
+        "Yaxin Du",
+        "Joseph Li",
+        "Yizhi Li",
+        "Yan Xing",
+        "Chuan Hao",
+        "Ran Tao",
+        "Ruihao Gong",
+        "Aishan Liu",
+        "Zhoujun Li",
+        "Mingjie Tang",
+        "Chenghua Lin",
+        "Siheng Chen",
+        "Wayne Xin Zhao",
+        "Xianglong Liu",
+        "Ming Zhou",
+        "Bryan Dai",
+        "Weifeng Lv"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03144.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "代码生成模型，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Domain-Adapted Retrieval for In-Context Annotation of Pedagogical Dialogue Acts",
+      "authors": [
+        "Jinsook Lee",
+        "Kirk Vanacore",
+        "Zhuqian Zhou",
+        "Bakhtawar Ahtisham",
+        "Rene F. Kizilcec"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03127.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "教育对话领域的检索方法，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Querying Structured Data Through Natural Language Using Language Models",
+      "authors": [
+        "Hontan Valentin-Micu",
+        "Bunea Andrei-Alexandru",
+        "Tantaroudas Nikolaos Dimitrios",
+        "Popovici Dan-Matei"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03057.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "自然语言查询结构化数据，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "FedSQ: Optimized Weight Averaging via Fixed Gating",
+      "authors": [
+        "Cristian Pérez-Corral",
+        "Jose I. Mestre",
+        "Alberto Fernández-Hernández",
+        "Manuel F. Dolz",
+        "José Duato",
+        "Enrique S. Quintana-Ortí"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02990.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "联邦学习权重平均优化，与计算广告无直接关联",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Mitigating Reward Hacking in RLHF via Advantage Sign Robustness",
+      "authors": [
+        "Shinnosuke Ono",
+        "Johannes Ackermann",
+        "Soichiro Nishimori",
+        "Takashi Ishida",
+        "Masashi Sugiyama"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02986.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "RLHF奖励攻击缓解，纯RL/RLHF理论，无广告业务上下文",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Learning from Synthetic Data via Provenance-Based Input Gradient Guidance",
+      "authors": [
+        "Koshiro Nagano",
+        "Ryo Fujii",
+        "Ryo Hachiuma",
+        "Fumiaki Sato",
+        "Taiki Sekii",
+        "Hideo Saito"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02946.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "合成数据训练方法，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Council Mode: Mitigating Hallucination and Bias in LLMs via Multi-Agent Consensus",
+      "authors": [
+        "Shuai Wu",
+        "Xue Li",
+        "Yanna Feng",
+        "Yufang Li",
+        "Zhijun Wang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02923.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "LLM幻觉缓解的多智能体方法，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Analytic Drift Resister for Non-Exemplar Continual Graph Learning",
+      "authors": [
+        "Lei Song",
+        "Shihan Guan",
+        "Youyong Kong"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02633.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "持续图学习理论，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Poison Once, Exploit Forever: Environment-Injected Memory Poisoning Attacks on Web Agents",
+      "authors": [
+        "Wei Zou",
+        "Mingwen Dong",
+        "Miguel Romero Calvo",
+        "Wei Zou",
+        "Shuaichen Chang",
+        "Jiang Guo",
+        "Dongkyu Lee",
+        "Xing Niu",
+        "Xiaofei Ma",
+        "Yanjun Qi",
+        "Jiarong Jiang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02623.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "Web Agent安全攻击，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Understanding the Effects of Safety Unalignment on Large Language Models",
+      "authors": [
+        "John T. Halloran"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02574.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "LLM安全对齐研究，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Opal: Private Memory for Personal AI",
+      "authors": [
+        "Darya Kaviani",
+        "Alp Eren Ozdarendeli",
+        "Jinhao Zhu",
+        "Yu Ding",
+        "Raluca Ada Popa"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02522.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "个人AI隐私记忆系统，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Sparse Bayesian Learning Algorithms Revisited: From Learning Majorizers to Structured Algorithmic Learning using Neural Networks",
+      "authors": [
+        "Rushabha Balaji",
+        "Kuan-Lin Chen",
+        "Danijela Cabric",
+        "Bhaskar D. Rao"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02513.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "稀疏贝叶斯学习算法理论研究，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Token-Efficient Multimodal Reasoning via Image Prompt Packaging",
+      "authors": [
+        "Joong Ho Choi",
+        "Jiayang Zhao",
+        "Avani Appalla",
+        "Himansh Mukesh",
+        "Dhwanil Vasani",
+        "Boyi Qian"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02492.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "多模态推理token效率优化，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Beyond Message Passing: A Semantic View of Agent Communication Protocols",
+      "authors": [
+        "Dun Yuan",
+        "Fuyuan Lyu",
+        "Ye Yuan",
+        "Weixu Zhang",
+        "Bowei He",
+        "Jiayi Geng",
+        "Linfeng Du",
+        "Zipeng Sun",
+        "Yankai Chen",
+        "Changjiang Han",
+        "Jikun Kang",
+        "Alex Chen",
+        "Haolun Wu",
+        "Xue Liu"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02369.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "Agent通信协议，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Prism: Policy Reuse via Interpretable Strategy Mapping in Reinforcement Learning",
+      "authors": [
+        "Thomas Pravetz"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02353.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "纯RL策略复用理论，无广告业务上下文",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "LLM Reasoning with Process Rewards for Outcome-Guided Steps",
+      "authors": [
+        "Mohammad Rezaei",
+        "Jens Lehmann",
+        "Sahar Vahdati"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02341.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "LLM推理过程奖励，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Hierarchical Planning with Latent World Models",
+      "authors": [
+        "Wancong Zhang",
+        "Basile Terver",
+        "Artem Zholus",
+        "Soham Chitnis",
+        "Harsh Sutaria",
+        "Mido Assran",
+        "Randall Balestriero",
+        "Amir Bar",
+        "Adrien Bardes",
+        "Yann LeCun",
+        "Nicolas Ballas"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03208.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "层次规划与世界模型，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Self-Distilled RLVR",
+      "authors": [
+        "Chenxu Yang",
+        "Chuanyu Qin",
+        "Qingyi Si",
+        "Minghui Chen",
+        "Naibin Gu",
+        "Dingyu Yao",
+        "Zheng Lin",
+        "Weiping Wang",
+        "Jiaqi Wang",
+        "Nan Duan"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03128.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "强化学习自蒸馏，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Towards Realistic Class-Incremental Learning with Free-Flow Increments",
+      "authors": [
+        "Zhiming Xu",
+        "Baile Xu",
+        "Jian Zhao",
+        "Furao Shen",
+        "Suorong Yang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02765.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "增量学习方法论文，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "AdaHOP: Fast and Accurate Low-Precision Training via Outlier-Pattern-Aware Rotation",
+      "authors": [
+        "Seonggon Kim",
+        "Alireza Khodamoradi",
+        "Kristof Denolf",
+        "Eunhyeok Park"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02525.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "低精度训练优化，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "SEDGE: Structural Extrapolated Data Generation",
+      "authors": [
+        "Kun Zhang",
+        "Jiaqi Sun",
+        "Yiqing Li",
+        "Ignavier Ng",
+        "Namrata Deka",
+        "Shaoan Xie"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02482.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "结构化数据生成，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Time-Warping Recurrent Neural Networks for Transfer Learning",
+      "authors": [
+        "Jonathon Hirschi"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02474.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "RNN迁移学习，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "From Broad Exploration to Stable Synthesis: Entropy-Guided Optimization for Autoregressive Image Generation",
+      "authors": [
+        "Han Song",
+        "Yucheng Zhou",
+        "Jianbing Shen",
+        "Yu Cheng"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02355.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "自回归图像生成优化，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Characterizing WebGPU Dispatch Overhead for LLM Inference Across Four GPU Vendors, Three Backends, and Three Browsers",
+      "authors": [
+        "Jędrzej Maczan"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02344.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "GPU推理性能基准测试，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Not All Denoising Steps Are Equal: Model Scheduling for Faster Masked Diffusion Language Models",
+      "authors": [
+        "Ivan Sedykh",
+        "Nikita Sorokin",
+        "Valentin Malykh"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02340.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "扩散语言模型加速，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Learning the Signature of Memorization in Autoregressive Language Models",
+      "authors": [
+        "David Ilić",
+        "Kostadin Cvejoski",
+        "David Stanojević",
+        "Evgeny Grigorenko"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03199.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "语言模型记忆化研究，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "The Compression Gap: Why Discrete Tokenization Limits Vision-Language-Action Model Scaling",
+      "authors": [
+        "Takuya Shiba"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03191.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "VLA模型tokenization分析，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Transfer Learning for Loan Recovery Prediction under Distribution Shifts with Heterogeneous Feature Spaces",
+      "authors": [
+        "Christopher Gerling",
+        "Hanqiu Peng",
+        "Ying Chen",
+        "Stefan Lessmann"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02832.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "金融贷款预测领域的迁移学习，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Structure-Preserving Multi-View Embedding Using Gromov-Wasserstein Optimal Transport",
+      "authors": [
+        "Rafael Pereira Eufrazio",
+        "Eduardo Fernandes Montesuma",
+        "Charles Casimiro Cavalcante"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02610.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "多视图嵌入与最优传输，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Robust Learning with Optimal Error",
+      "authors": [
+        "Guy Blanc"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02555.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "鲁棒学习理论，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Optimal Projection-Free Adaptive SGD for Matrix Optimization",
+      "authors": [
+        "Dmitry Kovalev"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02505.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "优化算法理论，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Failing to Falsify: Evaluating and Mitigating Confirmation Bias in Language Models",
+      "authors": [
+        "Ayush Rajesh Jhaveri",
+        "Anthony GX-Chen",
+        "Ilia Sucholutsky",
+        "Eunsol Choi"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02485.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "语言模型确认偏差研究，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "An Empirical Study of Many-Shot In-Context Learning for Machine Translation of Low-Resource Languages",
+      "authors": [
+        "Yinhan Lu",
+        "Gaganpreet Jhajj",
+        "Chen Zhang",
+        "Anietie Andy",
+        "David Ifeoluwa Adelani"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02596.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "低资源语言机器翻译，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Single-Agent LLMs Outperform Multi-Agent Systems on Multi-Hop Reasoning Under Equal Thinking Token Budgets",
+      "authors": [
+        "Dat Tran",
+        "Douwe Kiela"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02460.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "LLM多跳推理对比研究，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Measuring What Cannot Be Surveyed: LLMs as Instruments for Latent Cognitive Variables in Labor Economics",
+      "authors": [
+        "Cristian Espinal Maya"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02403.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 2,
+      "match_reason": "劳动经济学中的LLM应用，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Coupled Control, Structured Memory, and Verifiable Action in Agentic AI (SCRAT -- Stochastic Control with Retrieval and Auditable Trajectories): A Comparative Perspective from Squirrel Locomotion and Scatter-Hoarding",
+      "authors": [
+        "Maximiliano Armesto",
+        "Christophe Kolb"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03201.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "仿生智能体控制论文，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Automatic Textbook Formalization",
+      "authors": [
+        "Fabian Gloeckle",
+        "Ahmad Rammal",
+        "Charles Arnal",
+        "Remi Munos",
+        "Vivien Cabannes",
+        "Gabriel Synnaeve",
+        "Amaury Hayat"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03071.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "教科书形式化，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "FoE: Forest of Errors Makes the First Solution the Best in Large Reasoning Models",
+      "authors": [
+        "Kehan Jiang",
+        "Haonan Dong",
+        "Zhaolu Kang",
+        "Zhengzhou Zhu",
+        "Guojie Song"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02967.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "大模型推理优化，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "AgentHazard: A Benchmark for Evaluating Harmful Behavior in Computer-Use Agents",
+      "authors": [
+        "Yunhao Feng",
+        "Yifan Ding",
+        "Yingshui Tan",
+        "Xingjun Ma",
+        "Yige Li",
+        "Yutao Wu",
+        "Yifeng Gao",
+        "Kun Zhai",
+        "Yanming Guo"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02947.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "Agent安全评测，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Analysis of Optimality of Large Language Models on Planning Problems",
+      "authors": [
+        "Bernd Bohnet",
+        "Michael C. Mozer",
+        "Kevin Swersky",
+        "Wil Cunningham",
+        "Aaron Parisi",
+        "Kathleen Kenealy",
+        "Noah Fiedel"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02910.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "LLM规划能力分析，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "EMS: Multi-Agent Voting via Efficient Majority-then-Stopping",
+      "authors": [
+        "Yiqing Liu",
+        "Hantao Yao",
+        "Wu Liu",
+        "Yongdong Zhang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02863.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "多agent投票机制，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "ESL-Bench: An Event-Driven Synthetic Longitudinal Benchmark for Health Agents",
+      "authors": [
+        "Chao Li",
+        "Cailiang Liu",
+        "Ang Gao",
+        "Kexin Deng",
+        "Shu Zhang",
+        "Langping Xu",
+        "Xiaotong Shi",
+        "Xionghao Ding",
+        "Jian Pei",
+        "Xun Jiang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02834.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "健康领域agent评测，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "CharTool: Tool-Integrated Visual Reasoning for Chart Understanding",
+      "authors": [
+        "Situo Zhang",
+        "Yifan Zhang",
+        "Zichen Zhu",
+        "Da Ma",
+        "Lei Pan",
+        "Danyang Zhang",
+        "Zihan Zhao",
+        "Lu Chen",
+        "Kai Yu"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02794.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "图表理解工具集成，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Improving Role Consistency in Multi-Agent Collaboration via Quantitative Role Clarity",
+      "authors": [
+        "Guoling Zhou",
+        "Wenpei Han",
+        "Fengqin Yang",
+        "Li Wang",
+        "Yingcong Zhou",
+        "Zhiguo Fu"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02770.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "多agent角色一致性，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "DeltaLogic: Minimal Premise Edits Reveal Belief-Revision Failures in Logical Reasoning Models",
+      "authors": [
+        "Amit Dhanda"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02733.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "逻辑推理模型评估，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "GrandCode: Achieving Grandmaster Level in Competitive Programming via Agentic Reinforcement Learning",
+      "authors": [
+        "DeepReinforce Team",
+        "Xiaoya Li",
+        "Xiaofei Sun",
+        "Guoyin Wang",
+        "Songqiao Su",
+        "Chris Shum",
+        "Jiwei Li"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02721.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "竞赛编程RL，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "OntoKG: Ontology-Oriented Knowledge Graph Construction with Intrinsic-Relational Routing",
+      "authors": [
+        "Yitao Li",
+        "Zhanlin Liu",
+        "Anuranjan Pandey",
+        "Muni Srikanth"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02618.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "知识图谱构建，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Do Audio-Visual Large Language Models Really See and Hear?",
+      "authors": [
+        "Ramaneswaran Selvakumar",
+        "Kaousheik Jayakumar",
+        "S Sakshi",
+        "Sreyan Ghosh",
+        "Ruohan Gao",
+        "Dinesh Manocha"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02605.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "多模态LLM评估，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Mitigating LLM biases toward spurious social contexts using direct preference optimization",
+      "authors": [
+        "Hyunji Nam",
+        "Dorottya Demszky"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02585.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "LLM偏见缓解，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Competency Questions as Executable Plans: a Controlled RAG Architecture for Cultural Heritage Storytelling",
+      "authors": [
+        "Naga Sowjanya Barla",
+        "Jacopo de Berardinis"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02545.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "RAG用于文化遗产叙事，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Compositional Neuro-Symbolic Reasoning",
+      "authors": [
+        "Anugyan Das",
+        "Omkar Ghugarkar",
+        "Vishvesh Bhat",
+        "Asad Aali"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02434.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "神经符号推理论文，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Enhancing Robustness of Federated Learning via Server Learning",
+      "authors": [
+        "Van Sy Mai",
+        "Kushal Chakrabarti",
+        "Richard J. La",
+        "Dipankar Maity"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03226.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "联邦学习鲁棒性论文，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Reliability Gated Multi-Teacher Distillation for Low Resource Abstractive Summarization",
+      "authors": [
+        "Dipto Sumit",
+        "Ankan Kumar Roy",
+        "Sadia Khair Rodela",
+        "Atia Haque Asha",
+        "Mourchona Afrin",
+        "Niloy Farhan",
+        "Farig Yousuf Sadeque"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03192.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "知识蒸馏用于文本摘要，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Reflective Context Learning: Studying the Optimization Primitives of Context Space",
+      "authors": [
+        "Nikita Vassilyev",
+        "William Berrios",
+        "Ruowang Zhang",
+        "Bo Han",
+        "Douwe Kiela",
+        "Shikib Mehri"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03189.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "上下文学习优化研究，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Understanding the Role of Hallucination in Reinforcement Post-Training of Multimodal Reasoning Models",
+      "authors": [
+        "Gengwei Zhang",
+        "Jie Peng",
+        "Zhen Tan",
+        "Mufan Qiu",
+        "Hossein Nourkhiz Mahjoub",
+        "Vaishnav Tadiparthi",
+        "Kwonjoon Lee",
+        "Yanyong Zhang",
+        "Tianlong Chen"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03179.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "多模态推理模型幻觉研究，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Beyond the Parameters: A Technical Survey of Contextual Enrichment in Large Language Models: From In-Context Prompting to Causal Retrieval-Augmented Generation",
+      "authors": [
+        "Prakhar Bansal",
+        "Shivangi Agarwal"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03174.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "LLM上下文增强与RAG综述，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Valence-Arousal Subspace in LLMs: Circular Emotion Geometry and Multi-Behavioral Control",
+      "authors": [
+        "Lihao Sun",
+        "Lewen Yan",
+        "Xiaoya Lu",
+        "Andrew Lee",
+        "Jie Zhang",
+        "Jing Shao"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03147.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "LLM情感空间研究，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "AI-Assisted Unit Test Writing and Test-Driven Code Refactoring: A Case Study",
+      "authors": [
+        "Ema Smolic",
+        "Mario Brcic",
+        "Luka Hobor",
+        "Mihael Kovac"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03135.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "软件测试相关，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "A Systematic Security Evaluation of OpenClaw and Its Variants",
+      "authors": [
+        "Yuhang Wang",
+        "Haichang Gao",
+        "Zhenxing Niu",
+        "Zhaoxiang Liu",
+        "Wenjing Zhang",
+        "Xiang Wang",
+        "Shiguo Lian"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03131.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "安全评估论文，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "An Independent Safety Evaluation of Kimi K2.5",
+      "authors": [
+        "Zheng-Xin Yong",
+        "Parv Mahajan",
+        "Andy Wang",
+        "Ida Caspary",
+        "Yernat Yestekov",
+        "Zora Che",
+        "Mosh Levy",
+        "Elle Najt",
+        "Dennis Murphy",
+        "Prashant Kulkarni",
+        "Lev McKinney",
+        "Kei Nishimura-Gasparian",
+        "Ram Potham",
+        "Aengus Lynch",
+        "Michael L. Chen"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03121.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "LLM安全评估，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Can VLMs Truly Forget? Benchmarking Training-Free Visual Concept Unlearning",
+      "authors": [
+        "Zhangyun Tan",
+        "Zeliang Zhang",
+        "Susan Liang",
+        "Yolo Yunlong Tang",
+        "Lisha Chen",
+        "Chenliang Xu"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03114.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "视觉语言模型遗忘基准，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "AlertStar: Path-Aware Alert Prediction on Hyper-Relational Knowledge Graphs",
+      "authors": [
+        "Zahra Makki Nayeri",
+        "Mohsen Rezvani"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03104.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "知识图谱告警预测，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Supply-Chain Poisoning Attacks Against LLM Coding Agent Skill Ecosystems",
+      "authors": [
+        "Yubin Qu",
+        "Yi Liu",
+        "Tongcheng Geng",
+        "Gelei Deng",
+        "Yuekang Li",
+        "Leo Yu Zhang",
+        "Ying Zhang",
+        "Lei Ma"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03081.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "供应链攻击安全研究，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Credential Leakage in LLM Agent Skills: A Large-Scale Empirical Study",
+      "authors": [
+        "Zhihao Chen",
+        "Ying Zhang",
+        "Yi Liu",
+        "Gelei Deng",
+        "Yuekang Li",
+        "Yanjun Zhang",
+        "Jianting Ning",
+        "Leo Yu Zhang",
+        "Lei Ma",
+        "Zhiqiang Li"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03070.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "凭证泄露安全研究，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Verbalizing LLMs' assumptions to explain and control sycophancy",
+      "authors": [
+        "Myra Cheng",
+        "Isabel Sieh",
+        "Humishka Zope",
+        "Sunny Yu",
+        "Lujain Ibrahim",
+        "Aryaman Arora",
+        "Jared Moore",
+        "Desmond Ong",
+        "Dan Jurafsky",
+        "Diyi Yang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03058.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "LLM谄媚行为研究，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "MECO: A Multimodal Dataset for Emotion and Cognitive Understanding in Older Adults",
+      "authors": [
+        "Hongbin Chen",
+        "Jie Li",
+        "Wei Wang",
+        "Siyang Song",
+        "Xiao Gu",
+        "Jianqing Li",
+        "Wentao Xiang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03050.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "老年人情感认知数据集，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "ARM: Advantage Reward Modeling for Long-Horizon Manipulation",
+      "authors": [
+        "Yiming Mao",
+        "Zixi Yu",
+        "Weixin Mao",
+        "Yinhao Li",
+        "Qirui Hu",
+        "Zihan Lan",
+        "Minzhao Zhu",
+        "Hua Chen"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03037.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "机器人长时域操控的奖励建模，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Beyond Isolated Tasks: A Framework for Evaluating Coding Agents on Sequential Software Evolution",
+      "authors": [
+        "KN Ajay Shastry",
+        "Ganesh Senrayan",
+        "Shrey Satapara",
+        "Pranoy Panda",
+        "Chaitanya Devaguptapu"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03035.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "代码Agent评估框架，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "R2-Write: Reflection and Revision for Open-Ended Writing with Deep Reasoning",
+      "authors": [
+        "Wanlong Liu",
+        "Bo Zhang",
+        "Chenliang Li",
+        "Shaopeng Lai",
+        "Yuning Wu",
+        "Xuanyu Lei",
+        "Ming Yan"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03004.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "开放式写作深度推理，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "LogicPoison: Logical Attacks on Graph Retrieval-Augmented Generation",
+      "authors": [
+        "Yilin Xiao",
+        "Jin Chen",
+        "Qinggang Zhang",
+        "Yujing Zhang",
+        "Chuang Zhou",
+        "Longhao Yang",
+        "Lingfei Ren",
+        "Xin Yang",
+        "Xiao Huang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02954.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "图RAG攻击方法，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "How Annotation Trains Annotators: Competence Development in Social Influence Recognition",
+      "authors": [
+        "Maciej Markiewicz",
+        "Beata Bajcar",
+        "Wiktoria Mieleszczenko-Kowszewicz",
+        "Aleksander Szczęsny",
+        "Tomasz Adamczyk",
+        "Grzegorz Chodak",
+        "Karolina Ostrowska",
+        "Aleksandra Sawczuk",
+        "Jolanta Babiak",
+        "Jagoda Szklarczyk",
+        "Przemysław Kazienko"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02951.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "标注者能力发展研究，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Corporations Constitute Intelligence",
+      "authors": [
+        "Gilad Abiri"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02912.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "关于智能本质的理论探讨，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Towards Secure Agent Skills: Architecture, Threat Taxonomy, and Security Analysis",
+      "authors": [
+        "Zhiyuan Li",
+        "Jingzheng Wu",
+        "Xiang Ling",
+        "Xing Cui",
+        "Tianyue Luo"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02837.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "智能体安全分析，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "GBQA: A Game Benchmark for Evaluating LLMs as Quality Assurance Engineers",
+      "authors": [
+        "Shufan Jiang",
+        "Chios Chen",
+        "Zhiyang Chen"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02648.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "游戏QA评测，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Moondream Segmentation: From Words to Masks",
+      "authors": [
+        "Ethan Reid"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02593.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "图像分割模型，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "High Volatility and Action Bias Distinguish LLMs from Humans in Group Coordination",
+      "authors": [
+        "Sahaj Singh Maini",
+        "Robert L. Goldstone",
+        "Zoran Tiganj"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02578.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "LLM行为分析与博弈，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Pragmatics Meets Culture: Culturally-adapted Artwork Description Generation and Evaluation",
+      "authors": [
+        "Lingjun Zhao",
+        "Dayeon Ki",
+        "Marine Carpuat",
+        "Hal Daumé III"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02557.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "文化适应的艺术品描述生成，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "From Theory to Practice: Code Generation Using LLMs for CAPEC and CWE Frameworks",
+      "authors": [
+        "Murtuza Shahzad",
+        "Joseph Wilson",
+        "Ibrahim Al Azher",
+        "Hamed Alhoori",
+        "Mona Rahimi"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02548.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "安全框架代码生成，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Social Meaning in Large Language Models: Structure, Magnitude, and Pragmatic Prompting",
+      "authors": [
+        "Roland Mühlenbernd"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02512.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "LLM社会语义研究，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "UI-Oceanus: Scaling GUI Agents with Synthetic Environmental Dynamics",
+      "authors": [
+        "Mengzhou Wu",
+        "Yuzhe Guo",
+        "Yuan Cao",
+        "Haochuan Lu",
+        "Songhe Zhu",
+        "Pingzhe Qu",
+        "Xin Chen",
+        "Kang Qin",
+        "Zhongpu Wang",
+        "Xiaode Zhang",
+        "Xinyi Wang",
+        "Wei Dai",
+        "Gang Cao",
+        "Yuetang Deng",
+        "Zhi Gong",
+        "Dezhi Ran",
+        "Linyi Li",
+        "Wei Yang",
+        "Tao Xie"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02345.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "GUI Agent，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Empirical Sufficiency Lower Bounds for Language Modeling with Locally-Bootstrapped Semantic Structures",
+      "authors": [
+        "Jakob Prange",
+        "Emmanuele Chersoni"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2305.18915.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "语言建模理论研究，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Reanalyzing L2 Preposition Learning with Bayesian Mixed Effects and a Pretrained Language Model",
+      "authors": [
+        "Jakob Prange",
+        "Man Ho Ivy Wong"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2302.08150.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "语言学习研究，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Linguistic Frameworks Go Toe-to-Toe at Neuro-Symbolic Language Modeling",
+      "authors": [
+        "Jakob Prange",
+        "Nathan Schneider",
+        "Lingpeng Kong"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2112.07874.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "语言建模框架对比，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Generating DDPM-based Samples from Tilted Distributions",
+      "authors": [
+        "Himadri Mandal",
+        "Dhruman Gupta",
+        "Rushil Gupta",
+        "Sarvesh Ravichandran Iyer",
+        "Agniv Bandyopadhyay",
+        "Achal Bassamboo",
+        "Varun Gupta",
+        "Sandeep Juneja"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03015.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "扩散模型采样理论，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Towards Near-Real-Time Telemetry-Aware Routing with Neural Routing Algorithms",
+      "authors": [
+        "Andreas Boltres",
+        "Niklas Freymuth",
+        "Benjamin Schichtholz",
+        "Michael König",
+        "Gerhard Neumann"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02927.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "网络路由算法，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Matrix Profile for Time-Series Anomaly Detection: A Reproducible Open-Source Benchmark on TSB-AD",
+      "authors": [
+        "Chin-Chia Michael Yeh"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02445.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "时间序列异常检测基准，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Dynamical structure of vanishing gradient and overfitting in multi-layer perceptrons",
+      "authors": [
+        "Alex Alì Maleknia",
+        "Yuzuru Sato"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02393.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "MLP梯度消失理论分析，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "YC Bench: a Live Benchmark for Forecasting Startup Outperformance in Y Combinator Batches",
+      "authors": [
+        "Mostapha Benhenda"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02378.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "创业公司预测基准，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Learning interacting particle systems from unlabeled data",
+      "authors": [
+        "Viska Wei",
+        "Fei Lu"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02581.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "粒子系统学习，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Contrastive Language-Colored Pointmap Pretraining for Unified 3D Scene Understanding",
+      "authors": [
+        "Ye Mao",
+        "Weixun Luo",
+        "Ranran Huang",
+        "Junpeng Jing",
+        "Krystian Mikolajczyk"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02546.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "3D场景理解，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Overconfidence and Calibration in Medical VQA: Empirical Findings and Hallucination-Aware Mitigation",
+      "authors": [
+        "Ji Young Byun",
+        "Young-Jin Park",
+        "Jean-Philippe Corbeil",
+        "Asma Ben Abacha"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02543.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "医疗VQA校准，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Dependency-Guided Parallel Decoding in Discrete Diffusion Language Models",
+      "authors": [
+        "Liran Ringel",
+        "Ameen Ali",
+        "Yaniv Romano"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02560.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "离散扩散语言模型解码方法，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "SWAY: A Counterfactual Computational Linguistic Approach to Measuring and Mitigating Sycophancy",
+      "authors": [
+        "Joy Bhalla",
+        "Kristina Gligorić"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02423.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "LLM谄媚行为研究，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Speaker-Reasoner: Scaling Interaction Turns and Reasoning Patterns for Timestamped Speaker-Attributed ASR",
+      "authors": [
+        "Zhennan Lin",
+        "Shuai Wang",
+        "Zhaokai Sun",
+        "Pengyuan Xie",
+        "Chuan Xie",
+        "Jie Liu",
+        "Qiang Zhang",
+        "Lei Xie"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03074.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "语音识别说话人归属，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "EnsemHalDet: Robust VLM Hallucination Detection via Ensemble of Internal State Detectors",
+      "authors": [
+        "Ryuhei Miyazato",
+        "Shunsuke Kitada",
+        "Kei Harada"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02784.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "VLM幻觉检测，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "VLMs Need Words: Vision Language Models Ignore Visual Detail In Favor of Semantic Anchors",
+      "authors": [
+        "Haz Sameen Shahgir",
+        "Xiaofu Chen",
+        "Yu Fu",
+        "Erfan Shayegani",
+        "Nael Abu-Ghazaleh",
+        "Yova Kementchedjhieva",
+        "Yue Dong"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02486.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 1,
+      "match_reason": "视觉语言模型语义偏好分析，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Interpretable Deep Reinforcement Learning for Element-level Bridge Life-cycle Optimization",
+      "authors": [
+        "Seyyed Amirhossein Moayyedi",
+        "David Y. Yang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02528.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "桥梁生命周期优化，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "A Comprehensive Framework for Long-Term Resiliency Investment Planning under Extreme Weather Uncertainty for Electric Utilities",
+      "authors": [
+        "Emma Benjaminson"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02504.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "电力公用事业投资规划，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "I must delete the evidence: AI Agents Explicitly Cover up Fraud and Violent Crime",
+      "authors": [
+        "Thomas Rivasseau",
+        "Benjamin Fung"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02500.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "AI安全与伦理，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "AIVV: Neuro-Symbolic LLM Agent-Integrated Verification and Validation for Trustworthy Autonomous Systems",
+      "authors": [
+        "Jiyong Kwon",
+        "Ujin Jeon",
+        "Sooji Lee",
+        "Guang Lin"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02478.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "自主系统验证，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "PR3DICTR: A modular AI framework for medical 3D image-based detection and outcome prediction",
+      "authors": [
+        "Daniel C. MacRae",
+        "Luuk van der Hoek",
+        "Robert van der Wal",
+        "Suzanne P.M. de Vette",
+        "Hendrike Neh",
+        "Baoqiang Ma",
+        "Peter M.A. van Ooijen",
+        "Lisanne V. van Dijk"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03203.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "医学影像AI框架，与计算广告完全无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "A Data-Centric Vision Transformer Baseline for SAR Sea Ice Classification",
+      "authors": [
+        "David Mike-Ewewie",
+        "Panhapiseth Lim",
+        "Priyanka Kumar"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03094.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "遥感图像分类，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Analyzing Healthcare Interoperability Vulnerabilities: Formal Modeling and Graph-Theoretic Approach",
+      "authors": [
+        "Jawad Mohammed",
+        "Gahangir Hossain"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03043.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "医疗互操作性安全分析，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Comparing the Impact of Pedagogy-Informed Custom and General-Purpose GAI Chatbots on Students' Science Problem-Solving Processes and Performance Using Heterogeneous Interaction Network Analysis",
+      "authors": [
+        "Hanyu Su",
+        "Huilin Zhang",
+        "Shihui Feng"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03022.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "教育领域AI聊天机器人研究，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Split and Conquer Partial Deepfake Speech",
+      "authors": [
+        "Inbal Rimon",
+        "Oren Gal",
+        "Haim Permuter"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02913.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "深度伪造语音检测，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "RayMamba: Ray-Aligned Serialization for Long-Range 3D Object Detection",
+      "authors": [
+        "Cheng Lu",
+        "Mingqian Ji",
+        "Shanshan Zhang",
+        "Zhihao Li",
+        "Jian Yang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02903.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "3D目标检测，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Toward an Artificial General Teacher: Procedural Geometry Data Generation and Visual Grounding with Vision-Language Models",
+      "authors": [
+        "Hai Nguyen-Truong",
+        "Alper Balbay",
+        "Tunga Bayrak"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02893.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "几何教育与视觉语言模型，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Rethinking Forward Processes for Score-Based Data Assimilation in High Dimensions",
+      "authors": [
+        "Eunbi Yoon",
+        "Donghan Kim",
+        "Dae Wook Kim"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02889.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "数据同化方法，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "One Model to Translate Them All? A Journey to Mount Doom for Multilingual Model Merging",
+      "authors": [
+        "Baban Gain",
+        "Asif Ekbal",
+        "Trilok Nath Singh"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02881.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "多语言翻译模型合并，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "A Paradigm Shift: Fully End-to-End Training for Temporal Sentence Grounding in Videos",
+      "authors": [
+        "Allen He",
+        "Qi Liu",
+        "Kun Liu",
+        "Xinchen Liu",
+        "Wu Liu"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02860.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "视频时序定位任务，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "High-resolution probabilistic estimation of three-dimensional regional ocean dynamics from sparse surface observations",
+      "authors": [
+        "Niloofar Asefi",
+        "Tianning Wu",
+        "Ruoying He",
+        "Ashesh Chattopadhyay"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02850.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "海洋动力学建模，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "NavCrafter: Exploring 3D Scenes from a Single Image",
+      "authors": [
+        "Hongbo Duan",
+        "Peiyu Zhuang",
+        "Yi Liu",
+        "Zhengyang Zhang",
+        "Yuxin Zhang",
+        "Pengting Luo",
+        "Fangming Liu",
+        "Xueqian Wang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02828.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "3D场景探索，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "QAPruner: Quantization-Aware Vision Token Pruning for Multimodal Large Language Models",
+      "authors": [
+        "Xinhao Wang",
+        "Zhonyu Xia",
+        "Zhiwei Lin",
+        "Zhe Li",
+        "Yongtao Wang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02816.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "多模态LLM模型压缩，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "ChatSVA: Bridging SVA Generation for Hardware Verification via Task-Specific LLMs",
+      "authors": [
+        "Lik Tung Fu",
+        "Jie Zhou",
+        "Shaokai Ren",
+        "Mengli Zhang",
+        "Jia Xiong",
+        "Hugo Jiang",
+        "Nan Guan",
+        "Xi Wang",
+        "Jun Yang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02811.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "硬件验证领域，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "PaveBench: A Versatile Benchmark for Pavement Distress Perception and Interactive Vision-Language Analysis",
+      "authors": [
+        "Dexiang Li",
+        "Zhenning Che",
+        "Haijun Zhang",
+        "Dongliang Zhou",
+        "Zhao Zhang",
+        "Yahong Han"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02804.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "路面损伤检测，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Rubrics to Tokens: Bridging Response-level Rubrics and Token-level Rewards in Instruction Following Tasks",
+      "authors": [
+        "Tianze Xu",
+        "Yanzhao Zheng",
+        "Pengrui Lu",
+        "Lyumanshan Ye",
+        "Yong Wu",
+        "Zhentao Zhang",
+        "Yuanqiang Yu",
+        "Chao Ma",
+        "Jihuai Zhu",
+        "Pengfei Liu",
+        "Baohua Dong",
+        "Hangcheng Zhu",
+        "Ruohui Huang",
+        "Gang Yu"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02795.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "LLM指令跟随奖励建模，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "LumaFlux: Lifting 8-Bit Worlds to HDR Reality with Physically-Guided Diffusion Transformers",
+      "authors": [
+        "Shreshth Saini",
+        "Hakan Gedik",
+        "Neil Birkbeck",
+        "Yilin Wang",
+        "Balu Adsumilli",
+        "Alan C. Bovik"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02787.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "HDR图像生成，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Disrupting Cognitive Passivity: Rethinking AI-Assisted Data Literacy through Cognitive Alignment",
+      "authors": [
+        "Yongsu Ahn",
+        "Nam Wook Kim",
+        "Benjamin Bach"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02783.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "数据素养与认知对齐研究，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "SentinelAgent: Intent-Verified Delegation Chains for Securing Federal Multi-Agent AI Systems",
+      "authors": [
+        "KrishnaSaiReddy Patil"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02767.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "多智能体安全系统，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Random Is Hard to Beat: Active Selection in online DPO with Modern LLMs",
+      "authors": [
+        "Giyeong Oh",
+        "Junghyun Lee",
+        "Jaehyun Park",
+        "Youngjae Yu",
+        "Wonho Bae",
+        "Junhyug Noh"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02766.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "LLM在线DPO训练策略，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Cross Event Detection and Topic Evolution Mining in cross events for Man Made Disasters in Social Media Streams",
+      "authors": [
+        "Pramod Bide",
+        "Sudhir Dhage",
+        "Mohammed Afaan Ansari",
+        "Rudresh Veerkhare"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02740.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "社交媒体事件检测与话题演化，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "IndustryCode: A Benchmark for Industry Code Generation",
+      "authors": [
+        "Puyu Zeng",
+        "Zhaoxi Wang",
+        "Zhixu Duan",
+        "Liang Feng",
+        "Shaobo Wang",
+        "Cunxiang Wang",
+        "Jinghang Wang",
+        "Bing Zhao",
+        "Hu Wei",
+        "Linfeng Zhang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02729.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "工业代码生成基准，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "MOMO: Mars Orbital Model Foundation Model for Mars Orbital Applications",
+      "authors": [
+        "Mirali Purohit",
+        "Bimal Gajera",
+        "Irish Mehta",
+        "Bhanu Tokas",
+        "Jacob Adler",
+        "Steven Lu",
+        "Scott Dickenshied",
+        "Serina Diniega",
+        "Brian Bue",
+        "Umaa Rebbapragada",
+        "Hannah Kerner"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02719.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "火星轨道基础模型，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "V2X-QA: A Comprehensive Reasoning Dataset and Benchmark for Multimodal Large Language Models in Autonomous Driving Across Ego, Infrastructure, and Cooperative Views",
+      "authors": [
+        "Junwei You",
+        "Pei Li",
+        "Zhuoyu Jiang",
+        "Weizhe Tang",
+        "Zilin Huang",
+        "Rui Gan",
+        "Jiaxi Liu",
+        "Yan Zhao",
+        "Sikai Chen",
+        "Bin Ran"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02710.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "自动驾驶多模态推理数据集，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Evaluating the Formal Reasoning Capabilities of Large Language Models through Chomsky Hierarchy",
+      "authors": [
+        "Yihong Dong",
+        "Xiaoha Jian",
+        "Xue Jiang",
+        "Xuyuan Guo",
+        "Zhiyuan Fan",
+        "Jiaru Qian",
+        "Kechi Zhang",
+        "Jia Li",
+        "Zhi Jin",
+        "Ge Li"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02709.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "LLM形式推理能力评估，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Trivial Vocabulary Bans Improve LLM Reasoning More Than Deep Linguistic Constraints",
+      "authors": [
+        "Rodney Jehu-Appiah"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02699.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "LLM推理约束研究，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "DocShield: Towards AI Document Safety via Evidence-Grounded Agentic Reasoning",
+      "authors": [
+        "Fanwei Zeng",
+        "Changtao Miao",
+        "Jing Huang",
+        "Zhiya Tan",
+        "Shutao Gong",
+        "Xiaoming Yu",
+        "Yang Wang",
+        "Weibin Yao",
+        "Joey Tianyi Zhou",
+        "Jianshu Li",
+        "Yin Yan"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02694.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "文档安全与Agent推理，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Efficient3D: A Unified Framework for Adaptive and Debiased Token Reduction in 3D MLLMs",
+      "authors": [
+        "Yuhui Lin",
+        "Siyue Yu",
+        "Yuxing Yang",
+        "Guangliang Cheng",
+        "Jimin Xiao"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02689.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "3D多模态大模型token压缩，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Beyond Semantic Manipulation: Token-Space Attacks on Reward Models",
+      "authors": [
+        "Yuheng Zhang",
+        "Mingyue Huo",
+        "Minghao Zhu",
+        "Mengxue Zhang",
+        "Nan Jiang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02686.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "奖励模型对抗攻击，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Finding Belief Geometries with Sparse Autoencoders",
+      "authors": [
+        "Matthew Levinson"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02685.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "稀疏自编码器与信念几何研究，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Do Agent Societies Develop Intellectual Elites? The Hidden Power Laws of Collective Cognition in LLM Multi-Agent Systems",
+      "authors": [
+        "Kavana Venkatesh",
+        "Jiaming Cui"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02674.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "多Agent社会认知研究，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Too Polite to Disagree: Understanding Sycophancy Propagation in Multi-Agent Systems",
+      "authors": [
+        "Vira Kasprova",
+        "Amruta Parulekar",
+        "Abdulrahman AlRabah",
+        "Krishna Agaram",
+        "Ritwik Garg",
+        "Sagar Jha",
+        "Nimet Beyza Bozdag",
+        "Dilek Hakkani-Tur"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02668.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "多Agent系统谄媚传播研究，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Low-Rank Compression of Pretrained Models via Randomized Subspace Iteration",
+      "authors": [
+        "Farhad Pourkamali-Anaraki"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02659.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "预训练模型低秩压缩，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Generalization Limits of Reinforcement Learning Alignment",
+      "authors": [
+        "Haruhi Shida",
+        "Koo Imai",
+        "Keigo Kansa"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02652.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "强化学习对齐泛化理论，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Cross-Vehicle 3D Geometric Consistency for Self-Supervised Surround Depth Estimation on Articulated Vehicles",
+      "authors": [
+        "Weimin Liu",
+        "Jiyuan Qiu",
+        "Wenjun Wang",
+        "Joshua H. Meng"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02639.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "自动驾驶深度估计，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Toys that listen, talk, and play: Understanding Children's Sensemaking and Interactions with AI Toys",
+      "authors": [
+        "Aayushi Dangol",
+        "Meghna Gupta",
+        "Daeun Yoo",
+        "Robert Wolfe",
+        "Jason Yip",
+        "Franziska Roesner",
+        "Julie A. Kientz"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02629.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "儿童与AI玩具交互研究，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Smart Transfer: Leveraging Vision Foundation Model for Rapid Building Damage Mapping with Post-Earthquake VHR Imagery",
+      "authors": [
+        "Hao Li",
+        "Liwei Zou",
+        "Wenping Yin",
+        "Gulsen Taskin",
+        "Naoto Yokoya",
+        "Danfeng Hong",
+        "Wufan Zhao"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02627.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "遥感灾害评估，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "LitPivot: Developing Well-Situated Research Ideas Through Dynamic Contextualization and Critique within the Literature Landscape",
+      "authors": [
+        "Hita Kambhamettu",
+        "Bhavana Dalvi Mishra",
+        "Andrew Head",
+        "Jonathan Bragg",
+        "Aakanksha Naik",
+        "Joseph Chee Chang",
+        "Pao Siangliulue"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02600.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "学术文献辅助工具，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Making Written Theorems Explorable by Grounding Them in Formal Representations",
+      "authors": [
+        "Hita Kambhamettu",
+        "Will Crichton",
+        "Sean Welleck",
+        "Harrison Goldstein",
+        "Andrew Head"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02598.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "数学定理形式化，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "An Explainable Vision-Language Model Framework with Adaptive PID-Tversky Loss for Lumbar Spinal Stenosis Diagnosis",
+      "authors": [
+        "Md. Sajeebul Islam Sk.",
+        "Md. Mehedi Hasan Shawon",
+        "Md. Golam Rabiul Alam"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02502.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "医学影像诊断，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Automated Malware Family Classification using Weighted Hierarchical Ensembles of Large Language Models",
+      "authors": [
+        "Samita Bai",
+        "Hamed Jelodar",
+        "Tochukwu Emmanuel Nwankwo",
+        "Parisa Hamedi",
+        "Mohammad Meymani",
+        "Roozbeh Razavi-Far",
+        "Ali A. Ghorbani"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02490.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "恶意软件分类，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "A Multimodal Vision Transformer-based Modeling Framework for Prediction of Fluid Flows in Energy Systems",
+      "authors": [
+        "Kiran Yalamanchi",
+        "Shivam Barwey",
+        "Ibrahim Jarrah",
+        "Pinaki Pal"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02483.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "流体力学预测，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Generating Satellite Imagery Data for Wildfire Detection through Mask-Conditioned Generative AI",
+      "authors": [
+        "Valeria Martin",
+        "K. Brent Venable",
+        "Derek Morgan"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02479.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "卫星图像野火检测，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Hierarchical, Interpretable, Label-Free Concept Bottleneck Model",
+      "authors": [
+        "Haodong Xie",
+        "Yujun Cai",
+        "Rahul Singh Maharjan",
+        "Yiwei Wang",
+        "Federico Tavella",
+        "Angelo Cangelosi"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02468.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "可解释性概念瓶颈模型，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "VERTIGO: Visual Preference Optimization for Cinematic Camera Trajectory Generation",
+      "authors": [
+        "Mengtian Li",
+        "Yuwei Lu",
+        "Feifei Li",
+        "Chenqi Gan",
+        "Zhifeng Xie",
+        "Xi Wang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02467.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "电影镜头轨迹生成，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "On the Geometric Structure of Layer Updates in Deep Language Models",
+      "authors": [
+        "Jun-Sik Yoo"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02459.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "深度语言模型层更新的几何结构，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "When simulations look right but causal effects go wrong: Large language models as behavioral simulators",
+      "authors": [
+        "Zonghan Li",
+        "Feng Ji"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02458.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "LLM行为模拟与因果效应，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Skeleton-based Coherence Modeling in Narratives",
+      "authors": [
+        "Nishit Asnani",
+        "Rohan Badlani"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02451.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "叙事连贯性建模，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Do We Need Frontier Models to Verify Mathematical Proofs?",
+      "authors": [
+        "Aaditya Naik",
+        "Guruprerana Shabadi",
+        "Rajeev Alur",
+        "Mayur Naik"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02450.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "数学证明验证，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Managing Diabetic Retinopathy with Deep Learning: A Data Centric Overview",
+      "authors": [
+        "Shramana Dey",
+        "Zahir Khan",
+        "T. A. PramodKumar",
+        "B. Uma Shankar",
+        "Ashis K. Dhara",
+        "Ramachandran Rajalakshmi",
+        "Rajiv Raman",
+        "Sushmita Mitra"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02448.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "糖尿病视网膜病变医学AI，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "PlayGen-MoG: Framework for Diverse Multi-Agent Play Generation via Mixture-of-Gaussians Trajectory Prediction",
+      "authors": [
+        "Kevin Song"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02447.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "多智能体运动轨迹生成，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "From Elevation Maps To Contour Lines: SVM and Decision Trees to Detect Violin Width Reduction",
+      "authors": [
+        "Philémon Beghin",
+        "Anne-Emmanuelle Ceulemans",
+        "François Glineur"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02446.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "小提琴形态检测，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Self-Directed Task Identification",
+      "authors": [
+        "Timothy Gould",
+        "Sidike Paheding"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02430.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "自主任务识别，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Generative models on phase space",
+      "authors": [
+        "Zachary Bogorad",
+        "Ibrahim Elsharkawy",
+        "Yonatan Kahn",
+        "Andrew J. Larkoski",
+        "Noam Levi"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02415.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "生成模型与相空间相关，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "LumiVideo: An Intelligent Agentic System for Video Color Grading",
+      "authors": [
+        "Yuchen Guo",
+        "Junli Gong",
+        "Hongmin Cai",
+        "Yiu-ming Cheung",
+        "Weifeng Su"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02409.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "视频调色系统，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "A Synthesis Method of Safe Rust Code Based on Pushdown Colored Petri Nets",
+      "authors": [
+        "Kaiwen Zhang",
+        "Guanjun Liu"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02399.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "编程语言与形式化方法，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Improving MPI Error Detection and Repair with Large Language Models and Bug References",
+      "authors": [
+        "Scott Piersall",
+        "Yang Gao",
+        "Shenyang Liu",
+        "Liqiang Wang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02398.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "MPI错误检测与修复，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Variational Encoder--Multi-Decoder (VE-MD) for Privacy-by-functional-design (Group) Emotion Recognition",
+      "authors": [
+        "Anderson Augusma",
+        "Dominique Vaufreydaz",
+        "Fédérique Letué"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02397.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "情感识别与隐私设计，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Environment-Aware Channel Prediction for Vehicular Communications: A Multimodal Visual Feature Fusion Framework",
+      "authors": [
+        "Xuejian Zhang",
+        "Ruisi He",
+        "Minseok Kim",
+        "Inocent Calist",
+        "Mi Yang",
+        "Ziyi Qi"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02396.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "车联网信道预测，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Reliability-Aware Geometric Fusion for Robust Audio-Visual Navigation",
+      "authors": [
+        "Teng Liu",
+        "Yinfeng Yu"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02391.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "音视觉导航，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Spatial-Aware Conditioned Fusion for Audio-Visual Navigation",
+      "authors": [
+        "Shaohang Wu",
+        "Yinfeng Yu"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02390.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "音视觉导航，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Audio Spatially-Guided Fusion for Audio-Visual Navigation",
+      "authors": [
+        "Xinyu Zhou",
+        "Yinfeng Yu"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02389.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "音视觉导航，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Ambig-IaC: Multi-level Disambiguation for Interactive Cloud Infrastructure-as-Code Synthesis",
+      "authors": [
+        "Zhenning Yang",
+        "Kaden Gruizenga",
+        "Tongyuan Miao",
+        "Patrick Tser Jern Kon",
+        "Hui Guan",
+        "Ang Chen"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02382.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "云基础设施代码合成，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Internalized Reasoning for Long-Context Visual Document Understanding",
+      "authors": [
+        "Austin Veselka"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02371.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "文档理解与推理，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "A Survey on AI for 6G: Challenges and Opportunities",
+      "authors": [
+        "Constantina Chatzieleftheriou",
+        "Eirini Liotou"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02370.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "6G通信AI综述，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "CIPHER: Conformer-based Inference of Phonemes from High-density EEG",
+      "authors": [
+        "Varshith Madishetty"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02362.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "脑电信号语音解码，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "TRACE: Traceroute-based Internet Route change Analysis with Ensemble Learning",
+      "authors": [
+        "Raul Suzuki",
+        "Rodrigo Moreira",
+        "Pedro Henrique A. Damaso de Melo",
+        "Larissa F. Rodrigues Moreira",
+        "Flávio de Oliveira Silva"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02361.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "网络路由分析，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Using LLM-as-a-Judge/Jury to Advance Scalable, Clinically-Validated Safety Evaluations of Model Responses to Users Demonstrating Psychosis",
+      "authors": [
+        "May Lynn Reese",
+        "Markela Zeneli",
+        "Mindy Ng",
+        "Jacob Haimes",
+        "Andreea Damien",
+        "Elizabeth Stade"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02359.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "临床安全评估，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Dynamic Mask Enhanced Intelligent Multi-UAV Deployment for Urban Vehicular Networks",
+      "authors": [
+        "Gaoxiang Cao",
+        "Wenke Yuan",
+        "Yunpeng Hou",
+        "Huasen He",
+        "Quan Zheng",
+        "Jian Yang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02358.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "无人机部署与车联网，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "An Initial Exploration of Contrastive Prompt Tuning to Generate Energy-Efficient Code",
+      "authors": [
+        "Sophie Weidmann",
+        "Fernando Castor"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02352.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "代码生成能效优化，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Differentiable Symbolic Planning: A Neural Architecture for Constraint Reasoning with Learned Feasibility",
+      "authors": [
+        "Venkatakrishna Reddy Oruganti"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02350.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "符号规划与约束推理，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "DrugPlayGround: Benchmarking Large Language Models and Embeddings for Drug Discovery",
+      "authors": [
+        "Tianyu Liu",
+        "Sihan Jiang",
+        "Fan Zhang",
+        "Kunyang Sun",
+        "Teresa Head-Gordon",
+        "Hongyu Zhao"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02346.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "药物发现基准测试，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Haiku to Opus in Just 10 bits: LLMs Unlock Massive Compression Gains",
+      "authors": [
+        "Roy Rinberg",
+        "Annabelle Michael Carrell",
+        "Simon Henniger",
+        "Nicholas Carlini",
+        "Keri Warr"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02343.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "LLM压缩技术，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Real-Time Surrogate Modeling for Personalized Blood Flow Prediction and Hemodynamic Analysis",
+      "authors": [
+        "Sokratis J. Anagnostopoulos",
+        "George Rovas",
+        "Vasiliki Bikia",
+        "Theodore G. Papaioannou",
+        "Athanase D. Protogerou",
+        "Nikolaos Stergiopulos"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03197.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "医学血流建模，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Explainable Machine Learning Reveals 12-Fold Ucp1 Upregulation and Thermogenic Reprogramming in Female Mouse White Adipose Tissue After 37 Days of Microgravity: First AI/ML Analysis of NASA OSD-970",
+      "authors": [
+        "Md. Rashadul Islam"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02942.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "生物医学微重力实验分析，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Extracting Money Laundering Transactions from Quasi-Temporal Graph Representation",
+      "authors": [
+        "Haseeb Tariq",
+        "Marwan Hassani"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02899.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "反洗钱领域，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Toward an Operational GNN-Based Multimesh Surrogate for Fast Flood Forecasting",
+      "authors": [
+        "Valentin Mercier",
+        "Serge Gratton",
+        "Lapeyre Corentin",
+        "Gwenaël Chevallet"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02876.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "洪水预测领域，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Structure-Aware Commitment Reduction for Network-Constrained Unit Commitment with Solver-Preserving Guarantees",
+      "authors": [
+        "Guangwen Wang",
+        "Jiaqi Wu",
+        "Yang Weng",
+        "Baosen Zhang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02788.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "电力系统优化问题，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "STDDN: A Physics-Guided Deep Learning Framework for Crowd Simulation",
+      "authors": [
+        "Zijin Liu",
+        "Xu Geng",
+        "Wenshuai Xu",
+        "Xiang Zhao",
+        "Yan Xia",
+        "You Song"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02756.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "人群模拟领域，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Understanding Latent Diffusability via Fisher Geometry",
+      "authors": [
+        "Jing Gu",
+        "Morteza Mardani",
+        "Wonjun Lee",
+        "Dongmian Zou",
+        "Gilad Lerman"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02751.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "扩散模型理论研究，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Generative Frontiers: Why Evaluation Matters for Diffusion Language Models",
+      "authors": [
+        "Patrick Pynadath",
+        "Jiaxin Shi",
+        "Ruqi Zhang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02718.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "扩散语言模型评估，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "LieTrunc-QNN: Lie Algebra Truncation and Quantum Expressivity Phase Transition from LiePrune to Provably Stable Quantum Neural Networks",
+      "authors": [
+        "Haijian Shao",
+        "Dalong Zhao",
+        "Xing Deng",
+        "Wenzheng Zhu",
+        "Yingtao Jiang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02697.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "量子神经网络理论，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Adaptive Semantic Communication for Wireless Image Transmission Leveraging Mixture-of-Experts Mechanism",
+      "authors": [
+        "Haowen Wan",
+        "Qianqian Yang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02691.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "无线通信领域，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Cross-subject Muscle Fatigue Detection via Adversarial and Supervised Contrastive Learning with Inception-Attention Network",
+      "authors": [
+        "Zitao Lin",
+        "Chang Zhu",
+        "Wei Meng"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02670.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "肌肉疲劳检测，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "A Numerical Method for Coupling Parameterized Physics-Informed Neural Networks and FDM for Advanced Thermal-Hydraulic System Simulation",
+      "authors": [
+        "Jeesuk Shin",
+        "Donggyun Seo",
+        "Sihyeong Yu",
+        "Joongoo Jeon"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02663.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "物理仿真领域，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Product-Stability: Provable Convergence for Gradient Descent on the Edge of Stability",
+      "authors": [
+        "Eric Gan"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02653.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "优化理论论文，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Conditional Sampling via Wasserstein Autoencoders and Triangular Transport",
+      "authors": [
+        "Mohammad Al-Jarrah",
+        "Michele Martino",
+        "Marcus Yim",
+        "Bamdad Hosseini",
+        "Amirhossein Taghvaei"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02644.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "生成模型/采样方法，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "AXELRAM: Quantize Once, Never Dequantize",
+      "authors": [
+        "Yasushi Nishida"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02638.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "量化方法论文，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Complex-Valued GNNs for Distributed Basis-Invariant Control of Planar Systems",
+      "authors": [
+        "Samuel Honor",
+        "Mohamed Abdelnaby",
+        "Kevin Leahy"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02615.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "图神经网络控制系统，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Steerable but Not Decodable: Function Vectors Operate Beyond the Logit Lens",
+      "authors": [
+        "Mohammed Suhail B Nadaf"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02608.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "LLM可解释性研究，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "WGFINNs: Weak formulation-based GENERIC formalism informed neural networks'",
+      "authors": [
+        "Jun Sur Richard Park",
+        "Auroni Huque Hashim",
+        "Siu Wun Cheung",
+        "Youngsoo Choi",
+        "Yeonjong Shin"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02601.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "物理信息神经网络，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "VoxelCodeBench: Benchmarking 3D World Modeling Through Code Generation",
+      "authors": [
+        "Yan Zheng",
+        "Florian Bordes"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02580.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "3D建模/代码生成基准，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "ROMAN: A Multiscale Routing Operator for Convolutional Time Series Models",
+      "authors": [
+        "Gonzalo Uribarri"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02577.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "时间序列模型，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Communication-Efficient Distributed Learning with Differential Privacy",
+      "authors": [
+        "Xiaoxing Ren",
+        "Yuwen Ma",
+        "Nicola Bastianello",
+        "Karl H. Johansson",
+        "Thomas Parisini",
+        "Andreas A. Malikopoulos"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02558.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "分布式学习与隐私保护，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Fast NF4 Dequantization Kernels for Large Language Model Inference",
+      "authors": [
+        "Xiangbo Qi",
+        "Chaoyi Jiang",
+        "Murali Annavaram"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02556.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "LLM推理加速量化内核，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "A Spectral Framework for Multi-Scale Nonlinear Dimensionality Reduction",
+      "authors": [
+        "Zeyang Huang",
+        "Angelos Chatzimparmpas",
+        "Thomas Höllt",
+        "Takanori Fujiwara"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02535.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "降维方法论文，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Re-analysis of the Human Transcription Factor Atlas Recovers TF-Specific Signatures from Pooled Single-Cell Screens with Missing Controls",
+      "authors": [
+        "Arka Jain",
+        "Umesh Sharma"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02511.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "生物信息学论文，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Mitigating Data Scarcity in Spaceflight Applications for Offline Reinforcement Learning Using Physics-Informed Deep Generative Models",
+      "authors": [
+        "Alex E. Ballentine",
+        "Nachiket U. Bapat",
+        "Raghvendra V. Cowlagi"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02438.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "航天领域离线RL，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "FTimeXer: Frequency-aware Time-series Transformer with Exogenous variables for Robust Carbon Footprint Forecasting",
+      "authors": [
+        "Qingzhong Li",
+        "Yue Hu",
+        "Zhou Long",
+        "Qingchang Ma",
+        "Hui Ma",
+        "Jinhai Sa"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02347.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "碳排放预测，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Generating Counterfactual Patient Timelines from Real-World Data",
+      "authors": [
+        "Yu Akagi",
+        "Tomohisa Seki",
+        "Toru Takiguchi",
+        "Hiromasa Ito",
+        "Yoshimasa Kawazoe",
+        "Kazuhiko Ohe"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02337.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "医疗患者数据生成，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Convolutional Surrogate for 3D Discrete Fracture-Matrix Tensor Upscaling",
+      "authors": [
+        "Martin Špetlík",
+        "Jan Březina"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02335.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "地质物理建模，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "A Tsetlin Machine-driven Intrusion Detection System for Next-Generation IoMT Security",
+      "authors": [
+        "Rahul Jaiswal",
+        "Per-Arne Andersen",
+        "Linga Reddy Cenkeramaddi",
+        "Lei Jiao",
+        "Ole-Christoffer Granmo"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03205.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "物联网安全入侵检测，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Characterization of Gaussian Universality Breakdown in High-Dimensional Empirical Risk Minimization",
+      "authors": [
+        "Chiheb Yaakoubi",
+        "Cosme Louart",
+        "Malik Tiomoko",
+        "Zhenyu Liao"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03146.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "纯统计学习理论论文，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "SkVM: Compiling Skills for Efficient Execution Everywhere",
+      "authors": [
+        "Le Chen",
+        "Erhu Feng",
+        "Yubin Xia",
+        "Haibo Chen"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03088.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "系统编译相关论文，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "On Data-Driven Koopman Representations of Nonlinear Delay Differential Equations",
+      "authors": [
+        "Santosh Mohan Rajkumar",
+        "Dibyasri Barman",
+        "Kumar Vikram Singh",
+        "Debdipta Goswami"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03086.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "动力系统理论论文，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Learning Contractive Integral Operators with Fredholm Integral Neural Operators",
+      "authors": [
+        "Kyriakos C. Georgiou",
+        "Constantinos Siettos",
+        "Athanasios N. Yannacopoulos"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03034.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "数学/神经算子理论论文，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "A semicontinuous relaxation of Saito's criterion and freeness as angular minimization",
+      "authors": [
+        "Tomás S. R. Silva"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02995.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "纯数学论文，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Inversion-Free Natural Gradient Descent on Riemannian Manifolds",
+      "authors": [
+        "Dario Draca",
+        "Takuo Matsubara",
+        "Minh-Ngoc Tran"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02969.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "优化算法理论论文，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Scalable Mean-Variance Portfolio Optimization via Subspace Embeddings and GPU-Friendly Nesterov-Accelerated Projected Gradient",
+      "authors": [
+        "Yi-Shuai Niu",
+        "Yajuan Wang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02917.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "金融投资组合优化论文，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Lipschitz bounds for integral kernels",
+      "authors": [
+        "Justin Reverdi",
+        "Sixin Zhang",
+        "Fabrice Gamboa",
+        "Serge Gratton"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02887.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "数学理论论文，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "State estimations and noise identifications with intermittent corrupted observations via Bayesian variational inference",
+      "authors": [
+        "Peng Sun",
+        "Ruoyu Wang",
+        "Xue Luo"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02738.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "贝叶斯状态估计论文，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "AQVolt26: High-Temperature r$^2$SCAN Halide Dataset for Universal ML Potentials and Solid-State Batteries",
+      "authors": [
+        "Jiyoon Kim",
+        "Chuhong Wang",
+        "Aayush R. Singh",
+        "Tyler Sours",
+        "Shivang Agarwal",
+        "AJ Nish",
+        "Paul Abruzzo",
+        "Ang Xiao",
+        "Omar Allam"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02524.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "固态电池材料数据集，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Neural posterior estimation for scalable and accurate inverse parameter inference in Li-ion batteries",
+      "authors": [
+        "Malik Hassanaly",
+        "Corey R. Randall",
+        "Peter J. Weddle",
+        "Paul J. Gasper",
+        "Conlain Kelly",
+        "Tanvir R. Tanim",
+        "Kandler Smith"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02520.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "锂电池参数推断，与广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Guideline2Graph: Profile-Aware Multimodal Parsing for Executable Clinical Decision Graphs",
+      "authors": [
+        "Onur Selim Kilic",
+        "Yeti Z. Gurbuz",
+        "Cem O. Yaldiz",
+        "Afra Nawar",
+        "Etrit Haxholli",
+        "Ogul Can",
+        "Eli Waxman"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02477.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "临床决策图解析，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Photonic convolutional neural network with pre-trained in-situ training",
+      "authors": [
+        "Saurabh Ranjan",
+        "Sonika Thakral",
+        "Amit Sehgal"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02429.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "光子卷积神经网络硬件研究，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Backdoor Attacks on Decentralised Post-Training",
+      "authors": [
+        "Oğuzhan Ersoy",
+        "Nikolay Blagoev",
+        "Jona te Lintelo",
+        "Stefanos Koffas",
+        "Marina Krček",
+        "Stjepan Picek"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02372.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "去中心化训练的后门攻击安全研究，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Fighting AI with AI: AI-Agent Augmented DNS Blocking of LLM Services during Student Evaluations",
+      "authors": [
+        "Yonas Kassa",
+        "James Bonacci",
+        "Ping Wang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02360.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "教育场景DNS屏蔽LLM服务，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "MLFCIL: A Multi-Level Forgetting Mitigation Framework for Federated Class-Incremental Learning in LEO Satellites",
+      "authors": [
+        "Heng Zhang",
+        "Xiaohong Deng",
+        "Sijing Duan",
+        "Wu Ouyang",
+        "KM Mahfujul",
+        "Yiqin Deng",
+        "Zhigang Chen"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02356.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "卫星联邦增量学习，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "BAS: A Decision-Theoretic Approach to Evaluating Large Language Model Confidence",
+      "authors": [
+        "Sean Wu",
+        "Fredrik K. Gustafsson",
+        "Edward Phillips",
+        "Boyan Gao",
+        "Anshul Thakur",
+        "David A. Clifton"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03216.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "LLM置信度评估的决策论方法，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Detecting and Correcting Reference Hallucinations in Commercial LLMs and Deep Research Agents",
+      "authors": [
+        "Delip Rao",
+        "Eric Wong",
+        "Chris Callison-Burch"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03173.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "LLM引用幻觉检测与纠正，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Beyond Precision: Importance-Aware Recall for Factuality Evaluation in Long-Form LLM Generation",
+      "authors": [
+        "Nazanin Jafari",
+        "James Allan",
+        "Mohit Iyyer"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03141.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "LLM长文本事实性评估，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "StoryScope: Investigating idiosyncrasies in AI fiction",
+      "authors": [
+        "Jenna Russell",
+        "Rishanth Rajendhran",
+        "Mohit Iyyer",
+        "John Wieting"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03136.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "AI小说写作风格研究，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Multi-Aspect Knowledge Distillation for Language Model with Low-rank Factorization",
+      "authors": [
+        "Zihe Liu",
+        "Yulong Mao",
+        "Jinan Xu",
+        "Xinrui Peng",
+        "Kaiyu Huang"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03110.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "语言模型知识蒸馏与低秩分解，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "NeuReasoner: Towards Explainable, Controllable, and Unified Reasoning via Mixture-of-Neurons",
+      "authors": [
+        "Haonan Dong",
+        "Kehan Jiang",
+        "Haoran Ye",
+        "Wenhao Zhu",
+        "Zhaolu Kang",
+        "Guojie Song"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02972.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "神经元混合推理框架，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "A Multi-head-based architecture for effective morphological tagging in Russian with open dictionary",
+      "authors": [
+        "K. Skibin",
+        "M. Pozhidaev",
+        "S. Suschenko"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02926.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "俄语形态标注NLP任务，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "BioUNER: A Benchmark Dataset for Clinical Urdu Named Entity Recognition",
+      "authors": [
+        "Wazir Ali",
+        "Adeeb Noor",
+        "Sanaullah Mahar",
+        "Alia",
+        "Muhammad Mazhar Younas"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02904.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "临床乌尔都语NER数据集，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "LLM-based Atomic Propositions help weak extractors: Evaluation of a Propositioner for triplet extraction",
+      "authors": [
+        "Luc Pommeret",
+        "Thomas Gerald",
+        "Patrick Paroubek",
+        "Sahar Ghannay",
+        "Christophe Servan",
+        "Sophie Rosset"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02866.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "NLP三元组抽取，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "GRADE: Probing Knowledge Gaps in LLMs through Gradient Subspace Dynamics",
+      "authors": [
+        "Yujing Wang",
+        "Yuanbang Liang",
+        "Yukun Lai",
+        "Hainan Zhang",
+        "Hanqi Yan"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02830.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "LLM知识探测，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Student-in-the-Loop Chain-of-Thought Distillation via Generation-Time Selection",
+      "authors": [
+        "Chaoqun He",
+        "Yingfa Chen",
+        "Chaojun Xiao",
+        "Xu Han",
+        "Lijie Wen"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02819.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "知识蒸馏方法，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "When Modalities Remember: Continual Learning for Multimodal Knowledge Graphs",
+      "authors": [
+        "Linyu Li",
+        "Zhi Jin",
+        "Yichi Zhang",
+        "Dongming Jin",
+        "Yuanpeng He",
+        "Haoran Duan",
+        "Gadeng Luosang",
+        "Nyima Tashi"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02778.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "多模态知识图谱持续学习，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Multiple-Debias: A Full-process Debiasing Method for Multilingual Pre-trained Language Models",
+      "authors": [
+        "Haoyu Liang",
+        "Peijian Zeng",
+        "Wentao Huang",
+        "Aimin Yang",
+        "Dong Zhou"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02772.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "多语言模型去偏方法，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Breakdowns in Conversational AI: Interactional Failures in Emotionally and Ethically Sensitive Contexts",
+      "authors": [
+        "Jiawen Deng",
+        "Wentao Zhang",
+        "Ziyun Jiao",
+        "Fuji Ren"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02713.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "对话AI故障分析，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Redirected, Not Removed: Task-Dependent Stereotyping Reveals the Limits of LLM Alignments",
+      "authors": [
+        "Divyanshu Kumar",
+        "Ishita Gupta",
+        "Nitin Aravind Birur",
+        "Tanay Baswa",
+        "Sahil Agarwal",
+        "Prashanth Harshangi"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02669.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "LLM对齐与偏见研究，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "SocioEval: A Template-Based Framework for Evaluating Socioeconomic Status Bias in Foundation Models",
+      "authors": [
+        "Divyanshu Kumar",
+        "Ishita Gupta",
+        "Nitin Aravind Birur",
+        "Tanay Baswa",
+        "Sahil Agarwal",
+        "Prashanth Harshangi"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02660.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "基础模型社会经济偏见评估，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Revealing the Learning Dynamics of Long-Context Continual Pre-training",
+      "authors": [
+        "Yupu Liang",
+        "Shuang Chen",
+        "Guanwei Zhang",
+        "Shaolei Wang",
+        "Suncong Zheng"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02650.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "长上下文预训练学习动态，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Overcoming the \"Impracticality\" of RAG: Proposing a Real-World Benchmark and Multi-Dimensional Diagnostic Framework",
+      "authors": [
+        "Kenichirou Narita",
+        "Siqi Peng",
+        "Taku Fukui",
+        "Moyuru Yamada",
+        "Satoshi Munakata",
+        "Satoru Takahashi"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02640.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "RAG基准评估框架，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Train Yourself as an LLM: Exploring Effects of AI Literacy on Persuasion via Role-playing LLM Training",
+      "authors": [
+        "Qihui Fan",
+        "Min Ge",
+        "Chenyan Jia",
+        "Weiyan Shi"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02637.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "AI素养与说服力研究，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "PolyJarvis: LLM Agent for Autonomous Polymer MD Simulations",
+      "authors": [
+        "Alexander Zhao",
+        "Achuth Chandrasekhar",
+        "Amir Barati Farimani"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02537.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "聚合物分子动力学模拟Agent，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "BibTeX Citation Hallucinations in Scientific Publishing Agents: Evaluation and Mitigation",
+      "authors": [
+        "Delip Rao",
+        "Chris Callison-Burch"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.03159.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "科学出版引用幻觉问题，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    },
+    {
+      "title": "Open-Loop Planning, Closed-Loop Verification: Speculative Verification for VLA",
+      "authors": [
+        "Zihua Wang",
+        "Zhitao Lin",
+        "Ruibo Li",
+        "Yu Zhang",
+        "Xu Yang",
+        "Siya Mi",
+        "Xiu-Shen Wei"
+      ],
+      "author_emails": [],
+      "pdf_url": "https://arxiv.org/pdf/2604.02965.pdf",
+      "summary": "",
+      "paper_type": "excluded",
+      "relevance_score": 0,
+      "match_reason": "视觉语言动作模型规划验证，与计算广告无关",
+      "company_hits": [],
+      "recommended_action": "可以跳过",
+      "is_focus": false
+    }
+  ],
+  "daily_insights": {
+    "trend_overview": [
+      "今日 288 篇论文中，LLM 与语言理解方向占比最高（约 74 篇），研究重心集中在 Prompt 压缩、语义聚类、上下文增强（RAG 及因果 RAG）等推理效率与质量优化方向，而非单纯的模型规模扩展。",
+      "Agent 与多智能体方向热度显著（约 37 篇），涌现出围绕结构化记忆、可验证动作轨迹、长程规划和安全对抗（Agent 投毒攻击）的多条研究子线，显示社区正从'能不能用 Agent'转向'Agent 怎么可靠地用'。",
+      "表示学习与检索排序方向虽然论文数量不大（约 16 篇），但质量密度较高，出现了多业务生成式推荐（美团 MBGR）、双向意图对比学习序列推荐、以及结构化文档检索等直接面向工业场景的工作。",
+      "迁移学习与跨域泛化方向论文较少，但出现了图领域自适应（DSBD）和协变量偏移下的迁移元分析等方法论更新；商业化决策与资源优化信号偏弱，仅个别论文涉及 token 预算分配的决策视角。"
+    ],
+    "ranking_innovations": [
+      "美团 MBGR 提出多业务生成式推荐框架，将多个业务目标（如外卖、到店、酒旅）统一到一个生成式序列模型里做联合预测和排序，为工业级多目标推荐提供了一种不靠多塔拼接的新范式。",
+      "Bilateral Intent-Enhanced Sequential Recommendation 在序列推荐里引入'双向意图'建模并用嵌入扰动做对比学习，相当于同时刻画用户侧的探索意图与商品侧的吸引意图，让序列模型的表示更鲁棒。",
+      "VALOR 提出 Treatment-Gated Representation 做收入提升建模，核心是在表示层用一个门控结构区分'干预组'和'对照组'的特征流，使 uplift 估计更精准——这一思路可以直接迁移到广告增量转化价值估计场景。"
+    ],
+    "global_innovations": [
+      "多篇 Agent 安全论文揭示了'环境注入式记忆投毒'攻击路径：攻击者不改模型参数，只在 Agent 会检索到的外部环境（网页、工具返回）中注入恶意片段，就能永久污染 Agent 长期记忆，对所有带检索增强的系统都值得警惕。",
+      "Neuro-Symbolic Dual Memory 框架将长程 Agent 任务拆成'进度记忆'和'可行性记忆'两条线，前者记录离目标还有多远，后者记录哪些子计划现在能做、哪些受限，为 Agent 规划提供了一种可解释且可回溯的双轨结构。",
+      "一项对比实验表明，在等量 thinking token 预算下，单 Agent LLM 在多跳推理任务上反而优于多 Agent 系统——提示社区在设计 Agent 协作架构时，应先评估单体推理能力是否已被充分利用，避免为拆而拆。"
+    ],
+    "knowledge_point": {
+      "topic": "表示学习为什么是很多系统的隐形底座",
+      "content": "表示学习的目标不是简单把输入压成一个向量，而是把真正影响任务的结构信息保留下来，同时把噪声和偶然因素压下去。后面的检索、排序、聚类、生成，很多时候都只是拿这个表示继续做计算。 很多论文表面看是在做召回、排序、生成，其实核心改进都发生在表示层。先理解表示学习，就更容易抓住论文真正的创新位置。 可以顺着一次具体运行过程来理解：你可以顺着一次前向这样理解：系统先把用户最近点击、搜索词、广告文案和商品属性分别编码，再通过共享空间把它们投到同一组向量坐标里；如果两个对象在任务上更相关，它们在这个空间里就应该更近；后续做召回时，只要比较向量距离，就能先快速找出更可能相关的一批候选。"
+    }
+  }
+}

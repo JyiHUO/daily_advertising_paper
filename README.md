@@ -4,17 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-04-03
+- **日期**：2026-04-06
 - **分类**：cs.IR + cs.AI + cs.LG + cs.CL
-- **候选论文数**：0
+- **候选论文数**：2
 - **必读论文**：
-  - 无
-- **日报路径**：[2026-04-03/daily_report.md](2026-04-03/daily_report.md)
+  - VALOR: Value-Aware Revenue Uplift Modeling with Treatment-Gated Representation for B2B Sales
+  - MBGR: Multi-Business Prediction for Generative Recommendation at Meituan
+- **日报路径**：[2026-04-06/daily_report.md](2026-04-06/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-04-06 | cs.IR + cs.AI + cs.LG + cs.CL | 2 | 1 | VALOR: Value-Aware Revenue Uplift Modeling with Treatment-Gated Representation for B2B Sales | [2026-04-06/daily_report.md](2026-04-06/daily_report.md) |
+|  |  |  | 2 | MBGR: Multi-Business Prediction for Generative Recommendation at Meituan |  |
 | 2026-04-03 | cs.IR + cs.AI + cs.LG + cs.CL | 0 | 1 | 无 | [2026-04-03/daily_report.md](2026-04-03/daily_report.md) |
 | 2026-04-02 | cs.IR + cs.AI + cs.LG + cs.CL + cs.MA | 2 | 1 | UniMixer: A Unified Architecture for Scaling Laws in Recommendation Systems | [2026-04-02/daily_report.md](2026-04-02/daily_report.md) |
 |  |  |  | 2 | MOON3.0: Reasoning-aware Multimodal Representation Learning for E-commerce Product Understanding |  |

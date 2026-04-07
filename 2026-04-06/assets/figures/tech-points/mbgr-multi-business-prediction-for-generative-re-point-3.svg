@@ -1,0 +1,136 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e74c3c"/>
+    </marker>
+    <marker id="arrowG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#27ae60"/>
+    </marker>
+    <marker id="arrowB" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2980b9"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8f9fa"/>
+      <stop offset="100%" stop-color="#e9ecef"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bgGrad)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#2c3e50">标签动态路由 (Label Dynamic Routing)</text>
+  <text x="450" y="68" text-anchor="middle" font-size="14" fill="#7f8c8d">MBGR 核心创新：多业务预测标签从稀疏 → 密集</text>
+
+  <!-- ===== LEFT: Old Method ===== -->
+  <rect x="30" y="90" width="400" height="490" rx="14" fill="#fff" stroke="#ddd" stroke-width="1.5" opacity="0.9"/>
+  <rect x="30" y="90" width="400" height="42" rx="14" fill="#e74c3c" opacity="0.12"/>
+  <text x="230" y="118" text-anchor="middle" font-size="17" font-weight="bold" fill="#c0392b">❌ 传统 NTP：下一个是谁就预测谁</text>
+
+  <!-- Sequence bar old -->
+  <text x="60" y="160" font-size="13" fill="#555" font-weight="bold">用户序列：</text>
+  <!-- items -->
+  <rect x="60" y="172" width="80" height="44" rx="8" fill="#e74c3c" opacity="0.85"/>
+  <text x="100" y="198" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">外卖 A</text>
+
+  <rect x="155" y="172" width="80" height="44" rx="8" fill="#2980b9" opacity="0.85"/>
+  <text x="195" y="198" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">娱乐 B</text>
+
+  <rect x="250" y="172" width="80" height="44" rx="8" fill="#e74c3c" opacity="0.85"/>
+  <text x="290" y="198" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">外卖 C</text>
+
+  <rect x="345" y="172" width="80" height="44" rx="8" fill="#27ae60" opacity="0.85"/>
+  <text x="385" y="198" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">医疗 D</text>
+
+  <!-- Position 1 predictions old -->
+  <text x="100" y="244" text-anchor="middle" font-size="12" fill="#888">位置1 (外卖A)</text>
+  <line x1="100" y1="250" x2="100" y2="280" stroke="#999" stroke-width="1.5" stroke-dasharray="4"/>
+
+  <!-- prediction heads -->
+  <rect x="48" y="284" width="104" height="34" rx="6" fill="#ffeaea" stroke="#e74c3c" stroke-width="1"/>
+  <text x="100" y="306" text-anchor="middle" font-size="11" fill="#c0392b">🍔 外卖头 → 娱乐B?</text>
+
+  <rect x="48" y="324" width="104" height="34" rx="6" fill="#eaf0ff" stroke="#2980b9" stroke-width="1"/>
+  <text x="100" y="346" text-anchor="middle" font-size="11" fill="#2980b9">🎬 娱乐头 → 娱乐B ✓</text>
+
+  <rect x="48" y="364" width="104" height="34" rx="6" fill="#eafff0" stroke="#27ae60" stroke-width="1"/>
+  <text x="100" y="386" text-anchor="middle" font-size="11" fill="#27ae60">🏥 医疗头 → 无标签 ✗</text>
+
+  <!-- Big red X marks for wrong/missing -->
+  <text x="162" y="307" font-size="16" fill="#e74c3c" font-weight="bold">✗ 类型错配</text>
+  <text x="162" y="387" font-size="16" fill="#e74c3c" font-weight="bold">✗ 无信号</text>
+
+  <!-- Summary old -->
+  <rect x="55" y="430" width="350" height="56" rx="10" fill="#fce4e4" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="230" y="452" text-anchor="middle" font-size="14" font-weight="bold" fill="#c0392b">问题：大量位置没有标签</text>
+  <text x="230" y="472" text-anchor="middle" font-size="13" fill="#c0392b">训练信号极度稀疏，小业务更严重</text>
+
+  <!-- Seesaw icon -->
+  <text x="230" y="540" text-anchor="middle" font-size="40">⚖️</text>
+  <text x="230" y="566" text-anchor="middle" font-size="12" fill="#999">跷跷板现象</text>
+
+  <!-- ===== RIGHT: LDR Method ===== -->
+  <rect x="470" y="90" width="400" height="490" rx="14" fill="#fff" stroke="#ddd" stroke-width="1.5" opacity="0.9"/>
+  <rect x="470" y="90" width="400" height="42" rx="14" fill="#27ae60" opacity="0.12"/>
+  <text x="670" y="118" text-anchor="middle" font-size="17" font-weight="bold" fill="#1e8449">✅ LDR：各找各的最近未来交互</text>
+
+  <!-- Sequence bar new -->
+  <text x="500" y="160" font-size="13" fill="#555" font-weight="bold">用户序列：</text>
+  <rect x="500" y="172" width="80" height="44" rx="8" fill="#e74c3c" opacity="0.85"/>
+  <text x="540" y="198" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">外卖 A</text>
+
+  <rect x="595" y="172" width="80" height="44" rx="8" fill="#2980b9" opacity="0.85"/>
+  <text x="635" y="198" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">娱乐 B</text>
+
+  <rect x="690" y="172" width="80" height="44" rx="8" fill="#e74c3c" opacity="0.85"/>
+  <text x="730" y="198" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">外卖 C</text>
+
+  <rect x="785" y="172" width="80" height="44" rx="8" fill="#27ae60" opacity="0.85"/>
+  <text x="825" y="198" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">医疗 D</text>
+
+  <!-- Position 1 predictions LDR -->
+  <text x="540" y="244" text-anchor="middle" font-size="12" fill="#888">位置1 (外卖A)</text>
+  <line x1="540" y1="250" x2="540" y2="280" stroke="#999" stroke-width="1.5" stroke-dasharray="4"/>
+
+  <!-- Routing arrows from pos1 -->
+  <!-- 外卖头 → 外卖C (skip 娱乐B) -->
+  <path d="M 560 297 Q 650 260 720 216" fill="none" stroke="#e74c3c" stroke-width="2.5" marker-end="url(#arrowR)" stroke-dasharray="6,3"/>
+  <rect x="488" y="284" width="104" height="34" rx="6" fill="#ffeaea" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="540" y="306" text-anchor="middle" font-size="11" fill="#c0392b" font-weight="bold">🍔 外卖头 → C ✓</text>
+
+  <!-- 娱乐头 → 娱乐B -->
+  <path d="M 560 337 Q 590 310 625 216" fill="none" stroke="#2980b9" stroke-width="2.5" marker-end="url(#arrowB)" stroke-dasharray="6,3"/>
+  <rect x="488" y="324" width="104" height="34" rx="6" fill="#eaf0ff" stroke="#2980b9" stroke-width="1.5"/>
+  <text x="540" y="346" text-anchor="middle" font-size="11" fill="#2980b9" font-weight="bold">🎬 娱乐头 → B ✓</text>
+
+  <!-- 医疗头 → 医疗D -->
+  <path d="M 560 377 Q 700 340 815 216" fill="none" stroke="#27ae60" stroke-width="2.5" marker-end="url(#arrowG)" stroke-dasharray="6,3"/>
+  <rect x="488" y="364" width="104" height="34" rx="6" fill="#eafff0" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="540" y="386" text-anchor="middle" font-size="11" fill="#27ae60" font-weight="bold">🏥 医疗头 → D ✓</text>
+
+  <!-- Labels for routing -->
+  <text x="660" y="276" font-size="11" fill="#e74c3c" font-weight="bold">跳过B!</text>
+  <text x="600" y="302" font-size="11" fill="#2980b9" font-weight="bold">最近</text>
+  <text x="740" y="340" font-size="11" fill="#27ae60" font-weight="bold">向后搜索</text>
+
+  <!-- Summary new -->
+  <rect x="495" y="430" width="350" height="56" rx="10" fill="#e4fce4" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="670" y="452" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e8449">每个位置 × 每个业务 = 都有标签</text>
+  <text x="670" y="472" text-anchor="middle" font-size="13" fill="#1e8449">训练信号密集，小业务也能充分学习</text>
+
+  <!-- Results -->
+  <rect x="505" y="500" width="330" height="68" rx="10" fill="#fff" stroke="#27ae60" stroke-width="2"/>
+  <text x="670" y="524" text-anchor="middle" font-size="15" font-weight="bold" fill="#2c3e50">📊 消融实验</text>
+  <text x="670" y="546" text-anchor="middle" font-size="13" fill="#555">去掉LDR → Hit@10从 <tspan font-weight="bold" fill="#27ae60">0.0410</tspan> 降至 <tspan font-weight="bold" fill="#e74c3c">0.0268</tspan></text>
+  <text x="670" y="562" text-anchor="middle" font-size="12" fill="#888">三模块中影响最大（-34.6%）</text>
+
+  <!-- Center divider -->
+  <line x1="450" y1="100" x2="450" y2="570" stroke="#ccc" stroke-width="2" stroke-dasharray="8,4"/>
+
+  <!-- VS label -->
+  <circle cx="450" cy="335" r="22" fill="#fff" stroke="#555" stroke-width="2"/>
+  <text x="450" y="341" text-anchor="middle" font-size="15" font-weight="bold" fill="#555">VS</text>
+</svg>

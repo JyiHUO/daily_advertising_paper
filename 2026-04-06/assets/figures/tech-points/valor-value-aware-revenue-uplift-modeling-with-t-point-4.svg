@@ -1,0 +1,121 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f1729;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1a2744;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="nodeLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#22c55e;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#16a34a;stop-opacity:0.9"/>
+    </linearGradient>
+    <linearGradient id="nodeRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#64748b;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#475569;stop-opacity:0.8"/>
+    </linearGradient>
+    <linearGradient id="splitBox" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:0.95"/>
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:0.95"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrowW" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrowG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <marker id="arrowR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#f8fafc" font-size="22" font-weight="bold">可解释 Uplift 树：最大化左右子节点的增量效果差异</text>
+  <text x="450" y="66" text-anchor="middle" fill="#94a3b8" font-size="13">VALOR ZILN-GBDT 变体 — 自定义分裂准则 + 贝叶斯平滑</text>
+
+  <!-- ========== SPLIT NODE (Center Top) ========== -->
+  <rect x="280" y="95" width="340" height="70" rx="14" fill="url(#splitBox)" filter="url(#shadow)"/>
+  <text x="450" y="123" text-anchor="middle" fill="#1a1a1a" font-size="15" font-weight="bold">🔀 分裂准则</text>
+  <text x="450" y="146" text-anchor="middle" fill="#422006" font-size="12.5">最大化 ‖Uplift_左 − Uplift_右‖² × 样本权重</text>
+
+  <!-- Arrows from split to children -->
+  <line x1="370" y1="165" x2="200" y2="225" stroke="#22c55e" stroke-width="2.5" marker-end="url(#arrowG)"/>
+  <text x="268" y="195" fill="#22c55e" font-size="12" font-weight="bold" transform="rotate(-20,268,195)">AI用量 ≥ 100h</text>
+
+  <line x1="530" y1="165" x2="700" y2="225" stroke="#ef4444" stroke-width="2.5" marker-end="url(#arrowR)"/>
+  <text x="598" y="195" fill="#ef4444" font-size="12" font-weight="bold" transform="rotate(20,598,195)">AI用量 &lt; 100h</text>
+
+  <!-- ========== LEFT CHILD: High Uplift ========== -->
+  <rect x="55" y="225" width="290" height="175" rx="14" fill="url(#nodeLeft)" fill-opacity="0.15" stroke="#22c55e" stroke-width="2" filter="url(#shadow)"/>
+  <text x="200" y="252" text-anchor="middle" fill="#22c55e" font-size="16" font-weight="bold">✅ 高增量价值群</text>
+
+  <!-- Treatment bar -->
+  <rect x="80" y="272" width="240" height="24" rx="4" fill="#1e293b"/>
+  <rect x="80" y="272" width="200" height="24" rx="4" fill="#22c55e" opacity="0.7"/>
+  <text x="86" y="289" fill="#fff" font-size="11" font-weight="bold">Treatment: $2,000</text>
+
+  <!-- Control bar -->
+  <rect x="80" y="302" width="240" height="24" rx="4" fill="#1e293b"/>
+  <rect x="80" y="302" width="50" height="24" rx="4" fill="#64748b" opacity="0.7"/>
+  <text x="86" y="319" fill="#fff" font-size="11" font-weight="bold">Control: $500</text>
+
+  <!-- Uplift badge -->
+  <rect x="120" y="340" width="160" height="42" rx="21" fill="#22c55e" filter="url(#glow)"/>
+  <text x="200" y="367" text-anchor="middle" fill="#fff" font-size="18" font-weight="bold">Uplift = $1,500</text>
+
+  <!-- ========== RIGHT CHILD: Low Uplift ========== -->
+  <rect x="555" y="225" width="290" height="175" rx="14" fill="url(#nodeRight)" fill-opacity="0.15" stroke="#64748b" stroke-width="2" filter="url(#shadow)"/>
+  <text x="700" y="252" text-anchor="middle" fill="#94a3b8" font-size="16" font-weight="bold">⛔ 低增量价值群</text>
+
+  <!-- Treatment bar -->
+  <rect x="580" y="272" width="240" height="24" rx="4" fill="#1e293b"/>
+  <rect x="580" y="272" width="80" height="24" rx="4" fill="#94a3b8" opacity="0.6"/>
+  <text x="586" y="289" fill="#fff" font-size="11" font-weight="bold">Treatment: $800</text>
+
+  <!-- Control bar -->
+  <rect x="580" y="302" width="240" height="24" rx="4" fill="#1e293b"/>
+  <rect x="580" y="302" width="70" height="24" rx="4" fill="#475569" opacity="0.6"/>
+  <text x="586" y="319" fill="#fff" font-size="11" font-weight="bold">Control: $700</text>
+
+  <!-- Uplift badge -->
+  <rect x="620" y="340" width="160" height="42" rx="21" fill="#475569"/>
+  <text x="700" y="367" text-anchor="middle" fill="#cbd5e1" font-size="18" font-weight="bold">Uplift = $100</text>
+
+  <!-- ========== CONTRAST ARROW ========== -->
+  <line x1="280" y1="360" x2="555" y2="360" stroke="#f59e0b" stroke-width="2" stroke-dasharray="6,4"/>
+  <rect x="360" y="410" width="180" height="36" rx="10" fill="#f59e0b" opacity="0.2" stroke="#f59e0b" stroke-width="1.5"/>
+  <text x="450" y="433" text-anchor="middle" fill="#fbbf24" font-size="13" font-weight="bold">差异² = (1500−100)² 🔥</text>
+  <line x1="450" y1="395" x2="450" y2="410" stroke="#f59e0b" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- ========== BAYESIAN SMOOTHING (Bottom) ========== -->
+  <rect x="100" y="475" width="700" height="120" rx="14" fill="#1e293b" stroke="#6366f1" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="450" y="502" text-anchor="middle" fill="#a5b4fc" font-size="15" font-weight="bold">🛡️ 自适应贝叶斯平滑 — 防止稀疏叶节点方差爆炸</text>
+
+  <!-- Three smoothing items -->
+  <rect x="130" y="520" width="180" height="55" rx="10" fill="#312e81" opacity="0.5"/>
+  <text x="220" y="543" text-anchor="middle" fill="#c7d2fe" font-size="12" font-weight="bold">转化概率 p</text>
+  <text x="220" y="561" text-anchor="middle" fill="#818cf8" font-size="11">全局先验收缩</text>
+
+  <rect x="360" y="520" width="180" height="55" rx="10" fill="#312e81" opacity="0.5"/>
+  <text x="450" y="543" text-anchor="middle" fill="#c7d2fe" font-size="12" font-weight="bold">收入均值 μ</text>
+  <text x="450" y="561" text-anchor="middle" fill="#818cf8" font-size="11">全局先验收缩</text>
+
+  <rect x="590" y="520" width="180" height="55" rx="10" fill="#312e81" opacity="0.5"/>
+  <text x="680" y="543" text-anchor="middle" fill="#c7d2fe" font-size="12" font-weight="bold">方差 σ</text>
+  <text x="680" y="561" text-anchor="middle" fill="#818cf8" font-size="11">截断至 [0.1, 4.0]</text>
+
+  <!-- Connection from leaves to smoothing -->
+  <line x1="200" y1="400" x2="220" y2="475" stroke="#6366f1" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrowW)"/>
+  <line x1="700" y1="400" x2="680" y2="475" stroke="#6366f1" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrowW)"/>
+
+  <!-- Key insight callout -->
+  <text x="450" y="610" text-anchor="middle" fill="#64748b" font-size="11.5" font-style="italic">核心：每次分裂寻找"左边干预有效、右边干预无效"的最大对比 → 树的每一层都在发现 treatment 效果异质性</text>
+</svg>

@@ -1,0 +1,19 @@
+{
+  "date": "2026-04-06",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL"
+  ],
+  "candidate_count": 2,
+  "supplementary_count": 0,
+  "focus_titles": [
+    "VALOR: Value-Aware Revenue Uplift Modeling with Treatment-Gated Representation for B2B Sales",
+    "MBGR: Multi-Business Prediction for Generative Recommendation at Meituan"
+  ],
+  "focus_status": {
+    "VALOR: Value-Aware Revenue Uplift Modeling with Treatment-Gated Representation for B2B Sales": "completed",
+    "MBGR: Multi-Business Prediction for Generative Recommendation at Meituan": "completed"
+  }
+}

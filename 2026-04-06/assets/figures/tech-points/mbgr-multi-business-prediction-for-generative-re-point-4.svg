@@ -1,0 +1,102 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#E67E22"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F8F9FA"/>
+      <stop offset="100%" stop-color="#E8EDF2"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bgGrad)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#2C3E50">MBGR 损失函数：业务权重 × 时间衰减</text>
+  <text x="450" y="68" text-anchor="middle" font-size="14" fill="#7F8C8D">让小业务不被大业务淹没，让近期行为更受关注</text>
+
+  <!-- ========== LEFT: Total Loss Formula ========== -->
+  <rect x="30" y="95" width="840" height="70" rx="12" fill="#2C3E50" opacity="0.07" stroke="#2C3E50" stroke-width="1.5"/>
+  <text x="450" y="125" text-anchor="middle" font-size="18" font-weight="bold" fill="#2C3E50">总损失 = Σ  w_b · w_t · InfoNCE  +  λ · 重建损失(L2)</text>
+  <text x="260" y="150" text-anchor="middle" font-size="13" fill="#E74C3C" font-weight="bold">↑ 业务权重</text>
+  <text x="370" y="150" text-anchor="middle" font-size="13" fill="#2980B9" font-weight="bold">↑ 时间衰减</text>
+  <text x="680" y="150" text-anchor="middle" font-size="13" fill="#7F8C8D">BID编解码保真</text>
+
+  <!-- ========== Middle row: Two key mechanisms side by side ========== -->
+
+  <!-- Business Weight Box -->
+  <rect x="45" y="195" width="380" height="180" rx="14" fill="white" stroke="#E74C3C" stroke-width="2.5" opacity="0.95"/>
+  <rect x="45" y="195" width="380" height="38" rx="14" fill="#E74C3C" opacity="0.12"/>
+  <text x="235" y="220" text-anchor="middle" font-size="17" font-weight="bold" fill="#C0392B">① 业务权重 w_b</text>
+
+  <!-- Seesaw visual -->
+  <!-- Triangle pivot -->
+  <polygon points="235,330 215,365 255,365" fill="#E74C3C" opacity="0.2" stroke="#E74C3C" stroke-width="1.5"/>
+  <!-- Bar -->
+  <line x1="110" y1="320" x2="360" y2="340" stroke="#C0392B" stroke-width="3" stroke-linecap="round"/>
+  <!-- A business (big, low weight) -->
+  <rect x="80" y="290" width="70" height="32" rx="8" fill="#E74C3C" opacity="0.7"/>
+  <text x="115" y="311" text-anchor="middle" font-size="13" fill="white" font-weight="bold">A业务 61%</text>
+  <text x="115" y="280" text-anchor="middle" font-size="12" fill="#C0392B">w=0.9</text>
+  <!-- B business (small, high weight) -->
+  <rect x="330" y="305" width="70" height="32" rx="8" fill="#E67E22" opacity="0.85"/>
+  <text x="365" y="326" text-anchor="middle" font-size="13" fill="white" font-weight="bold">B业务 8%</text>
+  <text x="365" y="355" text-anchor="middle" font-size="12" fill="#E67E22" font-weight="bold">w=1.5 ↑</text>
+
+  <text x="235" y="255" text-anchor="middle" font-size="13" fill="#555">小业务给更高权重，补偿梯度主导</text>
+
+  <!-- Time Decay Box -->
+  <rect x="475" y="195" width="390" height="180" rx="14" fill="white" stroke="#2980B9" stroke-width="2.5" opacity="0.95"/>
+  <rect x="475" y="195" width="390" height="38" rx="14" fill="#2980B9" opacity="0.1"/>
+  <text x="670" y="220" text-anchor="middle" font-size="17" font-weight="bold" fill="#2471A3">② 时间衰减 w_t</text>
+  <text x="670" y="250" text-anchor="middle" font-size="13" fill="#555">w_t = exp( −α · Δt )　α=0.05</text>
+
+  <!-- Decay curve approximation -->
+  <line x1="520" y1="350" x2="830" y2="350" stroke="#AAA" stroke-width="1.5"/>
+  <line x1="520" y1="270" x2="520" y2="355" stroke="#AAA" stroke-width="1.5"/>
+  <text x="518" y="268" text-anchor="end" font-size="11" fill="#888">w_t</text>
+  <text x="835" y="353" font-size="11" fill="#888">Δt</text>
+  <!-- Curve path (exponential decay) -->
+  <path d="M520,275 C560,278 600,295 650,315 Q700,332 750,342 Q800,348 830,350" fill="none" stroke="#2980B9" stroke-width="3" stroke-linecap="round"/>
+  <!-- Point markers -->
+  <circle cx="555" cy="280" r="6" fill="#27AE60" stroke="white" stroke-width="2"/>
+  <text x="555" y="272" text-anchor="middle" font-size="11" fill="#27AE60" font-weight="bold">5天前</text>
+  <text x="590" y="293" font-size="10" fill="#27AE60">0.78</text>
+
+  <circle cx="720" cy="335" r="6" fill="#E74C3C" stroke="white" stroke-width="2"/>
+  <text x="720" y="328" text-anchor="middle" font-size="11" fill="#E74C3C" font-weight="bold">20天前</text>
+  <text x="748" y="345" font-size="10" fill="#E74C3C">0.37</text>
+
+  <!-- ========== Bottom: Concrete Example ========== -->
+  <rect x="45" y="405" width="810" height="190" rx="14" fill="white" stroke="#8E44AD" stroke-width="2" opacity="0.95"/>
+  <rect x="45" y="405" width="810" height="36" rx="14" fill="#8E44AD" opacity="0.08"/>
+  <text x="450" y="429" text-anchor="middle" font-size="16" font-weight="bold" fill="#6C3483">📌 实例：两条标签的最终权重对比</text>
+
+  <!-- Example: B business -->
+  <rect x="90" y="455" width="310" height="120" rx="10" fill="#FDF2E9" stroke="#E67E22" stroke-width="1.5"/>
+  <text x="245" y="480" text-anchor="middle" font-size="15" font-weight="bold" fill="#E67E22">B业务标签 (5天前)</text>
+  <text x="245" y="505" text-anchor="middle" font-size="13" fill="#555">业务权重 1.5 × 时间衰减 0.78</text>
+  <line x1="140" y1="520" x2="350" y2="520" stroke="#E67E22" stroke-width="1" stroke-dasharray="4"/>
+  <text x="245" y="548" text-anchor="middle" font-size="28" font-weight="bold" fill="#E67E22">= 1.17</text>
+
+  <!-- Example: A business -->
+  <rect x="500" y="455" width="310" height="120" rx="10" fill="#FDEDEC" stroke="#E74C3C" stroke-width="1.5"/>
+  <text x="655" y="480" text-anchor="middle" font-size="15" font-weight="bold" fill="#C0392B">A业务标签 (20天前)</text>
+  <text x="655" y="505" text-anchor="middle" font-size="13" fill="#555">业务权重 0.9 × 时间衰减 0.37</text>
+  <line x1="550" y1="520" x2="760" y2="520" stroke="#E74C3C" stroke-width="1" stroke-dasharray="4"/>
+  <text x="655" y="548" text-anchor="middle" font-size="28" font-weight="bold" fill="#C0392B">= 0.33</text>
+
+  <!-- VS -->
+  <circle cx="450" cy="515" r="22" fill="#8E44AD" opacity="0.15"/>
+  <text x="450" y="521" text-anchor="middle" font-size="16" font-weight="bold" fill="#8E44AD">3.5×</text>
+
+  <!-- Arrow from formula to example -->
+  <line x1="450" y1="165" x2="450" y2="192" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Bottom insight -->
+  <text x="450" y="608" text-anchor="middle" font-size="14" fill="#7F8C8D" font-style="italic">近期小业务交互获得 3.5× 更多关注 → 小业务B线上 +7.5%</text>
+</svg>

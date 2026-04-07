@@ -1,0 +1,140 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#555">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#2563EB">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#EA580C">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <linearGradient id="gateGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.08"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" rx="18" fill="#F8FAFC"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E293B">Treatment 门控表示学习</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#64748B">VALOR: 用双线性门控替代简单拼接，抑制预后噪声、放大因果信号</text>
+
+  <!-- ============ LEFT SIDE: Traditional Concat ============ -->
+  <rect x="30" y="95" width="380" height="230" rx="14" fill="#FEE2E2" stroke="#FECACA" stroke-width="1.5"/>
+  <text x="220" y="120" text-anchor="middle" font-size="15" font-weight="bold" fill="#DC2626">❌ 传统做法：简单拼接</text>
+
+  <!-- X box -->
+  <rect x="60" y="145" width="120" height="50" rx="8" fill="#DBEAFE" stroke="#93C5FD" stroke-width="1.5"/>
+  <text x="120" y="175" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E40AF">X (特征)</text>
+
+  <!-- T box -->
+  <rect x="60" y="215" width="120" height="50" rx="8" fill="#FED7AA" stroke="#FDBA74" stroke-width="1.5"/>
+  <text x="120" y="245" text-anchor="middle" font-size="14" font-weight="bold" fill="#C2410C">T (干预)</text>
+
+  <!-- Concat symbol -->
+  <rect x="220" y="175" width="60" height="40" rx="8" fill="#FCA5A5" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="250" y="200" text-anchor="middle" font-size="13" font-weight="bold" fill="#7F1D1D">拼接</text>
+
+  <line x1="180" y1="170" x2="218" y2="192" stroke="#555" stroke-width="1.8" marker-end="url(#arrow)"/>
+  <line x1="180" y1="240" x2="218" y2="200" stroke="#555" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <!-- Arrow to network -->
+  <line x1="282" y1="195" x2="320" y2="195" stroke="#555" stroke-width="1.8" marker-end="url(#arrow)"/>
+
+  <!-- Result box -->
+  <rect x="322" y="170" width="72" height="50" rx="8" fill="#FECACA" stroke="#F87171" stroke-width="1.5"/>
+  <text x="358" y="192" text-anchor="middle" font-size="11" font-weight="bold" fill="#991B1B">预后信号</text>
+  <text x="358" y="207" text-anchor="middle" font-size="11" font-weight="bold" fill="#991B1B">淹没 T</text>
+
+  <!-- Problem note -->
+  <text x="220" y="300" text-anchor="middle" font-size="12" fill="#991B1B" font-style="italic">强预后特征主导梯度 → treatment信号被忽略</text>
+
+  <!-- ============ RIGHT SIDE: VALOR Gating ============ -->
+  <rect x="440" y="95" width="430" height="500" rx="14" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1.5"/>
+  <text x="655" y="120" text-anchor="middle" font-size="15" font-weight="bold" fill="#059669">✅ VALOR：双线性门控机制</text>
+
+  <!-- X input -->
+  <rect x="470" y="150" width="130" height="48" rx="8" fill="#DBEAFE" stroke="#93C5FD" stroke-width="2"/>
+  <text x="535" y="179" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E40AF">X (特征)</text>
+
+  <!-- T input -->
+  <rect x="470" y="220" width="130" height="48" rx="8" fill="#FED7AA" stroke="#FDBA74" stroke-width="2"/>
+  <text x="535" y="249" text-anchor="middle" font-size="14" font-weight="bold" fill="#C2410C">T (干预)</text>
+
+  <!-- Linear W_x -->
+  <rect x="640" y="150" width="80" height="48" rx="8" fill="#BFDBFE" stroke="#60A5FA" stroke-width="1.5"/>
+  <text x="680" y="170" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E3A8A">W</text>
+  <text x="694" y="175" text-anchor="middle" font-size="9" fill="#1E3A8A">x</text>
+  <text x="680" y="188" text-anchor="middle" font-size="11" fill="#1E3A8A">· X</text>
+  <line x1="600" y1="174" x2="638" y2="174" stroke="#2563EB" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <!-- Linear W_t + sigmoid -->
+  <rect x="640" y="220" width="80" height="48" rx="8" fill="#FFEDD5" stroke="#FB923C" stroke-width="1.5"/>
+  <text x="680" y="240" text-anchor="middle" font-size="12" font-weight="bold" fill="#9A3412">σ(W</text>
+  <text x="680" y="257" text-anchor="middle" font-size="12" font-weight="bold" fill="#9A3412">· T)</text>
+  <line x1="600" y1="244" x2="638" y2="244" stroke="#EA580C" stroke-width="2" marker-end="url(#arrowOrange)"/>
+
+  <!-- Gate zone highlight -->
+  <rect x="745" y="155" width="100" height="115" rx="12" fill="url(#gateGrad)" stroke="#F59E0B" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="795" y="175" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400E">⊙</text>
+  <text x="795" y="195" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">逐元素</text>
+  <text x="795" y="212" text-anchor="middle" font-size="12" font-weight="bold" fill="#92400E">相乘</text>
+
+  <!-- Arrows into gate -->
+  <line x1="720" y1="174" x2="745" y2="200" stroke="#2563EB" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <line x1="720" y1="244" x2="745" y2="220" stroke="#EA580C" stroke-width="2" marker-end="url(#arrowOrange)"/>
+
+  <!-- Output arrow -->
+  <line x1="795" y1="270" x2="795" y2="310" stroke="#059669" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Output box -->
+  <rect x="725" y="312" width="140" height="44" rx="8" fill="#D1FAE5" stroke="#34D399" stroke-width="2"/>
+  <text x="795" y="339" text-anchor="middle" font-size="13" font-weight="bold" fill="#065F46">门控后表示 →ZILN</text>
+
+  <!-- ============ EXAMPLE: Feature Gate Visualization ============ -->
+  <rect x="468" y="390" width="385" height="185" rx="12" fill="white" stroke="#D1D5DB" stroke-width="1.2"/>
+  <text x="660" y="415" text-anchor="middle" font-size="13" font-weight="bold" fill="#374151">📌 示例：云计算客户 + 计算产品优惠</text>
+
+  <!-- Feature bars - before gating -->
+  <text x="500" y="443" font-size="11" fill="#6B7280">特征维度</text>
+  <text x="625" y="443" font-size="11" fill="#6B7280" text-anchor="middle">门控值</text>
+  <text x="770" y="443" font-size="11" fill="#6B7280" text-anchor="middle">门控后</text>
+
+  <!-- Compute -->
+  <text x="498" y="468" font-size="12" font-weight="bold" fill="#1E40AF">计算用量</text>
+  <rect x="595" y="455" width="60" height="18" rx="4" fill="#34D399"/>
+  <text x="625" y="468" text-anchor="middle" font-size="11" font-weight="bold" fill="white">≈ 1.0</text>
+  <rect x="700" y="455" width="120" height="18" rx="4" fill="#2563EB"/>
+  <text x="760" y="468" text-anchor="middle" font-size="11" font-weight="bold" fill="white">✅ 保留信号</text>
+
+  <!-- Storage -->
+  <text x="498" y="498" font-size="12" font-weight="bold" fill="#94A3B8">存储用量</text>
+  <rect x="595" y="485" width="60" height="18" rx="4" fill="#FCA5A5"/>
+  <text x="625" y="498" text-anchor="middle" font-size="11" font-weight="bold" fill="#7F1D1D">≈ 0.0</text>
+  <rect x="700" y="485" width="120" height="18" rx="4" fill="#E2E8F0"/>
+  <text x="760" y="498" text-anchor="middle" font-size="11" font-weight="bold" fill="#94A3B8">🚫 被抑制</text>
+
+  <!-- AI -->
+  <text x="498" y="528" font-size="12" font-weight="bold" fill="#94A3B8">AI 用量</text>
+  <rect x="595" y="515" width="60" height="18" rx="4" fill="#FDBA74"/>
+  <text x="625" y="528" text-anchor="middle" font-size="11" font-weight="bold" fill="#7C2D12">≈ 0.2</text>
+  <rect x="700" y="515" width="120" height="18" rx="4" fill="#E2E8F0"/>
+  <text x="760" y="528" text-anchor="middle" font-size="11" font-weight="bold" fill="#94A3B8">🚫 弱抑制</text>
+
+  <!-- Key insight note at bottom -->
+  <text x="660" y="565" text-anchor="middle" font-size="12" fill="#065F46" font-weight="bold">→ 梯度集中到真正驱动增量收入的特征上</text>
+
+  <!-- Bottom result banner -->
+  <rect x="30" y="345" width="380" height="48" rx="10" fill="#DBEAFE" stroke="#93C5FD" stroke-width="1.5"/>
+  <text x="220" y="368" text-anchor="middle" font-size="13" fill="#1E3A8A" font-weight="bold">🎯 效果：单账户增量收入 2.7× 提升</text>
+  <text x="220" y="384" text-anchor="middle" font-size="11" fill="#3B82F6">年化增量 $30M</text>
+
+  <!-- Analogy label -->
+  <rect x="50" y="420" width="340" height="60" rx="10" fill="#FEF3C7" stroke="#FDE68A" stroke-width="1.2"/>
+  <text x="220" y="443" text-anchor="middle" font-size="12" fill="#92400E" font-weight="bold">💡 类比：Treatment 嵌入 = "开关阵列"</text>
+  <text x="220" y="463" text-anchor="middle" font-size="11" fill="#A16207">对每个特征维度输出 0/1 权重</text>
+  <text x="220" y="478" text-anchor="middle" font-size="11" fill="#A16207">关掉无关维度，只留因果信号</text>
+</svg>

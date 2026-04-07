@@ -1,0 +1,134 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f6d365"/>
+      <stop offset="100%" stop-color="#fda085"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#11998e"/>
+      <stop offset="100%" stop-color="#38ef7d"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eb3349"/>
+      <stop offset="100%" stop-color="#f45c43"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <marker id="arrowW" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#fff" opacity="0.7"/>
+    </marker>
+    <marker id="arrowG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#38ef7d"/>
+    </marker>
+    <marker id="arrowR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f45c43"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bg)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#f6d365" font-size="22" font-weight="bold">VALOR: 价值加权排序损失</text>
+  <text x="450" y="68" text-anchor="middle" fill="#aab" font-size="14">核心思想：排对大客户 比 估准小客户 更重要</text>
+
+  <!-- ========== LEFT: Wrong ranking scenario ========== -->
+  <rect x="40" y="100" width="370" height="420" rx="14" fill="#1e2d4a" stroke="#f45c43" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="225" y="130" text-anchor="middle" fill="#f45c43" font-size="16" font-weight="bold">❌ 模型排错了</text>
+
+  <!-- Customer bars - wrong order: B, A, C -->
+  <!-- Rank 1: B (small) -->
+  <rect x="80" y="160" width="290" height="54" rx="10" fill="#2a3a5c" stroke="#667eea" stroke-width="1"/>
+  <text x="96" y="182" fill="#aab" font-size="11">排名 #1</text>
+  <rect x="170" y="168" width="30" height="38" rx="6" fill="url(#blue)" opacity="0.6"/>
+  <text x="185" y="193" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">B</text>
+  <text x="220" y="185" fill="#ccd" font-size="12">$100 增量收入</text>
+  <rect x="310" y="174" width="44" height="20" rx="4" fill="#2a3a5c" stroke="#667eea" stroke-width="0.8"/>
+  <text x="332" y="188" text-anchor="middle" fill="#99aac8" font-size="10">小客户</text>
+
+  <!-- Rank 2: A (whale) - misplaced! -->
+  <rect x="80" y="228" width="290" height="54" rx="10" fill="#3a2029" stroke="#f45c43" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="96" y="250" fill="#aab" font-size="11">排名 #2</text>
+  <rect x="170" y="236" width="30" height="38" rx="6" fill="url(#gold)"/>
+  <text x="185" y="261" text-anchor="middle" fill="#1a2744" font-size="14" font-weight="bold">A</text>
+  <text x="220" y="253" fill="#f6d365" font-size="12" font-weight="bold">$100K 增量收入</text>
+  <text x="310" y="270" fill="#f45c43" font-size="10">🐋 鲸鱼客户被埋没!</text>
+
+  <!-- Rank 3: C -->
+  <rect x="80" y="296" width="290" height="54" rx="10" fill="#2a3a5c" stroke="#555" stroke-width="0.8"/>
+  <text x="96" y="318" fill="#aab" font-size="11">排名 #3</text>
+  <rect x="170" y="304" width="30" height="38" rx="6" fill="#445" opacity="0.6"/>
+  <text x="185" y="329" text-anchor="middle" fill="#ccc" font-size="14" font-weight="bold">C</text>
+  <text x="220" y="321" fill="#888" font-size="12">$0 增量收入</text>
+
+  <!-- Penalty illustration -->
+  <rect x="70" y="370" width="320" height="130" rx="10" fill="#261a2e" stroke="#f45c43" stroke-width="1" opacity="0.9"/>
+  <text x="230" y="395" text-anchor="middle" fill="#f45c43" font-size="13" font-weight="bold">惩罚梯度计算</text>
+
+  <!-- B vs A swap -->
+  <text x="90" y="422" fill="#fda085" font-size="12">B↔A 错排:</text>
+  <text x="200" y="422" fill="#fff" font-size="12" font-weight="bold">w = log(1+|100-100000|)</text>
+  <rect x="90" y="430" width="272" height="16" rx="4" fill="#f45c43" opacity="0.7"/>
+  <text x="226" y="443" text-anchor="middle" fill="#fff" font-size="11" font-weight="bold">≈ 11.5 → 巨大惩罚! 💥</text>
+
+  <!-- C vs B swap -->
+  <text x="90" y="472" fill="#99aac8" font-size="12">C↔B 错排:</text>
+  <text x="200" y="472" fill="#fff" font-size="12">w = log(1+|0-100|)</text>
+  <rect x="90" y="480" width="108" height="16" rx="4" fill="#667eea" opacity="0.5"/>
+  <text x="144" y="493" text-anchor="middle" fill="#ccd" font-size="11">≈ 4.6 → 小惩罚</text>
+
+  <!-- ========== RIGHT: Correct ranking ========== -->
+  <rect x="460" y="100" width="400" height="290" rx="14" fill="#1e2d4a" stroke="#38ef7d" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="660" y="130" text-anchor="middle" fill="#38ef7d" font-size="16" font-weight="bold">✅ 训练后 · 排序纠正</text>
+
+  <!-- Rank 1: A (whale) - correct! -->
+  <rect x="500" y="160" width="320" height="54" rx="10" fill="#1a332a" stroke="#38ef7d" stroke-width="2"/>
+  <text x="516" y="182" fill="#aab" font-size="11">排名 #1</text>
+  <rect x="590" y="168" width="30" height="38" rx="6" fill="url(#gold)"/>
+  <text x="605" y="193" text-anchor="middle" fill="#1a2744" font-size="14" font-weight="bold">A</text>
+  <text x="640" y="185" fill="#f6d365" font-size="12" font-weight="bold">$100K</text>
+  <text x="720" y="185" fill="#38ef7d" font-size="11">🐋 优先服务!</text>
+
+  <!-- Rank 2: B -->
+  <rect x="500" y="228" width="320" height="54" rx="10" fill="#2a3a5c" stroke="#667eea" stroke-width="1"/>
+  <text x="516" y="250" fill="#aab" font-size="11">排名 #2</text>
+  <rect x="590" y="236" width="30" height="38" rx="6" fill="url(#blue)" opacity="0.6"/>
+  <text x="605" y="261" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">B</text>
+  <text x="640" y="253" fill="#ccd" font-size="12">$100</text>
+
+  <!-- Rank 3: C -->
+  <rect x="500" y="296" width="320" height="54" rx="10" fill="#2a3a5c" stroke="#555" stroke-width="0.8"/>
+  <text x="516" y="318" fill="#aab" font-size="11">排名 #3</text>
+  <rect x="590" y="304" width="30" height="38" rx="6" fill="#445" opacity="0.6"/>
+  <text x="605" y="329" text-anchor="middle" fill="#ccc" font-size="14" font-weight="bold">C</text>
+  <text x="640" y="321" fill="#888" font-size="12">$0</text>
+
+  <!-- Arrow from left to right -->
+  <line x1="420" y1="250" x2="452" y2="250" stroke="#38ef7d" stroke-width="2.5" marker-end="url(#arrowG)"/>
+  <text x="437" y="240" text-anchor="middle" fill="#38ef7d" font-size="20">⟶</text>
+
+  <!-- ========== Bottom Right: Formula + Result ========== -->
+  <rect x="460" y="410" width="400" height="110" rx="14" fill="#1e2d4a" stroke="#f6d365" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="660" y="440" text-anchor="middle" fill="#f6d365" font-size="14" font-weight="bold">💡 核心公式</text>
+  <text x="660" y="470" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">w_ij = log(1 + |z_i − z_j|)</text>
+  <text x="660" y="498" text-anchor="middle" fill="#aab" font-size="12">收入差距越大 → 权重越大 → 错排惩罚越重</text>
+
+  <!-- Result badge -->
+  <rect x="500" y="540" width="320" height="55" rx="27" fill="url(#green)" opacity="0.15" stroke="#38ef7d" stroke-width="1.5"/>
+  <text x="660" y="565" text-anchor="middle" fill="#38ef7d" font-size="15" font-weight="bold">Lift@30%: 43.5 → 51.2 (+18% 增量收入)</text>
+  <text x="660" y="585" text-anchor="middle" fill="#7fdbba" font-size="12">年化 $30M · A/B测试验证 · 单账户收入 2.7x</text>
+
+  <!-- Decorative: small sales person icon top right -->
+  <text x="830" y="60" fill="#667eea" font-size="22" opacity="0.4">👤👤👤</text>
+  <text x="835" y="80" fill="#667eea" font-size="9" opacity="0.5">有限销售资源</text>
+
+</svg>
