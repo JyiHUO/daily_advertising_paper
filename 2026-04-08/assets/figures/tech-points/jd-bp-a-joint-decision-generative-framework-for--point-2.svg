@@ -1,0 +1,120 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e74c3c"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#27ae60"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8f9fa"/>
+      <stop offset="100%" stop-color="#e9ecef"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bgGrad)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#2c3e50">JD-BP 核心创新：无记忆 RTG 设计</text>
+  <text x="450" y="68" text-anchor="middle" font-size="14" fill="#7f8c8d">出价只看未来，定价负责善后历史违约</text>
+
+  <!-- ===== LEFT SIDE: Traditional (Problem) ===== -->
+  <rect x="30" y="95" width="390" height="500" rx="12" fill="#fff5f5" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="225" y="122" text-anchor="middle" font-size="16" font-weight="bold" fill="#c0392b">❌ 传统方法：单一 RTG 背全局包袱</text>
+
+  <!-- Timeline bar traditional -->
+  <rect x="60" y="150" width="330" height="40" rx="6" fill="#fde8e8"/>
+  <rect x="60" y="150" width="165" height="40" rx="6" fill="#e74c3c" opacity="0.3"/>
+  <text x="142" y="175" text-anchor="middle" font-size="13" fill="#c0392b" font-weight="bold">历史 t=0→50</text>
+  <text x="307" y="175" text-anchor="middle" font-size="13" fill="#555">未来 t=50→T</text>
+  <line x1="225" y1="150" x2="225" y2="190" stroke="#c0392b" stroke-width="2" stroke-dasharray="4,2"/>
+
+  <!-- Traditional RTG box -->
+  <rect x="70" y="210" width="310" height="70" rx="10" fill="#fff" stroke="#e74c3c" stroke-width="2"/>
+  <text x="225" y="235" text-anchor="middle" font-size="15" font-weight="bold" fill="#c0392b">传统 RTG</text>
+  <text x="225" y="258" text-anchor="middle" font-size="13" fill="#555">= 历史累积 + 未来期望</text>
+  <text x="225" y="274" text-anchor="middle" font-size="11" fill="#999">历史ROI=6 远低于目标10 → RTG很低</text>
+
+  <!-- Arrow down -->
+  <line x1="225" y1="280" x2="225" y2="320" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowRed)"/>
+  <text x="280" y="305" font-size="11" fill="#c0392b" font-weight="bold">信号：悲观</text>
+
+  <!-- Bid action traditional -->
+  <rect x="100" y="325" width="250" height="60" rx="10" fill="#e74c3c" opacity="0.15" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="225" y="352" text-anchor="middle" font-size="15" font-weight="bold" fill="#c0392b">出价 ↓↓ 大幅压低</text>
+  <text x="225" y="372" text-anchor="middle" font-size="12" fill="#888">同时承担争取价值 + 补偿亏损</text>
+
+  <!-- Result traditional -->
+  <rect x="100" y="420" width="250" height="50" rx="10" fill="#fff" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="225" y="450" text-anchor="middle" font-size="14" font-weight="bold" fill="#c0392b">🚫 错失优质流量</text>
+
+  <line x1="225" y1="385" x2="225" y2="420" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowRed)"/>
+
+
+  <!-- ===== RIGHT SIDE: JD-BP (Solution) ===== -->
+  <rect x="450" y="95" width="420" height="500" rx="12" fill="#f0faf0" stroke="#27ae60" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="660" y="122" text-anchor="middle" font-size="16" font-weight="bold" fill="#1e8449">✅ JD-BP：双流 RTG 解耦</text>
+
+  <!-- Timeline bar JD-BP -->
+  <rect x="480" y="150" width="360" height="40" rx="6" fill="#e8f8e8"/>
+  <rect x="480" y="150" width="180" height="40" rx="6" fill="#27ae60" opacity="0.15"/>
+  <text x="570" y="175" text-anchor="middle" font-size="13" fill="#888">历史 t=0→50</text>
+  <text x="742" y="175" text-anchor="middle" font-size="13" fill="#1e8449" font-weight="bold">未来 t=50→T</text>
+  <line x1="660" y1="150" x2="660" y2="190" stroke="#27ae60" stroke-width="2" stroke-dasharray="4,2"/>
+
+  <!-- Bidding RTG (memoryless) -->
+  <rect x="480" y="210" width="170" height="90" rx="10" fill="#fff" stroke="#2980b9" stroke-width="2.5"/>
+  <text x="565" y="235" text-anchor="middle" font-size="14" font-weight="bold" fill="#2980b9">出价 RTG</text>
+  <text x="565" y="255" text-anchor="middle" font-size="20">🧠💨</text>
+  <text x="565" y="278" text-anchor="middle" font-size="11" fill="#2980b9" font-weight="bold">「失忆」只看未来</text>
+  <text x="565" y="293" text-anchor="middle" font-size="10" fill="#888">R_b = f(未来价值/未来成本)</text>
+
+  <!-- Pricing RTG (global memory) -->
+  <rect x="670" y="210" width="170" height="90" rx="10" fill="#fff" stroke="#8e44ad" stroke-width="2.5"/>
+  <text x="755" y="235" text-anchor="middle" font-size="14" font-weight="bold" fill="#8e44ad">定价 RTG</text>
+  <text x="755" y="255" text-anchor="middle" font-size="20">🧠📚</text>
+  <text x="755" y="278" text-anchor="middle" font-size="11" fill="#8e44ad" font-weight="bold">「全局记忆」含历史</text>
+  <text x="755" y="293" text-anchor="middle" font-size="10" fill="#888">R_p = g(全局成本偏差)</text>
+
+  <!-- Arrows down from RTGs -->
+  <line x1="565" y1="300" x2="565" y2="345" stroke="#2980b9" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <line x1="755" y1="300" x2="755" y2="345" stroke="#8e44ad" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <text x="520" y="330" font-size="11" fill="#2980b9" font-weight="bold">乐观信号</text>
+  <text x="770" y="330" font-size="11" fill="#8e44ad" font-weight="bold">修正信号</text>
+
+  <!-- Bid action JD-BP -->
+  <rect x="485" y="350" width="155" height="60" rx="10" fill="#2980b9" opacity="0.15" stroke="#2980b9" stroke-width="1.5"/>
+  <text x="563" y="377" text-anchor="middle" font-size="14" font-weight="bold" fill="#2980b9">积极出价 ↑</text>
+  <text x="563" y="397" text-anchor="middle" font-size="11" fill="#666">专注争取价值</text>
+
+  <!-- Pricing action JD-BP -->
+  <rect x="672" y="350" width="155" height="60" rx="10" fill="#8e44ad" opacity="0.15" stroke="#8e44ad" stroke-width="1.5"/>
+  <text x="750" y="377" text-anchor="middle" font-size="14" font-weight="bold" fill="#8e44ad">定价修正 Δ</text>
+  <text x="750" y="397" text-anchor="middle" font-size="11" fill="#666">专门补偿亏损</text>
+
+  <!-- Merge arrow -->
+  <path d="M 563 410 L 563 435 Q 563 445 573 445 L 640 445" fill="none" stroke="#555" stroke-width="1.5"/>
+  <path d="M 750 410 L 750 435 Q 750 445 740 445 L 673 445" fill="none" stroke="#555" stroke-width="1.5"/>
+  <circle cx="656" cy="445" r="12" fill="#fff" stroke="#27ae60" stroke-width="2"/>
+  <text x="656" y="450" text-anchor="middle" font-size="14" font-weight="bold" fill="#27ae60">+</text>
+
+  <line x1="656" y1="457" x2="656" y2="490" stroke="#27ae60" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+
+  <!-- Result JD-BP -->
+  <rect x="546" y="490" width="220" height="55" rx="10" fill="#27ae60" opacity="0.18" stroke="#27ae60" stroke-width="2"/>
+  <text x="656" y="515" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e8449">✅ 高价值 + ROI达标</text>
+  <text x="656" y="535" text-anchor="middle" font-size="12" fill="#27ae60">收入 +4.7%  达成率 +6.48%</text>
+
+  <!-- VS divider -->
+  <rect x="423" y="310" width="30" height="40" rx="15" fill="#fff" stroke="#aaa" stroke-width="1.5"/>
+  <text x="438" y="336" text-anchor="middle" font-size="14" font-weight="bold" fill="#888">VS</text>
+
+  <!-- Bottom key insight -->
+  <rect x="150" y="575" width="600" height="35" rx="8" fill="#fff3cd" stroke="#f0ad4e" stroke-width="1.2"/>
+  <text x="450" y="598" text-anchor="middle" font-size="14" fill="#856404" font-weight="bold">核心思想：出价「失忆」不被历史拖累 ⟹ 不浪费优质流量；定价「记忆」专门善后</text>
+</svg>

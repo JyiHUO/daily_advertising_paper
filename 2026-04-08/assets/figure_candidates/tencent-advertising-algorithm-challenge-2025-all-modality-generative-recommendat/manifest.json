@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-08/downloaded_pdfs/tencent-advertising-algorithm-challenge-2025-all-modality-generative-recommendat.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-08/assets/figure_candidates/tencent-advertising-algorithm-challenge-2025-all-modality-generative-recommendat",
+  "candidates": [
+    {
+      "id": "page-3-drawing-caption-25",
+      "page_index": 3,
+      "caption": "Figure 1: Coverage of the multi-modal embeddings on two datasets.",
+      "clip": [
+        311.9679870605469,
+        67.68618774414062,
+        564.1868896484375,
+        234.822998046875
+      ],
+      "clip_area": 42155.062876596116,
+      "page_area": 484704.0,
+      "text_density": 0.14709867658593573,
+      "kind": "drawing_cluster_with_caption",
+      "score": 14.44246899236159,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-08/assets/figure_candidates/tencent-advertising-algorithm-challenge-2025-all-modality-generative-recommendat/01-p4-drawing_cluster_with_caption.png",
+      "filename": "01-p4-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-5-drawing-cluster-0",
+      "page_index": 5,
+      "caption": "第 6 页矢量图主图候选",
+      "clip": [
+        88.51959228515625,
+        69.96481323242188,
+        523.2020874023438,
+        366.4197998046875
+      ],
+      "clip_area": 128863.79325316474,
+      "page_area": 484704.0,
+      "text_density": 0.06468068358750825,
+      "kind": "drawing_cluster",
+      "score": 8.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-08/assets/figure_candidates/tencent-advertising-algorithm-challenge-2025-all-modality-generative-recommendat/02-p6-drawing_cluster.png",
+      "filename": "02-p6-drawing_cluster.png"
+    },
+    {
+      "id": "page-3-drawing-cluster-0",
+      "page_index": 3,
+      "caption": "第 4 页矢量图主图候选",
+      "clip": [
+        313.9679870605469,
+        69.68618774414062,
+        562.1868896484375,
+        232.822998046875
+      ],
+      "clip_area": 40493.640025033616,
+      "page_area": 484704.0,
+      "text_density": 0.13244190097289676,
+      "kind": "drawing_cluster",
+      "score": 7.303415275237679,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-08/assets/figure_candidates/tencent-advertising-algorithm-challenge-2025-all-modality-generative-recommendat/03-p4-drawing_cluster.png",
+      "filename": "03-p4-drawing_cluster.png"
+    },
+    {
+      "id": "page-3-block-25",
+      "page_index": 3,
+      "caption": "Figure 1: Coverage of the multi-modal embeddings on two datasets.",
+      "clip": [
+        287.3549865722656,
+        18.0,
+        588.8042236328125,
+        221.49197387695312
+      ],
+      "clip_area": 61342.50027315226,
+      "page_area": 484704.0,
+      "text_density": 0.13035523639055907,
+      "kind": "captioned_figure",
+      "score": 3.6602691529348146,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-08/assets/figure_candidates/tencent-advertising-algorithm-challenge-2025-all-modality-generative-recommendat/04-p4-captioned_figure.png",
+      "filename": "04-p4-captioned_figure.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.7935633335894031,
+      "score": -11.09083328,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-08/assets/figure_candidates/tencent-advertising-algorithm-challenge-2025-all-modality-generative-recommendat/05-p1-layout_region_left_top.png",
+      "filename": "05-p1-layout_region_left_top.png"
+    },
+    {
+      "id": "page-1-region-upper-left",
+      "page_index": 1,
+      "caption": "第 2 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.6934977076246963,
+      "score": -11.09083328,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-08/assets/figure_candidates/tencent-advertising-algorithm-challenge-2025-all-modality-generative-recommendat/06-p2-layout_region_left_top.png",
+      "filename": "06-p2-layout_region_left_top.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-08/assets/figure_candidates/tencent-advertising-algorithm-challenge-2025-all-modality-generative-recommendat/contact-sheet.svg"
+}

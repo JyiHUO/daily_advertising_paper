@@ -1,0 +1,19 @@
+{
+  "date": "2026-04-08",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL"
+  ],
+  "candidate_count": 4,
+  "supplementary_count": 0,
+  "focus_titles": [
+    "JD-BP: A Joint-Decision Generative Framework for Auto-Bidding and Pricing",
+    "Tencent Advertising Algorithm Challenge 2025: All-Modality Generative Recommendation"
+  ],
+  "focus_status": {
+    "JD-BP: A Joint-Decision Generative Framework for Auto-Bidding and Pricing": "completed",
+    "Tencent Advertising Algorithm Challenge 2025: All-Modality Generative Recommendation": "completed"
+  }
+}

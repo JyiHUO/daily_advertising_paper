@@ -1,0 +1,117 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-08/downloaded_pdfs/jd-bp-a-joint-decision-generative-framework-for-auto-bidding-and-pricing.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-08/assets/figure_candidates/jd-bp-a-joint-decision-generative-framework-for-auto-bidding-and-pricing",
+  "candidates": [
+    {
+      "id": "page-0-block-23",
+      "page_index": 0,
+      "caption": "Auto-Bidding, Online Advertising, Joint-Decision Framework, Gen- erative Model",
+      "clip": [
+        287.0409912109375,
+        85.67265624999999,
+        590.3161254882813,
+        394.47265625
+      ],
+      "clip_area": 93651.36146484377,
+      "page_area": 484704.0,
+      "text_density": 0.4834310025752536,
+      "kind": "captioned_figure",
+      "score": 52.040570682942715,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-08/assets/figure_candidates/jd-bp-a-joint-decision-generative-framework-for-auto-bidding-and-pricing/01-p1-captioned_figure.png",
+      "filename": "01-p1-captioned_figure.png"
+    },
+    {
+      "id": "page-9-embedded-0-0",
+      "page_index": 9,
+      "caption": "第 10 页内嵌图片候选",
+      "clip": [
+        53.810997009277344,
+        71.68700408935547,
+        294.0059814453125,
+        208.9320068359375
+      ],
+      "clip_area": 32965.56129863887,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image",
+      "xref": 449,
+      "score": 5.366284014429321,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-08/assets/figure_candidates/jd-bp-a-joint-decision-generative-framework-for-auto-bidding-and-pricing/02-p10-embedded_image.png",
+      "filename": "02-p10-embedded_image.png"
+    },
+    {
+      "id": "page-4-embedded-0-0",
+      "page_index": 4,
+      "caption": "第 5 页内嵌图片候选",
+      "clip": [
+        67.0199966430664,
+        71.69322204589844,
+        544.958251953125,
+        296.77801513671875
+      ],
+      "clip_area": 107576.63330665219,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image",
+      "xref": 446,
+      "score": 5.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-08/assets/figure_candidates/jd-bp-a-joint-decision-generative-framework-for-auto-bidding-and-pricing/03-p5-embedded_image.png",
+      "filename": "03-p5-embedded_image.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.6308308585920913,
+      "score": -11.09083328,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-08/assets/figure_candidates/jd-bp-a-joint-decision-generative-framework-for-auto-bidding-and-pricing/04-p1-layout_region_left_top.png",
+      "filename": "04-p1-layout_region_left_top.png"
+    },
+    {
+      "id": "page-1-region-upper-left",
+      "page_index": 1,
+      "caption": "第 2 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.8693210264505911,
+      "score": -11.09083328,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-08/assets/figure_candidates/jd-bp-a-joint-decision-generative-framework-for-auto-bidding-and-pricing/05-p2-layout_region_left_top.png",
+      "filename": "05-p2-layout_region_left_top.png"
+    },
+    {
+      "id": "page-0-region-upper-right",
+      "page_index": 0,
+      "caption": "第 1 页右上区域主图候选",
+      "clip": [
+        318.24,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 82992.7296,
+      "kind": "layout_region_right_top",
+      "page_area": 484704.0,
+      "text_density": 0.4750876627893174,
+      "score": -17.07785856,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-08/assets/figure_candidates/jd-bp-a-joint-decision-generative-framework-for-auto-bidding-and-pricing/06-p1-layout_region_right_top.png",
+      "filename": "06-p1-layout_region_right_top.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-08/assets/figure_candidates/jd-bp-a-joint-decision-generative-framework-for-auto-bidding-and-pricing/contact-sheet.svg"
+}
