@@ -1,0 +1,138 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="ashGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff6b6b"/>
+      <stop offset="100%" stop-color="#c0392b"/>
+    </linearGradient>
+    <linearGradient id="mfboGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4ecdc4"/>
+      <stop offset="100%" stop-color="#1abc9c"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrowW" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,1 L9,5 L0,9 Z" fill="#fff" opacity="0.7"/>
+    </marker>
+    <marker id="arrowG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,1 L9,5 L0,9 Z" fill="#f1c40f"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="560" fill="url(#bgGrad)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#f1c40f" font-size="22" font-weight="bold" filter="url(#glow)">淘汰制 vs 模型制：预算决定谁更强</text>
+  <text x="450" y="66" text-anchor="middle" fill="#8899bb" font-size="13">IAMFM 的两种实例化算法互补性</text>
+
+  <!-- === LEFT: ASH (Tournament) === -->
+  <rect x="40" y="90" width="370" height="280" rx="16" fill="#1e2d4a" stroke="#ff6b6b" stroke-width="2" opacity="0.9"/>
+  <rect x="40" y="90" width="370" height="42" rx="16" fill="url(#ashGrad)" opacity="0.85"/>
+  <rect x="40" y="116" width="370" height="16" fill="url(#ashGrad)" opacity="0.85"/>
+  <text x="225" y="118" text-anchor="middle" fill="#fff" font-size="17" font-weight="bold">🏆 淘汰制 (ASH)</text>
+
+  <!-- Tournament rounds illustration -->
+  <!-- Round 1: many candidates -->
+  <text x="70" y="160" fill="#aab" font-size="11">第1轮 粗筛</text>
+  <circle cx="160" cy="157" r="8" fill="#ff6b6b" opacity="0.7"/><circle cx="180" cy="157" r="8" fill="#ff6b6b" opacity="0.7"/>
+  <circle cx="200" cy="157" r="8" fill="#ff6b6b" opacity="0.7"/><circle cx="220" cy="157" r="8" fill="#ff6b6b" opacity="0.7"/>
+  <circle cx="240" cy="157" r="8" fill="#ff6b6b" opacity="0.7"/><circle cx="260" cy="157" r="8" fill="#ff6b6b" opacity="0.7"/>
+  <circle cx="280" cy="157" r="8" fill="#ff6b6b" opacity="0.7"/><circle cx="300" cy="157" r="8" fill="#ff6b6b" opacity="0.7"/>
+  <circle cx="320" cy="157" r="8" fill="#555" opacity="0.4"/><circle cx="340" cy="157" r="8" fill="#555" opacity="0.4"/>
+  <circle cx="360" cy="157" r="8" fill="#555" opacity="0.4"/><circle cx="380" cy="157" r="8" fill="#555" opacity="0.4"/>
+  <text x="345" y="175" fill="#777" font-size="10">淘汰</text>
+
+  <!-- Arrow down -->
+  <line x1="225" y1="172" x2="225" y2="192" stroke="#ff6b6b" stroke-width="2" marker-end="url(#arrowW)" opacity="0.5"/>
+
+  <!-- Round 2 -->
+  <text x="70" y="207" fill="#aab" font-size="11">第2轮 精筛</text>
+  <circle cx="180" cy="204" r="8" fill="#ff6b6b" opacity="0.8"/><circle cx="205" cy="204" r="8" fill="#ff6b6b" opacity="0.8"/>
+  <circle cx="230" cy="204" r="8" fill="#ff6b6b" opacity="0.8"/><circle cx="255" cy="204" r="8" fill="#ff6b6b" opacity="0.8"/>
+  <circle cx="280" cy="204" r="8" fill="#555" opacity="0.4"/><circle cx="305" cy="204" r="8" fill="#555" opacity="0.4"/>
+
+  <!-- Arrow down -->
+  <line x1="225" y1="219" x2="225" y2="239" stroke="#ff6b6b" stroke-width="2" marker-end="url(#arrowW)" opacity="0.5"/>
+
+  <!-- Round 3 winner -->
+  <text x="70" y="257" fill="#aab" font-size="11">最终胜出</text>
+  <circle cx="210" cy="254" r="10" fill="#ff6b6b"/><circle cx="240" cy="254" r="10" fill="#f1c40f" stroke="#ff6b6b" stroke-width="2"/>
+  <text x="258" y="258" fill="#f1c40f" font-size="11">★</text>
+
+  <!-- Pros/Cons -->
+  <text x="70" y="300" fill="#7fdb7f" font-size="12">✓ 简单高效，前期快</text>
+  <text x="70" y="322" fill="#ff8888" font-size="12">✗ 噪声可能误杀最优</text>
+  <text x="70" y="348" fill="#aab" font-size="12">标准差 10.1 ~ 11.7</text>
+
+  <!-- === RIGHT: MFBO (Terrain Map) === -->
+  <rect x="490" y="90" width="370" height="280" rx="16" fill="#1e2d4a" stroke="#4ecdc4" stroke-width="2" opacity="0.9"/>
+  <rect x="490" y="90" width="370" height="42" rx="16" fill="url(#mfboGrad)" opacity="0.85"/>
+  <rect x="490" y="116" width="370" height="16" fill="url(#mfboGrad)" opacity="0.85"/>
+  <text x="675" y="118" text-anchor="middle" fill="#fff" font-size="17" font-weight="bold">🗺️ 模型制 (MFBO)</text>
+
+  <!-- GP terrain illustration -->
+  <rect x="520" y="145" width="310" height="110" rx="10" fill="#0d1a2e" stroke="#4ecdc4" stroke-width="1" opacity="0.7"/>
+  <text x="535" y="163" fill="#4ecdc4" font-size="10">GP 全局代理模型（地形图）</text>
+
+  <!-- Smooth terrain curve -->
+  <path d="M540,235 Q570,200 600,220 Q630,240 660,180 Q690,155 710,175 Q730,195 760,190 Q790,185 810,210" fill="none" stroke="#4ecdc4" stroke-width="2.5" opacity="0.8"/>
+  <!-- Confidence band -->
+  <path d="M540,235 Q570,200 600,220 Q630,240 660,180 Q690,155 710,175 Q730,195 760,190 Q790,185 810,210 L810,230 Q790,205 760,210 Q730,215 710,195 Q690,175 660,200 Q630,260 600,240 Q570,220 540,245 Z" fill="#4ecdc4" opacity="0.1"/>
+  <!-- Peak marker -->
+  <circle cx="690" cy="168" r="6" fill="#f1c40f" stroke="#fff" stroke-width="1.5"/>
+  <text x="698" y="165" fill="#f1c40f" font-size="10" font-weight="bold">峰值</text>
+
+  <!-- Sample points -->
+  <circle cx="560" cy="228" r="3" fill="#fff" opacity="0.6"/>
+  <circle cx="620" cy="225" r="3" fill="#fff" opacity="0.6"/>
+  <circle cx="660" cy="190" r="3" fill="#fff" opacity="0.6"/>
+  <circle cx="740" cy="192" r="3" fill="#fff" opacity="0.6"/>
+  <circle cx="800" cy="215" r="3" fill="#fff" opacity="0.6"/>
+
+  <!-- Label -->
+  <text x="540" y="275" fill="#8899bb" font-size="11">成本感知 UCB → 选最有价值的 (配置, 保真度)</text>
+
+  <!-- Pros/Cons -->
+  <text x="520" y="300" fill="#7fdb7f" font-size="12">✓ 数据充足时精确定位最优</text>
+  <text x="520" y="322" fill="#ff8888" font-size="12">✗ 前期需积累数据建模</text>
+  <text x="520" y="348" fill="#aab" font-size="12">标准差 5.0 ~ 5.5（更稳定）</text>
+
+  <!-- === BOTTOM: Budget Comparison === -->
+  <rect x="100" y="395" width="700" height="145" rx="16" fill="#15203a" stroke="#f1c40f" stroke-width="1.5" opacity="0.9"/>
+
+  <!-- Dividing line -->
+  <line x1="450" y1="415" x2="450" y2="525" stroke="#334" stroke-width="1" stroke-dasharray="4"/>
+
+  <!-- Left: Low budget -->
+  <text x="275" y="425" text-anchor="middle" fill="#f1c40f" font-size="15" font-weight="bold">💰 小预算 ≤16k tokens</text>
+  <rect x="150" y="440" width="120" height="40" rx="8" fill="#c0392b" opacity="0.7"/>
+  <text x="210" y="465" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">ASH 187.3</text>
+  <text x="300" y="465" fill="#aab" font-size="16">≈</text>
+  <rect x="320" y="440" width="120" height="40" rx="8" fill="#1abc9c" opacity="0.7"/>
+  <text x="380" y="465" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">MFBO 186.3</text>
+  <text x="275" y="505" text-anchor="middle" fill="#8899bb" font-size="13">差异不显著 (p=0.38)</text>
+  <text x="275" y="525" text-anchor="middle" fill="#88aa88" font-size="12">粗粒度淘汰已够用</text>
+
+  <!-- Right: High budget -->
+  <text x="625" y="425" text-anchor="middle" fill="#f1c40f" font-size="15" font-weight="bold">💰💰 大预算 ≥32k tokens</text>
+  <rect x="500" y="440" width="110" height="40" rx="8" fill="#c0392b" opacity="0.5"/>
+  <text x="555" y="465" text-anchor="middle" fill="#ccc" font-size="14">ASH 187.4</text>
+  <text x="625" y="465" fill="#aab" font-size="16">&lt;</text>
+  <rect x="645" y="437" width="125" height="46" rx="8" fill="#1abc9c" opacity="0.9" stroke="#f1c40f" stroke-width="2"/>
+  <text x="707" y="465" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">MFBO 190.7</text>
+  <text x="625" y="505" text-anchor="middle" fill="#f1c40f" font-size="13" font-weight="bold">MFBO 显著优于 ASH (p=0.036)</text>
+  <text x="625" y="525" text-anchor="middle" fill="#88aa88" font-size="12">GP全局建模优势显现</text>
+
+  <!-- Central insight arrow -->
+  <path d="M450,388 L450,395" stroke="#f1c40f" stroke-width="2"/>
+
+  <!-- Key insight badge -->
+  <rect x="300" y="540" width="300" height="18" rx="9" fill="#f1c40f" opacity="0.15"/>
+  <text x="450" y="554" text-anchor="middle" fill="#f1c40f" font-size="12" font-weight="bold">核心洞见：预算规模决定最优策略选择</text>
+</svg>

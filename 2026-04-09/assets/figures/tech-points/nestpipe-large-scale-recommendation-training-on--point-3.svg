@@ -1,0 +1,119 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#d94040"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2e8b57"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8f9fc"/>
+      <stop offset="100%" stop-color="#e8ecf4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="580" fill="url(#bgGrad)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a1a2e">Key-Centric Sample Clustering 去重优化</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#666">把共享相同 Key 的样本聚到同一个 Micro-Batch → 最大化去重效率</text>
+
+  <!-- ====== LEFT SIDE: Naive Split (Bad) ====== -->
+  <text x="220" y="95" text-anchor="middle" font-size="17" font-weight="bold" fill="#d94040">❌ 朴素切分</text>
+
+  <!-- Micro-batch 1 -->
+  <rect x="40" y="110" width="170" height="120" rx="10" fill="#fff0f0" stroke="#d94040" stroke-width="2"/>
+  <text x="125" y="132" text-anchor="middle" font-size="13" font-weight="bold" fill="#d94040">Micro-Batch 1</text>
+  <text x="125" y="155" text-anchor="middle" font-size="12" fill="#333">用户 A</text>
+  <text x="125" y="175" text-anchor="middle" font-size="11" fill="#888">访问 Key: X, Y, Z</text>
+  <text x="125" y="198" text-anchor="middle" font-size="12" fill="#333">用户 C</text>
+  <text x="125" y="218" text-anchor="middle" font-size="11" fill="#888">访问 Key: P, Q</text>
+
+  <!-- Micro-batch 2 -->
+  <rect x="230" y="110" width="170" height="120" rx="10" fill="#fff0f0" stroke="#d94040" stroke-width="2"/>
+  <text x="315" y="132" text-anchor="middle" font-size="13" font-weight="bold" fill="#d94040">Micro-Batch 2</text>
+  <text x="315" y="155" text-anchor="middle" font-size="12" fill="#333">用户 B</text>
+  <text x="315" y="175" text-anchor="middle" font-size="11" fill="#888">访问 Key: X, Y, Z</text>
+  <text x="315" y="198" text-anchor="middle" font-size="12" fill="#333">用户 D</text>
+  <text x="315" y="218" text-anchor="middle" font-size="11" fill="#888">访问 Key: R, S</text>
+
+  <!-- Arrows to All2All -->
+  <line x1="125" y1="230" x2="125" y2="275" stroke="#d94040" stroke-width="2" marker-end="url(#arrowRed)"/>
+  <line x1="315" y1="230" x2="315" y2="275" stroke="#d94040" stroke-width="2" marker-end="url(#arrowRed)"/>
+
+  <!-- All2All box naive -->
+  <rect x="30" y="280" width="380" height="60" rx="8" fill="#ffe0e0" stroke="#d94040" stroke-width="2"/>
+  <text x="220" y="305" text-anchor="middle" font-size="13" font-weight="bold" fill="#d94040">All2All 通信</text>
+  <text x="220" y="325" text-anchor="middle" font-size="12" fill="#b33">传输 Keys: X,Y,Z + P,Q + X,Y,Z + R,S = 10次</text>
+
+  <!-- Duplicate callout -->
+  <rect x="80" y="350" width="280" height="32" rx="6" fill="#d94040" opacity="0.12"/>
+  <text x="220" y="371" text-anchor="middle" font-size="13" font-weight="bold" fill="#d94040">X, Y, Z 重复传输！通信膨胀 🔺</text>
+
+  <!-- ====== RIGHT SIDE: Clustered (Good) ====== -->
+  <text x="670" y="95" text-anchor="middle" font-size="17" font-weight="bold" fill="#2e8b57">✅ Key聚类切分</text>
+
+  <!-- Micro-batch 1 clustered -->
+  <rect x="510" y="110" width="170" height="120" rx="10" fill="#f0fff0" stroke="#2e8b57" stroke-width="2"/>
+  <text x="595" y="132" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e8b57">Micro-Batch 1</text>
+  <text x="595" y="155" text-anchor="middle" font-size="12" fill="#333">用户 A</text>
+  <text x="595" y="175" text-anchor="middle" font-size="11" fill="#888">访问 Key: X, Y, Z</text>
+  <text x="595" y="198" text-anchor="middle" font-size="12" fill="#333">用户 B</text>
+  <text x="595" y="218" text-anchor="middle" font-size="11" fill="#888">访问 Key: X, Y, Z</text>
+
+  <!-- Micro-batch 2 clustered -->
+  <rect x="700" y="110" width="170" height="120" rx="10" fill="#f0fff0" stroke="#2e8b57" stroke-width="2"/>
+  <text x="785" y="132" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e8b57">Micro-Batch 2</text>
+  <text x="785" y="155" text-anchor="middle" font-size="12" fill="#333">用户 C</text>
+  <text x="785" y="175" text-anchor="middle" font-size="11" fill="#888">访问 Key: P, Q</text>
+  <text x="785" y="198" text-anchor="middle" font-size="12" fill="#333">用户 D</text>
+  <text x="785" y="218" text-anchor="middle" font-size="11" fill="#888">访问 Key: R, S</text>
+
+  <!-- clustering indicator -->
+  <path d="M595 115 Q690 90 785 115" fill="none" stroke="#2e8b57" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="690" y="88" text-anchor="middle" font-size="10" fill="#2e8b57">相似 Key 聚在一起</text>
+
+  <!-- Arrows to All2All -->
+  <line x1="595" y1="230" x2="595" y2="275" stroke="#2e8b57" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <line x1="785" y1="230" x2="785" y2="275" stroke="#2e8b57" stroke-width="2" marker-end="url(#arrowGreen)"/>
+
+  <!-- All2All box clustered -->
+  <rect x="500" y="280" width="380" height="60" rx="8" fill="#e0ffe0" stroke="#2e8b57" stroke-width="2"/>
+  <text x="690" y="305" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e8b57">All2All 通信 (去重后)</text>
+  <text x="690" y="325" text-anchor="middle" font-size="12" fill="#1a6b3a">传输 Keys: X,Y,Z + P,Q + R,S = 7次</text>
+
+  <!-- Savings callout -->
+  <rect x="560" y="350" width="260" height="32" rx="6" fill="#2e8b57" opacity="0.12"/>
+  <text x="690" y="371" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e8b57">无重复！通信量大幅减少 🔻</text>
+
+  <!-- ====== VS divider ====== -->
+  <line x1="450" y1="85" x2="450" y2="395" stroke="#aaa" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <circle cx="450" cy="220" r="22" fill="#fff" stroke="#aaa" stroke-width="2"/>
+  <text x="450" y="226" text-anchor="middle" font-size="15" font-weight="bold" fill="#555">VS</text>
+
+  <!-- ====== Bottom: Result comparison ====== -->
+  <rect x="60" y="420" width="780" height="130" rx="14" fill="#fff" stroke="#bbb" stroke-width="1.5" opacity="0.9"/>
+
+  <!-- Left result -->
+  <rect x="90" y="440" width="310" height="90" rx="10" fill="#fff5f5" stroke="#d94040" stroke-width="1.5"/>
+  <text x="245" y="465" text-anchor="middle" font-size="14" font-weight="bold" fill="#d94040">无聚类</text>
+  <text x="245" y="490" text-anchor="middle" font-size="28" font-weight="bold" fill="#d94040">1331 ms</text>
+  <text x="245" y="515" text-anchor="middle" font-size="12" fill="#999">通信延迟（16 micro-batches）</text>
+
+  <!-- Right result -->
+  <rect x="500" y="440" width="310" height="90" rx="10" fill="#f5fff5" stroke="#2e8b57" stroke-width="1.5"/>
+  <text x="655" y="465" text-anchor="middle" font-size="14" font-weight="bold" fill="#2e8b57">Key聚类后</text>
+  <text x="655" y="490" text-anchor="middle" font-size="28" font-weight="bold" fill="#2e8b57">27.7 ms</text>
+  <text x="655" y="515" text-anchor="middle" font-size="12" fill="#999">通信延迟（16 micro-batches）</text>
+
+  <!-- Speedup arrow -->
+  <line x1="410" y1="485" x2="488" y2="485" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="449" y="475" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a1a2e">48×↓</text>
+
+  <!-- Bottom note -->
+  <text x="450" y="568" text-anchor="middle" font-size="11" fill="#999">核心思想：只改变样本分配顺序，不改变梯度 → 不影响收敛</text>
+</svg>

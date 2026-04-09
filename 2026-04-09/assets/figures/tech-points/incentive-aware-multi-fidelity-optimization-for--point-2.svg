@@ -1,0 +1,116 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2563EB"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#DC2626"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" rx="16" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E293B">VCG激励兼容层：你的支付 = 你对别人的"机会成本"</text>
+
+  <!-- ==================== LEFT: With advertiser i ==================== -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="75" width="380" height="260" rx="14" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
+  </g>
+  <text x="230" y="102" text-anchor="middle" font-size="16" font-weight="bold" fill="#2563EB">① 有广告主 i 参与</text>
+
+  <!-- Optimal config box -->
+  <rect x="70" y="120" width="150" height="60" rx="10" fill="#DBEAFE" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="145" y="146" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E40AF">最优配置 s*</text>
+  <text x="145" y="166" text-anchor="middle" font-size="13" fill="#1E40AF">(泰餐=3, 川菜=1)</text>
+
+  <!-- Total welfare -->
+  <rect x="250" y="120" width="150" height="60" rx="10" fill="#2563EB"/>
+  <text x="325" y="148" text-anchor="middle" font-size="15" font-weight="bold" fill="white">全局福利</text>
+  <text x="325" y="170" text-anchor="middle" font-size="22" font-weight="bold" fill="#FDE68A">190</text>
+
+  <!-- Others' welfare under s* -->
+  <rect x="100" y="210" width="230" height="55" rx="10" fill="white" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="215" y="234" text-anchor="middle" font-size="13" fill="#1E40AF">s* 下除 i 外的福利之和</text>
+  <text x="215" y="254" text-anchor="middle" font-size="20" font-weight="bold" fill="#2563EB">W₋ᵢ(s*) = 170</text>
+
+  <!-- Arrow from config to welfare -->
+  <line x1="220" y1="150" x2="248" y2="150" stroke="#2563EB" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <!-- ==================== RIGHT: Without advertiser i ==================== -->
+  <g filter="url(#shadow)">
+    <rect x="470" y="75" width="390" height="260" rx="14" fill="#FEF2F2" stroke="#DC2626" stroke-width="2"/>
+  </g>
+  <text x="665" y="102" text-anchor="middle" font-size="16" font-weight="bold" fill="#DC2626">② 排除广告主 i（强度=0）</text>
+
+  <!-- Re-optimize -->
+  <rect x="500" y="120" width="160" height="60" rx="10" fill="#FEE2E2" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="580" y="146" text-anchor="middle" font-size="14" font-weight="bold" fill="#991B1B">重新优化</text>
+  <text x="580" y="166" text-anchor="middle" font-size="13" fill="#991B1B">(泰餐=0, 川菜=?)</text>
+
+  <!-- Max welfare without i -->
+  <rect x="690" y="120" width="150" height="60" rx="10" fill="#DC2626"/>
+  <text x="765" y="148" text-anchor="middle" font-size="15" font-weight="bold" fill="white">最大福利</text>
+  <text x="765" y="170" text-anchor="middle" font-size="22" font-weight="bold" fill="#FDE68A">185</text>
+
+  <!-- Arrow -->
+  <line x1="660" y1="150" x2="688" y2="150" stroke="#DC2626" stroke-width="2" marker-end="url(#arrowRed)"/>
+
+  <!-- Label -->
+  <rect x="540" y="210" width="260" height="55" rx="10" fill="white" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="670" y="234" text-anchor="middle" font-size="13" fill="#991B1B">排除 i 后的最大社会福利</text>
+  <text x="670" y="254" text-anchor="middle" font-size="20" font-weight="bold" fill="#DC2626">W*₋ᵢ = 185</text>
+
+  <!-- ==================== BOTTOM: Payment Formula ==================== -->
+  <g filter="url(#shadow)">
+    <rect x="100" y="370" width="700" height="100" rx="16" fill="white" stroke="#7C3AED" stroke-width="2.5"/>
+  </g>
+
+  <!-- Big minus sign -->
+  <text x="450" y="415" text-anchor="middle" font-size="18" font-weight="bold" fill="#7C3AED">支付公式</text>
+
+  <!-- Formula visualization -->
+  <rect x="140" y="425" width="160" height="36" rx="8" fill="#FEE2E2"/>
+  <text x="220" y="449" text-anchor="middle" font-size="15" font-weight="bold" fill="#DC2626">W*₋ᵢ = 185</text>
+
+  <text x="320" y="450" text-anchor="middle" font-size="24" font-weight="bold" fill="#555">−</text>
+
+  <rect x="345" y="425" width="180" height="36" rx="8" fill="#DBEAFE"/>
+  <text x="435" y="449" text-anchor="middle" font-size="15" font-weight="bold" fill="#2563EB">W₋ᵢ(s*) = 170</text>
+
+  <text x="545" y="450" text-anchor="middle" font-size="24" font-weight="bold" fill="#555">=</text>
+
+  <rect x="570" y="420" width="190" height="44" rx="10" fill="#7C3AED"/>
+  <text x="665" y="449" text-anchor="middle" font-size="18" font-weight="bold" fill="white">支付 = 15</text>
+
+  <!-- Arrows from top to formula -->
+  <path d="M670,265 L670,310 Q670,330 650,340 L520,370" stroke="#DC2626" stroke-width="2" fill="none" stroke-dasharray="6,3" marker-end="url(#arrowRed)"/>
+  <path d="M215,265 L215,310 Q215,330 235,340 L340,370" stroke="#2563EB" stroke-width="2" fill="none" stroke-dasharray="6,3" marker-end="url(#arrowBlue)"/>
+
+  <!-- ==================== BOTTOM: Result ==================== -->
+  <g filter="url(#shadow)">
+    <rect x="170" y="500" width="560" height="95" rx="16" fill="#F0FDF4" stroke="#16A34A" stroke-width="2.5"/>
+  </g>
+
+  <text x="450" y="530" text-anchor="middle" font-size="17" font-weight="bold" fill="#166534">🎯 核心结论</text>
+  <text x="450" y="556" text-anchor="middle" font-size="15" fill="#166534">净效用 = 全局福利(190) − W*₋ᵢ(185) = <tspan font-weight="bold" font-size="17" fill="#16A34A">5</tspan></text>
+  <text x="450" y="580" text-anchor="middle" font-size="14" fill="#166534">= 你加入带来的社会福利增量 → <tspan font-weight="bold">谎报无法获利，如实报告最优！</tspan></text>
+
+  <!-- Arrow from payment to result -->
+  <line x1="450" y1="470" x2="450" y2="498" stroke="#16A34A" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Epsilon note -->
+  <text x="830" y="555" text-anchor="middle" font-size="11" fill="#6B7280">近似误差 ≤ ε</text>
+  <rect x="780" y="540" width="100" height="22" rx="6" fill="none" stroke="#9CA3AF" stroke-width="1" stroke-dasharray="3,2"/>
+</svg>

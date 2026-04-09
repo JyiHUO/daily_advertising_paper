@@ -1,0 +1,19 @@
+{
+  "date": "2026-04-09",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL"
+  ],
+  "candidate_count": 2,
+  "supplementary_count": 0,
+  "focus_titles": [
+    "Incentive-Aware Multi-Fidelity Optimization for Generative Advertising in Large Language Models",
+    "NestPipe: Large-Scale Recommendation Training on 1,500+ Accelerators via Nested Pipelining"
+  ],
+  "focus_status": {
+    "Incentive-Aware Multi-Fidelity Optimization for Generative Advertising in Large Language Models": "completed",
+    "NestPipe: Large-Scale Recommendation Training on 1,500+ Accelerators via Nested Pipelining": "completed"
+  }
+}

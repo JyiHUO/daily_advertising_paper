@@ -1,0 +1,135 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="barOrange" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff6b35"/>
+      <stop offset="100%" stop-color="#ff9a5c"/>
+    </linearGradient>
+    <linearGradient id="barBlue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4facfe"/>
+      <stop offset="100%" stop-color="#00f2fe"/>
+    </linearGradient>
+    <linearGradient id="barGreen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#43e97b"/>
+      <stop offset="100%" stop-color="#38f9d7"/>
+    </linearGradient>
+    <linearGradient id="barGray" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#636e84"/>
+      <stop offset="100%" stop-color="#8e99af"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="560" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">NestPipe 正交可组合性：通信量 × 暴露比 双重压缩</text>
+  <text x="450" y="66" text-anchor="middle" fill="#8899bb" font-size="14">1536 NPU · 同步训练 · 近线性扩展</text>
+
+  <!-- ====== LEFT: Scaling Efficiency Comparison ====== -->
+  <text x="30" y="105" fill="#ccd6e8" font-size="16" font-weight="bold">扩展效率对比 (1536卡)</text>
+
+  <!-- Bar: TorchRec -->
+  <rect x="30" y="120" width="168" height="32" rx="5" fill="url(#barGray)" opacity="0.85"/>
+  <text x="40" y="142" fill="#1a2744" font-size="13" font-weight="bold">TorchRec</text>
+  <text x="190" y="142" fill="#8e99af" font-size="13" text-anchor="end">44.3%</text>
+
+  <!-- Bar: 2D-SP -->
+  <rect x="30" y="160" width="187" height="32" rx="5" fill="url(#barGray)" opacity="0.85"/>
+  <text x="40" y="182" fill="#1a2744" font-size="13" font-weight="bold">2D-SP</text>
+  <text x="209" y="182" fill="#8e99af" font-size="13" text-anchor="end">49.3%</text>
+
+  <!-- Bar: UniEmb -->
+  <rect x="30" y="200" width="256" height="32" rx="5" fill="url(#barOrange)" opacity="0.85"/>
+  <text x="40" y="222" fill="#1a2744" font-size="13" font-weight="bold">UniEmb</text>
+  <text x="278" y="222" fill="#ff9a5c" font-size="13" text-anchor="end">67.6%</text>
+
+  <!-- Bar: NestPipe -->
+  <rect x="30" y="240" width="356" height="32" rx="5" fill="url(#barBlue)" opacity="0.9"/>
+  <text x="40" y="262" fill="#0f1729" font-size="13" font-weight="bold">NestPipe</text>
+  <text x="378" y="262" fill="#4facfe" font-size="13" text-anchor="end">94.1%</text>
+
+  <!-- Bar: NestPipe + 2D-SP -->
+  <rect x="30" y="280" width="368" height="36" rx="5" fill="url(#barGreen)" opacity="0.95" filter="url(#glow)"/>
+  <text x="40" y="304" fill="#0f1729" font-size="14" font-weight="bold">NestPipe + 2D-SP</text>
+  <text x="390" y="304" fill="#38f9d7" font-size="14" font-weight="bold" text-anchor="end">97.2%</text>
+
+  <!-- Scale line -->
+  <line x1="30" y1="324" x2="410" y2="324" stroke="#445" stroke-width="1"/>
+  <text x="30" y="340" fill="#667" font-size="11">0%</text>
+  <text x="220" y="340" fill="#667" font-size="11">50%</text>
+  <text x="400" y="340" fill="#667" font-size="11">100%</text>
+
+  <!-- ====== RIGHT: Pipeline Diagram ====== -->
+  <!-- The key insight: 2D-SP reduces volume, FWP hides remainder -->
+
+  <!-- Big box: All2All timeline -->
+  <rect x="460" y="95" width="420" height="250" rx="10" fill="#1e2f50" stroke="#334466" stroke-width="1.5"/>
+  <text x="670" y="120" text-anchor="middle" fill="#ccd6e8" font-size="15" font-weight="bold">All2All 通信延迟压缩流程</text>
+
+  <!-- Step 1: Original -->
+  <rect x="490" y="140" width="360" height="40" rx="6" fill="#cc3333" opacity="0.7"/>
+  <text x="670" y="165" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">原始 All2All: 1185 ms</text>
+  <text x="490" y="135" fill="#aa7777" font-size="11">① 原始通信</text>
+
+  <!-- Arrow down -->
+  <polygon points="670,185 660,185 670,200 680,185" fill="#ff6b35"/>
+  <text x="700" y="197" fill="#ff9a5c" font-size="12" font-weight="bold">2D-SP 压缩通信量</text>
+
+  <!-- Step 2: After 2D-SP -->
+  <rect x="490" y="205" width="138" height="40" rx="6" fill="#cc7722" opacity="0.75"/>
+  <text x="559" y="230" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">452 ms</text>
+  <rect x="634" y="205" width="216" height="40" rx="6" fill="#1e2f50" stroke="#445" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="742" y="230" text-anchor="middle" fill="#667" font-size="12">已消除</text>
+  <text x="490" y="200" fill="#aa8855" font-size="11">② 2D-SP 后</text>
+
+  <!-- Arrow down -->
+  <polygon points="559,250 549,250 559,265 569,250" fill="#4facfe"/>
+  <text x="589" y="262" fill="#4facfe" font-size="12" font-weight="bold">FWP 隐藏到计算后面</text>
+
+  <!-- Step 3: After NestPipe FWP -->
+  <rect x="490" y="270" width="17" height="40" rx="4" fill="#43e97b" opacity="0.95" filter="url(#glow)"/>
+  <text x="515" y="295" fill="#38f9d7" font-size="14" font-weight="bold">55.6 ms 暴露</text>
+  <rect x="517" y="274" width="120" height="32" rx="4" fill="#2a4a3a" stroke="#43e97b" stroke-width="1" stroke-dasharray="3,3" opacity="0.5"/>
+  <text x="577" y="295" text-anchor="middle" fill="#5a8a6a" font-size="11">396ms 被隐藏</text>
+  <text x="490" y="265" fill="#55aa77" font-size="11">③ FWP 后</text>
+
+  <!-- ====== BOTTOM: Key Insight ====== -->
+  <rect x="40" y="370" width="820" height="160" rx="12" fill="#162240" stroke="#2a4a80" stroke-width="1.5"/>
+
+  <!-- Two strategy boxes -->
+  <rect x="70" y="395" width="230" height="105" rx="8" fill="#2a3a5a" stroke="#4facfe" stroke-width="2"/>
+  <text x="185" y="420" text-anchor="middle" fill="#4facfe" font-size="15" font-weight="bold">减少通信绝对量</text>
+  <text x="185" y="445" text-anchor="middle" fill="#8899bb" font-size="13">2D-SP / 压缩 / Sharding</text>
+  <text x="185" y="470" text-anchor="middle" fill="#667" font-size="12">1185ms → 452ms</text>
+  <text x="185" y="490" text-anchor="middle" fill="#8899bb" font-size="11">减少 62%</text>
+
+  <!-- Multiply sign -->
+  <text x="340" y="455" text-anchor="middle" fill="#43e97b" font-size="36" font-weight="bold" filter="url(#glow)">×</text>
+
+  <rect x="380" y="395" width="230" height="105" rx="8" fill="#2a3a5a" stroke="#43e97b" stroke-width="2"/>
+  <text x="495" y="420" text-anchor="middle" fill="#43e97b" font-size="15" font-weight="bold">降低通信暴露比</text>
+  <text x="495" y="445" text-anchor="middle" fill="#8899bb" font-size="13">NestPipe FWP 流水线</text>
+  <text x="495" y="470" text-anchor="middle" fill="#667" font-size="12">452ms → 55.6ms 暴露</text>
+  <text x="495" y="490" text-anchor="middle" fill="#8899bb" font-size="11">暴露比 1/N</text>
+
+  <!-- Equals sign -->
+  <text x="645" y="455" text-anchor="middle" fill="#fff" font-size="36" font-weight="bold">=</text>
+
+  <!-- Result -->
+  <rect x="680" y="395" width="160" height="105" rx="8" fill="#1a3a2a" stroke="#38f9d7" stroke-width="2.5" filter="url(#glow)"/>
+  <text x="760" y="425" text-anchor="middle" fill="#38f9d7" font-size="18" font-weight="bold">97.2%</text>
+  <text x="760" y="448" text-anchor="middle" fill="#ccc" font-size="13">扩展效率</text>
+  <text x="760" y="472" text-anchor="middle" fill="#38f9d7" font-size="15" font-weight="bold">4.32× 加速</text>
+  <text x="760" y="492" text-anchor="middle" fill="#8899bb" font-size="11">近线性扩展</text>
+
+  <!-- Bottom label -->
+  <text x="450" y="548" text-anchor="middle" fill="#556688" font-size="12">核心洞察：NestPipe 优化暴露比而非绝对量，天然与通信压缩方法正交组合</text>
+</svg>

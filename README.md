@@ -4,18 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-04-08
+- **日期**：2026-04-09
 - **分类**：cs.IR + cs.AI + cs.LG + cs.CL
-- **候选论文数**：4
+- **候选论文数**：2
 - **必读论文**：
-  - JD-BP: A Joint-Decision Generative Framework for Auto-Bidding and Pricing
-  - Tencent Advertising Algorithm Challenge 2025: All-Modality Generative Recommendation
-- **日报路径**：[2026-04-08/daily_report.md](2026-04-08/daily_report.md)
+  - Incentive-Aware Multi-Fidelity Optimization for Generative Advertising in Large Language Models
+  - NestPipe: Large-Scale Recommendation Training on 1,500+ Accelerators via Nested Pipelining
+- **日报路径**：[2026-04-09/daily_report.md](2026-04-09/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-04-09 | cs.IR + cs.AI + cs.LG + cs.CL | 2 | 1 | Incentive-Aware Multi-Fidelity Optimization for Generative Advertising in Large Language Models | [2026-04-09/daily_report.md](2026-04-09/daily_report.md) |
+|  |  |  | 2 | NestPipe: Large-Scale Recommendation Training on 1,500+ Accelerators via Nested Pipelining |  |
 | 2026-04-08 | cs.IR + cs.AI + cs.LG + cs.CL | 4 | 1 | JD-BP: A Joint-Decision Generative Framework for Auto-Bidding and Pricing | [2026-04-08/daily_report.md](2026-04-08/daily_report.md) |
 |  |  |  | 2 | Tencent Advertising Algorithm Challenge 2025: All-Modality Generative Recommendation |  |
 | 2026-04-07 | cs.IR + cs.AI + cs.LG + cs.CL | 2 | 1 | Semantic IDs for Recommender Systems at Snapchat: Use Cases, Technical Challenges, and Design Choices | [2026-04-07/daily_report.md](2026-04-07/daily_report.md) |

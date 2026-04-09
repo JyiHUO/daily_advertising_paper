@@ -1,0 +1,138 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrowW" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrowG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#10b981"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bgGrad)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#f1f5f9" font-size="22" font-weight="bold">NestPipe：并行重叠 ≡ 串行训练</text>
+  <text x="450" y="68" text-anchor="middle" fill="#94a3b8" font-size="14">嵌套流水线的严格同步一致性保证</text>
+
+  <!-- ============ LEFT: DBP Consistency ============ -->
+  <rect x="40" y="100" width="380" height="230" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <rect x="40" y="100" width="380" height="38" rx="14" fill="url(#blueGrad)"/>
+  <rect x="40" y="124" width="380" height="14" fill="url(#blueGrad)"/>
+  <text x="230" y="125" text-anchor="middle" fill="white" font-size="15" font-weight="bold">DBP 一致性（跨 Batch）</text>
+
+  <!-- Dual buffer diagram -->
+  <!-- Batch B -->
+  <rect x="65" y="155" width="140" height="50" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.2"/>
+  <text x="135" y="175" text-anchor="middle" fill="#93c5fd" font-size="13" font-weight="bold">Batch B</text>
+  <text x="135" y="193" text-anchor="middle" fill="#64748b" font-size="11">更新 Active Buffer</text>
+
+  <!-- Batch B+1 -->
+  <rect x="255" y="155" width="140" height="50" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.2"/>
+  <text x="325" y="175" text-anchor="middle" fill="#93c5fd" font-size="13" font-weight="bold">Batch B+1</text>
+  <text x="325" y="193" text-anchor="middle" fill="#64748b" font-size="11">预取到 Prefetch Buffer</text>
+
+  <!-- Arrow between batches -->
+  <line x1="208" y1="180" x2="250" y2="180" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrowW)"/>
+
+  <!-- Sync explanation -->
+  <rect x="80" y="220" width="300" height="44" rx="8" fill="#0f2035" stroke="#1e40af" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="230" y="239" text-anchor="middle" fill="#60a5fa" font-size="12">重叠的 key → 同步覆盖为最新值</text>
+  <text x="230" y="255" text-anchor="middle" fill="#60a5fa" font-size="12">不重叠的 key → 本身就是最新值</text>
+
+  <!-- Result -->
+  <text x="230" y="290" text-anchor="middle" fill="#10b981" font-size="13" font-weight="bold" filter="url(#glow)">✓ B+1 开算时参数严格最新</text>
+
+  <!-- ============ RIGHT: FWP Consistency ============ -->
+  <rect x="470" y="100" width="390" height="230" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <rect x="470" y="100" width="390" height="38" rx="14" fill="url(#purpleGrad)"/>
+  <rect x="470" y="124" width="390" height="14" fill="url(#purpleGrad)"/>
+  <text x="665" y="125" text-anchor="middle" fill="white" font-size="15" font-weight="bold">FWP 一致性（Batch 内部）</text>
+
+  <!-- Frozen params box -->
+  <rect x="500" y="155" width="120" height="55" rx="8" fill="#2d1854" stroke="#8b5cf6" stroke-width="1.2"/>
+  <text x="560" y="178" text-anchor="middle" fill="#c4b5fd" font-size="13" font-weight="bold">冻结参数</text>
+  <text x="560" y="196" text-anchor="middle" fill="#7c3aed" font-size="11">θ 不变</text>
+
+  <!-- Micro-batches -->
+  <rect x="660" y="150" width="55" height="28" rx="5" fill="#3b1f70" stroke="#a78bfa" stroke-width="1"/>
+  <text x="687" y="169" text-anchor="middle" fill="#ddd6fe" font-size="11">μ-B₁</text>
+  <rect x="660" y="183" width="55" height="28" rx="5" fill="#3b1f70" stroke="#a78bfa" stroke-width="1"/>
+  <text x="687" y="202" text-anchor="middle" fill="#ddd6fe" font-size="11">μ-B₂</text>
+  <rect x="725" y="150" width="55" height="28" rx="5" fill="#3b1f70" stroke="#a78bfa" stroke-width="1"/>
+  <text x="752" y="169" text-anchor="middle" fill="#ddd6fe" font-size="11">μ-B₃</text>
+  <rect x="725" y="183" width="55" height="28" rx="5" fill="#3b1f70" stroke="#a78bfa" stroke-width="1"/>
+  <text x="752" y="202" text-anchor="middle" fill="#ddd6fe" font-size="11">μ-B₄</text>
+
+  <!-- Arrows from frozen to micro-batches -->
+  <line x1="622" y1="180" x2="655" y2="170" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrowW)"/>
+  <line x1="622" y1="185" x2="655" y2="195" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrowW)"/>
+
+  <!-- Gradient sum -->
+  <rect x="510" y="225" width="320" height="38" rx="8" fill="#0f1525" stroke="#5b21b6" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="670" y="243" text-anchor="middle" fill="#a78bfa" font-size="12">Sample Clustering ≡ 不同划分 → Σ梯度不变</text>
+  <text x="670" y="258" text-anchor="middle" fill="#a78bfa" font-size="12">θ' = θ − η · Σ∇L  更新公式完全一致</text>
+
+  <!-- Result -->
+  <text x="665" y="302" text-anchor="middle" fill="#10b981" font-size="13" font-weight="bold" filter="url(#glow)">✓ 无过期参数问题</text>
+
+  <!-- ============ BOTTOM: Combined Result ============ -->
+  <!-- Nesting arrow -->
+  <line x1="230" y1="340" x2="450" y2="380" stroke="#475569" stroke-width="2" marker-end="url(#arrowW)"/>
+  <line x1="665" y1="340" x2="450" y2="380" stroke="#475569" stroke-width="2" marker-end="url(#arrowW)"/>
+  <text x="450" y="370" text-anchor="middle" fill="#64748b" font-size="12">嵌套组合</text>
+
+  <!-- Big result box -->
+  <rect x="170" y="390" width="560" height="70" rx="16" fill="url(#greenGrad)" opacity="0.15" stroke="#10b981" stroke-width="2"/>
+  <text x="450" y="420" text-anchor="middle" fill="#10b981" font-size="18" font-weight="bold" filter="url(#glow)">NestPipe 每步更新 ≡ 标准同步训练</text>
+  <text x="450" y="445" text-anchor="middle" fill="#6ee7b7" font-size="14">数学严格等价，零精度损失</text>
+
+  <!-- ============ BOTTOM BAR: Comparison ============ -->
+  <rect x="60" y="490" width="780" height="110" rx="12" fill="#111827" stroke="#1f2937" stroke-width="1.5"/>
+  <text x="450" y="515" text-anchor="middle" fill="#94a3b8" font-size="13" font-weight="bold">实验对比验证（HR@10 偏差）</text>
+
+  <!-- NestPipe bar -->
+  <rect x="110" y="530" width="22" height="50" rx="4" fill="url(#greenGrad)"/>
+  <text x="121" y="595" text-anchor="middle" fill="#10b981" font-size="12" font-weight="bold">NestPipe</text>
+  <text x="121" y="525" text-anchor="middle" fill="#6ee7b7" font-size="11" font-weight="bold">&lt;0.0003</text>
+
+  <!-- UniEmb bar -->
+  <rect x="240" y="535" width="22" height="168" rx="4" fill="#ef4444" opacity="0.7" transform="scale(1, 0.27) translate(0, 1290)"/>
+  <rect x="240" y="508" width="22" height="72" rx="4" fill="#ef4444" opacity="0.6"/>
+  <text x="251" y="595" text-anchor="middle" fill="#f87171" font-size="12">UniEmb</text>
+  <text x="251" y="503" text-anchor="middle" fill="#fca5a5" font-size="11">-0.0021</text>
+
+  <!-- 2D-SP bar -->
+  <rect x="360" y="518" width="22" height="62" rx="4" fill="#f59e0b" opacity="0.6"/>
+  <text x="371" y="595" text-anchor="middle" fill="#fbbf24" font-size="12">2D-SP</text>
+  <text x="371" y="513" text-anchor="middle" fill="#fcd34d" font-size="11">-0.001</text>
+
+  <!-- Baseline reference line -->
+  <line x1="90" y1="580" x2="800" y2="580" stroke="#374151" stroke-width="1" stroke-dasharray="6,4"/>
+  <text x="790" y="576" text-anchor="end" fill="#4b5563" font-size="10">Baseline</text>
+
+  <!-- Scale badge -->
+  <rect x="520" y="528" width="260" height="52" rx="10" fill="#0c2618" stroke="#065f46" stroke-width="1"/>
+  <text x="650" y="550" text-anchor="middle" fill="#34d399" font-size="13" font-weight="bold">🚀 1536 卡 · 3.06× 加速</text>
+  <text x="650" y="570" text-anchor="middle" fill="#6ee7b7" font-size="12">94% 扩展效率 · 零精度损失</text>
+</svg>

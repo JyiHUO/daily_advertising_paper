@@ -1,0 +1,120 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-09/downloaded_pdfs/incentive-aware-multi-fidelity-optimization-for-generative-advertising-in-large-.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-09/assets/figure_candidates/incentive-aware-multi-fidelity-optimization-for-generative-advertising-in-large-",
+  "candidates": [
+    {
+      "id": "page-11-block-8",
+      "page_index": 11,
+      "caption": "Jiayuan Liu, Mingyu Guo, and Vincent Conitzer. An interpretable automated mechanism design framework with large language models. arXiv preprint arXiv:2502.12203 , 2025.",
+      "clip": [
+        77.4,
+        71.43968505859374,
+        534.5986877441406,
+        380.23968505859375
+      ],
+      "clip_area": 141182.95477539065,
+      "page_area": 484704.0,
+      "text_density": 0.6591980846358988,
+      "kind": "captioned_figure",
+      "score": 21.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-09/assets/figure_candidates/incentive-aware-multi-fidelity-optimization-for-generative-advertising-in-large-/01-p12-captioned_figure.png",
+      "filename": "01-p12-captioned_figure.png"
+    },
+    {
+      "id": "page-2-embedded-1-0",
+      "page_index": 2,
+      "caption": "第 3 页内嵌图片候选",
+      "clip": [
+        197.64100646972656,
+        404.7484436035156,
+        312.715576171875,
+        519.822998046875
+      ],
+      "clip_area": 13242.154836236034,
+      "page_area": 484704.0,
+      "text_density": 0.06855957114180257,
+      "kind": "embedded_image",
+      "xref": 856,
+      "score": 7.147135053735956,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-09/assets/figure_candidates/incentive-aware-multi-fidelity-optimization-for-generative-advertising-in-large-/02-p3-embedded_image.png",
+      "filename": "02-p3-embedded_image.png"
+    },
+    {
+      "id": "page-2-embedded-0-0",
+      "page_index": 2,
+      "caption": "第 3 页内嵌图片候选",
+      "clip": [
+        96.0,
+        404.7484436035156,
+        211.07455444335938,
+        519.822998046875
+      ],
+      "clip_area": 13242.15308033768,
+      "page_area": 484704.0,
+      "text_density": 0.05698473190910285,
+      "kind": "embedded_image",
+      "xref": 855,
+      "score": 7.1471350342259745,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-09/assets/figure_candidates/incentive-aware-multi-fidelity-optimization-for-generative-advertising-in-large-/03-p3-embedded_image.png",
+      "filename": "03-p3-embedded_image.png"
+    },
+    {
+      "id": "page-2-embedded-2-0",
+      "page_index": 2,
+      "caption": "第 3 页内嵌图片候选",
+      "clip": [
+        299.281005859375,
+        404.7484436035156,
+        414.3555603027344,
+        519.822998046875
+      ],
+      "clip_area": 13242.15308033768,
+      "page_area": 484704.0,
+      "text_density": 0.06831252162264015,
+      "kind": "embedded_image",
+      "xref": 857,
+      "score": 7.1471350342259745,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-09/assets/figure_candidates/incentive-aware-multi-fidelity-optimization-for-generative-advertising-in-large-/04-p3-embedded_image.png",
+      "filename": "04-p3-embedded_image.png"
+    },
+    {
+      "id": "page-2-embedded-3-0",
+      "page_index": 2,
+      "caption": "第 3 页内嵌图片候选",
+      "clip": [
+        400.9219970703125,
+        404.7484436035156,
+        515.9965515136719,
+        519.822998046875
+      ],
+      "clip_area": 13242.15308033768,
+      "page_area": 484704.0,
+      "text_density": 0.057277817364350475,
+      "kind": "embedded_image",
+      "xref": 858,
+      "score": 7.1471350342259745,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-09/assets/figure_candidates/incentive-aware-multi-fidelity-optimization-for-generative-advertising-in-large-/05-p3-embedded_image.png",
+      "filename": "05-p3-embedded_image.png"
+    },
+    {
+      "id": "page-7-embedded-0-0",
+      "page_index": 7,
+      "caption": "第 8 页内嵌图片候选",
+      "clip": [
+        96.0,
+        69.86074829101562,
+        515.981201171875,
+        265.1729736328125
+      ],
+      "clip_area": 82027.46300259978,
+      "page_area": 484704.0,
+      "text_density": 0.007668055597493229,
+      "kind": "embedded_image",
+      "xref": 882,
+      "score": 5.911416255584442,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-09/assets/figure_candidates/incentive-aware-multi-fidelity-optimization-for-generative-advertising-in-large-/06-p8-embedded_image.png",
+      "filename": "06-p8-embedded_image.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-09/assets/figure_candidates/incentive-aware-multi-fidelity-optimization-for-generative-advertising-in-large-/contact-sheet.svg"
+}

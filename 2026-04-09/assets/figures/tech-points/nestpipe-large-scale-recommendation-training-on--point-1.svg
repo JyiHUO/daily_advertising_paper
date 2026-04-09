@@ -1,0 +1,116 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#555">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#e74c3c">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#27ae60">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8f9fa"/>
+      <stop offset="100%" stop-color="#e9ecef"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="560" fill="url(#bgGrad)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#2c3e50">双缓冲流水线 (DBP) 消除 Embedding Lookup 延迟</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#7f8c8d">NestPipe: 连续 batch 错开执行 + 双缓冲同步保证参数新鲜</text>
+
+  <!-- ===== TOP: Pipeline view ===== -->
+  <text x="30" y="100" font-size="15" font-weight="bold" fill="#2c3e50">流水线：连续 batch 错开执行</text>
+
+  <!-- Time axis -->
+  <line x1="120" y1="230" x2="870" y2="230" stroke="#bbb" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="875" y="235" font-size="11" fill="#888">时间 →</text>
+
+  <!-- Row labels -->
+  <text x="15" y="140" font-size="12" fill="#555" font-weight="bold">预取</text>
+  <text x="15" y="165" font-size="12" fill="#555" font-weight="bold">H2D传输</text>
+  <text x="15" y="190" font-size="12" fill="#555" font-weight="bold">Key路由</text>
+  <text x="15" y="215" font-size="12" fill="#555" font-weight="bold">GPU计算</text>
+
+  <!-- Batch colors: B4=#3498db, B5=#e67e22, B6=#9b59b6 -->
+  <!-- Batch 4 -->
+  <rect x="120" y="125" width="120" height="22" rx="4" fill="#3498db" opacity="0.25" stroke="#3498db" stroke-width="1.5"/>
+  <text x="180" y="141" text-anchor="middle" font-size="11" fill="#2c3e50">Batch 4</text>
+
+  <rect x="200" y="150" width="120" height="22" rx="4" fill="#3498db" opacity="0.35" stroke="#3498db" stroke-width="1.5"/>
+  <text x="260" y="166" text-anchor="middle" font-size="11" fill="#2c3e50">Batch 4</text>
+
+  <rect x="280" y="175" width="120" height="22" rx="4" fill="#3498db" opacity="0.45" stroke="#3498db" stroke-width="1.5"/>
+  <text x="340" y="191" text-anchor="middle" font-size="11" fill="#2c3e50">Batch 4</text>
+
+  <rect x="360" y="200" width="160" height="22" rx="4" fill="#3498db" opacity="0.85" stroke="#3498db" stroke-width="2"/>
+  <text x="440" y="216" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold">Batch 4 计算</text>
+
+  <!-- Batch 5 -->
+  <rect x="240" y="125" width="120" height="22" rx="4" fill="#e67e22" opacity="0.25" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="300" y="141" text-anchor="middle" font-size="11" fill="#2c3e50">Batch 5</text>
+
+  <rect x="320" y="150" width="120" height="22" rx="4" fill="#e67e22" opacity="0.35" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="380" y="166" text-anchor="middle" font-size="11" fill="#2c3e50">Batch 5</text>
+
+  <rect x="400" y="175" width="120" height="22" rx="4" fill="#e67e22" opacity="0.45" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="460" y="191" text-anchor="middle" font-size="11" fill="#2c3e50">Batch 5</text>
+
+  <rect x="530" y="200" width="160" height="22" rx="4" fill="#e67e22" opacity="0.85" stroke="#e67e22" stroke-width="2"/>
+  <text x="610" y="216" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold">Batch 5 计算</text>
+
+  <!-- Batch 6 -->
+  <rect x="360" y="125" width="120" height="22" rx="4" fill="#9b59b6" opacity="0.25" stroke="#9b59b6" stroke-width="1.5"/>
+  <text x="420" y="141" text-anchor="middle" font-size="11" fill="#2c3e50">Batch 6</text>
+
+  <rect x="440" y="150" width="120" height="22" rx="4" fill="#9b59b6" opacity="0.35" stroke="#9b59b6" stroke-width="1.5"/>
+  <text x="500" y="166" text-anchor="middle" font-size="11" fill="#2c3e50">Batch 6</text>
+
+  <rect x="520" y="175" width="120" height="22" rx="4" fill="#9b59b6" opacity="0.45" stroke="#9b59b6" stroke-width="1.5"/>
+  <text x="580" y="191" text-anchor="middle" font-size="11" fill="#2c3e50">Batch 6</text>
+
+  <rect x="700" y="200" width="160" height="22" rx="4" fill="#9b59b6" opacity="0.85" stroke="#9b59b6" stroke-width="2"/>
+  <text x="780" y="216" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold">Batch 6 计算</text>
+
+  <!-- Sync point annotation -->
+  <line x1="525" y1="198" x2="525" y2="240" stroke="#e74c3c" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="525" y="255" text-anchor="middle" font-size="11" fill="#e74c3c" font-weight="bold">同步点 (&lt;2ms)</text>
+
+  <!-- ===== BOTTOM: Double Buffer detail ===== -->
+  <text x="30" y="300" font-size="15" font-weight="bold" fill="#2c3e50">核心：双缓冲区 + 交集同步</text>
+
+  <!-- GPU box -->
+  <rect x="50" y="315" width="800" height="215" rx="10" fill="#fff" stroke="#bdc3c7" stroke-width="2" opacity="0.7"/>
+  <text x="70" y="338" font-size="13" fill="#95a5a6" font-weight="bold">GPU HBM</text>
+
+  <!-- Active Buffer -->
+  <rect x="100" y="355" width="280" height="80" rx="8" fill="#3498db" opacity="0.15" stroke="#3498db" stroke-width="2"/>
+  <text x="240" y="378" text-anchor="middle" font-size="15" font-weight="bold" fill="#2980b9">Active Buffer</text>
+  <text x="240" y="398" text-anchor="middle" font-size="12" fill="#555">正在计算的 Batch 4</text>
+  <text x="240" y="418" text-anchor="middle" font-size="11" fill="#27ae60" font-weight="bold">✓ 梯度已更新</text>
+
+  <!-- Prefetch Buffer -->
+  <rect x="520" y="355" width="280" height="80" rx="8" fill="#e67e22" opacity="0.15" stroke="#e67e22" stroke-width="2"/>
+  <text x="660" y="378" text-anchor="middle" font-size="15" font-weight="bold" fill="#d35400">Prefetch Buffer</text>
+  <text x="660" y="398" text-anchor="middle" font-size="12" fill="#555">下一个 Batch 5 预加载中</text>
+  <text x="660" y="418" text-anchor="middle" font-size="11" fill="#c0392b">⚠ 可能过期</text>
+
+  <!-- Sync arrow -->
+  <path d="M 385 385 C 420 355, 480 355, 515 385" fill="none" stroke="#e74c3c" stroke-width="3" marker-end="url(#arrowRed)"/>
+  <rect x="405" y="340" width="100" height="24" rx="6" fill="#e74c3c"/>
+  <text x="455" y="357" text-anchor="middle" font-size="11" fill="#fff" font-weight="bold">D2D 拷贝</text>
+  <text x="455" y="330" text-anchor="middle" font-size="10" fill="#e74c3c">交集 keys 同步</text>
+
+  <!-- Swap annotation -->
+  <path d="M 240 440 C 240 485, 660 485, 660 440" fill="none" stroke="#27ae60" stroke-width="2.5" stroke-dasharray="8,4" marker-end="url(#arrowGreen)"/>
+  <path d="M 660 442 C 660 490, 240 490, 240 442" fill="none" stroke="#27ae60" stroke-width="2.5" stroke-dasharray="8,4" marker-end="url(#arrowGreen)"/>
+  <rect x="385" y="472" width="130" height="26" rx="6" fill="#27ae60"/>
+  <text x="450" y="490" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold">角色互换 🔄</text>
+
+  <!-- Key insight box -->
+  <rect x="55" y="508" width="790" height="38" rx="8" fill="#fef9e7" stroke="#f39c12" stroke-width="1.5"/>
+  <text x="450" y="532" text-anchor="middle" font-size="13" fill="#7d6608" font-weight="bold">💡 关键：只拷贝两个 buffer 的交集 key（热门 item），开销 &lt;2ms，被其他流水线阶段完全掩盖</text>
+</svg>

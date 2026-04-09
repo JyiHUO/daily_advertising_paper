@@ -1,0 +1,127 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2e8b57"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#c0392b"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0f4ff;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#e8edf8;stop-opacity:1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="560" rx="16" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a237e">主动反事实优化 ACO：VCG支付零成本计算</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#666">核心思想：复用主优化的GP模型，反事实查询几乎免费</text>
+
+  <!-- ===== LEFT: Naive VCG (expensive) ===== -->
+  <rect x="30" y="85" width="380" height="440" rx="14" fill="#fff5f5" stroke="#e57373" stroke-width="2"/>
+  <text x="220" y="112" text-anchor="middle" font-size="17" font-weight="bold" fill="#c0392b">❌ 朴素 VCG 方法</text>
+
+  <!-- Main optimization box -->
+  <rect x="60" y="130" width="320" height="70" rx="10" fill="#fff" stroke="#e57373" stroke-width="1.5"/>
+  <text x="220" y="155" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">主优化</text>
+  <text x="220" y="175" text-anchor="middle" font-size="12" fill="#777">50次LLM采样 → 最优配置 s*</text>
+
+  <!-- N counterfactual boxes -->
+  <g transform="translate(60,220)">
+    <rect width="320" height="280" rx="10" fill="#fce4e4" stroke="#e57373" stroke-width="1.5" stroke-dasharray="6,3"/>
+    <text x="160" y="24" text-anchor="middle" font-size="13" font-weight="bold" fill="#c0392b">N 个反事实优化（从头算）</text>
+
+    <!-- Box 1 -->
+    <rect x="15" y="40" width="135" height="65" rx="8" fill="#fff" stroke="#e57373" stroke-width="1"/>
+    <text x="82" y="62" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">排除广告主1</text>
+    <text x="82" y="80" text-anchor="middle" font-size="11" fill="#888">50次采样 🔥</text>
+
+    <!-- Box 2 -->
+    <rect x="170" y="40" width="135" height="65" rx="8" fill="#fff" stroke="#e57373" stroke-width="1"/>
+    <text x="237" y="62" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">排除广告主2</text>
+    <text x="237" y="80" text-anchor="middle" font-size="11" fill="#888">50次采样 🔥</text>
+
+    <!-- Box 3 -->
+    <rect x="15" y="120" width="135" height="65" rx="8" fill="#fff" stroke="#e57373" stroke-width="1"/>
+    <text x="82" y="142" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">排除广告主3</text>
+    <text x="82" y="160" text-anchor="middle" font-size="11" fill="#888">50次采样 🔥</text>
+
+    <!-- Dots -->
+    <text x="237" y="158" text-anchor="middle" font-size="28" fill="#c0392b">⋯</text>
+
+    <!-- Box N -->
+    <rect x="90" y="200" width="140" height="65" rx="8" fill="#fff" stroke="#e57373" stroke-width="1"/>
+    <text x="160" y="222" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">排除广告主N</text>
+    <text x="160" y="240" text-anchor="middle" font-size="11" fill="#888">50次采样 🔥</text>
+  </g>
+
+  <!-- Cost label -->
+  <rect x="100" y="510" width="240" height="28" rx="6" fill="#c0392b"/>
+  <text x="220" y="529" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">总成本：50 × (1+N) 次LLM调用</text>
+
+  <!-- ===== RIGHT: ACO (cheap) ===== -->
+  <rect x="440" y="85" width="430" height="440" rx="14" fill="#f0fff0" stroke="#2e8b57" stroke-width="2"/>
+  <text x="655" y="112" text-anchor="middle" font-size="17" font-weight="bold" fill="#2e8b57">✅ ACO 方法（本文）</text>
+
+  <!-- Main optimization with GP -->
+  <rect x="470" y="130" width="370" height="100" rx="10" fill="#fff" stroke="#2e8b57" stroke-width="1.5"/>
+  <text x="655" y="155" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">主优化 + GP代理模型训练</text>
+  <text x="655" y="178" text-anchor="middle" font-size="12" fill="#777">50次LLM采样 → 最优配置 s*</text>
+  <text x="655" y="198" text-anchor="middle" font-size="12" fill="#2e8b57" font-weight="bold">副产品：学到整个配置空间的"福利地形"</text>
+
+  <!-- GP model icon (wavy surface) -->
+  <g transform="translate(480, 250)">
+    <rect width="350" height="105" rx="12" fill="#e8f5e9" stroke="#2e8b57" stroke-width="1.5"/>
+    <text x="175" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e8b57">GP 代理模型（已训练好）</text>
+
+    <!-- Simple surface curve -->
+    <path d="M30,70 Q80,35 130,55 Q180,75 230,40 Q280,20 320,50" fill="none" stroke="#2e8b57" stroke-width="2.5"/>
+    <path d="M30,70 Q80,45 130,62 Q180,80 230,50 Q280,30 320,55" fill="none" stroke="#2e8b57" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+    <path d="M30,70 Q80,25 130,48 Q180,70 230,30 Q280,10 320,45" fill="none" stroke="#2e8b57" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+    <text x="175" y="95" text-anchor="middle" font-size="11" fill="#666">覆盖所有配置的福利预测</text>
+  </g>
+
+  <!-- Arrow from GP to counterfactual queries -->
+  <line x1="655" y1="360" x2="655" y2="385" stroke="#2e8b57" stroke-width="2" marker-end="url(#arrowGreen)"/>
+
+  <!-- Counterfactual query box -->
+  <rect x="470" y="390" width="370" height="100" rx="10" fill="#fff" stroke="#2e8b57" stroke-width="1.5"/>
+  <text x="655" y="415" text-anchor="middle" font-size="14" font-weight="bold" fill="#2e8b57">反事实：直接查询 GP 模型</text>
+
+  <!-- Mini query illustrations -->
+  <g transform="translate(490, 425)">
+    <rect width="95" height="48" rx="6" fill="#e8f5e9" stroke="#81c784" stroke-width="1"/>
+    <text x="48" y="18" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">排除 A</text>
+    <text x="48" y="35" text-anchor="middle" font-size="10" fill="#2e8b57">查 s_A=0 子空间</text>
+  </g>
+  <g transform="translate(600, 425)">
+    <rect width="95" height="48" rx="6" fill="#e8f5e9" stroke="#81c784" stroke-width="1"/>
+    <text x="48" y="18" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">排除 B</text>
+    <text x="48" y="35" text-anchor="middle" font-size="10" fill="#2e8b57">查 s_B=0 子空间</text>
+  </g>
+  <g transform="translate(710, 425)">
+    <rect width="95" height="48" rx="6" fill="#e8f5e9" stroke="#81c784" stroke-width="1"/>
+    <text x="48" y="18" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">排除 C…</text>
+    <text x="48" y="35" text-anchor="middle" font-size="10" fill="#2e8b57">查 s_C=0 子空间</text>
+  </g>
+
+  <!-- Zero label -->
+  <text x="655" y="488" text-anchor="middle" font-size="12" fill="#2e8b57" font-weight="bold">⚡ 0 次额外 LLM 调用</text>
+
+  <!-- Cost label -->
+  <rect x="535" y="510" width="240" height="28" rx="6" fill="#2e8b57"/>
+  <text x="655" y="529" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">总成本：仅 50 次LLM调用</text>
+
+  <!-- VS badge -->
+  <circle cx="430" cy="305" r="24" fill="#1a237e"/>
+  <text x="430" y="311" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">VS</text>
+
+  <!-- Bottom comparison arrow -->
+  <rect x="250" y="540" width="400" height="18" rx="4" fill="#1a237e" opacity="0.85"/>
+  <text x="450" y="554" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">VCG 计算开销降低 &gt;99%</text>
+</svg>

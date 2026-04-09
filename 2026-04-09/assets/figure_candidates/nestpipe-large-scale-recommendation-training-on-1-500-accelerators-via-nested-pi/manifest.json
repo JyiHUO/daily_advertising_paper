@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-09/downloaded_pdfs/nestpipe-large-scale-recommendation-training-on-1-500-accelerators-via-nested-pi.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-09/assets/figure_candidates/nestpipe-large-scale-recommendation-training-on-1-500-accelerators-via-nested-pi",
+  "candidates": [
+    {
+      "id": "page-1-block-5",
+      "page_index": 1,
+      "caption": "Fig. 1: Hybrid decentralized architecture for large-scale rec- ommendation training.",
+      "clip": [
+        289.9779968261719,
+        32.54175567626953,
+        591.0078125,
+        188.26300048828125
+      ],
+      "clip_area": 46876.73762225895,
+      "page_area": 484704.0,
+      "text_density": 0.08936909916503527,
+      "kind": "image_block_with_caption",
+      "score": 58.9587066903452,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-09/assets/figure_candidates/nestpipe-large-scale-recommendation-training-on-1-500-accelerators-via-nested-pi/01-p2-image_block_with_caption.png",
+      "filename": "01-p2-image_block_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-0-0",
+      "page_index": 1,
+      "caption": "Fig. 1: Hybrid decentralized architecture for large-scale rec- ommendation training.",
+      "clip": [
+        299.9779968261719,
+        38.54175567626953,
+        581.0078125,
+        182.26300048828125
+      ],
+      "clip_area": 40389.95493793278,
+      "page_area": 484704.0,
+      "text_density": 0.032523869654374635,
+      "kind": "embedded_image_with_caption",
+      "xref": 57,
+      "score": 58.44877727708814,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-09/assets/figure_candidates/nestpipe-large-scale-recommendation-training-on-1-500-accelerators-via-nested-pi/02-p2-embedded_image_with_caption.png",
+      "filename": "02-p2-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-3-block-7",
+      "page_index": 3,
+      "caption": "Fig. 3: Overview of NestPipe.",
+      "clip": [
+        294.70001220703125,
+        32.54203796386719,
+        580.3148803710938,
+        249.52801513671875
+      ],
+      "clip_area": 61974.421263674274,
+      "page_area": 484704.0,
+      "text_density": 0.0347279470668952,
+      "kind": "image_block_with_caption",
+      "score": 31.688604680707492,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-09/assets/figure_candidates/nestpipe-large-scale-recommendation-training-on-1-500-accelerators-via-nested-pi/03-p4-image_block_with_caption.png",
+      "filename": "03-p4-image_block_with_caption.png"
+    },
+    {
+      "id": "page-3-embedded-0-0",
+      "page_index": 3,
+      "caption": "Fig. 3: Overview of NestPipe.",
+      "clip": [
+        304.70001220703125,
+        38.54203796386719,
+        570.3148803710938,
+        243.52801513671875
+      ],
+      "clip_area": 54447.32330224849,
+      "page_area": 484704.0,
+      "text_density": 0.011780856569258287,
+      "kind": "embedded_image_with_caption",
+      "xref": 64,
+      "score": 30.604970258913873,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-09/assets/figure_candidates/nestpipe-large-scale-recommendation-training-on-1-500-accelerators-via-nested-pi/04-p4-embedded_image_with_caption.png",
+      "filename": "04-p4-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-7-block-1",
+      "page_index": 7,
+      "caption": "Fig. 6: The training loss and accuracy curve of different methods.",
+      "clip": [
+        26.964000701904297,
+        32.54072570800781,
+        585.0738525390625,
+        196.4229736328125
+      ],
+      "clip_area": 91464.29710805317,
+      "page_area": 484704.0,
+      "text_density": 0.029475107010943535,
+      "kind": "image_block_with_caption",
+      "score": 27.016269967867256,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-09/assets/figure_candidates/nestpipe-large-scale-recommendation-training-on-1-500-accelerators-via-nested-pi/05-p8-image_block_with_caption.png",
+      "filename": "05-p8-image_block_with_caption.png"
+    },
+    {
+      "id": "page-7-embedded-0-0",
+      "page_index": 7,
+      "caption": "Fig. 6: The training loss and accuracy curve of different methods.",
+      "clip": [
+        36.9640007019043,
+        38.54072570800781,
+        575.0738525390625,
+        190.4229736328125
+      ],
+      "clip_area": 81729.33392751118,
+      "page_area": 484704.0,
+      "text_density": 0.017248601420413377,
+      "kind": "embedded_image_with_caption",
+      "xref": 71,
+      "score": 25.90810371030568,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-09/assets/figure_candidates/nestpipe-large-scale-recommendation-training-on-1-500-accelerators-via-nested-pi/06-p8-embedded_image_with_caption.png",
+      "filename": "06-p8-embedded_image_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-09/assets/figure_candidates/nestpipe-large-scale-recommendation-training-on-1-500-accelerators-via-nested-pi/contact-sheet.svg"
+}
