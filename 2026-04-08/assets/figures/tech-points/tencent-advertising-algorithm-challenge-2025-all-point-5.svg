@@ -1,139 +1,136 @@
-<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="Arial, Helvetica, sans-serif">
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Arial, Helvetica, sans-serif">
   <defs>
-    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#0d1117"/>
-      <stop offset="100%" stop-color="#161b22"/>
+    <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A90D9"/>
+      <stop offset="100%" stop-color="#357ABD"/>
     </linearGradient>
-    <linearGradient id="runnerGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1a6dd4"/>
-      <stop offset="100%" stop-color="#0e4a8a"/>
+    <linearGradient id="g2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E8833A"/>
+      <stop offset="100%" stop-color="#D4722E"/>
     </linearGradient>
-    <linearGradient id="thirdGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#d4691a"/>
-      <stop offset="100%" stop-color="#8a4e0e"/>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#27AE60"/>
+      <stop offset="100%" stop-color="#2ECC71"/>
     </linearGradient>
-    <linearGradient id="barGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#f97316"/>
-      <stop offset="100%" stop-color="#fb923c"/>
-    </linearGradient>
-    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
-      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.4"/>
-    </filter>
     <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#8b949e"/>
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
     </marker>
-    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#58a6ff"/>
-    </marker>
-    <marker id="arrowOrange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#f97316"/>
+    <marker id="arrowG" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#27AE60"/>
     </marker>
   </defs>
 
   <!-- Background -->
-  <rect width="900" height="580" fill="url(#bgGrad)" rx="12"/>
+  <rect width="900" height="560" rx="16" fill="#F7F9FC"/>
 
   <!-- Title -->
-  <text x="450" y="42" text-anchor="middle" fill="#e6edf3" font-size="22" font-weight="bold">亚军 vs 季军：精巧架构 vs 暴力规模</text>
-  <text x="450" y="65" text-anchor="middle" fill="#8b949e" font-size="13">腾讯广告算法大赛 2025 · 生成式推荐 Top 方案对比</text>
+  <text x="450" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#2C3E50">亚军 vs 季军：精巧架构 vs 暴力规模</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#7F8C8D">腾讯广告算法大赛 2025 · 生成式推荐 Top 方案对比</text>
 
-  <!-- VS divider -->
-  <line x1="450" y1="85" x2="450" y2="530" stroke="#30363d" stroke-width="2" stroke-dasharray="8,6"/>
-  <circle cx="450" cy="105" r="20" fill="#21262d" stroke="#484f58" stroke-width="2"/>
-  <text x="450" y="111" text-anchor="middle" fill="#f0f6fc" font-size="16" font-weight="bold">VS</text>
-
-  <!-- ========== LEFT: 2nd Place ========== -->
-  <text x="225" y="105" text-anchor="middle" fill="#58a6ff" font-size="18" font-weight="bold">🥈 亚军：图增强 Encoder-Decoder</text>
+  <!-- ===== LEFT: 2nd Place ===== -->
+  <rect x="30" y="85" width="400" height="380" rx="14" fill="white" stroke="#4A90D9" stroke-width="2.5" opacity="0.95"/>
+  <rect x="30" y="85" width="400" height="44" rx="14" fill="url(#g1)"/>
+  <rect x="30" y="115" width="400" height="14" fill="url(#g1)"/>
+  <text x="230" y="114" text-anchor="middle" font-size="18" font-weight="bold" fill="white">🥈 亚军：Encoder-Decoder + GNN</text>
 
   <!-- Encoder block -->
-  <rect x="40" y="130" width="360" height="100" rx="14" fill="url(#runnerGrad)" opacity="0.85" filter="url(#shadow)"/>
-  <text x="220" y="157" text-anchor="middle" fill="#f0f6fc" font-size="15" font-weight="bold">Encoder</text>
-  
-  <!-- GNN sub-block -->
-  <rect x="60" y="168" width="130" height="48" rx="8" fill="#1c3a5e" stroke="#58a6ff" stroke-width="1.5"/>
-  <!-- Graph icon: nodes and edges -->
-  <circle cx="90" cy="188" r="6" fill="#58a6ff" opacity="0.8"/>
-  <circle cx="115" cy="178" r="5" fill="#58a6ff" opacity="0.6"/>
-  <circle cx="115" cy="200" r="5" fill="#58a6ff" opacity="0.6"/>
-  <circle cx="140" cy="190" r="6" fill="#58a6ff" opacity="0.8"/>
-  <line x1="96" y1="186" x2="110" y2="180" stroke="#58a6ff" stroke-width="1.2" opacity="0.5"/>
-  <line x1="96" y1="192" x2="110" y2="198" stroke="#58a6ff" stroke-width="1.2" opacity="0.5"/>
-  <line x1="120" y1="180" x2="134" y2="188" stroke="#58a6ff" stroke-width="1.2" opacity="0.5"/>
-  <line x1="120" y1="198" x2="134" y2="192" stroke="#58a6ff" stroke-width="1.2" opacity="0.5"/>
-  <text x="163" y="196" text-anchor="middle" fill="#79c0ff" font-size="11">GNN</text>
+  <rect x="60" y="150" width="150" height="60" rx="10" fill="#EBF5FB" stroke="#4A90D9" stroke-width="1.5"/>
+  <text x="135" y="175" text-anchor="middle" font-size="13" font-weight="bold" fill="#2C3E50">编码器</text>
+  <text x="135" y="193" text-anchor="middle" font-size="11" fill="#5D6D7E">门控MLP + GNN</text>
 
-  <!-- Gated MLP sub-block -->
-  <rect x="210" y="168" width="170" height="48" rx="8" fill="#1c3a5e" stroke="#58a6ff" stroke-width="1.5"/>
-  <text x="295" y="196" text-anchor="middle" fill="#79c0ff" font-size="11">门控 MLP × 多</text>
+  <!-- GNN illustration: small graph -->
+  <circle cx="85" cy="260" r="14" fill="#D4E6F1" stroke="#4A90D9" stroke-width="1.5"/>
+  <text x="85" y="264" text-anchor="middle" font-size="9" fill="#2C3E50">用户</text>
+  <circle cx="135" cy="235" r="12" fill="#D4E6F1" stroke="#4A90D9" stroke-width="1.5"/>
+  <text x="135" y="239" text-anchor="middle" font-size="8" fill="#2C3E50">邻居</text>
+  <circle cx="145" cy="280" r="12" fill="#D4E6F1" stroke="#4A90D9" stroke-width="1.5"/>
+  <text x="145" y="284" text-anchor="middle" font-size="8" fill="#2C3E50">邻居</text>
+  <line x1="97" y1="252" x2="125" y2="240" stroke="#4A90D9" stroke-width="1.2"/>
+  <line x1="99" y1="266" x2="134" y2="275" stroke="#4A90D9" stroke-width="1.2"/>
+  <line x1="140" y1="247" x2="143" y2="268" stroke="#4A90D9" stroke-width="1.2" stroke-dasharray="3,3"/>
+  <text x="110" y="310" text-anchor="middle" font-size="10" fill="#7F8C8D" font-style="italic">"问邻居的意见"</text>
 
-  <!-- label -->
-  <text x="220" y="245" text-anchor="middle" fill="#7ee787" font-size="11" font-style="italic">"问邻居的意见" → 丰富上下文</text>
-
-  <!-- Arrow down -->
-  <line x1="220" y1="253" x2="220" y2="275" stroke="#58a6ff" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <!-- Arrow encoder to decoder -->
+  <line x1="210" y1="180" x2="250" y2="180" stroke="#555" stroke-width="1.8" marker-end="url(#arrow)"/>
 
   <!-- Decoder block -->
-  <rect x="80" y="280" width="280" height="65" rx="14" fill="#1a3355" opacity="0.9" filter="url(#shadow)"/>
-  <text x="220" y="305" text-anchor="middle" fill="#f0f6fc" font-size="14" font-weight="bold">Decoder: SASRec Transformer</text>
-  <text x="220" y="325" text-anchor="middle" fill="#8b949e" font-size="11">2048维 · 8层 · 8头 → ANN检索</text>
+  <rect x="258" y="150" width="150" height="60" rx="10" fill="#EBF5FB" stroke="#4A90D9" stroke-width="1.5"/>
+  <text x="333" y="175" text-anchor="middle" font-size="13" font-weight="bold" fill="#2C3E50">解码器</text>
+  <text x="333" y="193" text-anchor="middle" font-size="11" fill="#5D6D7E">SASRec 8层×8头</text>
 
-  <!-- Two-stage label -->
-  <rect x="95" y="360" width="250" height="36" rx="8" fill="#21262d" stroke="#30363d" stroke-width="1.5"/>
-  <text x="220" y="377" text-anchor="middle" fill="#58a6ff" font-size="12">阶段1: 曝光预训练</text>
-  <text x="220" y="391" text-anchor="middle" fill="#7ee787" font-size="12">阶段2: 点击+转化微调</text>
+  <!-- Two-stage training -->
+  <rect x="258" y="235" width="150" height="28" rx="6" fill="#FDEBD0" stroke="#E8833A" stroke-width="1"/>
+  <text x="333" y="254" text-anchor="middle" font-size="11" fill="#A04000">阶段1: 曝光预训练</text>
+  <rect x="258" y="270" width="150" height="28" rx="6" fill="#FADBD8" stroke="#E74C3C" stroke-width="1"/>
+  <text x="333" y="289" text-anchor="middle" font-size="11" fill="#922B21">阶段2: 点击+转化微调</text>
 
-  <!-- ========== RIGHT: 3rd Place ========== -->
-  <text x="675" y="105" text-anchor="middle" fill="#f97316" font-size="18" font-weight="bold">🥉 季军：Scaling Law 暴力美学</text>
+  <!-- Arrow to ANN -->
+  <line x1="333" y1="210" x2="333" y2="232" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Output -->
+  <rect x="120" y="340" width="220" height="36" rx="8" fill="#D5F5E3" stroke="#27AE60" stroke-width="1.5"/>
+  <text x="230" y="363" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E8449">→ ANN 检索候选广告</text>
+
+  <!-- Key label -->
+  <text x="230" y="420" text-anchor="middle" font-size="12" fill="#4A90D9" font-weight="bold">核心：架构精巧 + 图增强上下文</text>
+  <text x="230" y="440" text-anchor="middle" font-size="11" fill="#7F8C8D">关系建模带来额外信息增益</text>
+
+  <!-- ===== RIGHT: 3rd Place ===== -->
+  <rect x="470" y="85" width="400" height="380" rx="14" fill="white" stroke="#E8833A" stroke-width="2.5" opacity="0.95"/>
+  <rect x="470" y="85" width="400" height="44" rx="14" fill="url(#g2)"/>
+  <rect x="470" y="115" width="400" height="14" fill="url(#g2)"/>
+  <text x="670" y="114" text-anchor="middle" font-size="18" font-weight="bold" fill="white">🥉 季军：Decoder-Only + Scaling</text>
 
   <!-- Simple decoder block -->
-  <rect x="510" y="130" width="330" height="75" rx="14" fill="url(#thirdGrad)" opacity="0.85" filter="url(#shadow)"/>
-  <text x="675" y="160" text-anchor="middle" fill="#f0f6fc" font-size="15" font-weight="bold">Decoder-Only Transformer</text>
-  <text x="675" y="180" text-anchor="middle" fill="#fcd9b6" font-size="12">极简架构，不做花哨设计</text>
+  <rect x="545" y="150" width="250" height="60" rx="10" fill="#FEF5E7" stroke="#E8833A" stroke-width="1.5"/>
+  <text x="670" y="175" text-anchor="middle" font-size="13" font-weight="bold" fill="#2C3E50">纯 Decoder Transformer</text>
+  <text x="670" y="193" text-anchor="middle" font-size="11" fill="#5D6D7E">极简架构，无GNN</text>
 
-  <!-- Arrow to scaling -->
-  <line x1="675" y1="210" x2="675" y2="238" stroke="#f97316" stroke-width="2" marker-end="url(#arrowOrange)"/>
-
-  <!-- Scaling experiment: bar chart -->
-  <rect x="510" y="245" width="330" height="175" rx="14" fill="#2a1a0a" opacity="0.9" filter="url(#shadow)" stroke="#f97316" stroke-width="1.5"/>
-  <text x="675" y="272" text-anchor="middle" fill="#f97316" font-size="14" font-weight="bold">核心发现：负样本 Scaling</text>
+  <!-- Scaling Law Bar Chart -->
+  <text x="670" y="235" text-anchor="middle" font-size="13" font-weight="bold" fill="#A04000">负样本 Scaling 实验</text>
 
   <!-- Bars -->
-  <!-- 1K -->
-  <rect x="545" y="350" width="40" height="35" rx="4" fill="#7c3a0e" opacity="0.7"/>
-  <text x="565" y="368" text-anchor="middle" fill="#fcd9b6" font-size="10" font-weight="bold">1K</text>
-  <text x="565" y="346" text-anchor="middle" fill="#8b949e" font-size="9">低</text>
+  <rect x="525" y="310" width="50" height="40" rx="4" fill="#F5CBA7"/>
+  <text x="550" y="340" text-anchor="middle" font-size="10" fill="#784212" font-weight="bold">1K</text>
+  <text x="550" y="306" text-anchor="middle" font-size="9" fill="#A04000">低</text>
 
-  <!-- 10K -->
-  <rect x="600" y="330" width="40" height="55" rx="4" fill="#a04e0e" opacity="0.8"/>
-  <text x="620" y="358" text-anchor="middle" fill="#fcd9b6" font-size="10" font-weight="bold">10K</text>
+  <rect x="590" y="290" width="50" height="60" rx="4" fill="#F0B27A"/>
+  <text x="615" y="328" text-anchor="middle" font-size="10" fill="#784212" font-weight="bold">10K</text>
+  <text x="615" y="286" text-anchor="middle" font-size="9" fill="#A04000">中</text>
 
-  <!-- 100K -->
-  <rect x="655" y="310" width="40" height="75" rx="4" fill="#d4691a" opacity="0.85"/>
-  <text x="675" y="348" text-anchor="middle" fill="#f0f6fc" font-size="10" font-weight="bold">100K</text>
+  <rect x="655" y="268" width="50" height="82" rx="4" fill="#E59866"/>
+  <text x="680" y="316" text-anchor="middle" font-size="10" fill="white" font-weight="bold">100K</text>
+  <text x="680" y="264" text-anchor="middle" font-size="9" fill="#A04000">高</text>
 
-  <!-- 380K -->
-  <rect x="710" y="288" width="50" height="97" rx="4" fill="url(#barGrad)" opacity="0.95"/>
-  <text x="735" y="338" text-anchor="middle" fill="#f0f6fc" font-size="11" font-weight="bold">380K</text>
-  <text x="735" y="284" text-anchor="middle" fill="#7ee787" font-size="10" font-weight="bold">⬆ 最佳</text>
+  <rect x="720" y="248" width="58" height="102" rx="4" fill="#D35400"/>
+  <text x="749" y="306" text-anchor="middle" font-size="10" fill="white" font-weight="bold">380K</text>
+  <text x="749" y="244" text-anchor="middle" font-size="9" fill="#C0392B">最高⬆</text>
 
-  <!-- Trending arrow over bars -->
-  <path d="M 560 345 Q 640 310 730 285" stroke="#7ee787" stroke-width="2.5" fill="none" stroke-dasharray="5,3"/>
-  <polygon points="728,282 738,284 730,290" fill="#7ee787"/>
+  <!-- Baseline -->
+  <line x1="520" y1="350" x2="790" y2="350" stroke="#AAA" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="800" y="354" font-size="9" fill="#AAA">baseline</text>
 
-  <text x="675" y="405" text-anchor="middle" fill="#8b949e" font-size="10">每batch负样本数（363万候选池的~10%）</text>
+  <!-- NDCG label -->
+  <text x="510" y="300" text-anchor="middle" font-size="10" fill="#7F8C8D" transform="rotate(-90,510,300)">NDCG@10 ↑</text>
 
-  <!-- Right bottom label -->
-  <rect x="530" y="430" width="290" height="36" rx="8" fill="#21262d" stroke="#30363d" stroke-width="1.5"/>
-  <text x="675" y="452" text-anchor="middle" fill="#f97316" font-size="13" font-weight="bold">结论：规模 ＞ 精巧设计</text>
+  <!-- Arrow showing trend -->
+  <line x1="540" y1="370" x2="770" y2="370" stroke="#27AE60" stroke-width="2" marker-end="url(#arrowG)"/>
+  <text x="655" y="388" text-anchor="middle" font-size="11" fill="#27AE60" font-weight="bold">负样本越多，效果越好</text>
 
-  <!-- Bottom shared element -->
-  <rect x="240" y="490" width="420" height="42" rx="10" fill="#21262d" stroke="#484f58" stroke-width="1.5"/>
-  <text x="450" y="516" text-anchor="middle" fill="#c9d1d9" font-size="13">共同策略：PinRec 下一行为类型条件生成</text>
+  <!-- Key label -->
+  <text x="670" y="420" text-anchor="middle" font-size="12" fill="#D35400" font-weight="bold">核心：大力出奇迹 Scaling Law</text>
+  <text x="670" y="440" text-anchor="middle" font-size="11" fill="#7F8C8D">380K负样本 ≈ 覆盖10%候选池</text>
+
+  <!-- ===== BOTTOM: Shared strategy ===== -->
+  <rect x="250" y="485" width="400" height="50" rx="12" fill="url(#g3)" opacity="0.9"/>
+  <text x="450" y="510" text-anchor="middle" font-size="14" font-weight="bold" fill="white">共同策略：下一行为类型条件生成（PinRec）</text>
+  <text x="450" y="527" text-anchor="middle" font-size="11" fill="#E8F8F5">预测时指定"点击"或"转化"作为生成条件</text>
 
   <!-- Connecting lines to shared -->
-  <line x1="220" y1="396" x2="350" y2="490" stroke="#30363d" stroke-width="1.5" stroke-dasharray="4,4"/>
-  <line x1="675" y1="466" x2="560" y2="490" stroke="#30363d" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <line x1="230" y1="465" x2="370" y2="485" stroke="#27AE60" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <line x1="670" y1="465" x2="530" y2="485" stroke="#27AE60" stroke-width="1.5" stroke-dasharray="5,3"/>
 
-  <!-- Key insight callout -->
-  <text x="450" y="558" text-anchor="middle" fill="#7ee787" font-size="14" font-weight="bold">💡 同一任务，两种哲学：复杂建模 vs 大力出奇迹</text>
+  <!-- VS badge -->
+  <circle cx="450" cy="275" r="28" fill="#2C3E50" opacity="0.9"/>
+  <text x="450" y="280" text-anchor="middle" font-size="18" font-weight="bold" fill="white">VS</text>
 </svg>

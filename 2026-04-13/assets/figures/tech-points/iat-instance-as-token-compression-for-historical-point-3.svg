@@ -1,0 +1,133 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="curve1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4facfe"/>
+      <stop offset="100%" stop-color="#00f2fe"/>
+    </linearGradient>
+    <linearGradient id="curve2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f093fb"/>
+      <stop offset="100%" stop-color="#f5576c"/>
+    </linearGradient>
+    <linearGradient id="curve3" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#43e97b"/>
+      <stop offset="100%" stop-color="#38f9d7"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f7971e"/>
+      <stop offset="100%" stop-color="#ffd200"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bg)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">IAT 下游模型的 Scaling Law</text>
+  <text x="450" y="68" text-anchor="middle" fill="#8899bb" font-size="14">AUC增益 ∝ FLOPs^0.31 — 更长序列 × 更深模型 = 可预测的持续收益</text>
+
+  <!-- ===== LEFT: Scaling Curve Chart ===== -->
+  <!-- Chart area -->
+  <rect x="50" y="95" width="420" height="320" rx="10" fill="#131d35" stroke="#2a3a5c" stroke-width="1.5"/>
+  <text x="260" y="120" text-anchor="middle" fill="#ccddef" font-size="15" font-weight="bold">AUC增益 vs FLOPs (幂律拟合)</text>
+
+  <!-- Axes -->
+  <line x1="100" y1="370" x2="440" y2="370" stroke="#3a4f70" stroke-width="1.5"/>
+  <line x1="100" y1="370" x2="100" y2="140" stroke="#3a4f70" stroke-width="1.5"/>
+  <text x="270" y="400" text-anchor="middle" fill="#7799bb" font-size="12">FLOPs →</text>
+  <text x="68" y="255" text-anchor="middle" fill="#7799bb" font-size="12" transform="rotate(-90,68,255)">AUC 增益 →</text>
+
+  <!-- Y-axis ticks -->
+  <text x="93" y="370" text-anchor="end" fill="#556680" font-size="10">0</text>
+  <text x="93" y="313" text-anchor="end" fill="#556680" font-size="10">0.1%</text>
+  <text x="93" y="255" text-anchor="end" fill="#556680" font-size="10">0.2%</text>
+  <text x="93" y="198" text-anchor="end" fill="#556680" font-size="10">0.3%</text>
+  <text x="93" y="155" text-anchor="end" fill="#556680" font-size="10">0.4%</text>
+  <!-- Grid lines -->
+  <line x1="100" y1="313" x2="440" y2="313" stroke="#1e2e4a" stroke-width="0.8" stroke-dasharray="4,4"/>
+  <line x1="100" y1="255" x2="440" y2="255" stroke="#1e2e4a" stroke-width="0.8" stroke-dasharray="4,4"/>
+  <line x1="100" y1="198" x2="440" y2="198" stroke="#1e2e4a" stroke-width="0.8" stroke-dasharray="4,4"/>
+
+  <!-- X-axis labels -->
+  <text x="130" y="387" text-anchor="middle" fill="#556680" font-size="10">小</text>
+  <text x="270" y="387" text-anchor="middle" fill="#556680" font-size="10">中</text>
+  <text x="420" y="387" text-anchor="middle" fill="#556680" font-size="10">大</text>
+
+  <!-- Curve: 1-Layer Transformer (flattest) -->
+  <path d="M110,355 C160,340 250,320 340,305 Q390,298 430,290" fill="none" stroke="url(#curve1)" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="110" cy="355" r="4" fill="#4facfe"/>
+  <circle cx="220" cy="325" r="4" fill="#4facfe"/>
+  <circle cx="340" cy="305" r="4" fill="#4facfe"/>
+  <circle cx="430" cy="290" r="4" fill="#00f2fe"/>
+
+  <!-- Curve: 2-Layer Transformer -->
+  <path d="M110,350 C160,320 250,275 340,240 Q390,222 430,210" fill="none" stroke="url(#curve2)" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="110" cy="350" r="4" fill="#f093fb"/>
+  <circle cx="220" cy="288" r="4" fill="#f093fb"/>
+  <circle cx="340" cy="240" r="4" fill="#f093fb"/>
+  <circle cx="430" cy="210" r="4" fill="#f5576c"/>
+
+  <!-- Curve: 4-Layer Transformer (steepest) -->
+  <path d="M110,345 C160,300 250,225 340,185 Q390,168 430,155" fill="none" stroke="url(#curve3)" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="110" cy="345" r="4" fill="#43e97b"/>
+  <circle cx="220" cy="248" r="4" fill="#43e97b"/>
+  <circle cx="340" cy="185" r="4" fill="#43e97b"/>
+  <circle cx="430" cy="155" r="4" fill="#38f9d7"/>
+
+  <!-- Legend -->
+  <line x1="130" y1="138" x2="155" y2="138" stroke="#4facfe" stroke-width="2.5"/>
+  <text x="160" y="142" fill="#8bb8dd" font-size="11">1层 Transformer</text>
+  <line x1="260" y1="138" x2="285" y2="138" stroke="#f093fb" stroke-width="2.5"/>
+  <text x="290" y="142" fill="#dda8cc" font-size="11">2层</text>
+  <line x1="330" y1="138" x2="355" y2="138" stroke="#43e97b" stroke-width="2.5"/>
+  <text x="360" y="142" fill="#88ddaa" font-size="11">4层 (最陡)</text>
+
+  <!-- Power law annotation -->
+  <rect x="280" y="335" width="155" height="28" rx="6" fill="#1e2e4a" stroke="#3a5580" stroke-width="1"/>
+  <text x="357" y="354" text-anchor="middle" fill="#ffd200" font-size="13" font-weight="bold">y = a · x^0.31</text>
+
+  <!-- ===== RIGHT SIDE: Key Insights ===== -->
+
+  <!-- Insight 1: Sequence Length -->
+  <rect x="510" y="95" width="360" height="105" rx="12" fill="#131d35" stroke="#2a3a5c" stroke-width="1.5"/>
+  <text x="530" y="122" fill="#43e97b" font-size="15" font-weight="bold">📏 序列长度 Scaling</text>
+  <!-- Bar comparison -->
+  <rect x="540" y="138" width="50" height="16" rx="4" fill="#2a4a6a"/>
+  <text x="600" y="151" fill="#7799bb" font-size="11">Len=32  → +0.1%</text>
+  <rect x="540" y="162" width="200" height="16" rx="4" fill="url(#curve3)" opacity="0.7"/>
+  <text x="750" y="175" fill="#43e97b" font-size="11" font-weight="bold">Len=256 → +0.4%</text>
+  <text x="540" y="195" fill="#556680" font-size="10">8× 长度 ➜ 4× 收益</text>
+
+  <!-- Insight 2: Source Model SIT -->
+  <rect x="510" y="215" width="360" height="105" rx="12" fill="#131d35" stroke="#2a3a5c" stroke-width="1.5"/>
+  <text x="530" y="242" fill="#f093fb" font-size="15" font-weight="bold">🔬 源模型 SIT Scaling</text>
+  <rect x="540" y="258" width="80" height="16" rx="4" fill="#3a2a5a"/>
+  <text x="630" y="271" fill="#9988bb" font-size="11">dim64/2层 → +0.35%</text>
+  <rect x="540" y="282" width="220" height="16" rx="4" fill="url(#curve2)" opacity="0.7"/>
+  <text x="770" y="295" fill="#f5576c" font-size="11" font-weight="bold">dim256/4层 → +0.47%</text>
+  <text x="540" y="313" fill="#556680" font-size="10">更大SIT = 更好InsEmb = 更高下游收益</text>
+
+  <!-- Insight 3: 1B base model -->
+  <rect x="510" y="335" width="360" height="80" rx="12" fill="#1a2230" stroke="url(#goldGrad)" stroke-width="2"/>
+  <text x="530" y="362" fill="#ffd200" font-size="15" font-weight="bold">🏭 1B 基座模型仍有效</text>
+  <text x="540" y="385" fill="#bbaa77" font-size="12">基座 50M → 1B 参数</text>
+  <text x="540" y="405" fill="#ffd200" font-size="13" font-weight="bold">IAT 仍带来 +0.33% AUC ✓</text>
+
+  <!-- Bottom takeaway -->
+  <rect x="100" y="445" width="700" height="70" rx="14" fill="#0d1a2e" stroke="#3a5580" stroke-width="1.5"/>
+  <text x="450" y="475" text-anchor="middle" fill="#ffffff" font-size="17" font-weight="bold">核心结论</text>
+  <text x="450" y="500" text-anchor="middle" fill="#88bbdd" font-size="14">IAT 不是小模型技巧 — 它是可随模型规模持续 Scale 的基础设施</text>
+
+  <!-- Decorative arrows showing scaling direction -->
+  <path d="M480,180 L500,160" stroke="#3a5580" stroke-width="1.5" fill="none" marker-end="url(#arrowGray)"/>
+  <path d="M480,280 L500,265" stroke="#3a5580" stroke-width="1.5" fill="none"/>
+  <path d="M480,380 L500,370" stroke="#3a5580" stroke-width="1.5" fill="none"/>
+
+  <!-- Small formula badge -->
+  <rect x="290" y="540" width="320" height="44" rx="10" fill="#1e2e4a" stroke="#4facfe" stroke-width="1"/>
+  <text x="450" y="558" text-anchor="middle" fill="#4facfe" font-size="11">幂律公式</text>
+  <text x="450" y="576" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="bold">ΔAUC = a · FLOPs^0.31    (指数 ≈ 0.31)</text>
+</svg>

@@ -1,0 +1,19 @@
+{
+  "date": "2026-04-13",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL"
+  ],
+  "candidate_count": 2,
+  "supplementary_count": 0,
+  "focus_titles": [
+    "IAT: Instance-As-Token Compression for Historical User Sequence Modeling in Industrial Recommender Systems",
+    "Sustained Impact of Agentic Personalisation in Marketing: A Longitudinal Case Study"
+  ],
+  "focus_status": {
+    "Sustained Impact of Agentic Personalisation in Marketing: A Longitudinal Case Study": "completed",
+    "IAT: Instance-As-Token Compression for Historical User Sequence Modeling in Industrial Recommender Systems": "completed"
+  }
+}

@@ -1,107 +1,105 @@
-<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Arial, Helvetica, sans-serif">
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="Arial, Helvetica, sans-serif">
   <defs>
     <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
     </marker>
     <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#d94040"/>
+      <polygon points="0 0, 10 3.5, 0 7" fill="#d44"/>
     </marker>
     <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#2e8b57"/>
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2a9d4e"/>
     </marker>
     <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#f8f9fc"/>
-      <stop offset="100%" stop-color="#eaecf3"/>
+      <stop offset="0%" stop-color="#f0f4fa"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
     </linearGradient>
   </defs>
 
   <!-- Background -->
-  <rect width="900" height="560" fill="url(#bgGrad)" rx="18"/>
+  <rect width="900" height="580" fill="url(#bgGrad)" rx="16"/>
 
   <!-- Title -->
-  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#222">JD-BP: 出价与定价修正解耦</text>
-  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#777">出价专注价值 · 定价修正补偿历史亏损</text>
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a202c">JD-BP：出价与定价修正解耦</text>
+  <text x="450" y="68" text-anchor="middle" font-size="14" fill="#666">核心洞察：出价专注价值，定价修正弥补亏损</text>
 
-  <!-- ===== LEFT: Traditional ===== -->
-  <text x="225" y="100" text-anchor="middle" font-size="16" font-weight="bold" fill="#d94040">❌ 传统方法</text>
+  <!-- ====== LEFT: Traditional ====== -->
+  <text x="225" y="105" text-anchor="middle" font-size="17" font-weight="bold" fill="#c0392b">❌ 传统方法</text>
 
-  <!-- Bid box traditional -->
-  <rect x="80" y="120" width="290" height="80" rx="14" fill="#fff0f0" stroke="#d94040" stroke-width="2"/>
-  <text x="225" y="150" text-anchor="middle" font-size="15" font-weight="bold" fill="#d94040">出价 = 价值 − 补偿</text>
-  <text x="225" y="174" text-anchor="middle" font-size="12" fill="#a03030">一个动作承担两个目标</text>
+  <!-- Historical Loss -->
+  <rect x="60" y="125" width="330" height="55" rx="10" fill="#fde8e8" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="225" y="148" text-anchor="middle" font-size="14" font-weight="bold" fill="#c0392b">历史亏损 bal = 100元</text>
+  <text x="225" y="167" text-anchor="middle" font-size="12" fill="#888">（预估偏差 / 转化延迟导致ROI不达标）</text>
 
   <!-- Arrow down -->
-  <line x1="225" y1="200" x2="225" y2="250" stroke="#d94040" stroke-width="2" marker-end="url(#arrowRed)"/>
+  <line x1="225" y1="180" x2="225" y2="210" stroke="#c0392b" stroke-width="2" marker-end="url(#arrowRed)"/>
+
+  <!-- Bid box traditional -->
+  <rect x="85" y="215" width="280" height="70" rx="12" fill="#fff" stroke="#e74c3c" stroke-width="2"/>
+  <text x="225" y="243" text-anchor="middle" font-size="15" font-weight="bold" fill="#c0392b">出价被迫压低</text>
+  <text x="225" y="265" text-anchor="middle" font-size="13" fill="#777">同时承担「争取价值」+「补偿亏损」</text>
+
+  <!-- Arrow down -->
+  <line x1="225" y1="285" x2="225" y2="315" stroke="#c0392b" stroke-width="2" marker-end="url(#arrowRed)"/>
 
   <!-- Result traditional -->
-  <rect x="100" y="258" width="250" height="110" rx="14" fill="#fff" stroke="#ddd" stroke-width="1.5"/>
-  <text x="225" y="285" text-anchor="middle" font-size="13" fill="#d94040" font-weight="bold">出价被压低</text>
-  <!-- sad bid bar -->
-  <rect x="130" y="300" width="60" height="18" rx="4" fill="#f5b7b7"/>
-  <text x="200" y="314" font-size="11" fill="#888">低出价</text>
-  <rect x="130" y="326" width="180" height="18" rx="4" fill="#ddd"/>
-  <text x="320" y="340" font-size="11" fill="#888">真实价值</text>
-  <text x="225" y="360" text-anchor="middle" font-size="11" fill="#c04040">→ 错失高价值流量</text>
+  <rect x="95" y="320" width="260" height="55" rx="10" fill="#fce4e4" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="225" y="344" text-anchor="middle" font-size="14" fill="#c0392b" font-weight="bold">🚫 错失高价值流量</text>
+  <text x="225" y="362" text-anchor="middle" font-size="12" fill="#999">整体效率下降</text>
 
-  <!-- ===== RIGHT: JD-BP ===== -->
-  <text x="660" y="100" text-anchor="middle" font-size="16" font-weight="bold" fill="#2e8b57">✅ JD-BP 方法</text>
+  <!-- ====== Divider ====== -->
+  <line x1="450" y1="95" x2="450" y2="400" stroke="#ccc" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="450" y="415" text-anchor="middle" font-size="13" fill="#aaa">VS</text>
 
-  <!-- Two separate boxes -->
-  <!-- Bid box -->
-  <rect x="530" y="120" width="260" height="58" rx="12" fill="#e8f5ec" stroke="#2e8b57" stroke-width="2"/>
-  <text x="660" y="148" text-anchor="middle" font-size="15" font-weight="bold" fill="#2e8b57">出价 → 专注争取价值</text>
-  <text x="660" y="166" text-anchor="middle" font-size="11" fill="#3a7a50">预算放宽至 B + bal</text>
+  <!-- ====== RIGHT: JD-BP ====== -->
+  <text x="675" y="105" text-anchor="middle" font-size="17" font-weight="bold" fill="#2a9d4e">✅ JD-BP 方法</text>
+
+  <!-- Historical Loss right -->
+  <rect x="510" y="125" width="330" height="55" rx="10" fill="#e8f5e9" stroke="#2a9d4e" stroke-width="1.5"/>
+  <text x="675" y="148" text-anchor="middle" font-size="14" font-weight="bold" fill="#2a9d4e">历史亏损 bal = 100元</text>
+  <text x="675" y="167" text-anchor="middle" font-size="12" fill="#888">同样的亏损，不同的处理方式</text>
+
+  <!-- Two branches -->
+  <!-- Left branch: Bidding -->
+  <line x1="610" y1="180" x2="580" y2="218" stroke="#2a9d4e" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <!-- Right branch: Pricing -->
+  <line x1="740" y1="180" x2="770" y2="218" stroke="#2a9d4e" stroke-width="2" marker-end="url(#arrowGreen)"/>
+
+  <!-- Bid box - JD-BP -->
+  <rect x="510" y="222" width="160" height="80" rx="12" fill="#fff" stroke="#2980b9" stroke-width="2.5"/>
+  <text x="590" y="250" text-anchor="middle" font-size="14" font-weight="bold" fill="#2980b9">🎯 出价</text>
+  <text x="590" y="270" text-anchor="middle" font-size="12" fill="#555">专注价值最大化</text>
+  <text x="590" y="288" text-anchor="middle" font-size="11" fill="#888">预算放宽至 B+bal</text>
 
   <!-- Pricing correction box -->
-  <rect x="530" y="190" width="260" height="58" rx="12" fill="#e8eef5" stroke="#3b6fb6" stroke-width="2"/>
-  <text x="660" y="218" text-anchor="middle" font-size="15" font-weight="bold" fill="#3b6fb6">定价修正 → 补偿亏损</text>
-  <text x="660" y="236" text-anchor="middle" font-size="11" fill="#4a6a9a">Σy_t = −bal（均摊扣回）</text>
+  <rect x="690" y="222" width="160" height="80" rx="12" fill="#fff" stroke="#e67e22" stroke-width="2.5"/>
+  <text x="770" y="250" text-anchor="middle" font-size="14" font-weight="bold" fill="#e67e22">💰 定价修正</text>
+  <text x="770" y="270" text-anchor="middle" font-size="12" fill="#555">每次结算扣回</text>
+  <text x="770" y="288" text-anchor="middle" font-size="11" fill="#e67e22">y_t = -100/50 = -2元</text>
 
-  <!-- Arrows down to combined result -->
-  <line x1="620" y1="248" x2="620" y2="290" stroke="#2e8b57" stroke-width="2" marker-end="url(#arrowGreen)"/>
-  <line x1="700" y1="248" x2="700" y2="290" stroke="#3b6fb6" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Merge arrows -->
+  <line x1="590" y1="302" x2="640" y2="340" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="770" y1="302" x2="710" y2="340" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
 
   <!-- Result JD-BP -->
-  <rect x="530" y="296" width="260" height="80" rx="14" fill="#fff" stroke="#ddd" stroke-width="1.5"/>
-  <text x="660" y="320" text-anchor="middle" font-size="13" fill="#2e8b57" font-weight="bold">支付 = 出价成本 + 修正</text>
-  <text x="660" y="340" text-anchor="middle" font-size="13" fill="#333">p_t = c_t + y_t</text>
-  <text x="660" y="362" text-anchor="middle" font-size="11" fill="#2e8b57">出价不扭曲 · 高价值不错过</text>
+  <rect x="560" y="335" width="230" height="55" rx="10" fill="#d5f5e3" stroke="#2a9d4e" stroke-width="2"/>
+  <text x="675" y="358" text-anchor="middle" font-size="14" fill="#2a9d4e" font-weight="bold">✅ 不错过高价值流量</text>
+  <text x="675" y="376" text-anchor="middle" font-size="12" fill="#555">亏损被均摊补平</text>
 
-  <!-- ===== BOTTOM: Example ===== -->
-  <rect x="60" y="410" width="780" height="130" rx="16" fill="#fff" stroke="#bbb" stroke-width="1.5" stroke-dasharray="6,3"/>
-  <text x="450" y="438" text-anchor="middle" font-size="14" font-weight="bold" fill="#444">📌 直觉示例</text>
+  <!-- ====== Bottom: Formula / Key Insight ====== -->
+  <rect x="100" y="440" width="700" height="110" rx="14" fill="#fff" stroke="#4a6fa5" stroke-width="2"/>
 
-  <!-- Example flow -->
-  <!-- History loss -->
-  <rect x="90" y="455" width="150" height="50" rx="10" fill="#ffeaea" stroke="#d94040" stroke-width="1.5"/>
-  <text x="165" y="476" text-anchor="middle" font-size="12" font-weight="bold" fill="#d94040">历史亏损</text>
-  <text x="165" y="494" text-anchor="middle" font-size="13" fill="#c04040">bal = 100元</text>
+  <!-- Formula -->
+  <text x="450" y="472" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a202c">最终支付 p_t = c_t + y_t</text>
+  <text x="450" y="498" text-anchor="middle" font-size="13" fill="#666">
+    <tspan>c_t = 原始出价成本　　y_t = 定价修正项　　</tspan>
+  </text>
+  <text x="450" y="520" text-anchor="middle" font-size="13" fill="#4a6fa5" font-weight="bold">约束：Σ y_t = -bal（修正总额恰好弥补历史亏损）</text>
+  <text x="450" y="540" text-anchor="middle" font-size="12" fill="#999">最优出价公式不变，仅预算上界从 B 放宽到 B + bal</text>
 
-  <!-- Arrow -->
-  <line x1="240" y1="480" x2="300" y2="480" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <!-- Decorative icons -->
+  <circle cx="130" y="472" r="18" fill="#eef2ff" stroke="#4a6fa5" stroke-width="1.5"/>
+  <text x="130" y="478" text-anchor="middle" font-size="18">📐</text>
 
-  <!-- Future wins -->
-  <rect x="310" y="455" width="150" height="50" rx="10" fill="#e8f5ec" stroke="#2e8b57" stroke-width="1.5"/>
-  <text x="385" y="476" text-anchor="middle" font-size="12" font-weight="bold" fill="#2e8b57">未来赢得50次</text>
-  <text x="385" y="494" text-anchor="middle" font-size="12" fill="#3a7a50">正常出价不变</text>
-
-  <!-- Arrow -->
-  <line x1="460" y1="480" x2="520" y2="480" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <!-- Per-impression correction -->
-  <rect x="530" y="455" width="170" height="50" rx="10" fill="#e8eef5" stroke="#3b6fb6" stroke-width="1.5"/>
-  <text x="615" y="476" text-anchor="middle" font-size="12" font-weight="bold" fill="#3b6fb6">每次扣回 2元</text>
-  <text x="615" y="494" text-anchor="middle" font-size="12" fill="#4a6a9a">y_t = −100/50</text>
-
-  <!-- Arrow -->
-  <line x1="700" y1="480" x2="730" y2="480" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
-
-  <!-- Result -->
-  <text x="770" y="476" text-anchor="start" font-size="13" font-weight="bold" fill="#2e8b57">✓ 亏损补平</text>
-  <text x="770" y="496" text-anchor="start" font-size="12" fill="#2e8b57">价值不损失</text>
-
-  <!-- VS divider -->
-  <line x1="450" y1="90" x2="450" y2="395" stroke="#ccc" stroke-width="1.5" stroke-dasharray="8,5"/>
-  <rect x="430" y="215" width="40" height="28" rx="8" fill="#fff" stroke="#ccc" stroke-width="1.5"/>
-  <text x="450" y="234" text-anchor="middle" font-size="13" font-weight="bold" fill="#888">VS</text>
+  <circle cx="770" y="472" r="18" fill="#eef2ff" stroke="#4a6fa5" stroke-width="1.5"/>
+  <text x="770" y="478" text-anchor="middle" font-size="18">🔑</text>
 </svg>

@@ -1,0 +1,115 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#555">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#2979FF">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#2E7D32">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F5F7FA"/>
+      <stop offset="100%" stop-color="#E8EDF2"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" rx="18" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1A237E">原子组件化：像乐高一样拼营销消息</text>
+  <text x="450" y="68" text-anchor="middle" font-size="13" fill="#666">Atomic Component Pipeline — Human provides blocks, Agent assembles variants</text>
+
+  <!-- ===== LEFT: Human Marketer ===== -->
+  <rect x="40" y="100" width="220" height="220" rx="16" fill="#FFF3E0" stroke="#FF8F00" stroke-width="2.5"/>
+  <text x="150" y="130" text-anchor="middle" font-size="16" font-weight="bold" fill="#E65100">👤 人类营销人员</text>
+  <text x="150" y="152" text-anchor="middle" font-size="12" fill="#BF360C">提供原子组件</text>
+
+  <!-- Atomic blocks (lego-like) -->
+  <rect x="60" y="170" width="85" height="32" rx="6" fill="#FFCC80" stroke="#F57C00" stroke-width="1.5"/>
+  <text x="102" y="191" text-anchor="middle" font-size="12" font-weight="600" fill="#4E342E">🗣 问候语 ×3</text>
+
+  <rect x="155" y="170" width="85" height="32" rx="6" fill="#A5D6A7" stroke="#388E3C" stroke-width="1.5"/>
+  <text x="197" y="191" text-anchor="middle" font-size="12" font-weight="600" fill="#1B5E20">🎁 优惠 ×4</text>
+
+  <rect x="60" y="215" width="85" height="32" rx="6" fill="#90CAF9" stroke="#1976D2" stroke-width="1.5"/>
+  <text x="102" y="236" text-anchor="middle" font-size="12" font-weight="600" fill="#0D47A1">🖼 配图 ×3</text>
+
+  <rect x="155" y="215" width="85" height="32" rx="6" fill="#CE93D8" stroke="#7B1FA2" stroke-width="1.5"/>
+  <text x="197" y="236" text-anchor="middle" font-size="12" font-weight="600" fill="#4A148C">🔘 按钮 ×2</text>
+
+  <text x="150" y="280" text-anchor="middle" font-size="20" font-weight="bold" fill="#E65100">= 72 种变体</text>
+  <text x="150" y="300" text-anchor="middle" font-size="11" fill="#795548">3×4×3×2 排列组合</text>
+
+  <!-- Arrow: Human → Agent -->
+  <line x1="270" y1="210" x2="338" y2="210" stroke="#FF8F00" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="304" y="198" text-anchor="middle" font-size="11" fill="#E65100">组件库</text>
+
+  <!-- ===== CENTER: Agent ===== -->
+  <rect x="348" y="100" width="210" height="220" rx="16" fill="#E3F2FD" stroke="#1976D2" stroke-width="2.5"/>
+  <text x="453" y="130" text-anchor="middle" font-size="16" font-weight="bold" fill="#0D47A1">🤖 智能体 Agent</text>
+  <text x="453" y="152" text-anchor="middle" font-size="12" fill="#1565C0">自动组装 + 强化学习</text>
+
+  <!-- Mixing illustration -->
+  <g transform="translate(375, 168)">
+    <rect x="0" y="0" width="30" height="20" rx="4" fill="#FFCC80" opacity="0.8"/>
+    <rect x="35" y="0" width="30" height="20" rx="4" fill="#A5D6A7" opacity="0.8"/>
+    <rect x="70" y="0" width="30" height="20" rx="4" fill="#90CAF9" opacity="0.8"/>
+    <rect x="105" y="0" width="30" height="20" rx="4" fill="#CE93D8" opacity="0.8"/>
+  </g>
+  <text x="453" y="210" text-anchor="middle" font-size="13" fill="#1565C0">↓ 排列组合 ↓</text>
+
+  <!-- Result message cards -->
+  <rect x="378" y="222" width="150" height="28" rx="6" fill="#BBDEFB" stroke="#42A5F5" stroke-width="1"/>
+  <text x="453" y="241" text-anchor="middle" font-size="11" fill="#0D47A1">📩 个性化消息变体 A</text>
+  <rect x="378" y="256" width="150" height="28" rx="6" fill="#BBDEFB" stroke="#42A5F5" stroke-width="1"/>
+  <text x="453" y="275" text-anchor="middle" font-size="11" fill="#0D47A1">📩 个性化消息变体 B</text>
+  <text x="453" y="308" text-anchor="middle" font-size="11" fill="#1976D2">...探索最优组合</text>
+
+  <!-- Arrow: Agent → Users -->
+  <line x1="568" y1="210" x2="636" y2="210" stroke="#1976D2" stroke-width="3" marker-end="url(#arrowBlue)"/>
+  <text x="602" y="198" text-anchor="middle" font-size="11" fill="#1565C0">投放</text>
+
+  <!-- ===== RIGHT: Users ===== -->
+  <rect x="646" y="100" width="210" height="220" rx="16" fill="#E8F5E9" stroke="#388E3C" stroke-width="2.5"/>
+  <text x="751" y="130" text-anchor="middle" font-size="16" font-weight="bold" fill="#1B5E20">👥 880万用户</text>
+  <text x="751" y="152" text-anchor="middle" font-size="12" fill="#2E7D32">不同偏好自动匹配</text>
+
+  <!-- User A -->
+  <rect x="666" y="170" width="170" height="50" rx="8" fill="#C8E6C9" stroke="#66BB6A" stroke-width="1"/>
+  <text x="751" y="188" text-anchor="middle" font-size="11" font-weight="600" fill="#2E7D32">折扣偏好用户</text>
+  <text x="751" y="206" text-anchor="middle" font-size="10" fill="#555">随意问候+大额折扣+美食图</text>
+
+  <!-- User B -->
+  <rect x="666" y="232" width="170" height="50" rx="8" fill="#C8E6C9" stroke="#66BB6A" stroke-width="1"/>
+  <text x="751" y="250" text-anchor="middle" font-size="11" font-weight="600" fill="#2E7D32">品质敏感用户</text>
+  <text x="751" y="268" text-anchor="middle" font-size="10" fill="#555">正式问候+新品推荐+精致图</text>
+
+  <!-- Feedback arrow (curved) -->
+  <path d="M 751 330 Q 751 370 453 370 Q 150 370 150 330" fill="none" stroke="#78909C" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+  <text x="453" y="388" text-anchor="middle" font-size="12" fill="#546E7F">📊 用户反馈 → 更新组件权重</text>
+
+  <!-- ===== BOTTOM: Future LLM Enhancement ===== -->
+  <rect x="130" y="430" width="640" height="160" rx="16" fill="#FFF" stroke="#7C4DFF" stroke-width="2.5" stroke-dasharray="8,4"/>
+  <text x="450" y="462" text-anchor="middle" font-size="17" font-weight="bold" fill="#4A148C">🔮 未来：LLM 自动扩充组件库</text>
+
+  <!-- Before vs After -->
+  <rect x="165" y="482" width="250" height="90" rx="10" fill="#FFEBEE" stroke="#E57373" stroke-width="1.5"/>
+  <text x="290" y="506" text-anchor="middle" font-size="13" font-weight="bold" fill="#C62828">被动期 — 组件固定</text>
+  <text x="290" y="528" text-anchor="middle" font-size="12" fill="#B71C1C">问候语 ×3 → 内容老化</text>
+  <text x="290" y="548" text-anchor="middle" font-size="12" fill="#B71C1C">📉 效果逐渐衰减</text>
+
+  <!-- Arrow between -->
+  <line x1="425" y1="527" x2="483" y2="527" stroke="#7C4DFF" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="454" y="518" text-anchor="middle" font-size="12" font-weight="bold" fill="#7C4DFF">+LLM</text>
+
+  <rect x="493" y="482" width="250" height="90" rx="10" fill="#E8F5E9" stroke="#66BB6A" stroke-width="1.5"/>
+  <text x="618" y="506" text-anchor="middle" font-size="13" font-weight="bold" fill="#2E7D32">LLM扩充 — 组件持续更新</text>
+  <text x="618" y="528" text-anchor="middle" font-size="12" fill="#1B5E20">问候语 ×3 → ×30 自动生成</text>
+  <text x="618" y="548" text-anchor="middle" font-size="12" fill="#1B5E20">📈 保持内容新鲜感</text>
+
+  <!-- Core insight label -->
+  <rect x="280" y="598" width="340" height="2" rx="1" fill="#7C4DFF"/>
+</svg>

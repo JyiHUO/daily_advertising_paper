@@ -1,156 +1,166 @@
 <svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#2563EB"/>
-    </marker>
-    <marker id="arrowOrange" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#EA580C"/>
-    </marker>
-    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#F8FAFC"/>
-      <stop offset="100%" stop-color="#E2E8F0"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0e27"/>
+      <stop offset="100%" stop-color="#1a1e3a"/>
     </linearGradient>
-    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
-      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.12"/>
+    <linearGradient id="expose" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="click" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <linearGradient id="convert" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <linearGradient id="filmGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#f472b6"/>
+    </linearGradient>
+    <linearGradient id="rqGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrowPink" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f472b6"/>
+    </marker>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
 
   <!-- Background -->
-  <rect width="900" height="620" rx="18" fill="url(#bgGrad)"/>
+  <rect width="900" height="620" fill="url(#bg)" rx="12"/>
 
   <!-- Title -->
-  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E293B">🏆 冠军方案核心：行为条件生成 + 语义ID</text>
-  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#64748B">同一广告，不同行为 → 不同表示 | 多模态向量 → 离散语义ID → 自回归生成</text>
+  <text x="450" y="42" text-anchor="middle" fill="#e2e8f0" font-size="22" font-weight="bold">🏆 冠军方案核心：行为条件生成 + 语义ID</text>
+  <text x="450" y="65" text-anchor="middle" fill="#94a3b8" font-size="13">同一广告，不同行为 → 不同表示 | 多模态向量 → 离散语义码</text>
 
-  <!-- ============ LEFT SECTION: FiLM Action Conditioning ============ -->
-  <!-- Section Label -->
-  <text x="250" y="105" text-anchor="middle" font-size="16" font-weight="bold" fill="#2563EB">❶ 行为条件机制 (FiLM层)</text>
+  <!-- ===== LEFT PART: FiLM Action Conditioning ===== -->
+  <!-- Section label -->
+  <text x="260" y="100" text-anchor="middle" fill="#f472b6" font-size="16" font-weight="bold">核心创新①：FiLM 行为条件机制</text>
 
-  <!-- Ad A base box -->
-  <rect x="155" y="125" width="190" height="50" rx="12" fill="#DBEAFE" stroke="#2563EB" stroke-width="2" filter="url(#shadow)"/>
-  <text x="250" y="147" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E40AF">广告 A 向量</text>
-  <text x="250" y="165" text-anchor="middle" font-size="11" fill="#3B82F6">多模态 embedding</text>
+  <!-- Ad A box (shared) -->
+  <rect x="60" y="130" width="130" height="60" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+  <text x="125" y="155" text-anchor="middle" fill="#e2e8f0" font-size="14" font-weight="bold">广告 A</text>
+  <text x="125" y="175" text-anchor="middle" fill="#94a3b8" font-size="11">相同特征向量</text>
 
-  <!-- Split arrows -->
-  <line x1="210" y1="175" x2="130" y2="220" stroke="#555" stroke-width="2" marker-end="url(#arrowhead)"/>
-  <line x1="290" y1="175" x2="370" y2="220" stroke="#555" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Arrows from Ad A to two FiLM boxes -->
+  <line x1="190" y1="155" x2="240" y2="210" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="190" y1="165" x2="240" y2="340" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
 
-  <!-- Exposure FiLM -->
-  <rect x="40" y="220" width="185" height="100" rx="14" fill="#FEF3C7" stroke="#D97706" stroke-width="2.5" filter="url(#shadow)"/>
-  <text x="132" y="247" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400E">👁 曝光 (行为=0)</text>
-  <text x="132" y="270" text-anchor="middle" font-size="12" fill="#78350F">FiLM: γ₀·x + β₀</text>
-  <rect x="62" y="282" width="140" height="26" rx="6" fill="#FDE68A" stroke="#B45309" stroke-width="1.5"/>
-  <text x="132" y="300" text-anchor="middle" font-size="11" fill="#78350F">弱兴趣隐状态 h₀</text>
+  <!-- FiLM Box 1: Expose -->
+  <rect x="245" y="180" width="220" height="90" rx="12" fill="none" stroke="url(#expose)" stroke-width="2" opacity="0.8"/>
+  <rect x="245" y="180" width="220" height="90" rx="12" fill="#6366f1" opacity="0.1"/>
+  <!-- Action badge -->
+  <rect x="255" y="188" width="55" height="22" rx="6" fill="url(#expose)"/>
+  <text x="282" y="204" text-anchor="middle" fill="white" font-size="11" font-weight="bold">曝光</text>
+  <!-- FiLM formula -->
+  <text x="355" y="225" text-anchor="middle" fill="#c7d2fe" font-size="13">FiLM: γ₀·x + β₀</text>
+  <text x="355" y="250" text-anchor="middle" fill="#a5b4fc" font-size="11">→ 弱兴趣表示</text>
 
-  <!-- Click FiLM -->
-  <rect x="275" y="220" width="185" height="100" rx="14" fill="#DCFCE7" stroke="#16A34A" stroke-width="2.5" filter="url(#shadow)"/>
-  <text x="368" y="247" text-anchor="middle" font-size="13" font-weight="bold" fill="#166534">👆 点击 (行为=1)</text>
-  <text x="368" y="270" text-anchor="middle" font-size="12" fill="#14532D">FiLM: γ₁·x + β₁</text>
-  <rect x="298" y="282" width="140" height="26" rx="6" fill="#BBF7D0" stroke="#15803D" stroke-width="1.5"/>
-  <text x="368" y="300" text-anchor="middle" font-size="11" fill="#14532D">强兴趣隐状态 h₁</text>
+  <!-- FiLM Box 2: Click -->
+  <rect x="245" y="310" width="220" height="90" rx="12" fill="none" stroke="url(#click)" stroke-width="2" opacity="0.8"/>
+  <rect x="245" y="310" width="220" height="90" rx="12" fill="#f59e0b" opacity="0.1"/>
+  <rect x="255" y="318" width="55" height="22" rx="6" fill="url(#click)"/>
+  <text x="282" y="334" text-anchor="middle" fill="#1a1e3a" font-size="11" font-weight="bold">点击</text>
+  <text x="355" y="355" text-anchor="middle" fill="#fde68a" font-size="13">FiLM: γ₁·x + β₁</text>
+  <text x="355" y="380" text-anchor="middle" fill="#fcd34d" font-size="11">→ 强兴趣表示</text>
 
-  <!-- Not equal sign between them -->
-  <text x="250" y="278" text-anchor="middle" font-size="28" font-weight="bold" fill="#DC2626">≠</text>
+  <!-- VS / contrast indicator -->
+  <text x="355" y="290" text-anchor="middle" fill="#64748b" font-size="20" font-weight="bold">≠</text>
+  <text x="355" y="305" text-anchor="middle" fill="#64748b" font-size="10">不同隐状态</text>
 
-  <!-- Key insight callout -->
-  <rect x="80" y="340" width="340" height="38" rx="10" fill="#FEE2E2" stroke="#EF4444" stroke-width="1.5"/>
-  <text x="250" y="364" text-anchor="middle" font-size="12" font-weight="bold" fill="#991B1B">💡 同一广告 × 不同行为 = 不同语义滤镜 → 不同隐状态</text>
+  <!-- Analogy label -->
+  <text x="125" y="210" text-anchor="middle" fill="#94a3b8" font-size="10" font-style="italic">同一广告</text>
+  <text x="125" y="225" text-anchor="middle" fill="#94a3b8" font-size="10" font-style="italic">不同"滤镜"</text>
 
-  <!-- ============ RIGHT SECTION: Semantic ID ============ -->
-  <text x="680" y="105" text-anchor="middle" font-size="16" font-weight="bold" fill="#EA580C">❷ 语义ID (RQ-KMeans)</text>
+  <!-- Small convert badge for completeness -->
+  <rect x="245" y="420" width="220" height="45" rx="10" fill="none" stroke="url(#convert)" stroke-width="1.5" opacity="0.5" stroke-dasharray="5,3"/>
+  <rect x="255" y="428" width="55" height="22" rx="6" fill="url(#convert)" opacity="0.7"/>
+  <text x="282" y="444" text-anchor="middle" fill="white" font-size="11" font-weight="bold">转化</text>
+  <text x="385" y="444" text-anchor="middle" fill="#6ee7b7" font-size="12" opacity="0.7">γ₂·x + β₂ → 最强信号</text>
+  <line x1="190" y1="170" x2="240" y2="440" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arrow)" opacity="0.5"/>
 
-  <!-- High-dim embedding -->
-  <rect x="590" y="125" width="180" height="48" rx="12" fill="#E0E7FF" stroke="#4F46E5" stroke-width="2" filter="url(#shadow)"/>
-  <text x="680" y="147" text-anchor="middle" font-size="13" font-weight="bold" fill="#3730A3">高维多模态向量</text>
-  <text x="680" y="163" text-anchor="middle" font-size="10" fill="#6366F1">768-dim embedding</text>
+  <!-- ===== RIGHT PART: RQ-KMeans Semantic ID ===== -->
+  <text x="690" y="100" text-anchor="middle" fill="#60a5fa" font-size="16" font-weight="bold">核心创新②：RQ-KMeans 语义ID</text>
+
+  <!-- Multimodal embedding blob -->
+  <rect x="590" y="130" width="200" height="55" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+  <text x="690" y="153" text-anchor="middle" fill="#e2e8f0" font-size="13" font-weight="bold">多模态 Embedding</text>
+  <text x="690" y="172" text-anchor="middle" fill="#94a3b8" font-size="10">文本 + 视觉 + ID (高维)</text>
 
   <!-- Arrow down -->
-  <line x1="680" y1="173" x2="680" y2="200" stroke="#EA580C" stroke-width="2.5" marker-end="url(#arrowOrange)"/>
-  <text x="705" y="192" font-size="10" fill="#EA580C" font-weight="bold">量化</text>
+  <line x1="690" y1="185" x2="690" y2="210" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <!-- Level 1 -->
-  <rect x="600" y="205" width="160" height="36" rx="10" fill="#FFEDD5" stroke="#EA580C" stroke-width="2"/>
-  <text x="680" y="228" text-anchor="middle" font-size="13" font-weight="bold" fill="#9A3412">L1: 簇 12</text>
+  <!-- RQ Level 1 -->
+  <rect x="610" y="215" width="160" height="42" rx="8" fill="url(#rqGrad)" opacity="0.85"/>
+  <text x="690" y="240" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Level 1: 簇 12</text>
 
-  <line x1="680" y1="241" x2="680" y2="258" stroke="#EA580C" stroke-width="2" marker-end="url(#arrowOrange)"/>
+  <!-- Arrow -->
+  <line x1="690" y1="257" x2="690" y2="278" stroke="#60a5fa" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="780" y="272" fill="#94a3b8" font-size="10">残差↓</text>
 
-  <!-- Level 2 -->
-  <rect x="610" y="260" width="140" height="34" rx="10" fill="#FED7AA" stroke="#EA580C" stroke-width="2"/>
-  <text x="680" y="282" text-anchor="middle" font-size="13" font-weight="bold" fill="#9A3412">L2: 子簇 7</text>
+  <!-- RQ Level 2 -->
+  <rect x="610" y="282" width="160" height="42" rx="8" fill="url(#rqGrad)" opacity="0.65"/>
+  <text x="690" y="307" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Level 2: 子簇 7</text>
 
-  <line x1="680" y1="294" x2="680" y2="311" stroke="#EA580C" stroke-width="2" marker-end="url(#arrowOrange)"/>
+  <!-- Arrow -->
+  <line x1="690" y1="324" x2="690" y2="345" stroke="#60a5fa" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="780" y="339" fill="#94a3b8" font-size="10">残差↓</text>
 
-  <!-- Level 3 -->
-  <rect x="620" y="313" width="120" height="34" rx="10" fill="#FDBA74" stroke="#C2410C" stroke-width="2"/>
-  <text x="680" y="335" text-anchor="middle" font-size="13" font-weight="bold" fill="#7C2D12">L3: 子子簇 3</text>
+  <!-- RQ Level 3 -->
+  <rect x="610" y="349" width="160" height="42" rx="8" fill="url(#rqGrad)" opacity="0.45"/>
+  <text x="690" y="374" text-anchor="middle" fill="white" font-size="13" font-weight="bold">Level 3: 子子簇 3</text>
 
-  <!-- Resulting token sequence -->
-  <line x1="680" y1="347" x2="680" y2="370" stroke="#555" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <!-- Result semantic ID -->
+  <line x1="690" y1="391" x2="690" y2="420" stroke="#60a5fa" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <rect x="598" y="372" width="164" height="40" rx="10" fill="#FFF7ED" stroke="#C2410C" stroke-width="2.5" filter="url(#shadow)"/>
-  <text x="680" y="397" text-anchor="middle" font-size="14" font-weight="bold" fill="#7C2D12">(12, 7, 3)</text>
-  <text x="810" y="397" font-size="11" fill="#9A3412">← 离散 Token</text>
+  <rect x="608" y="425" width="164" height="48" rx="10" fill="#1e293b" stroke="#60a5fa" stroke-width="2"/>
+  <text x="690" y="446" text-anchor="middle" fill="#93c5fd" font-size="12" font-weight="bold">语义ID: (12, 7, 3)</text>
+  <text x="690" y="464" text-anchor="middle" fill="#94a3b8" font-size="10">离散码 → 可自回归生成</text>
 
-  <!-- ============ BOTTOM: Autoregressive Generation ============ -->
-  <rect x="90" y="420" width="720" height="170" rx="16" fill="white" stroke="#475569" stroke-width="2" filter="url(#shadow)"/>
-  <text x="450" y="450" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E293B">❸ 自回归生成 → ANN检索</text>
+  <!-- ===== BOTTOM: Autoregressive generation flow ===== -->
+  <rect x="60" y="495" width="780" height="100" rx="14" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <text x="450" y="520" text-anchor="middle" fill="#e2e8f0" font-size="15" font-weight="bold">Qwen 自回归骨干：端到端生成</text>
 
   <!-- Sequence tokens -->
-  <g>
-    <!-- token 1 -->
-    <rect x="130" y="470" width="80" height="50" rx="8" fill="#FEF3C7" stroke="#D97706" stroke-width="1.5"/>
-    <text x="170" y="492" text-anchor="middle" font-size="10" font-weight="bold" fill="#92400E">广告B</text>
-    <text x="170" y="508" text-anchor="middle" font-size="9" fill="#B45309">曝光</text>
+  <rect x="90" y="535" width="80" height="38" rx="6" fill="url(#expose)" opacity="0.6"/>
+  <text x="130" y="558" text-anchor="middle" fill="white" font-size="10">广告A·曝光</text>
 
-    <!-- token 2 -->
-    <rect x="225" y="470" width="80" height="50" rx="8" fill="#DCFCE7" stroke="#16A34A" stroke-width="1.5"/>
-    <text x="265" y="492" text-anchor="middle" font-size="10" font-weight="bold" fill="#166534">广告A</text>
-    <text x="265" y="508" text-anchor="middle" font-size="9" fill="#15803D">点击</text>
+  <text x="183" y="558" fill="#94a3b8" font-size="16">→</text>
 
-    <!-- token 3 -->
-    <rect x="320" y="470" width="80" height="50" rx="8" fill="#F3E8FF" stroke="#7C3AED" stroke-width="1.5"/>
-    <text x="360" y="492" text-anchor="middle" font-size="10" font-weight="bold" fill="#5B21B6">广告C</text>
-    <text x="360" y="508" text-anchor="middle" font-size="9" fill="#6D28D9">转化</text>
+  <rect x="200" y="535" width="80" height="38" rx="6" fill="url(#click)" opacity="0.6"/>
+  <text x="240" y="558" text-anchor="middle" fill="#1a1e3a" font-size="10">广告A·点击</text>
 
-    <!-- dots -->
-    <text x="420" y="500" text-anchor="middle" font-size="18" fill="#94A3B8">···</text>
+  <text x="293" y="558" fill="#94a3b8" font-size="16">→</text>
 
-    <!-- Qwen backbone -->
-    <rect x="448" y="468" width="120" height="54" rx="10" fill="#1E293B" stroke="#0F172A" stroke-width="2"/>
-    <text x="508" y="492" text-anchor="middle" font-size="13" font-weight="bold" fill="white">Qwen 骨干</text>
-    <text x="508" y="509" text-anchor="middle" font-size="10" fill="#94A3B8">自回归解码</text>
+  <rect x="310" y="535" width="80" height="38" rx="6" fill="url(#convert)" opacity="0.6"/>
+  <text x="350" y="558" text-anchor="middle" fill="white" font-size="10">广告B·转化</text>
 
-    <!-- Arrow to output -->
-    <line x1="568" y1="495" x2="600" y2="495" stroke="#2563EB" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+  <text x="403" y="558" fill="#94a3b8" font-size="16">→</text>
 
-    <!-- Output vector -->
-    <rect x="605" y="470" width="100" height="50" rx="10" fill="#DBEAFE" stroke="#2563EB" stroke-width="2"/>
-    <text x="655" y="492" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E40AF">用户向量</text>
-    <text x="655" y="508" text-anchor="middle" font-size="10" fill="#3B82F6">生成输出</text>
+  <rect x="420" y="535" width="50" height="38" rx="6" fill="#475569" opacity="0.5"/>
+  <text x="445" y="558" text-anchor="middle" fill="#cbd5e1" font-size="14">…</text>
 
-    <!-- Arrow to ANN -->
-    <line x1="705" y1="495" x2="730" y2="495" stroke="#2563EB" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+  <text x="483" y="558" fill="#94a3b8" font-size="16">→</text>
 
-    <!-- ANN -->
-    <rect x="735" y="473" width="55" height="44" rx="8" fill="#EFF6FF" stroke="#2563EB" stroke-width="2"/>
-    <text x="762" y="498" text-anchor="middle" font-size="11" font-weight="bold" fill="#1D4ED8">ANN</text>
-  </g>
+  <!-- Generated output -->
+  <rect x="500" y="530" width="160" height="48" rx="8" fill="none" stroke="#f472b6" stroke-width="2" stroke-dasharray="6,3" filter="url(#glow)"/>
+  <text x="580" y="552" text-anchor="middle" fill="#f9a8d4" font-size="12" font-weight="bold">生成: (12, 7, 3)</text>
+  <text x="580" y="568" text-anchor="middle" fill="#f472b6" font-size="10">→ ANN 检索广告</text>
 
-  <!-- Bottom labels -->
-  <text x="265" y="545" text-anchor="middle" font-size="11" fill="#64748B">行为条件Token序列</text>
-  <text x="508" y="545" text-anchor="middle" font-size="11" fill="#64748B">稠密语言模型</text>
-  <text x="700" y="545" text-anchor="middle" font-size="11" fill="#64748B">端到端检索</text>
+  <!-- Arrow to final -->
+  <text x="673" y="558" fill="#94a3b8" font-size="16">→</text>
 
-  <!-- Arrows connecting top sections to bottom -->
-  <path d="M 250 378 Q 250 400, 300 430" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arrowhead)"/>
-  <path d="M 680 412 Q 680 425, 550 440" fill="none" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arrowhead)"/>
+  <rect x="690" y="535" width="130" height="38" rx="8" fill="#10b981" opacity="0.3" stroke="#10b981" stroke-width="1.5"/>
+  <text x="755" y="558" text-anchor="middle" fill="#6ee7b7" font-size="12" font-weight="bold">🎯 推荐结果</text>
 
-  <!-- Divider line -->
-  <line x1="510" y1="115" x2="510" y2="405" stroke="#CBD5E1" stroke-width="1.5" stroke-dasharray="8,4"/>
-
-  <!-- Footer -->
-  <text x="450" y="605" text-anchor="middle" font-size="11" fill="#94A3B8">Tencent Advertising Algorithm Challenge 2025 — 1st Place Solution</text>
 </svg>

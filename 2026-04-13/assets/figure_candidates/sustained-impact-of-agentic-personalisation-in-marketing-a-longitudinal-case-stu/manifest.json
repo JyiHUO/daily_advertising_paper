@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-13/downloaded_pdfs/sustained-impact-of-agentic-personalisation-in-marketing-a-longitudinal-case-stu.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-13/assets/figure_candidates/sustained-impact-of-agentic-personalisation-in-marketing-a-longitudinal-case-stu",
+  "candidates": [
+    {
+      "id": "page-1-drawing-caption-8",
+      "page_index": 1,
+      "caption": "Figure 2: Visualising the feedback loop comprising end users, marketers, and agents in our setup. From Abboud et al. [ 1 ].",
+      "clip": [
+        35.79800033569336,
+        206.9243927001953,
+        312.0389709472656,
+        374.0
+      ],
+      "clip_area": 46153.127926015935,
+      "page_area": 484704.0,
+      "text_density": 0.0681999064037387,
+      "kind": "drawing_cluster_with_caption",
+      "score": 26.512812532511287,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-13/assets/figure_candidates/sustained-impact-of-agentic-personalisation-in-marketing-a-longitudinal-case-stu/01-p2-drawing_cluster_with_caption.png",
+      "filename": "01-p2-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-1-drawing-cluster-1",
+      "page_index": 1,
+      "caption": "第 2 页矢量图主图候选",
+      "clip": [
+        37.79800033569336,
+        208.9243927001953,
+        310.0389709472656,
+        372.0
+      ],
+      "clip_area": 44395.86161437043,
+      "page_area": 484704.0,
+      "text_density": 0.060027334376864735,
+      "kind": "drawing_cluster",
+      "score": 14.493287351270782,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-13/assets/figure_candidates/sustained-impact-of-agentic-personalisation-in-marketing-a-longitudinal-case-stu/02-p2-drawing_cluster.png",
+      "filename": "02-p2-drawing_cluster.png"
+    },
+    {
+      "id": "page-1-block-8",
+      "page_index": 1,
+      "caption": "Figure 2: Visualising the feedback loop comprising end users, marketers, and agents in our setup. From Abboud et al. [ 1 ].",
+      "clip": [
+        23.198000335693358,
+        44.157489013671864,
+        325.7348876953125,
+        352.9574890136719
+      ],
+      "clip_area": 93423.39081665041,
+      "page_area": 484704.0,
+      "text_density": 0.17803284379092493,
+      "kind": "captioned_figure",
+      "score": 9.156067048285063,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-13/assets/figure_candidates/sustained-impact-of-agentic-personalisation-in-marketing-a-longitudinal-case-stu/03-p2-captioned_figure.png",
+      "filename": "03-p2-captioned_figure.png"
+    },
+    {
+      "id": "page-2-drawing-caption-7",
+      "page_index": 2,
+      "caption": "Figure 3: Relative lift across metrics and phases. 4 Results & Discussion",
+      "clip": [
+        96.6640396118164,
+        72.58932495117188,
+        303.0642395019531,
+        119.92341613769531
+      ],
+      "clip_area": 9769.765882516396,
+      "page_area": 484704.0,
+      "text_density": 0.18142057492293676,
+      "kind": "drawing_cluster_with_caption",
+      "score": -7.976681541126023,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-13/assets/figure_candidates/sustained-impact-of-agentic-personalisation-in-marketing-a-longitudinal-case-stu/04-p3-drawing_cluster_with_caption.png",
+      "filename": "04-p3-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-1-region-upper-left",
+      "page_index": 1,
+      "caption": "第 2 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.3313968060639079,
+      "score": -8.174641643834475,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-13/assets/figure_candidates/sustained-impact-of-agentic-personalisation-in-marketing-a-longitudinal-case-stu/05-p2-layout_region_left_top.png",
+      "filename": "05-p2-layout_region_left_top.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.766226437191306,
+      "score": -11.09083328,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-13/assets/figure_candidates/sustained-impact-of-agentic-personalisation-in-marketing-a-longitudinal-case-stu/06-p1-layout_region_left_top.png",
+      "filename": "06-p1-layout_region_left_top.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-13/assets/figure_candidates/sustained-impact-of-agentic-personalisation-in-marketing-a-longitudinal-case-stu/contact-sheet.svg"
+}

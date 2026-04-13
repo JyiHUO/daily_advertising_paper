@@ -1,0 +1,159 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#555">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#e74c3c">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#27ae60">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8f9fa"/>
+      <stop offset="100%" stop-color="#e9ecef"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bgGrad)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#2c3e50">User-Order 源模型：用因果 Transformer 增强压缩质量</text>
+  <text x="450" y="62" text-anchor="middle" font-size="14" fill="#7f8c8d">关键洞察：存 SIT 之前的向量，而非之后的</text>
+
+  <!-- ========== LEFT SIDE: User instances timeline ========== -->
+  <!-- User instances column -->
+  <rect x="30" y="90" width="160" height="420" rx="10" fill="#eaf2f8" stroke="#2980b9" stroke-width="1.5"/>
+  <text x="110" y="115" text-anchor="middle" font-size="14" font-weight="bold" fill="#2980b9">用户 A 历史实例</text>
+  <text x="110" y="133" text-anchor="middle" font-size="11" fill="#7f8c8d">按时间排序</text>
+
+  <!-- Instance boxes -->
+  <rect x="50" y="150" width="120" height="40" rx="6" fill="#d5e8f7" stroke="#2980b9" stroke-width="1"/>
+  <text x="110" y="167" text-anchor="middle" font-size="11" fill="#2c3e50">实例 1 (t₁)</text>
+  <text x="110" y="181" text-anchor="middle" font-size="9" fill="#7f8c8d">数千维特征</text>
+
+  <rect x="50" y="205" width="120" height="40" rx="6" fill="#d5e8f7" stroke="#2980b9" stroke-width="1"/>
+  <text x="110" y="222" text-anchor="middle" font-size="11" fill="#2c3e50">实例 2 (t₂)</text>
+  <text x="110" y="236" text-anchor="middle" font-size="9" fill="#7f8c8d">数千维特征</text>
+
+  <rect x="50" y="260" width="120" height="40" rx="6" fill="#d5e8f7" stroke="#2980b9" stroke-width="1"/>
+  <text x="110" y="277" text-anchor="middle" font-size="11" fill="#2c3e50">实例 3 (t₃)</text>
+  <text x="110" y="291" text-anchor="middle" font-size="9" fill="#7f8c8d">数千维特征</text>
+
+  <text x="110" y="325" text-anchor="middle" font-size="18" fill="#95a5a6">⋮</text>
+
+  <rect x="50" y="345" width="120" height="40" rx="6" fill="#fdebd0" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="110" y="362" text-anchor="middle" font-size="11" font-weight="bold" fill="#e67e22">实例 T (t_T)</text>
+  <text x="110" y="376" text-anchor="middle" font-size="9" fill="#7f8c8d">数千维特征</text>
+
+  <!-- Timeline arrow -->
+  <line x1="110" y1="400" x2="110" y2="490" stroke="#95a5a6" stroke-width="1.5" marker-end="url(#arrow)" stroke-dasharray="4,3"/>
+  <text x="110" y="505" text-anchor="middle" font-size="10" fill="#95a5a6">时间 →</text>
+
+  <!-- ========== MIDDLE: Compression + SIT ========== -->
+  <!-- Compression layer -->
+  <rect x="230" y="140" width="140" height="260" rx="10" fill="#fef9e7" stroke="#f39c12" stroke-width="2"/>
+  <text x="300" y="168" text-anchor="middle" font-size="14" font-weight="bold" fill="#e67e22">压缩层</text>
+  <text x="300" y="186" text-anchor="middle" font-size="11" fill="#7f8c8d">数千维 → 64维</text>
+
+  <!-- Compressed vectors -->
+  <rect x="255" y="205" width="90" height="26" rx="4" fill="#fce4a6" stroke="#f39c12" stroke-width="1"/>
+  <text x="300" y="223" text-anchor="middle" font-size="10" font-weight="bold" fill="#8e6e1e">e₁ (64维)</text>
+
+  <rect x="255" y="240" width="90" height="26" rx="4" fill="#fce4a6" stroke="#f39c12" stroke-width="1"/>
+  <text x="300" y="258" text-anchor="middle" font-size="10" font-weight="bold" fill="#8e6e1e">e₂ (64维)</text>
+
+  <rect x="255" y="275" width="90" height="26" rx="4" fill="#fce4a6" stroke="#f39c12" stroke-width="1"/>
+  <text x="300" y="293" text-anchor="middle" font-size="10" font-weight="bold" fill="#8e6e1e">e₃ (64维)</text>
+
+  <text x="300" y="325" text-anchor="middle" font-size="14" fill="#bdc3c7">⋮</text>
+
+  <rect x="255" y="340" width="90" height="26" rx="4" fill="#fce4a6" stroke="#f39c12" stroke-width="1.5"/>
+  <text x="300" y="358" text-anchor="middle" font-size="10" font-weight="bold" fill="#8e6e1e">e_T (64维)</text>
+
+  <!-- Arrows: instances → compression -->
+  <line x1="170" y1="170" x2="228" y2="218" stroke="#555" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="170" y1="225" x2="228" y2="253" stroke="#555" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="170" y1="280" x2="228" y2="288" stroke="#555" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="170" y1="365" x2="228" y2="353" stroke="#555" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- ========== SIT Block ========== -->
+  <rect x="420" y="140" width="170" height="260" rx="12" fill="#eaf7ee" stroke="#27ae60" stroke-width="2.5"/>
+  <text x="505" y="168" text-anchor="middle" font-size="15" font-weight="bold" fill="#27ae60">SIT</text>
+  <text x="505" y="186" text-anchor="middle" font-size="10" fill="#7f8c8d">2层 Transformer · 因果掩码</text>
+
+  <!-- Causal mask illustration -->
+  <rect x="440" y="200" width="130" height="100" rx="6" fill="white" stroke="#27ae60" stroke-width="1"/>
+  <!-- Mask grid - simplified 4x4 -->
+  <text x="505" y="218" text-anchor="middle" font-size="10" fill="#27ae60" font-weight="bold">因果注意力掩码</text>
+  <!-- Row labels -->
+  <text x="455" y="243" text-anchor="middle" font-size="9" fill="#555">e₁</text>
+  <text x="455" y="258" text-anchor="middle" font-size="9" fill="#555">e₂</text>
+  <text x="455" y="273" text-anchor="middle" font-size="9" fill="#555">e₃</text>
+  <text x="455" y="288" text-anchor="middle" font-size="9" fill="#555">e_T</text>
+  <!-- Mask cells -->
+  <rect x="470" y="232" width="14" height="14" rx="2" fill="#27ae60" opacity="0.7"/>
+  <rect x="470" y="247" width="14" height="14" rx="2" fill="#27ae60" opacity="0.7"/>
+  <rect x="490" y="247" width="14" height="14" rx="2" fill="#27ae60" opacity="0.7"/>
+  <rect x="470" y="262" width="14" height="14" rx="2" fill="#27ae60" opacity="0.7"/>
+  <rect x="490" y="262" width="14" height="14" rx="2" fill="#27ae60" opacity="0.7"/>
+  <rect x="510" y="262" width="14" height="14" rx="2" fill="#27ae60" opacity="0.7"/>
+  <rect x="470" y="277" width="14" height="14" rx="2" fill="#27ae60" opacity="0.7"/>
+  <rect x="490" y="277" width="14" height="14" rx="2" fill="#27ae60" opacity="0.7"/>
+  <rect x="510" y="277" width="14" height="14" rx="2" fill="#27ae60" opacity="0.7"/>
+  <rect x="530" y="277" width="14" height="14" rx="2" fill="#27ae60" opacity="0.7"/>
+  <!-- Blocked cells -->
+  <rect x="490" y="232" width="14" height="14" rx="2" fill="#eee" stroke="#ccc" stroke-width="0.5"/>
+  <rect x="510" y="232" width="14" height="14" rx="2" fill="#eee" stroke="#ccc" stroke-width="0.5"/>
+  <rect x="530" y="232" width="14" height="14" rx="2" fill="#eee" stroke="#ccc" stroke-width="0.5"/>
+  <rect x="510" y="247" width="14" height="14" rx="2" fill="#eee" stroke="#ccc" stroke-width="0.5"/>
+  <rect x="530" y="247" width="14" height="14" rx="2" fill="#eee" stroke="#ccc" stroke-width="0.5"/>
+  <rect x="530" y="262" width="14" height="14" rx="2" fill="#eee" stroke="#ccc" stroke-width="0.5"/>
+
+  <text x="505" y="320" text-anchor="middle" font-size="10" fill="#555">后面的实例可参考前面</text>
+  <text x="505" y="335" text-anchor="middle" font-size="10" fill="#555">→ 上下文增强训练</text>
+
+  <!-- SIT output label -->
+  <text x="505" y="375" text-anchor="middle" font-size="10" fill="#95a5a6">SIT输出 → 用于损失优化</text>
+
+  <!-- Arrows: compression → SIT -->
+  <line x1="370" y1="270" x2="418" y2="270" stroke="#27ae60" stroke-width="2" marker-end="url(#arrowGreen)"/>
+
+  <!-- ========== KEY INSIGHT: What to store ========== -->
+  <!-- Big red X on SIT output -->
+  <rect x="620" y="200" width="250" height="105" rx="10" fill="#fdedec" stroke="#e74c3c" stroke-width="2.5"/>
+  <text x="745" y="225" text-anchor="middle" font-size="13" font-weight="bold" fill="#e74c3c">❌ 不存 SIT 之后的输出</text>
+  <text x="745" y="248" text-anchor="middle" font-size="11" fill="#c0392b">注意力使表示相互平滑</text>
+  <text x="745" y="268" text-anchor="middle" font-size="11" fill="#c0392b">→ 丢失基础特征区分度</text>
+  <text x="745" y="295" text-anchor="middle" font-size="10" fill="#95a5a6">SIT 只在训练时起增强作用</text>
+
+  <!-- Big green check on compression output -->
+  <rect x="620" y="330" width="250" height="105" rx="10" fill="#e8f8f5" stroke="#27ae60" stroke-width="2.5"/>
+  <text x="745" y="355" text-anchor="middle" font-size="13" font-weight="bold" fill="#27ae60">✅ 存压缩层直接输出</text>
+  <text x="745" y="378" text-anchor="middle" font-size="11" fill="#1e8449">保留原始压缩特征信息</text>
+  <text x="745" y="398" text-anchor="middle" font-size="11" fill="#1e8449">→ 高质量 InsEmb</text>
+  <text x="745" y="425" text-anchor="middle" font-size="10" fill="#95a5a6">存入 Parameter Server</text>
+
+  <!-- Arrow from SIT to red box -->
+  <path d="M590 250 L618 250" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowRed)" stroke-dasharray="5,3"/>
+
+  <!-- Arrow from compression to green box -->
+  <path d="M370 355 Q395 420 618 382" stroke="#27ae60" stroke-width="2.5" marker-end="url(#arrowGreen)" fill="none"/>
+
+  <!-- ========== BOTTOM: Result comparison ========== -->
+  <rect x="80" y="530" width="740" height="70" rx="10" fill="white" stroke="#8e44ad" stroke-width="2"/>
+  
+  <!-- Temporal-Order -->
+  <rect x="100" y="545" width="280" height="42" rx="6" fill="#f4ecf7" stroke="#8e44ad" stroke-width="1"/>
+  <text x="240" y="565" text-anchor="middle" font-size="12" fill="#8e44ad">Temporal-Order（独立压缩）</text>
+  <text x="240" y="580" text-anchor="middle" font-size="11" fill="#7f8c8d">下游 AUC +0.15%</text>
+
+  <!-- VS -->
+  <text x="440" y="572" text-anchor="middle" font-size="16" font-weight="bold" fill="#555">VS</text>
+
+  <!-- User-Order -->
+  <rect x="500" y="545" width="300" height="42" rx="6" fill="#d5f5e3" stroke="#27ae60" stroke-width="2"/>
+  <text x="650" y="565" text-anchor="middle" font-size="12" font-weight="bold" fill="#27ae60">User-Order + SIT（上下文增强）</text>
+  <text x="650" y="580" text-anchor="middle" font-size="11" font-weight="bold" fill="#1e8449">下游 AUC +0.31% 🏆</text>
+</svg>

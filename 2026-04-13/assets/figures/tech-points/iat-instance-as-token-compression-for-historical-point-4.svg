@@ -1,0 +1,107 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#EF4444"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#6B7280"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#059669"/>
+    </marker>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="580" rx="16" fill="#F8FAFC"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E1B4B">IAT 核心亮点：一次训练，多场景迁移</text>
+  <text x="450" y="68" text-anchor="middle" font-size="14" fill="#6B7280">一个广告场景产出的 InsEmb，直接复用到 5+ 不同推荐场景均显著涨指标</text>
+
+  <!-- Source Model (left) -->
+  <rect x="40" y="110" width="220" height="180" rx="16" fill="url(#g1)" filter="url(#shadow)" opacity="0.95"/>
+  <text x="150" y="150" text-anchor="middle" font-size="17" font-weight="bold" fill="#fff">📦 源模型训练</text>
+  <text x="150" y="178" text-anchor="middle" font-size="13" fill="#E0E7FF">电商广告场景</text>
+  <rect x="70" y="198" width="160" height="36" rx="8" fill="rgba(255,255,255,0.2)"/>
+  <text x="150" y="221" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">数千维实例 → InsEmb</text>
+  <text x="150" y="260" text-anchor="middle" font-size="12" fill="#C7D2FE">User-Order 压缩</text>
+  <text x="150" y="278" text-anchor="middle" font-size="11" fill="#C7D2FE">仅训练一次</text>
+
+  <!-- Central InsEmb storage -->
+  <rect x="330" y="140" width="180" height="120" rx="50" fill="url(#g2)" filter="url(#shadow)"/>
+  <text x="420" y="190" text-anchor="middle" font-size="18" font-weight="bold" fill="#fff">InsEmb</text>
+  <text x="420" y="212" text-anchor="middle" font-size="12" fill="#FEF3C7">通用用户偏好向量</text>
+  <text x="420" y="232" text-anchor="middle" font-size="11" fill="#FDE68A">存储 &amp; 检索</text>
+
+  <!-- Arrow: source → InsEmb -->
+  <line x1="260" y1="200" x2="328" y2="200" stroke="#6B7280" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- Right side: 5 downstream scenarios -->
+  <!-- Scenario cards -->
+  <g>
+    <!-- Card 1: 电商广告 -->
+    <rect x="590" y="90" width="270" height="58" rx="10" fill="#fff" stroke="#4F46E5" stroke-width="2" filter="url(#shadow)"/>
+    <text x="608" y="116" font-size="14" font-weight="bold" fill="#4F46E5">🛒 电商广告</text>
+    <text x="608" y="136" font-size="12" fill="#6B7280">ADSS +1.56%  ADVV +1.34%</text>
+    <rect x="810" y="102" width="40" height="22" rx="6" fill="#4F46E5"/>
+    <text x="830" y="118" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">域内</text>
+
+    <!-- Card 2: 商城广告 -->
+    <rect x="590" y="162" width="270" height="58" rx="10" fill="#fff" stroke="#059669" stroke-width="2" filter="url(#shadow)"/>
+    <text x="608" y="188" font-size="14" font-weight="bold" fill="#059669">🏬 商城广告 CVR</text>
+    <text x="608" y="208" font-size="12" fill="#6B7280">ADVV +1.48%</text>
+    <rect x="810" y="174" width="40" height="22" rx="6" fill="#059669"/>
+    <text x="830" y="190" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">跨域</text>
+
+    <!-- Card 3: 信息流广告 CTR -->
+    <rect x="590" y="234" width="270" height="58" rx="10" fill="#fff" stroke="#059669" stroke-width="2" filter="url(#shadow)"/>
+    <text x="608" y="260" font-size="14" font-weight="bold" fill="#059669">📰 信息流广告 CTR</text>
+    <text x="608" y="280" font-size="12" fill="#6B7280">ADSS <tspan font-weight="bold" fill="#DC2626">+3.015%</tspan> 🔥</text>
+    <rect x="810" y="246" width="40" height="22" rx="6" fill="#059669"/>
+    <text x="830" y="262" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">跨域</text>
+
+    <!-- Card 4: 非闭环广告 -->
+    <rect x="590" y="306" width="270" height="58" rx="10" fill="#fff" stroke="#059669" stroke-width="2" filter="url(#shadow)"/>
+    <text x="608" y="332" font-size="14" font-weight="bold" fill="#059669">🔗 非闭环广告 CVR</text>
+    <text x="608" y="352" font-size="12" fill="#6B7280">ADSS +1.19%</text>
+    <rect x="810" y="318" width="40" height="22" rx="6" fill="#059669"/>
+    <text x="830" y="334" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">跨域</text>
+
+    <!-- Card 5: 直播电商 -->
+    <rect x="590" y="378" width="270" height="58" rx="10" fill="#fff" stroke="#059669" stroke-width="2" filter="url(#shadow)"/>
+    <text x="608" y="404" font-size="14" font-weight="bold" fill="#059669">🎥 直播电商 CT-CVR</text>
+    <text x="608" y="424" font-size="12" fill="#6B7280">GMV +0.15%</text>
+    <rect x="810" y="390" width="40" height="22" rx="6" fill="#059669"/>
+    <text x="830" y="406" text-anchor="middle" font-size="11" font-weight="bold" fill="#fff">跨域</text>
+  </g>
+
+  <!-- Arrows: InsEmb → scenarios (fan out) -->
+  <line x1="510" y1="185" x2="588" y2="119" stroke="#6B7280" stroke-width="2.5" marker-end="url(#arrow)" stroke-dasharray="6,3"/>
+  <line x1="510" y1="195" x2="588" y2="191" stroke="#059669" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <line x1="510" y1="200" x2="588" y2="263" stroke="#059669" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <line x1="510" y1="210" x2="588" y2="335" stroke="#059669" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <line x1="510" y1="215" x2="588" y2="407" stroke="#059669" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+
+  <!-- Bottom insight box -->
+  <rect x="100" y="480" width="700" height="70" rx="14" fill="#ECFDF5" stroke="#10B981" stroke-width="2"/>
+  <text x="450" y="510" text-anchor="middle" font-size="16" font-weight="bold" fill="#065F46">💡 核心发现</text>
+  <text x="450" y="534" text-anchor="middle" font-size="14" fill="#047857">InsEmb 捕获的是用户通用交互偏好，而非场景特定窄信号 → 无需重训即可跨域迁移</text>
+
+  <!-- Legend -->
+  <rect x="40" y="340" width="14" height="14" rx="3" fill="#4F46E5"/>
+  <text x="60" y="352" font-size="12" fill="#4B5563">域内部署</text>
+  <rect x="40" y="364" width="14" height="14" rx="3" fill="#059669"/>
+  <text x="60" y="376" font-size="12" fill="#4B5563">跨域迁移（无需重训源模型）</text>
+</svg>

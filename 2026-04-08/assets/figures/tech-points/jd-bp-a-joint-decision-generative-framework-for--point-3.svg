@@ -1,115 +1,131 @@
-<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="Arial, Helvetica, sans-serif">
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Arial, Helvetica, sans-serif">
   <defs>
-    <linearGradient id="bidGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#4A90D9"/>
-      <stop offset="100%" stop-color="#2C5F9E"/>
-    </linearGradient>
-    <linearGradient id="priceGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#E8833A"/>
-      <stop offset="100%" stop-color="#C25A12"/>
-    </linearGradient>
-    <linearGradient id="gcaGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#7B2FBE"/>
-      <stop offset="100%" stop-color="#5A1D8E"/>
-    </linearGradient>
-    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#2C5F9E"/>
-    </marker>
-    <marker id="arrowOrange" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#C25A12"/>
-    </marker>
-    <marker id="arrowPurple" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#7B2FBE"/>
-    </marker>
-    <marker id="arrowGray" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
     </marker>
-    <filter id="shadow" x="-3%" y="-3%" width="106%" height="106%">
-      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.15"/>
+    <marker id="arr-blue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2563EB"/>
+    </marker>
+    <marker id="arr-orange" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#EA580C"/>
+    </marker>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.12"/>
     </filter>
   </defs>
 
   <!-- Background -->
-  <rect width="900" height="580" rx="16" fill="#F5F3F0"/>
+  <rect width="900" height="560" rx="18" fill="url(#bg)"/>
 
   <!-- Title -->
-  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#222">双流 Transformer + 门控交叉注意力 (GCA)</text>
-  <text x="450" y="68" text-anchor="middle" font-size="14" fill="#666">核心创新：出价独立决策，定价通过门控窗口感知出价后再修正</text>
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E293B">双流 Transformer + 门控交叉注意力 (GCA)</text>
+  <text x="450" y="67" text-anchor="middle" font-size="14" fill="#64748B">核心：出价先行独立决策，定价通过门控窗口感知出价再修正</text>
 
-  <!-- ===== Bidding Stream (Top) ===== -->
-  <g filter="url(#shadow)">
-    <rect x="60" y="105" width="340" height="160" rx="14" fill="url(#bidGrad)" opacity="0.92"/>
+  <!-- ====== Bidding Stream (Top) ====== -->
+  <rect x="40" y="100" width="380" height="170" rx="14" fill="#EFF6FF" stroke="#2563EB" stroke-width="2" filter="url(#shadow)"/>
+  <text x="230" y="128" text-anchor="middle" font-size="17" font-weight="bold" fill="#2563EB">出价流 (Bidding Stream)</text>
+
+  <!-- Input -->
+  <rect x="65" y="148" width="100" height="44" rx="8" fill="#DBEAFE" stroke="#93C5FD" stroke-width="1.5"/>
+  <text x="115" y="167" text-anchor="middle" font-size="11" fill="#1E40AF">状态 s_t</text>
+  <text x="115" y="181" text-anchor="middle" font-size="11" fill="#1E40AF">历史动作</text>
+
+  <!-- Causal Transformer -->
+  <rect x="195" y="148" width="120" height="44" rx="8" fill="#2563EB"/>
+  <text x="255" y="167" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFF">因果</text>
+  <text x="255" y="183" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFF">Transformer</text>
+
+  <!-- Bid output -->
+  <rect x="345" y="148" width="56" height="44" rx="8" fill="#1D4ED8"/>
+  <text x="373" y="175" text-anchor="middle" font-size="14" font-weight="bold" fill="#FFF">出价</text>
+
+  <!-- Arrows in bidding stream -->
+  <line x1="165" y1="170" x2="192" y2="170" stroke="#2563EB" stroke-width="2" marker-end="url(#arr-blue)"/>
+  <line x1="315" y1="170" x2="342" y2="170" stroke="#2563EB" stroke-width="2" marker-end="url(#arr-blue)"/>
+
+  <!-- Hidden states label -->
+  <rect x="200" y="208" width="110" height="26" rx="6" fill="#BFDBFE"/>
+  <text x="255" y="225" text-anchor="middle" font-size="11" font-weight="bold" fill="#1E40AF">隐状态 h_bid</text>
+
+  <!-- Causal note -->
+  <text x="230" y="258" text-anchor="middle" font-size="11" fill="#64748B" font-style="italic">独立决策，不受定价干扰 ✓</text>
+
+  <!-- ====== Pricing Stream (Bottom) ====== -->
+  <rect x="40" y="310" width="580" height="170" rx="14" fill="#FFF7ED" stroke="#EA580C" stroke-width="2" filter="url(#shadow)"/>
+  <text x="330" y="338" text-anchor="middle" font-size="17" font-weight="bold" fill="#EA580C">定价流 (Pricing Stream)</text>
+
+  <!-- Input -->
+  <rect x="65" y="358" width="100" height="44" rx="8" fill="#FFEDD5" stroke="#FDBA74" stroke-width="1.5"/>
+  <text x="115" y="377" text-anchor="middle" font-size="11" fill="#9A3412">状态 s_t</text>
+  <text x="115" y="391" text-anchor="middle" font-size="11" fill="#9A3412">KPI 缺口</text>
+
+  <!-- Pricing Transformer -->
+  <rect x="195" y="358" width="120" height="44" rx="8" fill="#EA580C"/>
+  <text x="255" y="377" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFF">因果</text>
+  <text x="255" y="393" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFF">Transformer</text>
+
+  <!-- Arrows -->
+  <line x1="165" y1="380" x2="192" y2="380" stroke="#EA580C" stroke-width="2" marker-end="url(#arr-orange)"/>
+
+  <!-- Hidden states pricing -->
+  <rect x="200" y="418" width="110" height="26" rx="6" fill="#FED7AA"/>
+  <text x="255" y="435" text-anchor="middle" font-size="11" font-weight="bold" fill="#9A3412">隐状态 h_price</text>
+
+  <!-- ====== GCA Module (Center-Right) ====== -->
+  <rect x="460" y="140" width="200" height="200" rx="16" fill="#FEF3C7" stroke="#D97706" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="560" y="170" text-anchor="middle" font-size="16" font-weight="bold" fill="#92400E">GCA 门控模块</text>
+
+  <!-- Sigmoid gate -->
+  <rect x="485" y="188" width="150" height="34" rx="8" fill="#FDE68A" stroke="#D97706" stroke-width="1.5"/>
+  <text x="560" y="210" text-anchor="middle" font-size="12" font-weight="bold" fill="#78350F">σ(h_bid) → 门控权重</text>
+
+  <!-- Cross attention -->
+  <rect x="485" y="238" width="150" height="34" rx="8" fill="#FBBF24" stroke="#D97706" stroke-width="1.5"/>
+  <text x="560" y="259" text-anchor="middle" font-size="12" font-weight="bold" fill="#78350F">Cross-Attention</text>
+
+  <!-- Merge -->
+  <rect x="485" y="288" width="150" height="34" rx="8" fill="#F59E0B" stroke="#D97706" stroke-width="1.5"/>
+  <text x="560" y="309" text-anchor="middle" font-size="12" font-weight="bold" fill="#FFF">融合 → 定价输出</text>
+
+  <!-- Internal arrows in GCA -->
+  <line x1="560" y1="222" x2="560" y2="236" stroke="#D97706" stroke-width="1.5" marker-end="url(#arr)"/>
+  <line x1="560" y1="272" x2="560" y2="286" stroke="#D97706" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- ====== Connection: Bid hidden → GCA (top) ====== -->
+  <path d="M310 221 L430 221 Q445 221 445 210 L445 205 Q445 195 455 195 L483 205" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-dasharray="6 3" marker-end="url(#arr-blue)"/>
+  <text x="395" y="210" text-anchor="middle" font-size="10" fill="#2563EB" font-weight="bold">h_bid</text>
+
+  <!-- Connection: Pricing hidden → GCA (bottom) -->
+  <path d="M310 431 L430 431 Q445 431 445 400 L445 272 Q445 260 455 260 L483 255" fill="none" stroke="#EA580C" stroke-width="2.5" stroke-dasharray="6 3" marker-end="url(#arr-orange)"/>
+  <text x="420" y="350" text-anchor="middle" font-size="10" fill="#EA580C" font-weight="bold">h_price</text>
+
+  <!-- ====== Output: Pricing correction ====== -->
+  <rect x="700" y="280" width="160" height="50" rx="12" fill="#F59E0B" filter="url(#shadow)"/>
+  <text x="780" y="302" text-anchor="middle" font-size="14" font-weight="bold" fill="#FFF">定价修正 Δp</text>
+  <text x="780" y="320" text-anchor="middle" font-size="11" fill="#FFF">补偿KPI缺口</text>
+
+  <line x1="635" y1="305" x2="697" y2="305" stroke="#D97706" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- ====== Bid output arrow to right ====== -->
+  <rect x="700" y="140" width="160" height="50" rx="12" fill="#1D4ED8" filter="url(#shadow)"/>
+  <text x="780" y="162" text-anchor="middle" font-size="14" font-weight="bold" fill="#FFF">出价动作 a_bid</text>
+  <text x="780" y="180" text-anchor="middle" font-size="11" fill="#FFF">价值最大化</text>
+
+  <line x1="401" y1="170" x2="420" y2="170" stroke="#2563EB" stroke-width="2"/>
+  <path d="M420 170 L680 165 Q698 165 698 165" fill="none" stroke="#2563EB" stroke-width="2.5" marker-end="url(#arr-blue)"/>
+
+  <!-- ====== Key insight at bottom ====== -->
+  <rect x="180" y="505" width="540" height="40" rx="10" fill="#1E293B"/>
+  <text x="450" y="530" text-anchor="middle" font-size="15" font-weight="bold" fill="#FDE68A">关键：因果单向 — 出价 → 定价，定价感知出价但出价不被污染</text>
+
+  <!-- Small cross icon between streams -->
+  <g transform="translate(22,282)">
+    <line x1="0" y1="0" x2="16" y2="16" stroke="#DC2626" stroke-width="3" stroke-linecap="round"/>
+    <line x1="16" y1="0" x2="0" y2="16" stroke="#DC2626" stroke-width="3" stroke-linecap="round"/>
   </g>
-  <text x="230" y="136" text-anchor="middle" font-size="17" font-weight="bold" fill="#fff">🔵 出价流 (Bidding Stream)</text>
-  <text x="230" y="160" text-anchor="middle" font-size="13" fill="#D4E4F7">因果 Transformer</text>
-
-  <!-- Input tokens -->
-  <rect x="85" y="178" width="70" height="32" rx="6" fill="#fff" opacity="0.25"/>
-  <text x="120" y="199" text-anchor="middle" font-size="11" fill="#fff">s_t</text>
-  <rect x="165" y="178" width="70" height="32" rx="6" fill="#fff" opacity="0.25"/>
-  <text x="200" y="199" text-anchor="middle" font-size="11" fill="#fff">R^b_t</text>
-  <rect x="245" y="178" width="70" height="32" rx="6" fill="#fff" opacity="0.25"/>
-  <text x="280" y="199" text-anchor="middle" font-size="11" fill="#fff">a^b_t</text>
-
-  <!-- Output -->
-  <rect x="140" y="225" width="180" height="28" rx="8" fill="#fff" opacity="0.3"/>
-  <text x="230" y="244" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">→ 出价动作</text>
-
-  <!-- ===== Pricing Stream (Bottom) ===== -->
-  <g filter="url(#shadow)">
-    <rect x="60" y="340" width="340" height="160" rx="14" fill="url(#priceGrad)" opacity="0.92"/>
-  </g>
-  <text x="230" y="371" text-anchor="middle" font-size="17" font-weight="bold" fill="#fff">🟠 定价流 (Pricing Stream)</text>
-  <text x="230" y="395" text-anchor="middle" font-size="13" fill="#FDDCBF">因果 Transformer + GCA</text>
-
-  <!-- Output -->
-  <rect x="140" y="455" width="180" height="28" rx="8" fill="#fff" opacity="0.3"/>
-  <text x="230" y="474" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">→ 定价修正</text>
-
-  <!-- ===== GCA Module (Right Center) ===== -->
-  <g filter="url(#shadow)">
-    <rect x="510" y="195" width="330" height="210" rx="16" fill="url(#gcaGrad)" opacity="0.93"/>
-  </g>
-  <text x="675" y="228" text-anchor="middle" font-size="17" font-weight="bold" fill="#fff">⚙️ 门控交叉注意力 (GCA)</text>
-
-  <!-- Step 1: Sigmoid gate -->
-  <rect x="535" y="248" width="280" height="38" rx="8" fill="#fff" opacity="0.18"/>
-  <text x="675" y="263" text-anchor="middle" font-size="12" fill="#E8D4FF">① Sigmoid 门控出价隐状态</text>
-  <text x="675" y="279" text-anchor="middle" font-size="11" fill="#C9ABEF">选择性提取有用的出价信息</text>
-
-  <!-- Step 2: Concat + Cross Attn -->
-  <rect x="535" y="296" width="280" height="38" rx="8" fill="#fff" opacity="0.18"/>
-  <text x="675" y="311" text-anchor="middle" font-size="12" fill="#E8D4FF">② 拼接为 Query → 交叉注意力</text>
-  <text x="675" y="327" text-anchor="middle" font-size="11" fill="#C9ABEF">定价隐状态作 Key &amp; Value</text>
-
-  <!-- Step 3: Residual -->
-  <rect x="535" y="344" width="280" height="38" rx="8" fill="#fff" opacity="0.18"/>
-  <text x="675" y="359" text-anchor="middle" font-size="12" fill="#E8D4FF">③ 残差回定价流 → 输出修正</text>
-  <text x="675" y="375" text-anchor="middle" font-size="11" fill="#C9ABEF">出价不受定价干扰 ✓</text>
-
-  <!-- ===== Arrows ===== -->
-  <!-- Bidding → GCA (hidden states) -->
-  <path d="M 400 200 C 440 200, 470 260, 510 270" fill="none" stroke="#4A90D9" stroke-width="3" stroke-dasharray="8,4" marker-end="url(#arrowBlue)"/>
-  <text x="448" y="220" font-size="11" fill="#2C5F9E" font-weight="bold" transform="rotate(-20, 448, 220)">隐状态</text>
-
-  <!-- GCA → Pricing (enriched context) -->
-  <path d="M 510 370 C 470 390, 440 410, 400 420" fill="none" stroke="#E8833A" stroke-width="3" marker-end="url(#arrowOrange)"/>
-  <text x="438" y="412" font-size="11" fill="#C25A12" font-weight="bold">增强上下文</text>
-
-  <!-- Pricing → GCA (pricing hidden) -->
-  <path d="M 400 380 C 440 370, 470 340, 510 320" fill="none" stroke="#7B2FBE" stroke-width="2.5" stroke-dasharray="6,3" marker-end="url(#arrowPurple)"/>
-  <text x="445" y="358" font-size="10" fill="#7B2FBE">定价隐状态</text>
-
-  <!-- One-way causal arrow between streams -->
-  <line x1="230" y1="265" x2="230" y2="340" stroke="#555" stroke-width="2.5" marker-end="url(#arrowGray)"/>
-  <text x="244" y="308" font-size="12" fill="#555" font-weight="bold">单向因果</text>
-
-  <!-- ===== Cross-out symbol on reverse direction ===== -->
-  <line x1="212" y1="340" x2="196" y2="295" stroke="#D44" stroke-width="2.5"/>
-  <line x1="196" y1="340" x2="212" y2="295" stroke="#D44" stroke-width="2.5"/>
-  <text x="176" y="325" font-size="10" fill="#D44" font-weight="bold">✗ 反向</text>
-
-  <!-- ===== Bottom Legend / Key Insight ===== -->
-  <rect x="120" y="525" width="660" height="40" rx="10" fill="#2C2C2C" opacity="0.07"/>
-  <text x="450" y="550" text-anchor="middle" font-size="14" fill="#333" font-weight="bold">💡 出价专注价值最大化，定价通过 GCA 门控感知出价后做 KPI 补偿修正</text>
+  <text x="52" y="295" font-size="10" fill="#DC2626" font-weight="bold">无反向影响</text>
 </svg>

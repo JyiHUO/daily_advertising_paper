@@ -1,134 +1,148 @@
-<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="Arial, Helvetica, sans-serif">
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" font-family="Arial, Helvetica, sans-serif">
   <defs>
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
     </marker>
     <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#2B7AE0"/>
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2563EB"/>
     </marker>
     <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#F0F4FA"/>
-      <stop offset="100%" stop-color="#E2EAF5"/>
+      <stop offset="0%" stop-color="#F0F4FF"/>
+      <stop offset="100%" stop-color="#E8ECF8"/>
     </linearGradient>
-    <filter id="shadow" x="-3%" y="-3%" width="106%" height="110%">
-      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.12"/>
-    </filter>
+    <linearGradient id="seqGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#DBEAFE"/>
+      <stop offset="100%" stop-color="#BFDBFE"/>
+    </linearGradient>
   </defs>
 
   <!-- Background -->
-  <rect width="900" height="520" rx="16" fill="url(#bgGrad)"/>
+  <rect width="900" height="540" rx="16" fill="url(#bgGrad)"/>
 
   <!-- Title -->
-  <text x="450" y="38" text-anchor="middle" font-size="20" font-weight="bold" fill="#1A1A2E">全模态序列生成式推荐 —— "广告版GPT补全"</text>
-  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#666">不打分候选，而是生成兴趣向量 → 近邻检索百万候选广告</text>
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E293B">全模态序列生成式推荐 — "广告版GPT补全"</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#64748B">输入用户历史序列 → 生成兴趣向量 → ANN检索候选广告</text>
 
-  <!-- ==================== Module 1: User Sequence ==================== -->
-  <rect x="30" y="90" width="260" height="340" rx="14" fill="#fff" stroke="#B0C4DE" stroke-width="1.5" filter="url(#shadow)"/>
-  <rect x="30" y="90" width="260" height="40" rx="14" fill="#3A6EA5"/>
-  <rect x="30" y="116" width="260" height="14" fill="#3A6EA5"/>
-  <text x="160" y="116" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">① 用户历史序列</text>
+  <!-- ====== 1. User Profile Token ====== -->
+  <rect x="30" y="90" width="110" height="100" rx="12" fill="#8B5CF6" opacity="0.15" stroke="#8B5CF6" stroke-width="2"/>
+  <rect x="42" y="105" width="86" height="30" rx="6" fill="#8B5CF6"/>
+  <text x="85" y="125" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold">用户画像</text>
+  <text x="85" y="152" text-anchor="middle" font-size="10" fill="#6D28D9">年龄 · 性别</text>
+  <text x="85" y="168" text-anchor="middle" font-size="10" fill="#6D28D9">画像字段</text>
 
-  <!-- User Profile Token -->
-  <rect x="50" y="148" width="220" height="48" rx="8" fill="#E8F0FE" stroke="#6DA3E0" stroke-width="1.2"/>
-  <text x="160" y="168" text-anchor="middle" font-size="13" font-weight="bold" fill="#2B5EA7">👤 用户画像 Token</text>
-  <text x="160" y="185" text-anchor="middle" font-size="11" fill="#555">年龄 · 性别 · 属性</text>
+  <!-- Arrow from user to sequence -->
+  <line x1="145" y1="140" x2="170" y2="140" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <!-- Item Tokens -->
-  <rect x="50" y="210" width="220" height="130" rx="8" fill="#FFF7E6" stroke="#E8A838" stroke-width="1.2"/>
-  <text x="160" y="232" text-anchor="middle" font-size="13" font-weight="bold" fill="#B07413">📦 物品交互 Token ×N</text>
+  <!-- ====== 2. Interaction Sequence (up to 100 tokens) ====== -->
+  <rect x="175" y="82" width="370" height="118" rx="14" fill="url(#seqGrad)" stroke="#3B82F6" stroke-width="2"/>
+  <text x="360" y="103" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E40AF">交互序列（最多100个Token）</text>
 
-  <!-- Sub-elements inside item token -->
-  <rect x="62" y="244" width="90" height="26" rx="5" fill="#FFE8CC"/>
-  <text x="107" y="262" text-anchor="middle" font-size="10" fill="#8B5E14">稀疏ID/类目</text>
-
-  <rect x="162" y="244" width="96" height="26" rx="5" fill="#FFE8CC"/>
-  <text x="210" y="262" text-anchor="middle" font-size="10" fill="#8B5E14">行为类型</text>
-
-  <!-- Behavior labels -->
-  <rect x="62" y="278" width="50" height="20" rx="4" fill="#D4EDDA"/>
-  <text x="87" y="292" text-anchor="middle" font-size="9" fill="#2D6A4F">曝光</text>
-  <rect x="118" y="278" width="50" height="20" rx="4" fill="#B8DAFF"/>
-  <text x="143" y="292" text-anchor="middle" font-size="9" fill="#1B4F72">点击</text>
-  <rect x="174" y="278" width="50" height="20" rx="4" fill="#F8D7DA"/>
-  <text x="199" y="292" text-anchor="middle" font-size="9" fill="#922B21">转化</text>
-
-  <!-- Multi-modal embeddings -->
-  <rect x="50" y="350" width="220" height="62" rx="8" fill="#F3E8FF" stroke="#9B59B6" stroke-width="1.2"/>
-  <text x="160" y="370" text-anchor="middle" font-size="12" font-weight="bold" fill="#6C3483">🎨 多模态 Embedding ×6</text>
-  <text x="160" y="388" text-anchor="middle" font-size="10" fill="#7D3C98">BERT · GTE-Qwen2 · LLaVA</text>
-  <text x="160" y="402" text-anchor="middle" font-size="10" fill="#7D3C98">Conan · HunYuan · QQMM</text>
-
-  <!-- ==================== Arrow 1 ==================== -->
-  <line x1="296" y1="260" x2="368" y2="260" stroke="#555" stroke-width="2.5" marker-end="url(#arrowhead)"/>
-  <text x="332" y="250" text-anchor="middle" font-size="11" fill="#555">输入</text>
-
-  <!-- ==================== Module 2: Generative Model ==================== -->
-  <rect x="375" y="155" width="180" height="210" rx="16" fill="#fff" stroke="#2B7AE0" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="375" y="155" width="180" height="42" rx="16" fill="#2B7AE0"/>
-  <rect x="375" y="183" width="180" height="14" fill="#2B7AE0"/>
-  <text x="465" y="182" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">② 生成模型</text>
-
-  <!-- Model inner -->
-  <text x="465" y="222" text-anchor="middle" font-size="13" fill="#333">自回归 Transformer</text>
-
-  <!-- Sequence visualization -->
-  <g transform="translate(400, 240)">
-    <rect x="0" y="0" width="22" height="22" rx="3" fill="#E8F0FE" stroke="#6DA3E0"/>
-    <rect x="26" y="0" width="22" height="22" rx="3" fill="#FFE8CC" stroke="#E8A838"/>
-    <rect x="52" y="0" width="22" height="22" rx="3" fill="#FFE8CC" stroke="#E8A838"/>
-    <rect x="78" y="0" width="22" height="22" rx="3" fill="#FFE8CC" stroke="#E8A838"/>
-    <text x="108" y="16" font-size="14" fill="#888">…</text>
-    <text x="65" y="42" text-anchor="middle" font-size="10" fill="#666">序列编码</text>
+  <!-- Token boxes -->
+  <g>
+    <!-- Token 1 - Exposure -->
+    <rect x="190" y="112" width="64" height="72" rx="8" fill="#fff" stroke="#93C5FD" stroke-width="1.5"/>
+    <rect x="196" y="118" width="52" height="14" rx="3" fill="#E0E7FF"/>
+    <text x="222" y="129" text-anchor="middle" font-size="8" fill="#4338CA">广告ID+品类</text>
+    <circle cx="205" cy="143" r="5" fill="#F59E0B"/>
+    <text x="228" y="146" font-size="7" fill="#92400E">曝光</text>
+    <rect x="196" y="154" width="22" height="10" rx="2" fill="#DBEAFE"/>
+    <text x="207" y="162" text-anchor="middle" font-size="6" fill="#2563EB">文本</text>
+    <rect x="222" y="154" width="22" height="10" rx="2" fill="#FCE7F3"/>
+    <text x="233" y="162" text-anchor="middle" font-size="6" fill="#BE185D">视觉</text>
+    <text x="222" y="180" text-anchor="middle" font-size="7" fill="#6B7280">6种Emb</text>
+  </g>
+  <g>
+    <!-- Token 2 - Click -->
+    <rect x="264" y="112" width="64" height="72" rx="8" fill="#fff" stroke="#93C5FD" stroke-width="1.5"/>
+    <rect x="270" y="118" width="52" height="14" rx="3" fill="#E0E7FF"/>
+    <text x="296" y="129" text-anchor="middle" font-size="8" fill="#4338CA">广告ID+品类</text>
+    <circle cx="279" cy="143" r="5" fill="#10B981"/>
+    <text x="302" y="146" font-size="7" fill="#065F46">点击</text>
+    <rect x="270" y="154" width="22" height="10" rx="2" fill="#DBEAFE"/>
+    <text x="281" y="162" text-anchor="middle" font-size="6" fill="#2563EB">文本</text>
+    <rect x="296" y="154" width="22" height="10" rx="2" fill="#FCE7F3"/>
+    <text x="307" y="162" text-anchor="middle" font-size="6" fill="#BE185D">视觉</text>
+    <text x="296" y="180" text-anchor="middle" font-size="7" fill="#6B7280">6种Emb</text>
+  </g>
+  <g>
+    <!-- Dots -->
+    <text x="345" y="155" text-anchor="middle" font-size="22" fill="#94A3B8">···</text>
+  </g>
+  <g>
+    <!-- Token N - Conversion -->
+    <rect x="370" y="112" width="64" height="72" rx="8" fill="#fff" stroke="#93C5FD" stroke-width="1.5"/>
+    <rect x="376" y="118" width="52" height="14" rx="3" fill="#E0E7FF"/>
+    <text x="402" y="129" text-anchor="middle" font-size="8" fill="#4338CA">广告ID+品类</text>
+    <circle cx="385" cy="143" r="5" fill="#EF4444"/>
+    <text x="408" y="146" font-size="7" fill="#991B1B">转化</text>
+    <rect x="376" y="154" width="22" height="10" rx="2" fill="#DBEAFE"/>
+    <text x="387" y="162" text-anchor="middle" font-size="6" fill="#2563EB">文本</text>
+    <rect x="402" y="154" width="22" height="10" rx="2" fill="#FCE7F3"/>
+    <text x="413" y="162" text-anchor="middle" font-size="6" fill="#BE185D">视觉</text>
+    <text x="402" y="180" text-anchor="middle" font-size="7" fill="#6B7280">6种Emb</text>
+  </g>
+  <g>
+    <!-- last token -->
+    <rect x="444" y="112" width="64" height="72" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2" stroke-dasharray="4,2"/>
+    <text x="476" y="140" text-anchor="middle" font-size="11" font-weight="bold" fill="#B45309">?</text>
+    <text x="476" y="156" text-anchor="middle" font-size="9" fill="#92400E">预测位</text>
+    <text x="476" y="170" text-anchor="middle" font-size="8" fill="#B45309">Next Ad</text>
   </g>
 
-  <!-- Output vector -->
-  <rect x="410" y="305" width="110" height="40" rx="20" fill="#E74C3C" opacity="0.15" stroke="#E74C3C" stroke-width="1.5"/>
-  <text x="465" y="330" text-anchor="middle" font-size="13" font-weight="bold" fill="#C0392B">兴趣向量 →</text>
+  <!-- ====== Big Arrow down to model ====== -->
+  <path d="M360,205 L360,240" stroke="#2563EB" stroke-width="3" marker-end="url(#arrowBlue)"/>
 
-  <!-- ==================== Arrow 2 ==================== -->
-  <line x1="560" y1="325" x2="630" y2="325" stroke="#2B7AE0" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
-  <text x="595" y="315" text-anchor="middle" font-size="11" font-weight="bold" fill="#2B7AE0">ANN</text>
-  <text x="595" y="340" text-anchor="middle" font-size="10" fill="#2B7AE0">检索</text>
+  <!-- ====== 3. Generative Model ====== -->
+  <rect x="220" y="248" width="280" height="70" rx="16" fill="#2563EB" opacity="0.9"/>
+  <text x="360" y="277" text-anchor="middle" font-size="17" font-weight="bold" fill="#fff">自回归生成模型</text>
+  <text x="360" y="300" text-anchor="middle" font-size="12" fill="#BFDBFE">像GPT一样"续写"下一个广告</text>
 
-  <!-- ==================== Module 3: Candidate Pool ==================== -->
-  <rect x="638" y="130" width="230" height="280" rx="14" fill="#fff" stroke="#27AE60" stroke-width="2" filter="url(#shadow)"/>
-  <rect x="638" y="130" width="230" height="42" rx="14" fill="#27AE60"/>
-  <rect x="638" y="158" width="230" height="14" fill="#27AE60"/>
-  <text x="753" y="157" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">③ 候选广告池</text>
+  <!-- Arrow down to user vector -->
+  <path d="M360,322 L360,355" stroke="#2563EB" stroke-width="3" marker-end="url(#arrowBlue)"/>
 
-  <!-- Pool visualization -->
-  <g transform="translate(658, 190)">
-    <!-- Grid of ad items -->
-    <rect x="0" y="0" width="42" height="42" rx="6" fill="#D5F5E3" stroke="#27AE60"/>
-    <text x="21" y="26" text-anchor="middle" font-size="18">📱</text>
-    <rect x="50" y="0" width="42" height="42" rx="6" fill="#D5F5E3" stroke="#27AE60"/>
-    <text x="71" y="26" text-anchor="middle" font-size="18">👗</text>
-    <rect x="100" y="0" width="42" height="42" rx="6" fill="#D5F5E3" stroke="#27AE60"/>
-    <text x="121" y="26" text-anchor="middle" font-size="18">🚗</text>
-    <rect x="150" y="0" width="42" height="42" rx="6" fill="#D5F5E3" stroke="#27AE60"/>
-    <text x="171" y="26" text-anchor="middle" font-size="18">🎮</text>
+  <!-- ====== 4. User Interest Vector ====== -->
+  <rect x="280" y="362" width="160" height="50" rx="25" fill="#10B981" opacity="0.9"/>
+  <text x="360" y="392" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">用户兴趣向量</text>
 
-    <rect x="0" y="50" width="42" height="42" rx="6" fill="#D5F5E3" stroke="#27AE60" opacity="0.6"/>
-    <rect x="50" y="50" width="42" height="42" rx="6" fill="#D5F5E3" stroke="#27AE60" opacity="0.6"/>
-    <rect x="100" y="50" width="42" height="42" rx="6" fill="#D5F5E3" stroke="#27AE60" opacity="0.4"/>
-    <rect x="150" y="50" width="42" height="42" rx="6" fill="#D5F5E3" stroke="#27AE60" opacity="0.3"/>
+  <!-- Arrow right to ANN -->
+  <path d="M445,387 L530,387" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="488" y="378" text-anchor="middle" font-size="10" fill="#555">Faiss ANN</text>
 
-    <text x="96" y="116" text-anchor="middle" font-size="12" fill="#888">… 66万～363万 广告 …</text>
-  </g>
+  <!-- ====== 5. Candidate Pool & Results ====== -->
+  <rect x="540" y="320" width="200" height="134" rx="14" fill="#fff" stroke="#F59E0B" stroke-width="2.5"/>
+  <text x="640" y="346" text-anchor="middle" font-size="14" font-weight="bold" fill="#B45309">候选广告池</text>
+  <text x="640" y="366" text-anchor="middle" font-size="12" fill="#92400E">66万 ~ 363万</text>
 
-  <!-- Top-K results highlight -->
-  <rect x="658" y="330" width="190" height="60" rx="10" fill="#FEF9E7" stroke="#F1C40F" stroke-width="1.5"/>
-  <text x="753" y="352" text-anchor="middle" font-size="13" font-weight="bold" fill="#B7950B">🏆 Top-10 推荐结果</text>
-  <text x="753" y="372" text-anchor="middle" font-size="11" fill="#7D6608">最可能点击/转化的广告</text>
+  <!-- mini ad icons -->
+  <rect x="565" y="380" width="30" height="24" rx="4" fill="#FDE68A"/>
+  <rect x="600" y="380" width="30" height="24" rx="4" fill="#FDE68A"/>
+  <rect x="635" y="380" width="30" height="24" rx="4" fill="#FDE68A"/>
+  <rect x="670" y="380" width="30" height="24" rx="4" fill="#FDE68A"/>
+  <rect x="705" y="380" width="20" height="24" rx="4" fill="#FDE68A"/>
+  <text x="640" y="395" text-anchor="middle" font-size="8" fill="#92400E">广告向量索引</text>
 
-  <!-- ==================== Bottom comparison ==================== -->
-  <rect x="120" y="455" width="280" height="48" rx="10" fill="#FADBD8" stroke="#E74C3C" stroke-width="1.2"/>
-  <text x="260" y="476" text-anchor="middle" font-size="12" fill="#922B21">❌ 传统：固定候选集逐一打分</text>
-  <text x="260" y="493" text-anchor="middle" font-size="11" fill="#C0392B">判别式 — 效率低</text>
+  <!-- Top-10 results -->
+  <text x="640" y="424" text-anchor="middle" font-size="13" font-weight="bold" fill="#059669">→ 返回 Top-10 推荐</text>
+  <text x="640" y="442" text-anchor="middle" font-size="10" fill="#6B7280">点击/转化概率最高的广告</text>
 
-  <rect x="500" y="455" width="280" height="48" rx="10" fill="#D5F5E3" stroke="#27AE60" stroke-width="1.2"/>
-  <text x="640" y="476" text-anchor="middle" font-size="12" fill="#1E8449">✅ 本文：生成向量 + ANN检索</text>
-  <text x="640" y="493" text-anchor="middle" font-size="11" fill="#27AE60">生成式 — 可扩展至百万级</text>
+  <!-- ====== Key contrast annotation ====== -->
+  <rect x="590" y="88" width="280" height="100" rx="12" fill="#FFF7ED" stroke="#FB923C" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="730" y="112" text-anchor="middle" font-size="13" font-weight="bold" fill="#C2410C">🔑 核心创新</text>
+  <text x="730" y="134" text-anchor="middle" font-size="11" fill="#7C2D12">传统：给固定候选打分 ❌</text>
+  <line x1="645" y1="145" x2="815" y2="145" stroke="#FDBA74" stroke-width="1"/>
+  <text x="730" y="163" text-anchor="middle" font-size="12" font-weight="bold" fill="#15803D">本文：生成兴趣向量 + 检索 ✅</text>
+  <text x="730" y="180" text-anchor="middle" font-size="10" fill="#6B7280">全模态：ID + 文本 + 视觉</text>
 
-  <text x="440" y="476" text-anchor="middle" font-size="16" fill="#555">→</text>
+  <!-- Legend at bottom -->
+  <circle cx="60" cy="510" r="6" fill="#F59E0B"/>
+  <text x="72" y="514" font-size="10" fill="#555">曝光</text>
+  <circle cx="120" cy="510" r="6" fill="#10B981"/>
+  <text x="132" y="514" font-size="10" fill="#555">点击</text>
+  <circle cx="180" cy="510" r="6" fill="#EF4444"/>
+  <text x="192" y="514" font-size="10" fill="#555">转化</text>
+  <rect x="240" y="504" width="16" height="12" rx="2" fill="#DBEAFE"/>
+  <text x="262" y="514" font-size="10" fill="#555">文本Emb</text>
+  <rect x="320" y="504" width="16" height="12" rx="2" fill="#FCE7F3"/>
+  <text x="342" y="514" font-size="10" fill="#555">视觉Emb</text>
+  <text x="450" y="514" font-size="9" fill="#94A3B8">| Tencent GR-1M / GR-10M 数据集</text>
 </svg>

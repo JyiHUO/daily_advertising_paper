@@ -44,26 +44,6 @@
         "value": "该框架提供了一个全新的思路：在结算阶段引入可学习的定价修正项，将约束补偿从出价中解耦出来。这对所有存在ROI/CPA约束的广告系统都有直接参考价值——无需修改拍卖机制本身，只需在结算环节加一个修正模块。轨迹增强算法使其可以即插即用地部署到任何已有出价系统上。京东线上实验验证了广告收入+4.70%和目标成本达成+6.48%的实际收益。",
         "risk": "定价修正本质上是在结算时改变广告主实际支付，可能影响拍卖机制的激励相容性（truthfulness），长期可能改变广告主出价行为。论文的理论分析基于完全信息假设，实际中修正项的分配策略（如均匀分摊）是否在动态竞争环境中仍然最优尚不确定。此外，线上部署需要平台侧有权调整结算价格，并非所有广告系统都具备这一能力。"
       }
-    },
-    "selected_figure": {
-      "id": "page-0-block-23",
-      "page_index": 0,
-      "caption": "Auto-Bidding, Online Advertising, Joint-Decision Framework, Gen- erative Model",
-      "clip": [
-        287.0409912109375,
-        85.67265624999999,
-        590.3161254882813,
-        394.47265625
-      ],
-      "clip_area": 93651.36146484377,
-      "page_area": 484704.0,
-      "text_density": 0.4834310025752536,
-      "kind": "captioned_figure",
-      "score": 52.040570682942715,
-      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-08/assets/figure_candidates/jd-bp-a-joint-decision-generative-framework-for-auto-bidding-and-pricing/01-p1-captioned_figure.png",
-      "filename": "01-p1-captioned_figure.png",
-      "selection_reason": "当前 provider 未启用视觉评审，回退到启发式最高分候选。",
-      "selection_confidence": "low"
     }
   },
   {
@@ -117,26 +97,6 @@
         "value": "这是目前最大规模的公开广告场景生成式推荐基准，直接提供了从数据构建、多模态特征提取、序列建模到ANN检索的完整工业pipeline参考。行为类型条件生成（区分曝光/点击/转化对同一广告的不同编码）和转化加权评估是广告系统可直接落地的设计。冠军方案中的FiLM行为调制、RQ-KMeans语义ID、大规模负采样等技术均可迁移至广告召回和粗排模块。数据集本身可作为广告推荐算法的标准benchmark长期使用。",
         "risk": "数据集经过脱敏处理，不含原始素材，多模态embedding的质量依赖于腾讯内部预训练模型，外部复现可能存在embedding分布差异。竞赛禁止模型集成，但工业场景通常需要多路召回融合，竞赛结论可能高估单模型能力。生成式推荐在在线服务中的延迟和索引更新成本尚未在本文讨论，实际部署需额外评估。"
       }
-    },
-    "selected_figure": {
-      "id": "page-3-drawing-caption-25",
-      "page_index": 3,
-      "caption": "Figure 1: Coverage of the multi-modal embeddings on two datasets.",
-      "clip": [
-        311.9679870605469,
-        67.68618774414062,
-        564.1868896484375,
-        234.822998046875
-      ],
-      "clip_area": 42155.062876596116,
-      "page_area": 484704.0,
-      "text_density": 0.14709867658593573,
-      "kind": "drawing_cluster_with_caption",
-      "score": 14.44246899236159,
-      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-08/assets/figure_candidates/tencent-advertising-algorithm-challenge-2025-all-modality-generative-recommendat/01-p4-drawing_cluster_with_caption.png",
-      "filename": "01-p4-drawing_cluster_with_caption.png",
-      "selection_reason": "当前 provider 未启用视觉评审，回退到启发式最高分候选。",
-      "selection_confidence": "low"
     }
   }
 ]

@@ -1,0 +1,106 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2979FF"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2E7D32"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F5F7FA"/>
+      <stop offset="100%" stop-color="#E8EDF2"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" rx="18" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1A237E">智能体的组合动作空间决策</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#666">Agent Combinatorial Action Space for Marketing Orchestration</text>
+
+  <!-- ==================== 1. User State (left) ==================== -->
+  <rect x="30" y="120" width="180" height="200" rx="16" fill="#E3F2FD" stroke="#1565C0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="120" y="150" text-anchor="middle" font-size="15" font-weight="bold" fill="#1565C0">👤 用户状态</text>
+  <line x1="55" y1="162" x2="185" y2="162" stroke="#90CAF9" stroke-width="1"/>
+  <!-- state items -->
+  <circle cx="60" cy="185" r="6" fill="#1E88E5"/>
+  <text x="74" y="190" font-size="12" fill="#333">30天未打开App</text>
+  <circle cx="60" cy="215" r="6" fill="#1E88E5"/>
+  <text x="74" y="220" font-size="12" fill="#333">偏好午餐时段</text>
+  <circle cx="60" cy="245" r="6" fill="#1E88E5"/>
+  <text x="74" y="250" font-size="12" fill="#333">常点亚洲菜</text>
+  <circle cx="60" cy="275" r="6" fill="#1E88E5"/>
+  <text x="74" y="280" font-size="12" fill="#333">推送点击率高</text>
+  <text x="120" y="308" text-anchor="middle" font-size="10" fill="#78909C">画像 + 历史交互 + 使用记录</text>
+
+  <!-- Arrow: State → Agent -->
+  <path d="M 210 220 L 268 220" fill="none" stroke="#1565C0" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+  <text x="239" y="212" text-anchor="middle" font-size="10" fill="#1565C0">观察</text>
+
+  <!-- ==================== 2. Agent Core (center) ==================== -->
+  <rect x="278" y="100" width="330" height="260" rx="20" fill="#FFF" stroke="#FF6F00" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="443" y="130" text-anchor="middle" font-size="16" font-weight="bold" fill="#E65100">🤖 智能体 — "搭积木"式决策</text>
+
+  <!-- Three sub-blocks inside agent -->
+  <!-- Content Assembly -->
+  <rect x="298" y="148" width="130" height="90" rx="10" fill="#FFF3E0" stroke="#FB8C00" stroke-width="1.5"/>
+  <text x="363" y="170" text-anchor="middle" font-size="12" font-weight="bold" fill="#E65100">📝 内容组装</text>
+  <text x="363" y="190" text-anchor="middle" font-size="10" fill="#555">问候语 B</text>
+  <text x="363" y="206" text-anchor="middle" font-size="10" fill="#555">亚洲菜推荐 X</text>
+  <text x="363" y="222" text-anchor="middle" font-size="10" fill="#555">折扣素材 2</text>
+
+  <!-- Timing -->
+  <rect x="438" y="148" width="75" height="90" rx="10" fill="#E8F5E9" stroke="#43A047" stroke-width="1.5"/>
+  <text x="475" y="170" text-anchor="middle" font-size="12" font-weight="bold" fill="#2E7D32">⏰ 时机</text>
+  <text x="475" y="192" text-anchor="middle" font-size="10" fill="#555">周二</text>
+  <text x="475" y="208" text-anchor="middle" font-size="10" fill="#555">12:00</text>
+
+  <!-- Channel -->
+  <rect x="523" y="148" width="72" height="90" rx="10" fill="#EDE7F6" stroke="#7E57C2" stroke-width="1.5"/>
+  <text x="559" y="170" text-anchor="middle" font-size="12" font-weight="bold" fill="#5E35B1">📲 渠道</text>
+  <text x="559" y="195" text-anchor="middle" font-size="11" fill="#555">推送通知</text>
+
+  <!-- Combination bracket -->
+  <text x="443" y="262" text-anchor="middle" font-size="11" fill="#BF360C">▲ 三元组组合 = 一次完整动作</text>
+
+  <!-- Thompson Sampling bar at bottom of agent -->
+  <rect x="298" y="278" width="290" height="60" rx="8" fill="#FCE4EC" stroke="#C62828" stroke-width="1.2"/>
+  <text x="443" y="298" text-anchor="middle" font-size="12" font-weight="bold" fill="#B71C1C">Thompson Sampling 探索-利用</text>
+  <text x="443" y="316" text-anchor="middle" font-size="10" fill="#555">按概率分布采样 → 宽置信区间优先探索</text>
+  <!-- Mini distribution curves -->
+  <ellipse cx="350" cy="330" rx="18" ry="5" fill="none" stroke="#E53935" stroke-width="1" stroke-dasharray="3,2"/>
+  <ellipse cx="443" cy="330" rx="30" ry="5" fill="none" stroke="#E53935" stroke-width="1.5"/>
+  <ellipse cx="530" cy="330" rx="14" ry="5" fill="none" stroke="#E53935" stroke-width="1" stroke-dasharray="3,2"/>
+
+  <!-- ==================== 3. Arrow Agent → User Action ==================== -->
+  <path d="M 608 220 L 670 220" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="639" y="210" text-anchor="middle" font-size="10" fill="#555">发送</text>
+
+  <!-- ==================== 4. User Response (right) ==================== -->
+  <rect x="680" y="140" width="190" height="160" rx="16" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="775" y="170" text-anchor="middle" font-size="15" font-weight="bold" fill="#2E7D32">📊 用户反馈</text>
+  <line x1="705" y1="182" x2="845" y2="182" stroke="#A5D6A7" stroke-width="1"/>
+  <text x="775" y="205" text-anchor="middle" font-size="12" fill="#333">✅ 点击打开</text>
+  <text x="775" y="230" text-anchor="middle" font-size="12" fill="#333">🛒 下单转化</text>
+  <text x="775" y="260" text-anchor="middle" font-size="11" fill="#78909C">奖励 = 加权标量</text>
+  <text x="775" y="280" text-anchor="middle" font-size="10" fill="#78909C">+ 双重差分因果效应</text>
+
+  <!-- ==================== 5. Feedback loop arrow ==================== -->
+  <path d="M 775 305 C 775 430, 443 430, 443 365" fill="none" stroke="#2E7D32" stroke-width="2.5" stroke-dasharray="8,4" marker-end="url(#arrowGreen)"/>
+  <rect x="530" y="400" width="170" height="30" rx="8" fill="#C8E6C9" stroke="#2E7D32" stroke-width="1"/>
+  <text x="615" y="420" text-anchor="middle" font-size="11" font-weight="bold" fill="#1B5E20">更新概率分布 🔄</text>
+
+  <!-- ==================== Bottom summary ==================== -->
+  <rect x="120" y="480" width="660" height="110" rx="14" fill="#FFFDE7" stroke="#F9A825" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="450" y="510" text-anchor="middle" font-size="14" font-weight="bold" fill="#F57F17">💡 核心创新：组合动作空间 + 在线学习</text>
+  <text x="450" y="536" text-anchor="middle" font-size="12" fill="#555">不从固定模板选消息，而是从组件库"搭积木"——内容×时机×渠道</text>
+  <text x="450" y="558" text-anchor="middle" font-size="12" fill="#555">Thompson Sampling 自动平衡探索新组合 vs 利用已知好组合</text>
+  <text x="450" y="580" text-anchor="middle" font-size="12" fill="#555">每次用户反馈实时更新分布 → 个性化越来越精准</text>
+</svg>

@@ -51,8 +51,8 @@
 
 ### 1. JD-BP: A Joint-Decision Generative Framework for Auto-Bidding and Pricing
 - **背景：** 自动出价系统需要在预算和ROI等KPI约束下最大化广告价值，但CTR/CVR预估误差和转化延迟会导致实时ROI偏离目标。传统方法在发现ROI违约后会压低未来出价来补偿历史亏损，这让广告主错失高价值流量，并降低整体分配效率。JD-BP的核心洞察是：与其让出价同时承担'争取价值'和'补偿历史违约'两个目标，不如把它们拆成两个独立但协同的动作——出价专注于价值最大化，定价修正项专门处理历史KPI缺口。论文在AuctionNet离线数据集上大幅领先已有方法，并在京东线上实验验证了实际效果，值得关注。
-![JD-BP: A Joint-Decision Generative Framework for Auto-Bidding and Pricing 关键架构图](assets/figures/overview/jd-bp-a-joint-decision-generative-framework-for-auto-bidding-and-pricing-hero.png)
-*图示：当前 provider 未启用视觉评审，回退到启发式最高分候选。*
+![JD-BP: A Joint-Decision Generative Framework for Auto-Bidding and Pricing 论文机制总览图](assets/figures/overview/jd-bp-a-joint-decision-generative-framework-for-auto-bidding-and-pricing-hero.svg)
+*图示：候选主图不可靠，已回退为论文核心机制总览 SVG。*
 
 **核心技术点：**
 
@@ -105,8 +105,8 @@
 
 ### 2. Tencent Advertising Algorithm Challenge 2025: All-Modality Generative Recommendation
 - **背景：** 生成式推荐（Generative Recommendation）正在从判别式范式（对固定候选集打分）转向自回归生成范式（直接生成用户下一个可能交互的物品），但目前缺乏大规模、包含完整多模态信息（协同ID+文本+视觉）且面向广告场景（含点击和转化信号）的公开基准数据集。本文发布了Tencent GR-1M和Tencent GR-10M两个数据集，来源于真实脱敏的腾讯广告日志，包含百万到千万用户的行为序列，每条交互附带稀疏ID、类目属性、行为类型（曝光/点击/转化）以及多个预训练模型提取的文本和视觉embedding，并以此为基础举办了全球竞赛，吸引8440名参赛者，冠军奖金200万元，具有很强的产业标杆意义。
-![Tencent Advertising Algorithm Challenge 2025: All-Modality Generative Recommendation 关键架构图](assets/figures/overview/tencent-advertising-algorithm-challenge-2025-all-modality-generative-recommendat-hero.png)
-*图示：当前 provider 未启用视觉评审，回退到启发式最高分候选。*
+![Tencent Advertising Algorithm Challenge 2025: All-Modality Generative Recommendation 论文机制总览图](assets/figures/overview/tencent-advertising-algorithm-challenge-2025-all-modality-generative-recommendat-hero.svg)
+*图示：候选主图不可靠，已回退为论文核心机制总览 SVG。*
 
 **核心技术点：**
 

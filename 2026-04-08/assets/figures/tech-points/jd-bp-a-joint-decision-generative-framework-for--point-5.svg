@@ -1,125 +1,95 @@
-<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Arial, Helvetica, sans-serif">
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Arial, Helvetica, sans-serif">
   <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
     </marker>
-    <marker id="arrG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="#2e7d32"/>
     </marker>
-    <marker id="arrR" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="#c62828"/>
     </marker>
     <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#f5f7fa"/>
-      <stop offset="100%" stop-color="#e8ecf1"/>
+      <stop offset="100%" stop-color="#e8edf2"/>
     </linearGradient>
   </defs>
 
   <!-- Background -->
-  <rect width="900" height="600" fill="url(#bgGrad)" rx="12"/>
+  <rect width="900" height="560" fill="url(#bgGrad)" rx="12"/>
 
   <!-- Title -->
-  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a237e">即插即用轨迹增强：冷启动数据生成</text>
-  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#666">JD-BP: 无历史定价修正数据 → 自动生成训练轨迹 + DPO正负样本标签</text>
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a237e">即插即用轨迹增强：冷启动数据生成</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#666">JD-BP: 无需定价修正历史数据，自动生成DPO训练样本</text>
 
   <!-- ===== Left: Baseline Model ===== -->
-  <rect x="30" y="100" width="180" height="70" rx="14" fill="#5c6bc0" opacity="0.9"/>
-  <text x="120" y="130" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff">基线出价模型</text>
-  <text x="120" y="152" text-anchor="middle" font-size="12" fill="#e8eaf6">任意已有策略</text>
+  <rect x="40" y="90" width="160" height="70" rx="14" fill="#5c6bc0" opacity="0.9"/>
+  <text x="120" y="125" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff">基线出价模型</text>
+  <text x="120" y="145" text-anchor="middle" font-size="12" fill="#e8eaf6">任意已有策略</text>
 
   <!-- Arrow from baseline down to fork -->
-  <line x1="120" y1="170" x2="120" y2="210" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="120" y1="160" x2="120" y2="195" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
 
   <!-- Fork point -->
-  <circle cx="120" cy="220" r="10" fill="#fff" stroke="#555" stroke-width="2"/>
-  <text x="120" y="224" text-anchor="middle" font-size="12" font-weight="bold" fill="#555">⑴</text>
+  <circle cx="120" cy="210" r="12" fill="#fff" stroke="#5c6bc0" stroke-width="2.5"/>
+  <text x="120" y="215" text-anchor="middle" font-size="14" font-weight="bold" fill="#5c6bc0">⑂</text>
 
-  <!-- ===== Upper branch: With PID correction ===== -->
-  <line x1="130" y1="220" x2="300" y2="180" stroke="#2e7d32" stroke-width="2.5" marker-end="url(#arrG)" stroke-dasharray="6,3"/>
+  <!-- ===== Two Trajectories ===== -->
+  <!-- Upper path: with PID correction -->
+  <line x1="132" y1="205" x2="260" y2="165" stroke="#2e7d32" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <!-- Lower path: no correction -->
+  <line x1="132" y1="218" x2="260" y2="340" stroke="#c62828" stroke-width="2.5" marker-end="url(#arrowRed)"/>
 
-  <!-- Trajectory A: With Correction -->
-  <rect x="280" y="110" width="310" height="150" rx="16" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
-  <text x="435" y="138" text-anchor="middle" font-size="15" font-weight="bold" fill="#2e7d32">轨迹 A：有定价修正 ✓</text>
+  <!-- ===== Trajectory A: WITH correction ===== -->
+  <rect x="265" y="110" width="320" height="120" rx="16" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="425" y="138" text-anchor="middle" font-size="15" font-weight="bold" fill="#2e7d32">✅ 轨迹 A：有定价修正</text>
 
-  <!-- Steps inside trajectory A -->
-  <rect x="300" y="155" width="80" height="44" rx="8" fill="#fff" stroke="#66bb6a" stroke-width="1.5"/>
-  <text x="340" y="174" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">Step t</text>
-  <text x="340" y="190" text-anchor="middle" font-size="10" fill="#555">bid=3.0</text>
+  <!-- PID block inside -->
+  <rect x="285" y="152" width="110" height="50" rx="10" fill="#fff" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="340" y="174" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e7d32">PID控制器</text>
+  <text x="340" y="192" text-anchor="middle" font-size="11" fill="#555">CPA → TCPA</text>
 
-  <rect x="400" y="155" width="80" height="44" rx="8" fill="#c8e6c9" stroke="#43a047" stroke-width="1.5"/>
-  <text x="440" y="174" text-anchor="middle" font-size="11" font-weight="bold" fill="#2e7d32">PID修正</text>
-  <text x="440" y="190" text-anchor="middle" font-size="10" fill="#2e7d32">y=-0.5</text>
+  <!-- Arrow inside -->
+  <line x1="395" y1="177" x2="430" y2="177" stroke="#2e7d32" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
 
-  <rect x="500" y="155" width="80" height="44" rx="8" fill="#fff" stroke="#66bb6a" stroke-width="1.5"/>
-  <text x="540" y="174" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">Step t+1</text>
-  <text x="540" y="190" text-anchor="middle" font-size="10" fill="#555">bid=3.2</text>
+  <!-- Correction value -->
+  <rect x="435" y="155" width="130" height="46" rx="10" fill="#fff" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="500" y="175" text-anchor="middle" font-size="13" fill="#333">bid=3.0, <tspan font-weight="bold" fill="#2e7d32">y=-0.5</tspan></text>
+  <text x="500" y="192" text-anchor="middle" font-size="11" fill="#888">修正后状态→下一步</text>
 
-  <!-- Arrows between steps -->
-  <line x1="380" y1="177" x2="398" y2="177" stroke="#43a047" stroke-width="1.5" marker-end="url(#arrG)"/>
-  <line x1="480" y1="177" x2="498" y2="177" stroke="#43a047" stroke-width="1.5" marker-end="url(#arrG)"/>
+  <!-- ===== Trajectory B: WITHOUT correction ===== -->
+  <rect x="265" y="290" width="320" height="110" rx="16" fill="#ffebee" stroke="#c62828" stroke-width="2"/>
+  <text x="425" y="318" text-anchor="middle" font-size="15" font-weight="bold" fill="#c62828">❌ 轨迹 B：无定价修正</text>
 
-  <!-- PID label -->
-  <text x="435" y="225" text-anchor="middle" font-size="11" fill="#388e3c">CPA→TCPA 闭环控制</text>
-  <text x="435" y="242" text-anchor="middle" font-size="16" fill="#2e7d32" font-weight="bold">回报 Rᵖ</text>
+  <rect x="310" y="335" width="230" height="46" rx="10" fill="#fff" stroke="#c62828" stroke-width="1.5"/>
+  <text x="425" y="355" text-anchor="middle" font-size="13" fill="#333">bid=2.8, <tspan font-weight="bold" fill="#c62828">y=0</tspan></text>
+  <text x="425" y="372" text-anchor="middle" font-size="11" fill="#888">成本偏高 → 隐含保守</text>
 
-  <!-- ===== Lower branch: Without correction ===== -->
-  <line x1="130" y1="220" x2="300" y2="320" stroke="#c62828" stroke-width="2.5" marker-end="url(#arrR)" stroke-dasharray="6,3"/>
+  <!-- ===== Comparison / Advantage block ===== -->
+  <!-- Arrows from both trajectories to comparison -->
+  <line x1="585" y1="185" x2="650" y2="265" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="585" y1="350" x2="650" y2="290" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
 
-  <!-- Trajectory B: Without Correction -->
-  <rect x="280" y="290" width="310" height="130" rx="16" fill="#ffebee" stroke="#c62828" stroke-width="2"/>
-  <text x="435" y="318" text-anchor="middle" font-size="15" font-weight="bold" fill="#c62828">轨迹 B：无修正 ✗</text>
+  <rect x="650" y="235" width="210" height="100" rx="18" fill="#fff3e0" stroke="#ef6c00" stroke-width="2.5"/>
+  <text x="755" y="262" text-anchor="middle" font-size="15" font-weight="bold" fill="#e65100">⚖️ 优势值计算</text>
+  <text x="755" y="286" text-anchor="middle" font-size="14" fill="#333">A = R<tspan baseline-shift="sub" font-size="10">有修正</tspan> − R<tspan baseline-shift="sub" font-size="10">无修正</tspan></text>
+  <text x="755" y="310" text-anchor="middle" font-size="13" fill="#555">A &gt; 0 → 正样本</text>
+  <text x="755" y="328" text-anchor="middle" font-size="13" fill="#555">A ≤ 0 → 负样本</text>
 
-  <rect x="300" y="335" width="80" height="44" rx="8" fill="#fff" stroke="#ef9a9a" stroke-width="1.5"/>
-  <text x="340" y="354" text-anchor="middle" font-size="11" font-weight="bold" fill="#333">Step t</text>
-  <text x="340" y="370" text-anchor="middle" font-size="10" fill="#555">bid=3.0</text>
+  <!-- Arrow to DPO -->
+  <line x1="755" y1="335" x2="755" y2="395" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
 
-  <rect x="420" y="335" width="80" height="44" rx="8" fill="#ffcdd2" stroke="#e53935" stroke-width="1.5"/>
-  <text x="460" y="354" text-anchor="middle" font-size="11" font-weight="bold" fill="#c62828">无修正</text>
-  <text x="460" y="370" text-anchor="middle" font-size="10" fill="#c62828">y=0</text>
+  <!-- DPO Training block -->
+  <rect x="635" y="400" width="240" height="70" rx="16" fill="#7e57c2" opacity="0.92"/>
+  <text x="755" y="433" text-anchor="middle" font-size="17" font-weight="bold" fill="#fff">DPO 微调训练</text>
+  <text x="755" y="455" text-anchor="middle" font-size="12" fill="#ede7f6">正/负样本对 → 偏好学习</text>
 
-  <line x1="380" y1="357" x2="418" y2="357" stroke="#e53935" stroke-width="1.5" marker-end="url(#arrR)"/>
+  <!-- ===== Key insight callout ===== -->
+  <rect x="40" y="440" width="540" height="90" rx="14" fill="#fff" stroke="#5c6bc0" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="60" y="468" font-size="14" font-weight="bold" fill="#1a237e">💡 核心思路</text>
+  <text x="60" y="492" font-size="13" fill="#333">无历史数据？用已有出价模型 + PID控制器 自动生成两条对照轨迹</text>
+  <text x="60" y="514" font-size="13" fill="#333">通过"有修正 vs 无修正"的回报差异，自动标注正负样本，即插即用！</text>
 
-  <text x="435" y="402" text-anchor="middle" font-size="16" fill="#c62828" font-weight="bold">回报 Rᵇ</text>
-
-  <!-- ===== Comparison Arrow ===== -->
-  <line x1="590" y1="220" x2="650" y2="220" stroke="#555" stroke-width="2"/>
-  <line x1="590" y1="370" x2="650" y2="370" stroke="#555" stroke-width="2"/>
-  <line x1="650" y1="220" x2="650" y2="370" stroke="#555" stroke-width="2"/>
-  <line x1="650" y1="295" x2="690" y2="295" stroke="#555" stroke-width="2.5" marker-end="url(#arr)"/>
-
-  <!-- VS label -->
-  <text x="630" y="300" text-anchor="middle" font-size="20" font-weight="bold" fill="#ff6f00">VS</text>
-
-  <!-- ===== Right: Advantage & DPO ===== -->
-  <rect x="695" y="200" width="185" height="190" rx="18" fill="#fff3e0" stroke="#ef6c00" stroke-width="2.5"/>
-  <text x="787" y="232" text-anchor="middle" font-size="15" font-weight="bold" fill="#e65100">计算优势值</text>
-
-  <!-- Formula -->
-  <text x="787" y="265" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Aₜ = Rᵖ − Rᵇ</text>
-
-  <!-- Positive -->
-  <rect x="710" y="290" width="70" height="36" rx="8" fill="#4caf50" opacity="0.85"/>
-  <text x="745" y="313" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">A &gt; 0</text>
-  <text x="745" y="340" text-anchor="middle" font-size="11" fill="#2e7d32" font-weight="bold">✓ 正样本</text>
-
-  <!-- Negative -->
-  <rect x="795" y="290" width="70" height="36" rx="8" fill="#e53935" opacity="0.85"/>
-  <text x="830" y="313" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">A ≤ 0</text>
-  <text x="830" y="340" text-anchor="middle" font-size="11" fill="#c62828" font-weight="bold">✗ 负样本</text>
-
-  <!-- Arrow down to DPO -->
-  <line x1="787" y1="360" x2="787" y2="395" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
-
-  <!-- DPO Box -->
-  <rect x="710" y="400" width="155" height="50" rx="12" fill="#1a237e"/>
-  <text x="787" y="422" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">DPO 偏好微调</text>
-  <text x="787" y="440" text-anchor="middle" font-size="11" fill="#b3bcf5">生成策略优化</text>
-
-  <!-- Bottom insight -->
-  <rect x="140" y="480" width="620" height="60" rx="14" fill="#fff" stroke="#90a4ae" stroke-width="1.5" opacity="0.9"/>
-  <text x="450" y="506" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a237e">💡 核心思想：无需线上定价修正数据</text>
-  <text x="450" y="528" text-anchor="middle" font-size="13" fill="#555">用已有基线 + PID控制器离线合成两条轨迹，自动标注正负样本，即插即用</text>
-
-  <!-- Small decorative labels -->
-  <text x="85" y="248" text-anchor="middle" font-size="10" fill="#888">分叉生成</text>
+  <!-- Small labels -->
+  <text x="170" y="180" font-size="11" fill="#5c6bc0" font-weight="bold">分叉</text>
 </svg>

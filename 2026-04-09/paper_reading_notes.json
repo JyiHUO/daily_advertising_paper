@@ -44,26 +44,6 @@
         "value": "该框架为LLM时代的生成式广告提供了完整的机制设计范式：多保真度优化可直接迁移到任何需要在大量广告配置中搜索最优组合的场景（如信息流广告的创意组合优化、搜索广告的多广告主排列优化），VCG激励层确保广告主如实报价，ACO使VCG在实际系统中计算可行。特别是'广告强度过饱和导致体验崩溃'的建模，对当前LLM驱动的对话式推荐、AI购物助手等新兴广告形态具有直接指导意义。",
         "risk": "实验仅在2个广告主、25个离散配置的小规模模拟环境中验证，广告主数量增多和连续配置空间下的可扩展性尚不明确；VCG机制在近似条件下的激励兼容性依赖于优化误差epsilon的大小，实际系统中epsilon可能难以控制；LLM评估代理（fine-tuned proxy agent）的偏差可能系统性地影响福利估计和支付计算的准确性。"
       }
-    },
-    "selected_figure": {
-      "id": "page-11-block-8",
-      "page_index": 11,
-      "caption": "Jiayuan Liu, Mingyu Guo, and Vincent Conitzer. An interpretable automated mechanism design framework with large language models. arXiv preprint arXiv:2502.12203 , 2025.",
-      "clip": [
-        77.4,
-        71.43968505859374,
-        534.5986877441406,
-        380.23968505859375
-      ],
-      "clip_area": 141182.95477539065,
-      "page_area": 484704.0,
-      "text_density": 0.6591980846358988,
-      "kind": "captioned_figure",
-      "score": 21.0,
-      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-09/assets/figure_candidates/incentive-aware-multi-fidelity-optimization-for-generative-advertising-in-large-/01-p12-captioned_figure.png",
-      "filename": "01-p12-captioned_figure.png",
-      "selection_reason": "当前 provider 未启用视觉评审，回退到启发式最高分候选。",
-      "selection_confidence": "low"
     }
   },
   {
@@ -113,24 +93,25 @@
       }
     },
     "selected_figure": {
-      "id": "page-1-block-5",
-      "page_index": 1,
-      "caption": "Fig. 1: Hybrid decentralized architecture for large-scale rec- ommendation training.",
+      "id": "page-3-embedded-0-0",
+      "page_index": 3,
+      "caption": "Fig. 3: Overview of NestPipe.",
       "clip": [
-        289.9779968261719,
-        32.54175567626953,
-        591.0078125,
-        188.26300048828125
+        304.70001220703125,
+        38.54203796386719,
+        570.3148803710938,
+        243.52801513671875
       ],
-      "clip_area": 46876.73762225895,
+      "clip_area": 54447.32330224849,
       "page_area": 484704.0,
-      "text_density": 0.08936909916503527,
-      "kind": "image_block_with_caption",
-      "score": 58.9587066903452,
-      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-09/assets/figure_candidates/nestpipe-large-scale-recommendation-training-on-1-500-accelerators-via-nested-pi/01-p2-image_block_with_caption.png",
-      "filename": "01-p2-image_block_with_caption.png",
-      "selection_reason": "当前 provider 未启用视觉评审，回退到启发式最高分候选。",
-      "selection_confidence": "low"
+      "text_density": 0.011780856569258287,
+      "kind": "embedded_image_with_caption",
+      "xref": 64,
+      "score": 30.604970258913873,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-09/assets/figure_candidates/nestpipe-large-scale-recommendation-training-on-1-500-accelerators-via-nested-pi/04-p4-embedded_image_with_caption.png",
+      "filename": "04-p4-embedded_image_with_caption.png",
+      "selection_reason": "该图是“Overview of NestPipe”，直接展示了论文核心方法的两层嵌套流水线：inter-batch 的 dual-buffer pipelining 和 intra-batch 的 frozen-window pipelining，能清楚体现模块关系、时间调度与训练加速机制，比 Fig.1 的系统背景架构更能代表论文方法本身。该候选裁剪也更干净完整，正文噪声更少，主体聚焦优于对应 block 版本。",
+      "selection_confidence": "high"
     }
   }
 ]

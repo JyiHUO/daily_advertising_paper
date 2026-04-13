@@ -1,0 +1,126 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="activeGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#16a34a"/>
+    </linearGradient>
+    <linearGradient id="passiveGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <marker id="arrowWhite" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22c55e"/>
+    </marker>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bgGrad)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#e2e8f0" font-size="22" font-weight="700">共生运营模型：人类脉冲 × 智能体持续执行</text>
+  <text x="450" y="65" text-anchor="middle" fill="#64748b" font-size="13">Symbiotic Model — Human Pulse + Agent Sustained Execution</text>
+
+  <!-- ====== LEFT: Active Period ====== -->
+  <rect x="40" y="90" width="380" height="240" rx="14" fill="#0f2a1a" stroke="#22c55e" stroke-width="2" opacity="0.9"/>
+  <rect x="40" y="90" width="380" height="38" rx="14" fill="url(#activeGrad)"/>
+  <rect x="40" y="114" width="380" height="14" fill="url(#activeGrad)"/>
+  <text x="230" y="116" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">🧑‍💼 主动管理期 Active Period</text>
+
+  <!-- Bars for active -->
+  <text x="65" y="158" fill="#94a3b8" font-size="12">推送打开</text>
+  <rect x="155" y="145" width="240" height="20" rx="4" fill="#134e2a"/>
+  <rect x="155" y="145" width="240" height="20" rx="4" fill="url(#activeGrad)" opacity="0.85"/>
+  <text x="400" y="160" text-anchor="end" fill="#fff" font-size="13" font-weight="700">+65.3%</text>
+
+  <text x="65" y="193" fill="#94a3b8" font-size="12">参与天数</text>
+  <rect x="155" y="180" width="240" height="20" rx="4" fill="#134e2a"/>
+  <rect x="155" y="180" width="103" height="20" rx="4" fill="url(#activeGrad)" opacity="0.85"/>
+  <text x="263" y="195" text-anchor="end" fill="#fff" font-size="13" font-weight="700">+2.8%</text>
+
+  <text x="65" y="228" fill="#94a3b8" font-size="12">意向天数</text>
+  <rect x="155" y="215" width="240" height="20" rx="4" fill="#134e2a"/>
+  <rect x="155" y="215" width="11" height="20" rx="4" fill="url(#activeGrad)" opacity="0.85"/>
+  <text x="172" y="230" fill="#fff" font-size="13" font-weight="700">+0.3%</text>
+
+  <text x="65" y="263" fill="#94a3b8" font-size="12">转化天数</text>
+  <rect x="155" y="250" width="240" height="20" rx="4" fill="#134e2a"/>
+  <rect x="155" y="250" width="11" height="20" rx="4" fill="url(#activeGrad)" opacity="0.85"/>
+  <text x="172" y="265" fill="#fff" font-size="13" font-weight="700">+0.3%</text>
+
+  <text x="65" y="305" fill="#86efac" font-size="11" font-style="italic">📈 效果持续上升中</text>
+
+  <!-- ====== RIGHT: Passive Period ====== -->
+  <rect x="480" y="90" width="380" height="240" rx="14" fill="#2a1f0a" stroke="#f59e0b" stroke-width="2" opacity="0.9"/>
+  <rect x="480" y="90" width="380" height="38" rx="14" fill="url(#passiveGrad)"/>
+  <rect x="480" y="114" width="380" height="14" fill="url(#passiveGrad)"/>
+  <text x="670" y="116" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">🤖 被动自主期 Passive Period</text>
+
+  <!-- Bars for passive -->
+  <text x="505" y="158" fill="#94a3b8" font-size="12">推送打开</text>
+  <rect x="595" y="145" width="240" height="20" rx="4" fill="#3d2a08"/>
+  <rect x="595" y="145" width="210" height="20" rx="4" fill="url(#passiveGrad)" opacity="0.75"/>
+  <text x="810" y="160" text-anchor="end" fill="#fff" font-size="13" font-weight="700">+57%</text>
+  <text x="838" y="160" fill="#ef4444" font-size="11" font-weight="600">↓12%</text>
+
+  <text x="505" y="193" fill="#94a3b8" font-size="12">参与天数</text>
+  <rect x="595" y="180" width="240" height="20" rx="4" fill="#3d2a08"/>
+  <rect x="595" y="180" width="88" height="20" rx="4" fill="url(#passiveGrad)" opacity="0.75"/>
+  <text x="688" y="195" text-anchor="end" fill="#fff" font-size="13" font-weight="700">+2.4%</text>
+  <text x="700" y="195" fill="#ef4444" font-size="11" font-weight="600">↓15%</text>
+
+  <text x="505" y="228" fill="#94a3b8" font-size="12">意向天数</text>
+  <rect x="595" y="215" width="240" height="20" rx="4" fill="#3d2a08"/>
+  <rect x="595" y="215" width="8" height="20" rx="4" fill="url(#passiveGrad)" opacity="0.75"/>
+  <text x="609" y="230" fill="#fff" font-size="13" font-weight="700">+0.2%</text>
+  <text x="657" y="230" fill="#ef4444" font-size="11" font-weight="600">↓26%</text>
+
+  <text x="505" y="263" fill="#94a3b8" font-size="12">转化天数</text>
+  <rect x="595" y="250" width="240" height="20" rx="4" fill="#3d2a08"/>
+  <rect x="595" y="250" width="8" height="20" rx="4" fill="url(#passiveGrad)" opacity="0.75"/>
+  <text x="609" y="265" fill="#fff" font-size="13" font-weight="700">+0.2%</text>
+  <text x="657" y="265" fill="#ef4444" font-size="11" font-weight="600">↓26%</text>
+
+  <text x="505" y="305" fill="#fbbf24" font-size="11" font-style="italic">⏳ 前4月持平 → 后期下滑</text>
+
+  <!-- ====== Center Arrow showing transition ====== -->
+  <line x1="425" y1="210" x2="475" y2="210" stroke="#94a3b8" stroke-width="2.5" marker-end="url(#arrowWhite)" stroke-dasharray="6,3"/>
+  <text x="450" y="198" text-anchor="middle" fill="#cbd5e1" font-size="11">时间→</text>
+
+  <!-- ====== BOTTOM: Symbiotic Model ====== -->
+  <rect x="100" y="370" width="700" height="220" rx="16" fill="#111d33" stroke="#6366f1" stroke-width="2"/>
+  <text x="450" y="400" text-anchor="middle" fill="#a5b4fc" font-size="18" font-weight="700">💡 共生模型 Symbiotic Model</text>
+
+  <!-- Human block -->
+  <rect x="140" y="420" width="250" height="80" rx="12" fill="#1e1b4b" stroke="#818cf8" stroke-width="1.5"/>
+  <text x="265" y="448" text-anchor="middle" fill="#c7d2fe" font-size="15" font-weight="700">🧑‍💼 人类营销团队</text>
+  <text x="265" y="470" text-anchor="middle" fill="#818cf8" font-size="12">季度脉冲：新文案 · 新策略 · 新素材</text>
+  <text x="265" y="488" text-anchor="middle" fill="#6366f1" font-size="11" font-style="italic">→ 乘数效应 Multiplier</text>
+
+  <!-- Arrow between -->
+  <line x1="395" y1="460" x2="500" y2="460" stroke="#22c55e" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <text x="448" y="450" text-anchor="middle" fill="#86efac" font-size="11">刷新组件库</text>
+
+  <!-- Agent block -->
+  <rect x="510" y="420" width="250" height="80" rx="12" fill="#0f2a1a" stroke="#22c55e" stroke-width="1.5"/>
+  <text x="635" y="448" text-anchor="middle" fill="#bbf7d0" font-size="15" font-weight="700">🤖 RL 智能体</text>
+  <text x="635" y="470" text-anchor="middle" fill="#4ade80" font-size="12">持续执行：个性化 × 8-10周</text>
+  <text x="635" y="488" text-anchor="middle" fill="#22c55e" font-size="11" font-style="italic">→ 基线保障 ~75-85% 效果保持</text>
+
+  <!-- Cycle arrow back -->
+  <path d="M635 505 L635 545 Q635 560 620 560 L280 560 Q265 560 265 545 L265 505" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,3" marker-end="url(#arrowWhite)"/>
+  <text x="450" y="555" text-anchor="middle" fill="#94a3b8" font-size="11">效果数据反馈 → 下一轮脉冲输入</text>
+
+  <!-- Bottom insight -->
+  <text x="450" y="605" text-anchor="middle" fill="#475569" font-size="12">8.8M 用户 · 11 个月纵向 RCT · 漏斗越深衰减越大(点击-12% vs 转化-26%)</text>
+</svg>

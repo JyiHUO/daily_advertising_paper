@@ -1,0 +1,121 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2B7AE0"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#E07B2B"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F7F9FC"/>
+      <stop offset="100%" stop-color="#EEF2F7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="580" rx="16" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a1a2e">IAT：两阶段 压缩→建模 框架</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#666">Instance-As-Token — 把完整交互"快照"压缩成一个Token</text>
+
+  <!-- ========== Stage 1 ========== -->
+  <rect x="30" y="80" width="400" height="430" rx="14" fill="#E8F0FE" stroke="#2B7AE0" stroke-width="2" opacity="0.9"/>
+  <text x="230" y="108" text-anchor="middle" font-size="16" font-weight="bold" fill="#2B7AE0">Stage 1: IAT 压缩</text>
+
+  <!-- Raw features block -->
+  <rect x="60" y="130" width="340" height="60" rx="10" fill="#fff" stroke="#2B7AE0" stroke-width="1.5"/>
+  <text x="230" y="155" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">完整实例特征</text>
+  <text x="230" y="175" text-anchor="middle" font-size="12" fill="#666">用户画像 + 广告 + 上下文 ≈ 6000维</text>
+
+  <!-- Compress arrow -->
+  <line x1="230" y1="190" x2="230" y2="230" stroke="#2B7AE0" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+  <text x="295" y="218" font-size="11" fill="#2B7AE0" font-weight="bold">压缩线性层</text>
+
+  <!-- InsEmb block (hero element) -->
+  <rect x="130" y="235" width="200" height="55" rx="27" fill="#2B7AE0" stroke="#1a5fb4" stroke-width="1.5"/>
+  <text x="230" y="258" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff">InsEmb</text>
+  <text x="230" y="278" text-anchor="middle" font-size="12" fill="#cce0ff">64 维稠密向量</text>
+
+  <!-- Decompress + loss -->
+  <line x1="230" y1="290" x2="230" y2="330" stroke="#888" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
+  <text x="300" y="318" font-size="11" fill="#888">解压还原 → Loss优化</text>
+  <rect x="160" y="332" width="140" height="32" rx="8" fill="#fff" stroke="#aaa" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="230" y="353" text-anchor="middle" font-size="12" fill="#888">确保信息保留</text>
+
+  <!-- Store to PS -->
+  <line x1="230" y1="290" x2="230" y2="400" stroke="#2B7AE0" stroke-width="0" />
+  <!-- PS storage -->
+  <rect x="100" y="400" width="260" height="50" rx="10" fill="#D4E4FC" stroke="#2B7AE0" stroke-width="1.5"/>
+  <text x="230" y="422" text-anchor="middle" font-size="13" font-weight="bold" fill="#2B7AE0">参数服务器 (PS)</text>
+  <text x="230" y="440" text-anchor="middle" font-size="11" fill="#555">以实例ID为键 → 存储InsEmb</text>
+
+  <!-- Arrow from InsEmb to PS -->
+  <path d="M230,290 L230,290 Q230,320 130,370 Q100,385 130,400" fill="none" stroke="#2B7AE0" stroke-width="0"/>
+  <line x1="170" y1="290" x2="170" y2="395" stroke="#2B7AE0" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <text x="110" y="345" font-size="11" fill="#2B7AE0" font-weight="bold">存储</text>
+
+  <!-- Camera analogy -->
+  <text x="230" y="485" text-anchor="middle" font-size="13" fill="#2B7AE0" font-style="italic">📷 像拍"缩略图"存档</text>
+
+  <!-- ========== Stage 2 ========== -->
+  <rect x="470" y="80" width="400" height="430" rx="14" fill="#FEF3E8" stroke="#E07B2B" stroke-width="2" opacity="0.9"/>
+  <text x="670" y="108" text-anchor="middle" font-size="16" font-weight="bold" fill="#E07B2B">Stage 2: 序列建模</text>
+
+  <!-- Retrieve -->
+  <rect x="510" y="130" width="320" height="50" rx="10" fill="#fff" stroke="#E07B2B" stroke-width="1.5"/>
+  <text x="670" y="152" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">按用户ID检索历史 InsEmb</text>
+  <text x="670" y="170" text-anchor="middle" font-size="11" fill="#888">最长 256 条</text>
+
+  <!-- Arrow from PS to Retrieve -->
+  <path d="M360,425 Q420,425 465,160 " fill="none" stroke="#555" stroke-width="0"/>
+  <line x1="365" y1="425" x2="505" y2="155" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)" stroke-dasharray="7,4"/>
+  <text x="410" y="270" font-size="11" fill="#555" font-weight="bold" transform="rotate(-50,410,270)">检索</text>
+
+  <!-- Adaptation MLP -->
+  <line x1="670" y1="180" x2="670" y2="218" stroke="#E07B2B" stroke-width="2.5" marker-end="url(#arrowOrange)"/>
+  <text x="745" y="205" font-size="11" fill="#E07B2B" font-weight="bold">Adapt MLP</text>
+
+  <!-- InsToken Sequence -->
+  <rect x="530" y="222" width="280" height="50" rx="10" fill="#E07B2B" stroke="#c46520" stroke-width="1.5"/>
+  <!-- Token blocks inside -->
+  <rect x="545" y="232" width="36" height="30" rx="5" fill="#fff" opacity="0.85"/>
+  <text x="563" y="252" text-anchor="middle" font-size="9" fill="#E07B2B" font-weight="bold">T₁</text>
+  <rect x="588" y="232" width="36" height="30" rx="5" fill="#fff" opacity="0.85"/>
+  <text x="606" y="252" text-anchor="middle" font-size="9" fill="#E07B2B" font-weight="bold">T₂</text>
+  <rect x="631" y="232" width="36" height="30" rx="5" fill="#fff" opacity="0.85"/>
+  <text x="649" y="252" text-anchor="middle" font-size="9" fill="#E07B2B" font-weight="bold">T₃</text>
+  <text x="690" y="252" text-anchor="middle" font-size="16" fill="#fff" font-weight="bold">…</text>
+  <rect x="718" y="232" width="36" height="30" rx="5" fill="#fff" opacity="0.85"/>
+  <text x="736" y="252" text-anchor="middle" font-size="9" fill="#E07B2B" font-weight="bold">T₂₅₆</text>
+  <text x="775" y="262" font-size="10" fill="#fff">InsToken序列</text>
+
+  <!-- Arrow to Transformer -->
+  <line x1="670" y1="272" x2="670" y2="310" stroke="#E07B2B" stroke-width="2.5" marker-end="url(#arrowOrange)"/>
+
+  <!-- Transformer -->
+  <rect x="560" y="314" width="220" height="55" rx="12" fill="#fff" stroke="#E07B2B" stroke-width="2"/>
+  <text x="670" y="338" text-anchor="middle" font-size="15" font-weight="bold" fill="#E07B2B">Transformer</text>
+  <text x="670" y="358" text-anchor="middle" font-size="11" fill="#888">长程序列注意力</text>
+
+  <!-- Arrow to output -->
+  <line x1="670" y1="369" x2="670" y2="410" stroke="#E07B2B" stroke-width="2.5" marker-end="url(#arrowOrange)"/>
+
+  <!-- RankMixer / prediction -->
+  <rect x="555" y="413" width="230" height="50" rx="12" fill="#FDD9B5" stroke="#E07B2B" stroke-width="1.5"/>
+  <text x="670" y="435" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">候选广告特征 + 聚合向量</text>
+  <text x="670" y="453" text-anchor="middle" font-size="12" fill="#E07B2B">→ RankMixer → CVR预测</text>
+
+  <!-- Analogy -->
+  <text x="670" y="490" text-anchor="middle" font-size="13" fill="#E07B2B" font-style="italic">📖 翻阅256张"缩略图"理解偏好</text>
+
+  <!-- ========== Bottom comparison bar ========== -->
+  <rect x="80" y="530" width="300" height="34" rx="8" fill="#ddd" stroke="#aaa" stroke-width="1"/>
+  <text x="230" y="553" text-anchor="middle" font-size="13" fill="#666">传统：人工选几个稀疏ID ❌</text>
+
+  <rect x="420" y="530" width="400" height="34" rx="8" fill="#2B7AE0" stroke="#1a5fb4" stroke-width="1"/>
+  <text x="620" y="553" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">IAT：6000维 → 64维InsEmb，信息量 ↑↑ ✅</text>
+</svg>
