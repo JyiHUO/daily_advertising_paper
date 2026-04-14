@@ -1,0 +1,124 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a1628"/>
+      <stop offset="100%" stop-color="#162d50"/>
+    </linearGradient>
+    <linearGradient id="oldBar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5a7fa0"/>
+      <stop offset="100%" stop-color="#3a5f80"/>
+    </linearGradient>
+    <linearGradient id="newBar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4fc3f7"/>
+      <stop offset="100%" stop-color="#0288d1"/>
+    </linearGradient>
+    <linearGradient id="greenBar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#66bb6a"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="560" fill="url(#bgGrad)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="bold">统一监督框架：线上A/B测试业务收益</text>
+  <text x="450" y="66" text-anchor="middle" fill="#80b0d0" font-size="13">Walmart Sponsored Search — 语义相关性主导 → 广告效果 + 用户体验双赢</text>
+
+  <!-- === LEFT: Offline comparison === -->
+  <rect x="30" y="90" width="280" height="230" rx="10" fill="#0d1f38" stroke="#2a5080" stroke-width="1.5"/>
+  <text x="170" y="115" text-anchor="middle" fill="#90caf9" font-size="15" font-weight="bold">📊 离线相关性提升</text>
+
+  <!-- Avg Relevance bars -->
+  <text x="50" y="148" fill="#b0c8e0" font-size="11">平均相关性 @25</text>
+  <rect x="50" y="154" width="120" height="22" rx="4" fill="url(#oldBar)" opacity="0.8"/>
+  <text x="56" y="169" fill="#fff" font-size="11">3.04</text>
+  <rect x="50" y="180" width="150" height="22" rx="4" fill="url(#newBar)"/>
+  <text x="56" y="195" fill="#fff" font-size="11" font-weight="bold">3.28</text>
+  <text x="208" y="195" fill="#4fc3f7" font-size="12" font-weight="bold">+7.8%</text>
+
+  <!-- Precision bars -->
+  <text x="50" y="222" fill="#b0c8e0" font-size="11">Precision @25</text>
+  <rect x="50" y="228" width="130" height="22" rx="4" fill="url(#oldBar)" opacity="0.8"/>
+  <text x="56" y="243" fill="#fff" font-size="11">0.794</text>
+  <rect x="50" y="254" width="170" height="22" rx="4" fill="url(#newBar)"/>
+  <text x="56" y="269" fill="#fff" font-size="11" font-weight="bold">0.877</text>
+  <text x="228" y="269" fill="#4fc3f7" font-size="12" font-weight="bold">+10.5%</text>
+
+  <!-- Legend -->
+  <rect x="60" y="294" width="12" height="12" rx="2" fill="url(#oldBar)" opacity="0.8"/>
+  <text x="78" y="305" fill="#8aa8c0" font-size="10">原系统</text>
+  <rect x="130" y="294" width="12" height="12" rx="2" fill="url(#newBar)"/>
+  <text x="148" y="305" fill="#4fc3f7" font-size="10">新框架</text>
+
+  <!-- === CENTER: Arrow === -->
+  <g transform="translate(340, 180)">
+    <polygon points="0,20 40,0 40,12 90,12 90,28 40,28 40,40" fill="#ffb74d" opacity="0.9"/>
+    <text x="45" y="60" text-anchor="middle" fill="#ffb74d" font-size="11" font-weight="bold">部署上线</text>
+  </g>
+
+  <!-- === RIGHT: Online A/B results === -->
+  <rect x="460" y="90" width="410" height="230" rx="10" fill="#0d1f38" stroke="#2a5080" stroke-width="1.5"/>
+  <text x="665" y="115" text-anchor="middle" fill="#81c784" font-size="15" font-weight="bold">🚀 线上A/B测试结果</text>
+
+  <!-- Metric cards -->
+  <!-- Ad Impressions -->
+  <rect x="480" y="130" width="175" height="54" rx="8" fill="#1a3350" stroke="#388e3c" stroke-width="1.5"/>
+  <text x="488" y="150" fill="#a0c8a0" font-size="11">广告曝光</text>
+  <text x="488" y="172" fill="#66bb6a" font-size="22" font-weight="bold" filter="url(#glow)">+0.60%</text>
+  <text x="600" y="172" fill="#80a080" font-size="10">p=0.03 ✓</text>
+
+  <!-- Add-to-Cart -->
+  <rect x="675" y="130" width="175" height="54" rx="8" fill="#1a3350" stroke="#388e3c" stroke-width="2"/>
+  <text x="683" y="150" fill="#a0c8a0" font-size="11">加购率</text>
+  <text x="683" y="172" fill="#4caf50" font-size="22" font-weight="bold" filter="url(#glow)">+0.99%</text>
+  <text x="800" y="172" fill="#80a080" font-size="10">p=0.009 ✓</text>
+  <!-- highlight star -->
+  <text x="837" y="140" fill="#ffd54f" font-size="14">⭐</text>
+
+  <!-- Search Page Views -->
+  <rect x="480" y="196" width="175" height="54" rx="8" fill="#1a3350" stroke="#388e3c" stroke-width="1.5"/>
+  <text x="488" y="216" fill="#a0c8a0" font-size="11">搜索页浏览</text>
+  <text x="488" y="238" fill="#66bb6a" font-size="22" font-weight="bold">+0.63%</text>
+  <text x="600" y="238" fill="#80a080" font-size="10">p=0.03 ✓</text>
+
+  <!-- Cart Page Views -->
+  <rect x="675" y="196" width="175" height="54" rx="8" fill="#1a3350" stroke="#388e3c" stroke-width="1.5"/>
+  <text x="683" y="216" fill="#a0c8a0" font-size="11">购物车页浏览</text>
+  <text x="683" y="238" fill="#66bb6a" font-size="22" font-weight="bold">+0.87%</text>
+  <text x="800" y="238" fill="#80a080" font-size="10">p=0.02 ✓</text>
+
+  <!-- Revenue (not significant) -->
+  <rect x="540" y="262" width="230" height="44" rx="8" fill="#1a3350" stroke="#5a5a5a" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="550" y="280" fill="#909090" font-size="11">广告收入 +0.45% · 转化率 +0.13%</text>
+  <text x="550" y="296" fill="#707070" font-size="10">方向正向，未达统计显著</text>
+
+  <!-- === BOTTOM: Key Insight === -->
+  <rect x="80" y="350" width="740" height="80" rx="12" fill="#1b2e18" stroke="#4caf50" stroke-width="2"/>
+  
+  <!-- Two side comparison -->
+  <text x="200" y="380" text-anchor="middle" fill="#ffb74d" font-size="14" font-weight="bold">原系统</text>
+  <text x="200" y="405" text-anchor="middle" fill="#b0b0b0" font-size="12">行为信号驱动 → 偏差+稀疏</text>
+  <text x="200" y="420" text-anchor="middle" fill="#90a090" font-size="11">Top-25 混入较多低相关广告</text>
+
+  <!-- VS -->
+  <text x="420" y="395" text-anchor="middle" fill="#ff8a65" font-size="20" font-weight="bold">→</text>
+
+  <text x="640" y="380" text-anchor="middle" fill="#4fc3f7" font-size="14" font-weight="bold">统一监督框架</text>
+  <text x="640" y="405" text-anchor="middle" fill="#e0e0e0" font-size="12">语义相关性主导 + 行为偏好精调</text>
+  <text x="640" y="420" text-anchor="middle" fill="#81c784" font-size="11">召回广告既相关又受欢迎</text>
+
+  <!-- Bottom tagline -->
+  <rect x="200" y="460" width="500" height="70" rx="10" fill="none" stroke="#4fc3f7" stroke-width="1.5" opacity="0.5"/>
+  <text x="450" y="488" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">核心结论</text>
+  <text x="450" y="512" text-anchor="middle" fill="#b0d8f0" font-size="14">以语义相关性为主监督 → 用户体验与广告效果双赢</text>
+
+  <!-- Checkmark decorations -->
+  <text x="45" y="540" fill="#388e3c" font-size="11">✓ 统计显著</text>
+  <rect x="130" y="530" width="8" height="8" rx="1" fill="#5a5a5a" stroke="#5a5a5a" stroke-dasharray="2,1"/>
+  <text x="145" y="540" fill="#707070" font-size="11">方向正向未达显著</text>
+</svg>

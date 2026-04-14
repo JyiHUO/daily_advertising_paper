@@ -1,0 +1,19 @@
+{
+  "date": "2026-04-10",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL"
+  ],
+  "candidate_count": 4,
+  "supplementary_count": 0,
+  "focus_titles": [
+    "Unified Supervision for Walmart's Sponsored Search Retrieval via Joint Semantic Relevance and Behavioral Engagement Modeling",
+    "Ads in AI Chatbots? An Analysis of How Large Language Models Navigate Conflicts of Interest"
+  ],
+  "focus_status": {
+    "Unified Supervision for Walmart's Sponsored Search Retrieval via Joint Semantic Relevance and Behavioral Engagement Modeling": "completed",
+    "Ads in AI Chatbots? An Analysis of How Large Language Models Navigate Conflicts of Interest": "completed"
+  }
+}

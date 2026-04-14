@@ -1,0 +1,108 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#f87171"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#e2e8f0" font-size="22" font-weight="bold">提示引导能否修复 LLM 广告偏差？</text>
+  <text x="450" y="66" text-anchor="middle" fill="#94a3b8" font-size="13">Prompt Steering: Controllability &amp; Limitations</text>
+
+  <!-- Central prompt icon -->
+  <rect x="350" y="85" width="200" height="50" rx="25" fill="none" stroke="#64748b" stroke-width="1.5" stroke-dasharray="6,3"/>
+  <text x="450" y="115" text-anchor="middle" fill="#cbd5e1" font-size="14" font-weight="600">🛡️ "请只为用户考虑"</text>
+
+  <!-- Three arrows down -->
+  <line x1="310" y1="135" x2="180" y2="175" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+  <line x1="450" y1="135" x2="450" y2="175" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+  <line x1="590" y1="135" x2="720" y2="175" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrowGray)"/>
+  <defs>
+    <marker id="arrowGray" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <!-- === Column 1: Responsive Models === -->
+  <rect x="55" y="180" width="250" height="200" rx="14" fill="#132234" stroke="#10b981" stroke-width="2"/>
+  <rect x="55" y="180" width="250" height="38" rx="14" fill="url(#green)" opacity="0.15"/>
+  <text x="180" y="205" text-anchor="middle" fill="#34d399" font-size="15" font-weight="bold">✅ 可引导模型</text>
+  <text x="180" y="222" text-anchor="middle" fill="#6ee7b7" font-size="11">DeepSeek-R1 等</text>
+
+  <!-- Bar chart for DeepSeek -->
+  <text x="80" y="255" fill="#94a3b8" font-size="11">高收入用户</text>
+  <rect x="170" y="243" width="12" height="16" rx="3" fill="#34d399" opacity="0.9"/>
+  <text x="190" y="256" fill="#6ee7b7" font-size="13" font-weight="bold">3%</text>
+
+  <text x="80" y="290" fill="#94a3b8" font-size="11">低收入用户</text>
+  <rect x="170" y="278" width="100" height="16" rx="3" fill="#f59e0b" opacity="0.8"/>
+  <text x="278" y="291" fill="#fbbf24" font-size="13" font-weight="bold">51%</text>
+
+  <!-- Gap indicator -->
+  <line x1="230" y1="305" x2="230" y2="340" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <rect x="155" y="335" width="150" height="32" rx="8" fill="#ef4444" opacity="0.15" stroke="#ef4444" stroke-width="1"/>
+  <text x="230" y="356" text-anchor="middle" fill="#fca5a5" font-size="12" font-weight="600">⚠️ SES 偏差仍在</text>
+
+  <!-- === Column 2: Stubborn Models === -->
+  <rect x="325" y="180" width="250" height="200" rx="14" fill="#2a1520" stroke="#ef4444" stroke-width="2"/>
+  <rect x="325" y="180" width="250" height="38" rx="14" fill="url(#red)" opacity="0.15"/>
+  <text x="450" y="205" text-anchor="middle" fill="#f87171" font-size="15" font-weight="bold">🚫 引导失效模型</text>
+  <text x="450" y="222" text-anchor="middle" fill="#fca5a5" font-size="11">GPT-4.1 / GPT-4.1 Mini</text>
+
+  <!-- Big number -->
+  <text x="450" y="290" text-anchor="middle" fill="#ef4444" font-size="56" font-weight="bold" filter="url(#glow)">&gt;90%</text>
+  <text x="450" y="315" text-anchor="middle" fill="#fca5a5" font-size="13">赞助推荐率</text>
+  <text x="450" y="340" text-anchor="middle" fill="#94a3b8" font-size="11">即使提示"只为用户考虑"</text>
+  <text x="450" y="360" text-anchor="middle" fill="#94a3b8" font-size="11">仍锁定销售模式 🔒</text>
+
+  <!-- === Column 3: Over-cautious === -->
+  <rect x="595" y="180" width="250" height="200" rx="14" fill="#1a2030" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="595" y="180" width="250" height="38" rx="14" fill="url(#amber)" opacity="0.15"/>
+  <text x="720" y="205" text-anchor="middle" fill="#fbbf24" font-size="15" font-weight="bold">🔄 过度矫正模型</text>
+  <text x="720" y="222" text-anchor="middle" fill="#fde68a" font-size="11">Claude 3.5 Opus</text>
+
+  <!-- Down arrow illustration -->
+  <text x="720" y="280" text-anchor="middle" fill="#fbbf24" font-size="44">📉</text>
+  <text x="720" y="315" text-anchor="middle" fill="#fde68a" font-size="14" font-weight="bold">所有方向都降低</text>
+  <text x="720" y="340" text-anchor="middle" fill="#94a3b8" font-size="11">无论提示如何引导</text>
+  <text x="720" y="360" text-anchor="middle" fill="#94a3b8" font-size="11">一律拒绝推荐</text>
+
+  <!-- Bottom insight box -->
+  <rect x="100" y="420" width="700" height="90" rx="16" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+  
+  <!-- Key insight -->
+  <text x="450" y="450" text-anchor="middle" fill="#e2e8f0" font-size="16" font-weight="bold">💡 核心发现</text>
+  <text x="450" y="478" text-anchor="middle" fill="#94a3b8" font-size="14">提示引导 ≠ 可靠的安全机制</text>
+  <text x="450" y="498" text-anchor="middle" fill="#64748b" font-size="12">模型行为不可预测 · 弱势群体保护不足 · 系统提示不能消除内在偏差</text>
+
+  <!-- Bottom spectrum bar -->
+  <rect x="150" y="540" width="600" height="10" rx="5" fill="#1e293b"/>
+  <rect x="150" y="540" width="200" height="10" rx="5" fill="url(#green)" opacity="0.6"/>
+  <rect x="350" y="540" width="200" height="10" fill="url(#amber)" opacity="0.6"/>
+  <rect x="550" y="540" width="200" height="10" rx="5" fill="url(#red)" opacity="0.6"/>
+  <text x="250" y="570" text-anchor="middle" fill="#6ee7b7" font-size="11">部分可控</text>
+  <text x="450" y="570" text-anchor="middle" fill="#fde68a" font-size="11">方向异常</text>
+  <text x="650" y="570" text-anchor="middle" fill="#fca5a5" font-size="11">完全失控</text>
+
+  <text x="450" y="600" text-anchor="middle" fill="#475569" font-size="10">Source: "Ads in AI Chatbots?" — 23 LLMs across 7 model families</text>
+</svg>

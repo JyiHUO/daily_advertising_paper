@@ -1,0 +1,134 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#555">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#2e7d32">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#c62828">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f7fa"/>
+      <stop offset="100%" stop-color="#e8ecf1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bgGrad)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a237e">核心创新：行为信号仅加分给语义相关候选</text>
+  <text x="450" y="64" text-anchor="middle" font-size="14" fill="#546e7a">Behavioral Engagement Only Boosts Relevance-Approved Items</text>
+
+  <!-- ===== LEFT: Gate Diagram ===== -->
+  <!-- Query box -->
+  <rect x="60" y="100" width="200" height="44" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="160" y="127" text-anchor="middle" font-size="15" font-weight="bold" fill="#1565c0">Query: "kids winter boots"</text>
+
+  <!-- Relevance Gate -->
+  <rect x="95" y="185" width="130" height="50" rx="25" fill="#fff3e0" stroke="#ef6c00" stroke-width="2.5"/>
+  <text x="160" y="207" text-anchor="middle" font-size="14" font-weight="bold" fill="#e65100">语义相关性</text>
+  <text x="160" y="224" text-anchor="middle" font-size="12" fill="#bf360c">审核门 (Rel≥3?)</text>
+
+  <!-- Arrow from query to gate -->
+  <line x1="160" y1="144" x2="160" y2="183" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Gate outputs -->
+  <!-- Pass (left-down) -->
+  <line x1="120" y1="235" x2="80" y2="280" stroke="#2e7d32" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <text x="72" y="272" font-size="13" font-weight="bold" fill="#2e7d32">✓ 通过</text>
+
+  <!-- Reject (right-down) -->
+  <line x1="200" y1="235" x2="250" y2="280" stroke="#c62828" stroke-width="2.5" marker-end="url(#arrowRed)"/>
+  <text x="238" y="272" font-size="13" font-weight="bold" fill="#c62828">✗ 拒绝</text>
+
+  <!-- ===== THREE CANDIDATES ===== -->
+  <!-- Candidate A: Relevant + High Engagement -->
+  <g transform="translate(0, 295)">
+    <rect x="20" y="0" width="165" height="130" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+    <text x="102" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b5e20">候选A 🥾</text>
+    <text x="102" y="42" text-anchor="middle" font-size="11" fill="#333">儿童雪地靴</text>
+    <rect x="32" y="50" width="56" height="22" rx="4" fill="#2e7d32"/>
+    <text x="60" y="65" text-anchor="middle" font-size="11" fill="white" font-weight="bold">Rel=4 ✓</text>
+    <rect x="96" y="50" width="78" height="22" rx="4" fill="#1565c0"/>
+    <text x="135" y="65" text-anchor="middle" font-size="11" fill="white" font-weight="bold">行为分 0.9</text>
+    <line x1="32" y1="82" x2="173" y2="82" stroke="#c8e6c9" stroke-width="1"/>
+    <text x="102" y="98" text-anchor="middle" font-size="12" font-weight="bold" fill="#1b5e20">最终分 = 0.85×相关</text>
+    <text x="102" y="114" text-anchor="middle" font-size="12" font-weight="bold" fill="#1565c0">+ 0.15×行为 → 高分</text>
+  </g>
+
+  <!-- Candidate B: Relevant + Low Engagement -->
+  <g transform="translate(190, 295)">
+    <rect x="20" y="0" width="165" height="130" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <text x="102" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#33691e">候选B 🥾</text>
+    <text x="102" y="42" text-anchor="middle" font-size="11" fill="#333">另一款雪地靴</text>
+    <rect x="32" y="50" width="56" height="22" rx="4" fill="#558b2f"/>
+    <text x="60" y="65" text-anchor="middle" font-size="11" fill="white" font-weight="bold">Rel=3 ✓</text>
+    <rect x="96" y="50" width="78" height="22" rx="4" fill="#90caf9"/>
+    <text x="135" y="65" text-anchor="middle" font-size="11" fill="#1a237e" font-weight="bold">行为分 0.2</text>
+    <line x1="32" y1="82" x2="173" y2="82" stroke="#c8e6c9" stroke-width="1"/>
+    <text x="102" y="98" text-anchor="middle" font-size="12" font-weight="bold" fill="#33691e">最终分 = 0.85×相关</text>
+    <text x="102" y="114" text-anchor="middle" font-size="12" font-weight="bold" fill="#7986cb">+ 0.15×行为 → 较低</text>
+  </g>
+
+  <!-- Candidate C: Irrelevant but High Engagement -->
+  <g transform="translate(380, 295)">
+    <rect x="20" y="0" width="165" height="130" rx="10" fill="#ffebee" stroke="#c62828" stroke-width="2"/>
+    <text x="102" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#b71c1c">候选C 👟</text>
+    <text x="102" y="42" text-anchor="middle" font-size="11" fill="#333">成人运动鞋（热门）</text>
+    <rect x="32" y="50" width="56" height="22" rx="4" fill="#c62828"/>
+    <text x="60" y="65" text-anchor="middle" font-size="11" fill="white" font-weight="bold">Rel=1 ✗</text>
+    <rect x="96" y="50" width="78" height="22" rx="4" fill="#e0e0e0"/>
+    <text x="135" y="65" text-anchor="middle" font-size="11" fill="#888" font-weight="bold">行为分 —</text>
+    <line x1="32" y1="82" x2="173" y2="82" stroke="#ffcdd2" stroke-width="1"/>
+    <text x="102" y="98" text-anchor="middle" font-size="12" font-weight="bold" fill="#c62828">⛔ 负样本</text>
+    <text x="102" y="114" text-anchor="middle" font-size="12" fill="#c62828">行为分不参与打分</text>
+  </g>
+
+  <!-- ===== RIGHT: Formula / Key Insight ===== -->
+  <rect x="580" y="100" width="300" height="210" rx="12" fill="white" stroke="#5c6bc0" stroke-width="2"/>
+  <text x="730" y="128" text-anchor="middle" font-size="16" font-weight="bold" fill="#283593">统一监督公式</text>
+
+  <!-- Formula lines -->
+  <text x="600" y="162" font-size="13" fill="#333" font-weight="bold">对 Rel ≥ 3 的正样本:</text>
+  <rect x="600" y="172" width="260" height="38" rx="6" fill="#e8eaf6"/>
+  <text x="610" y="196" font-size="14" fill="#1a237e" font-weight="bold">Score = 0.85 × 相关性融合分</text>
+  <text x="680" y="206" font-size="0" fill="transparent">spacer</text>
+
+  <text x="710" y="224" font-size="20" fill="#1565c0" font-weight="bold">+</text>
+
+  <rect x="600" y="234" width="260" height="28" rx="6" fill="#e3f2fd"/>
+  <text x="650" y="254" font-size="14" fill="#1565c0" font-weight="bold">0.15 × 行为偏好分</text>
+
+  <line x1="600" y1="275" x2="860" y2="275" stroke="#bdbdbd" stroke-width="1"/>
+  <text x="600" y="298" font-size="13" fill="#c62828" font-weight="bold">对 Rel ≤ 2 的候选:</text>
+  <text x="610" y="298" font-size="0" fill="transparent">spacer</text>
+  <rect x="600" y="288" width="260" height="18" rx="0" fill="none"/>
+  <text x="730" y="298" text-anchor="middle" font-size="13" fill="#c62828" font-weight="bold">→ 负样本，行为分无效</text>
+
+  <!-- ===== BOTTOM: Key Insight Banner ===== -->
+  <rect x="100" y="465" width="700" height="70" rx="14" fill="#1a237e" opacity="0.92"/>
+  <text x="450" y="495" text-anchor="middle" font-size="18" font-weight="bold" fill="white">💡 关键洞察：相关性是"入场门槛"，行为只是"偏好微调"</text>
+  <text x="450" y="518" text-anchor="middle" font-size="13" fill="#bbdefb">不相关的热门商品永远不会因为高点击而被召回 — 杜绝行为偏差污染</text>
+
+  <!-- Comparison arrows at bottom -->
+  <g transform="translate(120, 550)">
+    <rect x="0" y="0" width="280" height="48" rx="8" fill="#ffebee" stroke="#ef9a9a" stroke-width="1.5"/>
+    <text x="140" y="20" text-anchor="middle" font-size="13" fill="#c62828" font-weight="bold">❌ 传统方法</text>
+    <text x="140" y="38" text-anchor="middle" font-size="12" fill="#b71c1c">高点击 → 自动正样本（有偏差）</text>
+  </g>
+
+  <text x="450" y="580" text-anchor="middle" font-size="22" fill="#555">→</text>
+
+  <g transform="translate(500, 550)">
+    <rect x="0" y="0" width="280" height="48" rx="8" fill="#e8f5e9" stroke="#a5d6a7" stroke-width="1.5"/>
+    <text x="140" y="20" text-anchor="middle" font-size="13" fill="#2e7d32" font-weight="bold">✅ 本文方法</text>
+    <text x="140" y="38" text-anchor="middle" font-size="12" fill="#1b5e20">先审相关性，再用行为微调排序</text>
+  </g>
+
+  <!-- Decorative connecting lines -->
+  <line x1="355" y1="228" x2="580" y2="180" stroke="#5c6bc0" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.5"/>
+  <line x1="355" y1="228" x2="580" y2="270" stroke="#5c6bc0" stroke-width="1.5" stroke-dasharray="5,4" opacity="0.5"/>
+</svg>

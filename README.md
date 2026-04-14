@@ -18,6 +18,8 @@
 |---|---|---:|---:|---|---|
 | 2026-04-13 | cs.IR + cs.AI + cs.LG + cs.CL | 2 | 1 | IAT: Instance-As-Token Compression for Historical User Sequence Modeling in Industrial Recommender Systems | [2026-04-13/daily_report.md](2026-04-13/daily_report.md) |
 |  |  |  | 2 | Sustained Impact of Agentic Personalisation in Marketing: A Longitudinal Case Study |  |
+| 2026-04-10 | cs.IR + cs.AI + cs.LG + cs.CL | 4 | 1 | Unified Supervision for Walmart's Sponsored Search Retrieval via Joint Semantic Relevance and Behavioral Engagement Modeling | [2026-04-10/daily_report.md](2026-04-10/daily_report.md) |
+|  |  |  | 2 | Ads in AI Chatbots? An Analysis of How Large Language Models Navigate Conflicts of Interest |  |
 | 2026-04-09 | cs.IR + cs.AI + cs.LG + cs.CL | 2 | 1 | Incentive-Aware Multi-Fidelity Optimization for Generative Advertising in Large Language Models | [2026-04-09/daily_report.md](2026-04-09/daily_report.md) |
 |  |  |  | 2 | NestPipe: Large-Scale Recommendation Training on 1,500+ Accelerators via Nested Pipelining |  |
 | 2026-04-08 | cs.IR + cs.AI + cs.LG + cs.CL | 4 | 1 | JD-BP: A Joint-Decision Generative Framework for Auto-Bidding and Pricing | [2026-04-08/daily_report.md](2026-04-08/daily_report.md) |

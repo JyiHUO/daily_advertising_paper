@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-10/downloaded_pdfs/unified-supervision-for-walmart-s-sponsored-search-retrieval-via-joint-semantic-.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-10/assets/figure_candidates/unified-supervision-for-walmart-s-sponsored-search-retrieval-via-joint-semantic-",
+  "candidates": [
+    {
+      "id": "page-2-block-2",
+      "page_index": 2,
+      "caption": "Figure 1: Overview of the unified supervision framework for large-scale e-commerce retrieval. The system integrates human and relevance cross encoder labeled relevance scores, item ranks from existing retrieval channels, and user engagement signals to generate a context-rich supervision target to train bi-encoder model.",
+      "clip": [
+        51.974998474121094,
+        65.6860580444336,
+        560.0169677734375,
+        208.90899658203125
+      ],
+      "clip_area": 72763.26374347607,
+      "page_area": 484704.0,
+      "text_density": 0.05961783099078072,
+      "kind": "image_block_with_caption",
+      "score": 105.80848070826084,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-10/assets/figure_candidates/unified-supervision-for-walmart-s-sponsored-search-retrieval-via-joint-semantic-/01-p3-image_block_with_caption.png",
+      "filename": "01-p3-image_block_with_caption.png"
+    },
+    {
+      "id": "page-2-embedded-0-0",
+      "page_index": 2,
+      "caption": "Figure 1: Overview of the unified supervision framework for large-scale e-commerce retrieval. The system integrates human and relevance cross encoder labeled relevance scores, item ranks from existing retrieval channels, and user engagement signals to generate a context-rich supervision target to train bi-encoder model.",
+      "clip": [
+        61.974998474121094,
+        71.6860580444336,
+        550.0169677734375,
+        202.90899658203125
+      ],
+      "clip_area": 64042.30134113232,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 131,
+      "score": 104.71158112601258,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-10/assets/figure_candidates/unified-supervision-for-walmart-s-sponsored-search-retrieval-via-joint-semantic-/02-p3-embedded_image_with_caption.png",
+      "filename": "02-p3-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-4-block-2",
+      "page_index": 4,
+      "caption": "Figure 3: Green text highlights phrases that align with user intent, while red text shows failure cases. Unified supervision (Variation-2) retrieves relevant and popular(top 1% engaged) items for each query compared to production system (Control), while relevance only scoring (Variation-1) retrieves relevant but unpopular(bottom 10% engaged) items.",
+      "clip": [
+        57.019996643066406,
+        65.68399047851562,
+        554.9838256835938,
+        246.34197998046875
+      ],
+      "clip_area": 89961.14419915597,
+      "page_area": 484704.0,
+      "text_density": 0.047983918716186576,
+      "kind": "image_block_with_caption",
+      "score": 43.999568268879514,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-10/assets/figure_candidates/unified-supervision-for-walmart-s-sponsored-search-retrieval-via-joint-semantic-/03-p5-image_block_with_caption.png",
+      "filename": "03-p5-image_block_with_caption.png"
+    },
+    {
+      "id": "page-4-embedded-0-0",
+      "page_index": 4,
+      "caption": "Figure 3: Green text highlights phrases that align with user intent, while red text shows failure cases. Unified supervision (Variation-2) retrieves relevant and popular(top 1% engaged) items for each query compared to production system (Control), while relevance only scoring (Variation-1) retrieves relevant but unpopular(bottom 10% engaged) items.",
+      "clip": [
+        67.0199966430664,
+        71.68399047851562,
+        544.9838256835938,
+        240.34197998046875
+      ],
+      "clip_area": 80612.41846063058,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 133,
+      "score": 42.895693538451454,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-10/assets/figure_candidates/unified-supervision-for-walmart-s-sponsored-search-retrieval-via-joint-semantic-/04-p5-embedded_image_with_caption.png",
+      "filename": "04-p5-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-3-block-3",
+      "page_index": 3,
+      "caption": "Figure 2: Engagement supervision increases the share of highly engaged items in the Top 25 retrieved set without degrading relevance. For each query, we convert engagement to a within-query percentile and report the percentage of Top-25 items above each percentile cutoff (y-axis). Labels report absolute gains in percentage points (pp)",
+      "clip": [
+        31.79800033569336,
+        203.51901245117188,
+        316.04302978515625,
+        386.4649963378906
+      ],
+      "clip_area": 52001.486577541335,
+      "page_area": 484704.0,
+      "text_density": 0.024123202645790112,
+      "kind": "image_block_with_caption",
+      "score": 37.57779429530601,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-10/assets/figure_candidates/unified-supervision-for-walmart-s-sponsored-search-retrieval-via-joint-semantic-/05-p4-image_block_with_caption.png",
+      "filename": "05-p4-image_block_with_caption.png"
+    },
+    {
+      "id": "page-3-embedded-0-0",
+      "page_index": 3,
+      "caption": "Figure 2: Engagement supervision increases the share of highly engaged items in the Top 25 retrieved set without degrading relevance. For each query, we convert engagement to a within-query percentile and report the percentage of Top-25 items above each percentile cutoff (y-axis). Labels report absolute gains in percentage points (pp)",
+      "clip": [
+        41.79800033569336,
+        209.51901245117188,
+        306.04302978515625,
+        380.4649963378906
+      ],
+      "clip_area": 45171.626546413405,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 132,
+      "score": 36.501906961626815,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-10/assets/figure_candidates/unified-supervision-for-walmart-s-sponsored-search-retrieval-via-joint-semantic-/06-p4-embedded_image_with_caption.png",
+      "filename": "06-p4-embedded_image_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-10/assets/figure_candidates/unified-supervision-for-walmart-s-sponsored-search-retrieval-via-joint-semantic-/contact-sheet.svg"
+}

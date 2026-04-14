@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-10/downloaded_pdfs/ads-in-ai-chatbots-an-analysis-of-how-large-language-models-navigate-conflicts-o.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-10/assets/figure_candidates/ads-in-ai-chatbots-an-analysis-of-how-large-language-models-navigate-conflicts-o",
+  "candidates": [
+    {
+      "id": "page-5-drawing-caption-18",
+      "page_index": 5,
+      "caption": "Figure 1: Most models have moderate to high rates of recommending the sponsored, more expensive option. Each frontier model’s tendencies are partitioned by user SES and inference time reasoning.",
+      "clip": [
+        90.0,
+        65.86209106445312,
+        522.0057373046875,
+        229.864013671875
+      ],
+      "clip_area": 70849.77149540558,
+      "page_area": 484704.0,
+      "text_density": 0.1655776312895208,
+      "kind": "drawing_cluster_with_caption",
+      "score": 40.652561805911034,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-10/assets/figure_candidates/ads-in-ai-chatbots-an-analysis-of-how-large-language-models-navigate-conflicts-o/01-p6-drawing_cluster_with_caption.png",
+      "filename": "01-p6-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-5-block-18",
+      "page_index": 5,
+      "caption": "Figure 1: Most models have moderate to high rates of recommending the sponsored, more expensive option. Each frontier model’s tendencies are partitioned by user SES and inference time reasoning.",
+      "clip": [
+        77.4,
+        18.0,
+        534.5997863769531,
+        215.9955291748047
+      ],
+      "clip_area": 90523.51364231251,
+      "page_area": 484704.0,
+      "text_density": 0.10392016787580413,
+      "kind": "captioned_figure",
+      "score": 32.57060674569967,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-10/assets/figure_candidates/ads-in-ai-chatbots-an-analysis-of-how-large-language-models-navigate-conflicts-o/02-p6-captioned_figure.png",
+      "filename": "02-p6-captioned_figure.png"
+    },
+    {
+      "id": "page-12-drawing-caption-25",
+      "page_index": 12,
+      "caption": "Figure 4: Advertisement rates for harmful sponsored services across models and reasoning levels, with 95% CIs. Aside from Claude, all models frequently recommended sponsored predatory loans ( ≥ 60% ). Claude 4.5 Opus showed a near-complete absence of such suggestions (0–1%).",
+      "clip": [
+        90.0,
+        483.4073181152344,
+        521.9959716796875,
+        654.6719970703125
+      ],
+      "clip_area": 73985.6513996087,
+      "page_area": 484704.0,
+      "text_density": 0.27813156406792316,
+      "kind": "drawing_cluster_with_caption",
+      "score": 27.9341689492536,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-10/assets/figure_candidates/ads-in-ai-chatbots-an-analysis-of-how-large-language-models-navigate-conflicts-o/03-p13-drawing_cluster_with_caption.png",
+      "filename": "03-p13-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-12-block-25",
+      "page_index": 12,
+      "caption": "Figure 4: Advertisement rates for harmful sponsored services across models and reasoning levels, with 95% CIs. Aside from Claude, all models frequently recommended sponsored predatory loans ( ≥ 60% ). Claude 4.5 Opus showed a near-complete absence of such suggestions (0–1%).",
+      "clip": [
+        77.04099884033204,
+        331.87425537109374,
+        535.8474670410156,
+        640.6742553710938
+      ],
+      "clip_area": 141679.43738037112,
+      "page_area": 484704.0,
+      "text_density": 0.433347744784098,
+      "kind": "captioned_figure",
+      "score": 9.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-10/assets/figure_candidates/ads-in-ai-chatbots-an-analysis-of-how-large-language-models-navigate-conflicts-o/04-p13-captioned_figure.png",
+      "filename": "04-p13-captioned_figure.png"
+    },
+    {
+      "id": "page-11-drawing-caption-25",
+      "page_index": 11,
+      "caption": "Figure 3: When an LLM can simply solve a user’s math question, most went out of their way to also recommend a sponsored study service. This tendency was typically amplified by thinking/CoT.",
+      "clip": [
+        90.0,
+        531.7293701171875,
+        521.9959716796875,
+        702.9940185546875
+      ],
+      "clip_area": 73985.63821613789,
+      "page_area": 484704.0,
+      "text_density": 0.27737075486193197,
+      "kind": "drawing_cluster_with_caption",
+      "score": 4.9798173551300575,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-10/assets/figure_candidates/ads-in-ai-chatbots-an-analysis-of-how-large-language-models-navigate-conflicts-o/05-p12-drawing_cluster_with_caption.png",
+      "filename": "05-p12-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-5-drawing-cluster-0",
+      "page_index": 5,
+      "caption": "第 6 页矢量图主图候选",
+      "clip": [
+        92.0,
+        67.86209106445312,
+        520.0057373046875,
+        227.864013671875
+      ],
+      "clip_area": 68481.74085575715,
+      "page_area": 484704.0,
+      "text_density": 0.15973802114493887,
+      "kind": "drawing_cluster",
+      "score": 3.9766269630343025,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-10/assets/figure_candidates/ads-in-ai-chatbots-an-analysis-of-how-large-language-models-navigate-conflicts-o/06-p6-drawing_cluster.png",
+      "filename": "06-p6-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-10/assets/figure_candidates/ads-in-ai-chatbots-an-analysis-of-how-large-language-models-navigate-conflicts-o/contact-sheet.svg"
+}

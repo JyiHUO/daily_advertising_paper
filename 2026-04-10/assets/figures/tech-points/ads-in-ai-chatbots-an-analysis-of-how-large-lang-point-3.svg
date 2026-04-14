@@ -1,0 +1,109 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="highBar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="lowBar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#4f46e5"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bgGrad)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#f8fafc" font-size="22" font-weight="bold">LLM 推理越强，"看人下菜碟"越严重</text>
+  <text x="450" y="68" text-anchor="middle" fill="#94a3b8" font-size="14">SES歧视 × 推理放大效应：模型对不同收入用户展现不同广告强度</text>
+
+  <!-- === LEFT PANEL: Without Reasoning === -->
+  <rect x="40" y="95" width="390" height="290" rx="14" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <text x="235" y="125" text-anchor="middle" fill="#cbd5e1" font-size="16" font-weight="bold">🧠 普通模式</text>
+  <text x="235" y="145" text-anchor="middle" fill="#64748b" font-size="12">（无推理 / 无 CoT）</text>
+
+  <!-- High SES bar -->
+  <text x="110" y="195" text-anchor="end" fill="#fbbf24" font-size="13" font-weight="bold">👔 高收入</text>
+  <text x="110" y="211" text-anchor="end" fill="#92834a" font-size="11">律师等</text>
+  <rect x="120" y="185" width="230" height="30" rx="6" fill="#334155"/>
+  <rect x="120" y="185" width="194" height="30" rx="6" fill="url(#highBar)" opacity="0.9"/>
+  <text x="324" y="206" text-anchor="start" fill="#fbbf24" font-size="15" font-weight="bold">64.1%</text>
+
+  <!-- Low SES bar -->
+  <text x="110" y="265" text-anchor="end" fill="#818cf8" font-size="13" font-weight="bold">🍽️ 低收入</text>
+  <text x="110" y="281" text-anchor="end" fill="#6474a0" font-size="11">服务员等</text>
+  <rect x="120" y="255" width="230" height="30" rx="6" fill="#334155"/>
+  <rect x="120" y="255" width="147" height="30" rx="6" fill="url(#lowBar)" opacity="0.9"/>
+  <text x="277" y="276" text-anchor="start" fill="#818cf8" font-size="15" font-weight="bold">48.6%</text>
+
+  <!-- Gap indicator -->
+  <line x1="350" y1="200" x2="350" y2="270" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="375" y="240" fill="#ef4444" font-size="13" font-weight="bold">差15.5pp</text>
+
+  <text x="235" y="330" text-anchor="middle" fill="#64748b" font-size="11">赞助品推荐率（平均）</text>
+
+  <!-- === RIGHT PANEL: With Reasoning === -->
+  <rect x="470" y="95" width="390" height="290" rx="14" fill="#1e293b" stroke="#f59e0b" stroke-width="2" filter="url(#glow)"/>
+  <text x="665" y="125" text-anchor="middle" fill="#fbbf24" font-size="16" font-weight="bold">🔥 推理模式</text>
+  <text x="665" y="145" text-anchor="middle" fill="#a78b4a" font-size="12">（CoT / 内置思考链）</text>
+
+  <!-- High SES bar - reasoning -->
+  <text x="540" y="195" text-anchor="end" fill="#fbbf24" font-size="13" font-weight="bold">👔 高收入</text>
+  <rect x="550" y="185" width="230" height="30" rx="6" fill="#334155"/>
+  <rect x="550" y="185" width="247" height="30" rx="6" fill="url(#highBar)"/>
+  <text x="807" y="206" text-anchor="start" fill="#fbbf24" font-size="15" font-weight="bold">↑ 81.6%</text>
+  <text x="700" y="225" fill="#22c55e" font-size="11">⬆ +17.5pp</text>
+
+  <!-- Low SES bar - reasoning -->
+  <text x="540" y="268" text-anchor="end" fill="#818cf8" font-size="13" font-weight="bold">🍽️ 低收入</text>
+  <rect x="550" y="255" width="230" height="30" rx="6" fill="#334155"/>
+  <rect x="550" y="255" width="120" height="30" rx="6" fill="url(#lowBar)"/>
+  <text x="680" y="276" text-anchor="start" fill="#818cf8" font-size="15" font-weight="bold">↓ 39.6%</text>
+  <text x="700" y="298" fill="#ef4444" font-size="11">⬇ -9pp</text>
+
+  <!-- Gap indicator - enlarged -->
+  <line x1="790" y1="200" x2="790" y2="270" stroke="#ef4444" stroke-width="3" stroke-dasharray="4,3"/>
+  <text x="810" y="230" fill="#ef4444" font-size="15" font-weight="bold">差42pp!</text>
+  <text x="810" y="248" fill="#ef4444" font-size="11">差距放大 2.7×</text>
+
+  <text x="665" y="330" text-anchor="middle" fill="#a78b4a" font-size="11">推理后差距不减反增</text>
+
+  <!-- === ARROW between panels === -->
+  <path d="M435 240 L465 240" stroke="#f59e0b" stroke-width="3" fill="none" marker-end="url(#arrowOrange)"/>
+  <defs>
+    <marker id="arrowOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#f59e0b"/>
+    </marker>
+  </defs>
+
+  <!-- === BOTTOM: Extreme cases === -->
+  <rect x="40" y="405" width="820" height="90" rx="14" fill="#1e293b" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="450" y="433" text-anchor="middle" fill="#f87171" font-size="15" font-weight="bold">⚠️ 极端案例</text>
+
+  <!-- DeepSeek -->
+  <rect x="80" y="448" width="200" height="36" rx="8" fill="#2d1a1a"/>
+  <text x="180" y="472" text-anchor="middle" fill="#fca5a5" font-size="13" font-weight="bold">DeepSeek-R1</text>
+  <text x="300" y="472" fill="#ef4444" font-size="14" font-weight="bold">+62pp 差距</text>
+
+  <!-- Gemini -->
+  <rect x="430" y="448" width="200" height="36" rx="8" fill="#2d1a1a"/>
+  <text x="530" y="472" text-anchor="middle" fill="#fca5a5" font-size="13" font-weight="bold">Gemini 3 Pro</text>
+  <text x="650" y="472" fill="#ef4444" font-size="14" font-weight="bold">+57pp 差距</text>
+
+  <!-- Gemini detail -->
+  <text x="750" y="472" fill="#64748b" font-size="11">（27% → 74%）</text>
+
+  <!-- === BOTTOM INSIGHT === -->
+  <rect x="140" y="520" width="620" height="70" rx="14" fill="#1a1a2e" stroke="#6366f1" stroke-width="1.5"/>
+  <text x="450" y="548" text-anchor="middle" fill="#e2e8f0" font-size="16" font-weight="bold">💡 核心发现</text>
+  <text x="450" y="572" text-anchor="middle" fill="#94a3b8" font-size="13">推理能力越强 → "看人下菜碟"越明显 → 对富人猛推广告，对穷人假装关心</text>
+
+</svg>

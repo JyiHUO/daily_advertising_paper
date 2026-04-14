@@ -1,0 +1,174 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="grice" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="conflict" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <linearGradient id="scenario" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrowW" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrowR" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ef4444"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#f8fafc" font-size="22" font-weight="bold">LLM广告利益冲突：7场景框架</text>
+  <text x="450" y="66" text-anchor="middle" fill="#94a3b8" font-size="13">基于 Grice 合作原则 × FTC 广告法规</text>
+
+  <!-- LEFT: Grice Principles (User Side) -->
+  <rect x="40" y="95" width="230" height="220" rx="16" fill="url(#grice)" opacity="0.15" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="155" y="122" text-anchor="middle" fill="#60a5fa" font-size="16" font-weight="bold">🧑 用户期望</text>
+  <text x="155" y="142" text-anchor="middle" fill="#93c5fd" font-size="11">Grice 合作四准则</text>
+
+  <rect x="60" y="158" width="190" height="32" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="155" y="179" text-anchor="middle" fill="#e0f2fe" font-size="13" font-weight="bold">质量 — 说真话</text>
+
+  <rect x="60" y="198" width="190" height="32" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="155" y="219" text-anchor="middle" fill="#e0f2fe" font-size="13" font-weight="bold">数量 — 不多不少</text>
+
+  <rect x="60" y="238" width="190" height="32" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="155" y="259" text-anchor="middle" fill="#e0f2fe" font-size="13" font-weight="bold">相关性 — 切题</text>
+
+  <rect x="60" y="278" width="190" height="32" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="155" y="299" text-anchor="middle" fill="#e0f2fe" font-size="13" font-weight="bold">方式 — 表达清晰</text>
+
+  <!-- RIGHT: Company Incentive -->
+  <rect x="630" y="95" width="230" height="220" rx="16" fill="url(#conflict)" opacity="0.15" stroke="#ef4444" stroke-width="1.5"/>
+  <text x="745" y="122" text-anchor="middle" fill="#f87171" font-size="16" font-weight="bold">💰 公司激励</text>
+  <text x="745" y="142" text-anchor="middle" fill="#fca5a5" font-size="11">赞助商系统提示</text>
+
+  <rect x="650" y="162" width="190" height="44" rx="10" fill="#3b1111" stroke="#ef4444" stroke-width="1"/>
+  <text x="745" y="183" text-anchor="middle" fill="#fecaca" font-size="12">"推荐赞助品牌X"</text>
+  <text x="745" y="198" text-anchor="middle" fill="#fca5a5" font-size="11">"不要提竞品优势"</text>
+
+  <rect x="650" y="216" width="190" height="44" rx="10" fill="#3b1111" stroke="#ef4444" stroke-width="1"/>
+  <text x="745" y="237" text-anchor="middle" fill="#fecaca" font-size="12">"隐藏赞助关系"</text>
+  <text x="745" y="252" text-anchor="middle" fill="#fca5a5" font-size="11">"美化赞助品描述"</text>
+
+  <rect x="650" y="270" width="190" height="38" rx="10" fill="#3b1111" stroke="#ef4444" stroke-width="1"/>
+  <text x="745" y="294" text-anchor="middle" fill="#fecaca" font-size="12">"最大化广告营收"</text>
+
+  <!-- CENTER: LLM with conflict -->
+  <rect x="330" y="120" width="240" height="170" rx="20" fill="#1e293b" stroke="#f59e0b" stroke-width="2" filter="url(#shadow)"/>
+  <text x="450" y="155" text-anchor="middle" fill="#fbbf24" font-size="20" font-weight="bold">🤖 LLM</text>
+  <text x="450" y="178" text-anchor="middle" fill="#fde68a" font-size="13">利益冲突发生处</text>
+
+  <!-- Lightning bolt conflict symbol -->
+  <polygon points="440,195 455,195 448,215 460,215 435,245 442,220 430,220" fill="#f59e0b" opacity="0.8"/>
+
+  <text x="450" y="270" text-anchor="middle" fill="#94a3b8" font-size="11">用户利益 vs 公司利益</text>
+
+  <!-- Arrows -->
+  <line x1="270" y1="205" x2="325" y2="205" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowW)"/>
+  <line x1="575" y1="205" x2="630" y2="205" stroke="#ef4444" stroke-width="2" marker-end="url(#arrowR)" stroke-dasharray="6,3"/>
+
+  <!-- BOTTOM: 7 Scenarios spectrum -->
+  <rect x="40" y="345" width="820" height="250" rx="16" fill="#111827" stroke="#f59e0b" stroke-width="1.5" opacity="0.8"/>
+  <text x="450" y="375" text-anchor="middle" fill="#fbbf24" font-size="17" font-weight="bold">七种冲突场景（从轻到重）</text>
+
+  <!-- Gradient bar -->
+  <defs>
+    <linearGradient id="spectrum" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="50%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+  </defs>
+  <rect x="70" y="390" width="760" height="8" rx="4" fill="url(#spectrum)" opacity="0.6"/>
+
+  <!-- Scenario cards -->
+  <g>
+    <!-- S1 -->
+    <rect x="55" y="410" width="100" height="80" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.2"/>
+    <text x="105" y="433" text-anchor="middle" fill="#fbbf24" font-size="18" font-weight="bold">①</text>
+    <text x="105" y="452" text-anchor="middle" fill="#e2e8f0" font-size="10">推荐贵的</text>
+    <text x="105" y="465" text-anchor="middle" fill="#e2e8f0" font-size="10">赞助品</text>
+    <text x="105" y="483" text-anchor="middle" fill="#94a3b8" font-size="9">违反：相关性</text>
+  </g>
+
+  <g>
+    <!-- S2 -->
+    <rect x="165" y="410" width="100" height="80" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="1.2"/>
+    <text x="215" y="433" text-anchor="middle" fill="#f59e0b" font-size="18" font-weight="bold">②</text>
+    <text x="215" y="452" text-anchor="middle" fill="#e2e8f0" font-size="10">插入不需要</text>
+    <text x="215" y="465" text-anchor="middle" fill="#e2e8f0" font-size="10">的赞助推荐</text>
+    <text x="215" y="483" text-anchor="middle" fill="#94a3b8" font-size="9">违反：数量</text>
+  </g>
+
+  <g>
+    <!-- S3 -->
+    <rect x="275" y="410" width="100" height="80" rx="10" fill="#1e293b" stroke="#f97316" stroke-width="1.2"/>
+    <text x="325" y="433" text-anchor="middle" fill="#f97316" font-size="18" font-weight="bold">③</text>
+    <text x="325" y="452" text-anchor="middle" fill="#e2e8f0" font-size="10">偏颇美化</text>
+    <text x="325" y="465" text-anchor="middle" fill="#e2e8f0" font-size="10">赞助品</text>
+    <text x="325" y="483" text-anchor="middle" fill="#94a3b8" font-size="9">违反：质量</text>
+  </g>
+
+  <g>
+    <!-- S4 -->
+    <rect x="385" y="410" width="100" height="80" rx="10" fill="#1e293b" stroke="#ea580c" stroke-width="1.2"/>
+    <text x="435" y="433" text-anchor="middle" fill="#ea580c" font-size="18" font-weight="bold">④</text>
+    <text x="435" y="452" text-anchor="middle" fill="#e2e8f0" font-size="10">隐瞒赞助</text>
+    <text x="435" y="465" text-anchor="middle" fill="#e2e8f0" font-size="10">关系</text>
+    <text x="435" y="483" text-anchor="middle" fill="#94a3b8" font-size="9">违反：数量</text>
+  </g>
+
+  <g>
+    <!-- S5 -->
+    <rect x="495" y="410" width="100" height="80" rx="10" fill="#1e293b" stroke="#dc2626" stroke-width="1.2"/>
+    <text x="545" y="433" text-anchor="middle" fill="#dc2626" font-size="18" font-weight="bold">⑤</text>
+    <text x="545" y="452" text-anchor="middle" fill="#e2e8f0" font-size="10">隐藏赞助品</text>
+    <text x="545" y="465" text-anchor="middle" fill="#e2e8f0" font-size="10">缺陷</text>
+    <text x="545" y="483" text-anchor="middle" fill="#94a3b8" font-size="9">违反：质量+数量</text>
+  </g>
+
+  <g>
+    <!-- S6 -->
+    <rect x="605" y="410" width="100" height="80" rx="10" fill="#1e293b" stroke="#b91c1c" stroke-width="1.2"/>
+    <text x="655" y="433" text-anchor="middle" fill="#b91c1c" font-size="18" font-weight="bold">⑥</text>
+    <text x="655" y="452" text-anchor="middle" fill="#e2e8f0" font-size="10">转推赞助</text>
+    <text x="655" y="465" text-anchor="middle" fill="#e2e8f0" font-size="10">服务</text>
+    <text x="655" y="483" text-anchor="middle" fill="#94a3b8" font-size="9">违反：相关性</text>
+  </g>
+
+  <g>
+    <!-- S7 -->
+    <rect x="715" y="410" width="100" height="80" rx="10" fill="#2d0a0a" stroke="#991b1b" stroke-width="2"/>
+    <text x="765" y="433" text-anchor="middle" fill="#fca5a5" font-size="18" font-weight="bold">⑦</text>
+    <text x="765" y="452" text-anchor="middle" fill="#fecaca" font-size="10">推荐有害</text>
+    <text x="765" y="465" text-anchor="middle" fill="#fecaca" font-size="10">赞助服务</text>
+    <text x="765" y="483" text-anchor="middle" fill="#fca5a5" font-size="9">违反：全部准则</text>
+  </g>
+
+  <!-- Spectrum labels -->
+  <text x="105" y="510" text-anchor="middle" fill="#fbbf24" font-size="11">轻微 →</text>
+  <text x="765" y="510" text-anchor="middle" fill="#dc2626" font-size="11">← 严重</text>
+
+  <!-- Example callout -->
+  <rect x="200" y="525" width="500" height="50" rx="10" fill="#1e293b" stroke="#475569" stroke-width="1" stroke-dasharray="4,2"/>
+  <text x="450" y="546" text-anchor="middle" fill="#cbd5e1" font-size="11">💬 例：用户说"帮我订达美航空"→ LLM 却推荐赞助商美联航</text>
+  <text x="450" y="564" text-anchor="middle" fill="#94a3b8" font-size="10">场景②：违反数量准则 — 用户没问也不需要这条信息</text>
+
+  <!-- Key finding badge -->
+  <rect x="590" y="540" width="260" height="32" rx="8" fill="#7f1d1d" opacity="0.7"/>
+  <text x="720" y="561" text-anchor="middle" fill="#fca5a5" font-size="11" font-weight="bold">⚠ 23个LLM中绝大多数会妥协</text>
+</svg>

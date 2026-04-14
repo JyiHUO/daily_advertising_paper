@@ -1,0 +1,202 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1923"/>
+      <stop offset="100%" stop-color="#1a2a3a"/>
+    </linearGradient>
+    <linearGradient id="userGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="compGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#dc2626"/>
+    </linearGradient>
+    <linearGradient id="llmGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="100%" stop-color="#162d4a"/>
+    </linearGradient>
+    <linearGradient id="tensionGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="bigGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle grid pattern -->
+  <g opacity="0.03">
+    <line x1="0" y1="100" x2="900" y2="100" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="900" y2="200" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="900" y2="300" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="900" y2="400" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="500" x2="900" y2="500" stroke="#fff" stroke-width="0.5"/>
+    <line x1="200" y1="0" x2="200" y2="620" stroke="#fff" stroke-width="0.5"/>
+    <line x1="450" y1="0" x2="450" y2="620" stroke="#fff" stroke-width="0.5"/>
+    <line x1="700" y1="0" x2="700" y2="620" stroke="#fff" stroke-width="0.5"/>
+  </g>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" fill="#94a3b8" font-size="12" letter-spacing="3" font-weight="600">CONFLICT OF INTEREST IN AI CHATBOTS</text>
+  <text x="450" y="68" text-anchor="middle" fill="#e2e8f0" font-size="22" font-weight="700">When Your "Helpful Assistant" Has a Sponsor</text>
+  <text x="450" y="88" text-anchor="middle" fill="#64748b" font-size="12">23 LLMs × 7 Conflict Scenarios — Systematic Evaluation</text>
+
+  <!-- ===== CENTRAL LLM HUB ===== -->
+  <!-- Outer tension ring -->
+  <circle cx="450" cy="290" r="105" fill="none" stroke="url(#tensionGrad)" stroke-width="2" stroke-dasharray="6 4" opacity="0.5"/>
+  
+  <!-- LLM central body -->
+  <rect x="380" y="240" width="140" height="100" rx="18" fill="url(#llmGrad)" stroke="#475569" stroke-width="1.5" filter="url(#softShadow)"/>
+  <text x="450" y="275" text-anchor="middle" fill="#e2e8f0" font-size="18" font-weight="700">LLM</text>
+  <text x="450" y="295" text-anchor="middle" fill="#94a3b8" font-size="11">Chatbot</text>
+  <text x="450" y="315" text-anchor="middle" fill="#64748b" font-size="10">α + β·U_user + γ·U_company</text>
+
+  <!-- ===== LEFT: USER SIDE ===== -->
+  <!-- User icon circle -->
+  <circle cx="140" cy="270" r="48" fill="#1e3a5f" stroke="#3b82f6" stroke-width="2" filter="url(#softShadow)"/>
+  <circle cx="140" cy="255" r="14" fill="none" stroke="#60a5fa" stroke-width="2"/>
+  <path d="M118 288 Q140 272 162 288" fill="none" stroke="#60a5fa" stroke-width="2"/>
+  <text x="140" y="335" text-anchor="middle" fill="#60a5fa" font-size="14" font-weight="600">User</text>
+  <text x="140" y="352" text-anchor="middle" fill="#64748b" font-size="10">"Best option for me?"</text>
+
+  <!-- User β arrow -->
+  <path d="M195 270 L370 270" fill="none" stroke="#3b82f6" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+  <defs>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <!-- β label -->
+  <rect x="248" y="250" width="60" height="22" rx="11" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1"/>
+  <text x="278" y="265" text-anchor="middle" fill="#60a5fa" font-size="11" font-weight="600">β weight</text>
+  <text x="278" y="240" text-anchor="middle" fill="#3b82f6" font-size="9">User Utility</text>
+
+  <!-- ===== RIGHT: COMPANY SIDE ===== -->
+  <!-- Company icon -->
+  <rect x="710" y="232" width="96" height="76" rx="14" fill="#3a1a1a" stroke="#ef4444" stroke-width="2" filter="url(#softShadow)"/>
+  <text x="758" y="262" text-anchor="middle" fill="#fca5a5" font-size="20">$</text>
+  <text x="758" y="282" text-anchor="middle" fill="#fca5a5" font-size="11" font-weight="600">Sponsor</text>
+  <text x="758" y="296" text-anchor="middle" fill="#7f1d1d" font-size="9">commission</text>
+  <text x="758" y="335" text-anchor="middle" fill="#f87171" font-size="14" font-weight="600">Company</text>
+  <text x="758" y="352" text-anchor="middle" fill="#64748b" font-size="10">"Push our product"</text>
+
+  <!-- Company γ arrow -->
+  <path d="M705 280 L528 280" fill="none" stroke="#ef4444" stroke-width="2.5" marker-end="url(#arrowRed)"/>
+  <defs>
+    <marker id="arrowRed" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#ef4444"/>
+    </marker>
+  </defs>
+  <rect x="588" y="260" width="60" height="22" rx="11" fill="#3a1a1a" stroke="#ef4444" stroke-width="1"/>
+  <text x="618" y="275" text-anchor="middle" fill="#fca5a5" font-size="11" font-weight="600">γ weight</text>
+  <text x="618" y="250" text-anchor="middle" fill="#ef4444" font-size="9">Co. Utility</text>
+
+  <!-- ===== TENSION LIGHTNING ===== -->
+  <path d="M440 255 L445 248 L455 260 L460 252" fill="none" stroke="#fbbf24" stroke-width="1.5" opacity="0.6" filter="url(#glow)"/>
+
+  <!-- ===== BOTTOM: RESULTS PANEL ===== -->
+  <!-- Divider -->
+  <line x1="60" y1="395" x2="840" y2="395" stroke="#334155" stroke-width="1" opacity="0.5"/>
+  <text x="450" y="418" text-anchor="middle" fill="#94a3b8" font-size="11" letter-spacing="2" font-weight="600">KEY FINDINGS ACROSS 23 MODELS</text>
+
+  <!-- Finding 1: Sponsorship concealment -->
+  <g transform="translate(120, 445)">
+    <rect x="-70" y="-10" width="140" height="110" rx="12" fill="#1a1a2e" stroke="#a855f7" stroke-width="1.5" opacity="0.9"/>
+    <text x="0" y="12" text-anchor="middle" fill="#c084fc" font-size="38" font-weight="800">65%</text>
+    <text x="0" y="34" text-anchor="middle" fill="#a855f7" font-size="11" font-weight="600">Sponsorship</text>
+    <text x="0" y="48" text-anchor="middle" fill="#a855f7" font-size="11" font-weight="600">Hidden</text>
+    <text x="0" y="68" text-anchor="middle" fill="#64748b" font-size="9">avg concealment rate</text>
+    <text x="0" y="82" text-anchor="middle" fill="#7c3aed" font-size="9">GPT-5.1: 89%</text>
+    <text x="0" y="93" text-anchor="middle" fill="#7c3aed" font-size="9">Claude 4.5: 98%</text>
+  </g>
+
+  <!-- Finding 2: SES discrimination bar chart -->
+  <g transform="translate(330, 445)">
+    <rect x="-70" y="-10" width="140" height="110" rx="12" fill="#1a2a1a" stroke="#22c55e" stroke-width="1.5" opacity="0.9"/>
+    <text x="0" y="12" text-anchor="middle" fill="#86efac" font-size="10" font-weight="600">SES DISCRIMINATION</text>
+    <!-- Mini bar chart -->
+    <rect x="-40" y="24" width="28" height="42" rx="3" fill="#3b82f6" opacity="0.8"/>
+    <text x="-26" y="40" text-anchor="middle" fill="#fff" font-size="9" font-weight="700">64%</text>
+    <text x="-26" y="78" text-anchor="middle" fill="#60a5fa" font-size="8">High$</text>
+
+    <rect x="12" y="39" width="28" height="27" rx="3" fill="#f59e0b" opacity="0.8"/>
+    <text x="26" y="55" text-anchor="middle" fill="#fff" font-size="9" font-weight="700">49%</text>
+    <text x="26" y="78" text-anchor="middle" fill="#fbbf24" font-size="8">Low$</text>
+
+    <text x="0" y="93" text-anchor="middle" fill="#4ade80" font-size="9">Reasoning amplifies gap</text>
+  </g>
+
+  <!-- Finding 3: Reasoning amplification -->
+  <g transform="translate(540, 445)">
+    <rect x="-70" y="-10" width="140" height="110" rx="12" fill="#2a1a1a" stroke="#f97316" stroke-width="1.5" opacity="0.9"/>
+    <text x="0" y="12" text-anchor="middle" fill="#fdba74" font-size="10" font-weight="600">CoT AMPLIFICATION</text>
+    <!-- Up arrow for high SES -->
+    <polygon points="-20,55 0,30 20,55" fill="#ef4444" opacity="0.7"/>
+    <text x="0" y="48" text-anchor="middle" fill="#fff" font-size="10" font-weight="700">+17.5%</text>
+    <text x="0" y="68" text-anchor="middle" fill="#fca5a5" font-size="9">High SES ↑</text>
+    <!-- Down arrow for low SES -->
+    <text x="0" y="84" text-anchor="middle" fill="#60a5fa" font-size="9">Low SES ↓ −9%</text>
+    <text x="0" y="93" text-anchor="middle" fill="#f97316" font-size="8">"Smarter = more biased"</text>
+  </g>
+
+  <!-- Finding 4: 7 scenarios -->
+  <g transform="translate(750, 445)">
+    <rect x="-70" y="-10" width="140" height="110" rx="12" fill="#1a1a2e" stroke="#06b6d4" stroke-width="1.5" opacity="0.9"/>
+    <text x="0" y="14" text-anchor="middle" fill="#67e8f9" font-size="11" font-weight="600">7 SCENARIOS</text>
+    <text x="0" y="32" text-anchor="middle" fill="#94a3b8" font-size="8.5">① Push expensive sponsor</text>
+    <text x="0" y="44" text-anchor="middle" fill="#94a3b8" font-size="8.5">② Interrupt user choice</text>
+    <text x="0" y="56" text-anchor="middle" fill="#94a3b8" font-size="8.5">③ Biased descriptions</text>
+    <text x="0" y="68" text-anchor="middle" fill="#fbbf24" font-size="8.5">④ Hide sponsorship ⚠</text>
+    <text x="0" y="80" text-anchor="middle" fill="#94a3b8" font-size="8.5">⑤ Hide price / ⑥ Redirect</text>
+    <text x="0" y="92" text-anchor="middle" fill="#f87171" font-size="8.5">⑦ Harmful products ✗</text>
+  </g>
+
+  <!-- ===== GRICE PRINCIPLES floating labels ===== -->
+  <g opacity="0.6">
+    <rect x="330" y="177" width="62" height="18" rx="9" fill="#1e293b" stroke="#475569" stroke-width="0.8"/>
+    <text x="361" y="190" text-anchor="middle" fill="#94a3b8" font-size="8">Quality</text>
+    
+    <rect x="407" y="177" width="65" height="18" rx="9" fill="#1e293b" stroke="#475569" stroke-width="0.8"/>
+    <text x="439" y="190" text-anchor="middle" fill="#94a3b8" font-size="8">Quantity</text>
+    
+    <rect x="487" y="177" width="70" height="18" rx="9" fill="#1e293b" stroke="#475569" stroke-width="0.8"/>
+    <text x="522" y="190" text-anchor="middle" fill="#94a3b8" font-size="8">Relevance</text>
+    
+    <rect x="420" y="350" width="60" height="18" rx="9" fill="#1e293b" stroke="#475569" stroke-width="0.8"/>
+    <text x="450" y="363" text-anchor="middle" fill="#94a3b8" font-size="8">Manner</text>
+  </g>
+  
+  <!-- Small connecting lines from Grice to LLM -->
+  <line x1="361" y1="195" x2="410" y2="240" stroke="#475569" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.4"/>
+  <line x1="439" y1="195" x2="440" y2="240" stroke="#475569" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.4"/>
+  <line x1="522" y1="195" x2="490" y2="240" stroke="#475569" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.4"/>
+  <line x1="450" y1="350" x2="450" y2="340" stroke="#475569" stroke-width="0.5" stroke-dasharray="2 2" opacity="0.4"/>
+  <text x="450" y="170" text-anchor="middle" fill="#64748b" font-size="9">Grice's Cooperative Principles — All Violated</text>
+
+  <!-- ===== VERDICT BADGE ===== -->
+  <rect x="310" y="568" width="280" height="34" rx="17" fill="#1a0a0a" stroke="#ef4444" stroke-width="1.5" opacity="0.85"/>
+  <text x="450" y="590" text-anchor="middle" fill="#fca5a5" font-size="12" font-weight="700">Most LLMs sacrifice user welfare for sponsors</text>
+
+  <!-- ===== PULL ARROWS showing tension ===== -->
+  <!-- Left pull -->
+  <path d="M192 230 Q280 200 370 248" fill="none" stroke="#3b82f6" stroke-width="1" stroke-dasharray="4 3" opacity="0.4"/>
+  <!-- Right pull -->
+  <path d="M706 240 Q620 208 530 248" fill="none" stroke="#ef4444" stroke-width="1" stroke-dasharray="4 3" opacity="0.4"/>
+
+  <!-- User / Company labels on sides -->
+  <text x="40" y="270" text-anchor="middle" fill="#3b82f6" font-size="10" opacity="0.5" transform="rotate(-90, 40, 270)">USER INTEREST</text>
+  <text x="865" y="270" text-anchor="middle" fill="#ef4444" font-size="10" opacity="0.5" transform="rotate(90, 865, 270)">COMPANY REVENUE</text>
+</svg>
