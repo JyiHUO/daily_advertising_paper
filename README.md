@@ -4,18 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-04-13
+- **日期**：2026-04-14
 - **分类**：cs.IR + cs.AI + cs.LG + cs.CL
-- **候选论文数**：2
+- **候选论文数**：18
 - **必读论文**：
-  - IAT: Instance-As-Token Compression for Historical User Sequence Modeling in Industrial Recommender Systems
-  - Sustained Impact of Agentic Personalisation in Marketing: A Longitudinal Case Study
-- **日报路径**：[2026-04-13/daily_report.md](2026-04-13/daily_report.md)
+  - Credit-Budgeted ICPC-Style Coding: When Agents Must Pay for Every Decision
+  - From Attribution to Action: A Human-Centered Application of Activation Steering
+- **日报路径**：[2026-04-14/daily_report.md](2026-04-14/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-04-14 | cs.IR + cs.AI + cs.LG + cs.CL | 18 | 1 | Credit-Budgeted ICPC-Style Coding: When Agents Must Pay for Every Decision | [2026-04-14/daily_report.md](2026-04-14/daily_report.md) |
+|  |  |  | 2 | From Attribution to Action: A Human-Centered Application of Activation Steering |  |
 | 2026-04-13 | cs.IR + cs.AI + cs.LG + cs.CL | 2 | 1 | IAT: Instance-As-Token Compression for Historical User Sequence Modeling in Industrial Recommender Systems | [2026-04-13/daily_report.md](2026-04-13/daily_report.md) |
 |  |  |  | 2 | Sustained Impact of Agentic Personalisation in Marketing: A Longitudinal Case Study |  |
 | 2026-04-10 | cs.IR + cs.AI + cs.LG + cs.CL | 4 | 1 | Unified Supervision for Walmart's Sponsored Search Retrieval via Joint Semantic Relevance and Behavioral Engagement Modeling | [2026-04-10/daily_report.md](2026-04-10/daily_report.md) |

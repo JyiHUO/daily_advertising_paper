@@ -1,0 +1,115 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="geminiGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4285F4"/>
+      <stop offset="100%" stop-color="#2b5fc2"/>
+    </linearGradient>
+    <linearGradient id="gptGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#10a37f"/>
+      <stop offset="100%" stop-color="#0b7a5e"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bgGrad)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="48" text-anchor="middle" fill="#e8edf5" font-size="26" font-weight="bold">探索 vs 利用：资源约束下的策略分化</text>
+  <text x="450" y="76" text-anchor="middle" fill="#7b8db5" font-size="14">Credit-Budgeted ICPC — 广度优先 beats 精度优先</text>
+
+  <!-- Central budget icon -->
+  <circle cx="450" cy="195" r="42" fill="none" stroke="#ffd166" stroke-width="2.5" opacity="0.8"/>
+  <text x="450" y="188" text-anchor="middle" fill="#ffd166" font-size="13" font-weight="bold">固定预算</text>
+  <text x="450" y="208" text-anchor="middle" fill="#ffd166" font-size="22">💰</text>
+
+  <!-- LEFT: Gemini Explorer -->
+  <g filter="shadow">
+    <rect x="40" y="120" width="310" height="200" rx="16" fill="url(#geminiGrad)" opacity="0.92"/>
+  </g>
+  <text x="195" y="152" text-anchor="middle" fill="#fff" font-size="20" font-weight="bold">Gemini-2.5-pro</text>
+  <text x="195" y="174" text-anchor="middle" fill="#a8c8ff" font-size="14" font-weight="bold">🔍 激进探索策略</text>
+
+  <!-- Problem grid for Gemini: 8 attempted, 5 solved -->
+  <g transform="translate(65, 190)">
+    <rect x="0" y="0" width="32" height="32" rx="5" fill="#66bb6a" stroke="#fff" stroke-width="1.5"/><text x="16" y="22" text-anchor="middle" fill="#fff" font-size="12">✓</text>
+    <rect x="40" y="0" width="32" height="32" rx="5" fill="#66bb6a" stroke="#fff" stroke-width="1.5"/><text x="56" y="22" text-anchor="middle" fill="#fff" font-size="12">✓</text>
+    <rect x="80" y="0" width="32" height="32" rx="5" fill="#ef5350" stroke="#fff" stroke-width="1.5"/><text x="96" y="22" text-anchor="middle" fill="#fff" font-size="12">✗</text>
+    <rect x="120" y="0" width="32" height="32" rx="5" fill="#66bb6a" stroke="#fff" stroke-width="1.5"/><text x="136" y="22" text-anchor="middle" fill="#fff" font-size="12">✓</text>
+    <rect x="160" y="0" width="32" height="32" rx="5" fill="#ef5350" stroke="#fff" stroke-width="1.5"/><text x="176" y="22" text-anchor="middle" fill="#fff" font-size="12">✗</text>
+    <rect x="200" y="0" width="32" height="32" rx="5" fill="#66bb6a" stroke="#fff" stroke-width="1.5"/><text x="216" y="22" text-anchor="middle" fill="#fff" font-size="12">✓</text>
+    <rect x="0" y="40" width="32" height="32" rx="5" fill="#66bb6a" stroke="#fff" stroke-width="1.5"/><text x="16" y="62" text-anchor="middle" fill="#fff" font-size="12">✓</text>
+    <rect x="40" y="40" width="32" height="32" rx="5" fill="#ef5350" stroke="#fff" stroke-width="1.5"/><text x="56" y="62" text-anchor="middle" fill="#fff" font-size="12">✗</text>
+  </g>
+  <text x="195" y="298" text-anchor="middle" fill="#c8dfff" font-size="13">尝试 8 题 · 解出 5 题</text>
+
+  <!-- RIGHT: GPT Exploiter -->
+  <g filter="shadow">
+    <rect x="550" y="120" width="310" height="200" rx="16" fill="url(#gptGrad)" opacity="0.92"/>
+  </g>
+  <text x="705" y="152" text-anchor="middle" fill="#fff" font-size="20" font-weight="bold">GPT-5-Codex</text>
+  <text x="705" y="174" text-anchor="middle" fill="#a8ffe0" font-size="14" font-weight="bold">🎯 保守利用策略</text>
+
+  <!-- Problem grid for GPT: 4 attempted, 4 solved -->
+  <g transform="translate(615, 195)">
+    <rect x="0" y="0" width="38" height="38" rx="6" fill="#66bb6a" stroke="#fff" stroke-width="2"/><text x="19" y="25" text-anchor="middle" fill="#fff" font-size="14">✓</text>
+    <rect x="48" y="0" width="38" height="38" rx="6" fill="#66bb6a" stroke="#fff" stroke-width="2"/><text x="67" y="25" text-anchor="middle" fill="#fff" font-size="14">✓</text>
+    <rect x="0" y="48" width="38" height="38" rx="6" fill="#66bb6a" stroke="#fff" stroke-width="2"/><text x="19" y="73" text-anchor="middle" fill="#fff" font-size="14">✓</text>
+    <rect x="48" y="48" width="38" height="38" rx="6" fill="#66bb6a" stroke="#fff" stroke-width="2"/><text x="67" y="73" text-anchor="middle" fill="#fff" font-size="14">✓</text>
+  </g>
+  <text x="705" y="298" text-anchor="middle" fill="#c8ffec" font-size="13">尝试 4 题 · 解出 4 题</text>
+
+  <!-- Arrows from budget to both -->
+  <path d="M408,195 L355,195" stroke="#ffd166" stroke-width="2" fill="none" marker-end="url(#arrowY)"/>
+  <path d="M492,195 L545,195" stroke="#ffd166" stroke-width="2" fill="none" marker-end="url(#arrowY)"/>
+  <defs>
+    <marker id="arrowY" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#ffd166"/>
+    </marker>
+  </defs>
+
+  <!-- VS badge -->
+  <circle cx="450" cy="280" r="24" fill="#1a2744" stroke="#ffd166" stroke-width="2"/>
+  <text x="450" y="287" text-anchor="middle" fill="#ffd166" font-size="18" font-weight="bold">VS</text>
+
+  <!-- Bottom comparison bar -->
+  <g transform="translate(0, 370)">
+    <!-- Score comparison -->
+    <rect x="60" y="0" width="780" height="105" rx="14" fill="#152040" stroke="#334466" stroke-width="1.5"/>
+    
+    <text x="450" y="28" text-anchor="middle" fill="#8899bb" font-size="14" font-weight="bold">总分对比</text>
+
+    <!-- Gemini bar -->
+    <rect x="120" y="42" width="380" height="36" rx="8" fill="url(#geminiGrad)" filter="glow"/>
+    <text x="130" y="66" fill="#fff" font-size="16" font-weight="bold">Gemini · 15分</text>
+    <text x="485" y="66" fill="#a8c8ff" font-size="13">胜率 70% 🏆</text>
+
+    <!-- GPT bar -->
+    <rect x="120" y="42" width="0" height="36" rx="8"/>
+    <rect x="540" y="42" width="240" height="36" rx="8" fill="url(#gptGrad)" filter="glow"/>
+    <text x="550" y="66" fill="#fff" font-size="16" font-weight="bold">GPT · 12分</text>
+    <text x="766" y="66" fill="#a8ffe0" font-size="13">30%</text>
+  </g>
+
+  <!-- Bottom insight box -->
+  <g transform="translate(0, 490)">
+    <rect x="110" y="0" width="680" height="90" rx="14" fill="#1e2d50" stroke="#ffd166" stroke-width="2" stroke-dasharray="6,3"/>
+    <text x="450" y="30" text-anchor="middle" fill="#ffd166" font-size="18" font-weight="bold">💡 核心发现</text>
+    <text x="450" y="55" text-anchor="middle" fill="#c8d8f0" font-size="15">资源约束下，"广撒网"策略 &gt; "精耕细作"策略</text>
+    <text x="450" y="77" text-anchor="middle" fill="#8899bb" font-size="13">完美主义 = 战略负担 — 放弃的题目 = 放弃的分数</text>
+  </g>
+
+  <!-- Decorative corner labels -->
+  <text x="70" y="345" fill="#4285F4" font-size="12" opacity="0.7">首次提交准确率 较低</text>
+  <text x="630" y="345" fill="#10a37f" font-size="12" opacity="0.7">首次提交准确率 极高</text>
+</svg>

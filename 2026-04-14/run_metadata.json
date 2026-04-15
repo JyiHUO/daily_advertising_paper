@@ -1,0 +1,19 @@
+{
+  "date": "2026-04-14",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL"
+  ],
+  "candidate_count": 18,
+  "supplementary_count": 10,
+  "focus_titles": [
+    "Credit-Budgeted ICPC-Style Coding: When Agents Must Pay for Every Decision",
+    "From Attribution to Action: A Human-Centered Application of Activation Steering"
+  ],
+  "focus_status": {
+    "Credit-Budgeted ICPC-Style Coding: When Agents Must Pay for Every Decision": "completed",
+    "From Attribution to Action: A Human-Centered Application of Activation Steering": "completed"
+  }
+}

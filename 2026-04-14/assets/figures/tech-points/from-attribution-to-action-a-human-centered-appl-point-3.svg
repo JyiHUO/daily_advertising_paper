@@ -1,0 +1,110 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2e7d32"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f7fa"/>
+      <stop offset="100%" stop-color="#e8ecf1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bgGrad)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a237e">从"看归因" 到 "做实验"：四步因果调试工作流</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#666">Attribution → Action: 激活引导让专家亲手验证因果假设</text>
+
+  <!-- ========== 4 STEPS ========== -->
+  <!-- Step 1: Predict -->
+  <rect x="30" y="100" width="190" height="130" rx="14" fill="#e3f2fd" stroke="#1565c0" stroke-width="2"/>
+  <text x="125" y="128" text-anchor="middle" font-size="15" font-weight="bold" fill="#1565c0">① Predict</text>
+  <text x="125" y="152" text-anchor="middle" font-size="12" fill="#333">模型推理 + 计算</text>
+  <text x="125" y="170" text-anchor="middle" font-size="12" fill="#333">各组件归因分数</text>
+  <!-- mini banana icon -->
+  <text x="85" y="215" font-size="32">🍌</text>
+  <text x="130" y="210" font-size="11" fill="#c62828">→ "zebra" ?!</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="225" y1="165" x2="260" y2="165" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 2: Review -->
+  <rect x="265" y="100" width="190" height="130" rx="14" fill="#fff3e0" stroke="#e65100" stroke-width="2"/>
+  <text x="360" y="128" text-anchor="middle" font-size="15" font-weight="bold" fill="#e65100">② Review</text>
+  <text x="360" y="152" text-anchor="middle" font-size="12" fill="#333">按归因排序浏览</text>
+  <text x="360" y="170" text-anchor="middle" font-size="12" fill="#333">组件语义 &amp; 激活样例</text>
+  <rect x="290" y="185" width="140" height="30" rx="6" fill="#ffe0b2"/>
+  <text x="360" y="205" text-anchor="middle" font-size="11" fill="#bf360c">🔍 "文本组件" 归因最高</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="460" y1="165" x2="495" y2="165" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 3: Hypothesize -->
+  <rect x="500" y="100" width="190" height="130" rx="14" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2"/>
+  <text x="595" y="128" text-anchor="middle" font-size="15" font-weight="bold" fill="#7b1fa2">③ Hypothesize</text>
+  <text x="595" y="152" text-anchor="middle" font-size="12" fill="#333">形成因果假设</text>
+  <text x="595" y="175" text-anchor="middle" font-size="11" fill="#555" font-style="italic">"模型因识别叠加文字</text>
+  <text x="595" y="192" text-anchor="middle" font-size="11" fill="#555" font-style="italic">才误判为 zebra"</text>
+  <text x="595" y="218" text-anchor="middle" font-size="20">💡</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="695" y1="165" x2="710" y2="165" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 4: Test -->
+  <rect x="715" y="90" width="165" height="150" rx="14" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2.5"/>
+  <text x="797" y="118" text-anchor="middle" font-size="15" font-weight="bold" fill="#2e7d32">④ Test</text>
+  <text x="797" y="140" text-anchor="middle" font-size="12" fill="#333">激活引导验证!</text>
+  <!-- suppress icon -->
+  <rect x="730" y="152" width="135" height="24" rx="5" fill="#c8e6c9"/>
+  <text x="797" y="169" text-anchor="middle" font-size="11" fill="#1b5e20">🔽 抑制文本组件 m=-1</text>
+  <rect x="730" y="182" width="135" height="24" rx="5" fill="#c8e6c9"/>
+  <text x="797" y="199" text-anchor="middle" font-size="11" fill="#1b5e20">zebra 72% → 11% ✓</text>
+  <text x="797" y="228" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e7d32">因果验证通过!</text>
+
+  <!-- ========== KEY INSIGHT: Before vs After ========== -->
+  <text x="450" y="290" text-anchor="middle" font-size="18" font-weight="bold" fill="#37474f">核心发现：引导能力如何改变专家信任？</text>
+
+  <!-- Before box -->
+  <rect x="60" y="315" width="360" height="260" rx="16" fill="#fff" stroke="#e53935" stroke-width="2.5" opacity="0.95"/>
+  <rect x="60" y="315" width="360" height="44" rx="16" fill="#ffcdd2"/>
+  <rect x="60" y="345" width="360" height="14" fill="#ffcdd2"/>
+  <text x="240" y="344" text-anchor="middle" font-size="16" font-weight="bold" fill="#b71c1c">❌ 之前：只看归因</text>
+
+  <!-- Before content -->
+  <text x="240" y="390" text-anchor="middle" font-size="42">🤔</text>
+  <text x="240" y="435" text-anchor="middle" font-size="14" fill="#555">"归因排序看起来合理…"</text>
+  <text x="240" y="458" text-anchor="middle" font-size="14" fill="#555">"应该是对的吧？"</text>
+
+  <rect x="110" y="480" width="260" height="36" rx="8" fill="#ffebee"/>
+  <text x="240" y="503" text-anchor="middle" font-size="13" fill="#c62828">信任基于：看起来合理 (相关性)</text>
+
+  <rect x="110" y="528" width="260" height="30" rx="8" fill="#fce4ec"/>
+  <text x="240" y="548" text-anchor="middle" font-size="12" fill="#880e4f">⚠ 无法区分相关 vs 因果</text>
+
+  <!-- After box -->
+  <rect x="480" y="315" width="380" height="260" rx="16" fill="#fff" stroke="#2e7d32" stroke-width="2.5" opacity="0.95"/>
+  <rect x="480" y="315" width="380" height="44" rx="16" fill="#c8e6c9"/>
+  <rect x="480" y="345" width="380" height="14" fill="#c8e6c9"/>
+  <text x="670" y="344" text-anchor="middle" font-size="16" font-weight="bold" fill="#1b5e20">✅ 之后：做实验验证</text>
+
+  <!-- After content -->
+  <text x="670" y="390" text-anchor="middle" font-size="42">🔬</text>
+  <text x="670" y="435" text-anchor="middle" font-size="14" fill="#555">"关掉组件后预测真的变了！"</text>
+  <text x="670" y="458" text-anchor="middle" font-size="14" fill="#555">"这才是因果证据"</text>
+
+  <rect x="520" y="480" width="300" height="36" rx="8" fill="#e8f5e9"/>
+  <text x="670" y="503" text-anchor="middle" font-size="13" fill="#2e7d32">信任基于：实验验证 (因果干预)</text>
+
+  <rect x="520" y="528" width="300" height="30" rx="8" fill="#e8f5e9"/>
+  <text x="670" y="548" text-anchor="middle" font-size="12" fill="#1b5e20">🏆 8/8 成功 · 6/8 信任转变 · 7/8 偏好抑制</text>
+
+  <!-- Big arrow between -->
+  <polygon points="435,440 465,425 465,432 465,432 465,448 465,455" fill="#2e7d32"/>
+  <line x1="437" y1="440" x2="475" y2="440" stroke="#2e7d32" stroke-width="4" marker-end="url(#arrowGreen)"/>
+  <text x="456" y="415" text-anchor="middle" font-size="11" fill="#2e7d32" font-weight="bold">激活</text>
+  <text x="456" y="430" text-anchor="middle" font-size="11" fill="#2e7d32" font-weight="bold">引导</text>
+</svg>

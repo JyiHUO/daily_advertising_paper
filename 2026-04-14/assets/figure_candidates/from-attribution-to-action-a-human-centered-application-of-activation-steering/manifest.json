@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-14/downloaded_pdfs/from-attribution-to-action-a-human-centered-application-of-activation-steering.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-14/assets/figure_candidates/from-attribution-to-action-a-human-centered-application-of-activation-steering",
+  "candidates": [
+    {
+      "id": "page-4-drawing-caption-12",
+      "page_index": 4,
+      "caption": "Figure 3. A process diagram of the interview structure: Pre-questionnaire, two debugging tasks each with attribution-only phase (Phase 1) and steering phase (Phase 2), and post-questionnaire.",
+      "clip": [
+        89.72438049316406,
+        318.4750671386719,
+        522.6418151855469,
+        410.9830017089844
+      ],
+      "clip_area": 40048.297722870484,
+      "page_area": 484704.0,
+      "text_density": 0.08746577376043282,
+      "kind": "drawing_cluster_with_caption",
+      "score": 29.997034660183704,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-14/assets/figure_candidates/from-attribution-to-action-a-human-centered-application-of-activation-steering/01-p5-drawing_cluster_with_caption.png",
+      "filename": "01-p5-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-4-embedded-0-0",
+      "page_index": 4,
+      "caption": "Figure 3. A process diagram of the interview structure: Pre-questionnaire, two debugging tasks each with attribution-only phase (Phase 1) and steering phase (Phase 2), and post-questionnaire.",
+      "clip": [
+        71.25199890136719,
+        59.99302673339844,
+        540.7269897460938,
+        280.7230224609375
+      ],
+      "clip_area": 103627.21272334293,
+      "page_area": 484704.0,
+      "text_density": 0.00528268094571727,
+      "kind": "embedded_image_with_caption",
+      "xref": 378,
+      "score": 24.15141347470381,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-14/assets/figure_candidates/from-attribution-to-action-a-human-centered-application-of-activation-steering/02-p5-embedded_image_with_caption.png",
+      "filename": "02-p5-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-4-block-12",
+      "page_index": 4,
+      "caption": "Figure 3. A process diagram of the interview structure: Pre-questionnaire, two debugging tasks each with attribution-only phase (Phase 1) and steering phase (Phase 2), and post-questionnaire.",
+      "clip": [
+        61.25199890136719,
+        53.99302673339844,
+        550.7269897460938,
+        286.7230224609375
+      ],
+      "clip_area": 113915.51252803043,
+      "page_area": 484704.0,
+      "text_density": 0.030791244249269597,
+      "kind": "image_block_with_caption",
+      "score": 24.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-14/assets/figure_candidates/from-attribution-to-action-a-human-centered-application-of-activation-steering/03-p5-image_block_with_caption.png",
+      "filename": "03-p5-image_block_with_caption.png"
+    },
+    {
+      "id": "page-3-block-1",
+      "page_index": 3,
+      "caption": "3.2. From Attribution to Action: Workflow",
+      "clip": [
+        27.9,
+        18.0,
+        289.560205078125,
+        195.90597534179688
+      ],
+      "clip_area": 46550.91399255843,
+      "page_area": 484704.0,
+      "text_density": 0.5945277325017221,
+      "kind": "captioned_figure",
+      "score": 14.517232377695095,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-14/assets/figure_candidates/from-attribution-to-action-a-human-centered-application-of-activation-steering/04-p4-captioned_figure.png",
+      "filename": "04-p4-captioned_figure.png"
+    },
+    {
+      "id": "page-2-drawing-cluster-0",
+      "page_index": 2,
+      "caption": "第 3 页矢量图主图候选",
+      "clip": [
+        67.25199890136719,
+        58.001739501953125,
+        544.7434692382812,
+        208.34197998046875
+      ],
+      "clip_area": 71786.18247689167,
+      "page_area": 484704.0,
+      "text_density": 0.021058800340779754,
+      "kind": "drawing_cluster",
+      "score": 10.79762424974324,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-14/assets/figure_candidates/from-attribution-to-action-a-human-centered-application-of-activation-steering/05-p3-drawing_cluster.png",
+      "filename": "05-p3-drawing_cluster.png"
+    },
+    {
+      "id": "page-5-drawing-cluster-0",
+      "page_index": 5,
+      "caption": "第 6 页矢量图主图候选",
+      "clip": [
+        91.9990005493164,
+        57.99378967285156,
+        520.0010375976562,
+        287.9310302734375
+      ],
+      "clip_area": 98413.60737032501,
+      "page_area": 484704.0,
+      "text_density": 0.013769175164095003,
+      "kind": "drawing_cluster",
+      "score": 9.093484526336944,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-14/assets/figure_candidates/from-attribution-to-action-a-human-centered-application-of-activation-steering/06-p6-drawing_cluster.png",
+      "filename": "06-p6-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-14/assets/figure_candidates/from-attribution-to-action-a-human-centered-application-of-activation-steering/contact-sheet.svg"
+}

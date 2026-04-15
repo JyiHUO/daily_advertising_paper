@@ -1,0 +1,129 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#d94040"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2d8f2d"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8f9fc"/>
+      <stop offset="100%" stop-color="#eef1f7"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="520" fill="url(#bgGrad)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a1a2e">激活引导 (Activation Steering)：从归因到因果干预</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#666">给模型内部每个组件装一个"滑块"，拉动它验证因果关系</text>
+
+  <!-- ===== LEFT: Before (Original) ===== -->
+  <rect x="30" y="85" width="380" height="195" rx="14" fill="#fff" stroke="#ccc" stroke-width="1.5"/>
+  <rect x="30" y="85" width="380" height="36" rx="14" fill="#e74c3c" opacity="0.12"/>
+  <text x="220" y="109" text-anchor="middle" font-size="15" font-weight="bold" fill="#c0392b">原始预测（未干预）</text>
+
+  <!-- Image placeholder -->
+  <rect x="55" y="135" width="90" height="90" rx="10" fill="#dce6f5" stroke="#a0b4d0" stroke-width="1"/>
+  <text x="100" y="175" text-anchor="middle" font-size="28">👩‍⚕️</text>
+  <text x="100" y="200" text-anchor="middle" font-size="11" fill="#555">输入图片</text>
+
+  <!-- Model box -->
+  <rect x="175" y="135" width="100" height="90" rx="8" fill="#f0e6ff" stroke="#9b59b6" stroke-width="1.5"/>
+  <text x="225" y="165" text-anchor="middle" font-size="13" font-weight="bold" fill="#7d3c98">CLIP</text>
+  <text x="225" y="182" text-anchor="middle" font-size="11" fill="#7d3c98">视觉模型</text>
+
+  <!-- Component #3177 highlighted -->
+  <rect x="188" y="193" width="74" height="22" rx="5" fill="#f9e0e0" stroke="#e74c3c" stroke-width="1.2"/>
+  <text x="225" y="208" text-anchor="middle" font-size="10" font-weight="bold" fill="#c0392b">#3177 女性</text>
+
+  <!-- Arrow to result -->
+  <line x1="275" y1="180" x2="310" y2="180" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Result -->
+  <rect x="315" y="138" width="80" height="84" rx="10" fill="#fdecea" stroke="#e74c3c" stroke-width="2"/>
+  <text x="355" y="165" text-anchor="middle" font-size="13" font-weight="bold" fill="#c0392b">Nurse</text>
+  <text x="355" y="185" text-anchor="middle" font-size="22" font-weight="bold" fill="#e74c3c">53%</text>
+  <text x="355" y="210" text-anchor="middle" font-size="11" fill="#888">偏见预测</text>
+
+  <!-- Arrow input to model -->
+  <line x1="145" y1="180" x2="172" y2="180" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ===== MIDDLE: The Slider Mechanism ===== -->
+  <rect x="265" y="300" width="370" height="195" rx="16" fill="#fff" stroke="#3498db" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="450" y="325" text-anchor="middle" font-size="15" font-weight="bold" fill="#2c3e50">核心机制：乘法缩放</text>
+
+  <!-- Formula -->
+  <rect x="300" y="340" width="300" height="44" rx="8" fill="#eaf4fc" stroke="#3498db" stroke-width="1"/>
+  <text x="450" y="368" text-anchor="middle" font-size="16" font-weight="bold" fill="#2471a3">a' = a × (1 + m)</text>
+
+  <!-- Slider visual -->
+  <!-- Track -->
+  <line x1="310" y1="420" x2="590" y2="420" stroke="#bbb" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Tick marks and labels -->
+  <line x1="310" y1="410" x2="310" y2="430" stroke="#888" stroke-width="2"/>
+  <text x="310" y="450" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">m = -1</text>
+  <text x="310" y="465" text-anchor="middle" font-size="10" fill="#c0392b">完全抑制</text>
+
+  <line x1="450" y1="410" x2="450" y2="430" stroke="#888" stroke-width="2"/>
+  <text x="450" y="450" text-anchor="middle" font-size="12" fill="#666">m = 0</text>
+  <text x="450" y="465" text-anchor="middle" font-size="10" fill="#666">不变</text>
+
+  <line x1="590" y1="410" x2="590" y2="430" stroke="#888" stroke-width="2"/>
+  <text x="590" y="450" text-anchor="middle" font-size="12" font-weight="bold" fill="#2d8f2d">m = +1</text>
+  <text x="590" y="465" text-anchor="middle" font-size="10" fill="#2d8f2d">激活翻倍</text>
+
+  <!-- Slider knob at -1 position -->
+  <circle cx="310" cy="420" r="12" fill="#e74c3c" stroke="#fff" stroke-width="3"/>
+  <text x="310" y="398" text-anchor="middle" font-size="11" font-weight="bold" fill="#e74c3c">▼ 拉到这里</text>
+
+  <!-- ===== RIGHT: After (Intervened) ===== -->
+  <rect x="490" y="85" width="380" height="195" rx="14" fill="#fff" stroke="#ccc" stroke-width="1.5"/>
+  <rect x="490" y="85" width="380" height="36" rx="14" fill="#27ae60" opacity="0.12"/>
+  <text x="680" y="109" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e8449">干预后预测（#3177 被抑制）</text>
+
+  <!-- Image placeholder -->
+  <rect x="515" y="135" width="90" height="90" rx="10" fill="#dce6f5" stroke="#a0b4d0" stroke-width="1"/>
+  <text x="560" y="175" text-anchor="middle" font-size="28">👩‍⚕️</text>
+  <text x="560" y="200" text-anchor="middle" font-size="11" fill="#555">同一张图片</text>
+
+  <!-- Model box -->
+  <rect x="635" y="135" width="100" height="90" rx="8" fill="#f0e6ff" stroke="#9b59b6" stroke-width="1.5"/>
+  <text x="685" y="165" text-anchor="middle" font-size="13" font-weight="bold" fill="#7d3c98">CLIP</text>
+  <text x="685" y="182" text-anchor="middle" font-size="11" fill="#7d3c98">视觉模型</text>
+
+  <!-- Component #3177 crossed out -->
+  <rect x="648" y="193" width="74" height="22" rx="5" fill="#e0e0e0" stroke="#999" stroke-width="1.2"/>
+  <text x="685" y="208" text-anchor="middle" font-size="10" fill="#999" text-decoration="line-through">#3177 女性</text>
+  <line x1="650" y1="195" x2="720" y2="213" stroke="#e74c3c" stroke-width="2.5"/>
+  <line x1="720" y1="195" x2="650" y2="213" stroke="#e74c3c" stroke-width="2.5"/>
+
+  <!-- Arrow to result -->
+  <line x1="735" y1="180" x2="770" y2="180" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Result -->
+  <rect x="775" y="138" width="80" height="84" rx="10" fill="#e8f8f0" stroke="#27ae60" stroke-width="2"/>
+  <text x="815" y="165" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e8449">Doctor</text>
+  <text x="815" y="185" text-anchor="middle" font-size="22" font-weight="bold" fill="#27ae60">85%</text>
+  <text x="815" y="210" text-anchor="middle" font-size="11" fill="#888">无偏预测</text>
+
+  <!-- Arrow input to model -->
+  <line x1="605" y1="180" x2="632" y2="180" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ===== Big comparison arrow ===== -->
+  <path d="M 410 200 C 440 250, 460 250, 490 200" stroke="#e67e22" stroke-width="3" fill="none" marker-end="url(#arrow)" stroke-dasharray="6,3"/>
+  <text x="450" y="262" text-anchor="middle" font-size="13" font-weight="bold" fill="#e67e22">抑制 #3177</text>
+  <text x="450" y="278" text-anchor="middle" font-size="11" fill="#e67e22">→ 预测剧变</text>
+
+  <!-- Connecting line from slider to intervention -->
+  <path d="M 310 398 Q 280 350, 310 310 Q 340 270, 450 262" stroke="#3498db" stroke-width="1.5" fill="none" stroke-dasharray="4,3"/>
+
+  <!-- Conclusion label -->
+  <rect x="190" y="490" width="520" height="28" rx="8" fill="#2c3e50"/>
+  <text x="450" y="510" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">✅ 结论：#3177"女性"组件 因果性地 驱动了性别偏见预测</text>
+</svg>

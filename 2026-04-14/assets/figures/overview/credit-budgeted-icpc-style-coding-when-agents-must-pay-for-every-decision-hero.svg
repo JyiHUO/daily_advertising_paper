@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" width="900" height="620">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0e27"/>
+      <stop offset="100%" stop-color="#1a1040"/>
+    </linearGradient>
+    <linearGradient id="creditGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f7b733"/>
+      <stop offset="100%" stop-color="#fc4a1a"/>
+    </linearGradient>
+    <linearGradient id="geminiGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4facfe"/>
+      <stop offset="100%" stop-color="#00f2fe"/>
+    </linearGradient>
+    <linearGradient id="gptGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a18cd1"/>
+      <stop offset="100%" stop-color="#fbc2eb"/>
+    </linearGradient>
+    <linearGradient id="poolGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f7b733" stop-opacity="0.15"/>
+      <stop offset="50%" stop-color="#fc4a1a" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#f7b733" stop-opacity="0.15"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <filter id="coinGlow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="coinRadial" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#ffe066"/>
+      <stop offset="70%" stop-color="#f7b733"/>
+      <stop offset="100%" stop-color="#e8930c"/>
+    </radialGradient>
+    <linearGradient id="drainGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fc4a1a" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#fc4a1a" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bgGrad)" rx="12"/>
+
+  <!-- Title area -->
+  <text x="450" y="42" text-anchor="middle" font-family="Georgia, serif" font-size="20" fill="#f7b733" font-weight="bold" letter-spacing="1">Credit-Budgeted ICPC-Style Coding</text>
+  <text x="450" y="64" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#8899bb" letter-spacing="0.5">When Agents Must Pay for Every Decision — USACOArena</text>
+
+  <!-- ====== CENTRAL CREDIT POOL ====== -->
+  <ellipse cx="450" cy="240" rx="120" ry="55" fill="url(#poolGrad)" stroke="#f7b73380" stroke-width="1.5"/>
+  <!-- Coin icon -->
+  <g filter="url(#coinGlow)" transform="translate(450,218)">
+    <circle cx="0" cy="0" r="30" fill="url(#coinRadial)" stroke="#e8930c" stroke-width="2"/>
+    <text x="0" y="7" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#7a4a00" font-weight="bold">C</text>
+  </g>
+  <text x="450" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#f7b733" font-weight="bold">CREDIT POOL</text>
+  <text x="450" y="286" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#cc9940">Budget = 20M credits</text>
+
+  <!-- Three cost drains flowing into pool -->
+  <!-- Token Cost (left) -->
+  <g filter="url(#softShadow)">
+    <rect x="130" y="140" width="120" height="54" rx="10" fill="#1e1648" stroke="#4facfe80" stroke-width="1"/>
+    <text x="190" y="163" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#4facfe" font-weight="bold">🔤 Token Cost</text>
+    <text x="190" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#7799cc">LLM inference fees</text>
+  </g>
+  <path d="M250,175 Q320,195 340,215" stroke="#4facfe60" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+
+  <!-- Time Cost (top) -->
+  <g filter="url(#softShadow)">
+    <rect x="390" y="100" width="120" height="54" rx="10" fill="#1e1648" stroke="#00f2fe80" stroke-width="1"/>
+    <text x="450" y="123" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#00f2fe" font-weight="bold">⏱ Time Cost</text>
+    <text x="450" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#7799cc">α × wall-clock sec</text>
+  </g>
+  <line x1="450" y1="154" x2="450" y2="185" stroke="#00f2fe60" stroke-width="2"/>
+  <polygon points="450,190 446,182 454,182" fill="#00f2fe80"/>
+
+  <!-- Penalty Cost (right) -->
+  <g filter="url(#softShadow)">
+    <rect x="650" y="140" width="120" height="54" rx="10" fill="#1e1648" stroke="#fc4a1a80" stroke-width="1"/>
+    <text x="710" y="163" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#fc4a1a" font-weight="bold">❌ Penalty</text>
+    <text x="710" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#cc7766">Wrong submission fee</text>
+  </g>
+  <path d="M650,175 Q580,195 560,215" stroke="#fc4a1a60" stroke-width="2" fill="none"/>
+  <polygon points="555,218 562,210 558,220" fill="#fc4a1a80"/>
+
+  <!-- Arrows into pool (blue) -->
+  <polygon points="338,218 345,212 342,222" fill="#4facfe80"/>
+
+  <!-- ====== CONSTRAINT LABEL ====== -->
+  <text x="450" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ff6b4a" font-style="italic">Budget exhausted → Game Over</text>
+
+  <!-- Down arrow from pool to strategy zone -->
+  <line x1="450" y1="298" x2="450" y2="340" stroke="#f7b73350" stroke-width="2" stroke-dasharray="4,3"/>
+  <polygon points="450,348 446,338 454,338" fill="#f7b73380"/>
+
+  <!-- ====== STRATEGY DIVERGENCE ZONE ====== -->
+  <text x="450" y="368" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#ddd" font-weight="bold">STRATEGY DIVERGENCE</text>
+  <line x1="300" y1="378" x2="600" y2="378" stroke="#ffffff20" stroke-width="1"/>
+
+  <!-- VS tension arc -->
+  <text x="450" y="440" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#ffffff30" font-weight="bold">vs</text>
+
+  <!-- Gemini (left explorer) -->
+  <g filter="url(#softShadow)">
+    <rect x="80" y="395" width="260" height="120" rx="14" fill="#0d1535" stroke="url(#geminiGrad)" stroke-width="2"/>
+    <!-- header bar -->
+    <rect x="80" y="395" width="260" height="32" rx="14" fill="#4facfe18"/>
+    <text x="210" y="416" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#4facfe" font-weight="bold">Gemini-2.5-pro · Explorer</text>
+    <text x="100" y="443" font-family="Arial, sans-serif" font-size="10" fill="#8cb8e8">🎯 Attempts: 8/12 problems</text>
+    <text x="100" y="459" font-family="Arial, sans-serif" font-size="10" fill="#8cb8e8">📊 1st-submit accuracy: lower</text>
+    <text x="100" y="475" font-family="Arial, sans-serif" font-size="10" fill="#8cb8e8">🏆 Win rate: <tspan fill="#00f2fe" font-weight="bold">70%</tspan></text>
+    <text x="100" y="493" font-family="Arial, sans-serif" font-size="10" fill="#66ddaa">Strategy: breadth-first coverage</text>
+  </g>
+
+  <!-- GPT (right exploiter) -->
+  <g filter="url(#softShadow)">
+    <rect x="560" y="395" width="260" height="120" rx="14" fill="#0d1535" stroke="url(#gptGrad)" stroke-width="2"/>
+    <rect x="560" y="395" width="260" height="32" rx="14" fill="#a18cd118"/>
+    <text x="690" y="416" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#c9a0e8" font-weight="bold">GPT-5-Codex · Exploiter</text>
+    <text x="580" y="443" font-family="Arial, sans-serif" font-size="10" fill="#c0a8d8">🎯 Attempts: 4/12 problems</text>
+    <text x="580" y="459" font-family="Arial, sans-serif" font-size="10" fill="#c0a8d8">📊 1st-submit accuracy: higher</text>
+    <text x="580" y="475" font-family="Arial, sans-serif" font-size="10" fill="#c0a8d8">🏆 Win rate: <tspan fill="#fbc2eb" font-weight="bold">30%</tspan></text>
+    <text x="580" y="493" font-family="Arial, sans-serif" font-size="10" fill="#dd99aa">Strategy: precision-first caution</text>
+  </g>
+
+  <!-- Tension arrows toward VS -->
+  <path d="M340,450 Q380,442 420,440" stroke="#4facfe40" stroke-width="2" fill="none"/>
+  <path d="M560,450 Q520,442 480,440" stroke="#a18cd140" stroke-width="2" fill="none"/>
+
+  <!-- ====== FIRST-STEP EFFECT (bottom center) ====== -->
+  <g transform="translate(450,558)">
+    <rect x="-170" y="-24" width="340" height="48" rx="24" fill="#1a1245" stroke="#f7b73360" stroke-width="1.5"/>
+    <!-- Success path icon -->
+    <circle cx="-120" cy="0" r="12" fill="#1a3a1a" stroke="#44dd88" stroke-width="1.5"/>
+    <text x="-120" y="4" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#44dd88">✓</text>
+    <text x="-95" y="-5" font-family="Arial, sans-serif" font-size="9" fill="#44dd88">1st step success</text>
+    <text x="-95" y="8" font-family="Arial, sans-serif" font-size="8" fill="#3a9966">→ snowball effect</text>
+
+    <!-- Arrow between -->
+    <text x="0" y="4" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ffffff30">⇌</text>
+
+    <!-- Failure path icon -->
+    <circle cx="120" cy="0" r="12" fill="#3a1a1a" stroke="#ff6b6b" stroke-width="1.5"/>
+    <text x="120" y="4" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ff6b6b">✗</text>
+    <text x="95" y="-5" text-anchor="end" font-family="Arial, sans-serif" font-size="9" fill="#ff6b6b">1st step failure</text>
+    <text x="95" y="8" text-anchor="end" font-family="Arial, sans-serif" font-size="8" fill="#cc5555">→ panic spiral</text>
+  </g>
+  <text x="450" y="524" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#8899aa" font-style="italic">⚡ First-Step Effect: path-dependent performance divergence</text>
+
+  <!-- ====== SATURATION INSIGHT (right side) ====== -->
+  <g transform="translate(820, 305)">
+    <rect x="-60" y="-12" width="120" height="60" rx="8" fill="#1a1245" stroke="#ffffff20" stroke-width="1"/>
+    <text x="0" y="5" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#aab">10M → 20M: <tspan fill="#44dd88">+60%</tspan></text>
+    <text x="0" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#aab">20M → 40M: <tspan fill="#ff6b6b">+0%</tspan></text>
+    <text x="0" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#8899aa" font-style="italic">Capability ceiling</text>
+  </g>
+
+  <!-- Small saturation curve sketch -->
+  <g transform="translate(820,275)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888" font-weight="bold">Budget vs Score</text>
+    <line x1="-30" y1="10" x2="-30" y2="-10" stroke="#555" stroke-width="0.8"/>
+    <line x1="-30" y1="10" x2="30" y2="10" stroke="#555" stroke-width="0.8"/>
+    <path d="M-25,8 Q-10,-5 0,-8 Q15,-10 25,-9" stroke="#f7b733" stroke-width="1.5" fill="none"/>
+    <circle cx="0" cy="-8" r="2" fill="#f7b733"/>
+  </g>
+
+  <!-- Connecting line from pool to saturation -->
+  <path d="M570,245 Q680,260 760,295" stroke="#ffffff10" stroke-width="1" fill="none" stroke-dasharray="3,3"/>
+
+  <!-- ====== KEY INSIGHT BADGE ====== -->
+  <g transform="translate(82,310)">
+    <rect x="0" y="0" width="200" height="48" rx="8" fill="#1e1040" stroke="#f7b73340" stroke-width="1"/>
+    <text x="100" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#f7b733" font-weight="bold">KEY INSIGHT</text>
+    <text x="100" y="33" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#ccc">Bottleneck is reasoning ability,</text>
+    <text x="100" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#ccc">not resource quantity</text>
+  </g>
+
+  <!-- Subtle grid dots for texture -->
+  <g opacity="0.04">
+    <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="0.6" fill="white"/>
+    </pattern>
+    <rect width="900" height="620" fill="url(#dots)"/>
+  </g>
+
+  <!-- Bottom credit line -->
+  <text x="450" y="608" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#555" letter-spacing="0.5">USACOArena · ICLR 2026 · Unified credit economy for autonomous coding agents</text>
+</svg>

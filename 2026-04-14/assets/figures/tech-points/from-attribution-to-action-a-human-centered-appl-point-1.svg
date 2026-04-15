@@ -1,0 +1,102 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0f4ff"/>
+      <stop offset="100%" stop-color="#e8eef8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="520" fill="url(#bg)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a237e">SAE 分解：把模型内部向量拆成可解释的"积木块"</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#666">每块有语义标签 + 预测贡献分，但高贡献 ≠ 因果驱动</text>
+
+  <!-- Step 1: Input image -->
+  <rect x="30" y="90" width="150" height="160" rx="12" fill="#fff" stroke="#90a4ae" stroke-width="2"/>
+  <text x="105" y="115" text-anchor="middle" font-size="13" font-weight="bold" fill="#37474f">输入图片</text>
+  <!-- Simple nurse icon -->
+  <circle cx="105" cy="160" r="22" fill="#e3f2fd" stroke="#42a5f5" stroke-width="2"/>
+  <text x="105" y="165" text-anchor="middle" font-size="22">👩‍⚕️</text>
+  <text x="105" y="210" text-anchor="middle" font-size="12" fill="#555">女性护士照片</text>
+  <text x="105" y="228" text-anchor="middle" font-size="12" fill="#1565c0" font-weight="bold">预测: "nurse"</text>
+
+  <!-- Arrow 1 -->
+  <line x1="180" y1="170" x2="228" y2="170" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 2: CLIP Latent -->
+  <rect x="235" y="110" width="140" height="120" rx="12" fill="#e8eaf6" stroke="#5c6bc0" stroke-width="2"/>
+  <text x="305" y="138" text-anchor="middle" font-size="13" font-weight="bold" fill="#283593">CLIP 潜在嵌入</text>
+  <!-- Big vector block -->
+  <rect x="260" y="150" width="90" height="50" rx="6" fill="#c5cae9" stroke="#3f51b5" stroke-width="1.5"/>
+  <text x="305" y="180" text-anchor="middle" font-size="20" fill="#1a237e">📦</text>
+  <text x="305" y="218" text-anchor="middle" font-size="11" fill="#555">一个大向量</text>
+
+  <!-- Arrow 2: SAE -->
+  <line x1="375" y1="170" x2="428" y2="170" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <rect x="383" y="148" width="42" height="22" rx="4" fill="#ff8a65" stroke="#e64a19" stroke-width="1"/>
+  <text x="404" y="163" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">SAE</text>
+
+  <!-- Step 3: Decomposed Components -->
+  <rect x="435" y="80" width="230" height="260" rx="14" fill="#fff" stroke="#43a047" stroke-width="2.5"/>
+  <text x="550" y="106" text-anchor="middle" font-size="14" font-weight="bold" fill="#2e7d32">分解后的"积木块"</text>
+  <text x="550" y="122" text-anchor="middle" font-size="10" fill="#888">语义标签 + 贡献分 R_j = a_j × ∂out/∂a_j</text>
+
+  <!-- Component 1: Stethoscope -->
+  <rect x="455" y="138" width="190" height="70" rx="10" fill="#e8f5e9" stroke="#66bb6a" stroke-width="1.5"/>
+  <text x="475" y="162" font-size="22">🩺</text>
+  <text x="500" y="160" font-size="12" font-weight="bold" fill="#2e7d32">组件 #20773</text>
+  <text x="500" y="177" font-size="11" fill="#555">语义: "听诊器"</text>
+  <!-- Score bar -->
+  <rect x="500" y="186" width="130" height="12" rx="4" fill="#e0e0e0"/>
+  <rect x="500" y="186" width="126" height="12" rx="4" fill="#43a047"/>
+  <text x="636" y="196" font-size="10" font-weight="bold" fill="#2e7d32">20.6</text>
+
+  <!-- Component 2: Female -->
+  <rect x="455" y="218" width="190" height="70" rx="10" fill="#fff3e0" stroke="#ffa726" stroke-width="1.5"/>
+  <text x="475" y="242" font-size="22">♀</text>
+  <text x="500" y="240" font-size="12" font-weight="bold" fill="#e65100">组件 #3177</text>
+  <text x="500" y="257" font-size="11" fill="#555">语义: "女性"</text>
+  <!-- Score bar -->
+  <rect x="500" y="266" width="130" height="12" rx="4" fill="#e0e0e0"/>
+  <rect x="500" y="266" width="45" height="12" rx="4" fill="#ffa726"/>
+  <text x="551" y="276" font-size="10" font-weight="bold" fill="#e65100">7.1</text>
+
+  <text x="550" y="325" text-anchor="middle" font-size="10" fill="#999">… 其余数千个组件</text>
+
+  <!-- Arrow to question -->
+  <line x1="665" y1="210" x2="708" y2="210" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 4: The key question -->
+  <rect x="715" y="100" width="165" height="220" rx="14" fill="#fce4ec" stroke="#e53935" stroke-width="2.5"/>
+  <text x="797" y="132" text-anchor="middle" font-size="36">❓</text>
+  <text x="797" y="165" text-anchor="middle" font-size="13" font-weight="bold" fill="#b71c1c">关键问题</text>
+  <line x1="735" y1="175" x2="860" y2="175" stroke="#e57373" stroke-width="1"/>
+
+  <text x="797" y="198" text-anchor="middle" font-size="12" fill="#c62828">高贡献分</text>
+  <text x="797" y="218" text-anchor="middle" font-size="18" font-weight="bold" fill="#b71c1c">≠</text>
+  <text x="797" y="240" text-anchor="middle" font-size="12" fill="#c62828">因果驱动</text>
+  <line x1="755" y1="255" x2="840" y2="255" stroke="#e57373" stroke-width="0.5" stroke-dasharray="4"/>
+
+  <text x="797" y="275" text-anchor="middle" font-size="11" fill="#555">是医疗器具?</text>
+  <text x="797" y="293" text-anchor="middle" font-size="11" fill="#555">还是性别偏见?</text>
+  <text x="797" y="310" text-anchor="middle" font-size="10" fill="#999">归因无法回答</text>
+
+  <!-- Bottom insight bar -->
+  <rect x="60" y="370" width="780" height="70" rx="12" fill="#263238" opacity="0.92"/>
+  <text x="450" y="398" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">💡 核心洞察</text>
+  <text x="450" y="420" text-anchor="middle" font-size="13" fill="#b0bec5">归因 (Attribution) 只能告诉你"谁贡献大"，下一步需要 激活引导 (Activation Steering) 做因果验证</text>
+
+  <!-- Bottom formula -->
+  <rect x="250" y="460" width="400" height="42" rx="8" fill="#fff" stroke="#90a4ae" stroke-width="1"/>
+  <text x="450" y="486" text-anchor="middle" font-size="14" fill="#37474f">
+    <tspan font-weight="bold" fill="#5c6bc0">R</tspan><tspan font-size="11" dy="3">j</tspan><tspan dy="-3"> = </tspan>
+    <tspan fill="#43a047" font-weight="bold">a</tspan><tspan font-size="11" dy="3">j</tspan><tspan dy="-3"> × </tspan>
+    <tspan fill="#e65100">∂output / ∂a</tspan><tspan font-size="11" dy="3">j</tspan>
+    <tspan dy="-3" fill="#888" font-size="12">  (激活 × 梯度)</tspan>
+  </text>
+</svg>
