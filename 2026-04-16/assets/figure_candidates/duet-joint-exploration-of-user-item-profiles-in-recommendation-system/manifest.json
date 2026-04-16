@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-16/downloaded_pdfs/duet-joint-exploration-of-user-item-profiles-in-recommendation-system.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-16/assets/figure_candidates/duet-joint-exploration-of-user-item-profiles-in-recommendation-system",
+  "candidates": [
+    {
+      "id": "page-0-drawing-caption-37",
+      "page_index": 0,
+      "caption": "Figure 1: D UET aligns raw user and item data by trans- forming them into textual profiles within a shared se- mantic space.",
+      "clip": [
+        283.0758361816406,
+        203.14785766601562,
+        559.190673828125,
+        353.6748962402344
+      ],
+      "clip_area": 41562.7488173265,
+      "page_area": 501156.9211820215,
+      "text_density": 0.28914773315312403,
+      "kind": "drawing_cluster_with_caption",
+      "score": 40.91294433100508,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-16/assets/figure_candidates/duet-joint-exploration-of-user-item-profiles-in-recommendation-system/01-p1-drawing_cluster_with_caption.png",
+      "filename": "01-p1-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-2-drawing-caption-65",
+      "page_index": 2,
+      "caption": "Figure 2: Overview of the D UET framework.",
+      "clip": [
+        52.865997314453125,
+        54.86674499511719,
+        542.408447265625,
+        273.9530029296875
+      ],
+      "clip_area": 107252.02345992392,
+      "page_area": 501156.9211820215,
+      "text_density": 0.18968144689618482,
+      "kind": "drawing_cluster_with_caption",
+      "score": 40.610802335783625,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-16/assets/figure_candidates/duet-joint-exploration-of-user-item-profiles-in-recommendation-system/02-p3-drawing_cluster_with_caption.png",
+      "filename": "02-p3-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-2-embedded-13-0",
+      "page_index": 2,
+      "caption": "Figure 2: Overview of the D UET framework.",
+      "clip": [
+        149.85794067382812,
+        82.45096588134766,
+        262.5254821777344,
+        183.32640075683594
+      ],
+      "clip_area": 11365.387245558668,
+      "page_area": 501156.9211820215,
+      "text_density": 0.27565123570267097,
+      "kind": "embedded_image_with_caption",
+      "xref": 591,
+      "score": 27.387207938345952,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-16/assets/figure_candidates/duet-joint-exploration-of-user-item-profiles-in-recommendation-system/03-p3-embedded_image_with_caption.png",
+      "filename": "03-p3-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-2-embedded-22-0",
+      "page_index": 2,
+      "caption": "Figure 2: Overview of the D UET framework.",
+      "clip": [
+        243.1175994873047,
+        73.77691650390625,
+        378.29217529296875,
+        267.741943359375
+      ],
+      "clip_area": 26219.140226322226,
+      "page_area": 501156.9211820215,
+      "text_density": 0.29394953416519554,
+      "kind": "embedded_image_with_caption",
+      "xref": 600,
+      "score": 26.454351730380743,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-16/assets/figure_candidates/duet-joint-exploration-of-user-item-profiles-in-recommendation-system/04-p3-embedded_image_with_caption.png",
+      "filename": "04-p3-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-2-embedded-0-0",
+      "page_index": 2,
+      "caption": "Figure 2: Overview of the D UET framework.",
+      "clip": [
+        149.85794067382812,
+        162.84088134765625,
+        262.5254821777344,
+        263.6596374511719
+      ],
+      "clip_area": 11359.001387665048,
+      "page_area": 501156.9211820215,
+      "text_density": 0.3109096803002214,
+      "kind": "embedded_image_with_caption",
+      "xref": 578,
+      "score": 25.27163030851633,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-16/assets/figure_candidates/duet-joint-exploration-of-user-item-profiles-in-recommendation-system/05-p3-embedded_image_with_caption.png",
+      "filename": "05-p3-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-3-drawing-caption-10",
+      "page_index": 3,
+      "caption": "Figure 3: Single-pass generation in D UET : cue extrac- tion, profile prompt (constructed prompt), and profile generation are produced in one pass for both user and item.",
+      "clip": [
+        288.1419982910156,
+        54.86601257324219,
+        546.0130004882812,
+        341.9930419921875
+      ],
+      "clip_area": 74041.7348341872,
+      "page_area": 501156.9211820215,
+      "text_density": 0.6671127879661032,
+      "kind": "drawing_cluster_with_caption",
+      "score": 14.822685942602078,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-16/assets/figure_candidates/duet-joint-exploration-of-user-item-profiles-in-recommendation-system/06-p4-drawing_cluster_with_caption.png",
+      "filename": "06-p4-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-16/assets/figure_candidates/duet-joint-exploration-of-user-item-profiles-in-recommendation-system/contact-sheet.svg"
+}

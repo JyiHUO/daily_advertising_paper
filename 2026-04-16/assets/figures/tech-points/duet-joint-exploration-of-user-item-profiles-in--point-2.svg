@@ -1,0 +1,144 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f0c29"/>
+      <stop offset="50%" stop-color="#1a1a4e"/>
+      <stop offset="100%" stop-color="#24243e"/>
+    </linearGradient>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff6b6b"/>
+      <stop offset="100%" stop-color="#ee5a24"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a29bfe"/>
+      <stop offset="100%" stop-color="#6c5ce7"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#55efc4"/>
+      <stop offset="100%" stop-color="#00b894"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ffeaa7"/>
+    </marker>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="520" fill="url(#bg)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#ffeaa7" font-size="22" font-weight="bold" filter="url(#glow)">DUET: 三阶段单 Pass 生成流程</text>
+  <text x="450" y="66" text-anchor="middle" fill="#b2bec3" font-size="13">一次前向传播 → 自动发现描述策略 → 联合生成用户&amp;物品画像</text>
+
+  <!-- Input block -->
+  <rect x="30" y="110" width="140" height="300" rx="14" fill="#2d3436" stroke="#636e72" stroke-width="1.5" opacity="0.9"/>
+  <text x="100" y="140" text-anchor="middle" fill="#dfe6e9" font-size="14" font-weight="bold">📋 原始输入</text>
+  <text x="100" y="170" text-anchor="middle" fill="#b2bec3" font-size="11">用户历史:</text>
+  <text x="100" y="190" text-anchor="middle" fill="#74b9ff" font-size="10">Baba Is You ⭐5</text>
+  <text x="100" y="207" text-anchor="middle" fill="#74b9ff" font-size="10">The Witness ⭐5</text>
+  <text x="100" y="224" text-anchor="middle" fill="#74b9ff" font-size="10">Fez ⭐4</text>
+  <line x1="50" y1="240" x2="150" y2="240" stroke="#636e72" stroke-width="0.5"/>
+  <text x="100" y="262" text-anchor="middle" fill="#b2bec3" font-size="11">候选物品:</text>
+  <text x="100" y="282" text-anchor="middle" fill="#fd79a8" font-size="10">独立解谜游戏</text>
+
+  <!-- Arrow: Input → Stage 1 -->
+  <line x1="170" y1="260" x2="210" y2="260" stroke="#ffeaa7" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Stage 1: Cue -->
+  <rect x="215" y="130" width="190" height="260" rx="16" fill="none" stroke="url(#g1)" stroke-width="2.5"/>
+  <rect x="215" y="130" width="190" height="260" rx="16" fill="#ee5a24" opacity="0.1"/>
+  <circle cx="245" cy="157" r="14" fill="url(#g1)"/>
+  <text x="245" y="162" text-anchor="middle" fill="white" font-size="14" font-weight="bold">1</text>
+  <text x="320" y="162" text-anchor="middle" fill="#ff7675" font-size="16" font-weight="bold">Cue 提取</text>
+  <text x="310" y="185" text-anchor="middle" fill="#b2bec3" font-size="11" font-style="italic">蒸馏线索，刻意不完整</text>
+
+  <!-- Cue content -->
+  <rect x="230" y="200" width="160" height="45" rx="8" fill="#2d3436" stroke="#e17055" stroke-width="1"/>
+  <text x="240" y="218" fill="#fab1a0" font-size="10">👤 用户线索:</text>
+  <text x="240" y="235" fill="#ffeaa7" font-size="11">"偏好复古解谜游戏"</text>
+
+  <rect x="230" y="255" width="160" height="45" rx="8" fill="#2d3436" stroke="#e17055" stroke-width="1"/>
+  <text x="240" y="273" fill="#fab1a0" font-size="10">📦 物品线索:</text>
+  <text x="240" y="290" fill="#ffeaa7" font-size="11">"复古风独立解谜"</text>
+
+  <text x="310" y="330" text-anchor="middle" fill="#636e72" font-size="10">↑ 像列提纲要点</text>
+  <text x="310" y="365" text-anchor="middle" fill="#e17055" font-size="10">留空间给下一步探索 →</text>
+
+  <!-- Arrow: Stage 1 → Stage 2 -->
+  <line x1="405" y1="260" x2="435" y2="260" stroke="#ffeaa7" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Stage 2: Profile Prompt (key innovation) -->
+  <rect x="440" y="110" width="200" height="300" rx="16" fill="none" stroke="url(#g2)" stroke-width="3"/>
+  <rect x="440" y="110" width="200" height="300" rx="16" fill="#6c5ce7" opacity="0.12"/>
+
+  <!-- Star highlight -->
+  <text x="453" y="102" fill="#ffeaa7" font-size="18">⭐</text>
+  <text x="473" y="102" fill="#ffeaa7" font-size="11" font-weight="bold">核心创新</text>
+
+  <circle cx="470" cy="137" r="14" fill="url(#g2)"/>
+  <text x="470" y="142" text-anchor="middle" fill="white" font-size="14" font-weight="bold">2</text>
+  <text x="550" y="142" text-anchor="middle" fill="#a29bfe" font-size="15" font-weight="bold">Prompt 发现</text>
+  <text x="540" y="164" text-anchor="middle" fill="#b2bec3" font-size="11" font-style="italic">模型自己"发明"描述策略</text>
+
+  <rect x="455" y="180" width="170" height="55" rx="8" fill="#2d3436" stroke="#a29bfe" stroke-width="1.5"/>
+  <text x="465" y="198" fill="#dfe6e9" font-size="10">👤 用户侧策略:</text>
+  <text x="465" y="215" fill="#ffeaa7" font-size="10">"聚焦90年代视觉审美</text>
+  <text x="470" y="228" fill="#ffeaa7" font-size="10">和策略深度"</text>
+
+  <rect x="455" y="245" width="170" height="55" rx="8" fill="#2d3436" stroke="#a29bfe" stroke-width="1.5"/>
+  <text x="465" y="263" fill="#dfe6e9" font-size="10">📦 物品侧策略:</text>
+  <text x="465" y="280" fill="#ffeaa7" font-size="10">"描述像素画风和智力</text>
+  <text x="470" y="293" fill="#ffeaa7" font-size="10">难度以匹配逻辑偏好"</text>
+
+  <!-- VS fixed template -->
+  <rect x="455" y="315" width="170" height="50" rx="8" fill="#d63031" opacity="0.15" stroke="#d63031" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="540" y="335" text-anchor="middle" fill="#ff7675" font-size="10">❌ 不再用固定模板</text>
+  <text x="540" y="352" text-anchor="middle" fill="#55efc4" font-size="10">✅ RL奖励驱动策略选择</text>
+
+  <text x="540" y="395" text-anchor="middle" fill="#636e72" font-size="10">↑ 像决定写作风格</text>
+
+  <!-- Arrow: Stage 2 → Stage 3 -->
+  <line x1="640" y1="260" x2="670" y2="260" stroke="#ffeaa7" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Stage 3: Profile -->
+  <rect x="675" y="130" width="200" height="260" rx="16" fill="none" stroke="url(#g3)" stroke-width="2.5"/>
+  <rect x="675" y="130" width="200" height="260" rx="16" fill="#00b894" opacity="0.1"/>
+  <circle cx="705" cy="157" r="14" fill="url(#g3)"/>
+  <text x="705" y="162" text-anchor="middle" fill="white" font-size="14" font-weight="bold">3</text>
+  <text x="785" y="162" text-anchor="middle" fill="#55efc4" font-size="16" font-weight="bold">Profile 生成</text>
+  <text x="775" y="185" text-anchor="middle" fill="#b2bec3" font-size="11" font-style="italic">联合生成，语义对齐</text>
+
+  <rect x="690" y="200" width="170" height="55" rx="8" fill="#2d3436" stroke="#00b894" stroke-width="1"/>
+  <text x="700" y="218" fill="#dfe6e9" font-size="10">👤 用户画像:</text>
+  <text x="700" y="235" fill="#55efc4" font-size="10">"追求复古视觉魅力与</text>
+  <text x="705" y="248" fill="#55efc4" font-size="10">深度策略推理的玩家"</text>
+
+  <rect x="690" y="265" width="170" height="55" rx="8" fill="#2d3436" stroke="#00b894" stroke-width="1"/>
+  <text x="700" y="283" fill="#dfe6e9" font-size="10">📦 物品画像:</text>
+  <text x="700" y="300" fill="#55efc4" font-size="10">"像素怀旧风2D体验，</text>
+  <text x="705" y="313" fill="#55efc4" font-size="10">高难度逻辑推演机制"</text>
+
+  <!-- Match indicator -->
+  <rect x="710" y="335" width="140" height="30" rx="10" fill="#00b894" opacity="0.25" stroke="#55efc4" stroke-width="1"/>
+  <text x="780" y="355" text-anchor="middle" fill="#55efc4" font-size="12" font-weight="bold">🎯 语义精准匹配</text>
+
+  <text x="775" y="378" text-anchor="middle" fill="#636e72" font-size="10">↑ 正式写出文章</text>
+
+  <!-- Bottom: Single Pass Banner -->
+  <rect x="120" y="440" width="660" height="55" rx="27" fill="none" stroke="#ffeaa7" stroke-width="2" stroke-dasharray="8,4"/>
+  <rect x="120" y="440" width="660" height="55" rx="27" fill="#ffeaa7" opacity="0.06"/>
+
+  <text x="290" y="465" text-anchor="middle" fill="#ffeaa7" font-size="15" font-weight="bold">⚡ 单次前向传播</text>
+  <text x="290" y="485" text-anchor="middle" fill="#b2bec3" font-size="11">三阶段串联在同一序列中</text>
+
+  <text x="580" y="465" text-anchor="middle" fill="#ffeaa7" font-size="15" font-weight="bold">🔄 RL 奖励优化</text>
+  <text x="580" y="485" text-anchor="middle" fill="#b2bec3" font-size="11">推荐效果越好 → 策略越强化</text>
+
+  <!-- Connecting dashed line under all stages -->
+  <line x1="310" y1="420" x2="310" y2="440" stroke="#ffeaa7" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="540" y1="420" x2="540" y2="440" stroke="#ffeaa7" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="775" y1="420" x2="775" y2="440" stroke="#ffeaa7" stroke-width="1" stroke-dasharray="3,3"/>
+</svg>

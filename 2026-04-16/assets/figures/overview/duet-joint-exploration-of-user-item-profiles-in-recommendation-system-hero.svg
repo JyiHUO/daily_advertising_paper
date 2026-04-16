@@ -1,0 +1,207 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="userGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <linearGradient id="itemGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <linearGradient id="rlGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <linearGradient id="centerGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#f472b6"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="bigGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrowWhite" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#94a3b8" stroke-width="1.2"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#34d399" stroke-width="1.5"/>
+    </marker>
+    <marker id="arrowPink" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#f472b6" stroke-width="1.5"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bgGrad)" rx="12"/>
+
+  <!-- Subtle grid pattern -->
+  <g opacity="0.04">
+    <line x1="0" y1="100" x2="900" y2="100" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="900" y2="200" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="900" y2="300" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="900" y2="400" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="500" x2="900" y2="500" stroke="#fff" stroke-width="0.5"/>
+    <line x1="150" y1="0" x2="150" y2="620" stroke="#fff" stroke-width="0.5"/>
+    <line x1="300" y1="0" x2="300" y2="620" stroke="#fff" stroke-width="0.5"/>
+    <line x1="450" y1="0" x2="450" y2="620" stroke="#fff" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="620" stroke="#fff" stroke-width="0.5"/>
+    <line x1="750" y1="0" x2="750" y2="620" stroke="#fff" stroke-width="0.5"/>
+  </g>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-family="Georgia, serif" font-size="24" fill="#f1f5f9" font-weight="bold" letter-spacing="1">DUET</text>
+  <text x="450" y="64" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8" letter-spacing="2">JOINT EXPLORATION OF USER-ITEM PROFILES IN RECOMMENDATION</text>
+
+  <!-- Problem statement bar -->
+  <rect x="200" y="78" width="500" height="24" rx="12" fill="#ef4444" opacity="0.15"/>
+  <text x="450" y="94" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#fca5a5">
+    ❌ 独立生成画像 → 语义不匹配 → 推荐失准
+  </text>
+
+  <!-- ============= LEFT: User Side ============= -->
+  <!-- User History -->
+  <rect x="40" y="130" width="180" height="130" rx="10" fill="#6366f1" opacity="0.12" stroke="#6366f1" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="130" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#a5b4fc" font-weight="bold">👤 用户历史</text>
+  <text x="130" y="174" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#c7d2fe">Misfits (朋克) ★★★★★</text>
+  <text x="130" y="192" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#c7d2fe">Iron Maiden (金属) ★★★★</text>
+  <text x="130" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#c7d2fe">Parliament (放克) ★★★★★</text>
+  <circle cx="130" cy="240" r="8" fill="#818cf8" opacity="0.3"/>
+  <text x="130" y="244" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#e0e7ff">...</text>
+
+  <!-- ============= RIGHT: Item Side ============= -->
+  <rect x="680" y="130" width="180" height="130" rx="10" fill="#f59e0b" opacity="0.12" stroke="#f59e0b" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="770" y="152" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#fcd34d" font-weight="bold">📦 物品历史</text>
+  <text x="770" y="174" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fde68a">"polished pop sound"</text>
+  <text x="770" y="192" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fde68a">"great funk bass lines"</text>
+  <text x="770" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fde68a">"energetic live feel"</text>
+  <circle cx="770" cy="240" r="8" fill="#fbbf24" opacity="0.3"/>
+  <text x="770" y="244" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#fef3c7">...</text>
+
+  <!-- ============= CENTER: Joint Generation Engine ============= -->
+  <!-- Arrows from user/item history into center -->
+  <path d="M225,195 C290,195 290,280 345,280" fill="none" stroke="#818cf8" stroke-width="1.8" stroke-dasharray="4,3" marker-end="url(#arrowWhite)" opacity="0.6"/>
+  <path d="M675,195 C610,195 610,280 555,280" fill="none" stroke="#fbbf24" stroke-width="1.8" stroke-dasharray="4,3" marker-end="url(#arrowWhite)" opacity="0.6"/>
+
+  <!-- Central diamond / joint generation -->
+  <g filter="url(#softShadow)">
+    <rect x="305" y="245" width="290" height="75" rx="14" fill="#1e293b" stroke="#f472b6" stroke-width="1.5" stroke-opacity="0.6"/>
+    <rect x="305" y="245" width="290" height="75" rx="14" fill="#ec4899" opacity="0.08"/>
+  </g>
+  <text x="450" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#f9a8d4" font-weight="bold">🔗 联合画像生成 (Single Pass)</text>
+  <text x="450" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#cbd5e1">用户 + 物品上下文 → 一次前向传播</text>
+  <text x="450" y="306" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#cbd5e1">互相感知 · 语义共享 · 自适应策略</text>
+
+  <!-- ============= Three Stage Pipeline ============= -->
+  <!-- Stage indicators below center box -->
+  <g transform="translate(175, 340)">
+    <!-- Stage 1: Cue -->
+    <rect x="0" y="0" width="150" height="55" rx="8" fill="#1e293b" stroke="#64748b" stroke-width="1" opacity="0.9"/>
+    <circle cx="18" cy="16" r="10" fill="#6366f1" opacity="0.7"/>
+    <text x="18" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#fff" font-weight="bold">1</text>
+    <text x="38" y="20" font-family="Arial, sans-serif" font-size="11" fill="#e2e8f0" font-weight="bold">Cue 提取</text>
+    <text x="75" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">蒸馏简洁线索假设</text>
+
+    <!-- Arrow 1→2 -->
+    <line x1="155" y1="27" x2="175" y2="27" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrowWhite)"/>
+
+    <!-- Stage 2: Profile Prompt -->
+    <rect x="180" y="0" width="180" height="55" rx="8" fill="#1e293b" stroke="#f472b6" stroke-width="1.2" opacity="0.9"/>
+    <circle cx="198" cy="16" r="10" fill="#ec4899" opacity="0.7"/>
+    <text x="198" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#fff" font-weight="bold">2</text>
+    <text x="225" y="20" font-family="Arial, sans-serif" font-size="11" fill="#f9a8d4" font-weight="bold">Profile Prompt</text>
+    <text x="270" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">自动发现描述策略</text>
+    <text x="270" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#f472b6">⚡ 非固定模板</text>
+
+    <!-- Arrow 2→3 -->
+    <line x1="365" y1="27" x2="385" y2="27" stroke="#64748b" stroke-width="1.2" marker-end="url(#arrowWhite)"/>
+
+    <!-- Stage 3: Profile -->
+    <rect x="390" y="0" width="160" height="55" rx="8" fill="#1e293b" stroke="#64748b" stroke-width="1" opacity="0.9"/>
+    <circle cx="408" cy="16" r="10" fill="#10b981" opacity="0.7"/>
+    <text x="408" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#fff" font-weight="bold">3</text>
+    <text x="435" y="20" font-family="Arial, sans-serif" font-size="11" fill="#e2e8f0" font-weight="bold">Profile 生成</text>
+    <text x="470" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">条件化文本画像输出</text>
+  </g>
+
+  <!-- Arrow from center box to stages -->
+  <line x1="450" y1="320" x2="450" y2="337" stroke="#f472b6" stroke-width="1.5" stroke-opacity="0.5" marker-end="url(#arrowPink)"/>
+
+  <!-- ============= Output Profiles ============= -->
+  <!-- User Profile -->
+  <g filter="url(#softShadow)">
+    <rect x="60" y="430" width="200" height="70" rx="10" fill="#1e293b" stroke="#818cf8" stroke-width="1.5"/>
+  </g>
+  <text x="160" y="452" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#a5b4fc" font-weight="bold">用户画像</text>
+  <text x="160" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#e0e7ff">"放克/灵魂乐爱好者</text>
+  <text x="160" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#e0e7ff">追求韵律感与现场能量"</text>
+
+  <!-- Item Profile -->
+  <g filter="url(#softShadow)">
+    <rect x="640" y="430" width="200" height="70" rx="10" fill="#1e293b" stroke="#fbbf24" stroke-width="1.5"/>
+  </g>
+  <text x="740" y="452" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#fcd34d" font-weight="bold">物品画像</text>
+  <text x="740" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fef3c7">"放克摇滚专辑</text>
+  <text x="740" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fef3c7">融合贝斯律动与现场质感"</text>
+
+  <!-- Arrows from stages to profiles -->
+  <path d="M340,395 C300,420 240,425 260,430" fill="none" stroke="#818cf8" stroke-width="1.5" stroke-opacity="0.5"/>
+  <path d="M560,395 C600,420 660,425 640,430" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-opacity="0.5"/>
+
+  <!-- ============= Semantic Alignment Arc ============= -->
+  <path d="M265,465 Q450,415 635,465" fill="none" stroke="#f472b6" stroke-width="2" stroke-dasharray="6,3" filter="url(#glow)" opacity="0.8"/>
+  <text x="450" y="432" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#f9a8d4" font-weight="bold">语义对齐 ✓</text>
+  <text x="450" y="446" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#f9a8d4">cosine sim: 0.729</text>
+
+  <!-- ============= RL Reward Loop ============= -->
+  <!-- Recommender box -->
+  <g filter="url(#softShadow)">
+    <rect x="350" y="520" width="200" height="50" rx="25" fill="#1e293b" stroke="#34d399" stroke-width="1.8"/>
+    <rect x="350" y="520" width="200" height="50" rx="25" fill="#10b981" opacity="0.08"/>
+  </g>
+  <text x="450" y="542" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#6ee7b7" font-weight="bold">🧊 冻结推荐模型</text>
+  <text x="450" y="558" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#a7f3d0">预测评分 → 计算奖励</text>
+
+  <!-- Arrows profiles → recommender -->
+  <path d="M160,500 C160,530 340,545 345,545" fill="none" stroke="#34d399" stroke-width="1.3" stroke-opacity="0.5" marker-end="url(#arrowGreen)"/>
+  <path d="M740,500 C740,530 560,545 555,545" fill="none" stroke="#34d399" stroke-width="1.3" stroke-opacity="0.5" marker-end="url(#arrowGreen)"/>
+
+  <!-- RL Reward feedback loop -->
+  <path d="M550,540 C680,540 750,520 780,470 C810,410 780,340 700,310 C650,295 600,290 555,290" fill="none" stroke="#34d399" stroke-width="2" stroke-dasharray="5,3" marker-end="url(#arrowGreen)" filter="url(#glow)" opacity="0.7"/>
+
+  <!-- RL label -->
+  <rect x="730" y="370" width="120" height="42" rx="8" fill="#064e3b" stroke="#34d399" stroke-width="1" opacity="0.9"/>
+  <text x="790" y="388" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#6ee7b7" font-weight="bold">GRPO 强化</text>
+  <text x="790" y="402" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#a7f3d0">r = 1 - |ŷ-y|/Δ</text>
+
+  <!-- ============= Result callout ============= -->
+  <rect x="35" y="540" width="230" height="55" rx="8" fill="#10b981" opacity="0.1" stroke="#34d399" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="150" y="558" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#6ee7b7" font-weight="bold">📊 消融：去掉 RL</text>
+  <text x="150" y="575" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#a7f3d0">Yelp Acc: 61.23% → 48.53%</text>
+  <text x="150" y="588" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#6ee7b7">RL 是性能核心驱动力</text>
+
+  <!-- Key insight badge -->
+  <rect x="630" y="555" width="235" height="42" rx="8" fill="#ec4899" opacity="0.1" stroke="#f472b6" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="747" y="573" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#f9a8d4" font-weight="bold">💡 核心洞察</text>
+  <text x="747" y="588" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#f9a8d4">联合生成 + RL 对齐 = 语义匹配画像</text>
+
+  <!-- Decorative glow spots -->
+  <circle cx="450" cy="290" r="60" fill="#ec4899" opacity="0.03" filter="url(#bigGlow)"/>
+  <circle cx="450" cy="545" r="40" fill="#10b981" opacity="0.04" filter="url(#bigGlow)"/>
+</svg>

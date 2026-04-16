@@ -1,0 +1,121 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#555">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#2563EB">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0f4ff"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <filter id="shadow" x="-3%" y="-3%" width="106%" height="106%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bgGrad)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">投影融合 B5：一次查询 = 更快 + 更多样</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#64748b">将稀疏与稠密向量预融合，单次检索替代双路召回</text>
+
+  <!-- ========== LEFT: Two Encoders ========== -->
+  <!-- Query box -->
+  <rect x="30" y="100" width="120" height="50" rx="25" fill="#8B5CF6" filter="url(#shadow)"/>
+  <text x="90" y="130" text-anchor="middle" font-size="15" fill="white" font-weight="bold">Query</text>
+
+  <!-- BGE encoder -->
+  <rect x="30" y="190" width="120" height="54" rx="10" fill="#2563EB" filter="url(#shadow)"/>
+  <text x="90" y="213" text-anchor="middle" font-size="14" fill="white" font-weight="bold">BGE</text>
+  <text x="90" y="232" text-anchor="middle" font-size="11" fill="#bfdbfe">稠密 768维</text>
+
+  <!-- SPLADE encoder -->
+  <rect x="30" y="270" width="120" height="54" rx="10" fill="#059669" filter="url(#shadow)"/>
+  <text x="90" y="293" text-anchor="middle" font-size="14" fill="white" font-weight="bold">SPLADE</text>
+  <text x="90" y="312" text-anchor="middle" font-size="11" fill="#a7f3d0">稀疏 30522维</text>
+
+  <!-- Arrows from query to encoders -->
+  <line x1="90" y1="150" x2="90" y2="187" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="90" y1="244" x2="90" y2="267" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ========== MIDDLE: Projection + Fusion ========== -->
+  <!-- Random Projection box -->
+  <rect x="210" y="265" width="160" height="64" rx="12" fill="#f59e0b" filter="url(#shadow)"/>
+  <text x="290" y="290" text-anchor="middle" font-size="13" fill="white" font-weight="bold">随机投影矩阵</text>
+  <text x="290" y="308" text-anchor="middle" font-size="11" fill="#fef3c7">768×30522 → 768维</text>
+  <text x="290" y="322" text-anchor="middle" font-size="10" fill="#fef3c7">⅔元素为0，极快</text>
+
+  <!-- Arrow SPLADE -> Projection -->
+  <line x1="150" y1="297" x2="207" y2="297" stroke="#059669" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Projected vector p -->
+  <rect x="235" y="355" width="110" height="36" rx="8" fill="#fbbf24" opacity="0.85"/>
+  <text x="290" y="378" text-anchor="middle" font-size="13" fill="#78350f" font-weight="bold">p (768维)</text>
+
+  <line x1="290" y1="329" x2="290" y2="352" stroke="#b45309" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Dense vector d -->
+  <rect x="235" y="190" width="110" height="36" rx="8" fill="#60a5fa" opacity="0.85"/>
+  <text x="290" y="213" text-anchor="middle" font-size="13" fill="#1e3a5f" font-weight="bold">d (768维)</text>
+
+  <!-- Arrow BGE -> d -->
+  <line x1="150" y1="217" x2="232" y2="210" stroke="#2563EB" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+
+  <!-- FUSION circle -->
+  <ellipse cx="460" cy="290" rx="60" ry="50" fill="#7c3aed" filter="url(#shadow)" opacity="0.9"/>
+  <text x="460" y="282" text-anchor="middle" font-size="14" fill="white" font-weight="bold">加权融合</text>
+  <text x="460" y="302" text-anchor="middle" font-size="11" fill="#ddd6fe">0.95d + 0.05p</text>
+  <text x="460" y="316" text-anchor="middle" font-size="10" fill="#c4b5fd">+ L2归一化</text>
+
+  <!-- Arrows to fusion -->
+  <path d="M345,208 Q400,230 420,265" fill="none" stroke="#2563EB" stroke-width="2.5" marker-end="url(#arrowBlue)"/>
+  <path d="M345,373 Q400,350 420,310" fill="none" stroke="#b45309" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Output q vector -->
+  <rect x="560" y="270" width="110" height="42" rx="10" fill="#7c3aed" filter="url(#shadow)"/>
+  <text x="615" y="296" text-anchor="middle" font-size="15" fill="white" font-weight="bold">q 融合向量</text>
+
+  <line x1="520" y1="290" x2="557" y2="290" stroke="#7c3aed" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Single search -->
+  <rect x="710" y="255" width="150" height="72" rx="14" fill="#1e293b" filter="url(#shadow)"/>
+  <text x="785" y="282" text-anchor="middle" font-size="14" fill="#facc15" font-weight="bold">🔍 单次检索</text>
+  <text x="785" y="302" text-anchor="middle" font-size="12" fill="#94a3b8">B5 索引 · 点积</text>
+  <text x="785" y="319" text-anchor="middle" font-size="11" fill="#64748b">返回 Top-K</text>
+
+  <line x1="670" y1="291" x2="707" y2="291" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- ========== BOTTOM: Comparison ========== -->
+  <line x1="50" y1="430" x2="850" y2="430" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="450" y="460" text-anchor="middle" font-size="18" font-weight="bold" fill="#334155">RRF vs B5 投影融合 效果对比</text>
+
+  <!-- RRF card -->
+  <rect x="80" y="480" width="320" height="110" rx="14" fill="white" stroke="#e2e8f0" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="80" y="480" width="320" height="36" rx="14" fill="#ef4444" opacity="0.9"/>
+  <rect x="80" y="503" width="320" height="3" fill="#ef4444" opacity="0"/>
+  <text x="240" y="505" text-anchor="middle" font-size="15" fill="white" font-weight="bold">❌ RRF 排名融合</text>
+  <text x="240" y="538" text-anchor="middle" font-size="13" fill="#64748b">两次查询 → 合并排名</text>
+  <text x="130" y="565" font-size="16" fill="#ef4444" font-weight="bold">1271 ms</text>
+  <text x="280" y="565" font-size="16" fill="#ef4444" font-weight="bold">ILD@10 = 0.176</text>
+
+  <!-- B5 card -->
+  <rect x="500" y="480" width="320" height="110" rx="14" fill="white" stroke="#e2e8f0" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="500" y="480" width="320" height="36" rx="14" fill="#059669" opacity="0.9"/>
+  <rect x="500" y="503" width="320" height="3" fill="#059669" opacity="0"/>
+  <text x="660" y="505" text-anchor="middle" font-size="15" fill="white" font-weight="bold">✅ B5 投影融合</text>
+  <text x="660" y="538" text-anchor="middle" font-size="13" fill="#64748b">预融合 → 单次查询</text>
+  <text x="548" y="565" font-size="16" fill="#059669" font-weight="bold">847 ms</text>
+  <text x="700" y="565" font-size="16" fill="#059669" font-weight="bold">ILD@10 = 0.389</text>
+
+  <!-- Highlight labels -->
+  <rect x="410" y="527" width="80" height="24" rx="12" fill="#fef3c7"/>
+  <text x="450" y="544" text-anchor="middle" font-size="12" fill="#b45309" font-weight="bold">快 33%↑</text>
+  <rect x="410" y="558" width="80" height="24" rx="12" fill="#d1fae5"/>
+  <text x="450" y="575" text-anchor="middle" font-size="12" fill="#065f46" font-weight="bold">多样 2.2×</text>
+
+  <!-- JL note -->
+  <text x="290" y="405" text-anchor="middle" font-size="11" fill="#94a3b8" font-style="italic">Johnson-Lindenstrauss 定理保证投影保持距离关系</text>
+</svg>

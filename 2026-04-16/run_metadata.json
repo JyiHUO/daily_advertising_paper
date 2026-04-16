@@ -1,0 +1,19 @@
+{
+  "date": "2026-04-16",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL"
+  ],
+  "candidate_count": 5,
+  "supplementary_count": 7,
+  "focus_titles": [
+    "Hybrid Retrieval for COVID-19 Literature: Comparing Rank Fusion and Projection Fusion with Diversity Reranking",
+    "DUET: Joint Exploration of User Item Profiles in Recommendation System"
+  ],
+  "focus_status": {
+    "Hybrid Retrieval for COVID-19 Literature: Comparing Rank Fusion and Projection Fusion with Diversity Reranking": "completed",
+    "DUET: Joint Exploration of User Item Profiles in Recommendation System": "completed"
+  }
+}

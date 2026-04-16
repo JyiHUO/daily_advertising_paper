@@ -1,0 +1,117 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2563EB"/>
+    </marker>
+    <linearGradient id="gDoc" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FDE68A"/>
+      <stop offset="100%" style="stop-color:#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="gQuery" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#BFDBFE"/>
+      <stop offset="100%" style="stop-color:#3B82F6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="580" rx="18" fill="#F8FAFC"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E293B">B5 投影融合：查询端 vs 文档端 非对称调优</text>
+  <text x="450" y="68" text-anchor="middle" font-size="14" fill="#64748B">核心思想：文档索引一次固定，查询端自由调参，无需重建索引</text>
+
+  <!-- ============ LEFT: Document Side ============ -->
+  <rect x="40" y="100" width="360" height="370" rx="16" fill="#FFFBEB" stroke="#F59E0B" stroke-width="2"/>
+  <text x="220" y="132" text-anchor="middle" font-size="18" font-weight="bold" fill="#92400E">📄 文档端 (离线索引)</text>
+  <text x="220" y="155" text-anchor="middle" font-size="13" fill="#B45309">索引一次，固定不变</text>
+
+  <!-- Two sub-blocks for doc -->
+  <rect x="70" y="180" width="140" height="70" rx="10" fill="#3B82F6" opacity="0.85"/>
+  <text x="140" y="210" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">BGE 稠密</text>
+  <text x="140" y="232" text-anchor="middle" font-size="13" fill="#DBEAFE">语义向量</text>
+
+  <rect x="230" y="180" width="140" height="70" rx="10" fill="#10B981" opacity="0.85"/>
+  <text x="300" y="210" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">SPLADE 投影</text>
+  <text x="300" y="232" text-anchor="middle" font-size="13" fill="#D1FAE5">词汇→稠密</text>
+
+  <!-- Merge arrow -->
+  <line x1="140" y1="250" x2="140" y2="285" stroke="#555" stroke-width="1.5"/>
+  <line x1="300" y1="250" x2="300" y2="285" stroke="#555" stroke-width="1.5"/>
+  <line x1="140" y1="285" x2="300" y2="285" stroke="#555" stroke-width="1.5"/>
+  <line x1="220" y1="285" x2="220" y2="310" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Mixed doc vector -->
+  <rect x="100" y="312" width="240" height="65" rx="12" fill="url(#gDoc)"/>
+  <text x="220" y="340" text-anchor="middle" font-size="16" font-weight="bold" fill="#78350F">α_doc = 0.50</text>
+  <text x="220" y="362" text-anchor="middle" font-size="13" fill="#92400E">50% 稠密 + 50% 投影 = 平衡</text>
+
+  <!-- Lock icon -->
+  <rect x="330" y="395" width="50" height="50" rx="8" fill="#FEF3C7" stroke="#D97706" stroke-width="1.5"/>
+  <text x="355" y="427" text-anchor="middle" font-size="26">🔒</text>
+  <text x="220" y="448" text-anchor="middle" font-size="12" fill="#92400E" font-weight="bold">17万文档一次编码，不再改动</text>
+
+  <!-- ============ RIGHT: Query Side ============ -->
+  <rect x="500" y="100" width="360" height="370" rx="16" fill="#EFF6FF" stroke="#3B82F6" stroke-width="2"/>
+  <text x="680" y="132" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E40AF">🔍 查询端 (在线调参)</text>
+  <text x="680" y="155" text-anchor="middle" font-size="13" fill="#2563EB">实时计算，自由调整</text>
+
+  <!-- Query sub-blocks -->
+  <rect x="530" y="180" width="130" height="70" rx="10" fill="#3B82F6"/>
+  <text x="595" y="210" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">BGE 稠密</text>
+  <text x="595" y="232" text-anchor="middle" font-size="13" fill="#DBEAFE">95%</text>
+
+  <rect x="700" y="180" width="130" height="70" rx="10" fill="#10B981" opacity="0.5"/>
+  <text x="765" y="210" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">SPLADE 投影</text>
+  <text x="765" y="232" text-anchor="middle" font-size="13" fill="#D1FAE5">5%</text>
+
+  <!-- Big dense bar, small projection bar -->
+  <rect x="540" y="268" width="190" height="18" rx="4" fill="#3B82F6"/>
+  <rect x="730" y="268" width="10" height="18" rx="4" fill="#10B981"/>
+  <text x="680" y="304" text-anchor="middle" font-size="12" fill="#64748B">← 95% 稠密 | 5% 投影 →</text>
+
+  <!-- Mixed query vector -->
+  <rect x="560" y="322" width="240" height="65" rx="12" fill="url(#gQuery)"/>
+  <text x="680" y="350" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E3A8A">α_query = 0.95</text>
+  <text x="680" y="372" text-anchor="middle" font-size="13" fill="#1E40AF">大幅偏向稠密，微量投影补充</text>
+
+  <!-- Tuning knob icon -->
+  <rect x="522" y="395" width="50" height="50" rx="8" fill="#DBEAFE" stroke="#2563EB" stroke-width="1.5"/>
+  <text x="547" y="427" text-anchor="middle" font-size="26">🎛️</text>
+  <text x="680" y="448" text-anchor="middle" font-size="12" fill="#1E40AF" font-weight="bold">随时调 α_query，无需重建索引</text>
+
+  <!-- ============ BOTTOM: Result Comparison ============ -->
+  <rect x="150" y="490" width="600" height="75" rx="14" fill="#F0FDF4" stroke="#22C55E" stroke-width="2"/>
+  <text x="450" y="518" text-anchor="middle" font-size="15" font-weight="bold" fill="#166534">📊 效果对比</text>
+  
+  <!-- α=0.50 -->
+  <rect x="180" y="530" width="120" height="24" rx="6" fill="#FCA5A5"/>
+  <text x="240" y="547" text-anchor="middle" font-size="12" font-weight="bold" fill="#7F1D1D">α_q=0.50 → 0.475</text>
+  
+  <!-- Arrow -->
+  <text x="330" y="547" text-anchor="middle" font-size="18" fill="#555">→</text>
+
+  <!-- α=0.95 -->
+  <rect x="365" y="530" width="120" height="24" rx="6" fill="#86EFAC"/>
+  <text x="425" y="547" text-anchor="middle" font-size="12" font-weight="bold" fill="#14532D">α_q=0.95 → 0.678</text>
+  
+  <!-- Arrow -->
+  <text x="520" y="547" text-anchor="middle" font-size="18" fill="#555">＝</text>
+  
+  <!-- Gain -->
+  <rect x="555" y="530" width="170" height="24" rx="6" fill="#22C55E"/>
+  <text x="640" y="547" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">nDCG@10 提升 +42.7%</text>
+
+  <!-- Connection arrows from doc and query to bottom -->
+  <line x1="220" y1="377" x2="220" y2="470" stroke="#F59E0B" stroke-width="2" stroke-dasharray="6,4"/>
+  <line x1="220" y1="470" x2="350" y2="490" stroke="#F59E0B" stroke-width="2" marker-end="url(#arrow)"/>
+  
+  <line x1="680" y1="387" x2="680" y2="470" stroke="#3B82F6" stroke-width="2" stroke-dasharray="6,4"/>
+  <line x1="680" y1="470" x2="550" y2="490" stroke="#3B82F6" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <!-- Key insight callout -->
+  <rect x="570" y="82" width="180" height="22" rx="6" fill="#EF4444" opacity="0.12"/>
+  <text x="660" y="97" text-anchor="middle" font-size="11" font-weight="bold" fill="#DC2626">💡 核心：非对称 = 省钱 + 灵活</text>
+</svg>

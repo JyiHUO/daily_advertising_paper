@@ -1,0 +1,129 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f6d365"/>
+      <stop offset="100%" stop-color="#fda085"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#43e97b"/>
+      <stop offset="100%" stop-color="#38f9d7"/>
+    </linearGradient>
+    <linearGradient id="purple" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a18cd1"/>
+      <stop offset="100%" stop-color="#fbc2eb"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="600" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">DUET 双指标验证：语义对齐 × 事实忠实</text>
+  <text x="450" y="66" text-anchor="middle" fill="#8899bb" font-size="13">画像既"说同一件事"，又"有据可查"</text>
+
+  <!-- ===== LEFT: Semantic Alignment concept ===== -->
+  <rect x="40" y="90" width="380" height="200" rx="16" fill="#162040" stroke="#3a5080" stroke-width="1.5"/>
+  <text x="230" y="118" text-anchor="middle" fill="url(#gold)" font-size="16" font-weight="bold">📐 语义对齐度（Cosine Similarity）</text>
+
+  <!-- User profile bubble -->
+  <rect x="65" y="140" width="150" height="54" rx="27" fill="#1e3a6a" stroke="#5b8def" stroke-width="1.5"/>
+  <text x="140" y="163" text-anchor="middle" fill="#a0c4ff" font-size="12" font-weight="bold">用户画像</text>
+  <text x="140" y="180" text-anchor="middle" fill="#7aafff" font-size="11">"喜欢放克风格"</text>
+
+  <!-- Item profile bubble -->
+  <rect x="245" y="140" width="150" height="54" rx="27" fill="#1e3a6a" stroke="#5b8def" stroke-width="1.5"/>
+  <text x="320" y="163" text-anchor="middle" fill="#a0c4ff" font-size="12" font-weight="bold">物品画像</text>
+  <text x="320" y="180" text-anchor="middle" fill="#7aafff" font-size="11">"放克摇滚专辑"</text>
+
+  <!-- Double arrow between them -->
+  <line x1="218" y1="167" x2="242" y2="167" stroke="#fda085" stroke-width="2.5" marker-end="url(#arrowOrange)"/>
+  <marker id="arrowOrange" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+    <path d="M0,0 L8,4 L0,8 Z" fill="#fda085"/>
+  </marker>
+
+  <!-- Alignment icon -->
+  <circle cx="230" y="230" r="24" fill="none" stroke="url(#gold)" stroke-width="2.5" filter="url(#glow)"/>
+  <text x="230" y="236" text-anchor="middle" fill="#fda085" font-size="22" font-weight="bold">≈</text>
+  <text x="230" y="272" text-anchor="middle" fill="#ccc" font-size="11">embedding 越近 → 语义越匹配</text>
+
+  <!-- ===== RIGHT: Coverage concept ===== -->
+  <rect x="480" y="90" width="380" height="200" rx="16" fill="#162040" stroke="#3a5080" stroke-width="1.5"/>
+  <text x="670" y="118" text-anchor="middle" fill="url(#teal)" font-size="16" font-weight="bold">📋 覆盖率（Token Overlap）</text>
+
+  <!-- History doc -->
+  <rect x="510" y="138" width="130" height="60" rx="8" fill="#1a3340" stroke="#38f9d7" stroke-width="1.2"/>
+  <text x="575" y="158" text-anchor="middle" fill="#88ddcc" font-size="11" font-weight="bold">历史记录</text>
+  <text x="575" y="174" text-anchor="middle" fill="#6cc" font-size="10">"购买了奇幻小说..."</text>
+  <text x="575" y="188" text-anchor="middle" fill="#6cc" font-size="10">"评论了科幻经典..."</text>
+
+  <!-- Arrow -->
+  <path d="M645,168 L680,168" stroke="#43e97b" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+    <path d="M0,0 L8,4 L0,8 Z" fill="#43e97b"/>
+  </marker>
+
+  <!-- Profile with highlighted tokens -->
+  <rect x="690" y="138" width="145" height="60" rx="8" fill="#1a3340" stroke="#38f9d7" stroke-width="1.2"/>
+  <text x="762" y="158" text-anchor="middle" fill="#88ddcc" font-size="11" font-weight="bold">生成画像</text>
+  <text x="762" y="176" text-anchor="middle" fill="#6cc" font-size="10">"<tspan fill="#43e97b" font-weight="bold">奇幻</tspan>与<tspan fill="#43e97b" font-weight="bold">科幻</tspan>爱好者"</text>
+
+  <!-- Coverage icon -->
+  <circle cx="670" cy="230" r="24" fill="none" stroke="url(#teal)" stroke-width="2.5" filter="url(#glow)"/>
+  <text x="670" y="236" text-anchor="middle" fill="#43e97b" font-size="22" font-weight="bold">✓</text>
+  <text x="670" y="272" text-anchor="middle" fill="#ccc" font-size="11">词越多来自历史 → 越有事实依据</text>
+
+  <!-- ===== BOTTOM: Comparison bars ===== -->
+  <rect x="40" y="310" width="820" height="265" rx="16" fill="#111d35" stroke="#2a4070" stroke-width="1.5"/>
+  <text x="450" y="340" text-anchor="middle" fill="#fff" font-size="17" font-weight="bold">Amazon Books 数据集对比</text>
+
+  <!-- Axis labels -->
+  <text x="125" y="370" text-anchor="middle" fill="#aab" font-size="12">方法</text>
+  <text x="420" y="370" text-anchor="middle" fill="url(#gold)" font-size="12" font-weight="bold">语义对齐度 ↑</text>
+  <text x="700" y="370" text-anchor="middle" fill="url(#teal)" font-size="12" font-weight="bold">覆盖率 ↑</text>
+
+  <!-- DUET row -->
+  <text x="125" y="408" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">DUET</text>
+  <!-- Alignment bar -->
+  <rect x="260" y="392" width="292" height="22" rx="6" fill="url(#gold)" opacity="0.9" filter="url(#glow)"/>
+  <text x="560" y="408" text-anchor="start" fill="#fda085" font-size="13" font-weight="bold"> 0.729</text>
+  <!-- Coverage bar -->
+  <rect x="620" y="392" width="139" height="22" rx="6" fill="url(#teal)" opacity="0.8"/>
+  <text x="764" y="408" text-anchor="start" fill="#43e97b" font-size="13" font-weight="bold"> 0.33</text>
+
+  <!-- Baseline LG -->
+  <text x="125" y="448" text-anchor="middle" fill="#8899bb" font-size="13">LG</text>
+  <rect x="260" y="432" width="220" height="22" rx="6" fill="#665533" opacity="0.5"/>
+  <text x="488" y="448" text-anchor="start" fill="#bb9966" font-size="12"> 0.551</text>
+  <rect x="620" y="432" width="76" height="22" rx="6" fill="#336655" opacity="0.5"/>
+  <text x="700" y="448" text-anchor="start" fill="#77aa99" font-size="12"> 0.18</text>
+
+  <!-- Baseline KAR -->
+  <text x="125" y="488" text-anchor="middle" fill="#8899bb" font-size="13">KAR</text>
+  <rect x="260" y="472" width="174" height="22" rx="6" fill="#665533" opacity="0.4"/>
+  <text x="442" y="488" text-anchor="start" fill="#bb9966" font-size="12"> 0.434</text>
+  <rect x="620" y="472" width="56" height="22" rx="6" fill="#336655" opacity="0.4"/>
+  <text x="680" y="488" text-anchor="start" fill="#77aa99" font-size="12"> 0.13</text>
+
+  <!-- Baseline RLMRec -->
+  <text x="125" y="528" text-anchor="middle" fill="#8899bb" font-size="13">RLMRec</text>
+  <rect x="260" y="512" width="140" height="22" rx="6" fill="#665533" opacity="0.35"/>
+  <text x="408" y="528" text-anchor="start" fill="#bb9966" font-size="12"> 0.351</text>
+  <rect x="620" y="512" width="160" height="22" rx="6" fill="#336655" opacity="0.6"/>
+  <text x="784" y="528" text-anchor="start" fill="#77aa99" font-size="12"> 0.38</text>
+
+  <!-- Insight callout -->
+  <rect x="180" y="548" width="540" height="28" rx="14" fill="#2a1a40" stroke="url(#purple)" stroke-width="1.5"/>
+  <text x="450" y="567" text-anchor="middle" fill="url(#purple)" font-size="13" font-weight="bold">💡 DUET：唯一同时实现高对齐 + 中高覆盖的方法（联合生成 + RL 优化）</text>
+
+  <!-- Star badge on DUET -->
+  <circle cx="78" y="400" r="10" fill="#fda085" opacity="0.9"/>
+  <text x="78" y="405" text-anchor="middle" fill="#111" font-size="12" font-weight="bold">★</text>
+</svg>

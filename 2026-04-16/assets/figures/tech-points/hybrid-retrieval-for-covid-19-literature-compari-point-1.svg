@@ -1,0 +1,119 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2563EB"/>
+    </marker>
+    <linearGradient id="gSparse" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <linearGradient id="gDense" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="gRRF" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" rx="18" fill="#F8FAFC"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#1E293B">RRF 两路融合：排名代替分数，效果最优</text>
+
+  <!-- Query Box -->
+  <rect x="340" y="68" width="220" height="48" rx="24" fill="#7C3AED" filter="url(#shadow)"/>
+  <text x="450" y="98" text-anchor="middle" font-size="16" fill="#fff" font-weight="bold">🔍 查询: "新冠疫苗副作用"</text>
+
+  <!-- Arrows from query -->
+  <line x1="390" y1="116" x2="210" y2="168" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="510" y1="116" x2="690" y2="168" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- SPLADE Box -->
+  <rect x="80" y="170" width="260" height="185" rx="14" fill="#FFF7ED" stroke="#F59E0B" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="80" y="170" width="260" height="42" rx="14" fill="url(#gSparse)"/>
+  <rect x="80" y="198" width="260" height="14" fill="url(#gSparse)"/>
+  <text x="210" y="198" text-anchor="middle" font-size="17" fill="#fff" font-weight="bold">SPLADE 稀疏检索</text>
+  <text x="210" y="222" text-anchor="middle" font-size="13" fill="#92400E">精确词匹配 · 权重 0.4</text>
+
+  <!-- SPLADE ranked list -->
+  <text x="100" y="252" font-size="13" fill="#78716C" font-weight="bold">排名</text>
+  <text x="175" y="252" font-size="13" fill="#78716C" font-weight="bold">文档</text>
+
+  <rect x="95" y="260" width="230" height="28" rx="6" fill="#FEF3C7"/>
+  <text x="115" y="280" font-size="14" fill="#92400E" font-weight="bold">#1</text>
+  <text x="175" y="280" font-size="14" fill="#78350F">文档 D</text>
+
+  <rect x="95" y="292" width="230" height="28" rx="6" fill="#FDE68A"/>
+  <text x="115" y="312" font-size="14" fill="#92400E" font-weight="bold">#2</text>
+  <text x="175" y="312" font-size="14" fill="#78350F">文档 A ⭐</text>
+
+  <rect x="95" y="324" width="230" height="22" rx="6" fill="#FEF3C7" opacity="0.6"/>
+  <text x="115" y="341" font-size="12" fill="#A8A29E">#8</text>
+  <text x="175" y="341" font-size="12" fill="#A8A29E">文档 B</text>
+
+  <!-- BGE Box -->
+  <rect x="560" y="170" width="260" height="185" rx="14" fill="#EFF6FF" stroke="#3B82F6" stroke-width="2.5" filter="url(#shadow)"/>
+  <rect x="560" y="170" width="260" height="42" rx="14" fill="url(#gDense)"/>
+  <rect x="560" y="198" width="260" height="14" fill="url(#gDense)"/>
+  <text x="690" y="198" text-anchor="middle" font-size="17" fill="#fff" font-weight="bold">BGE 稠密检索</text>
+  <text x="690" y="222" text-anchor="middle" font-size="13" fill="#1E40AF">语义匹配 · 权重 0.6</text>
+
+  <!-- BGE ranked list -->
+  <text x="580" y="252" font-size="13" fill="#78716C" font-weight="bold">排名</text>
+  <text x="655" y="252" font-size="13" fill="#78716C" font-weight="bold">文档</text>
+
+  <rect x="575" y="260" width="230" height="28" rx="6" fill="#DBEAFE"/>
+  <text x="595" y="280" font-size="14" fill="#1E40AF" font-weight="bold">#1</text>
+  <text x="655" y="280" font-size="14" fill="#1E3A5F">文档 C</text>
+
+  <rect x="575" y="292" width="230" height="28" rx="6" fill="#BFDBFE"/>
+  <text x="595" y="312" font-size="14" fill="#1E40AF" font-weight="bold">#5</text>
+  <text x="655" y="312" font-size="14" fill="#1E3A5F">文档 A ⭐</text>
+
+  <rect x="575" y="324" width="230" height="22" rx="6" fill="#DBEAFE" opacity="0.6"/>
+  <text x="595" y="341" font-size="12" fill="#A8A29E">#12</text>
+  <text x="655" y="341" font-size="12" fill="#A8A29E">文档 E</text>
+
+  <!-- Arrows to RRF -->
+  <line x1="210" y1="355" x2="350" y2="415" stroke="#D97706" stroke-width="2.5" marker-end="url(#arrow)" stroke-dasharray="6,3"/>
+  <line x1="690" y1="355" x2="550" y2="415" stroke="#2563EB" stroke-width="2.5" marker-end="url(#arrow)" stroke-dasharray="6,3"/>
+
+  <!-- Label: only rank matters -->
+  <text x="450" y="398" text-anchor="middle" font-size="13" fill="#64748B" font-style="italic">只看排名，不看原始分数</text>
+
+  <!-- RRF Fusion Box -->
+  <rect x="280" y="410" width="340" height="130" rx="16" fill="#ECFDF5" stroke="#10B981" stroke-width="3" filter="url(#shadow)"/>
+  <rect x="280" y="410" width="340" height="42" rx="16" fill="url(#gRRF)"/>
+  <rect x="280" y="438" width="340" height="14" fill="url(#gRRF)"/>
+  <text x="450" y="438" text-anchor="middle" font-size="18" fill="#fff" font-weight="bold">RRF 排名融合</text>
+
+  <!-- Formula -->
+  <text x="450" y="472" text-anchor="middle" font-size="14" fill="#065F46" font-weight="bold">score = Σ wᵢ / (60 + rankᵢ)</text>
+
+  <!-- Example calculation -->
+  <text x="310" y="498" font-size="12.5" fill="#047857">文档A: 0.4/(60+2) + 0.6/(60+5)</text>
+  <text x="310" y="516" font-size="13" fill="#065F46" font-weight="bold">= 0.01568  ← 两路都命中，分更高！</text>
+
+  <text x="310" y="534" font-size="12.5" fill="#6B7280">文档C: 0.6/(60+1) + 0 = 0.00984</text>
+
+  <!-- Result highlight -->
+  <rect x="250" y="558" width="400" height="50" rx="14" fill="#059669" filter="url(#shadow)"/>
+  <text x="450" y="580" text-anchor="middle" font-size="15" fill="#fff" font-weight="bold">🏆 RRF 融合 nDCG@10 = 0.828</text>
+  <text x="450" y="599" text-anchor="middle" font-size="13" fill="#A7F3D0">比纯稠密 +6.1%  |  比纯稀疏 +14.9%</text>
+
+  <!-- Key insight callout -->
+  <rect x="670" y="430" width="205" height="68" rx="12" fill="#FEF2F2" stroke="#EF4444" stroke-width="1.5"/>
+  <text x="772" y="454" text-anchor="middle" font-size="13" fill="#DC2626" font-weight="bold">💡 核心洞察</text>
+  <text x="772" y="474" text-anchor="middle" font-size="12" fill="#991B1B">两路都出现的文档</text>
+  <text x="772" y="490" text-anchor="middle" font-size="12" fill="#991B1B">排名自然更靠前</text>
+
+</svg>

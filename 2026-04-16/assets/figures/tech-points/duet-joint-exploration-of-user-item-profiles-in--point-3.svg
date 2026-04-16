@@ -1,0 +1,113 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#555">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#2e7d32">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#c62828">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f7fa"/>
+      <stop offset="100%" stop-color="#e8ecf1"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" rx="18" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a237e">DUET: RL驱动的画像优化</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#666">核心思想：用推荐效果作为奖励，强化学习优化画像生成</text>
+
+  <!-- ===== Module 1: LLM Generator ===== -->
+  <rect x="40" y="100" width="200" height="110" rx="14" fill="#e3f2fd" stroke="#1565c0" stroke-width="2" filter="url(#shadow)"/>
+  <text x="140" y="132" text-anchor="middle" font-size="15" font-weight="bold" fill="#1565c0">🤖 LLM 画像生成器</text>
+  <text x="140" y="158" text-anchor="middle" font-size="12" fill="#333">对同一 用户-物品 对</text>
+  <text x="140" y="178" text-anchor="middle" font-size="13" font-weight="bold" fill="#1565c0">采样 N 组画像</text>
+  <text x="140" y="198" text-anchor="middle" font-size="11" fill="#777">（不同描述策略）</text>
+
+  <!-- Arrow from LLM to Samples -->
+  <line x1="240" y1="155" x2="298" y2="155" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ===== Module 2: Sample Groups ===== -->
+  <rect x="300" y="95" width="220" height="120" rx="14" fill="#fff" stroke="#bbb" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="410" y="118" text-anchor="middle" font-size="13" font-weight="bold" fill="#444">采样画像组</text>
+
+  <!-- Sample A (good) -->
+  <rect x="315" y="128" width="190" height="34" rx="8" fill="#c8e6c9" stroke="#43a047" stroke-width="1.5"/>
+  <text x="325" y="149" font-size="11" fill="#2e7d32" font-weight="bold">画像A</text>
+  <text x="410" y="149" font-size="11" fill="#333">"放克风格爱好者"</text>
+
+  <!-- Sample B (bad) -->
+  <rect x="315" y="170" width="190" height="34" rx="8" fill="#ffcdd2" stroke="#e53935" stroke-width="1.5"/>
+  <text x="325" y="191" font-size="11" fill="#c62828" font-weight="bold">画像B</text>
+  <text x="410" y="191" font-size="11" fill="#333">"金属风格爱好者"</text>
+
+  <!-- Arrow from Samples to Recommender -->
+  <line x1="520" y1="155" x2="578" y2="155" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="549" y="145" text-anchor="middle" font-size="10" fill="#888">送入</text>
+
+  <!-- ===== Module 3: Frozen Recommender ===== -->
+  <rect x="580" y="95" width="180" height="120" rx="14" fill="#fff3e0" stroke="#ef6c00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="670" y="122" text-anchor="middle" font-size="14" font-weight="bold" fill="#e65100">❄️ 冻结推荐模型</text>
+  <text x="670" y="143" text-anchor="middle" font-size="11" fill="#888">（充当 RL 环境）</text>
+
+  <!-- Prediction A -->
+  <text x="670" y="168" text-anchor="middle" font-size="12" fill="#2e7d32" font-weight="bold">A → 预测 4.8 分</text>
+  <!-- Prediction B -->
+  <text x="670" y="192" text-anchor="middle" font-size="12" fill="#c62828" font-weight="bold">B → 预测 3.0 分</text>
+  <text x="670" y="210" text-anchor="middle" font-size="10" fill="#999">真实: 5.0 分</text>
+
+  <!-- ===== Big Arrow Down to Reward ===== -->
+  <path d="M670,218 L670,268" stroke="#ef6c00" stroke-width="2.5" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- ===== Module 4: Reward Computation ===== -->
+  <rect x="490" y="272" width="360" height="130" rx="14" fill="#fce4ec" stroke="#ad1457" stroke-width="2" filter="url(#shadow)"/>
+  <text x="670" y="298" text-anchor="middle" font-size="15" font-weight="bold" fill="#ad1457">🎯 连续奖励计算</text>
+
+  <!-- Formula -->
+  <rect x="520" y="310" width="300" height="40" rx="8" fill="#fff" stroke="#ddd" stroke-width="1"/>
+  <text x="670" y="335" text-anchor="middle" font-size="14" fill="#333">R = 1 − |预测评分 − 真实评分| / 4</text>
+
+  <!-- Reward results -->
+  <text x="580" y="378" text-anchor="middle" font-size="13" fill="#2e7d32" font-weight="bold">画像A: R = 0.95 ✓</text>
+  <text x="760" y="378" text-anchor="middle" font-size="13" fill="#c62828" font-weight="bold">画像B: R = 0.50 ✗</text>
+
+  <!-- ===== Arrow from Reward to GRPO ===== -->
+  <path d="M490,370 L340,370 L340,430" stroke="#555" stroke-width="2.5" marker-end="url(#arrow)" fill="none"/>
+  <text x="400" y="362" text-anchor="middle" font-size="10" fill="#888">奖励反馈</text>
+
+  <!-- ===== Module 5: GRPO Update ===== -->
+  <rect x="160" y="435" width="360" height="130" rx="14" fill="#ede7f6" stroke="#5e35b1" stroke-width="2" filter="url(#shadow)"/>
+  <text x="340" y="465" text-anchor="middle" font-size="15" font-weight="bold" fill="#5e35b1">⚡ GRPO 策略更新</text>
+  <text x="340" y="490" text-anchor="middle" font-size="12" fill="#555">组内相对优势估计</text>
+
+  <!-- Up arrow for good -->
+  <rect x="195" y="505" width="135" height="44" rx="8" fill="#c8e6c9" stroke="#43a047" stroke-width="1.5"/>
+  <text x="262" y="522" text-anchor="middle" font-size="20" fill="#2e7d32">↑</text>
+  <text x="262" y="542" text-anchor="middle" font-size="11" font-weight="bold" fill="#2e7d32">强化 画像A</text>
+
+  <!-- Down arrow for bad -->
+  <rect x="350" y="505" width="135" height="44" rx="8" fill="#ffcdd2" stroke="#e53935" stroke-width="1.5"/>
+  <text x="417" y="522" text-anchor="middle" font-size="20" fill="#c62828">↓</text>
+  <text x="417" y="542" text-anchor="middle" font-size="11" font-weight="bold" fill="#c62828">抑制 画像B</text>
+
+  <!-- ===== Feedback loop arrow from GRPO back to LLM ===== -->
+  <path d="M160,500 Q60,500 60,320 Q60,200 105,210" stroke="#5e35b1" stroke-width="2.5" stroke-dasharray="8,4" marker-end="url(#arrow)" fill="none"/>
+  <text x="42" y="355" text-anchor="middle" font-size="11" fill="#5e35b1" font-weight="bold" transform="rotate(-90, 42, 355)">更新生成策略</text>
+
+  <!-- ===== Bottom highlight: ablation result ===== -->
+  <rect x="570" y="470" width="290" height="80" rx="12" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" filter="url(#shadow)"/>
+  <text x="715" y="497" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e7d32">📊 消融实验验证</text>
+  <text x="715" y="518" text-anchor="middle" font-size="12" fill="#333">有 RL: <tspan font-weight="bold" fill="#2e7d32">61.23%</tspan> 准确率</text>
+  <text x="715" y="538" text-anchor="middle" font-size="12" fill="#333">无 RL: <tspan font-weight="bold" fill="#c62828">48.53%</tspan> 准确率（-12.7%）</text>
+
+  <!-- Iteration label -->
+  <text x="450" y="600" text-anchor="middle" font-size="12" fill="#999">多轮迭代 → 收敛到高质量对齐画像的生成策略</text>
+</svg>

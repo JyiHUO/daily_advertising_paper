@@ -1,0 +1,115 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="b5grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00c9a7"/>
+      <stop offset="100%" stop-color="#00b4d8"/>
+    </linearGradient>
+    <linearGradient id="rrfgrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f77f00"/>
+      <stop offset="100%" stop-color="#fcbf49"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#8899bb"/>
+    </marker>
+    <marker id="arrowG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#00c9a7"/>
+    </marker>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="560" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#e8edf5">B5 投影融合：关键词改写下最鲁棒</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#7a8fb5">向量内融合 vs 排名级融合 · 查询风格鲁棒性对比</text>
+
+  <!-- Left: Query rewrite box -->
+  <rect x="30" y="95" width="220" height="200" rx="14" fill="#1e2f4d" stroke="#3a5280" stroke-width="1.5"/>
+  <text x="140" y="122" text-anchor="middle" font-size="15" font-weight="bold" fill="#c5d0e6">查询改写风格</text>
+
+  <rect x="50" y="140" width="180" height="36" rx="8" fill="#263a5e"/>
+  <text x="60" y="163" font-size="13" fill="#8899bb">A</text>
+  <text x="82" y="163" font-size="12" fill="#a8b8d8">对话式 (长句)</text>
+
+  <rect x="50" y="184" width="180" height="36" rx="8" fill="#263a5e"/>
+  <text x="60" y="207" font-size="13" fill="#8899bb">B</text>
+  <text x="82" y="207" font-size="12" fill="#a8b8d8">半技术 (混合)</text>
+
+  <rect x="50" y="228" width="180" height="36" rx="8" fill="#2a4a3a" stroke="#00c9a7" stroke-width="1.5"/>
+  <text x="60" y="251" font-size="13" fill="#00c9a7" font-weight="bold">C</text>
+  <text x="82" y="251" font-size="12" fill="#00c9a7" font-weight="bold">关键词式 ⭐</text>
+
+  <!-- Arrow from query to middle -->
+  <line x1="255" y1="195" x2="305" y2="195" stroke="#8899bb" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Middle: B5 fusion mechanism -->
+  <rect x="310" y="100" width="270" height="190" rx="16" fill="#162238" stroke="#00c9a7" stroke-width="2"/>
+  <text x="445" y="128" text-anchor="middle" font-size="16" font-weight="bold" fill="#00c9a7">B5 投影融合</text>
+  <text x="445" y="148" text-anchor="middle" font-size="11" fill="#6a8aaa">SPLADE + BGE → 单一向量</text>
+
+  <!-- Two signal boxes inside B5 -->
+  <rect x="328" y="163" width="110" height="55" rx="10" fill="#1a3a30" stroke="#00c9a7" stroke-width="1" stroke-dasharray="4"/>
+  <text x="383" y="185" text-anchor="middle" font-size="12" font-weight="bold" fill="#00e6c3">SPLADE</text>
+  <text x="383" y="203" text-anchor="middle" font-size="10" fill="#6abfaa">精确匹配 bat, zoonotic</text>
+
+  <rect x="452" y="163" width="110" height="55" rx="10" fill="#1a2a45" stroke="#00b4d8" stroke-width="1" stroke-dasharray="4"/>
+  <text x="507" y="185" text-anchor="middle" font-size="12" font-weight="bold" fill="#00b4d8">BGE</text>
+  <text x="507" y="203" text-anchor="middle" font-size="10" fill="#6aaccc">语义理解 整体含义</text>
+
+  <!-- Merge symbol -->
+  <text x="445" y="243" text-anchor="middle" font-size="20" fill="#00c9a7" font-weight="bold">⊕</text>
+  <text x="445" y="262" text-anchor="middle" font-size="10" fill="#5a9a8a">单次检索 · 信号协同</text>
+  <line x1="383" y1="222" x2="430" y2="238" stroke="#00c9a7" stroke-width="1.5"/>
+  <line x1="507" y1="222" x2="460" y2="238" stroke="#00b4d8" stroke-width="1.5"/>
+
+  <!-- Arrow to result -->
+  <line x1="580" y1="195" x2="620" y2="195" stroke="#00c9a7" stroke-width="2" marker-end="url(#arrowG)"/>
+
+  <!-- Right: Result comparison (bar chart style) -->
+  <rect x="625" y="90" width="250" height="210" rx="14" fill="#1e2f4d" stroke="#3a5280" stroke-width="1.5"/>
+  <text x="750" y="118" text-anchor="middle" font-size="15" font-weight="bold" fill="#c5d0e6">关键词改写 nDCG@10</text>
+
+  <!-- B5 bar -->
+  <rect x="660" y="145" width="170" height="38" rx="8" fill="url(#b5grad)" opacity="0.9" filter="url(#glow)"/>
+  <text x="670" y="169" font-size="13" font-weight="bold" fill="#0f1729">B5</text>
+  <text x="810" y="169" font-size="16" font-weight="bold" fill="#0f1729" text-anchor="end">0.737</text>
+  <text x="838" y="169" font-size="12" font-weight="bold" fill="#00ff9f">↑8.8%</text>
+
+  <!-- RRF bar -->
+  <rect x="660" y="195" width="155" height="38" rx="8" fill="url(#rrfgrad)" opacity="0.7"/>
+  <text x="670" y="219" font-size="13" font-weight="bold" fill="#1a1a00">RRF</text>
+  <text x="795" y="219" font-size="16" font-weight="bold" fill="#1a1a00" text-anchor="end">0.784</text>
+
+  <!-- Baseline reference -->
+  <line x1="807" y1="140" x2="807" y2="245" stroke="#556688" stroke-width="1" stroke-dasharray="4"/>
+  <text x="810" y="257" font-size="9" fill="#556688">基准0.678</text>
+
+  <!-- Bottom: Key insight comparison -->
+  <rect x="50" y="340" width="380" height="180" rx="14" fill="#162238" stroke="#00c9a7" stroke-width="2"/>
+  <text x="240" y="370" text-anchor="middle" font-size="16" font-weight="bold" fill="#00c9a7">✓ B5 向量内融合</text>
+
+  <text x="70" y="400" font-size="13" fill="#a8d8c8">• 两种信号在同一向量内协同</text>
+  <text x="70" y="425" font-size="13" fill="#a8d8c8">• 关键词增多 → 精确+语义同步增强</text>
+  <text x="70" y="450" font-size="13" fill="#a8d8c8">• 单次查询，延迟低 33%</text>
+  <text x="70" y="480" font-size="14" font-weight="bold" fill="#00ff9f">→ 改写后 nDCG 不降反升 +8.8%</text>
+
+  <rect x="470" y="340" width="380" height="180" rx="14" fill="#2a2018" stroke="#f77f00" stroke-width="2"/>
+  <text x="660" y="370" text-anchor="middle" font-size="16" font-weight="bold" fill="#fcbf49">✗ RRF 排名级融合</text>
+
+  <text x="490" y="400" font-size="13" fill="#d8c8a8">• 两路独立检索后合并排名</text>
+  <text x="490" y="425" font-size="13" fill="#d8c8a8">• 一路若不适应改写风格 → 拖累整体</text>
+  <text x="490" y="450" font-size="13" fill="#d8c8a8">• 两次查询，延迟更高</text>
+  <text x="490" y="480" font-size="14" font-weight="bold" fill="#ff6b6b">→ 半技术改写下降 -13.6%</text>
+
+  <!-- VS symbol -->
+  <circle cx="450" cy="430" r="24" fill="#1a2744" stroke="#556688" stroke-width="2"/>
+  <text x="450" y="436" text-anchor="middle" font-size="16" font-weight="bold" fill="#8899bb">VS</text>
+</svg>

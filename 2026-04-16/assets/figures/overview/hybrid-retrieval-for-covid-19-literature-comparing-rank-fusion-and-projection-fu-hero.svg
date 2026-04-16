@@ -1,0 +1,216 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="sparseGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="denseGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="rrfGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="b5Grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="mmrGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#db2777"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrowWhite" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#94a3b8" stroke-width="1.2"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#a78bfa" stroke-width="1.2"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#34d399" stroke-width="1.2"/>
+    </marker>
+    <marker id="arrowPink" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#f472b6" stroke-width="1.2"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bgGrad)" rx="12"/>
+
+  <!-- Title area -->
+  <text x="450" y="38" text-anchor="middle" fill="#e2e8f0" font-size="17" font-weight="700" letter-spacing="0.5">Hybrid Retrieval: Rank Fusion vs Projection Fusion + Diversity Reranking</text>
+  <text x="450" y="58" text-anchor="middle" fill="#64748b" font-size="11">TREC-COVID · 170K papers · 50 expert queries</text>
+
+  <!-- ===== LEFT: Query ===== -->
+  <rect x="30" y="100" width="120" height="50" rx="25" fill="none" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="90" y="121" text-anchor="middle" fill="#cbd5e1" font-size="12" font-weight="600">Query</text>
+  <text x="90" y="137" text-anchor="middle" fill="#64748b" font-size="9">"COVID vaccine effects"</text>
+
+  <!-- ===== DUAL ENCODERS ===== -->
+  <!-- SPLADE -->
+  <rect x="200" y="80" width="130" height="48" rx="8" fill="url(#sparseGrad)" opacity="0.9" filter="url(#softShadow)"/>
+  <text x="265" y="101" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">SPLADE</text>
+  <text x="265" y="116" text-anchor="middle" fill="#fef3c7" font-size="9">Sparse · 30522-dim</text>
+
+  <!-- BGE -->
+  <rect x="200" y="142" width="130" height="48" rx="8" fill="url(#denseGrad)" opacity="0.9" filter="url(#softShadow)"/>
+  <text x="265" y="163" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">BGE</text>
+  <text x="265" y="178" text-anchor="middle" fill="#bfdbfe" font-size="9">Dense · 768-dim</text>
+
+  <!-- Arrows from Query to encoders -->
+  <line x1="150" y1="118" x2="198" y2="104" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#arrowWhite)"/>
+  <line x1="150" y1="130" x2="198" y2="160" stroke="#94a3b8" stroke-width="1.2" marker-end="url(#arrowWhite)"/>
+
+  <!-- ===== CENTRAL SPLIT: Two Fusion Paths ===== -->
+  <!-- Divider label -->
+  <text x="450" y="82" text-anchor="middle" fill="#475569" font-size="10" font-weight="600" letter-spacing="2">TWO FUSION STRATEGIES</text>
+  <line x1="370" y1="86" x2="530" y2="86" stroke="#334155" stroke-width="0.5"/>
+
+  <!-- ===== PATH A: RRF (top) ===== -->
+  <g transform="translate(390, 95)">
+    <!-- RRF box -->
+    <rect x="0" y="0" width="200" height="90" rx="12" fill="none" stroke="#8b5cf6" stroke-width="1.8" opacity="0.7"/>
+    <rect x="0" y="0" width="200" height="90" rx="12" fill="#8b5cf620"/>
+    <text x="100" y="22" text-anchor="middle" fill="#c4b5fd" font-size="13" font-weight="700">Path A: RRF</text>
+    <text x="100" y="38" text-anchor="middle" fill="#a78bfa" font-size="9">Rank-level Fusion</text>
+
+    <!-- Formula -->
+    <rect x="15" y="47" width="170" height="32" rx="6" fill="#1e1b4b" opacity="0.6"/>
+    <text x="100" y="64" text-anchor="middle" fill="#e9d5ff" font-size="10" font-style="italic">score = Σ wᵢ / (k + rankᵢ)</text>
+    <text x="100" y="76" text-anchor="middle" fill="#7c3aed" font-size="8">k=60 · w_dense=0.6 · w_sparse=0.4</text>
+  </g>
+
+  <!-- Arrows to RRF from encoders -->
+  <path d="M330,104 C360,100 370,115 388,120" fill="none" stroke="#a78bfa" stroke-width="1.3" marker-end="url(#arrowPurple)"/>
+  <path d="M330,160 C360,155 370,148 388,145" fill="none" stroke="#a78bfa" stroke-width="1.3" marker-end="url(#arrowPurple)"/>
+  <text x="358" y="118" text-anchor="middle" fill="#7c3aed" font-size="8">2 queries</text>
+
+  <!-- RRF result badge -->
+  <g transform="translate(620, 108)">
+    <rect x="0" y="0" width="105" height="64" rx="8" fill="#7c3aed" opacity="0.2" stroke="#8b5cf6" stroke-width="1"/>
+    <text x="52" y="16" text-anchor="middle" fill="#c4b5fd" font-size="10" font-weight="600">Best nDCG@10</text>
+    <text x="52" y="36" text-anchor="middle" fill="#e9d5ff" font-size="22" font-weight="800">0.828</text>
+    <text x="52" y="52" text-anchor="middle" fill="#7c3aed" font-size="8">ILD: 0.176 · 1271ms</text>
+  </g>
+  <line x1="590" y1="140" x2="618" y2="140" stroke="#a78bfa" stroke-width="1.2" marker-end="url(#arrowPurple)"/>
+
+  <!-- ===== PATH B: B5 Projection Fusion (bottom) ===== -->
+  <g transform="translate(390, 220)">
+    <rect x="0" y="0" width="200" height="120" rx="12" fill="none" stroke="#10b981" stroke-width="1.8" opacity="0.7"/>
+    <rect x="0" y="0" width="200" height="120" rx="12" fill="#10b98118"/>
+    <text x="100" y="22" text-anchor="middle" fill="#6ee7b7" font-size="13" font-weight="700">Path B: B5</text>
+    <text x="100" y="38" text-anchor="middle" fill="#34d399" font-size="9">Vector-level Projection Fusion</text>
+
+    <!-- Steps -->
+    <rect x="12" y="46" width="176" height="64" rx="6" fill="#064e3b" opacity="0.4"/>
+    <text x="100" y="60" text-anchor="middle" fill="#a7f3d0" font-size="9">① Random Project: 30522→768</text>
+    <text x="100" y="74" text-anchor="middle" fill="#a7f3d0" font-size="9">② Normalize + Mix</text>
+    <text x="100" y="88" text-anchor="middle" fill="#6ee7b7" font-size="9" font-weight="600">q: 95% dense + 5% sparse</text>
+    <text x="100" y="101" text-anchor="middle" fill="#6ee7b7" font-size="9" font-weight="600">d: 50% dense + 50% sparse</text>
+  </g>
+
+  <!-- Arrows to B5 from encoders -->
+  <path d="M330,110 C355,130 370,200 388,250" fill="none" stroke="#34d399" stroke-width="1.3" stroke-dasharray="5,3" marker-end="url(#arrowGreen)"/>
+  <path d="M330,172 C355,190 370,230 388,265" fill="none" stroke="#34d399" stroke-width="1.3" stroke-dasharray="5,3" marker-end="url(#arrowGreen)"/>
+  <text x="355" y="210" text-anchor="middle" fill="#059669" font-size="8">pre-fuse</text>
+  <text x="355" y="222" text-anchor="middle" fill="#059669" font-size="8">1 query</text>
+
+  <!-- B5 result badge -->
+  <g transform="translate(620, 243)">
+    <rect x="0" y="0" width="105" height="74" rx="8" fill="#059669" opacity="0.2" stroke="#10b981" stroke-width="1"/>
+    <text x="52" y="16" text-anchor="middle" fill="#6ee7b7" font-size="10" font-weight="600">nDCG@10</text>
+    <text x="52" y="36" text-anchor="middle" fill="#a7f3d0" font-size="22" font-weight="800">0.678</text>
+    <text x="52" y="52" text-anchor="middle" fill="#34d399" font-size="8">ILD: 0.389 · 847ms</text>
+    <text x="52" y="65" text-anchor="middle" fill="#10b981" font-size="8" font-weight="700">2.2× diversity ↑ · 33% faster</text>
+  </g>
+  <line x1="590" y1="280" x2="618" y2="280" stroke="#34d399" stroke-width="1.2" marker-end="url(#arrowGreen)"/>
+
+  <!-- ===== VS / Tension indicator ===== -->
+  <g transform="translate(740, 185)">
+    <circle cx="25" cy="25" r="22" fill="none" stroke="#f59e0b" stroke-width="1.5" opacity="0.6"/>
+    <text x="25" y="22" text-anchor="middle" fill="#fbbf24" font-size="10" font-weight="700">vs</text>
+    <text x="25" y="34" text-anchor="middle" fill="#92400e" font-size="7">trade-off</text>
+  </g>
+  <!-- Lines connecting both results to VS -->
+  <path d="M725,148 Q740,170 740,183" fill="none" stroke="#f59e0b" stroke-width="0.8" opacity="0.4"/>
+  <path d="M725,270 Q740,250 740,232" fill="none" stroke="#f59e0b" stroke-width="0.8" opacity="0.4"/>
+
+  <!-- ===== MMR DIVERSITY RERANKING ===== -->
+  <g transform="translate(200, 410)">
+    <rect x="0" y="0" width="500" height="100" rx="14" fill="none" stroke="#ec4899" stroke-width="1.5" opacity="0.6"/>
+    <rect x="0" y="0" width="500" height="100" rx="14" fill="#ec489910"/>
+
+    <!-- Title -->
+    <text x="250" y="24" text-anchor="middle" fill="#f9a8d4" font-size="13" font-weight="700">MMR Diversity Reranking (λ = 0.7)</text>
+    <text x="250" y="40" text-anchor="middle" fill="#f472b6" font-size="9">select = argmax [ 0.7 · relevance(d) − 0.3 · max_sim(d, Selected) ]</text>
+
+    <!-- Two result columns -->
+    <!-- RRF + MMR -->
+    <g transform="translate(30, 50)">
+      <rect x="0" y="0" width="195" height="40" rx="6" fill="#7c3aed" opacity="0.15" stroke="#8b5cf6" stroke-width="0.8"/>
+      <text x="98" y="15" text-anchor="middle" fill="#c4b5fd" font-size="10" font-weight="600">RRF + MMR</text>
+      <text x="98" y="32" text-anchor="middle" fill="#a78bfa" font-size="9">nDCG: 0.828→0.659 (−20%) | ILD: +24%</text>
+    </g>
+
+    <!-- B5 + MMR -->
+    <g transform="translate(270, 50)">
+      <rect x="0" y="0" width="195" height="40" rx="6" fill="#059669" opacity="0.15" stroke="#10b981" stroke-width="0.8"/>
+      <text x="98" y="15" text-anchor="middle" fill="#6ee7b7" font-size="10" font-weight="600">B5 + MMR</text>
+      <text x="98" y="32" text-anchor="middle" fill="#34d399" font-size="9">nDCG: 0.678→0.506 (−25%) | ILD: +24%</text>
+    </g>
+  </g>
+
+  <!-- Arrows down to MMR -->
+  <path d="M672,172 C680,250 620,370 500,408" fill="none" stroke="#f472b6" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrowPink)"/>
+  <path d="M672,317 C680,350 620,380 500,408" fill="none" stroke="#f472b6" stroke-width="1.2" stroke-dasharray="4,3" marker-end="url(#arrowPink)"/>
+
+  <!-- ===== KEY INSIGHT BOX (bottom) ===== -->
+  <g transform="translate(200, 535)">
+    <rect x="0" y="0" width="500" height="56" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <!-- Star icon -->
+    <text x="22" y="34" text-anchor="middle" fill="#fbbf24" font-size="18">★</text>
+    <text x="45" y="24" fill="#fbbf24" font-size="11" font-weight="700">Key Insight</text>
+    <text x="45" y="42" fill="#94a3b8" font-size="10">B5 without MMR already achieves 2.2× diversity of RRF, at 33% lower latency —</text>
+    <text x="45" y="54" fill="#94a3b8" font-size="10">projection fusion is a natural diversifier, making explicit MMR less necessary.</text>
+  </g>
+
+  <!-- ===== QUERY ROBUSTNESS mini-badge ===== -->
+  <g transform="translate(30, 210)">
+    <rect x="0" y="0" width="145" height="100" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="72" y="18" text-anchor="middle" fill="#94a3b8" font-size="9" font-weight="600">Query Robustness</text>
+    <line x1="10" y1="24" x2="135" y2="24" stroke="#334155" stroke-width="0.5"/>
+
+    <text x="14" y="42" fill="#6ee7b7" font-size="9">B5</text>
+    <text x="14" y="56" fill="#64748b" font-size="8">Keywords: +8.8% ↑</text>
+    <text x="14" y="68" fill="#64748b" font-size="8">Semi-tech: −8.4%</text>
+
+    <text x="14" y="84" fill="#c4b5fd" font-size="9">RRF</text>
+    <text x="14" y="96" fill="#64748b" font-size="8">Semi-tech: −13.6%</text>
+  </g>
+
+  <!-- Arrow from query to robustness box -->
+  <line x1="90" y1="150" x2="90" y2="208" stroke="#334155" stroke-width="0.8" stroke-dasharray="3,3" marker-end="url(#arrowWhite)"/>
+
+  <!-- Decorative subtle grid -->
+  <g opacity="0.04" stroke="#fff" stroke-width="0.5">
+    <line x1="0" y1="100" x2="900" y2="100"/>
+    <line x1="0" y1="200" x2="900" y2="200"/>
+    <line x1="0" y1="300" x2="900" y2="300"/>
+    <line x1="0" y1="400" x2="900" y2="400"/>
+    <line x1="0" y1="500" x2="900" y2="500"/>
+    <line x1="180" y1="70" x2="180" y2="600"/>
+    <line x1="380" y1="70" x2="380" y2="400"/>
+    <line x1="600" y1="70" x2="600" y2="400"/>
+  </g>
+</svg>

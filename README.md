@@ -4,18 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-04-15
+- **日期**：2026-04-16
 - **分类**：cs.IR + cs.AI + cs.LG + cs.CL
 - **候选论文数**：5
 - **必读论文**：
-  - LLM-HYPER: Generative CTR Modeling for Cold-Start Ad Personalization via LLM-Based Hypernetworks
-  - Efficiency of Proportional Mechanisms in Online Auto-Bidding Advertising
-- **日报路径**：[2026-04-15/daily_report.md](2026-04-15/daily_report.md)
+  - Hybrid Retrieval for COVID-19 Literature: Comparing Rank Fusion and Projection Fusion with Diversity Reranking
+  - DUET: Joint Exploration of User Item Profiles in Recommendation System
+- **日报路径**：[2026-04-16/daily_report.md](2026-04-16/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-04-16 | cs.IR + cs.AI + cs.LG + cs.CL | 5 | 1 | Hybrid Retrieval for COVID-19 Literature: Comparing Rank Fusion and Projection Fusion with Diversity Reranking | [2026-04-16/daily_report.md](2026-04-16/daily_report.md) |
+|  |  |  | 2 | DUET: Joint Exploration of User Item Profiles in Recommendation System |  |
 | 2026-04-15 | cs.IR + cs.AI + cs.LG + cs.CL | 5 | 1 | LLM-HYPER: Generative CTR Modeling for Cold-Start Ad Personalization via LLM-Based Hypernetworks | [2026-04-15/daily_report.md](2026-04-15/daily_report.md) |
 |  |  |  | 2 | Efficiency of Proportional Mechanisms in Online Auto-Bidding Advertising |  |
 | 2026-04-14 | cs.IR + cs.AI + cs.LG + cs.CL | 18 | 1 | Credit-Budgeted ICPC-Style Coding: When Agents Must Pay for Every Decision | [2026-04-14/daily_report.md](2026-04-14/daily_report.md) |

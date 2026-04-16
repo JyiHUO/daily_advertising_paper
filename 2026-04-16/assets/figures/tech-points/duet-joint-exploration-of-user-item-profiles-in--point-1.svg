@@ -1,0 +1,148 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e74c3c"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#27ae60"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8f9fa"/>
+      <stop offset="100%" stop-color="#e9ecef"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bgGrad)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#2c3e50">DUET: 联合画像生成 vs 独立画像生成</text>
+
+  <!-- ========== LEFT: Independent Generation (Bad) ========== -->
+  <rect x="30" y="60" width="400" height="530" rx="14" fill="#fff5f5" stroke="#e74c3c" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="230" y="90" text-anchor="middle" font-size="18" font-weight="bold" fill="#e74c3c">❌ 独立生成</text>
+  <text x="230" y="112" text-anchor="middle" font-size="13" fill="#c0392b">各自翻译，互不对照</text>
+
+  <!-- User side independent -->
+  <rect x="55" y="135" width="160" height="80" rx="10" fill="#fdecea" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="135" y="160" text-anchor="middle" font-size="13" font-weight="bold" fill="#c0392b">用户历史</text>
+  <text x="135" y="180" text-anchor="middle" font-size="11" fill="#555">🎸 Misfits (朋克)</text>
+  <text x="135" y="195" text-anchor="middle" font-size="11" fill="#555">🤘 Iron Maiden (金属)</text>
+  <text x="135" y="210" text-anchor="middle" font-size="11" fill="#888">🎵 Parliament (放克)</text>
+
+  <!-- Item side independent -->
+  <rect x="240" y="135" width="165" height="80" rx="10" fill="#fdecea" stroke="#e74c3c" stroke-width="1.5"/>
+  <text x="322" y="160" text-anchor="middle" font-size="13" font-weight="bold" fill="#c0392b">物品评论</text>
+  <text x="322" y="180" text-anchor="middle" font-size="11" fill="#555">✨ "polished pop"</text>
+  <text x="322" y="198" text-anchor="middle" font-size="11" fill="#888">🎵 "great funk bass"</text>
+
+  <!-- Arrows down independent -->
+  <line x1="135" y1="215" x2="135" y2="270" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowRed)"/>
+  <line x1="322" y1="215" x2="322" y2="270" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowRed)"/>
+
+  <!-- Independent LLM boxes -->
+  <rect x="75" y="275" width="120" height="40" rx="8" fill="#e74c3c" opacity="0.85"/>
+  <text x="135" y="300" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">LLM ①</text>
+  <rect x="262" y="275" width="120" height="40" rx="8" fill="#e74c3c" opacity="0.85"/>
+  <text x="322" y="300" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">LLM ②</text>
+
+  <!-- Arrows down to profiles -->
+  <line x1="135" y1="315" x2="135" y2="365" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowRed)"/>
+  <line x1="322" y1="315" x2="322" y2="365" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowRed)"/>
+
+  <!-- Output profiles independent -->
+  <rect x="55" y="370" width="160" height="60" rx="10" fill="#fff" stroke="#e74c3c" stroke-width="2"/>
+  <text x="135" y="393" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">用户画像</text>
+  <text x="135" y="413" text-anchor="middle" font-size="13" fill="#333">"重金属/朋克粉丝"</text>
+
+  <rect x="240" y="370" width="165" height="60" rx="10" fill="#fff" stroke="#e74c3c" stroke-width="2"/>
+  <text x="322" y="393" text-anchor="middle" font-size="12" font-weight="bold" fill="#c0392b">物品画像</text>
+  <text x="322" y="413" text-anchor="middle" font-size="13" fill="#333">"流行摇滚专辑"</text>
+
+  <!-- Mismatch icon -->
+  <line x1="215" y1="445" x2="240" y2="445" stroke="#e74c3c" stroke-width="3"/>
+  <text x="228" y="440" text-anchor="middle" font-size="22" fill="#e74c3c">≠</text>
+
+  <!-- Result box -->
+  <rect x="105" y="470" width="250" height="50" rx="10" fill="#fdecea" stroke="#e74c3c" stroke-width="2"/>
+  <text x="230" y="492" text-anchor="middle" font-size="14" font-weight="bold" fill="#c0392b">语义不匹配 → 推荐失败</text>
+  <text x="230" y="510" text-anchor="middle" font-size="11" fill="#888">放克信号被双方各自忽略</text>
+
+  <!-- Arrows to result -->
+  <line x1="135" y1="430" x2="200" y2="470" stroke="#e74c3c" stroke-width="1.5" marker-end="url(#arrowRed)"/>
+  <line x1="322" y1="430" x2="260" y2="470" stroke="#e74c3c" stroke-width="1.5" marker-end="url(#arrowRed)"/>
+
+
+  <!-- ========== RIGHT: Joint Generation (Good) ========== -->
+  <rect x="465" y="60" width="410" height="530" rx="14" fill="#f0faf4" stroke="#27ae60" stroke-width="2"/>
+  <text x="670" y="90" text-anchor="middle" font-size="18" font-weight="bold" fill="#27ae60">✅ DUET 联合生成</text>
+  <text x="670" y="112" text-anchor="middle" font-size="13" fill="#1e8449">同时看到双方，一次输出</text>
+
+  <!-- Joint input box -->
+  <rect x="495" y="130" width="350" height="100" rx="12" fill="#d5f5e3" stroke="#27ae60" stroke-width="1.5"/>
+  <text x="670" y="155" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e8449">联合输入状态</text>
+
+  <text x="540" y="178" text-anchor="middle" font-size="11" fill="#555">👤 用户历史</text>
+  <text x="540" y="195" text-anchor="middle" font-size="10" fill="#666">Misfits·Iron Maiden</text>
+  <text x="540" y="210" text-anchor="middle" font-size="10" fill="#e67e22" font-weight="bold">Parliament (放克)</text>
+
+  <line x1="620" y1="168" x2="620" y2="220" stroke="#27ae60" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <text x="780" y="178" text-anchor="middle" font-size="11" fill="#555">📦 物品评论</text>
+  <text x="780" y="195" text-anchor="middle" font-size="10" fill="#666">"polished pop"</text>
+  <text x="780" y="210" text-anchor="middle" font-size="10" fill="#e67e22" font-weight="bold">"great funk bass"</text>
+
+  <!-- Bidirectional awareness arrows -->
+  <path d="M600,190 Q610,185 620,190 Q630,195 640,190" stroke="#e67e22" stroke-width="1.5" fill="none"/>
+  <path d="M700,190 Q710,195 720,190 Q730,185 740,190" stroke="#e67e22" stroke-width="1.5" fill="none"/>
+  <text x="670" y="200" text-anchor="middle" font-size="9" fill="#e67e22">互相感知</text>
+
+  <!-- Arrow to single LLM -->
+  <line x1="670" y1="230" x2="670" y2="275" stroke="#27ae60" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+
+  <!-- Single LLM box -->
+  <rect x="570" y="280" width="200" height="50" rx="10" fill="#27ae60"/>
+  <text x="670" y="305" text-anchor="middle" font-size="15" fill="#fff" font-weight="bold">🧠 单次 LLM</text>
+  <text x="670" y="322" text-anchor="middle" font-size="11" fill="#d5f5e3">联合条件生成六元组</text>
+
+  <!-- Arrow down -->
+  <line x1="670" y1="330" x2="670" y2="375" stroke="#27ae60" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+
+  <!-- Output profiles joint -->
+  <rect x="495" y="380" width="155" height="68" rx="10" fill="#fff" stroke="#27ae60" stroke-width="2.5"/>
+  <text x="572" y="403" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e8449">用户画像</text>
+  <text x="572" y="423" text-anchor="middle" font-size="13" fill="#333" font-weight="bold">"放克/灵魂乐</text>
+  <text x="572" y="440" text-anchor="middle" font-size="13" fill="#333" font-weight="bold">爱好者"</text>
+
+  <rect x="690" y="380" width="155" height="68" rx="10" fill="#fff" stroke="#27ae60" stroke-width="2.5"/>
+  <text x="767" y="403" text-anchor="middle" font-size="12" font-weight="bold" fill="#1e8449">物品画像</text>
+  <text x="767" y="423" text-anchor="middle" font-size="13" fill="#333" font-weight="bold">"放克摇滚</text>
+  <text x="767" y="440" text-anchor="middle" font-size="13" fill="#333" font-weight="bold">专辑"</text>
+
+  <!-- Match icon -->
+  <text x="670" y="430" text-anchor="middle" font-size="24" fill="#27ae60">=</text>
+
+  <!-- Result box -->
+  <rect x="545" y="475" width="250" height="50" rx="10" fill="#d5f5e3" stroke="#27ae60" stroke-width="2"/>
+  <text x="670" y="497" text-anchor="middle" font-size="14" font-weight="bold" fill="#1e8449">语义对齐 → 推荐成功</text>
+  <text x="670" y="515" text-anchor="middle" font-size="11" fill="#555">共享放克信号被捕获</text>
+
+  <!-- Arrows to result -->
+  <line x1="572" y1="448" x2="630" y2="475" stroke="#27ae60" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+  <line x1="767" y1="448" x2="710" y2="475" stroke="#27ae60" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+
+  <!-- RL reward hint -->
+  <rect x="590" y="540" width="160" height="30" rx="6" fill="#f39c12" opacity="0.9"/>
+  <text x="670" y="560" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold">🏆 RL 奖励反馈优化</text>
+  <path d="M670,540 L670,525 L790,460" stroke="#f39c12" stroke-width="1.5" fill="none" stroke-dasharray="4,3"/>
+
+  <!-- Central VS divider -->
+  <text x="450" y="340" text-anchor="middle" font-size="28" font-weight="bold" fill="#95a5a6">VS</text>
+
+  <!-- Key insight at bottom -->
+  <rect x="200" y="585" width="500" height="28" rx="6" fill="#2c3e50" opacity="0.9"/>
+  <text x="450" y="604" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">核心创新：一次生成互相呼应的画像，在共享语义空间中自动对齐</text>
+</svg>

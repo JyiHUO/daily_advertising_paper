@@ -1,0 +1,126 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <linearGradient id="gRRF" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4A90D9"/>
+      <stop offset="100%" stop-color="#2C5F9A"/>
+    </linearGradient>
+    <linearGradient id="gB5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E8833A"/>
+      <stop offset="100%" stop-color="#C05E1A"/>
+    </linearGradient>
+    <linearGradient id="gMMR" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7B61C2"/>
+      <stop offset="100%" stop-color="#5A3E9E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="560" rx="16" fill="#F7F8FC"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#222">MMR 多样性重排的代价量化</text>
+  <text x="450" y="68" text-anchor="middle" font-size="14" fill="#777">多样性 ↑ 24% — 但相关性 ↓ 20~25%</text>
+
+  <!-- ===== LEFT: RRF Pipeline ===== -->
+  <!-- RRF box -->
+  <rect x="60" y="110" width="160" height="70" rx="12" fill="url(#gRRF)" opacity="0.95"/>
+  <text x="140" y="140" text-anchor="middle" font-size="17" font-weight="bold" fill="#fff">RRF 融合</text>
+  <text x="140" y="162" text-anchor="middle" font-size="12" fill="#d0e0f8">排名级融合</text>
+
+  <!-- Arrow -->
+  <line x1="220" y1="145" x2="280" y2="145" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="250" y="136" text-anchor="middle" font-size="11" fill="#888">+MMR</text>
+
+  <!-- MMR box -->
+  <rect x="285" y="110" width="160" height="70" rx="12" fill="url(#gMMR)" opacity="0.95"/>
+  <text x="365" y="140" text-anchor="middle" font-size="17" font-weight="bold" fill="#fff">MMR 重排</text>
+  <text x="365" y="162" text-anchor="middle" font-size="12" fill="#ddd">λ=0.7</text>
+
+  <!-- RRF metrics: before -->
+  <rect x="60" y="200" width="160" height="100" rx="10" fill="#fff" stroke="#4A90D9" stroke-width="2"/>
+  <text x="140" y="224" text-anchor="middle" font-size="13" font-weight="bold" fill="#2C5F9A">RRF 原始</text>
+  <text x="140" y="250" text-anchor="middle" font-size="15" fill="#333">nDCG: <tspan font-weight="bold" fill="#2E7D32">0.828</tspan></text>
+  <text x="140" y="278" text-anchor="middle" font-size="15" fill="#333">ILD: <tspan font-weight="bold" fill="#888">0.176</tspan></text>
+
+  <!-- RRF metrics: after -->
+  <rect x="285" y="200" width="160" height="100" rx="10" fill="#fff" stroke="#7B61C2" stroke-width="2"/>
+  <text x="365" y="224" text-anchor="middle" font-size="13" font-weight="bold" fill="#5A3E9E">RRF + MMR</text>
+  <text x="365" y="250" text-anchor="middle" font-size="15" fill="#333">nDCG: <tspan font-weight="bold" fill="#C62828">0.659</tspan></text>
+  <text x="365" y="278" text-anchor="middle" font-size="15" fill="#333">ILD: <tspan font-weight="bold" fill="#2E7D32">0.219</tspan></text>
+
+  <!-- Delta labels RRF -->
+  <text x="252" y="252" text-anchor="middle" font-size="12" font-weight="bold" fill="#C62828">-20%</text>
+  <line x1="222" y1="248" x2="283" y2="248" stroke="#C62828" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="252" y="280" text-anchor="middle" font-size="12" font-weight="bold" fill="#2E7D32">+24%</text>
+  <line x1="222" y1="276" x2="283" y2="276" stroke="#2E7D32" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- ===== RIGHT: B5 Pipeline ===== -->
+  <!-- B5 box -->
+  <rect x="510" y="110" width="160" height="70" rx="12" fill="url(#gB5)" opacity="0.95"/>
+  <text x="590" y="140" text-anchor="middle" font-size="17" font-weight="bold" fill="#fff">B5 投影融合</text>
+  <text x="590" y="162" text-anchor="middle" font-size="12" fill="#fde0c8">向量级融合</text>
+
+  <!-- Arrow -->
+  <line x1="670" y1="145" x2="730" y2="145" stroke="#555" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="700" y="136" text-anchor="middle" font-size="11" fill="#888">+MMR</text>
+
+  <!-- MMR box2 -->
+  <rect x="735" y="110" width="120" height="70" rx="12" fill="url(#gMMR)" opacity="0.95"/>
+  <text x="795" y="140" text-anchor="middle" font-size="17" font-weight="bold" fill="#fff">MMR</text>
+  <text x="795" y="162" text-anchor="middle" font-size="12" fill="#ddd">λ=0.7</text>
+
+  <!-- B5 metrics: before -->
+  <rect x="510" y="200" width="160" height="100" rx="10" fill="#fff" stroke="#E8833A" stroke-width="2"/>
+  <text x="590" y="224" text-anchor="middle" font-size="13" font-weight="bold" fill="#C05E1A">B5 原始</text>
+  <text x="590" y="250" text-anchor="middle" font-size="15" fill="#333">nDCG: <tspan font-weight="bold" fill="#F9A825">0.678</tspan></text>
+  <text x="590" y="278" text-anchor="middle" font-size="15" fill="#333">ILD: <tspan font-weight="bold" fill="#2E7D32">0.389</tspan></text>
+
+  <!-- B5 metrics: after -->
+  <rect x="735" y="200" width="120" height="100" rx="10" fill="#fff" stroke="#7B61C2" stroke-width="2"/>
+  <text x="795" y="224" text-anchor="middle" font-size="13" font-weight="bold" fill="#5A3E9E">B5 + MMR</text>
+  <text x="795" y="250" text-anchor="middle" font-size="15" fill="#333">nDCG: <tspan font-weight="bold" fill="#C62828">0.506</tspan></text>
+  <text x="795" y="278" text-anchor="middle" font-size="15" fill="#333">ILD: <tspan font-weight="bold" fill="#2E7D32">0.481</tspan></text>
+
+  <!-- Delta labels B5 -->
+  <text x="697" y="252" text-anchor="middle" font-size="12" font-weight="bold" fill="#C62828">-25%</text>
+  <line x1="672" y1="248" x2="733" y2="248" stroke="#C62828" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="697" y="280" text-anchor="middle" font-size="12" font-weight="bold" fill="#2E7D32">+24%</text>
+  <line x1="672" y1="276" x2="733" y2="276" stroke="#2E7D32" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- ===== BOTTOM: Key Insight ===== -->
+  <rect x="100" y="340" width="700" height="190" rx="16" fill="#fff" stroke="#bbb" stroke-width="1.5"/>
+
+  <!-- Insight title -->
+  <text x="450" y="372" text-anchor="middle" font-size="17" font-weight="bold" fill="#333">核心发现：B5 天然多样性 = RRF 的 2.2×</text>
+
+  <!-- Diversity bar comparison -->
+  <!-- RRF bar -->
+  <rect x="160" y="400" width="88" height="30" rx="6" fill="#4A90D9"/>
+  <text x="204" y="420" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">0.176</text>
+  <text x="140" y="420" text-anchor="end" font-size="12" fill="#555">RRF</text>
+
+  <!-- B5 bar -->
+  <rect x="160" y="445" width="195" height="30" rx="6" fill="#E8833A"/>
+  <text x="258" y="465" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">0.389</text>
+  <text x="140" y="465" text-anchor="end" font-size="12" fill="#555">B5</text>
+
+  <!-- 2.2x label -->
+  <text x="380" y="452" font-size="20" font-weight="bold" fill="#C05E1A">2.2×</text>
+
+  <!-- MMR formula mini -->
+  <rect x="470" y="395" width="290" height="90" rx="10" fill="#F3F0FF" stroke="#7B61C2" stroke-width="1.5"/>
+  <text x="615" y="420" text-anchor="middle" font-size="13" font-weight="bold" fill="#5A3E9E">MMR 选择公式</text>
+  <text x="615" y="445" text-anchor="middle" font-size="14" fill="#333">0.7 × 相关度(d,q)</text>
+  <text x="615" y="468" text-anchor="middle" font-size="14" fill="#333">− 0.3 × max_sim(d, 已选集)</text>
+
+  <!-- Bottom note -->
+  <text x="450" y="510" text-anchor="middle" font-size="13" fill="#999">
+    投影融合无需 MMR 即可获得高多样性，MMR 再提升 ~24% 但损失 ~20-25% 相关性
+  </text>
+
+  <!-- Connecting visual: "vs" between left and right -->
+  <text x="472" y="155" text-anchor="middle" font-size="18" font-weight="bold" fill="#aaa">vs</text>
+</svg>
