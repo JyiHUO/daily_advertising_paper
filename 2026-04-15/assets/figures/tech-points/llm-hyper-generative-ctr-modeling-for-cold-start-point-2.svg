@@ -1,0 +1,111 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2563EB"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bgGrad)" rx="18"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">多模态检索驱动的少样本 CoT — "以旧带新"生成权重</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#64748b">LLM-HYPER 核心创新：用相似历史广告的已训练权重作为 few-shot 示例指导 LLM 推理</text>
+
+  <!-- ========== 1. New Ad (left) ========== -->
+  <rect x="30" y="110" width="185" height="170" rx="14" fill="#FFF7ED" stroke="#FB923C" stroke-width="2" filter="url(#shadow)"/>
+  <text x="122" y="138" text-anchor="middle" font-size="15" font-weight="bold" fill="#C2410C">🆕 新广告</text>
+  <text x="122" y="163" text-anchor="middle" font-size="12" fill="#78350F">"圣诞限定乐高套装"</text>
+  <rect x="55" y="178" width="130" height="42" rx="8" fill="#FFEDD5" stroke="#FDBA74" stroke-width="1"/>
+  <text x="120" y="195" text-anchor="middle" font-size="11" fill="#9A3412">CLIP 编码</text>
+  <text x="120" y="210" text-anchor="middle" font-size="10" fill="#B45309">文本 + 图片 → 向量</text>
+  <text x="122" y="245" text-anchor="middle" font-size="11" fill="#C2410C" font-style="italic">⚠ 无历史数据</text>
+  <text x="122" y="262" text-anchor="middle" font-size="11" fill="#C2410C" font-style="italic">权重未知 ❓</text>
+
+  <!-- Arrow: New Ad → Retrieval -->
+  <line x1="215" y1="195" x2="275" y2="195" stroke="#555" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- ========== 2. Faiss Retrieval (center-top) ========== -->
+  <rect x="280" y="110" width="200" height="170" rx="14" fill="#EFF6FF" stroke="#3B82F6" stroke-width="2" filter="url(#shadow)"/>
+  <text x="380" y="138" text-anchor="middle" font-size="15" font-weight="bold" fill="#1D4ED8">🔍 Faiss 最近邻检索</text>
+  <text x="380" y="160" text-anchor="middle" font-size="11" fill="#1E40AF">历史退役广告库</text>
+
+  <!-- Retrieved items -->
+  <g transform="translate(300, 172)">
+    <rect width="160" height="24" rx="5" fill="#DBEAFE" stroke="#93C5FD" stroke-width="1"/>
+    <text x="8" y="16" font-size="10" fill="#1E3A8A">🧩 儿童积木玩具  sim=0.92</text>
+  </g>
+  <g transform="translate(300, 200)">
+    <rect width="160" height="24" rx="5" fill="#DBEAFE" stroke="#93C5FD" stroke-width="1"/>
+    <text x="8" y="16" font-size="10" fill="#1E3A8A">🧩 拼图益智游戏  sim=0.87</text>
+  </g>
+  <g transform="translate(300, 228)">
+    <rect width="160" height="24" rx="5" fill="#DBEAFE" stroke="#93C5FD" stroke-width="1"/>
+    <text x="8" y="16" font-size="10" fill="#1E3A8A">🎁 … 共 K=5 个示例</text>
+  </g>
+
+  <!-- Arrow: Retrieval → Prompt -->
+  <path d="M 380 280 L 380 320" stroke="#555" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="395" y="307" font-size="10" fill="#64748b">附带已训练权重</text>
+
+  <!-- ========== 3. Prompt Assembly (center) ========== -->
+  <rect x="170" y="325" width="420" height="145" rx="14" fill="#F0FDF4" stroke="#22C55E" stroke-width="2" filter="url(#shadow)"/>
+  <text x="380" y="352" text-anchor="middle" font-size="15" font-weight="bold" fill="#166534">📝 Few-Shot CoT Prompt</text>
+
+  <!-- Prompt content blocks -->
+  <rect x="190" y="365" width="175" height="90" rx="8" fill="#DCFCE7" stroke="#86EFAC" stroke-width="1"/>
+  <text x="277" y="385" text-anchor="middle" font-size="11" font-weight="bold" fill="#14532D">示例（×5）</text>
+  <text x="200" y="402" font-size="10" fill="#166534">📦 广告文本 &amp; 图片描述</text>
+  <text x="200" y="418" font-size="10" fill="#166534">📊 相似度分数: 0.92</text>
+  <text x="200" y="434" font-size="10" fill="#166534">⚙️ 已训练权重: [0.95, …]</text>
+  <text x="200" y="450" font-size="10" fill="#15803D" font-style="italic">→ 推理链（CoT）</text>
+
+  <rect x="385" y="365" width="190" height="90" rx="8" fill="#FEF9C3" stroke="#FDE047" stroke-width="1"/>
+  <text x="480" y="385" text-anchor="middle" font-size="11" font-weight="bold" fill="#713F12">目标查询</text>
+  <text x="395" y="404" font-size="10" fill="#854D0E">🆕 新广告信息</text>
+  <text x="395" y="424" font-size="10" fill="#854D0E">"请参考以上示例，</text>
+  <text x="395" y="440" font-size="10" fill="#854D0E"> 生成该广告的权重向量"</text>
+
+  <!-- Arrow: Prompt → LLM -->
+  <path d="M 590 397 L 650 397" stroke="#555" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- ========== 4. LLM (right) ========== -->
+  <rect x="655" y="320" width="210" height="150" rx="16" fill="#FAF5FF" stroke="#A855F7" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="760" y="352" text-anchor="middle" font-size="16" font-weight="bold" fill="#7E22CE">🤖 LLM 超网络</text>
+  <text x="760" y="375" text-anchor="middle" font-size="11" fill="#6B21A8">类比推理</text>
+  <text x="760" y="396" text-anchor="middle" font-size="10" fill="#7C3AED">"相似广告玩具权重 0.8~0.95</text>
+  <text x="760" y="412" text-anchor="middle" font-size="10" fill="#7C3AED">新广告也是玩具类 →"</text>
+
+  <!-- Output weight -->
+  <rect x="695" y="425" width="130" height="32" rx="8" fill="#E9D5FF" stroke="#C084FC" stroke-width="1.5"/>
+  <text x="760" y="446" text-anchor="middle" font-size="13" font-weight="bold" fill="#581C87">w = [0.90, …]</text>
+
+  <!-- Arrow: LLM output → Online scoring -->
+  <path d="M 760 470 L 760 520" stroke="#A855F7" stroke-width="2.5" marker-end="url(#arrowBlue)" stroke-dasharray="6,3"/>
+
+  <!-- ========== 5. Online Scoring (bottom-right) ========== -->
+  <rect x="645" y="525" width="230" height="70" rx="14" fill="#ECFDF5" stroke="#10B981" stroke-width="2" filter="url(#shadow)"/>
+  <text x="760" y="553" text-anchor="middle" font-size="14" font-weight="bold" fill="#065F46">⚡ 实时打分</text>
+  <text x="760" y="573" text-anchor="middle" font-size="12" fill="#047857">CTR = w · x （内积，超低延迟）</text>
+
+  <!-- ========== Comparison callout (bottom-left) ========== -->
+  <rect x="30" y="510" width="280" height="90" rx="12" fill="#FFF1F2" stroke="#F43F5E" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="170" y="535" text-anchor="middle" font-size="13" font-weight="bold" fill="#BE123C">📈 效果对比</text>
+  <text x="170" y="557" text-anchor="middle" font-size="12" fill="#9F1239">Zero-shot NDCG@10 = 0.0677</text>
+  <text x="170" y="577" text-anchor="middle" font-size="14" font-weight="bold" fill="#059669">5-shot CoT NDCG@10 = 0.0792 ✅</text>
+  <text x="170" y="593" text-anchor="middle" font-size="11" fill="#64748b">↑ 17% 提升，少样本示例是关键</text>
+
+  <!-- Decorative connection line from new ad down to comparison -->
+  <path d="M 122 280 C 122 400 100 480 140 510" stroke="#FB923C" stroke-width="1.5" fill="none" stroke-dasharray="4,3" opacity="0.5"/>
+
+</svg>

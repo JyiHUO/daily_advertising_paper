@@ -1,0 +1,138 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#e94560"/>
+      <stop offset="100%" style="stop-color:#ff6b6b"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0f3460"/>
+      <stop offset="100%" style="stop-color:#533483"/>
+    </linearGradient>
+    <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2d6a4f"/>
+      <stop offset="100%" style="stop-color:#40916c"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" fill="#ffd166">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" fill="#52b788">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="520" fill="url(#g1)" rx="18"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#ffd166">LLM-HYPER: 离线生成 × 在线解耦</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#adb5bd">LLM高延迟推理与毫秒级线上打分的完美分离</text>
+
+  <!-- ===== PHASE 1: OFFLINE ===== -->
+  <text x="48" y="108" font-size="14" font-weight="bold" fill="#e94560" letter-spacing="2">⏱ 离线阶段（广告上线前）</text>
+
+  <!-- New Ad -->
+  <rect x="40" y="125" width="150" height="80" rx="12" fill="#0f3460" filter="url(#shadow)" stroke="#533483" stroke-width="1.5"/>
+  <text x="115" y="155" text-anchor="middle" font-size="14" fill="#e0e0e0" font-weight="bold">🆕 新广告</text>
+  <text x="115" y="175" text-anchor="middle" font-size="11" fill="#adb5bd">标题 + 描述</text>
+  <text x="115" y="191" text-anchor="middle" font-size="11" fill="#adb5bd">+ 属性信息</text>
+
+  <!-- Arrow 1 -->
+  <line x1="190" y1="165" x2="245" y2="165" stroke="#ffd166" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- LLM Hypernetwork -->
+  <rect x="250" y="118" width="210" height="94" rx="14" fill="url(#g2)" filter="url(#shadow)" opacity="0.95"/>
+  <text x="355" y="150" text-anchor="middle" font-size="16" fill="#fff" font-weight="bold">🧠 LLM 超网络</text>
+  <text x="355" y="172" text-anchor="middle" font-size="12" fill="#ffe0e0">Gemini / GPT-4o</text>
+  <text x="355" y="192" text-anchor="middle" font-size="11" fill="#ffccd5">生成 CTR 模型权重 w</text>
+
+  <!-- Arrow 2 -->
+  <line x1="460" y1="165" x2="515" y2="165" stroke="#ffd166" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Cache -->
+  <rect x="520" y="125" width="150" height="80" rx="12" fill="url(#g3)" filter="url(#shadow)"/>
+  <text x="595" y="158" text-anchor="middle" font-size="15" fill="#e0e0e0" font-weight="bold">💾 权重缓存</text>
+  <text x="595" y="180" text-anchor="middle" font-size="12" fill="#adb5bd">向量 w 存储</text>
+
+  <!-- Latency badge offline -->
+  <rect x="700" y="135" width="160" height="56" rx="10" fill="#2b2b3d" stroke="#e94560" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="780" y="158" text-anchor="middle" font-size="12" fill="#ff8fa3">⏳ 耗时 ~47-103s</text>
+  <text x="780" y="177" text-anchor="middle" font-size="11" fill="#adb5bd">每广告，仅一次</text>
+
+  <!-- ===== Divider ===== -->
+  <line x1="30" y1="240" x2="870" y2="240" stroke="#333" stroke-width="1.5" stroke-dasharray="8,5"/>
+  <rect x="380" y="228" width="140" height="24" rx="12" fill="#1a1a2e"/>
+  <text x="450" y="245" text-anchor="middle" font-size="12" fill="#adb5bd">▼ 广告上线 ▼</text>
+
+  <!-- ===== PHASE 2: ONLINE ===== -->
+  <text x="48" y="285" font-size="14" font-weight="bold" fill="#52b788" letter-spacing="2">⚡ 在线阶段（实时请求）</text>
+
+  <!-- User Request -->
+  <rect x="40" y="302" width="150" height="76" rx="12" fill="#1b3a4b" filter="url(#shadow)" stroke="#2d6a4f" stroke-width="1.5"/>
+  <text x="115" y="332" text-anchor="middle" font-size="14" fill="#e0e0e0" font-weight="bold">👤 用户请求</text>
+  <text x="115" y="352" text-anchor="middle" font-size="11" fill="#adb5bd">特征向量 x</text>
+
+  <!-- Arrow -->
+  <line x1="190" y1="340" x2="270" y2="340" stroke="#52b788" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+
+  <!-- Dot Product -->
+  <rect x="275" y="298" width="200" height="84" rx="16" fill="url(#g4)" filter="url(#shadow)"/>
+  <text x="375" y="328" text-anchor="middle" font-size="18" fill="#fff" font-weight="bold">w · x</text>
+  <text x="375" y="350" text-anchor="middle" font-size="13" fill="#d8f3dc">线性内积打分</text>
+  <text x="375" y="369" text-anchor="middle" font-size="11" fill="#b7e4c7">无LLM参与</text>
+
+  <!-- Arrow from cache down -->
+  <path d="M595,205 L595,295 Q595,310 580,310 L475,330" fill="none" stroke="#ffd166" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrow)"/>
+  <text x="610" y="255" font-size="10" fill="#adb5bd">读取 w</text>
+
+  <!-- Arrow to result -->
+  <line x1="475" y1="340" x2="545" y2="340" stroke="#52b788" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+
+  <!-- CTR Score -->
+  <rect x="550" y="308" width="120" height="64" rx="12" fill="#1b3a4b" filter="url(#shadow)" stroke="#40916c" stroke-width="1.5"/>
+  <text x="610" y="335" text-anchor="middle" font-size="14" fill="#52b788" font-weight="bold">CTR 分数</text>
+  <text x="610" y="355" text-anchor="middle" font-size="11" fill="#adb5bd">广告排序</text>
+
+  <!-- Latency badge online -->
+  <rect x="700" y="312" width="160" height="56" rx="10" fill="#1a3a1a" stroke="#52b788" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="780" y="335" text-anchor="middle" font-size="12" fill="#52b788">⚡ 延迟 ~0.16ms</text>
+  <text x="780" y="354" text-anchor="middle" font-size="11" fill="#adb5bd">等同传统线性模型</text>
+
+  <!-- ===== PHASE 3: Transition ===== -->
+  <rect x="140" y="418" width="620" height="80" rx="14" fill="#1a1a2e" filter="url(#shadow)" stroke="#ffd166" stroke-width="1.2" stroke-dasharray="6,4"/>
+
+  <!-- Timeline bar -->
+  <rect x="180" y="442" width="540" height="8" rx="4" fill="#2b2b3d"/>
+  <rect x="180" y="442" width="180" height="8" rx="4" fill="url(#g2)"/>
+  <rect x="360" y="442" width="60" height="8" rx="4" fill="#ffd166"/>
+  <rect x="420" y="442" width="300" height="8" rx="4" fill="url(#g4)"/>
+
+  <!-- Markers -->
+  <circle cx="180" cy="446" r="5" fill="#e94560"/>
+  <text x="180" y="472" text-anchor="middle" font-size="10" fill="#ff8fa3">上线</text>
+
+  <circle cx="420" cy="446" r="5" fill="#ffd166"/>
+  <text x="420" y="472" text-anchor="middle" font-size="10" fill="#ffd166">数据充足</text>
+
+  <circle cx="720" cy="446" r="5" fill="#52b788"/>
+  <text x="720" y="472" text-anchor="middle" font-size="10" fill="#52b788">稳定运行</text>
+
+  <text x="270" y="436" text-anchor="middle" font-size="11" fill="#ff8fa3" font-weight="bold">LLM-HYPER 权重</text>
+  <text x="570" y="436" text-anchor="middle" font-size="11" fill="#52b788" font-weight="bold">传统 ML 模型接管</text>
+  <text x="390" y="436" text-anchor="middle" font-size="10" fill="#ffd166">切换</text>
+
+  <!-- Bottom result -->
+  <text x="450" y="510" text-anchor="middle" font-size="13" fill="#ffd166" font-weight="bold">🏆 30天A/B: 达到暖启动模型 92% CTR（p=0.62, 无显著差异）</text>
+
+  <!-- Speed contrast highlight -->
+  <rect x="736" y="242" width="100" height="50" rx="8" fill="#1a1a2e" stroke="#ffd166" stroke-width="1"/>
+  <text x="786" y="260" text-anchor="middle" font-size="10" fill="#ffd166" font-weight="bold">速度对比</text>
+  <text x="786" y="276" text-anchor="middle" font-size="20" fill="#ff6b6b">600,000×</text>
+  <text x="786" y="288" text-anchor="middle" font-size="9" fill="#adb5bd">差距</text>
+</svg>

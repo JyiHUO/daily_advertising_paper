@@ -1,0 +1,252 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0e27"/>
+      <stop offset="100%" stop-color="#1a1040"/>
+    </linearGradient>
+    <linearGradient id="llmGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6c5ce7"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="warmGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="coolGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softShadow">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <filter id="glowStrong">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrowWhite" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#fff" stroke-width="1.2"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#34d399" stroke-width="1.5"/>
+    </marker>
+    <marker id="arrowCyan" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#06b6d4" stroke-width="1.5"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle grid pattern -->
+  <g opacity="0.04">
+    <line x1="0" y1="100" x2="900" y2="100" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="900" y2="200" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="900" y2="300" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="900" y2="400" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="500" x2="900" y2="500" stroke="#fff" stroke-width="0.5"/>
+    <line x1="150" y1="0" x2="150" y2="620" stroke="#fff" stroke-width="0.5"/>
+    <line x1="300" y1="0" x2="300" y2="620" stroke="#fff" stroke-width="0.5"/>
+    <line x1="450" y1="0" x2="450" y2="620" stroke="#fff" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="620" stroke="#fff" stroke-width="0.5"/>
+    <line x1="750" y1="0" x2="750" y2="620" stroke="#fff" stroke-width="0.5"/>
+  </g>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#e2e8f0" letter-spacing="0.5">LLM-HYPER</text>
+  <text x="450" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8" letter-spacing="1">LLM as Hypernetwork for Cold-Start Ad CTR · Walmart</text>
+  
+  <!-- Divider line -->
+  <line x1="250" y1="72" x2="650" y2="72" stroke="#6c5ce7" stroke-width="1" opacity="0.4"/>
+
+  <!-- ============ LEFT: COLD-START PROBLEM ============ -->
+  <!-- New Ad icon -->
+  <rect x="48" y="115" width="155" height="105" rx="12" fill="#1e1545" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.9"/>
+  <text x="125" y="138" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#f87171">🆕 Cold-Start Ad</text>
+  <text x="125" y="158" text-anchor="middle" font-family="Arial, sans-serif" font-size="9.5" fill="#cbd5e1">"Christmas LEGO Set"</text>
+  <rect x="72" y="168" width="107" height="22" rx="4" fill="#2a1a4a" stroke="#f87171" stroke-width="0.8"/>
+  <text x="125" y="183" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#fca5a5">No click data ⚠</text>
+  <text x="125" y="207" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#64748b">Can't train CTR weights</text>
+
+  <!-- Historical Ad Library -->
+  <rect x="38" y="260" width="175" height="130" rx="12" fill="#1a1845" stroke="#3b82f6" stroke-width="1.2" filter="url(#softShadow)"/>
+  <text x="125" y="282" text-anchor="middle" font-family="Arial, sans-serif" font-size="10.5" font-weight="bold" fill="#60a5fa">📚 Historical Ad Library</text>
+  
+  <!-- Mini ad cards -->
+  <rect x="52" y="295" width="148" height="24" rx="5" fill="#253068" opacity="0.8"/>
+  <text x="62" y="311" font-family="Arial, sans-serif" font-size="8.5" fill="#93c5fd">"Kids Building Blocks"</text>
+  <text x="190" y="311" text-anchor="end" font-family="monospace" font-size="7.5" fill="#34d399">w✓</text>
+  
+  <rect x="52" y="323" width="148" height="24" rx="5" fill="#253068" opacity="0.8"/>
+  <text x="62" y="339" font-family="Arial, sans-serif" font-size="8.5" fill="#93c5fd">"Puzzle Brain Game"</text>
+  <text x="190" y="339" text-anchor="end" font-family="monospace" font-size="7.5" fill="#34d399">w✓</text>
+  
+  <rect x="52" y="351" width="148" height="24" rx="5" fill="#253068" opacity="0.6"/>
+  <text x="62" y="367" font-family="Arial, sans-serif" font-size="8.5" fill="#7dd3fc">"Toy Train Set"</text>
+  <text x="190" y="367" text-anchor="end" font-family="monospace" font-size="7.5" fill="#34d399">w✓</text>
+
+  <!-- CLIP retrieval label -->
+  <rect x="60" y="238" width="80" height="18" rx="9" fill="#1e3a5f"/>
+  <text x="100" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#38bdf8">CLIP Search</text>
+  
+  <!-- Arrow from new ad to library -->
+  <path d="M125,220 L125,238" stroke="#38bdf8" stroke-width="1.2" fill="none" stroke-dasharray="3,2" marker-end="url(#arrowCyan)"/>
+
+  <!-- ============ CENTER: LLM HYPERNETWORK (main focus) ============ -->
+  <!-- Central glow -->
+  <ellipse cx="450" cy="260" rx="160" ry="130" fill="#6c5ce7" opacity="0.04" filter="url(#glowStrong)"/>
+  
+  <!-- LLM Central hexagonal-ish container -->
+  <path d="M350,175 L550,175 L580,260 L550,345 L350,345 L320,260 Z" fill="#1e1052" stroke="url(#llmGrad)" stroke-width="2.5" filter="url(#softShadow)"/>
+  
+  <!-- LLM label -->
+  <text x="450" y="205" text-anchor="middle" font-family="Georgia, serif" font-size="18" font-weight="bold" fill="#c4b5fd" filter="url(#glow)">LLM</text>
+  <text x="450" y="222" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#a78bfa">Hypernetwork</text>
+  <text x="450" y="237" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#7c3aed">(Gemini-2.5-Pro)</text>
+  
+  <!-- Prompt components inside LLM -->
+  <rect x="372" y="248" width="156" height="20" rx="4" fill="#312e81" opacity="0.8"/>
+  <text x="450" y="262" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#c4b5fd">📝 Few-shot CoT Prompt</text>
+  
+  <rect x="380" y="275" width="60" height="16" rx="3" fill="#4338ca" opacity="0.6"/>
+  <text x="410" y="287" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#e0e7ff">K examples</text>
+  
+  <rect x="445" y="275" width="75" height="16" rx="3" fill="#4338ca" opacity="0.6"/>
+  <text x="482" y="287" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#e0e7ff">Ad content</text>
+  
+  <rect x="395" y="296" width="110" height="16" rx="3" fill="#4338ca" opacity="0.6"/>
+  <text x="450" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#e0e7ff">Feature definitions</text>
+  
+  <!-- "Reason & Generate" -->
+  <text x="450" y="333" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-style="italic" fill="#a78bfa">Reason → Generate weights</text>
+
+  <!-- Arrow from library to LLM -->
+  <path d="M213,310 C265,290 300,250 320,260" stroke="#60a5fa" stroke-width="1.8" fill="none" marker-end="url(#arrowWhite)" stroke-dasharray="none"/>
+  <text x="258" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="7.5" fill="#60a5fa">Similar ads +</text>
+  <text x="258" y="275" text-anchor="middle" font-family="Arial, sans-serif" font-size="7.5" fill="#60a5fa">trained weights</text>
+
+  <!-- Arrow from new ad to LLM -->
+  <path d="M203,155 C280,140 335,170 350,195" stroke="#f87171" stroke-width="1.5" fill="none" marker-end="url(#arrowWhite)"/>
+  <text x="275" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="7.5" fill="#fca5a5">Ad text + image</text>
+
+  <!-- ============ OUTPUT: Weight Vector ============ -->
+  <!-- Weight vector visualization -->
+  <path d="M580,260 C620,260 640,260 660,260" stroke="url(#llmGrad)" stroke-width="2.5" fill="none" marker-end="url(#arrowWhite)"/>
+  
+  <!-- Weight vector box -->
+  <rect x="668" y="220" width="190" height="80" rx="10" fill="#1a1845" stroke="#a855f7" stroke-width="1.5" filter="url(#softShadow)"/>
+  <text x="763" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#c4b5fd">Weight Vector w</text>
+  
+  <!-- Weight bars visualization -->
+  <g transform="translate(683,250)">
+    <rect x="0" y="0" width="65" height="8" rx="2" fill="#10b981" opacity="0.9"/>
+    <text x="70" y="8" font-family="monospace" font-size="7" fill="#6ee7b7">toy: 0.90</text>
+    <rect x="0" y="12" width="45" height="8" rx="2" fill="#3b82f6" opacity="0.8"/>
+    <text x="70" y="20" font-family="monospace" font-size="7" fill="#93c5fd">kids: 0.68</text>
+    <rect x="0" y="24" width="20" height="8" rx="2" fill="#ef4444" opacity="0.7"/>
+    <text x="70" y="32" font-family="monospace" font-size="7" fill="#fca5a5">furn: -0.35</text>
+  </g>
+  
+  <text x="763" y="293" text-anchor="middle" font-family="Arial, sans-serif" font-size="7.5" fill="#8b5cf6">n-dim, range [-1, 1]</text>
+
+  <!-- ============ CALIBRATION STEP ============ -->
+  <path d="M763,300 L763,340" stroke="#a855f7" stroke-width="1.5" fill="none" marker-end="url(#arrowWhite)"/>
+  
+  <rect x="678" y="345" width="170" height="50" rx="10" fill="#1e1545" stroke="#f59e0b" stroke-width="1.3"/>
+  <text x="763" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#fbbf24">⚖ Calibration</text>
+  <text x="763" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#fde68a">L2 Norm + Intercept Shift</text>
+  <text x="763" y="390" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#92400e">Align CTR distribution</text>
+
+  <!-- ============ ONLINE SERVING ============ -->
+  <path d="M763,395 L763,425" stroke="#f59e0b" stroke-width="1.5" fill="none" marker-end="url(#arrowWhite)"/>
+  
+  <!-- Online scoring area -->
+  <rect x="298" y="430" width="560" height="100" rx="14" fill="#0f1729" stroke="#10b981" stroke-width="1.5" filter="url(#softShadow)"/>
+  
+  <!-- "ONLINE" badge -->
+  <rect x="308" y="422" width="60" height="18" rx="9" fill="#10b981"/>
+  <text x="338" y="434" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" font-weight="bold" fill="#fff">ONLINE</text>
+  
+  <!-- User -->
+  <circle cx="360" cy="480" r="22" fill="#1e3a5f" stroke="#38bdf8" stroke-width="1.2"/>
+  <text x="360" y="476" text-anchor="middle" font-family="Arial, sans-serif" font-size="14">👤</text>
+  <text x="360" y="491" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#7dd3fc">User x</text>
+  
+  <!-- Dot product -->
+  <path d="M382,480 L470,480" stroke="#34d399" stroke-width="1.8" fill="none" marker-end="url(#arrowGreen)"/>
+  
+  <circle cx="500" cy="480" r="22" fill="#064e3b" stroke="#34d399" stroke-width="2" filter="url(#glow)"/>
+  <text x="500" y="475" text-anchor="middle" font-family="Georgia, serif" font-size="14" font-weight="bold" fill="#34d399">w·x</text>
+  <text x="500" y="489" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#6ee7b7">→ σ(·)</text>
+  
+  <!-- Cached weight arrow -->
+  <path d="M763,430 L763,450 C763,465 720,480 530,480" stroke="#a855f7" stroke-width="1.2" fill="none" stroke-dasharray="4,2"/>
+  <text x="660" y="456" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#a78bfa">cached w</text>
+
+  <!-- CTR output -->
+  <path d="M522,480 L600,480" stroke="#34d399" stroke-width="1.8" fill="none" marker-end="url(#arrowGreen)"/>
+  
+  <rect x="608" y="462" width="100" height="36" rx="8" fill="#052e16" stroke="#10b981" stroke-width="1.5"/>
+  <text x="658" y="479" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#34d399">CTR = 0.05</text>
+  <text x="658" y="492" text-anchor="middle" font-family="monospace" font-size="7.5" fill="#6ee7b7">0.16ms latency</text>
+
+  <!-- Ranking -->
+  <path d="M708,480 L755,480" stroke="#34d399" stroke-width="1.2" fill="none" marker-end="url(#arrowGreen)"/>
+  <rect x="760" y="462" width="80" height="36" rx="8" fill="#1a2e1a" stroke="#4ade80" stroke-width="1"/>
+  <text x="800" y="478" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#4ade80">Ad Rank</text>
+  <text x="800" y="491" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#86efac">Fair auction</text>
+
+  <!-- ============ TRANSITION arrow ============ -->
+  <!-- Timeline at bottom -->
+  <line x1="80" y1="565" x2="820" y2="565" stroke="#475569" stroke-width="1.5"/>
+  
+  <!-- Cold phase -->
+  <rect x="80" y="555" width="300" height="20" rx="4" fill="#7c3aed" opacity="0.2"/>
+  <circle cx="80" cy="565" r="4" fill="#a855f7"/>
+  <text x="80" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#a78bfa">Ad Created</text>
+  
+  <text x="230" y="582" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#c4b5fd">Cold Phase → LLM-HYPER weights</text>
+  
+  <!-- Transition point -->
+  <circle cx="380" cy="565" r="5" fill="#f59e0b" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="380" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="7.5" fill="#fbbf24">Data threshold</text>
+  
+  <!-- Warm phase -->
+  <rect x="380" y="555" width="440" height="20" rx="4" fill="#10b981" opacity="0.15"/>
+  <circle cx="820" cy="565" r="4" fill="#10b981"/>
+  <text x="600" y="582" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#6ee7b7">Warm Phase → ML-trained model</text>
+
+  <!-- ============ KEY RESULT BADGE ============ -->
+  <rect x="40" y="430" width="230" height="100" rx="12" fill="#0f1729" stroke="#fbbf24" stroke-width="1.2" filter="url(#softShadow)"/>
+  <text x="155" y="452" text-anchor="middle" font-family="Arial, sans-serif" font-size="9.5" font-weight="bold" fill="#fbbf24">📊 A/B Test (30 days)</text>
+  
+  <text x="155" y="472" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="bold" fill="#34d399">92%</text>
+  <text x="155" y="488" text-anchor="middle" font-family="Arial, sans-serif" font-size="8.5" fill="#94a3b8">of warm-start CTR (p=0.62)</text>
+  
+  <text x="155" y="506" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#60a5fa">Offline NDCG@10 ↑</text>
+  <text x="155" y="520" text-anchor="middle" font-family="Georgia, serif" font-size="15" font-weight="bold" fill="#3b82f6">+55.9%</text>
+
+  <!-- ============ OFFLINE badge on LLM ============ -->
+  <rect x="392" y="162" width="56" height="16" rx="8" fill="#7c3aed"/>
+  <text x="420" y="174" text-anchor="middle" font-family="Arial, sans-serif" font-size="7.5" font-weight="bold" fill="#fff">OFFLINE</text>
+  
+  <!-- Timing label -->
+  <text x="450" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#64748b">~47-103s per ad</text>
+
+  <!-- Core insight annotation -->
+  <rect x="50" y="90" width="195" height="16" rx="8" fill="#7f1d1d" opacity="0.6"/>
+  <text x="148" y="101" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#fca5a5">❄ No user feedback → Can't rank</text>
+  
+  <!-- Key insight callout -->
+  <rect x="300" y="100" width="300" height="28" rx="6" fill="#1e1052" stroke="#6c5ce7" stroke-width="0.8" opacity="0.8"/>
+  <text x="450" y="113" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#c4b5fd">💡 Key Insight: LLM reasons about feature importance</text>
+  <text x="450" y="124" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#a78bfa">and generates model weights instead of predictions</text>
+
+</svg>

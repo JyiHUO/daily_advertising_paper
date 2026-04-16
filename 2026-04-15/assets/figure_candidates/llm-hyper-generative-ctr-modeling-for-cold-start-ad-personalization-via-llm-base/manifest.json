@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-15/downloaded_pdfs/llm-hyper-generative-ctr-modeling-for-cold-start-ad-personalization-via-llm-base.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-15/assets/figure_candidates/llm-hyper-generative-ctr-modeling-for-cold-start-ad-personalization-via-llm-base",
+  "candidates": [
+    {
+      "id": "page-2-drawing-caption-38",
+      "page_index": 2,
+      "caption": "Figure 1: LLM-HYPER: (a) framework and (b)-(d) prompt details. Weights are normalized for CTR prediction.",
+      "clip": [
+        75.54499816894531,
+        54.86735534667969,
+        519.6670532226562,
+        327.28369140625
+      ],
+      "clip_area": 120986.1030009787,
+      "page_area": 501156.9211820215,
+      "text_density": 0.45416028920476864,
+      "kind": "drawing_cluster_with_caption",
+      "score": 43.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-15/assets/figure_candidates/llm-hyper-generative-ctr-modeling-for-cold-start-ad-personalization-via-llm-base/01-p3-drawing_cluster_with_caption.png",
+      "filename": "01-p3-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-2-block-38",
+      "page_index": 2,
+      "caption": "Figure 1: LLM-HYPER: (a) framework and (b)-(d) prompt details. Weights are normalized for CTR prediction.",
+      "clip": [
+        45.11619720458984,
+        18.0,
+        550.1611999511719,
+        314.0794677734375
+      ],
+      "clip_area": 149533.45561484227,
+      "page_area": 501156.9211820215,
+      "text_density": 0.3519999776471036,
+      "kind": "captioned_figure",
+      "score": 32.680001341173785,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-15/assets/figure_candidates/llm-hyper-generative-ctr-modeling-for-cold-start-ad-personalization-via-llm-base/02-p3-captioned_figure.png",
+      "filename": "02-p3-captioned_figure.png"
+    },
+    {
+      "id": "page-3-drawing-caption-19",
+      "page_index": 3,
+      "caption": "Figure 2: LLM-HYPER deployment",
+      "clip": [
+        52.865997314453125,
+        54.86609649658203,
+        307.07086181640625,
+        172.77296447753906
+      ],
+      "clip_area": 29972.499398948858,
+      "page_area": 501156.9211820215,
+      "text_density": 0.19963833596752062,
+      "kind": "drawing_cluster_with_caption",
+      "score": 29.154727613048195,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-15/assets/figure_candidates/llm-hyper-generative-ctr-modeling-for-cold-start-ad-personalization-via-llm-base/03-p4-drawing_cluster_with_caption.png",
+      "filename": "03-p4-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-5-drawing-caption-52",
+      "page_index": 5,
+      "caption": "Figure 4: Counterfactual Robustness of Cold Start Model with accuracy of weight change",
+      "clip": [
+        292.5060119628906,
+        161.6079864501953,
+        537.9920043945312,
+        460.3843688964844
+      ],
+      "clip_area": 73345.41675996268,
+      "page_area": 501156.9211820215,
+      "text_density": 0.28951152385883794,
+      "kind": "drawing_cluster_with_caption",
+      "score": 27.244257643580422,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-15/assets/figure_candidates/llm-hyper-generative-ctr-modeling-for-cold-start-ad-personalization-via-llm-base/04-p6-drawing_cluster_with_caption.png",
+      "filename": "04-p6-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-8-block-15",
+      "page_index": 8,
+      "caption": "Chris Zhang, Mengye Ren, and Raquel Urtasun. 2018. Graph hypernetworks for neural architecture search. arXiv preprint arXiv:1810.05749 .",
+      "clip": [
+        276.3781982421875,
+        18.0,
+        555.9187072753906,
+        332.2197570800781
+      ],
+      "clip_area": 87837.15084245446,
+      "page_area": 501156.9211820215,
+      "text_density": 0.5984660085066518,
+      "kind": "captioned_figure",
+      "score": 12.975968342693939,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-15/assets/figure_candidates/llm-hyper-generative-ctr-modeling-for-cold-start-ad-personalization-via-llm-base/05-p9-captioned_figure.png",
+      "filename": "05-p9-captioned_figure.png"
+    },
+    {
+      "id": "page-5-block-52",
+      "page_index": 5,
+      "caption": "Figure 4: Counterfactual Robustness of Cold Start Model with accuracy of weight change",
+      "clip": [
+        276.3781982421875,
+        113.54730834960935,
+        554.1724304199219,
+        442.3033142089844
+      ],
+      "clip_area": 91326.52222152382,
+      "page_area": 501156.9211820215,
+      "text_density": 0.37242507983057843,
+      "kind": "captioned_figure",
+      "score": 10.469234345960004,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-15/assets/figure_candidates/llm-hyper-generative-ctr-modeling-for-cold-start-ad-personalization-via-llm-base/06-p6-captioned_figure.png",
+      "filename": "06-p6-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-15/assets/figure_candidates/llm-hyper-generative-ctr-modeling-for-cold-start-ad-personalization-via-llm-base/contact-sheet.svg"
+}

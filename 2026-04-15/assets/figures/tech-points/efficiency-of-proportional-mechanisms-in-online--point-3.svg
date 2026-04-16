@@ -1,0 +1,105 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#c62828"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f7fa"/>
+      <stop offset="100%" stop-color="#e8ecf1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bgGrad)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a237e">如何绕过 PoA ≥ 2 的不可能性壁垒？</text>
+  <text x="450" y="68" text-anchor="middle" font-size="13" fill="#666">Proportional Mechanism · Auto-Bidding · Breaking the Barrier</text>
+
+  <!-- ====== LEFT: Impossibility Wall ====== -->
+  <rect x="40" y="100" width="250" height="200" rx="14" fill="#fff" stroke="#c62828" stroke-width="2.5"/>
+  <rect x="40" y="100" width="250" height="40" rx="14" fill="#c62828"/>
+  <rect x="40" y="126" width="250" height="14" fill="#c62828"/>
+  <text x="165" y="125" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff">🚫 不可能性定理</text>
+
+  <text x="165" y="170" text-anchor="middle" font-size="13" fill="#333">约束条件：</text>
+  <rect x="70" y="185" width="190" height="36" rx="8" fill="#ffebee" stroke="#c62828" stroke-width="1.5"/>
+  <text x="165" y="208" text-anchor="middle" font-size="15" font-weight="bold" fill="#c62828">每次支付 pᵢⱼ ≤ 出价 bᵢⱼ</text>
+
+  <text x="165" y="255" text-anchor="middle" font-size="13" fill="#555">⟹ 结论：</text>
+  <text x="165" y="280" text-anchor="middle" font-size="20" font-weight="bold" fill="#c62828">PoA ≥ 2</text>
+
+  <!-- ====== MIDDLE: Key Insight (the escape) ====== -->
+  <!-- Big arrow from left to middle -->
+  <path d="M 300 200 L 345 200" stroke="#c62828" stroke-width="2.5" marker-end="url(#arrowRed)" fill="none"/>
+
+  <rect x="355" y="95" width="190" height="215" rx="16" fill="#fff3e0" stroke="#ef6c00" stroke-width="2.5"/>
+  <text x="450" y="125" text-anchor="middle" font-size="15" font-weight="bold" fill="#e65100">💡 关键突破</text>
+
+  <text x="450" y="158" text-anchor="middle" font-size="13" fill="#333">新支付方案允许：</text>
+  <rect x="375" y="170" width="150" height="40" rx="8" fill="#fff" stroke="#ef6c00" stroke-width="1.5"/>
+  <text x="450" y="186" text-anchor="middle" font-size="13" font-weight="bold" fill="#ef6c00">单次 pᵢⱼ &gt; bᵢⱼ</text>
+  <text x="450" y="202" text-anchor="middle" font-size="11" fill="#888">（总花费仍受约束）</text>
+
+  <text x="450" y="235" text-anchor="middle" font-size="12" fill="#555">跳出不可能性的适用范围</text>
+
+  <text x="450" y="270" text-anchor="middle" font-size="12" fill="#555">例：出价=5，支付=6 ✓</text>
+  <text x="450" y="292" text-anchor="middle" font-size="18" font-weight="bold" fill="#2e7d32">PoA → 1 + O(1/(n-1))</text>
+
+  <!-- ====== RIGHT: Modified Mechanism ====== -->
+  <path d="M 555 200 L 600 200" stroke="#2e7d32" stroke-width="2.5" marker-end="url(#arrowGreen)" fill="none"/>
+
+  <rect x="610" y="100" width="250" height="200" rx="14" fill="#fff" stroke="#2e7d32" stroke-width="2.5"/>
+  <rect x="610" y="100" width="250" height="40" rx="14" fill="#2e7d32"/>
+  <rect x="610" y="126" width="250" height="14" fill="#2e7d32"/>
+  <text x="735" y="125" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff">✅ 修正版机制</text>
+
+  <text x="735" y="162" text-anchor="middle" font-size="12" fill="#555">截断 + 缩放处理出价：</text>
+  <rect x="635" y="172" width="200" height="34" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="735" y="194" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e7d32">b'= (bᵢⱼ − τ) / (n·W)</text>
+
+  <text x="735" y="230" text-anchor="middle" font-size="12" fill="#555">修正后满足：</text>
+  <rect x="650" y="238" width="170" height="28" rx="8" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="735" y="258" text-anchor="middle" font-size="13" font-weight="bold" fill="#2e7d32">支付 ≤ 原始出价 ✓</text>
+
+  <text x="735" y="290" text-anchor="middle" font-size="15" font-weight="bold" fill="#1b5e20">PoA = 1 + ε</text>
+
+  <!-- ====== BOTTOM: Comparison summary ====== -->
+  <rect x="100" y="370" width="700" height="210" rx="16" fill="#fff" stroke="#bbb" stroke-width="1.5"/>
+  <text x="450" y="400" text-anchor="middle" font-size="17" font-weight="bold" fill="#1a237e">对比总结</text>
+
+  <!-- Three columns -->
+  <!-- Col 1: Traditional -->
+  <rect x="130" y="420" width="180" height="140" rx="12" fill="#ffebee" stroke="#c62828" stroke-width="1.5"/>
+  <text x="220" y="448" text-anchor="middle" font-size="14" font-weight="bold" fill="#c62828">传统机制</text>
+  <text x="220" y="475" text-anchor="middle" font-size="12" fill="#555">首价/次价拍卖</text>
+  <text x="220" y="498" text-anchor="middle" font-size="12" fill="#555">pᵢⱼ ≤ bᵢⱼ 严格约束</text>
+  <text x="220" y="535" text-anchor="middle" font-size="26" font-weight="bold" fill="#c62828">PoA = 2</text>
+
+  <!-- Col 2: New payment -->
+  <rect x="360" y="420" width="180" height="140" rx="12" fill="#fff3e0" stroke="#ef6c00" stroke-width="1.5"/>
+  <text x="450" y="448" text-anchor="middle" font-size="14" font-weight="bold" fill="#e65100">新支付方案</text>
+  <text x="450" y="475" text-anchor="middle" font-size="12" fill="#555">允许单次超额支付</text>
+  <text x="450" y="498" text-anchor="middle" font-size="12" fill="#555">总支出仍受约束</text>
+  <text x="450" y="535" text-anchor="middle" font-size="26" font-weight="bold" fill="#ef6c00">PoA → 1</text>
+
+  <!-- Col 3: Modified -->
+  <rect x="590" y="420" width="180" height="140" rx="12" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1.5"/>
+  <text x="680" y="448" text-anchor="middle" font-size="14" font-weight="bold" fill="#2e7d32">修正机制</text>
+  <text x="680" y="475" text-anchor="middle" font-size="12" fill="#555">截断缩放后</text>
+  <text x="680" y="498" text-anchor="middle" font-size="12" fill="#555">pᵢⱼ ≤ bᵢⱼ 且高效</text>
+  <text x="680" y="535" text-anchor="middle" font-size="26" font-weight="bold" fill="#2e7d32">PoA = 1+ε</text>
+
+  <!-- Arrows between columns -->
+  <path d="M 315 490 L 355 490" stroke="#999" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+  <path d="M 545 490 L 585 490" stroke="#999" stroke-width="2" marker-end="url(#arrow)" fill="none"/>
+
+  <!-- Footer -->
+  <text x="450" y="608" text-anchor="middle" font-size="11" fill="#999">n = 广告主数量 · ε = 任意小常数 · τ = 截断阈值 1/((n−1)·ε)</text>
+</svg>

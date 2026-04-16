@@ -4,18 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-04-14
+- **日期**：2026-04-15
 - **分类**：cs.IR + cs.AI + cs.LG + cs.CL
-- **候选论文数**：18
+- **候选论文数**：5
 - **必读论文**：
-  - Credit-Budgeted ICPC-Style Coding: When Agents Must Pay for Every Decision
-  - From Attribution to Action: A Human-Centered Application of Activation Steering
-- **日报路径**：[2026-04-14/daily_report.md](2026-04-14/daily_report.md)
+  - LLM-HYPER: Generative CTR Modeling for Cold-Start Ad Personalization via LLM-Based Hypernetworks
+  - Efficiency of Proportional Mechanisms in Online Auto-Bidding Advertising
+- **日报路径**：[2026-04-15/daily_report.md](2026-04-15/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-04-15 | cs.IR + cs.AI + cs.LG + cs.CL | 5 | 1 | LLM-HYPER: Generative CTR Modeling for Cold-Start Ad Personalization via LLM-Based Hypernetworks | [2026-04-15/daily_report.md](2026-04-15/daily_report.md) |
+|  |  |  | 2 | Efficiency of Proportional Mechanisms in Online Auto-Bidding Advertising |  |
 | 2026-04-14 | cs.IR + cs.AI + cs.LG + cs.CL | 18 | 1 | Credit-Budgeted ICPC-Style Coding: When Agents Must Pay for Every Decision | [2026-04-14/daily_report.md](2026-04-14/daily_report.md) |
 |  |  |  | 2 | From Attribution to Action: A Human-Centered Application of Activation Steering |  |
 | 2026-04-13 | cs.IR + cs.AI + cs.LG + cs.CL | 2 | 1 | IAT: Instance-As-Token Compression for Historical User Sequence Modeling in Industrial Recommender Systems | [2026-04-13/daily_report.md](2026-04-13/daily_report.md) |

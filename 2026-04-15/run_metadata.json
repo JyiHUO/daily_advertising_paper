@@ -1,0 +1,19 @@
+{
+  "date": "2026-04-15",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL"
+  ],
+  "candidate_count": 5,
+  "supplementary_count": 0,
+  "focus_titles": [
+    "LLM-HYPER: Generative CTR Modeling for Cold-Start Ad Personalization via LLM-Based Hypernetworks",
+    "Efficiency of Proportional Mechanisms in Online Auto-Bidding Advertising"
+  ],
+  "focus_status": {
+    "LLM-HYPER: Generative CTR Modeling for Cold-Start Ad Personalization via LLM-Based Hypernetworks": "completed",
+    "Efficiency of Proportional Mechanisms in Online Auto-Bidding Advertising": "completed"
+  }
+}

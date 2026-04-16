@@ -1,0 +1,133 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="oldGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff6b6b"/>
+      <stop offset="100%" stop-color="#c0392b"/>
+    </linearGradient>
+    <linearGradient id="newGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2ecc71"/>
+      <stop offset="100%" stop-color="#1a9c5a"/>
+    </linearGradient>
+    <linearGradient id="arrowGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f39c12"/>
+      <stop offset="100%" stop-color="#e67e22"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <marker id="arrowHead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f39c12"/>
+    </marker>
+    <marker id="arrowHeadWhite" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ecf0f1"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="600" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="450" y="45" text-anchor="middle" fill="#ecf0f1" font-size="24" font-weight="bold">突破 PoA = 2 壁垒：新支付方案设计</text>
+  <text x="450" y="70" text-anchor="middle" fill="#7f8c8d" font-size="13">Proportional Mechanism — 从 PoA=2 到 PoA≈1</text>
+
+  <!-- ===== LEFT: Old Mechanism ===== -->
+  <rect x="40" y="100" width="360" height="220" rx="16" fill="#1e2d4a" stroke="#c0392b" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="40" y="100" width="360" height="40" rx="16" fill="url(#oldGrad)"/>
+  <rect x="40" y="124" width="360" height="16" fill="url(#oldGrad)"/>
+  <text x="220" y="127" text-anchor="middle" fill="#fff" font-size="16" font-weight="bold">❌ 标准比例机制</text>
+
+  <!-- Old: Payment bar -->
+  <text x="70" y="175" fill="#bdc3c7" font-size="13">支付 = 出价本身</text>
+  <rect x="70" y="185" width="300" height="28" rx="6" fill="#34495e"/>
+  <rect x="70" y="185" width="300" height="28" rx="6" fill="#e74c3c" opacity="0.7"/>
+  <text x="220" y="204" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">总支付 ≈ B_j</text>
+
+  <!-- Old: Dual bar (same size) -->
+  <text x="70" y="237" fill="#bdc3c7" font-size="13">对偶贡献 α_j = B_j</text>
+  <rect x="70" y="247" width="300" height="28" rx="6" fill="#34495e"/>
+  <rect x="70" y="247" width="300" height="28" rx="6" fill="#e67e22" opacity="0.7"/>
+  <text x="220" y="266" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">α_j = B_j（和支付一样大）</text>
+
+  <!-- Old: Result -->
+  <rect x="120" y="288" width="200" height="26" rx="13" fill="#c0392b" opacity="0.9"/>
+  <text x="220" y="306" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">PoA = 2</text>
+
+  <!-- ===== RIGHT: New Mechanism ===== -->
+  <rect x="500" y="100" width="360" height="220" rx="16" fill="#1e2d4a" stroke="#1a9c5a" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="500" y="100" width="360" height="40" rx="16" fill="url(#newGrad)"/>
+  <rect x="500" y="124" width="360" height="16" fill="url(#newGrad)"/>
+  <text x="680" y="127" text-anchor="middle" fill="#fff" font-size="16" font-weight="bold">✅ 新支付方案</text>
+
+  <!-- New: Payment bar (large) -->
+  <text x="530" y="175" fill="#bdc3c7" font-size="13">总支付 = g(B_j) / ε</text>
+  <rect x="530" y="185" width="300" height="28" rx="6" fill="#34495e"/>
+  <rect x="530" y="185" width="300" height="28" rx="6" fill="#2ecc71" opacity="0.6"/>
+  <text x="680" y="204" text-anchor="middle" fill="#fff" font-size="12" font-weight="bold">总支付（大，但被约束保证）</text>
+
+  <!-- New: Dual bar (tiny!) -->
+  <text x="530" y="237" fill="#bdc3c7" font-size="13">对偶贡献 α_j = g(B_j)</text>
+  <rect x="530" y="247" width="300" height="28" rx="6" fill="#34495e"/>
+  <rect x="530" y="247" width="33" height="28" rx="6" fill="#f39c12" opacity="0.85"/>
+  <text x="580" y="266" fill="#f1c40f" font-size="12" font-weight="bold">仅 ε 倍</text>
+  <text x="750" y="266" fill="#7f8c8d" font-size="11">← 占总支付的 1/(n-1)</text>
+
+  <!-- New: Result -->
+  <rect x="560" y="288" width="240" height="26" rx="13" fill="#1a9c5a" opacity="0.9"/>
+  <text x="680" y="306" text-anchor="middle" fill="#fff" font-size="15" font-weight="bold">PoA = 1 + O(1/(n-1))</text>
+
+  <!-- ===== CENTER ARROW ===== -->
+  <line x1="415" y1="210" x2="485" y2="210" stroke="#f39c12" stroke-width="3" marker-end="url(#arrowHead)"/>
+  <text x="450" y="195" text-anchor="middle" fill="#f39c12" font-size="12" font-weight="bold">改进</text>
+
+  <!-- ===== BOTTOM: Key Insight ===== -->
+  <rect x="100" y="360" width="700" height="110" rx="16" fill="#162038" stroke="#3498db" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="450" y="390" text-anchor="middle" fill="#3498db" font-size="16" font-weight="bold">🔑 核心思想</text>
+
+  <!-- Insight diagram: two bars comparison -->
+  <!-- Label -->
+  <text x="180" y="420" text-anchor="middle" fill="#e74c3c" font-size="13" font-weight="bold">旧：α = 支付</text>
+  <text x="500" y="420" text-anchor="middle" fill="#2ecc71" font-size="13" font-weight="bold">新：α = ε × 支付</text>
+
+  <!-- Old bars -->
+  <rect x="120" y="430" width="120" height="24" rx="4" fill="#e74c3c" opacity="0.7"/>
+  <text x="180" y="447" text-anchor="middle" fill="#fff" font-size="11">α_j</text>
+  <rect x="120" y="430" width="120" height="24" rx="4" fill="none" stroke="#f39c12" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- New bars -->
+  <rect x="440" y="430" width="120" height="24" rx="4" fill="#2ecc71" opacity="0.3"/>
+  <rect x="440" y="430" width="14" height="24" rx="4" fill="#f39c12" opacity="0.9"/>
+  <text x="448" y="447" fill="#fff" font-size="9">α</text>
+  <text x="500" y="447" fill="#7f8c8d" font-size="11">总支付</text>
+
+  <!-- Arrow showing shrink -->
+  <line x1="310" y1="442" x2="425" y2="442" stroke="#ecf0f1" stroke-width="1.5" marker-end="url(#arrowHeadWhite)" stroke-dasharray="5,3"/>
+  <text x="368" y="436" text-anchor="middle" fill="#ecf0f1" font-size="10">压缩</text>
+
+  <!-- ===== BOTTOM: Example ===== -->
+  <rect x="100" y="490" width="700" height="80" rx="14" fill="#1a2540" stroke="#8e44ad" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="450" y="515" text-anchor="middle" fill="#bb86fc" font-size="14" font-weight="bold">📊 示例：n=10 个广告主，ε = 1/9</text>
+
+  <!-- Example numbers -->
+  <text x="180" y="545" text-anchor="middle" fill="#e74c3c" font-size="22" font-weight="bold">PoA = 2</text>
+  <text x="180" y="560" text-anchor="middle" fill="#95a5a6" font-size="11">标准机制</text>
+
+  <line x1="320" y1="530" x2="400" y2="530" stroke="#f39c12" stroke-width="2.5" marker-end="url(#arrowHead)"/>
+
+  <text x="540" y="545" text-anchor="middle" fill="#2ecc71" font-size="22" font-weight="bold">PoA ≈ 1.11</text>
+  <text x="540" y="560" text-anchor="middle" fill="#95a5a6" font-size="11">新方案（1 + 1/9）</text>
+
+  <!-- Trending towards 1 -->
+  <text x="720" y="545" text-anchor="middle" fill="#3498db" font-size="16" font-weight="bold">n→∞</text>
+  <text x="720" y="562" text-anchor="middle" fill="#3498db" font-size="14">→ 1</text>
+
+  <!-- g function label -->
+  <text x="680" y="170" fill="#7f8c8d" font-size="11" font-style="italic">g(u) = u·(1+(n-1)ε)</text>
+</svg>

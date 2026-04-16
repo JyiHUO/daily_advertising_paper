@@ -1,0 +1,97 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="optGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="eqGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="dualGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#a78bfa"/>
+    </marker>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="560" fill="url(#bgGrad)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#e2e8f0" font-size="22" font-weight="bold">标准比例机制（Kelly）的 PoA 紧界 = 2</text>
+  <text x="450" y="66" text-anchor="middle" fill="#94a3b8" font-size="14">均衡福利最差只有最优的一半 — 且无法更差</text>
+
+  <!-- ===== LEFT: Optimal Welfare Bar ===== -->
+  <rect x="80" y="110" width="160" height="280" rx="12" fill="url(#optGrad)" opacity="0.15" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="105" y="140" width="110" height="220" rx="8" fill="url(#optGrad)" opacity="0.85"/>
+  <text x="160" y="265" text-anchor="middle" fill="#fff" font-size="30" font-weight="bold">OPT</text>
+  <text x="160" y="125" text-anchor="middle" fill="#93c5fd" font-size="13" font-weight="bold">最优社会福利</text>
+  <text x="160" y="385" text-anchor="middle" fill="#93c5fd" font-size="12">理论最佳配置</text>
+
+  <!-- ===== RIGHT: Equilibrium Welfare Bar (half height) ===== -->
+  <rect x="660" y="110" width="160" height="280" rx="12" fill="url(#eqGrad)" opacity="0.15" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="685" y="250" width="110" height="110" rx="8" fill="url(#eqGrad)" opacity="0.85"/>
+  <text x="740" y="315" text-anchor="middle" fill="#fff" font-size="24" font-weight="bold">EQ</text>
+  <text x="740" y="125" text-anchor="middle" fill="#fbbf24" font-size="13" font-weight="bold">均衡福利</text>
+  <text x="740" y="385" text-anchor="middle" fill="#fbbf24" font-size="12">代理博弈结果</text>
+
+  <!-- Half-line annotation -->
+  <line x1="810" y1="140" x2="810" y2="360" stroke="#94a3b8" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="805" y1="140" x2="815" y2="140" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="805" y1="360" x2="815" y2="360" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="805" y1="250" x2="815" y2="250" stroke="#fbbf24" stroke-width="2"/>
+  <text x="838" y="255" fill="#fbbf24" font-size="11" font-weight="bold">≥ ½</text>
+
+  <!-- ===== CENTER: Dual Proof Bridge ===== -->
+  <rect x="310" y="130" width="280" height="240" rx="16" fill="url(#dualGrad)" opacity="0.12" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="450" y="160" text-anchor="middle" fill="#c4b5fd" font-size="15" font-weight="bold">对偶证明桥梁</text>
+
+  <!-- KKT box -->
+  <rect x="335" y="178" width="230" height="44" rx="8" fill="#1e1b4b" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="450" y="196" text-anchor="middle" fill="#c4b5fd" font-size="12">KKT 均衡条件</text>
+  <text x="450" y="213" text-anchor="middle" fill="#e9d5ff" font-size="13" font-weight="bold">(1−d_ij)·∂v_i ≤ B_j</text>
+
+  <!-- Dual variables -->
+  <rect x="335" y="235" width="230" height="44" rx="8" fill="#1e1b4b" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="450" y="253" text-anchor="middle" fill="#c4b5fd" font-size="12">设对偶变量</text>
+  <text x="450" y="270" text-anchor="middle" fill="#e9d5ff" font-size="13" font-weight="bold">α_j = B_j,  β_i = f(w_i, v_i)</text>
+
+  <!-- Conclusion -->
+  <rect x="335" y="292" width="230" height="44" rx="8" fill="#1e1b4b" stroke="#7c3aed" stroke-width="1.5"/>
+  <text x="450" y="310" text-anchor="middle" fill="#c4b5fd" font-size="12">对偶目标上界</text>
+  <text x="450" y="327" text-anchor="middle" fill="#e9d5ff" font-size="13" font-weight="bold">OPT ≤ Dual ≤ 2 × EQ</text>
+
+  <!-- Arrows between steps -->
+  <line x1="450" y1="222" x2="450" y2="235" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrowPurple)"/>
+  <line x1="450" y1="279" x2="450" y2="292" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrowPurple)"/>
+
+  <!-- Arrow from OPT to center -->
+  <line x1="240" y1="250" x2="308" y2="250" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+  <text x="274" y="242" text-anchor="middle" fill="#94a3b8" font-size="11">上界</text>
+
+  <!-- Arrow from center to EQ -->
+  <line x1="592" y1="305" x2="658" y2="305" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+  <text x="625" y="297" text-anchor="middle" fill="#94a3b8" font-size="11">≤ 2×</text>
+
+  <!-- ===== BOTTOM: Big Result ===== -->
+  <rect x="200" y="430" width="500" height="80" rx="16" fill="#1e293b" stroke="#f59e0b" stroke-width="2.5" filter="url(#glow)"/>
+  <text x="450" y="462" text-anchor="middle" fill="#fbbf24" font-size="26" font-weight="bold">PoA = OPT / EQ = 2</text>
+  <text x="450" y="492" text-anchor="middle" fill="#94a3b8" font-size="15">紧界：上下界均达到 — 效率损失至多 50%</text>
+
+  <!-- Example footnote -->
+  <text x="450" y="540" text-anchor="middle" fill="#64748b" font-size="12">例：2人竞争，出价60:40 → 份额60%:40%，对偶变量α=总出价100 → 验证 OPT ≤ 2×EQ ✓</text>
+</svg>
