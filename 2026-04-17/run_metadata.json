@@ -1,0 +1,19 @@
+{
+  "date": "2026-04-17",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL"
+  ],
+  "candidate_count": 17,
+  "supplementary_count": 10,
+  "focus_titles": [
+    "The LLM Fallacy: Misattribution in AI-Assisted Cognitive Workflows",
+    "Simulating Human Cognition: Heartbeat-Driven Autonomous Thinking Activity Scheduling for LLM-based AI systems"
+  ],
+  "focus_status": {
+    "The LLM Fallacy: Misattribution in AI-Assisted Cognitive Workflows": "llm_failed",
+    "Simulating Human Cognition: Heartbeat-Driven Autonomous Thinking Activity Scheduling for LLM-based AI systems": "llm_failed"
+  }
+}

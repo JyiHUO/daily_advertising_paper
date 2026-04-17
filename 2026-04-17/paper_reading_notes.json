@@ -1,0 +1,34 @@
+[
+  {
+    "title": "The LLM Fallacy: Misattribution in AI-Assisted Cognitive Workflows",
+    "status": "llm_failed",
+    "reason": "LLM 分析失败: An error occurred (ValidationException) when calling the InvokeModel operation: Access to Anthropic models is not allowed from unsupported countries, regions, or territories. Please refer to https://www.anthropic.com/supported-countries for more information on the countries and regions Anthropic currently supports.",
+    "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-17/downloaded_pdfs/the-llm-fallacy-misattribution-in-ai-assisted-cognitive-workflows.pdf",
+    "analysis": {
+      "pick_reason": "命中广告核心词：attribution。",
+      "background": "The LLM Fallacy: Misattribution in AI-Assisted Cognitive Workflows 值得关注，但当前只能给保守判断。LLM 分析失败: An error occurred (ValidationException) when calling the InvokeModel operation: Access to Anthropic models is not allowed from unsupported countries, regions, or territories. Please refer to https://www.anthropic.com/supported-countries for more information on the countries and regions Anthropic currently supports.",
+      "core_points": [],
+      "ad_transfer": {
+        "best_layer": "待确认",
+        "value": "存在一定启发，但需要 PDF 支撑。",
+        "risk": "信息不完整。"
+      }
+    }
+  },
+  {
+    "title": "Simulating Human Cognition: Heartbeat-Driven Autonomous Thinking Activity Scheduling for LLM-based AI systems",
+    "status": "llm_failed",
+    "reason": "LLM 分析失败: An error occurred (ValidationException) when calling the InvokeModel operation: Access to Anthropic models is not allowed from unsupported countries, regions, or territories. Please refer to https://www.anthropic.com/supported-countries for more information on the countries and regions Anthropic currently supports.",
+    "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-17/downloaded_pdfs/simulating-human-cognition-heartbeat-driven-autonomous-thinking-activity-schedul.pdf",
+    "analysis": {
+      "pick_reason": "命中广告核心词：rtb。",
+      "background": "Simulating Human Cognition: Heartbeat-Driven Autonomous Thinking Activity Scheduling for LLM-based AI systems 值得关注，但当前只能给保守判断。LLM 分析失败: An error occurred (ValidationException) when calling the InvokeModel operation: Access to Anthropic models is not allowed from unsupported countries, regions, or territories. Please refer to https://www.anthropic.com/supported-countries for more information on the countries and regions Anthropic currently supports.",
+      "core_points": [],
+      "ad_transfer": {
+        "best_layer": "待确认",
+        "value": "存在一定启发，但需要 PDF 支撑。",
+        "risk": "信息不完整。"
+      }
+    }
+  }
+]

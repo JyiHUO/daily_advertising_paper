@@ -4,18 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-04-16
+- **日期**：2026-04-17
 - **分类**：cs.IR + cs.AI + cs.LG + cs.CL
-- **候选论文数**：5
+- **候选论文数**：17
 - **必读论文**：
-  - Hybrid Retrieval for COVID-19 Literature: Comparing Rank Fusion and Projection Fusion with Diversity Reranking
-  - DUET: Joint Exploration of User Item Profiles in Recommendation System
-- **日报路径**：[2026-04-16/daily_report.md](2026-04-16/daily_report.md)
+  - The LLM Fallacy: Misattribution in AI-Assisted Cognitive Workflows
+  - Simulating Human Cognition: Heartbeat-Driven Autonomous Thinking Activity Scheduling for LLM-based AI systems
+- **日报路径**：[2026-04-17/daily_report.md](2026-04-17/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-04-17 | cs.IR + cs.AI + cs.LG + cs.CL | 17 | 1 | The LLM Fallacy: Misattribution in AI-Assisted Cognitive Workflows | [2026-04-17/daily_report.md](2026-04-17/daily_report.md) |
+|  |  |  | 2 | Simulating Human Cognition: Heartbeat-Driven Autonomous Thinking Activity Scheduling for LLM-based AI systems |  |
 | 2026-04-16 | cs.IR + cs.AI + cs.LG + cs.CL | 5 | 1 | Hybrid Retrieval for COVID-19 Literature: Comparing Rank Fusion and Projection Fusion with Diversity Reranking | [2026-04-16/daily_report.md](2026-04-16/daily_report.md) |
 |  |  |  | 2 | DUET: Joint Exploration of User Item Profiles in Recommendation System |  |
 | 2026-04-15 | cs.IR + cs.AI + cs.LG + cs.CL | 5 | 1 | LLM-HYPER: Generative CTR Modeling for Cold-Start Ad Personalization via LLM-Based Hypernetworks | [2026-04-15/daily_report.md](2026-04-15/daily_report.md) |

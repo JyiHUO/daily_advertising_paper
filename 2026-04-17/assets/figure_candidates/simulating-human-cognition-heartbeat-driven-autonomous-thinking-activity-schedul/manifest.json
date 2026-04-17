@@ -1,0 +1,117 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-17/downloaded_pdfs/simulating-human-cognition-heartbeat-driven-autonomous-thinking-activity-schedul.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-17/assets/figure_candidates/simulating-human-cognition-heartbeat-driven-autonomous-thinking-activity-schedul",
+  "candidates": [
+    {
+      "id": "page-10-block-2",
+      "page_index": 10,
+      "caption": "Fig. 1. Comparison between the predicted activity sequence (red squares) and the simulated ground truth (blue circles) over a 24-hour cycle. The y-axis represents the discrete action categories, ranging from Idle (0) to Rest (5).",
+      "clip": [
+        52.66899871826172,
+        38.070343017578125,
+        559.3323364257812,
+        305.4020080566406
+      ],
+      "clip_area": 135447.15368360002,
+      "page_area": 484704.0,
+      "text_density": 0.022864581930162865,
+      "kind": "image_block_with_caption",
+      "score": 17.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-17/assets/figure_candidates/simulating-human-cognition-heartbeat-driven-autonomous-thinking-activity-schedul/01-p11-image_block_with_caption.png",
+      "filename": "01-p11-image_block_with_caption.png"
+    },
+    {
+      "id": "page-10-embedded-0-0",
+      "page_index": 10,
+      "caption": "Fig. 1. Comparison between the predicted activity sequence (red squares) and the simulated ground truth (blue circles) over a 24-hour cycle. The y-axis represents the discrete action categories, ranging from Idle (0) to Rest (5).",
+      "clip": [
+        62.66899871826172,
+        44.070343017578125,
+        549.3323364257812,
+        299.4020080566406
+      ],
+      "clip_area": 124260.56033032853,
+      "page_area": 484704.0,
+      "text_density": 0.00044031654983059046,
+      "kind": "embedded_image_with_caption",
+      "xref": 63,
+      "score": 16.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-17/assets/figure_candidates/simulating-human-cognition-heartbeat-driven-autonomous-thinking-activity-schedul/02-p11-embedded_image_with_caption.png",
+      "filename": "02-p11-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-10-embedded-1-0",
+      "page_index": 10,
+      "caption": "Fig. 2. Performance comparison between 6-action and 7-action models.",
+      "clip": [
+        42.0,
+        317.77508544921875,
+        570.0057373046875,
+        509.7770080566406
+      ],
+      "clip_area": 101378.11671024933,
+      "page_area": 484704.0,
+      "text_density": 0.0002605462818236461,
+      "kind": "embedded_image_with_caption",
+      "xref": 64,
+      "score": 6.1264235190027705,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-17/assets/figure_candidates/simulating-human-cognition-heartbeat-driven-autonomous-thinking-activity-schedul/03-p11-embedded_image_with_caption.png",
+      "filename": "03-p11-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-10-block-4",
+      "page_index": 10,
+      "caption": "Fig. 2. Performance comparison between 6-action and 7-action models.",
+      "clip": [
+        32.0,
+        311.77508544921875,
+        580.0057373046875,
+        515.7770080566406
+      ],
+      "clip_area": 111794.22401005402,
+      "page_area": 484704.0,
+      "text_density": 0.03342270200725629,
+      "kind": "image_block_with_caption",
+      "score": 6.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-17/assets/figure_candidates/simulating-human-cognition-heartbeat-driven-autonomous-thinking-activity-schedul/04-p11-image_block_with_caption.png",
+      "filename": "04-p11-image_block_with_caption.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.7673139653979246,
+      "score": -11.09083328,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-17/assets/figure_candidates/simulating-human-cognition-heartbeat-driven-autonomous-thinking-activity-schedul/05-p1-layout_region_left_top.png",
+      "filename": "05-p1-layout_region_left_top.png"
+    },
+    {
+      "id": "page-1-region-upper-left",
+      "page_index": 1,
+      "caption": "第 2 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.7920346877470961,
+      "score": -11.09083328,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-17/assets/figure_candidates/simulating-human-cognition-heartbeat-driven-autonomous-thinking-activity-schedul/06-p2-layout_region_left_top.png",
+      "filename": "06-p2-layout_region_left_top.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-17/assets/figure_candidates/simulating-human-cognition-heartbeat-driven-autonomous-thinking-activity-schedul/contact-sheet.svg"
+}

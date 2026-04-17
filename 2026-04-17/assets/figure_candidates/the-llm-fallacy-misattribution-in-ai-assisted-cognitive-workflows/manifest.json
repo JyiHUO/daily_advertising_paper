@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-17/downloaded_pdfs/the-llm-fallacy-misattribution-in-ai-assisted-cognitive-workflows.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-17/assets/figure_candidates/the-llm-fallacy-misattribution-in-ai-assisted-cognitive-workflows",
+  "candidates": [
+    {
+      "id": "page-4-drawing-caption-6",
+      "page_index": 4,
+      "caption": "Figure 1: Mechanism of the LLM fallacy. LLM interaction properties (opacity, fluency, and interactional immediacy) shape cognitive mediation processes, including attribution ambiguity and cognitive outsourcing. These processes produce systematic misattribution of system-generated outputs, resulting in divergence between perceived and actual capability.",
+      "clip": [
+        182.69937133789062,
+        335.862060546875,
+        429.3006286621094,
+        406.8209228515625
+      ],
+      "clip_area": 17498.544662632048,
+      "page_area": 484704.0,
+      "text_density": 0.15932270315971345,
+      "kind": "drawing_cluster_with_caption",
+      "score": 51.43506608444643,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-17/assets/figure_candidates/the-llm-fallacy-misattribution-in-ai-assisted-cognitive-workflows/01-p5-drawing_cluster_with_caption.png",
+      "filename": "01-p5-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-4-block-6",
+      "page_index": 4,
+      "caption": "Figure 1: Mechanism of the LLM fallacy. LLM interaction properties (opacity, fluency, and interactional immediacy) shape cognitive mediation processes, including attribution ambiguity and cognitive outsourcing. These processes produce systematic misattribution of system-generated outputs, resulting in divergence between perceived and actual capability.",
+      "clip": [
+        41.06200256347656,
+        89.37233276367186,
+        572.5052734375,
+        398.1723327636719
+      ],
+      "clip_area": 164109.68204589846,
+      "page_area": 484704.0,
+      "text_density": 0.11198429775064446,
+      "kind": "captioned_figure",
+      "score": 42.08094213496133,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-17/assets/figure_candidates/the-llm-fallacy-misattribution-in-ai-assisted-cognitive-workflows/02-p5-captioned_figure.png",
+      "filename": "02-p5-captioned_figure.png"
+    },
+    {
+      "id": "page-4-drawing-cluster-0",
+      "page_index": 4,
+      "caption": "第 5 页矢量图主图候选",
+      "clip": [
+        107.47793579101562,
+        58.198699951171875,
+        504.5220642089844,
+        159.92324829101562
+      ],
+      "clip_area": 40389.13463430479,
+      "page_area": 484704.0,
+      "text_density": 0.23803447259042254,
+      "kind": "drawing_cluster",
+      "score": -1.0333001928219652,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-17/assets/figure_candidates/the-llm-fallacy-misattribution-in-ai-assisted-cognitive-workflows/03-p5-drawing_cluster.png",
+      "filename": "03-p5-drawing_cluster.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.6642975857929289,
+      "score": -11.09083328,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-17/assets/figure_candidates/the-llm-fallacy-misattribution-in-ai-assisted-cognitive-workflows/04-p1-layout_region_left_top.png",
+      "filename": "04-p1-layout_region_left_top.png"
+    },
+    {
+      "id": "page-1-region-upper-left",
+      "page_index": 1,
+      "caption": "第 2 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.8028284454233456,
+      "score": -11.09083328,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-17/assets/figure_candidates/the-llm-fallacy-misattribution-in-ai-assisted-cognitive-workflows/05-p2-layout_region_left_top.png",
+      "filename": "05-p2-layout_region_left_top.png"
+    },
+    {
+      "id": "page-0-region-upper-right",
+      "page_index": 0,
+      "caption": "第 1 页右上区域主图候选",
+      "clip": [
+        318.24,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 82992.7296,
+      "kind": "layout_region_right_top",
+      "page_area": 484704.0,
+      "text_density": 0.6186376630697031,
+      "score": -17.07785856,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-17/assets/figure_candidates/the-llm-fallacy-misattribution-in-ai-assisted-cognitive-workflows/06-p1-layout_region_right_top.png",
+      "filename": "06-p1-layout_region_right_top.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-17/assets/figure_candidates/the-llm-fallacy-misattribution-in-ai-assisted-cognitive-workflows/contact-sheet.svg"
+}
