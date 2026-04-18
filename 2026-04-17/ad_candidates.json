@@ -7258,17 +7258,20 @@
   ],
   "daily_insights": {
     "trend_overview": [
-      "今天一共抓到 387 篇论文，趋势概况优先基于全量抓取结果而不是只看最后保留的候选。",
-      "从全量论文看，主题最集中的方向是：LLM 与语言理解、Agent 与多智能体、表示学习与检索排序。",
-      "进入候选池的工作里，直接广告 9 篇、强迁移 8 篇、大公司线索 0 篇，说明今天既有直接商业化问题，也有可迁移的方法论输入。"
+      "今日 387 篇论文中，LLM 与语言理解方向以 82 篇占据绝对主力，研究重心从单纯的生成质量转向 LLM 在下游任务中的可解释性、归因可信度和认知偏差分析，多篇工作聚焦于 LLM 决策的 attribution 问题。",
+      "Agent 与多智能体方向产出 51 篇，是第二大主题，研究点从简单的工具调用向自演化策略（如 SAGER 的 self-evolving user policy）和企业知识导航式 Agent 转移，Agent 正在从'能用'走向'会规划'。",
+      "推荐与检索排序方向虽然总量（约 22 篇）不算最大，但质量密度高：联邦行为建模、生成式推荐框架、多模态用户表示初始化、异构序列推荐等多条子线同时活跃，LLM 深度融入推荐链路已成稳定趋势。",
+      "资源优化与效率方向出现了若干有意思的工作，包括视觉 token 剪枝的 Pareto 前沿学习、模型级联下的预算安全保障等，反映出大模型落地时'怎么花算力预算'正变成一个独立研究问题。"
     ],
     "ranking_innovations": [
-      "《RaTA-Tool: Retrieval-based Tool Selection with Multimodal Large Language Models》：亮点信号：tool；主题：LLM 与语言理解、表示学习与检索排序；候选属性：强迁移论文",
-      "《VisPCO: Visual Token Pruning Configuration Optimization via Budget-Aware Pareto-Frontier Learning for Vision-Language Models》：主题：LLM 与语言理解、商业化决策与资源优化；候选属性：直接广告论文",
-      "《Well Begun is Half Done: Training-Free and Model-Agnostic Semantically Guaranteed User Representation Initialization for Multimodal Recommendation》：亮点信号：semantic；主题：表示学习与检索排序；候选属性：强迁移论文"
+      "GenRec 提出面向大规模推荐的偏好导向生成框架，用生成式建模替代传统打分范式，把推荐候选生成和偏好对齐合并到一个端到端流程中，值得关注其在工业规模上的可行性设计。",
+      "Well Begun is Half Done 提出无需训练、模型无关的语义保证用户表示初始化方法，解决了多模态推荐中冷启动阶段 embedding 质量差的问题，核心思路是用预训练多模态语义空间直接为新用户锚定一个'好的起点'。",
+      "SAGER 为推荐 Agent 引入自演化用户策略技能，让 Agent 不只是执行固定推荐策略，而是根据用户交互反馈持续进化自身的推荐行为策略，把 Agent 自主学习能力嫁接到推荐场景中。"
     ],
     "global_innovations": [
-      "今天暂时没有足够稳定的全局创新点可总结。"
+      "VisPCO 将视觉 token 剪枝建模为预算感知的多目标优化问题，通过 Pareto 前沿学习自动搜索精度-效率最优配置，提供了一种通用的大模型推理资源分配思路，对广告系统中的算力预算控制有潜在借鉴价值。",
+      "Calibrate-Then-Delegate 提出先校准再委派的模型级联框架，在风险和预算双重约束下决定哪些请求交给大模型、哪些交给小模型处理，这种'路由+保障'的设计模式对线上多模型服务架构很有参考意义。",
+      "FRESCO 针对 RAG 场景中知识随时间演化导致的语义冲突问题，构建了 re-ranker 的基准测试与优化方案，揭示了现有排序器在信息新旧冲突下的脆弱性，对任何需要长期维护知识库的检索系统都值得关注。"
     ],
     "knowledge_point": {
       "topic": "表示学习为什么是很多系统的隐形底座",
