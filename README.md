@@ -4,18 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-04-21
+- **日期**：2026-04-22
 - **分类**：cs.IR + cs.AI + cs.LG + cs.CL
-- **候选论文数**：4
+- **候选论文数**：11
 - **必读论文**：
-  - RankUp: Towards High-rank Representations for Large Scale Advertising Recommender Systems
-  - R&F-Inventory: A Large-Scale Dataset for Monotonic Inventory Estimation in Reach and Frequency Advertising
-- **日报路径**：[2026-04-21/daily_report.md](2026-04-21/daily_report.md)
+  - LoopCTR: Unlocking the Loop Scaling Power for Click-Through Rate Prediction
+  - CS3: Efficient Online Capability Synergy for Two-Tower Recommendation
+- **日报路径**：[2026-04-22/daily_report.md](2026-04-22/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-04-22 | cs.IR + cs.AI + cs.LG + cs.CL | 11 | 1 | LoopCTR: Unlocking the Loop Scaling Power for Click-Through Rate Prediction | [2026-04-22/daily_report.md](2026-04-22/daily_report.md) |
+|  |  |  | 2 | CS3: Efficient Online Capability Synergy for Two-Tower Recommendation |  |
 | 2026-04-21 | cs.IR + cs.AI + cs.LG + cs.CL | 4 | 1 | RankUp: Towards High-rank Representations for Large Scale Advertising Recommender Systems | [2026-04-21/daily_report.md](2026-04-21/daily_report.md) |
 |  |  |  | 2 | R&F-Inventory: A Large-Scale Dataset for Monotonic Inventory Estimation in Reach and Frequency Advertising |  |
 | 2026-04-17 | cs.IR + cs.AI + cs.LG + cs.CL | 17 | 1 | The LLM Fallacy: Misattribution in AI-Assisted Cognitive Workflows | [2026-04-17/daily_report.md](2026-04-17/daily_report.md) |

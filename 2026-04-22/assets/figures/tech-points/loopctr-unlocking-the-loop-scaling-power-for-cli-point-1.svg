@@ -1,0 +1,105 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2563EB"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#EA580C"/>
+    </marker>
+    <linearGradient id="loopGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#DBEAFE"/>
+      <stop offset="100%" stop-color="#93C5FD"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E293B">LoopCTR: 三明治架构与循环复用</text>
+  <text x="400" y="60" text-anchor="middle" font-size="13" fill="#64748B">同一组参数反复"打磨"，参数不变 → 计算深度增加</text>
+
+  <!-- ========== Entry Block ========== -->
+  <rect x="60" y="90" width="200" height="130" rx="14" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+  <text x="160" y="115" text-anchor="middle" font-size="16" font-weight="bold" fill="#92400E">Entry Block</text>
+  <text x="160" y="138" text-anchor="middle" font-size="11" fill="#78350F">统一编码 &amp; 对齐</text>
+
+  <!-- Input tokens inside entry -->
+  <rect x="78" y="152" width="72" height="24" rx="6" fill="#FDE68A" stroke="#D97706" stroke-width="1"/>
+  <text x="114" y="168" text-anchor="middle" font-size="9" fill="#78350F">短期行为 50t</text>
+
+  <rect x="155" y="152" width="72" height="24" rx="6" fill="#FDE68A" stroke="#D97706" stroke-width="1"/>
+  <text x="191" y="168" text-anchor="middle" font-size="9" fill="#78350F">长期压缩 8t</text>
+
+  <rect x="116" y="183" width="88" height="24" rx="6" fill="#FDE68A" stroke="#D97706" stroke-width="1"/>
+  <text x="160" y="199" text-anchor="middle" font-size="9" fill="#78350F">全局特征 33t</text>
+
+  <!-- Arrow Entry → Loop -->
+  <line x1="265" y1="155" x2="315" y2="155" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ========== Loop Block (core) ========== -->
+  <rect x="320" y="75" width="220" height="260" rx="16" fill="url(#loopGrad)" stroke="#2563EB" stroke-width="2.5" stroke-dasharray="0"/>
+  <text x="430" y="102" text-anchor="middle" font-size="17" font-weight="bold" fill="#1E40AF">Loop Block</text>
+  <text x="430" y="122" text-anchor="middle" font-size="11" fill="#1E3A8A">共享参数 · 递归调用 L 次</text>
+
+  <!-- Inner shared layer box -->
+  <rect x="345" y="140" width="170" height="70" rx="10" fill="#fff" stroke="#3B82F6" stroke-width="1.8"/>
+  <text x="430" y="163" text-anchor="middle" font-size="13" font-weight="bold" fill="#1D4ED8">前缀注意力层</text>
+  <text x="430" y="181" text-anchor="middle" font-size="10" fill="#3B82F6">序列↔序列 | 全局↔所有</text>
+  <text x="430" y="197" text-anchor="middle" font-size="9" fill="#6B7280">（同一组参数 W）</text>
+
+  <!-- Loop arrow (circular) -->
+  <path d="M 518,175 C 555,175 555,240 518,240 L 430,240 C 370,240 358,210 370,195" 
+        fill="none" stroke="#EA580C" stroke-width="2.5" marker-end="url(#arrowOrange)" stroke-dasharray="6,3"/>
+  
+  <!-- Loop labels -->
+  <text x="562" y="200" font-size="13" font-weight="bold" fill="#EA580C">×L</text>
+  <text x="548" y="216" font-size="10" fill="#EA580C">循环</text>
+
+  <!-- Round 1, Round 2 small icons -->
+  <rect x="350" y="270" width="60" height="22" rx="5" fill="#BFDBFE" stroke="#60A5FA" stroke-width="1"/>
+  <text x="380" y="285" text-anchor="middle" font-size="9" fill="#1E40AF">第1轮</text>
+  <text x="413" y="285" font-size="14" fill="#64748B">→</text>
+  <rect x="425" y="270" width="60" height="22" rx="5" fill="#BFDBFE" stroke="#60A5FA" stroke-width="1"/>
+  <text x="455" y="285" text-anchor="middle" font-size="9" fill="#1E40AF">第2轮</text>
+  <text x="490" y="285" font-size="11" fill="#64748B">…</text>
+
+  <text x="430" y="320" text-anchor="middle" font-size="10" fill="#475569">表征逐轮精炼，参数量=0增长</text>
+
+  <!-- Arrow Loop → Exit -->
+  <line x1="545" y1="155" x2="595" y2="155" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ========== Exit Block ========== -->
+  <rect x="600" y="90" width="170" height="130" rx="14" fill="#DCFCE7" stroke="#16A34A" stroke-width="2"/>
+  <text x="685" y="115" text-anchor="middle" font-size="16" font-weight="bold" fill="#166534">Exit Block</text>
+  <text x="685" y="138" text-anchor="middle" font-size="11" fill="#14532D">Cross-Attention + MLP</text>
+
+  <rect x="625" y="155" width="120" height="24" rx="6" fill="#BBF7D0" stroke="#22C55E" stroke-width="1"/>
+  <text x="685" y="171" text-anchor="middle" font-size="10" fill="#166534">全局token聚合序列</text>
+
+  <rect x="645" y="188" width="80" height="22" rx="6" fill="#86EFAC" stroke="#16A34A" stroke-width="1"/>
+  <text x="685" y="203" text-anchor="middle" font-size="11" font-weight="bold" fill="#14532D">P(click)</text>
+
+  <!-- ========== Bottom: Key Insight ========== -->
+  <rect x="100" y="380" width="600" height="110" rx="14" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.5"/>
+  
+  <!-- Two-column comparison -->
+  <text x="400" y="405" text-anchor="middle" font-size="15" font-weight="bold" fill="#334155">核心创新：循环缩放 Loop Scaling</text>
+  
+  <!-- Training side -->
+  <rect x="130" y="420" width="240" height="55" rx="10" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1.5"/>
+  <text x="250" y="441" text-anchor="middle" font-size="13" font-weight="bold" fill="#1D4ED8">🏋️ 训练</text>
+  <text x="250" y="462" text-anchor="middle" font-size="12" fill="#1E40AF">循环 L 次 → 表征更深更好</text>
+
+  <!-- Inference side -->
+  <rect x="430" y="420" width="240" height="55" rx="10" fill="#FFF7ED" stroke="#EA580C" stroke-width="1.5"/>
+  <text x="550" y="441" text-anchor="middle" font-size="13" font-weight="bold" fill="#C2410C">🚀 推理</text>
+  <text x="550" y="462" text-anchor="middle" font-size="12" fill="#EA580C">仅 1 次前向 → 零延迟增加</text>
+
+  <!-- VS -->
+  <circle cx="400" cy="448" r="16" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="400" y="453" text-anchor="middle" font-size="11" font-weight="bold" fill="#64748B">VS</text>
+
+  <!-- Subtle KV cache note -->
+  <text x="685" y="250" text-anchor="middle" font-size="9" fill="#9CA3AF">序列KV可跨候选缓存</text>
+</svg>

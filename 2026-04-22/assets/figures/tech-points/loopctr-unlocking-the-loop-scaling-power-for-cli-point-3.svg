@@ -1,0 +1,111 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="gRouter" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="gExpert" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="gActive" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <marker id="arrowW" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#f59e0b"/>
+    </marker>
+    <marker id="arrowG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-auto">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#10b981"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="520" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="400" y="42" text-anchor="middle" fill="#f8fafc" font-size="22" font-weight="bold">MoE: 稀疏激活扩大参数容量</text>
+  <text x="400" y="67" text-anchor="middle" fill="#94a3b8" font-size="13">LoopCTR — 每个 Token 只激活 Top-k 专家，参数 ×8 但计算 ×¼</text>
+
+  <!-- ===== LEFT: Input Token ===== -->
+  <rect x="40" y="195" width="120" height="60" rx="12" fill="#334155" filter="url(#shadow)"/>
+  <text x="100" y="222" text-anchor="middle" fill="#e2e8f0" font-size="13" font-weight="bold">输入 Token</text>
+  <text x="100" y="240" text-anchor="middle" fill="#94a3b8" font-size="11">"电子产品用户"</text>
+
+  <!-- Arrow: Token -> Router -->
+  <line x1="160" y1="225" x2="218" y2="225" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#arrowW)"/>
+
+  <!-- ===== CENTER: Router ===== -->
+  <rect x="225" y="185" width="130" height="80" rx="14" fill="url(#gRouter)" filter="url(#shadow)" opacity="0.95"/>
+  <text x="290" y="218" text-anchor="middle" fill="#1e1b12" font-size="15" font-weight="bold">路由器</text>
+  <text x="290" y="237" text-anchor="middle" fill="#422006" font-size="11">Gate → Top-k 打分</text>
+  <text x="290" y="253" text-anchor="middle" fill="#422006" font-size="10">+ 负载均衡损失</text>
+
+  <!-- ===== RIGHT: Expert Pool ===== -->
+  <!-- Inactive experts (gray) -->
+  <g opacity="0.35">
+    <rect x="460" y="100" width="90" height="44" rx="10" fill="#475569"/>
+    <text x="505" y="127" text-anchor="middle" fill="#cbd5e1" font-size="12">Expert 1</text>
+    <rect x="565" y="100" width="90" height="44" rx="10" fill="#475569"/>
+    <text x="610" y="127" text-anchor="middle" fill="#cbd5e1" font-size="12">Expert 2</text>
+    <rect x="670" y="100" width="90" height="44" rx="10" fill="#475569"/>
+    <text x="715" y="127" text-anchor="middle" fill="#cbd5e1" font-size="12">Expert 4</text>
+    <rect x="460" y="158" width="90" height="44" rx="10" fill="#475569"/>
+    <text x="505" y="185" text-anchor="middle" fill="#cbd5e1" font-size="12">Expert 5</text>
+    <rect x="670" y="158" width="90" height="44" rx="10" fill="#475569"/>
+    <text x="715" y="185" text-anchor="middle" fill="#cbd5e1" font-size="12">Expert 6</text>
+    <rect x="460" y="216" width="90" height="44" rx="10" fill="#475569"/>
+    <text x="505" y="243" text-anchor="middle" fill="#cbd5e1" font-size="12">Expert 8</text>
+  </g>
+
+  <!-- Active experts (green, highlighted) -->
+  <rect x="565" y="158" width="90" height="44" rx="10" fill="url(#gActive)" filter="url(#shadow)"/>
+  <text x="610" y="185" text-anchor="middle" fill="#052e16" font-size="13" font-weight="bold">Expert 3 ✓</text>
+
+  <rect x="565" y="216" width="90" height="44" rx="10" fill="url(#gActive)" filter="url(#shadow)"/>
+  <text x="610" y="243" text-anchor="middle" fill="#052e16" font-size="13" font-weight="bold">Expert 7 ✓</text>
+
+  <!-- 8 experts label -->
+  <rect x="460" y="272" width="300" height="26" rx="6" fill="none" stroke="#475569" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="610" y="290" text-anchor="middle" fill="#64748b" font-size="11">共 8 个专家 — 只激活 2 个 (Top-2)</text>
+
+  <!-- Arrows: Router -> active experts -->
+  <path d="M 355 210 Q 420 175 560 178" stroke="#10b981" stroke-width="2.5" fill="none" marker-end="url(#arrowG)"/>
+  <path d="M 355 230 Q 420 240 560 236" stroke="#10b981" stroke-width="2.5" fill="none" marker-end="url(#arrowG)"/>
+
+  <!-- ===== BOTTOM: Comparison boxes ===== -->
+  <!-- Left comparison: Dense FFN -->
+  <rect x="80" y="360" width="280" height="120" rx="14" fill="#1e293b" stroke="#475569" stroke-width="1.5"/>
+  <text x="220" y="390" text-anchor="middle" fill="#f87171" font-size="14" font-weight="bold">传统 Dense FFN</text>
+  <rect x="110" y="405" width="220" height="16" rx="4" fill="#ef4444" opacity="0.7"/>
+  <text x="220" y="416" text-anchor="middle" fill="#fff" font-size="10">全部参数都激活 → 100% 计算</text>
+  <rect x="110" y="432" width="220" height="16" rx="4" fill="#ef4444" opacity="0.4"/>
+  <text x="220" y="443" text-anchor="middle" fill="#fca5a5" font-size="10">参数少 → 容量受限</text>
+  <text x="220" y="468" text-anchor="middle" fill="#94a3b8" font-size="11">参数 = 1×  |  计算 = 1×</text>
+
+  <!-- Right comparison: MoE -->
+  <rect x="440" y="360" width="300" height="120" rx="14" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+  <text x="590" y="390" text-anchor="middle" fill="#34d399" font-size="14" font-weight="bold">MoE 稀疏 FFN ⚡</text>
+  <rect x="470" y="405" width="68" height="16" rx="4" fill="#10b981" opacity="0.85"/>
+  <text x="504" y="416" text-anchor="middle" fill="#fff" font-size="10">Expert 3</text>
+  <rect x="548" y="405" width="68" height="16" rx="4" fill="#10b981" opacity="0.85"/>
+  <text x="582" y="416" text-anchor="middle" fill="#fff" font-size="10">Expert 7</text>
+  <rect x="626" y="405" width="84" height="16" rx="4" fill="#334155" opacity="0.5"/>
+  <text x="668" y="416" text-anchor="middle" fill="#64748b" font-size="10">其余休眠</text>
+  <text x="590" y="446" text-anchor="middle" fill="#6ee7b7" font-size="11">参数 = 8×  |  计算 ≈ ¼×</text>
+  <text x="590" y="466" text-anchor="middle" fill="#94a3b8" font-size="11">容量大 ↑ | 延迟低 ↓ | AUC +0.006</text>
+
+  <!-- VS label -->
+  <circle cx="395" cy="420" r="20" fill="#f59e0b" opacity="0.9"/>
+  <text x="395" y="426" text-anchor="middle" fill="#1e1b12" font-size="14" font-weight="bold">VS</text>
+
+  <!-- Subtitle: Attention MoE note -->
+  <text x="400" y="508" text-anchor="middle" fill="#64748b" font-size="11">注意力层：V 和 O 投影 → MoE（共享路由器）  |  Q、K 保持共享维持相似度一致</text>
+</svg>

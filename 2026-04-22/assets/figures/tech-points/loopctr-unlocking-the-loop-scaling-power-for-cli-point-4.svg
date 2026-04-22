@@ -1,0 +1,143 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2e7d32"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#e65100"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f7fa"/>
+      <stop offset="100%" stop-color="#e8ecf1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="580" fill="url(#bgGrad)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a237e">LoopCTR: 过程监督 → 零循环推理</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#666">训练时每轮都监督，推理时只走第0轮即超越基线</text>
+
+  <!-- ============ LEFT: Training ============ -->
+  <text x="225" y="95" text-anchor="middle" font-size="18" font-weight="bold" fill="#e65100">🏋️ 训练阶段 (L=3)</text>
+
+  <!-- Entry Block -->
+  <rect x="155" y="110" width="140" height="44" rx="10" fill="#1565c0" opacity="0.9"/>
+  <text x="225" y="137" text-anchor="middle" font-size="15" fill="#fff" font-weight="bold">Entry Block</text>
+
+  <!-- Arrow down -->
+  <line x1="225" y1="154" x2="225" y2="175" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Loop Block shared -->
+  <rect x="130" y="178" width="190" height="200" rx="14" fill="none" stroke="#e65100" stroke-width="2.5" stroke-dasharray="8,4"/>
+  <text x="225" y="198" text-anchor="middle" font-size="13" font-weight="bold" fill="#e65100">Loop Block (共享参数)</text>
+
+  <!-- Loop iterations as small boxes -->
+  <rect x="155" y="208" width="140" height="32" rx="7" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+  <text x="225" y="229" text-anchor="middle" font-size="12" fill="#e65100">循环 l=1</text>
+
+  <rect x="155" y="252" width="140" height="32" rx="7" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+  <text x="225" y="273" text-anchor="middle" font-size="12" fill="#e65100">循环 l=2</text>
+
+  <rect x="155" y="296" width="140" height="32" rx="7" fill="#fff3e0" stroke="#e65100" stroke-width="1.5"/>
+  <text x="225" y="317" text-anchor="middle" font-size="12" fill="#e65100">循环 l=3</text>
+
+  <!-- Recycle arrow on the left of loop block -->
+  <path d="M142,340 C115,340 115,215 142,215" fill="none" stroke="#e65100" stroke-width="2" marker-end="url(#arrowOrange)"/>
+  <text x="105" y="280" text-anchor="middle" font-size="11" fill="#e65100" transform="rotate(-90,105,280)">复用</text>
+
+  <!-- Exit Block -->
+  <rect x="155" y="395" width="140" height="44" rx="10" fill="#2e7d32" opacity="0.9"/>
+  <text x="225" y="422" text-anchor="middle" font-size="15" fill="#fff" font-weight="bold">Exit Block</text>
+  <line x1="225" y1="378" x2="225" y2="395" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Loss arrows from each depth to exit -->
+  <!-- l=0 loss -->
+  <path d="M295,140 Q370,140 370,170 L370,405 Q370,418 340,418 L298,418" fill="none" stroke="#d32f2f" stroke-width="1.8" stroke-dasharray="5,3"/>
+  <text x="385" y="165" font-size="11" fill="#d32f2f" font-weight="bold">l=0 Loss</text>
+
+  <!-- l=1 loss -->
+  <circle cx="298" cy="224" r="4" fill="#d32f2f"/>
+  <path d="M302,224 L340,224 L340,405" fill="none" stroke="#d32f2f" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.6"/>
+  <text x="348" y="230" font-size="10" fill="#d32f2f">l=1</text>
+
+  <!-- l=2 loss -->
+  <circle cx="298" cy="268" r="4" fill="#d32f2f"/>
+  <path d="M302,268 L352,268 L352,405" fill="none" stroke="#d32f2f" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.6"/>
+  <text x="360" y="274" font-size="10" fill="#d32f2f">l=2</text>
+
+  <!-- l=3 loss -->
+  <circle cx="298" cy="312" r="4" fill="#d32f2f"/>
+  <path d="M302,312 L364,312 L364,405" fill="none" stroke="#d32f2f" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.6"/>
+  <text x="372" y="318" font-size="10" fill="#d32f2f">l=3</text>
+
+  <!-- Average loss label -->
+  <rect x="145" y="450" width="160" height="30" rx="8" fill="#d32f2f" opacity="0.85"/>
+  <text x="225" y="470" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">总损失 = Avg(L₀…L₃)</text>
+
+  <!-- Key insight -->
+  <rect x="100" y="495" width="260" height="36" rx="8" fill="#fff8e1" stroke="#ff8f00" stroke-width="1.5"/>
+  <text x="230" y="512" text-anchor="middle" font-size="12" fill="#e65100" font-weight="bold">💡 每轮都必须给出好预测</text>
+  <text x="230" y="526" text-anchor="middle" font-size="11" fill="#e65100">多轮知识"内化"到共享参数中</text>
+
+  <!-- ============ Divider ============ -->
+  <line x1="448" y1="85" x2="448" y2="545" stroke="#bbb" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- ============ RIGHT: Inference ============ -->
+  <text x="672" y="95" text-anchor="middle" font-size="18" font-weight="bold" fill="#2e7d32">⚡ 推理阶段 (l=0)</text>
+
+  <!-- Entry Block -->
+  <rect x="602" y="135" width="140" height="50" rx="12" fill="#1565c0"/>
+  <text x="672" y="165" text-anchor="middle" font-size="16" fill="#fff" font-weight="bold">Entry Block</text>
+
+  <!-- Big arrow straight down, skipping loop -->
+  <line x1="672" y1="185" x2="672" y2="280" stroke="#2e7d32" stroke-width="4" marker-end="url(#arrowGreen)"/>
+
+  <!-- Crossed out loop block -->
+  <rect x="530" y="200" width="120" height="60" rx="10" fill="#eee" stroke="#ccc" stroke-width="1.5" opacity="0.6"/>
+  <text x="590" y="225" text-anchor="middle" font-size="13" fill="#999">Loop Block</text>
+  <text x="590" y="242" text-anchor="middle" font-size="11" fill="#999">×3 循环</text>
+  <!-- X mark -->
+  <line x1="540" y1="208" x2="640" y2="252" stroke="#d32f2f" stroke-width="3" opacity="0.7"/>
+  <line x1="640" y1="208" x2="540" y2="252" stroke="#d32f2f" stroke-width="3" opacity="0.7"/>
+  <text x="590" y="275" text-anchor="middle" font-size="13" fill="#d32f2f" font-weight="bold">完全跳过!</text>
+
+  <!-- Skip label -->
+  <text x="700" y="235" font-size="14" fill="#2e7d32" font-weight="bold">直达 ↓</text>
+
+  <!-- Exit Block -->
+  <rect x="602" y="290" width="140" height="50" rx="12" fill="#2e7d32"/>
+  <text x="672" y="320" text-anchor="middle" font-size="16" fill="#fff" font-weight="bold">Exit Block</text>
+
+  <!-- Prediction -->
+  <line x1="672" y1="340" x2="672" y2="370" stroke="#2e7d32" stroke-width="3" marker-end="url(#arrowGreen)"/>
+  <rect x="617" y="374" width="110" height="36" rx="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2"/>
+  <text x="672" y="397" text-anchor="middle" font-size="14" fill="#2e7d32" font-weight="bold">CTR 预测</text>
+
+  <!-- ============ Comparison Box ============ -->
+  <rect x="490" y="430" width="370" height="110" rx="12" fill="#fff" stroke="#1565c0" stroke-width="2" opacity="0.95"/>
+  <text x="675" y="455" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a237e">📊 效果对比 (Amazon)</text>
+
+  <!-- LoopCTR -->
+  <rect x="510" y="465" width="200" height="28" rx="6" fill="#c8e6c9"/>
+  <text x="515" y="484" font-size="13" fill="#1b5e20" font-weight="bold">LoopCTR(0/3)</text>
+  <text x="700" y="484" font-size="13" fill="#1b5e20" font-weight="bold" text-anchor="end">AUC 0.8715 ✓</text>
+
+  <!-- HSTU baseline -->
+  <rect x="510" y="498" width="165" height="28" rx="6" fill="#ffcdd2"/>
+  <text x="515" y="517" font-size="13" fill="#c62828">最强基线 HSTU</text>
+  <text x="668" y="517" font-size="13" fill="#c62828" text-anchor="end">AUC 0.8690</text>
+
+  <!-- Speed comparison -->
+  <rect x="720" y="465" width="125" height="61" rx="8" fill="#e3f2fd" stroke="#1565c0" stroke-width="1"/>
+  <text x="782" y="483" text-anchor="middle" font-size="11" fill="#1565c0" font-weight="bold">延迟对比</text>
+  <text x="782" y="500" text-anchor="middle" font-size="12" fill="#2e7d32" font-weight="bold">Loop: 9ms</text>
+  <text x="782" y="517" text-anchor="middle" font-size="12" fill="#c62828">HSTU: 775ms</text>
+
+  <!-- Speed ratio -->
+  <text x="782" y="540" text-anchor="middle" font-size="16" font-weight="bold" fill="#1565c0">🚀 快 ~80×</text>
+</svg>

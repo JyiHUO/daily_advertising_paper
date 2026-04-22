@@ -1,0 +1,19 @@
+{
+  "date": "2026-04-22",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL"
+  ],
+  "candidate_count": 11,
+  "supplementary_count": 0,
+  "focus_titles": [
+    "LoopCTR: Unlocking the Loop Scaling Power for Click-Through Rate Prediction",
+    "CS3: Efficient Online Capability Synergy for Two-Tower Recommendation"
+  ],
+  "focus_status": {
+    "LoopCTR: Unlocking the Loop Scaling Power for Click-Through Rate Prediction": "completed",
+    "CS3: Efficient Online Capability Synergy for Two-Tower Recommendation": "completed"
+  }
+}

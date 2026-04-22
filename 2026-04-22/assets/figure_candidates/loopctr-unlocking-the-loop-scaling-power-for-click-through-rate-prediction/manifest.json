@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-22/downloaded_pdfs/loopctr-unlocking-the-loop-scaling-power-for-click-through-rate-prediction.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-22/assets/figure_candidates/loopctr-unlocking-the-loop-scaling-power-for-click-through-rate-prediction",
+  "candidates": [
+    {
+      "id": "page-14-drawing-caption-0",
+      "page_index": 14,
+      "caption": "Figure 4: Loss landscape visualization on Amazon with varying training loop counts ( L =1 , 2 , 3 ) at full inference depth. Warmer colors indicate higher loss; ⋆ marks the converged optimum. More training loops produce broader, flatter minima.",
+      "clip": [
+        98.65499877929688,
+        56.00035095214844,
+        510.86383056640625,
+        201.60797119140625
+      ],
+      "clip_area": 60020.747038125526,
+      "page_area": 484704.0,
+      "text_density": 0.09153130798172313,
+      "kind": "drawing_cluster_with_caption",
+      "score": 19.97501871040912,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-22/assets/figure_candidates/loopctr-unlocking-the-loop-scaling-power-for-click-through-rate-prediction/01-p15-drawing_cluster_with_caption.png",
+      "filename": "01-p15-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-8-drawing-caption-41",
+      "page_index": 8,
+      "caption": "Figure 3: Ablation study on Amazon (top) and KuaiVideo (bottom). Each variant removes one component from the full LoopCTR(3/3) model (red bar). The red dashed line marks the full model performance. HCR: Hyper-Connected Residuals; MoE: Mixture-of-Experts; PS: process supervision; MP: heterogeneous feature projection in the Entry Block.",
+      "clip": [
+        90.0,
+        55.99745178222656,
+        522.0001220703125,
+        226.88201904296875
+      ],
+      "clip_area": 73822.15391657315,
+      "page_area": 484704.0,
+      "text_density": 0.20423355666991097,
+      "kind": "drawing_cluster_with_caption",
+      "score": 15.366232754433934,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-22/assets/figure_candidates/loopctr-unlocking-the-loop-scaling-power-for-click-through-rate-prediction/02-p9-drawing_cluster_with_caption.png",
+      "filename": "02-p9-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-14-block-0",
+      "page_index": 14,
+      "caption": "Figure 4: Loss landscape visualization on Amazon with varying training loop counts ( L =1 , 2 , 3 ) at full inference depth. Warmer colors indicate higher loss; ⋆ marks the converged optimum. More training loops produce broader, flatter minima.",
+      "clip": [
+        77.4,
+        18.0,
+        534.6032348632813,
+        179.7349090576172
+      ],
+      "clip_area": 73945.72361146119,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "captioned_figure",
+      "score": 8.821619151238458,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-22/assets/figure_candidates/loopctr-unlocking-the-loop-scaling-power-for-click-through-rate-prediction/03-p15-captioned_figure.png",
+      "filename": "03-p15-captioned_figure.png"
+    },
+    {
+      "id": "page-14-drawing-cluster-0",
+      "page_index": 14,
+      "caption": "第 15 页矢量图主图候选",
+      "clip": [
+        100.65499877929688,
+        58.00035095214844,
+        508.86383056640625,
+        199.60797119140625
+      ],
+      "clip_area": 57805.48123002006,
+      "page_area": 484704.0,
+      "text_density": 0.08133780590812616,
+      "kind": "drawing_cluster",
+      "score": 8.562014770290432,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-22/assets/figure_candidates/loopctr-unlocking-the-loop-scaling-power-for-click-through-rate-prediction/04-p15-drawing_cluster.png",
+      "filename": "04-p15-drawing_cluster.png"
+    },
+    {
+      "id": "page-8-block-41",
+      "page_index": 8,
+      "caption": "Figure 3: Ablation study on Amazon (top) and KuaiVideo (bottom). Each variant removes one component from the full LoopCTR(3/3) model (red bar). The red dashed line marks the full model performance. HCR: Hyper-Connected Residuals; MoE: Mixture-of-Experts; PS: process supervision; MP: heterogeneous feature projection in the Entry Block.",
+      "clip": [
+        77.4,
+        18.0,
+        535.4258666992188,
+        214.08126831054688
+      ],
+      "clip_area": 89810.2928614203,
+      "page_area": 484704.0,
+      "text_density": 0.14666357903475172,
+      "kind": "captioned_figure",
+      "score": 6.998077400819566,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-22/assets/figure_candidates/loopctr-unlocking-the-loop-scaling-power-for-click-through-rate-prediction/05-p9-captioned_figure.png",
+      "filename": "05-p9-captioned_figure.png"
+    },
+    {
+      "id": "page-16-drawing-caption-28",
+      "page_index": 16,
+      "caption": "Figure 6: Expert routing distribution across loop iterations on Amazon with L =3 . Left : attention MoE. Right : FFN MoE. Each bar shows the dispatch-normalized percentage of top- k routing assignments received by each of the 4 experts.",
+      "clip": [
+        108.55599975585938,
+        237.05921936035156,
+        500.95599365234375,
+        392.1820068359375
+      ],
+      "clip_area": 60870.180858625565,
+      "page_area": 484704.0,
+      "text_density": 0.381054728610803,
+      "kind": "drawing_cluster_with_caption",
+      "score": 2.6763353428736174,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-22/assets/figure_candidates/loopctr-unlocking-the-loop-scaling-power-for-click-through-rate-prediction/06-p17-drawing_cluster_with_caption.png",
+      "filename": "06-p17-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-22/assets/figure_candidates/loopctr-unlocking-the-loop-scaling-power-for-click-through-rate-prediction/contact-sheet.svg"
+}

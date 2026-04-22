@@ -1,0 +1,107 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#555">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#E67E22">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#27AE60">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F8F9FA"/>
+      <stop offset="100%" stop-color="#E8ECF1"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.13"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bgGrad)" rx="18"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#2C3E50">CMS：级联模型知识共享</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#7F8C8D">把精排模型的"知识摘要"喂给轻量双塔，弥补能力断层</text>
+
+  <!-- ========== 精排模型 (top-left) ========== -->
+  <rect x="40" y="100" width="260" height="200" rx="16" fill="#FDF2E9" stroke="#E67E22" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="170" y="130" text-anchor="middle" font-size="16" font-weight="bold" fill="#D35400">🧠 精排模型 (Cascade Rank)</text>
+
+  <!-- layers inside -->
+  <rect x="70" y="150" width="200" height="28" rx="6" fill="#FDEBD0"/>
+  <text x="170" y="169" text-anchor="middle" font-size="12" fill="#A04000">交叉特征 + 序列建模</text>
+  <rect x="70" y="186" width="200" height="28" rx="6" fill="#FDEBD0"/>
+  <text x="170" y="205" text-anchor="middle" font-size="12" fill="#A04000">深层 FC layers</text>
+
+  <!-- highlight h_uv -->
+  <rect x="70" y="225" width="200" height="32" rx="8" fill="#E67E22" opacity="0.9"/>
+  <text x="170" y="246" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">h_uv (128维中间表示)</text>
+
+  <text x="170" y="282" text-anchor="middle" font-size="11" fill="#A04000">对用户A × 物品X的交互知识</text>
+
+  <!-- ========== EMA 更新 (center) ========== -->
+  <rect x="350" y="135" width="200" height="130" rx="16" fill="#EBF5FB" stroke="#2E86C1" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="450" y="165" text-anchor="middle" font-size="16" font-weight="bold" fill="#1A5276">⚡ EMA 缓存更新</text>
+  <text x="450" y="192" text-anchor="middle" font-size="13" fill="#2E86C1">s_u ← β·s_u + (1-β)·h_uv</text>
+  <text x="450" y="215" text-anchor="middle" font-size="13" fill="#2E86C1">s_v ← β·s_v + (1-β)·h_uv</text>
+  <text x="450" y="245" text-anchor="middle" font-size="11" fill="#7F8C8D">正样本 & 负样本都更新</text>
+
+  <!-- Arrow: 精排 -> EMA -->
+  <line x1="300" y1="240" x2="345" y2="210" stroke="#E67E22" stroke-width="2.5" marker-end="url(#arrowOrange)"/>
+
+  <!-- ========== Embedding Server (right) ========== -->
+  <rect x="610" y="115" width="250" height="100" rx="16" fill="#F4ECF7" stroke="#8E44AD" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="735" y="148" text-anchor="middle" font-size="15" font-weight="bold" fill="#6C3483">💾 Embedding Server</text>
+  <text x="735" y="172" text-anchor="middle" font-size="12" fill="#8E44AD">分布式KV存储 cascade vectors</text>
+  <text x="735" y="195" text-anchor="middle" font-size="11" fill="#A569BD">p99 延迟 &lt; 5ms，与特征获取并行</text>
+
+  <!-- Arrow: EMA -> Server -->
+  <line x1="550" y1="185" x2="605" y2="170" stroke="#8E44AD" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrow)"/>
+
+  <!-- ========== 双塔模型 (bottom-center) ========== -->
+  <rect x="200" y="370" width="500" height="210" rx="18" fill="#EAFAF1" stroke="#27AE60" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="450" y="402" text-anchor="middle" font-size="17" font-weight="bold" fill="#1E8449">🏗️ 双塔召回模型 (增强版)</text>
+
+  <!-- User Tower -->
+  <rect x="230" y="420" width="200" height="140" rx="12" fill="#D5F5E3" stroke="#27AE60" stroke-width="1.5"/>
+  <text x="330" y="445" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E8449">User Tower</text>
+  <rect x="250" y="458" width="160" height="24" rx="5" fill="#A9DFBF"/>
+  <text x="330" y="475" text-anchor="middle" font-size="11" fill="#1E8449">原始用户特征</text>
+  <rect x="250" y="488" width="160" height="24" rx="5" fill="#F9E79F"/>
+  <text x="330" y="505" text-anchor="middle" font-size="11" fill="#7D6608">cross vector (CTS)</text>
+  <rect x="250" y="518" width="160" height="24" rx="5" fill="#F5B7B1"/>
+  <text x="330" y="535" text-anchor="middle" font-size="11" font-weight="bold" fill="#922B21">cascade vector s_u ★</text>
+
+  <!-- Item Tower -->
+  <rect x="470" y="420" width="200" height="140" rx="12" fill="#D5F5E3" stroke="#27AE60" stroke-width="1.5"/>
+  <text x="570" y="445" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E8449">Item Tower</text>
+  <rect x="490" y="458" width="160" height="24" rx="5" fill="#A9DFBF"/>
+  <text x="570" y="475" text-anchor="middle" font-size="11" fill="#1E8449">原始物品特征</text>
+  <rect x="490" y="488" width="160" height="24" rx="5" fill="#F9E79F"/>
+  <text x="570" y="505" text-anchor="middle" font-size="11" fill="#7D6608">cross vector (CTS)</text>
+  <rect x="490" y="518" width="160" height="24" rx="5" fill="#F5B7B1"/>
+  <text x="570" y="535" text-anchor="middle" font-size="11" font-weight="bold" fill="#922B21">cascade vector s_v ★</text>
+
+  <!-- Arrow: Server -> User Tower -->
+  <path d="M 660 215 Q 580 330 340 418" fill="none" stroke="#27AE60" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <!-- Arrow: Server -> Item Tower -->
+  <path d="M 720 215 Q 700 330 580 418" fill="none" stroke="#27AE60" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+
+  <!-- Label on arrows -->
+  <text x="540" y="330" text-anchor="middle" font-size="12" fill="#27AE60" font-weight="bold">拼接输入</text>
+
+  <!-- ========== Key insight callout ========== -->
+  <rect x="40" y="435" width="155" height="100" rx="12" fill="#FFEAA7" stroke="#F39C12" stroke-width="2" filter="url(#shadow)"/>
+  <text x="117" y="460" text-anchor="middle" font-size="13" font-weight="bold" fill="#D68910">💡 核心思路</text>
+  <text x="117" y="482" text-anchor="middle" font-size="11" fill="#7D6608">不蒸馏 loss</text>
+  <text x="117" y="500" text-anchor="middle" font-size="11" fill="#7D6608">而是直接缓存</text>
+  <text x="117" y="518" text-anchor="middle" font-size="11" font-weight="bold" fill="#D35400">精排的中间表示</text>
+
+  <!-- ========== Result badge ========== -->
+  <rect x="715" y="480" width="160" height="70" rx="12" fill="#2C3E50" filter="url(#shadow)"/>
+  <text x="795" y="505" text-anchor="middle" font-size="13" font-weight="bold" fill="#F1C40F">📈 线上效果</text>
+  <text x="795" y="525" text-anchor="middle" font-size="12" fill="#ECF0F1">收入 ↑ 8.36%</text>
+  <text x="795" y="543" text-anchor="middle" font-size="11" fill="#BDC3C7">三模块中增益最大</text>
+</svg>

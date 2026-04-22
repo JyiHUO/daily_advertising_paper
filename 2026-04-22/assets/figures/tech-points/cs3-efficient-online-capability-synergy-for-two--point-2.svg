@@ -1,0 +1,119 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#555">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#2196F3">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#FF6D00">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8f9ff"/>
+      <stop offset="100%" stop-color="#e8ecf8"/>
+    </linearGradient>
+    <filter id="shadow" x="-3%" y="-3%" width="106%" height="106%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bgGrad)" rx="18"/>
+
+  <!-- Title -->
+  <text x="450" y="46" text-anchor="middle" font-size="26" font-weight="bold" fill="#1a237e">跨塔同步对齐 (CTS)</text>
+  <text x="450" y="74" text-anchor="middle" font-size="15" fill="#666">Cross-Tower Synchronization — 让双塔彼此"看见"对方</text>
+
+  <!-- ===== 用户塔 ===== -->
+  <rect x="60" y="130" width="240" height="320" rx="18" fill="#E3F2FD" stroke="#1565C0" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="180" y="162" text-anchor="middle" font-size="20" font-weight="bold" fill="#1565C0">👤 用户塔</text>
+
+  <!-- 用户原始特征 -->
+  <rect x="90" y="185" width="180" height="42" rx="10" fill="#fff" stroke="#90CAF9" stroke-width="1.5"/>
+  <text x="180" y="212" text-anchor="middle" font-size="14" fill="#333">用户原始特征</text>
+
+  <!-- Cross Vector (用户侧) -->
+  <rect x="90" y="243" width="180" height="50" rx="10" fill="#BBDEFB" stroke="#1565C0" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="180" y="264" text-anchor="middle" font-size="13" font-weight="bold" fill="#0D47A1">Cross Vector</text>
+  <text x="180" y="282" text-anchor="middle" font-size="11" fill="#1565C0">"我喜欢的物品长啥样"</text>
+
+  <!-- 拼接标志 -->
+  <rect x="130" y="306" width="100" height="28" rx="14" fill="#1565C0"/>
+  <text x="180" y="325" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">⊕ 拼接输入</text>
+
+  <!-- 用户塔编码器 -->
+  <rect x="110" y="348" width="140" height="40" rx="10" fill="#1565C0"/>
+  <text x="180" y="374" text-anchor="middle" font-size="14" fill="#fff" font-weight="bold">编码器</text>
+
+  <!-- 用户嵌入输出 -->
+  <circle cx="180" cy="420" r="18" fill="#0D47A1"/>
+  <text x="180" y="426" text-anchor="middle" font-size="16" fill="#fff" font-weight="bold">u</text>
+
+  <!-- 箭头：特征+cross → 拼接 -->
+  <line x1="180" y1="227" x2="180" y2="306" stroke="#90CAF9" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+  <line x1="180" y1="334" x2="180" y2="348" stroke="#1565C0" stroke-width="2" marker-end="url(#arrowBlue)"/>
+  <line x1="180" y1="388" x2="180" y2="400" stroke="#1565C0" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <!-- ===== 物品塔 ===== -->
+  <rect x="600" y="130" width="240" height="320" rx="18" fill="#FFF3E0" stroke="#E65100" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="720" y="162" text-anchor="middle" font-size="20" font-weight="bold" fill="#E65100">📦 物品塔</text>
+
+  <!-- 物品原始特征 -->
+  <rect x="630" y="185" width="180" height="42" rx="10" fill="#fff" stroke="#FFCC80" stroke-width="1.5"/>
+  <text x="720" y="212" text-anchor="middle" font-size="14" fill="#333">物品原始特征</text>
+
+  <!-- Cross Vector (物品侧) -->
+  <rect x="630" y="243" width="180" height="50" rx="10" fill="#FFE0B2" stroke="#E65100" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="720" y="264" text-anchor="middle" font-size="13" font-weight="bold" fill="#BF360C">Cross Vector</text>
+  <text x="720" y="282" text-anchor="middle" font-size="11" fill="#E65100">"喜欢我的用户长啥样"</text>
+
+  <!-- 拼接标志 -->
+  <rect x="670" y="306" width="100" height="28" rx="14" fill="#E65100"/>
+  <text x="720" y="325" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">⊕ 拼接输入</text>
+
+  <!-- 物品塔编码器 -->
+  <rect x="650" y="348" width="140" height="40" rx="10" fill="#E65100"/>
+  <text x="720" y="374" text-anchor="middle" font-size="14" fill="#fff" font-weight="bold">编码器</text>
+
+  <!-- 物品嵌入输出 -->
+  <circle cx="720" cy="420" r="18" fill="#BF360C"/>
+  <text x="720" y="426" text-anchor="middle" font-size="16" fill="#fff" font-weight="bold">v</text>
+
+  <!-- 箭头：特征+cross → 拼接 -->
+  <line x1="720" y1="227" x2="720" y2="306" stroke="#FFCC80" stroke-width="1.5" marker-end="url(#arrowOrange)"/>
+  <line x1="720" y1="334" x2="720" y2="348" stroke="#E65100" stroke-width="2" marker-end="url(#arrowOrange)"/>
+  <line x1="720" y1="388" x2="720" y2="400" stroke="#E65100" stroke-width="2" marker-end="url(#arrowOrange)"/>
+
+  <!-- ===== 中间：正交互 EMA 更新 ===== -->
+  <!-- 中央交互区 -->
+  <rect x="340" y="220" width="220" height="130" rx="16" fill="#FFF8E1" stroke="#FFA000" stroke-width="2" filter="url(#shadow)"/>
+  <text x="450" y="250" text-anchor="middle" font-size="16" font-weight="bold" fill="#E65100">正交互 (label=1)</text>
+  <text x="450" y="275" text-anchor="middle" font-size="14" fill="#555">EMA 滑动更新</text>
+  <text x="450" y="298" text-anchor="middle" font-size="13" fill="#888" font-style="italic">cv ← α·cv + (1-α)·对方输出</text>
+  <text x="450" y="322" text-anchor="middle" font-size="12" fill="#999">负样本不更新 ✗</text>
+
+  <!-- 从物品塔输出 → 用户cross vector 的弧线箭头 (v→用户cross) -->
+  <path d="M 700,420 C 650,520 350,520 270,293" fill="none" stroke="#1565C0" stroke-width="2.5" stroke-dasharray="8,4" marker-end="url(#arrowBlue)"/>
+  <text x="420" y="530" text-anchor="middle" font-size="12" fill="#1565C0" font-weight="bold">v 输出 → 用户 cross vector</text>
+
+  <!-- 从用户塔输出 → 物品cross vector 的弧线箭头 (u→物品cross) -->
+  <path d="M 200,420 C 250,500 550,500 630,293" fill="none" stroke="#E65100" stroke-width="2.5" stroke-dasharray="8,4" marker-end="url(#arrowOrange)"/>
+  <text x="420" y="505" text-anchor="middle" font-size="12" fill="#E65100" font-weight="bold">u 输出 → 物品 cross vector</text>
+
+  <!-- ===== 底部：匹配打分 ===== -->
+  <line x1="180" y1="438" x2="400" y2="570" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="720" y1="438" x2="500" y2="570" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <rect x="380" y="560" width="140" height="44" rx="22" fill="#4CAF50" filter="url(#shadow)"/>
+  <text x="450" y="588" text-anchor="middle" font-size="16" fill="#fff" font-weight="bold">u · v 打分</text>
+
+  <!-- ===== 关键洞察标签 ===== -->
+  <rect x="305" y="130" width="290" height="58" rx="14" fill="#fff" stroke="#7C4DFF" stroke-width="2" filter="url(#shadow)"/>
+  <text x="450" y="154" text-anchor="middle" font-size="14" font-weight="bold" fill="#7C4DFF">💡 核心思想</text>
+  <text x="450" y="176" text-anchor="middle" font-size="13" fill="#555">编码前就注入对方塔的信息 → 嵌入更对齐</text>
+
+  <!-- 在线学习标签 -->
+  <rect x="340" y="385" width="220" height="34" rx="17" fill="#E8F5E9" stroke="#4CAF50" stroke-width="1.5"/>
+  <text x="450" y="408" text-anchor="middle" font-size="13" fill="#2E7D32" font-weight="bold">🔄 实时在线更新，无需反向传播</text>
+</svg>

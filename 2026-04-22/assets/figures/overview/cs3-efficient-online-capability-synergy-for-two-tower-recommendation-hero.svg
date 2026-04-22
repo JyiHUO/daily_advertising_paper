@@ -1,0 +1,319 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 750" font-family="'Segoe UI',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0e27"/>
+      <stop offset="100%" stop-color="#131a3a"/>
+    </linearGradient>
+    <linearGradient id="userGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a90d9"/>
+      <stop offset="100%" stop-color="#2c5aa0"/>
+    </linearGradient>
+    <linearGradient id="itemGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8734a"/>
+      <stop offset="100%" stop-color="#c44e2b"/>
+    </linearGradient>
+    <linearGradient id="casGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+    <linearGradient id="ctsGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <linearGradient id="cmsGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#34d399"/>
+    </marker>
+    <marker id="arrowYellow" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#fbbf24"/>
+    </marker>
+    <marker id="arrowWhite" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#ffffff"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#a855f7"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1100" height="750" fill="url(#bgGrad)"/>
+
+  <!-- Subtle grid lines -->
+  <g opacity="0.04" stroke="#ffffff" stroke-width="0.5">
+    <line x1="0" y1="150" x2="1100" y2="150"/>
+    <line x1="0" y1="300" x2="1100" y2="300"/>
+    <line x1="0" y1="450" x2="1100" y2="450"/>
+    <line x1="0" y1="600" x2="1100" y2="600"/>
+    <line x1="550" y1="0" x2="550" y2="750"/>
+  </g>
+
+  <!-- Title -->
+  <text x="550" y="42" text-anchor="middle" fill="#ffffff" font-size="26" font-weight="700" letter-spacing="1">CS³: Capability Synergy for Two-Tower Retrieval</text>
+  <text x="550" y="68" text-anchor="middle" fill="#8899bb" font-size="13">Three synergy mechanisms to bridge the gap between lightweight retrieval and powerful ranking</text>
+
+  <!-- ============ ONLINE LEARNING TIMELINE (Top) ============ -->
+  <g transform="translate(50, 88)">
+    <rect x="0" y="0" width="1000" height="40" rx="8" fill="#1a2040" stroke="#2a3560" stroke-width="1"/>
+    <text x="12" y="25" fill="#6b7fa8" font-size="11" font-weight="600">ONLINE LEARNING PIPELINE</text>
+
+    <!-- Timeline segments -->
+    <rect x="220" y="8" width="120" height="24" rx="4" fill="#1e2a50"/>
+    <text x="280" y="24" text-anchor="middle" fill="#7896c4" font-size="10">Impression</text>
+    <rect x="350" y="8" width="100" height="24" rx="4" fill="#1e2a50"/>
+    <text x="400" y="24" text-anchor="middle" fill="#7896c4" font-size="10">Label Wait</text>
+    <rect x="460" y="8" width="130" height="24" rx="4" fill="#1e2a50"/>
+    <text x="525" y="24" text-anchor="middle" fill="#7896c4" font-size="10">Train (Dual-Tower)</text>
+    <rect x="600" y="8" width="120" height="24" rx="4" fill="#1e2a50"/>
+    <text x="660" y="24" text-anchor="middle" fill="#7896c4" font-size="10">Train (Ranker)</text>
+    <rect x="730" y="8" width="130" height="24" rx="4" fill="#2a4060"/>
+    <text x="795" y="24" text-anchor="middle" fill="#a0b8e0" font-size="10" font-weight="600">Deploy ≈30min</text>
+
+    <!-- Arrow -->
+    <line x1="210" y1="20" x2="870" y2="20" stroke="#3a5080" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <polygon points="870,16 878,20 870,24" fill="#3a5080"/>
+  </g>
+
+  <!-- ============ MAIN ARCHITECTURE ============ -->
+
+  <!-- USER TOWER -->
+  <g transform="translate(120, 170)" filter="url(#shadow)">
+    <rect x="0" y="0" width="200" height="380" rx="16" fill="#111833" stroke="#4a90d9" stroke-width="1.5" opacity="0.95"/>
+    <!-- Tower header -->
+    <rect x="0" y="0" width="200" height="44" rx="16" fill="url(#userGrad)"/>
+    <rect x="0" y="20" width="200" height="24" fill="url(#userGrad)"/>
+    <text x="100" y="28" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">👤 User Tower</text>
+
+    <!-- Input layer -->
+    <rect x="20" y="60" width="160" height="36" rx="8" fill="#1a2550" stroke="#3a5580" stroke-width="1"/>
+    <text x="100" y="83" text-anchor="middle" fill="#b0c4e8" font-size="11">User Features</text>
+
+    <!-- Cross vector input -->
+    <rect x="20" y="104" width="75" height="28" rx="6" fill="#0d3a2a" stroke="#10b981" stroke-width="1"/>
+    <text x="57" y="122" text-anchor="middle" fill="#34d399" font-size="9" font-weight="600">Cross Vec</text>
+
+    <!-- Cascade vector input -->
+    <rect x="105" y="104" width="75" height="28" rx="6" fill="#2a1a0a" stroke="#f59e0b" stroke-width="1"/>
+    <text x="142" y="122" text-anchor="middle" fill="#fbbf24" font-size="9" font-weight="600">Cascade Vec</text>
+
+    <!-- Concat arrow -->
+    <text x="100" y="148" text-anchor="middle" fill="#6080a8" font-size="10">concat ↓</text>
+
+    <!-- CAS Block 1 -->
+    <g transform="translate(20, 158)">
+      <rect x="0" y="0" width="160" height="66" rx="10" fill="#1a1040" stroke="#7c3aed" stroke-width="1.2"/>
+      <text x="80" y="16" text-anchor="middle" fill="#c4b5fd" font-size="10" font-weight="700">CAS: Self-Revision</text>
+      <!-- Mini diagram of CAS -->
+      <rect x="12" y="24" width="36" height="16" rx="3" fill="#2a1860" stroke="#a78bfa" stroke-width="0.8"/>
+      <text x="30" y="35" text-anchor="middle" fill="#ddd6fe" font-size="7">FC(x)→z</text>
+      <path d="M52,32 L62,32" stroke="#a78bfa" stroke-width="1" marker-end="url(#arrowPurple)"/>
+      <rect x="66" y="24" width="34" height="16" rx="3" fill="#2a1860" stroke="#a78bfa" stroke-width="0.8"/>
+      <text x="83" y="35" text-anchor="middle" fill="#ddd6fe" font-size="7">Gate e</text>
+      <path d="M104,32 L114,32" stroke="#a78bfa" stroke-width="1" marker-end="url(#arrowPurple)"/>
+      <rect x="118" y="24" width="30" height="16" rx="3" fill="#2a1860" stroke="#a78bfa" stroke-width="0.8"/>
+      <text x="133" y="35" text-anchor="middle" fill="#ddd6fe" font-size="7">x·2e</text>
+      <!-- Cycle arrow -->
+      <path d="M133,42 C133,52 30,52 30,42" stroke="#a78bfa" stroke-width="0.8" fill="none" stroke-dasharray="3,2"/>
+      <text x="80" y="58" text-anchor="middle" fill="#a78bfa" font-size="7">re-forward same FC</text>
+    </g>
+
+    <!-- CAS Block 2 -->
+    <g transform="translate(20, 234)">
+      <rect x="0" y="0" width="160" height="32" rx="10" fill="#1a1040" stroke="#7c3aed" stroke-width="1.2"/>
+      <text x="80" y="20" text-anchor="middle" fill="#c4b5fd" font-size="10" font-weight="700">CAS Layer ×N</text>
+    </g>
+
+    <!-- Output embedding -->
+    <g transform="translate(20, 280)">
+      <rect x="0" y="0" width="160" height="36" rx="8" fill="#1e3060" stroke="#4a90d9" stroke-width="1.5"/>
+      <text x="80" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="600">u_emb</text>
+      <text x="80" y="28" text-anchor="middle" fill="#8ab4e8" font-size="9">User Embedding</text>
+    </g>
+
+    <!-- QPS label -->
+    <text x="100" y="345" text-anchor="middle" fill="#4a6a9a" font-size="9">QPS drop &lt; 1%</text>
+
+    <!-- Realtime badge -->
+    <rect x="55" y="356" width="90" height="18" rx="9" fill="#10b981" opacity="0.2"/>
+    <text x="100" y="369" text-anchor="middle" fill="#34d399" font-size="9" font-weight="600">⚡ Real-time</text>
+  </g>
+
+  <!-- ITEM TOWER -->
+  <g transform="translate(780, 170)" filter="url(#shadow)">
+    <rect x="0" y="0" width="200" height="380" rx="16" fill="#111833" stroke="#e8734a" stroke-width="1.5" opacity="0.95"/>
+    <!-- Tower header -->
+    <rect x="0" y="0" width="200" height="44" rx="16" fill="url(#itemGrad)"/>
+    <rect x="0" y="20" width="200" height="24" fill="url(#itemGrad)"/>
+    <text x="100" y="28" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">📦 Item Tower</text>
+
+    <!-- Input layer -->
+    <rect x="20" y="60" width="160" height="36" rx="8" fill="#251a15" stroke="#8a5530" stroke-width="1"/>
+    <text x="100" y="83" text-anchor="middle" fill="#e8c0a8" font-size="11">Item Features</text>
+
+    <!-- Cross vector input -->
+    <rect x="20" y="104" width="75" height="28" rx="6" fill="#0d3a2a" stroke="#10b981" stroke-width="1"/>
+    <text x="57" y="122" text-anchor="middle" fill="#34d399" font-size="9" font-weight="600">Cross Vec</text>
+
+    <!-- Cascade vector input -->
+    <rect x="105" y="104" width="75" height="28" rx="6" fill="#2a1a0a" stroke="#f59e0b" stroke-width="1"/>
+    <text x="142" y="122" text-anchor="middle" fill="#fbbf24" font-size="9" font-weight="600">Cascade Vec</text>
+
+    <!-- Concat arrow -->
+    <text x="100" y="148" text-anchor="middle" fill="#806050" font-size="10">concat ↓</text>
+
+    <!-- CAS Block -->
+    <g transform="translate(20, 158)">
+      <rect x="0" y="0" width="160" height="42" rx="10" fill="#1a1040" stroke="#7c3aed" stroke-width="1.2"/>
+      <text x="80" y="18" text-anchor="middle" fill="#c4b5fd" font-size="10" font-weight="700">CAS Layers ×N</text>
+      <text x="80" y="34" text-anchor="middle" fill="#8b7cc8" font-size="8">Adaptive feature denoising</text>
+    </g>
+
+    <!-- Output embedding -->
+    <g transform="translate(20, 214)">
+      <rect x="0" y="0" width="160" height="36" rx="8" fill="#3a2010" stroke="#e8734a" stroke-width="1.5"/>
+      <text x="80" y="14" text-anchor="middle" fill="#fff" font-size="11" font-weight="600">v_emb</text>
+      <text x="80" y="28" text-anchor="middle" fill="#e8b090" font-size="9">Item Embedding</text>
+    </g>
+
+    <!-- Pre-compute badge -->
+    <rect x="35" y="270" width="130" height="18" rx="9" fill="#e8734a" opacity="0.2"/>
+    <text x="100" y="283" text-anchor="middle" fill="#e8734a" font-size="9" font-weight="600">🗄️ Pre-computed & Cached</text>
+  </g>
+
+  <!-- ============ DOT PRODUCT (Center) ============ -->
+  <g transform="translate(460, 430)">
+    <circle cx="90" cy="30" r="28" fill="#1a2550" stroke="#ffffff" stroke-width="1.5" filter="url(#glow)"/>
+    <text x="90" y="28" text-anchor="middle" fill="#fff" font-size="20" font-weight="700">⟨·,·⟩</text>
+    <text x="90" y="42" text-anchor="middle" fill="#8899bb" font-size="8">dot product</text>
+  </g>
+
+  <!-- Arrows from towers to dot product -->
+  <path d="M320,468 Q400,460 455,460" stroke="#4a90d9" stroke-width="2" fill="none" marker-end="url(#arrowWhite)"/>
+  <path d="M780,428 Q680,450 555,460" stroke="#e8734a" stroke-width="2" fill="none" marker-end="url(#arrowWhite)"/>
+
+  <!-- Score label -->
+  <text x="550" y="492" text-anchor="middle" fill="#aabbdd" font-size="11">retrieval score</text>
+
+  <!-- ============ CTS: Cross-Tower Synchronization (Center Bridge) ============ -->
+  <g transform="translate(340, 248)">
+    <!-- Background band -->
+    <rect x="0" y="-14" width="420" height="90" rx="14" fill="#0a2820" stroke="#10b981" stroke-width="1.2" stroke-dasharray="6,3" opacity="0.7"/>
+    <text x="210" y="4" text-anchor="middle" fill="#34d399" font-size="13" font-weight="700">② CTS: Cross-Tower Synchronization</text>
+
+    <!-- User to Item cross vec flow -->
+    <path d="M30,30 C130,20 290,20 390,30" stroke="url(#ctsGrad)" stroke-width="2.5" fill="none" marker-end="url(#arrowGreen)" filter="url(#softGlow)"/>
+    <text x="210" y="26" text-anchor="middle" fill="#34d399" font-size="9" font-weight="600">EMA: positive u_t → item cross vec</text>
+
+    <!-- Item to User cross vec flow -->
+    <path d="M390,55 C290,65 130,65 30,55" stroke="url(#ctsGrad)" stroke-width="2.5" fill="none" marker-end="url(#arrowGreen)" filter="url(#softGlow)"/>
+    <text x="210" y="63" text-anchor="middle" fill="#34d399" font-size="9" font-weight="600">EMA: positive v_t → user cross vec</text>
+
+    <!-- Label -->
+    <text x="210" y="82" text-anchor="middle" fill="#0f8a6a" font-size="8">Lightweight mutual awareness · Only on label=1</text>
+  </g>
+
+  <!-- ============ CMS: Cascade Model Sharing (Bottom) ============ -->
+  <g transform="translate(340, 540)">
+    <rect x="0" y="0" width="420" height="130" rx="16" fill="#1a1505" stroke="#f59e0b" stroke-width="1.5" opacity="0.9" filter="url(#shadow)"/>
+
+    <text x="210" y="24" text-anchor="middle" fill="#fbbf24" font-size="13" font-weight="700">③ CMS: Cascade-Model Sharing</text>
+
+    <!-- Ranker block -->
+    <rect x="140" y="38" width="140" height="40" rx="8" fill="#2a1a05" stroke="#d97706" stroke-width="1.2"/>
+    <text x="210" y="55" text-anchor="middle" fill="#fde68a" font-size="11" font-weight="600">🧠 Cascade Ranker</text>
+    <text x="210" y="69" text-anchor="middle" fill="#b8860b" font-size="9">Deep cross-feature model</text>
+
+    <!-- Hidden layer extraction -->
+    <path d="M210,78 L210,92" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#arrowYellow)"/>
+    <rect x="130" y="92" width="160" height="22" rx="6" fill="#3a2a08" stroke="#f59e0b" stroke-width="1"/>
+    <text x="210" y="107" text-anchor="middle" fill="#fde68a" font-size="9">h_uv (intermediate repr)</text>
+
+    <!-- EMA arrows to user and item -->
+    <path d="M130,103 L30,65" stroke="#fbbf24" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#arrowYellow)"/>
+    <text x="60" y="75" text-anchor="middle" fill="#fbbf24" font-size="8" transform="rotate(-25 60 75)">EMA → s_u</text>
+
+    <path d="M290,103 L390,65" stroke="#fbbf24" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#arrowYellow)"/>
+    <text x="360" y="75" text-anchor="middle" fill="#fbbf24" font-size="8" transform="rotate(25 360 75)">EMA → s_v</text>
+
+    <!-- Both +/- label -->
+    <text x="210" y="124" text-anchor="middle" fill="#92710a" font-size="8">Updates on both pos &amp; neg samples</text>
+
+    <!-- EmbSvr label -->
+    <rect x="310" y="38" width="96" height="22" rx="6" fill="#2a1a05" stroke="#92710a" stroke-width="0.8"/>
+    <text x="358" y="53" text-anchor="middle" fill="#d4a440" font-size="8">EmbSvr (p99&lt;5ms)</text>
+  </g>
+
+  <!-- Arrows from CMS to tower inputs -->
+  <path d="M370,540 C250,520 220,360 240,302" stroke="#f59e0b" stroke-width="1.5" fill="none" stroke-dasharray="5,3" marker-end="url(#arrowYellow)" opacity="0.7"/>
+  <path d="M730,540 C850,520 880,360 860,302" stroke="#f59e0b" stroke-width="1.5" fill="none" stroke-dasharray="5,3" marker-end="url(#arrowYellow)" opacity="0.7"/>
+
+  <!-- ============ CAS LABEL (Left) ============ -->
+  <g transform="translate(25, 340)">
+    <rect x="0" y="0" width="80" height="50" rx="10" fill="#1a1040" stroke="#7c3aed" stroke-width="1.5"/>
+    <text x="40" y="20" text-anchor="middle" fill="#c4b5fd" font-size="10" font-weight="700">① CAS</text>
+    <text x="40" y="33" text-anchor="middle" fill="#8b7cc8" font-size="8">Cycle-</text>
+    <text x="40" y="43" text-anchor="middle" fill="#8b7cc8" font-size="8">Adaptive</text>
+  </g>
+
+  <!-- ============ STORAGE INFRASTRUCTURE (Left bottom) ============ -->
+  <g transform="translate(30, 580)">
+    <rect x="0" y="0" width="130" height="70" rx="10" fill="#111833" stroke="#3a5580" stroke-width="1"/>
+    <text x="65" y="18" text-anchor="middle" fill="#7896c4" font-size="10" font-weight="600">ParSvr</text>
+    <text x="65" y="32" text-anchor="middle" fill="#5070a0" font-size="8">Model params +</text>
+    <text x="65" y="44" text-anchor="middle" fill="#5070a0" font-size="8">Cross vectors</text>
+    <rect x="15" y="50" width="100" height="14" rx="4" fill="#10b981" opacity="0.15"/>
+    <text x="65" y="61" text-anchor="middle" fill="#10b981" font-size="8">Sync with train</text>
+  </g>
+  <g transform="translate(170, 580)">
+    <rect x="0" y="0" width="130" height="70" rx="10" fill="#111833" stroke="#3a5580" stroke-width="1"/>
+    <text x="65" y="18" text-anchor="middle" fill="#d4a440" font-size="10" font-weight="600">EmbSvr</text>
+    <text x="65" y="32" text-anchor="middle" fill="#5070a0" font-size="8">Cascade vectors</text>
+    <text x="65" y="44" text-anchor="middle" fill="#5070a0" font-size="8">(cross-model KV)</text>
+    <rect x="15" y="50" width="100" height="14" rx="4" fill="#f59e0b" opacity="0.15"/>
+    <text x="65" y="61" text-anchor="middle" fill="#f59e0b" font-size="8">Write: ranker / Read: dual-tower</text>
+  </g>
+
+  <!-- ============ RESULTS BANNER (Bottom right) ============ -->
+  <g transform="translate(800, 580)">
+    <rect x="0" y="0" width="250" height="88" rx="14" fill="#0a1a10" stroke="#10b981" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="125" y="22" text-anchor="middle" fill="#34d399" font-size="12" font-weight="700">🏆 Online Results (Kuaishou Ads)</text>
+    <text x="125" y="42" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="800">+8.36%</text>
+    <text x="125" y="58" text-anchor="middle" fill="#88bbaa" font-size="10">Revenue improvement</text>
+    <text x="125" y="74" text-anchor="middle" fill="#667788" font-size="9">ms-level latency · 3 ad scenarios · plug-and-play</text>
+  </g>
+
+  <!-- ============ LEGEND ============ -->
+  <g transform="translate(820, 170)">
+    <!-- This space intentionally used by item tower -->
+  </g>
+
+  <!-- Small legend bottom center -->
+  <g transform="translate(420, 710)">
+    <circle cx="0" cy="0" r="5" fill="#7c3aed"/>
+    <text x="10" y="4" fill="#aaa" font-size="9">CAS (intra-tower)</text>
+    <circle cx="120" cy="0" r="5" fill="#10b981"/>
+    <text x="130" y="4" fill="#aaa" font-size="9">CTS (inter-tower)</text>
+    <circle cx="240" cy="0" r="5" fill="#f59e0b"/>
+    <text x="250" y="4" fill="#aaa" font-size="9">CMS (cross-stage)</text>
+  </g>
+
+  <!-- Highlight: biggest contributor label -->
+  <g transform="translate(550, 500)">
+    <rect x="-60" y="0" width="120" height="20" rx="10" fill="#f59e0b" opacity="0.15"/>
+    <text x="0" y="14" text-anchor="middle" fill="#fbbf24" font-size="9" font-weight="600">★ CMS = largest gain</text>
+  </g>
+
+</svg>

@@ -1,0 +1,88 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" fill="#555">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" fill="#2563EB">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" fill="#EA580C">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto" fill="#16A34A">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#EFF6FF"/>
+    </linearGradient>
+    <filter id="shadow" x="-3%" y="-3%" width="106%" height="106%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="560" rx="18" fill="url(#bgGrad)"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E293B">CS3 在线学习部署：双层存储实现跨模型知识实时互通</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#64748B">核心创新：ParSvr + EmbSvr 分别解决塔间 &amp; 跨阶段信息传递</text>
+
+  <!-- ===== 双塔模型 (左) ===== -->
+  <rect x="50" y="120" width="240" height="160" rx="16" fill="#DBEAFE" stroke="#2563EB" stroke-width="2" filter="url(#shadow)"/>
+  <text x="170" y="152" text-anchor="middle" font-size="17" font-weight="bold" fill="#1E40AF">双塔模型</text>
+  <text x="170" y="178" text-anchor="middle" font-size="12" fill="#3B82F6">（召回阶段）</text>
+  <rect x="80" y="196" width="180" height="30" rx="8" fill="#93C5FD" opacity="0.6"/>
+  <text x="170" y="216" text-anchor="middle" font-size="12" fill="#1E3A5F">用户塔 · 物品塔</text>
+  <text x="170" y="252" text-anchor="middle" font-size="11" fill="#475569">读 cross vec &amp; cascade vec</text>
+
+  <!-- ===== 精排模型 (右) ===== -->
+  <rect x="610" y="120" width="240" height="160" rx="16" fill="#FFEDD5" stroke="#EA580C" stroke-width="2" filter="url(#shadow)"/>
+  <text x="730" y="152" text-anchor="middle" font-size="17" font-weight="bold" fill="#C2410C">精排模型</text>
+  <text x="730" y="178" text-anchor="middle" font-size="12" fill="#EA580C">（排序阶段）</text>
+  <rect x="640" y="196" width="180" height="30" rx="8" fill="#FDBA74" opacity="0.5"/>
+  <text x="730" y="216" text-anchor="middle" font-size="12" fill="#7C2D12">深度交叉网络</text>
+  <text x="730" y="252" text-anchor="middle" font-size="11" fill="#475569">写 cascade vec 到 EmbSvr</text>
+
+  <!-- ===== ParSvr (左下) ===== -->
+  <rect x="80" y="370" width="260" height="120" rx="16" fill="#F0FDF4" stroke="#16A34A" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="210" y="403" text-anchor="middle" font-size="16" font-weight="bold" fill="#15803D">ParSvr</text>
+  <text x="210" y="425" text-anchor="middle" font-size="12" fill="#166534">参数服务器</text>
+  <rect x="110" y="438" width="200" height="28" rx="7" fill="#BBF7D0" opacity="0.7"/>
+  <text x="210" y="457" text-anchor="middle" font-size="11" fill="#14532D">模型参数 + Cross Vector (CTS)</text>
+  <text x="210" y="480" text-anchor="middle" font-size="10" fill="#64748B">塔间信息对齐 · 同步更新</text>
+
+  <!-- ===== EmbSvr (右下) ===== -->
+  <rect x="560" y="370" width="260" height="120" rx="16" fill="#FFF7ED" stroke="#EA580C" stroke-width="2.5" filter="url(#shadow)"/>
+  <text x="690" y="403" text-anchor="middle" font-size="16" font-weight="bold" fill="#C2410C">EmbSvr</text>
+  <text x="690" y="425" text-anchor="middle" font-size="12" fill="#9A3412">嵌入服务器（分布式KV）</text>
+  <rect x="590" y="438" width="200" height="28" rx="7" fill="#FED7AA" opacity="0.6"/>
+  <text x="690" y="457" text-anchor="middle" font-size="11" fill="#7C2D12">Cascade Vector (CMS)</text>
+  <text x="690" y="480" text-anchor="middle" font-size="10" fill="#64748B">跨模型中转站 · 延迟 &lt; 5ms</text>
+
+  <!-- ===== 箭头：双塔 ↔ ParSvr ===== -->
+  <line x1="170" y1="280" x2="170" y2="365" stroke="#16A34A" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <line x1="200" y1="365" x2="200" y2="285" stroke="#16A34A" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrowGreen)"/>
+  <text x="130" y="330" font-size="10" fill="#16A34A" font-weight="bold">读/写</text>
+
+  <!-- ===== 箭头：精排 → EmbSvr (写) ===== -->
+  <line x1="730" y1="280" x2="730" y2="365" stroke="#EA580C" stroke-width="2.5" marker-end="url(#arrowOrange)"/>
+  <text x="738" y="330" font-size="10" fill="#EA580C" font-weight="bold">写入</text>
+
+  <!-- ===== 箭头：EmbSvr → 双塔 (读) ===== -->
+  <path d="M 560,430 Q 450,430 450,340 Q 450,260 290,230" stroke="#2563EB" stroke-width="2.5" fill="none" marker-end="url(#arrowBlue)" stroke-dasharray="8,4"/>
+  <text x="420" y="315" font-size="11" fill="#2563EB" font-weight="bold">读取 cascade vec</text>
+
+  <!-- ===== 中间连接标注 ===== -->
+  <rect x="365" y="158" width="170" height="68" rx="12" fill="#FEF9C3" stroke="#CA8A04" stroke-width="1.5" opacity="0.9"/>
+  <text x="450" y="180" text-anchor="middle" font-size="12" font-weight="bold" fill="#854D0E">⏱ ~30 min</text>
+  <text x="450" y="198" text-anchor="middle" font-size="11" fill="#92400E">展示 → 训练 → 上线</text>
+  <text x="450" y="215" text-anchor="middle" font-size="10" fill="#A16207">三模块实时生效</text>
+
+  <!-- 虚线：数据流 -->
+  <line x1="340" y1="192" x2="610" y2="192" stroke="#CA8A04" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+  <line x1="290" y1="192" x2="365" y2="192" stroke="#CA8A04" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+
+  <!-- Bottom note -->
+  <text x="450" y="535" text-anchor="middle" font-size="12" fill="#94A3B8">ParSvr 管"自家参数" · EmbSvr 做"跨模型信息中转" · 两层存储各司其职</text>
+</svg>

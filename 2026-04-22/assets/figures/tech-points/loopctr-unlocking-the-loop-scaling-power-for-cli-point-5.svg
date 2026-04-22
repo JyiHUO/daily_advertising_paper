@@ -1,0 +1,144 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f6d365"/>
+      <stop offset="100%" stop-color="#fda085"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4facfe"/>
+      <stop offset="100%" stop-color="#00f2fe"/>
+    </linearGradient>
+    <linearGradient id="purple" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#a18cd1"/>
+      <stop offset="100%" stop-color="#fbc2eb"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#43e97b"/>
+      <stop offset="100%" stop-color="#38f9d7"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#fda085"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4facfe"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="600" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="url(#gold)" font-size="22" font-weight="bold" filter="glow">Oracle分析：每个样本需要不同的"思考深度"</text>
+  <text x="450" y="66" text-anchor="middle" fill="#8899bb" font-size="13">LoopCTR — 自适应推理的巨大未挖掘空间</text>
+
+  <!-- ========== LEFT: Loss Landscape Comparison ========== -->
+  <!-- L=3 wide flat minimum -->
+  <text x="165" y="105" text-anchor="middle" fill="#a18cd1" font-size="15" font-weight="bold">训练循环多 (L=3)</text>
+  <text x="165" y="122" text-anchor="middle" fill="#7788aa" font-size="11">宽平极小值 → 表征趋同</text>
+
+  <!-- Wide U shape -->
+  <path d="M 50 250 Q 90 240, 110 220 Q 130 200, 150 195 Q 170 192, 190 195 Q 210 200, 230 220 Q 250 240, 280 250" fill="none" stroke="url(#purple)" stroke-width="3" stroke-linecap="round"/>
+  <!-- Ball in wide minimum -->
+  <circle cx="165" cy="190" r="8" fill="#fbc2eb" opacity="0.9" filter="glow"/>
+  <!-- Depth labels along the curve, close together -->
+  <text x="115" y="235" text-anchor="middle" fill="#aabbcc" font-size="10">d=0</text>
+  <text x="165" y="210" text-anchor="middle" fill="#aabbcc" font-size="10">d=1</text>
+  <text x="215" y="235" text-anchor="middle" fill="#aabbcc" font-size="10">d=2</text>
+  <!-- Small bracket label -->
+  <text x="165" y="273" text-anchor="middle" fill="#778899" font-size="10">各深度预测相似 → Oracle空间小</text>
+
+  <!-- L=1 sharp minimum -->
+  <text x="165" y="315" text-anchor="middle" fill="#43e97b" font-size="15" font-weight="bold">训练循环少 (L=1)</text>
+  <text x="165" y="332" text-anchor="middle" fill="#7788aa" font-size="11">尖锐极小值 → 表征多样</text>
+
+  <!-- Sharp V shape -->
+  <path d="M 50 460 Q 100 440, 130 410 Q 150 385, 165 375 Q 180 385, 200 410 Q 230 440, 280 460" fill="none" stroke="url(#green)" stroke-width="3" stroke-linecap="round"/>
+  <!-- Ball -->
+  <circle cx="165" cy="372" r="8" fill="#38f9d7" opacity="0.9" filter="glow"/>
+  <!-- Depth labels spread apart -->
+  <text x="95" y="450" text-anchor="middle" fill="#aabbcc" font-size="10">d=0</text>
+  <text x="165" y="395" text-anchor="middle" fill="#aabbcc" font-size="10">d=1</text>
+  <text x="235" y="450" text-anchor="middle" fill="#aabbcc" font-size="10">d=2</text>
+  <text x="165" y="483" text-anchor="middle" fill="#778899" font-size="10">各深度预测差异大 → Oracle空间大</text>
+
+  <!-- Vertical divider -->
+  <line x1="330" y1="85" x2="330" y2="560" stroke="#334466" stroke-width="1" stroke-dasharray="6,4"/>
+
+  <!-- ========== CENTER: Oracle Mechanism ========== -->
+  <text x="530" y="105" text-anchor="middle" fill="url(#gold)" font-size="16" font-weight="bold">Oracle：逐样本选最优深度</text>
+
+  <!-- Sample icons -->
+  <!-- Simple sample -->
+  <rect x="380" y="135" width="300" height="80" rx="14" fill="#1e2f4d" stroke="#4facfe" stroke-width="1.5" filter="shadow"/>
+  <text x="395" y="158" fill="#4facfe" font-size="13" font-weight="bold">🟢 简单样本</text>
+  <rect x="395" y="168" width="50" height="28" rx="6" fill="#2a4a3a" stroke="#43e97b" stroke-width="1.5"/>
+  <text x="420" y="187" text-anchor="middle" fill="#43e97b" font-size="12" font-weight="bold">d=0</text>
+  <rect x="455" y="168" width="50" height="28" rx="6" fill="#1e2f4d" stroke="#445566" stroke-width="1" opacity="0.5"/>
+  <text x="480" y="187" text-anchor="middle" fill="#667788" font-size="12">d=1</text>
+  <rect x="515" y="168" width="50" height="28" rx="6" fill="#1e2f4d" stroke="#445566" stroke-width="1" opacity="0.5"/>
+  <text x="540" y="187" text-anchor="middle" fill="#667788" font-size="12">d=2</text>
+  <text x="620" y="182" fill="#43e97b" font-size="12">✓ 最优</text>
+
+  <!-- Medium sample -->
+  <rect x="380" y="230" width="300" height="80" rx="14" fill="#1e2f4d" stroke="#fda085" stroke-width="1.5" filter="shadow"/>
+  <text x="395" y="253" fill="#fda085" font-size="13" font-weight="bold">🟡 中等样本</text>
+  <rect x="395" y="263" width="50" height="28" rx="6" fill="#1e2f4d" stroke="#445566" stroke-width="1" opacity="0.5"/>
+  <text x="420" y="282" text-anchor="middle" fill="#667788" font-size="12">d=0</text>
+  <rect x="455" y="263" width="50" height="28" rx="6" fill="#3d3520" stroke="#fda085" stroke-width="1.5"/>
+  <text x="480" y="282" text-anchor="middle" fill="#fda085" font-size="12" font-weight="bold">d=1</text>
+  <rect x="515" y="263" width="50" height="28" rx="6" fill="#1e2f4d" stroke="#445566" stroke-width="1" opacity="0.5"/>
+  <text x="540" y="282" text-anchor="middle" fill="#667788" font-size="12">d=2</text>
+  <text x="620" y="277" fill="#fda085" font-size="12">✓ 最优</text>
+
+  <!-- Hard sample -->
+  <rect x="380" y="325" width="300" height="80" rx="14" fill="#1e2f4d" stroke="#a18cd1" stroke-width="1.5" filter="shadow"/>
+  <text x="395" y="348" fill="#a18cd1" font-size="13" font-weight="bold">🔴 复杂样本</text>
+  <rect x="395" y="358" width="50" height="28" rx="6" fill="#1e2f4d" stroke="#445566" stroke-width="1" opacity="0.5"/>
+  <text x="420" y="377" text-anchor="middle" fill="#667788" font-size="12">d=0</text>
+  <rect x="455" y="358" width="50" height="28" rx="6" fill="#1e2f4d" stroke="#445566" stroke-width="1" opacity="0.5"/>
+  <text x="480" y="377" text-anchor="middle" fill="#667788" font-size="12">d=1</text>
+  <rect x="515" y="358" width="50" height="28" rx="6" fill="#2d2347" stroke="#a18cd1" stroke-width="1.5"/>
+  <text x="540" y="377" text-anchor="middle" fill="#a18cd1" font-size="12" font-weight="bold">d=2</text>
+  <text x="620" y="372" fill="#a18cd1" font-size="12">✓ 最优</text>
+
+  <!-- ========== RIGHT: AUC Comparison Bar Chart ========== -->
+  <text x="530" y="445" text-anchor="middle" fill="#ccddee" font-size="15" font-weight="bold">TaobaoAds AUC 对比</text>
+
+  <!-- Bar chart area -->
+  <!-- Baseline bar -->
+  <rect x="385" y="468" width="90" height="32" rx="6" fill="#334466"/>
+  <text x="430" y="490" text-anchor="middle" fill="#8899bb" font-size="12" font-weight="bold">0.6441</text>
+  <text x="385" y="518" fill="#8899bb" font-size="10">实际最优(L=3,i=1)</text>
+
+  <!-- Oracle L=3 bar -->
+  <rect x="500" y="468" width="120" height="32" rx="6" fill="url(#purple)" opacity="0.8"/>
+  <text x="560" y="490" text-anchor="middle" fill="#1a2744" font-size="12" font-weight="bold">0.6672</text>
+  <text x="500" y="518" fill="#a18cd1" font-size="10">Oracle(L=3)</text>
+
+  <!-- Oracle L=1 bar -->
+  <rect x="645" y="468" width="135" height="32" rx="6" fill="url(#green)" opacity="0.85"/>
+  <text x="712" y="490" text-anchor="middle" fill="#1a2744" font-size="12" font-weight="bold">0.6744</text>
+  <text x="645" y="518" fill="#43e97b" font-size="10">Oracle(L=1) 🏆</text>
+
+  <!-- Gap annotations -->
+  <line x1="475" y1="475" x2="500" y2="475" stroke="#fda085" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="488" y="465" text-anchor="middle" fill="#fda085" font-size="9">+0.023</text>
+
+  <line x1="620" y1="475" x2="645" y2="475" stroke="#4facfe" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+  <text x="633" y="465" text-anchor="middle" fill="#4facfe" font-size="9">+0.007</text>
+
+  <!-- ========== BOTTOM: Key Insight ========== -->
+  <rect x="120" y="545" width="660" height="40" rx="12" fill="#1a2744" stroke="url(#gold)" stroke-width="1.5" filter="shadow"/>
+  <text x="450" y="570" text-anchor="middle" fill="url(#gold)" font-size="14" font-weight="bold">💡 核心发现：循环少 → 表征多样性高 → Oracle上限更高 → 自适应路由前景巨大</text>
+</svg>
