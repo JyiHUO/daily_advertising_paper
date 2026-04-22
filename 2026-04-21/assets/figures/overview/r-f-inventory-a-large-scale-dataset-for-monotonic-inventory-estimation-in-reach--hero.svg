@@ -1,0 +1,315 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 680" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0e27"/>
+      <stop offset="100%" stop-color="#141b3d"/>
+    </linearGradient>
+    <linearGradient id="curveGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4fc3f7"/>
+      <stop offset="100%" stop-color="#7c4dff"/>
+    </linearGradient>
+    <linearGradient id="uvGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00e5ff"/>
+      <stop offset="100%" stop-color="#18ffff"/>
+    </linearGradient>
+    <linearGradient id="pvGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ea80fc"/>
+      <stop offset="100%" stop-color="#e040fb"/>
+    </linearGradient>
+    <linearGradient id="inputBox" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a237e" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0d1442" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="taskBox" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a148c" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#1a0533" stop-opacity="0.7"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <marker id="arrowCyan" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#4fc3f7" fill-opacity="0.8"/>
+    </marker>
+    <marker id="arrowWhite" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#fff" fill-opacity="0.6"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="680" fill="url(#bgGrad)"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.04" stroke="#fff" stroke-width="0.5">
+    <line x1="0" y1="170" x2="960" y2="170"/>
+    <line x1="0" y1="340" x2="960" y2="340"/>
+    <line x1="0" y1="510" x2="960" y2="510"/>
+    <line x1="320" y1="0" x2="320" y2="680"/>
+    <line x1="640" y1="0" x2="640" y2="680"/>
+  </g>
+
+  <!-- Title -->
+  <text x="480" y="38" text-anchor="middle" fill="#e0e0e0" font-size="13" font-weight="300" letter-spacing="3" opacity="0.6">SIGIR 2026 · KUAISHOU</text>
+  <text x="480" y="68" text-anchor="middle" fill="#ffffff" font-size="22" font-weight="700" letter-spacing="1">R&amp;F-Inventory Dataset</text>
+  <text x="480" y="92" text-anchor="middle" fill="#80cbc4" font-size="13" font-weight="400" opacity="0.85">首个大规模 Reach &amp; Frequency 合约广告库存估算基准数据集</text>
+
+  <!-- ===== LEFT: Input Context (6-tuple) ===== -->
+  <g transform="translate(40, 125)">
+    <rect x="0" y="0" width="220" height="280" rx="14" fill="url(#inputBox)" stroke="#304ffe" stroke-width="1" stroke-opacity="0.3" filter="url(#shadow)"/>
+    <text x="110" y="28" text-anchor="middle" fill="#82b1ff" font-size="12" font-weight="600" letter-spacing="2">INPUT CONTEXT</text>
+    <line x1="20" y1="38" x2="200" y2="38" stroke="#304ffe" stroke-opacity="0.3"/>
+
+    <!-- 6-tuple items -->
+    <g transform="translate(18, 55)">
+      <circle cx="8" cy="6" r="5" fill="#4fc3f7" opacity="0.8"/>
+      <text x="20" y="10" fill="#e0e0e0" font-size="12" font-weight="500">x</text>
+      <text x="40" y="10" fill="#90a4ae" font-size="11">定向特征</text>
+      <text x="40" y="24" fill="#607d8b" font-size="9">城市/年龄/性别/兴趣</text>
+    </g>
+    <g transform="translate(18, 95)">
+      <circle cx="8" cy="6" r="5" fill="#69f0ae" opacity="0.8"/>
+      <text x="20" y="10" fill="#e0e0e0" font-size="12" font-weight="500">T</text>
+      <text x="40" y="10" fill="#90a4ae" font-size="11">排期天数</text>
+      <text x="40" y="24" fill="#607d8b" font-size="9">投放持续时间</text>
+    </g>
+    <g transform="translate(18, 135)">
+      <circle cx="8" cy="6" r="5" fill="#ffab40" opacity="0.8"/>
+      <text x="20" y="10" fill="#e0e0e0" font-size="12" font-weight="500">fc</text>
+      <text x="40" y="10" fill="#90a4ae" font-size="11">频控规则 (W, K)</text>
+      <text x="40" y="24" fill="#607d8b" font-size="9">W天内≤K次曝光</text>
+    </g>
+    <g transform="translate(18, 175)">
+      <circle cx="8" cy="6" r="5" fill="#ff80ab" opacity="0.8"/>
+      <text x="20" y="10" fill="#e0e0e0" font-size="12" font-weight="500">b</text>
+      <text x="40" y="10" fill="#90a4ae" font-size="11">CPM 阈值</text>
+      <text x="40" y="24" fill="#607d8b" font-size="9">0.4 → 3.0, 53个等距点</text>
+    </g>
+
+    <line x1="20" y1="210" x2="200" y2="210" stroke="#304ffe" stroke-opacity="0.2"/>
+    <text x="110" y="232" text-anchor="middle" fill="#90a4ae" font-size="10">⟨ x, T, fc, b ⟩ → UV, PV</text>
+    <text x="110" y="250" text-anchor="middle" fill="#546e7a" font-size="9">六元组记录结构</text>
+  </g>
+
+  <!-- Arrow from input to center curve -->
+  <path d="M270,270 C310,270 320,280 350,280" stroke="#4fc3f7" stroke-width="1.5" fill="none" stroke-opacity="0.5" marker-end="url(#arrowCyan)"/>
+
+  <!-- ===== CENTER: The Budget-Effect Curve (Core) ===== -->
+  <g transform="translate(310, 125)">
+    <!-- Curve background panel -->
+    <rect x="0" y="0" width="340" height="280" rx="16" fill="#0d1442" fill-opacity="0.6" stroke="#7c4dff" stroke-width="1" stroke-opacity="0.25" filter="url(#shadow)"/>
+    <text x="170" y="26" text-anchor="middle" fill="#b388ff" font-size="13" font-weight="700" letter-spacing="1.5">预算—效果曲线</text>
+    <text x="170" y="42" text-anchor="middle" fill="#7e57c2" font-size="9" font-weight="400">Budget-Effect Curve · 核心建模对象</text>
+
+    <!-- Axes -->
+    <line x1="50" y1="240" x2="310" y2="240" stroke="#546e7a" stroke-width="1"/>
+    <line x1="50" y1="240" x2="50" y2="60" stroke="#546e7a" stroke-width="1"/>
+    <text x="180" y="262" text-anchor="middle" fill="#78909c" font-size="10">CPM 阈值 (预算) →</text>
+    <text x="28" y="150" text-anchor="middle" fill="#78909c" font-size="10" transform="rotate(-90,28,150)">效果 →</text>
+
+    <!-- UV Curve (cyan) - monotonic increasing, concave -->
+    <path d="M60,225 C90,220 110,200 140,175 C170,152 200,125 230,108 C255,95 280,88 300,82" stroke="url(#uvGrad)" stroke-width="2.5" fill="none" filter="url(#glow)"/>
+    <!-- UV area fill -->
+    <path d="M60,225 C90,220 110,200 140,175 C170,152 200,125 230,108 C255,95 280,88 300,82 L300,240 L60,240 Z" fill="#00e5ff" fill-opacity="0.06"/>
+
+    <!-- PV Curve (purple/pink) -->
+    <path d="M60,220 C90,210 110,185 140,155 C170,128 200,100 230,82 C255,68 280,58 300,52" stroke="url(#pvGrad)" stroke-width="2.5" fill="none" filter="url(#glow)"/>
+
+    <!-- Data points on UV curve -->
+    <circle cx="80" cy="222" r="2.5" fill="#18ffff" opacity="0.8"/>
+    <circle cx="120" cy="195" r="2.5" fill="#18ffff" opacity="0.8"/>
+    <circle cx="160" cy="162" r="2.5" fill="#18ffff" opacity="0.8"/>
+    <circle cx="200" cy="135" r="2.5" fill="#18ffff" opacity="0.8"/>
+    <circle cx="240" cy="104" r="2.5" fill="#18ffff" opacity="0.8"/>
+    <circle cx="280" cy="88" r="2.5" fill="#18ffff" opacity="0.8"/>
+    <circle cx="300" cy="82" r="2.5" fill="#18ffff" opacity="0.8"/>
+
+    <!-- Data points on PV curve -->
+    <circle cx="80" cy="215" r="2.5" fill="#ea80fc" opacity="0.8"/>
+    <circle cx="120" cy="180" r="2.5" fill="#ea80fc" opacity="0.8"/>
+    <circle cx="160" cy="145" r="2.5" fill="#ea80fc" opacity="0.8"/>
+    <circle cx="200" cy="112" r="2.5" fill="#ea80fc" opacity="0.8"/>
+    <circle cx="240" cy="78" r="2.5" fill="#ea80fc" opacity="0.8"/>
+    <circle cx="280" cy="62" r="2.5" fill="#ea80fc" opacity="0.8"/>
+    <circle cx="300" cy="52" r="2.5" fill="#ea80fc" opacity="0.8"/>
+
+    <!-- Labels -->
+    <text x="302" y="78" fill="#18ffff" font-size="11" font-weight="600">UV</text>
+    <text x="302" y="48" fill="#ea80fc" font-size="11" font-weight="600">PV</text>
+
+    <!-- Ceiling line -->
+    <line x1="50" y1="52" x2="310" y2="52" stroke="#ff6e40" stroke-width="1" stroke-dasharray="5,4" opacity="0.5"/>
+    <text x="255" y="47" fill="#ff6e40" font-size="8" opacity="0.8">PV 理论上界</text>
+    <text x="255" y="72" fill="#ff6e40" font-size="7" opacity="0.6">UV × K × ⌈T/W⌉</text>
+
+    <!-- Monotonic annotation -->
+    <path d="M90,235 L95,230 L100,232 L105,225" stroke="#ffab40" stroke-width="1.5" fill="none" opacity="0.6"/>
+    <text x="112" y="230" fill="#ffab40" font-size="7" opacity="0.8">单调递增 ↗</text>
+
+    <!-- Diminishing annotation -->
+    <path d="M250,95 Q270,92 290,90" stroke="#aaa" stroke-width="1" stroke-dasharray="3,2" fill="none" opacity="0.4"/>
+    <text x="240" y="110" fill="#90a4ae" font-size="7" opacity="0.7">边际递减</text>
+  </g>
+
+  <!-- Arrow from center to right -->
+  <path d="M660,270 C690,270 700,270 720,270" stroke="#b388ff" stroke-width="1.5" fill="none" stroke-opacity="0.5" marker-end="url(#arrowCyan)"/>
+
+  <!-- ===== RIGHT: Tasks & Splits ===== -->
+  <g transform="translate(700, 125)">
+    <rect x="0" y="0" width="220" height="280" rx="14" fill="url(#taskBox)" stroke="#7c4dff" stroke-width="1" stroke-opacity="0.3" filter="url(#shadow)"/>
+    <text x="110" y="28" text-anchor="middle" fill="#ce93d8" font-size="12" font-weight="600" letter-spacing="2">EVALUATION</text>
+    <line x1="20" y1="38" x2="200" y2="38" stroke="#7c4dff" stroke-opacity="0.3"/>
+
+    <!-- Task 1 -->
+    <rect x="14" y="50" width="192" height="50" rx="8" fill="#1a0a30" fill-opacity="0.6" stroke="#7c4dff" stroke-opacity="0.2"/>
+    <text x="24" y="68" fill="#b388ff" font-size="10" font-weight="600">Task 1 单点预测</text>
+    <text x="24" y="82" fill="#78909c" font-size="9">(x,T,fc,b) → UV, PV</text>
+    <text x="24" y="94" fill="#546e7a" font-size="8">评估: MAE / RMSE</text>
+
+    <!-- Task 2 -->
+    <rect x="14" y="110" width="192" height="60" rx="8" fill="#1a0a30" fill-opacity="0.6" stroke="#7c4dff" stroke-opacity="0.2"/>
+    <text x="24" y="128" fill="#b388ff" font-size="10" font-weight="600">Task 2 单调曲线估计</text>
+    <text x="24" y="142" fill="#78909c" font-size="9">偏序约束: T↑ b↑ → UV↑ PV↑</text>
+    <text x="24" y="156" fill="#546e7a" font-size="8">评估: 误差 + 违反率 + 违反幅度</text>
+    <text x="24" y="165" fill="#ffab40" font-size="7" opacity="0.7">▲ 逻辑一致性检查</text>
+
+    <!-- Split strategies -->
+    <line x1="20" y1="182" x2="200" y2="182" stroke="#7c4dff" stroke-opacity="0.2"/>
+    <text x="110" y="200" text-anchor="middle" fill="#80cbc4" font-size="10" font-weight="600">三种外推划分</text>
+
+    <g transform="translate(18, 210)">
+      <rect x="0" y="0" width="55" height="40" rx="6" fill="#004d40" fill-opacity="0.4" stroke="#26a69a" stroke-opacity="0.4"/>
+      <text x="28" y="16" text-anchor="middle" fill="#80cbc4" font-size="8" font-weight="600">CPM↑</text>
+      <text x="28" y="28" text-anchor="middle" fill="#546e7a" font-size="7">低→高</text>
+    </g>
+    <g transform="translate(68, 210)">
+      <rect x="0" y="0" width="55" height="40" rx="6" fill="#004d40" fill-opacity="0.4" stroke="#26a69a" stroke-opacity="0.4"/>
+      <text x="28" y="16" text-anchor="middle" fill="#80cbc4" font-size="8" font-weight="600">排期↑</text>
+      <text x="28" y="28" text-anchor="middle" fill="#546e7a" font-size="7">短→长</text>
+    </g>
+    <g transform="translate(138, 210)">
+      <rect x="0" y="0" width="65" height="40" rx="6" fill="#b71c1c" fill-opacity="0.15" stroke="#ef5350" stroke-opacity="0.4"/>
+      <text x="33" y="16" text-anchor="middle" fill="#ef9a9a" font-size="8" font-weight="600">联合外推</text>
+      <text x="33" y="28" text-anchor="middle" fill="#ef5350" font-size="7" opacity="0.7">最困难</text>
+    </g>
+
+    <text x="110" y="268" text-anchor="middle" fill="#546e7a" font-size="8">低预算短投 → 高预算长投</text>
+  </g>
+
+  <!-- ===== BOTTOM: Core Insight Strip ===== -->
+  <g transform="translate(40, 440)">
+    <rect x="0" y="0" width="880" height="90" rx="12" fill="#0d1442" fill-opacity="0.5" stroke="#304ffe" stroke-width="0.8" stroke-opacity="0.2"/>
+
+    <!-- The GAP story -->
+    <text x="440" y="24" text-anchor="middle" fill="#fff" font-size="13" font-weight="600" letter-spacing="0.5">为什么需要这个数据集？</text>
+
+    <!-- Before -->
+    <g transform="translate(30, 38)">
+      <rect x="0" y="0" width="250" height="40" rx="8" fill="#b71c1c" fill-opacity="0.12" stroke="#ef5350" stroke-opacity="0.25"/>
+      <text x="125" y="16" text-anchor="middle" fill="#ef9a9a" font-size="10" font-weight="500">❌ 现有广告数据集 (Criteo/Avazu)</text>
+      <text x="125" y="30" text-anchor="middle" fill="#78909c" font-size="9">单条曝光记录，无预算/排期/频控维度</text>
+    </g>
+
+    <!-- Arrow -->
+    <path d="M295,58 L340,58" stroke="#fff" stroke-width="1" fill="none" opacity="0.3" marker-end="url(#arrowWhite)"/>
+
+    <!-- Gap -->
+    <g transform="translate(350, 38)">
+      <rect x="0" y="0" width="160" height="40" rx="8" fill="#ff6f00" fill-opacity="0.12" stroke="#ffa726" stroke-opacity="0.3"/>
+      <text x="80" y="16" text-anchor="middle" fill="#ffcc80" font-size="10" font-weight="600">⚡ 学术空白</text>
+      <text x="80" y="30" text-anchor="middle" fill="#78909c" font-size="9">无法复现 R&amp;F 库存估算</text>
+    </g>
+
+    <!-- Arrow -->
+    <path d="M525,58 L570,58" stroke="#fff" stroke-width="1" fill="none" opacity="0.3" marker-end="url(#arrowWhite)"/>
+
+    <!-- After -->
+    <g transform="translate(580, 38)">
+      <rect x="0" y="0" width="270" height="40" rx="8" fill="#1b5e20" fill-opacity="0.2" stroke="#66bb6a" stroke-opacity="0.3"/>
+      <text x="135" y="16" text-anchor="middle" fill="#a5d6a7" font-size="10" font-weight="500">✅ R&amp;F-Inventory (本文)</text>
+      <text x="135" y="30" text-anchor="middle" fill="#78909c" font-size="9">完整六元组 + 53点曲线 + 标准化基准</text>
+    </g>
+  </g>
+
+  <!-- ===== BOTTOM: Frequency Cap Constraint Visual ===== -->
+  <g transform="translate(40, 555)">
+    <rect x="0" y="0" width="400" height="95" rx="12" fill="#0d1442" fill-opacity="0.4" stroke="#ff6e40" stroke-width="0.8" stroke-opacity="0.2"/>
+    <text x="200" y="22" text-anchor="middle" fill="#ffab91" font-size="11" font-weight="600">频控约束 · 理论上界</text>
+
+    <!-- Timeline visualization -->
+    <g transform="translate(20, 38)">
+      <!-- Days -->
+      <line x1="0" y1="20" x2="360" y2="20" stroke="#546e7a" stroke-width="1"/>
+      <g fill="#607d8b" font-size="8">
+        <text x="0" y="35">D1</text><text x="36" y="35">D2</text><text x="72" y="35">D3</text>
+        <text x="108" y="35">D4</text><text x="144" y="35">D5</text><text x="180" y="35">D6</text>
+        <text x="216" y="35">D7</text><text x="252" y="35">D8</text><text x="288" y="35">D9</text>
+        <text x="320" y="35">D10</text>
+      </g>
+
+      <!-- Window 1 bracket -->
+      <rect x="0" y="5" width="230" height="12" rx="3" fill="#ff6e40" fill-opacity="0.1" stroke="#ff6e40" stroke-opacity="0.3" stroke-width="0.8"/>
+      <text x="115" y="2" text-anchor="middle" fill="#ff6e40" font-size="7" opacity="0.8">W=7天 ≤ K=3次</text>
+
+      <!-- Window 2 bracket -->
+      <rect x="108" y="40" width="230" height="12" rx="3" fill="#ff6e40" fill-opacity="0.08" stroke="#ff6e40" stroke-opacity="0.2" stroke-width="0.8"/>
+
+      <!-- Exposure dots -->
+      <circle cx="10" cy="20" r="4" fill="#18ffff" opacity="0.8"/>
+      <circle cx="82" cy="20" r="4" fill="#18ffff" opacity="0.8"/>
+      <circle cx="154" cy="20" r="4" fill="#18ffff" opacity="0.8"/>
+      <circle cx="262" cy="20" r="4" fill="#ea80fc" opacity="0.8"/>
+      <circle cx="298" cy="20" r="4" fill="#ea80fc" opacity="0.8"/>
+      <circle cx="334" cy="20" r="4" fill="#ea80fc" opacity="0.8"/>
+    </g>
+
+    <text x="200" y="85" text-anchor="middle" fill="#ffab91" font-size="10" font-weight="500">PV_max = UV × K × ⌈T/W⌉ = UV × 3 × 2 = 6 UV</text>
+  </g>
+
+  <!-- Dataset Stats -->
+  <g transform="translate(480, 555)">
+    <rect x="0" y="0" width="440" height="95" rx="12" fill="#0d1442" fill-opacity="0.4" stroke="#4fc3f7" stroke-width="0.8" stroke-opacity="0.2"/>
+    <text x="220" y="22" text-anchor="middle" fill="#82b1ff" font-size="11" font-weight="600">数据集核心参数</text>
+
+    <g transform="translate(20, 35)">
+      <g>
+        <rect x="0" y="0" width="90" height="48" rx="6" fill="#1a237e" fill-opacity="0.4"/>
+        <text x="45" y="18" text-anchor="middle" fill="#4fc3f7" font-size="16" font-weight="700">53</text>
+        <text x="45" y="32" text-anchor="middle" fill="#78909c" font-size="8">CPM采样点</text>
+        <text x="45" y="42" text-anchor="middle" fill="#546e7a" font-size="7">0.4 ~ 3.0</text>
+      </g>
+      <g transform="translate(105, 0)">
+        <rect x="0" y="0" width="90" height="48" rx="6" fill="#1a237e" fill-opacity="0.4"/>
+        <text x="45" y="18" text-anchor="middle" fill="#69f0ae" font-size="16" font-weight="700">6</text>
+        <text x="45" y="32" text-anchor="middle" fill="#78909c" font-size="8">元组维度</text>
+        <text x="45" y="42" text-anchor="middle" fill="#546e7a" font-size="7">x,T,fc,b,UV,PV</text>
+      </g>
+      <g transform="translate(210, 0)">
+        <rect x="0" y="0" width="90" height="48" rx="6" fill="#1a237e" fill-opacity="0.4"/>
+        <text x="45" y="18" text-anchor="middle" fill="#ffab40" font-size="16" font-weight="700">2</text>
+        <text x="45" y="32" text-anchor="middle" fill="#78909c" font-size="8">标准任务</text>
+        <text x="45" y="42" text-anchor="middle" fill="#546e7a" font-size="7">单点+曲线</text>
+      </g>
+      <g transform="translate(315, 0)">
+        <rect x="0" y="0" width="90" height="48" rx="6" fill="#1a237e" fill-opacity="0.4"/>
+        <text x="45" y="18" text-anchor="middle" fill="#ef5350" font-size="16" font-weight="700">3</text>
+        <text x="45" y="32" text-anchor="middle" fill="#78909c" font-size="8">外推划分</text>
+        <text x="45" y="42" text-anchor="middle" fill="#546e7a" font-size="7">CPM/排期/联合</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Decorative accent lines -->
+  <line x1="40" y1="108" x2="920" y2="108" stroke="#7c4dff" stroke-width="0.5" stroke-opacity="0.15"/>
+  <line x1="40" y1="425" x2="920" y2="425" stroke="#304ffe" stroke-width="0.5" stroke-opacity="0.15"/>
+
+  <!-- Corner accents -->
+  <circle cx="480" cy="108" r="3" fill="#7c4dff" opacity="0.3"/>
+  <circle cx="480" cy="425" r="3" fill="#304ffe" opacity="0.3"/>
+</svg>

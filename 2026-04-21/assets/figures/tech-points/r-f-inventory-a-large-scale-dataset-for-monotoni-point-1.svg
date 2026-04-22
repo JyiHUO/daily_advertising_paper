@@ -1,0 +1,148 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="curveGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#ff6b9d"/>
+    </linearGradient>
+    <linearGradient id="boxGrad1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e3a5f"/>
+      <stop offset="100%" stop-color="#152a45"/>
+    </linearGradient>
+    <linearGradient id="boxGrad2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a1f4e"/>
+      <stop offset="100%" stop-color="#1a1338"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#5bc0eb"/>
+    </marker>
+    <marker id="arrowWhite" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ffffff" opacity="0.6"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="520" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="bold">R&amp;F 数据集核心创新：从单条记录 → 预算-效果曲线</text>
+  <text x="450" y="58" text-anchor="middle" fill="#7eb8da" font-size="13">同一投放配置下，53个出价点串成一条单调递增曲线</text>
+
+  <!-- LEFT: Traditional Dataset -->
+  <rect x="30" y="80" width="240" height="200" rx="10" fill="url(#boxGrad1)" stroke="#3a5a7c" stroke-width="1.5"/>
+  <text x="150" y="105" text-anchor="middle" fill="#ff6b6b" font-size="14" font-weight="bold">❌ 传统广告数据集</text>
+
+  <!-- Scattered dots representing independent records -->
+  <g opacity="0.7">
+    <circle cx="70" cy="140" r="6" fill="#ff6b6b" opacity="0.5"/>
+    <circle cx="110" cy="155" r="6" fill="#ff6b6b" opacity="0.5"/>
+    <circle cx="150" cy="135" r="6" fill="#ff6b6b" opacity="0.5"/>
+    <circle cx="190" cy="165" r="6" fill="#ff6b6b" opacity="0.5"/>
+    <circle cx="230" cy="145" r="6" fill="#ff6b6b" opacity="0.5"/>
+    <circle cx="90" cy="185" r="6" fill="#ff6b6b" opacity="0.5"/>
+    <circle cx="130" cy="200" r="6" fill="#ff6b6b" opacity="0.5"/>
+    <circle cx="170" cy="190" r="6" fill="#ff6b6b" opacity="0.5"/>
+    <circle cx="210" cy="210" r="6" fill="#ff6b6b" opacity="0.5"/>
+  </g>
+  <text x="150" y="245" text-anchor="middle" fill="#aaa" font-size="11">每条记录独立，无预算维度</text>
+  <text x="150" y="262" text-anchor="middle" fill="#aaa" font-size="11">无法建模"预算→效果"关系</text>
+
+  <!-- Arrow from left to right -->
+  <line x1="285" y1="180" x2="335" y2="180" stroke="#5bc0eb" stroke-width="2.5" marker-end="url(#arrow)" stroke-dasharray="6,3"/>
+  <text x="310" y="170" text-anchor="middle" fill="#5bc0eb" font-size="11" font-weight="bold">创新</text>
+
+  <!-- RIGHT: R&F Dataset - the curve -->
+  <rect x="345" y="80" width="530" height="200" rx="10" fill="url(#boxGrad2)" stroke="#5b4a8c" stroke-width="1.5"/>
+  <text x="610" y="105" text-anchor="middle" fill="#00d4ff" font-size="14" font-weight="bold">✅ R&amp;F 数据集：预算-效果曲线</text>
+
+  <!-- Mini chart axes -->
+  <line x1="390" y1="250" x2="390" y2="125" stroke="#555" stroke-width="1.5"/>
+  <line x1="390" y1="250" x2="620" y2="250" stroke="#555" stroke-width="1.5"/>
+  <text x="380" y="185" text-anchor="end" fill="#aaa" font-size="10" transform="rotate(-90,380,185)">UV / PV</text>
+  <text x="505" y="267" text-anchor="middle" fill="#aaa" font-size="10">CPM 阈值 (0.4 → 3.0)</text>
+
+  <!-- Monotonic curve with diminishing returns -->
+  <path d="M 395,245 C 420,240 440,225 460,210 C 480,195 500,170 520,155 C 540,142 560,135 580,132 C 600,130 610,129 615,128" fill="none" stroke="url(#curveGrad)" stroke-width="3" filter="url(#glow)" stroke-linecap="round"/>
+
+  <!-- Key dots on curve -->
+  <circle cx="400" cy="243" r="4" fill="#00d4ff"/>
+  <circle cx="460" cy="210" r="4" fill="#40c9ff"/>
+  <circle cx="520" cy="155" r="5" fill="#aa7dff"/>
+  <circle cx="580" cy="132" r="4" fill="#ff6b9d"/>
+  <circle cx="615" cy="128" r="4" fill="#ff6b9d"/>
+
+  <!-- Labels on dots -->
+  <text x="400" y="239" text-anchor="middle" fill="#00d4ff" font-size="8" dy="-8">0.4</text>
+  <text x="520" y="148" text-anchor="middle" fill="#aa7dff" font-size="8">1.0</text>
+  <text x="615" y="122" text-anchor="middle" fill="#ff6b9d" font-size="8">3.0</text>
+
+  <!-- Annotation: 53 points -->
+  <rect x="640" y="130" width="90" height="28" rx="6" fill="#1a2744" stroke="#5bc0eb" stroke-width="1"/>
+  <text x="685" y="149" text-anchor="middle" fill="#5bc0eb" font-size="12" font-weight="bold">53个采样点</text>
+
+  <!-- Annotation: monotonic -->
+  <rect x="640" y="170" width="110" height="28" rx="6" fill="#1a2744" stroke="#aa7dff" stroke-width="1"/>
+  <text x="695" y="189" text-anchor="middle" fill="#aa7dff" font-size="11">单调递增·边际递减</text>
+
+  <!-- Annotation arrow -->
+  <line x1="637" y1="144" x2="620" y2="130" stroke="#5bc0eb" stroke-width="1" marker-end="url(#arrow)" opacity="0.5"/>
+
+  <!-- BOTTOM: The 6-tuple structure -->
+  <rect x="30" y="310" width="840" height="190" rx="10" fill="#0d1520" stroke="#2a4060" stroke-width="1.5"/>
+  <text x="450" y="338" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="bold">核心记录结构：六元组</text>
+
+  <!-- 6 boxes for the tuple -->
+  <g>
+    <!-- Box 1: Targeting -->
+    <rect x="55" y="358" width="120" height="60" rx="8" fill="#1e3a5f" stroke="#4a90d9" stroke-width="1.5"/>
+    <text x="115" y="383" text-anchor="middle" fill="#4a90d9" font-size="12" font-weight="bold">x 定向特征</text>
+    <text x="115" y="401" text-anchor="middle" fill="#8ab4d4" font-size="9">北京·女·18-30岁</text>
+
+    <!-- Box 2: Schedule -->
+    <rect x="190" y="358" width="100" height="60" rx="8" fill="#1e3a5f" stroke="#4a90d9" stroke-width="1.5"/>
+    <text x="240" y="383" text-anchor="middle" fill="#4a90d9" font-size="12" font-weight="bold">T 排期</text>
+    <text x="240" y="401" text-anchor="middle" fill="#8ab4d4" font-size="9">10天</text>
+
+    <!-- Box 3: Freq cap -->
+    <rect x="305" y="358" width="130" height="60" rx="8" fill="#1e3a5f" stroke="#4a90d9" stroke-width="1.5"/>
+    <text x="370" y="383" text-anchor="middle" fill="#4a90d9" font-size="12" font-weight="bold">fc 频控规则</text>
+    <text x="370" y="401" text-anchor="middle" fill="#8ab4d4" font-size="9">7天内≤3次/人</text>
+
+    <!-- Box 4: Budget -->
+    <rect x="450" y="358" width="100" height="60" rx="8" fill="#2a1f4e" stroke="#aa7dff" stroke-width="1.5"/>
+    <text x="500" y="383" text-anchor="middle" fill="#aa7dff" font-size="12" font-weight="bold">b 预算</text>
+    <text x="500" y="401" text-anchor="middle" fill="#c4a8ff" font-size="9">CPM阈值</text>
+
+    <!-- Box 5: UV -->
+    <rect x="565" y="358" width="100" height="60" rx="8" fill="#1a3328" stroke="#4ad991" stroke-width="1.5"/>
+    <text x="615" y="383" text-anchor="middle" fill="#4ad991" font-size="12" font-weight="bold">R (UV)</text>
+    <text x="615" y="401" text-anchor="middle" fill="#7de6b2" font-size="9">独立触达人数</text>
+
+    <!-- Box 6: PV -->
+    <rect x="680" y="358" width="100" height="60" rx="8" fill="#1a3328" stroke="#4ad991" stroke-width="1.5"/>
+    <text x="730" y="383" text-anchor="middle" fill="#4ad991" font-size="12" font-weight="bold">I (PV)</text>
+    <text x="730" y="401" text-anchor="middle" fill="#7de6b2" font-size="9">总曝光量</text>
+  </g>
+
+  <!-- Grouping bracket for context -->
+  <path d="M 55,428 L 55,438 L 435,438 L 435,428" fill="none" stroke="#4a90d9" stroke-width="1.2"/>
+  <text x="245" y="455" text-anchor="middle" fill="#4a90d9" font-size="10">相同配置 (x, T, fc)</text>
+
+  <!-- Arrow showing "sort by budget → curve" -->
+  <line x1="440" y1="445" x2="560" y2="445" stroke="#aa7dff" stroke-width="1.5" marker-end="url(#arrow)" stroke-dasharray="5,3"/>
+  <text x="500" y="462" text-anchor="middle" fill="#aa7dff" font-size="9">按预算排序</text>
+
+  <!-- Result -->
+  <rect x="565" y="432" width="215" height="28" rx="6" fill="#162030" stroke="#4ad991" stroke-width="1.2"/>
+  <text x="672" y="451" text-anchor="middle" fill="#4ad991" font-size="11" font-weight="bold">→ 一条完整的预算-效果曲线</text>
+
+  <!-- Bottom note -->
+  <text x="450" y="500" text-anchor="middle" fill="#556680" font-size="11">首个公开的 R&amp;F 合约广告库存估算基准数据集 · SIGIR 2026 · Kuaishou</text>
+</svg>

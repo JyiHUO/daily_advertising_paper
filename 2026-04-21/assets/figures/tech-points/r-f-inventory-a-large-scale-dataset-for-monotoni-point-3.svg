@@ -1,0 +1,104 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2563EB"/>
+    </marker>
+    <linearGradient id="gTask1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#DBEAFE"/>
+      <stop offset="100%" stop-color="#BFDBFE"/>
+    </linearGradient>
+    <linearGradient id="gTask2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FEF3C7"/>
+      <stop offset="100%" stop-color="#FDE68A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E293B">R&amp;F 库存估算：两个标准化任务</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#64748B">单点预测 vs 多维单调曲线估计</text>
+
+  <!-- Shared Input Box -->
+  <rect x="300" y="78" width="300" height="48" rx="12" fill="#F1F5F9" stroke="#94A3B8" stroke-width="1.5"/>
+  <text x="450" y="100" text-anchor="middle" font-size="13" font-weight="bold" fill="#334155">共享输入</text>
+  <text x="450" y="116" text-anchor="middle" font-size="11" fill="#64748B">定向 · 排期 · 频控 · CPM</text>
+
+  <!-- Arrow down to tasks -->
+  <line x1="370" y1="126" x2="220" y2="160" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="530" y1="126" x2="680" y2="160" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ========== Task 1 ========== -->
+  <rect x="50" y="160" width="340" height="330" rx="16" fill="url(#gTask1)" stroke="#60A5FA" stroke-width="2"/>
+  <text x="220" y="190" text-anchor="middle" font-size="17" font-weight="bold" fill="#1E40AF">任务1：单点预测</text>
+
+  <!-- Single point illustration -->
+  <!-- Axes -->
+  <line x1="100" y1="360" x2="340" y2="360" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="100" y1="360" x2="100" y2="220" stroke="#64748B" stroke-width="1.5"/>
+  <text x="220" y="385" text-anchor="middle" font-size="11" fill="#475569">CPM (预算)</text>
+  <text x="82" y="290" text-anchor="middle" font-size="11" fill="#475569" transform="rotate(-90,82,290)">UV / PV</text>
+
+  <!-- Single point with crosshairs -->
+  <circle cx="230" cy="280" r="8" fill="#2563EB" opacity="0.9"/>
+  <line x1="230" y1="270" x2="230" y2="360" stroke="#2563EB" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+  <line x1="100" y1="280" x2="230" y2="280" stroke="#2563EB" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+  <text x="238" y="270" font-size="11" fill="#1E40AF" font-weight="bold">预测值</text>
+
+  <!-- Input arrow -->
+  <rect x="130" y="210" width="180" height="28" rx="8" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1"/>
+  <text x="220" y="229" text-anchor="middle" font-size="12" fill="#1D4ED8">输入一个预算 → 一个结果</text>
+
+  <!-- Metrics -->
+  <rect x="110" y="395" width="220" height="32" rx="8" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1"/>
+  <text x="220" y="416" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E40AF">评估: MAE · RMSE</text>
+
+  <!-- ========== Task 2 ========== -->
+  <rect x="510" y="160" width="340" height="330" rx="16" fill="url(#gTask2)" stroke="#F59E0B" stroke-width="2"/>
+  <text x="680" y="190" text-anchor="middle" font-size="17" font-weight="bold" fill="#92400E">任务2：单调曲线估计</text>
+
+  <!-- Curve axes -->
+  <line x1="560" y1="360" x2="800" y2="360" stroke="#64748B" stroke-width="1.5"/>
+  <line x1="560" y1="360" x2="560" y2="220" stroke="#64748B" stroke-width="1.5"/>
+  <text x="680" y="385" text-anchor="middle" font-size="11" fill="#475569">CPM (预算)</text>
+  <text x="542" y="290" text-anchor="middle" font-size="11" fill="#475569" transform="rotate(-90,542,290)">PV</text>
+
+  <!-- Good monotonic curve (green) -->
+  <polyline points="590,340 630,315 670,290 710,268 750,250 780,240" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="590" cy="340" r="4" fill="#16A34A"/>
+  <circle cx="630" cy="315" r="4" fill="#16A34A"/>
+  <circle cx="670" cy="290" r="4" fill="#16A34A"/>
+  <circle cx="710" cy="268" r="4" fill="#16A34A"/>
+  <circle cx="750" cy="250" r="4" fill="#16A34A"/>
+  <circle cx="780" cy="240" r="4" fill="#16A34A"/>
+  <text x="790" y="237" font-size="10" fill="#16A34A" font-weight="bold">✓ 单调</text>
+
+  <!-- Bad curve with violation (red segment) -->
+  <polyline points="590,330 630,305 670,278" fill="none" stroke="#DC2626" stroke-width="2" stroke-dasharray="6,3" opacity="0.7"/>
+  <polyline points="670,278 710,295" fill="none" stroke="#DC2626" stroke-width="2.5" stroke-linecap="round"/>
+  <circle cx="670" cy="278" r="5" fill="#DC2626"/>
+  <circle cx="710" cy="295" r="5" fill="#DC2626"/>
+
+  <!-- Violation annotation -->
+  <line x1="690" y1="278" x2="690" y2="295" stroke="#DC2626" stroke-width="1.5"/>
+  <line x1="685" y1="278" x2="695" y2="278" stroke="#DC2626" stroke-width="1.5"/>
+  <line x1="685" y1="295" x2="695" y2="295" stroke="#DC2626" stroke-width="1.5"/>
+  <text x="705" y="308" font-size="10" fill="#DC2626" font-weight="bold">✗ 违反!</text>
+
+  <!-- Example annotation -->
+  <rect x="570" y="210" width="220" height="38" rx="8" fill="#FFFBEB" stroke="#FBBF24" stroke-width="1"/>
+  <text x="680" y="226" text-anchor="middle" font-size="11" fill="#92400E">CPM↑ 1.0→1.5</text>
+  <text x="680" y="241" text-anchor="middle" font-size="11" fill="#DC2626" font-weight="bold">PV↓ 12000→11500 = 违反</text>
+
+  <!-- Metrics -->
+  <rect x="545" y="395" width="270" height="32" rx="8" fill="#FFFBEB" stroke="#FBBF24" stroke-width="1"/>
+  <text x="680" y="416" text-anchor="middle" font-size="13" font-weight="bold" fill="#92400E">评估: 点误差 + 违反率 + 违反幅度</text>
+
+  <!-- Key constraint label -->
+  <rect x="555" y="438" width="250" height="26" rx="6" fill="#FEF2F2" stroke="#FCA5A5" stroke-width="1"/>
+  <text x="680" y="456" text-anchor="middle" font-size="12" fill="#991B1B">核心约束: T↑ CPM↑ ⇒ UV↑ PV↑</text>
+
+  <!-- Bottom summary -->
+  <rect x="200" y="498" width="500" height="3" rx="1.5" fill="#CBD5E1"/>
+</svg>

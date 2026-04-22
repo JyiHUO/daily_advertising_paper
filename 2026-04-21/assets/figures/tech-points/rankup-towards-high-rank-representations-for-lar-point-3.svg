@@ -1,0 +1,120 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#555">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" fill="#2563EB">
+      <polygon points="0 0, 10 3.5, 0 7"/>
+    </marker>
+    <linearGradient id="globalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#EF4444;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="localGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:0.85"/>
+      <stop offset="100%" style="stop-color:#6366F1;stop-opacity:0.85"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="520" rx="16" fill="#F8FAFC"/>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E293B">RankUp: Global Token 注入全局上下文</text>
+  <text x="400" y="60" text-anchor="middle" font-size="13" fill="#64748B">像"班主任"一样，把全局信息带给每个局部 Token</text>
+
+  <!-- ========== LEFT: Feature Pool ========== -->
+  <rect x="30" y="90" width="180" height="340" rx="14" fill="#EEF2FF" stroke="#C7D2FE" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="120" y="118" text-anchor="middle" font-size="14" font-weight="bold" fill="#4338CA">全部稀疏特征</text>
+  <text x="120" y="136" text-anchor="middle" font-size="11" fill="#6366F1">1200+ embeddings</text>
+
+  <!-- small feature blocks -->
+  <g opacity="0.8">
+    <rect x="50" y="155" width="140" height="22" rx="5" fill="#A5B4FC"/><text x="120" y="170" text-anchor="middle" font-size="10" fill="#312E81">用户年龄 / 性别 / 城市</text>
+    <rect x="50" y="183" width="140" height="22" rx="5" fill="#A5B4FC"/><text x="120" y="198" text-anchor="middle" font-size="10" fill="#312E81">广告类目 / 品牌</text>
+    <rect x="50" y="211" width="140" height="22" rx="5" fill="#A5B4FC"/><text x="120" y="226" text-anchor="middle" font-size="10" fill="#312E81">行为序列特征</text>
+    <rect x="50" y="239" width="140" height="22" rx="5" fill="#A5B4FC"/><text x="120" y="254" text-anchor="middle" font-size="10" fill="#312E81">上下文特征</text>
+    <text x="120" y="280" text-anchor="middle" font-size="20" fill="#6366F1">…</text>
+    <rect x="50" y="295" width="140" height="22" rx="5" fill="#A5B4FC"/><text x="120" y="310" text-anchor="middle" font-size="10" fill="#312E81">长尾交叉特征</text>
+  </g>
+
+  <!-- Pooling + MLP arrow down -->
+  <text x="120" y="355" text-anchor="middle" font-size="12" font-weight="bold" fill="#7C3AED">Pooling → MLP</text>
+  <line x1="120" y1="365" x2="120" y2="400" stroke="#7C3AED" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Global Token -->
+  <ellipse cx="120" cy="415" rx="52" ry="24" fill="url(#globalGrad)" filter="url(#shadow)"/>
+  <text x="120" y="420" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">Global g</text>
+
+  <!-- ========== CENTER: Token Sequence ========== -->
+  <!-- Arrow from Global Token to Token list -->
+  <path d="M 172 415 Q 230 415 270 300" stroke="#EF4444" stroke-width="2.5" fill="none" stroke-dasharray="6,3" marker-end="url(#arrow)"/>
+
+  <!-- Token Mixer Box -->
+  <rect x="270" y="145" width="230" height="310" rx="16" fill="#fff" stroke="#94A3B8" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="270" y="145" width="230" height="38" rx="16" fill="url(#localGrad)"/>
+  <rect x="270" y="170" width="230" height="13" fill="url(#localGrad)"/>
+  <text x="385" y="170" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">Token Mixing 层</text>
+
+  <!-- Global Token inside -->
+  <ellipse cx="315" cy="220" rx="28" ry="16" fill="url(#globalGrad)" opacity="0.9"/>
+  <text x="315" y="224" text-anchor="middle" font-size="10" font-weight="bold" fill="#fff">g</text>
+
+  <!-- Local tokens -->
+  <rect x="355" y="205" width="50" height="28" rx="8" fill="#BFDBFE" stroke="#3B82F6" stroke-width="1.2"/><text x="380" y="224" text-anchor="middle" font-size="10" fill="#1E40AF">t₁</text>
+  <rect x="415" y="205" width="50" height="28" rx="8" fill="#BFDBFE" stroke="#3B82F6" stroke-width="1.2"/><text x="440" y="224" text-anchor="middle" font-size="10" fill="#1E40AF">t₂</text>
+  <text x="480" y="224" font-size="14" fill="#64748B">…</text>
+
+  <!-- interaction arrows -->
+  <line x1="340" y1="220" x2="353" y2="220" stroke="#EF4444" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="340" y1="218" x2="413" y2="218" stroke="#EF4444" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- label -->
+  <text x="385" y="260" text-anchor="middle" font-size="11" fill="#EF4444" font-weight="bold">全局信息广播</text>
+
+  <!-- FFN box inside -->
+  <rect x="295" y="280" width="180" height="40" rx="10" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1.5"/>
+  <text x="385" y="305" text-anchor="middle" font-size="13" font-weight="bold" fill="#166534">FFN</text>
+
+  <!-- arrow from mixing to FFN -->
+  <line x1="385" y1="245" x2="385" y2="278" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Output rank label -->
+  <rect x="310" y="345" width="150" height="36" rx="10" fill="#DCFCE7" stroke="#4ADE80" stroke-width="2"/>
+  <text x="385" y="368" text-anchor="middle" font-size="13" font-weight="bold" fill="#15803D">有效秩 ≈ 42</text>
+  <line x1="385" y1="322" x2="385" y2="343" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="385" y="440" text-anchor="middle" font-size="11" fill="#64748B">深层表征保持多样性 ✓</text>
+
+  <!-- ========== RIGHT: Comparison (without Global Token) ========== -->
+  <rect x="560" y="170" width="210" height="280" rx="14" fill="#FFF7ED" stroke="#FDBA74" stroke-width="1.5" filter="url(#shadow)" stroke-dasharray="6,4"/>
+  <text x="665" y="198" text-anchor="middle" font-size="13" font-weight="bold" fill="#9A3412">无 Global Token</text>
+
+  <!-- local tokens only -->
+  <rect x="590" y="220" width="44" height="26" rx="7" fill="#BFDBFE" stroke="#3B82F6"/><text x="612" y="238" text-anchor="middle" font-size="10" fill="#1E40AF">t₁</text>
+  <rect x="643" y="220" width="44" height="26" rx="7" fill="#BFDBFE" stroke="#3B82F6"/><text x="665" y="238" text-anchor="middle" font-size="10" fill="#1E40AF">t₂</text>
+  <rect x="696" y="220" width="44" height="26" rx="7" fill="#BFDBFE" stroke="#3B82F6"/><text x="718" y="238" text-anchor="middle" font-size="10" fill="#1E40AF">t₃</text>
+
+  <text x="665" y="275" text-anchor="middle" font-size="11" fill="#9A3412">各 token 只见局部特征</text>
+  <text x="665" y="293" text-anchor="middle" font-size="11" fill="#9A3412">缺少全局视野</text>
+
+  <!-- downward arrow -->
+  <line x1="665" y1="305" x2="665" y2="345" stroke="#9A3412" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Low rank result -->
+  <rect x="600" y="350" width="130" height="36" rx="10" fill="#FEE2E2" stroke="#F87171" stroke-width="2"/>
+  <text x="665" y="373" text-anchor="middle" font-size="13" font-weight="bold" fill="#B91C1C">有效秩 ≈ 38 ↓</text>
+  <text x="665" y="420" text-anchor="middle" font-size="11" fill="#DC2626">表征坍缩！</text>
+
+  <!-- big cross -->
+  <text x="665" y="410" text-anchor="middle" font-size="22" fill="#EF4444" opacity="0.3">✕</text>
+
+  <!-- VS divider -->
+  <text x="520" y="320" text-anchor="middle" font-size="20" font-weight="bold" fill="#94A3B8">VS</text>
+
+  <!-- Bottom annotation -->
+  <rect x="140" y="476" width="520" height="32" rx="10" fill="#1E293B" opacity="0.07"/>
+  <text x="400" y="497" text-anchor="middle" font-size="13" fill="#334155" font-weight="bold">Global Token = "班主任"  ➜  见过所有特征，广播全局上下文，防止深层退化</text>
+</svg>

@@ -1,0 +1,283 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0e27"/>
+      <stop offset="100%" stop-color="#141b3d"/>
+    </linearGradient>
+    <linearGradient id="rankUpGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff6b35"/>
+      <stop offset="100%" stop-color="#f7c948"/>
+    </linearGradient>
+    <linearGradient id="collapseGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff4757"/>
+      <stop offset="100%" stop-color="#c0392b"/>
+    </linearGradient>
+    <linearGradient id="highRankGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2ed573"/>
+      <stop offset="100%" stop-color="#1abc9c"/>
+    </linearGradient>
+    <linearGradient id="tokenGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5f27cd"/>
+      <stop offset="100%" stop-color="#6c5ce7"/>
+    </linearGradient>
+    <linearGradient id="embGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0984e3"/>
+      <stop offset="100%" stop-color="#74b9ff"/>
+    </linearGradient>
+    <linearGradient id="globalGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e17055"/>
+      <stop offset="100%" stop-color="#fdcb6e"/>
+    </linearGradient>
+    <linearGradient id="crossGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#00b894"/>
+      <stop offset="100%" stop-color="#55efc4"/>
+    </linearGradient>
+    <linearGradient id="arrowGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff6b35"/>
+      <stop offset="100%" stop-color="#f7c948"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="bigGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <marker id="arrowHead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#f7c948" opacity="0.9"/>
+    </marker>
+    <marker id="arrowHeadWhite" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="#dfe6e9" opacity="0.7"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle grid pattern -->
+  <g opacity="0.03">
+    <line x1="0" y1="100" x2="900" y2="100" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="200" x2="900" y2="200" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="300" x2="900" y2="300" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="400" x2="900" y2="400" stroke="#fff" stroke-width="0.5"/>
+    <line x1="0" y1="500" x2="900" y2="500" stroke="#fff" stroke-width="0.5"/>
+    <line x1="150" y1="0" x2="150" y2="620" stroke="#fff" stroke-width="0.5"/>
+    <line x1="300" y1="0" x2="300" y2="620" stroke="#fff" stroke-width="0.5"/>
+    <line x1="450" y1="0" x2="450" y2="620" stroke="#fff" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="620" stroke="#fff" stroke-width="0.5"/>
+    <line x1="750" y1="0" x2="750" y2="620" stroke="#fff" stroke-width="0.5"/>
+  </g>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="url(#rankUpGrad)" filter="url(#glow)">RankUp</text>
+  <text x="450" y="58" text-anchor="middle" font-size="11" fill="#b2bec3" letter-spacing="1">High-Rank Representations for Large-Scale Ad Recommender · Tencent WeChat Ads</text>
+
+  <!-- ============ TOP SECTION: The Problem ============ -->
+  <!-- Left: Representation Collapse -->
+  <g transform="translate(60, 85)">
+    <rect x="0" y="0" width="340" height="110" rx="12" fill="#1a1e3a" stroke="#ff4757" stroke-width="1.5" opacity="0.9" filter="url(#softShadow)"/>
+    <text x="170" y="22" text-anchor="middle" font-size="11" fill="#ff6b6b" font-weight="600" letter-spacing="0.5">⚠ THE PROBLEM</text>
+    <text x="170" y="42" text-anchor="middle" font-size="14" fill="#fff" font-weight="700">Representation Collapse</text>
+    <text x="170" y="60" text-anchor="middle" font-size="10" fill="#b2bec3">Deeper MetaFormer layers → effective rank drops</text>
+    
+    <!-- Damped oscillation mini chart -->
+    <g transform="translate(30, 68)">
+      <line x1="0" y1="18" x2="280" y2="18" stroke="#636e72" stroke-width="0.5" stroke-dasharray="2,2"/>
+      <text x="-5" y="21" font-size="7" fill="#636e72" text-anchor="end">low</text>
+      <text x="-5" y="8" font-size="7" fill="#636e72" text-anchor="end">high</text>
+      <polyline points="0,8 40,24 80,6 120,20 160,10 200,18 240,14 280,22" fill="none" stroke="#ff4757" stroke-width="2" opacity="0.8"/>
+      <text x="140" y="36" text-anchor="middle" font-size="7" fill="#636e72">Effective Rank across Layers →</text>
+      <!-- downward trend line -->
+      <line x1="0" y1="10" x2="280" y2="20" stroke="#ff4757" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+    </g>
+  </g>
+
+  <!-- Right: The Goal -->
+  <g transform="translate(500, 85)">
+    <rect x="0" y="0" width="340" height="110" rx="12" fill="#1a1e3a" stroke="#2ed573" stroke-width="1.5" opacity="0.9" filter="url(#softShadow)"/>
+    <text x="170" y="22" text-anchor="middle" font-size="11" fill="#2ed573" font-weight="600" letter-spacing="0.5">✓ THE GOAL</text>
+    <text x="170" y="42" text-anchor="middle" font-size="14" fill="#fff" font-weight="700">High-Rank Representations</text>
+    <text x="170" y="60" text-anchor="middle" font-size="10" fill="#b2bec3">Sustained effective rank throughout depth</text>
+    
+    <!-- Stable high rank mini chart -->
+    <g transform="translate(30, 68)">
+      <line x1="0" y1="18" x2="280" y2="18" stroke="#636e72" stroke-width="0.5" stroke-dasharray="2,2"/>
+      <polyline points="0,8 40,6 80,7 120,5 160,6 200,7 240,5 280,6" fill="none" stroke="#2ed573" stroke-width="2" opacity="0.8"/>
+      <text x="140" y="36" text-anchor="middle" font-size="7" fill="#636e72">Effective Rank across Layers →</text>
+    </g>
+  </g>
+
+  <!-- Central arrow from problem to goal -->
+  <line x1="408" y1="140" x2="492" y2="140" stroke="url(#arrowGrad)" stroke-width="2.5" marker-end="url(#arrowHead)" opacity="0.8"/>
+  <text x="450" y="133" text-anchor="middle" font-size="9" fill="#f7c948" font-weight="600">RankUp</text>
+
+  <!-- ============ CENTRAL ARCHITECTURE ============ -->
+  <!-- Main MetaFormer backbone in center -->
+  <g transform="translate(250, 220)">
+    <!-- Backbone container -->
+    <rect x="0" y="0" width="400" height="260" rx="16" fill="none" stroke="#636e72" stroke-width="1" stroke-dasharray="6,3" opacity="0.4"/>
+    <text x="200" y="-8" text-anchor="middle" font-size="10" fill="#636e72" font-weight="500">MetaFormer Backbone</text>
+    
+    <!-- Block 0 -->
+    <rect x="50" y="20" width="120" height="100" rx="10" fill="#1e2345" stroke="#5f27cd" stroke-width="1.2" filter="url(#softShadow)"/>
+    <text x="110" y="42" text-anchor="middle" font-size="10" fill="#a29bfe" font-weight="600">Block 0</text>
+    <rect x="65" y="50" width="90" height="18" rx="4" fill="#2d1b69" opacity="0.8"/>
+    <text x="110" y="63" text-anchor="middle" font-size="8" fill="#d1c4e9">Token Mixer</text>
+    <rect x="65" y="74" width="90" height="18" rx="4" fill="#2d1b69" opacity="0.8"/>
+    <text x="110" y="87" text-anchor="middle" font-size="8" fill="#d1c4e9">FFN</text>
+    <text x="110" y="108" text-anchor="middle" font-size="7" fill="#636e72">rank ↑↑</text>
+    
+    <!-- Arrow between blocks -->
+    <line x1="178" y1="70" x2="218" y2="70" stroke="#636e72" stroke-width="1.5" marker-end="url(#arrowHeadWhite)" opacity="0.5"/>
+    
+    <!-- Block 1 -->
+    <rect x="226" y="20" width="120" height="100" rx="10" fill="#1e2345" stroke="#5f27cd" stroke-width="1.2" filter="url(#softShadow)"/>
+    <text x="286" y="42" text-anchor="middle" font-size="10" fill="#a29bfe" font-weight="600">Block 1…N</text>
+    <rect x="241" y="50" width="90" height="18" rx="4" fill="#2d1b69" opacity="0.8"/>
+    <text x="286" y="63" text-anchor="middle" font-size="8" fill="#d1c4e9">Token Mixer</text>
+    <rect x="241" y="74" width="90" height="18" rx="4" fill="#2d1b69" opacity="0.8"/>
+    <text x="286" y="87" text-anchor="middle" font-size="8" fill="#d1c4e9">FFN</text>
+    <text x="286" y="108" text-anchor="middle" font-size="7" fill="#636e72">rank sustained</text>
+    
+    <!-- Token sequence visualization -->
+    <g transform="translate(20, 145)">
+      <text x="180" y="0" text-anchor="middle" font-size="9" fill="#b2bec3" font-weight="500">Input Token Sequence</text>
+      
+      <!-- Global Token -->
+      <rect x="18" y="12" width="56" height="30" rx="6" fill="url(#globalGrad)" opacity="0.85" filter="url(#softShadow)"/>
+      <text x="46" y="31" text-anchor="middle" font-size="7.5" fill="#fff" font-weight="700">Global</text>
+      
+      <!-- Cross Token -->
+      <rect x="82" y="12" width="56" height="30" rx="6" fill="url(#crossGrad)" opacity="0.85" filter="url(#softShadow)"/>
+      <text x="110" y="31" text-anchor="middle" font-size="7.5" fill="#1a1e3a" font-weight="700">Cross</text>
+      
+      <!-- Sparse tokens -->
+      <rect x="146" y="12" width="36" height="30" rx="6" fill="url(#tokenGrad)" opacity="0.75"/>
+      <text x="164" y="31" text-anchor="middle" font-size="7" fill="#fff">T₁</text>
+      <rect x="188" y="12" width="36" height="30" rx="6" fill="url(#tokenGrad)" opacity="0.75"/>
+      <text x="206" y="31" text-anchor="middle" font-size="7" fill="#fff">T₂</text>
+      <rect x="230" y="12" width="36" height="30" rx="6" fill="url(#tokenGrad)" opacity="0.75"/>
+      <text x="248" y="31" text-anchor="middle" font-size="7" fill="#fff">T₃</text>
+      <text x="278" y="31" font-size="10" fill="#636e72">…</text>
+      <rect x="290" y="12" width="36" height="30" rx="6" fill="url(#tokenGrad)" opacity="0.75"/>
+      <text x="308" y="31" text-anchor="middle" font-size="7" fill="#fff">T₃₂</text>
+      
+      <!-- Label: shuffled -->
+      <text x="240" y="55" text-anchor="middle" font-size="7" fill="#a29bfe" font-style="italic">Random Permutation Split</text>
+      
+      <!-- Multi-emb indicator -->
+      <g transform="translate(146, 48)">
+        <rect x="0" y="4" width="14" height="6" rx="2" fill="#0984e3" opacity="0.6"/>
+        <rect x="3" y="2" width="14" height="6" rx="2" fill="#0984e3" opacity="0.7"/>
+        <rect x="6" y="0" width="14" height="6" rx="2" fill="#0984e3" opacity="0.9"/>
+        <text x="30" y="7" font-size="6.5" fill="#74b9ff">×K Emb Tables</text>
+      </g>
+    </g>
+    
+    <!-- Output arrow -->
+    <line x1="354" y1="70" x2="390" y2="70" stroke="#636e72" stroke-width="1.5" marker-end="url(#arrowHeadWhite)" opacity="0.5"/>
+    <text x="395" y="60" font-size="8" fill="#b2bec3">Prediction</text>
+    <text x="395" y="74" font-size="8" fill="#b2bec3">Head</text>
+  </g>
+
+  <!-- ============ FOUR MECHANISMS as satellite nodes ============ -->
+  
+  <!-- Mechanism 1: Random Permutation (bottom-left) -->
+  <g transform="translate(32, 440)">
+    <rect x="0" y="0" width="195" height="78" rx="10" fill="#1e1440" stroke="#6c5ce7" stroke-width="1.5" filter="url(#softShadow)"/>
+    <circle cx="18" cy="18" r="10" fill="#5f27cd" opacity="0.8"/>
+    <text x="18" y="22" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">1</text>
+    <text x="36" y="22" font-size="10" fill="#a29bfe" font-weight="700">Random Shuffle</text>
+    <text x="14" y="38" font-size="8" fill="#b2bec3">Break feature correlation</text>
+    <text x="14" y="50" font-size="8" fill="#b2bec3">within each token</text>
+    <text x="14" y="66" font-size="8" fill="#6c5ce7" font-weight="600">↓ Mutual Information</text>
+  </g>
+  <!-- Curved arrow to token sequence -->
+  <path d="M 180 440 Q 200 400 350 398" fill="none" stroke="#6c5ce7" stroke-width="1.2" stroke-dasharray="4,2" marker-end="url(#arrowHead)" opacity="0.6"/>
+
+  <!-- Mechanism 2: Multi-Embedding (bottom-center-left) -->
+  <g transform="translate(240, 440)">
+    <rect x="0" y="0" width="195" height="78" rx="10" fill="#0b2540" stroke="#0984e3" stroke-width="1.5" filter="url(#softShadow)"/>
+    <circle cx="18" cy="18" r="10" fill="#0984e3" opacity="0.8"/>
+    <text x="18" y="22" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">2</text>
+    <text x="36" y="22" font-size="10" fill="#74b9ff" font-weight="700">Multi-Emb Tables</text>
+    <text x="14" y="38" font-size="8" fill="#b2bec3">K independent embeddings</text>
+    <text x="14" y="50" font-size="8" fill="#b2bec3">per feature → rank × K</text>
+    <text x="14" y="66" font-size="8" fill="#0984e3" font-weight="600">↑ Init Rank Upper Bound</text>
+  </g>
+  <path d="M 370 440 Q 390 410 410 398" fill="none" stroke="#0984e3" stroke-width="1.2" stroke-dasharray="4,2" marker-end="url(#arrowHead)" opacity="0.6"/>
+
+  <!-- Mechanism 3: Global Token (bottom-center-right) -->
+  <g transform="translate(450, 440)">
+    <rect x="0" y="0" width="195" height="78" rx="10" fill="#2d1a0a" stroke="#e17055" stroke-width="1.5" filter="url(#softShadow)"/>
+    <circle cx="18" cy="18" r="10" fill="#e17055" opacity="0.8"/>
+    <text x="18" y="22" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">3</text>
+    <text x="36" y="22" font-size="10" fill="#fdcb6e" font-weight="700">Global Token</text>
+    <text x="14" y="38" font-size="8" fill="#b2bec3">Pool all features → MLP</text>
+    <text x="14" y="50" font-size="8" fill="#b2bec3">Inject global context</text>
+    <text x="14" y="66" font-size="8" fill="#e17055" font-weight="600">↑ Deep Layer Stability</text>
+  </g>
+  <path d="M 520 440 Q 470 410 340 378" fill="none" stroke="#e17055" stroke-width="1.2" stroke-dasharray="4,2" marker-end="url(#arrowHead)" opacity="0.6"/>
+
+  <!-- Mechanism 4: Pretrained Cross Token (bottom-right) -->
+  <g transform="translate(660, 440)">
+    <rect x="0" y="0" width="205" height="78" rx="10" fill="#0a2420" stroke="#00b894" stroke-width="1.5" filter="url(#softShadow)"/>
+    <circle cx="18" cy="18" r="10" fill="#00b894" opacity="0.8"/>
+    <text x="18" y="22" text-anchor="middle" font-size="10" fill="#fff" font-weight="700">4</text>
+    <text x="36" y="22" font-size="10" fill="#55efc4" font-weight="700">Cross Token</text>
+    <text x="14" y="38" font-size="8" fill="#b2bec3">User emb ⊙ Ad emb</text>
+    <text x="14" y="50" font-size="8" fill="#b2bec3">from retrieval model</text>
+    <text x="14" y="66" font-size="8" fill="#00b894" font-weight="600">↑ Interaction Prior</text>
+  </g>
+  <path d="M 720 440 Q 600 400 380 378" fill="none" stroke="#00b894" stroke-width="1.2" stroke-dasharray="4,2" marker-end="url(#arrowHead)" opacity="0.6"/>
+
+  <!-- ============ RESULT BANNER ============ -->
+  <g transform="translate(230, 545)">
+    <rect x="0" y="0" width="440" height="55" rx="12" fill="#1a2e1a" stroke="#2ed573" stroke-width="1.5" filter="url(#softShadow)"/>
+    <text x="220" y="20" text-anchor="middle" font-size="11" fill="#2ed573" font-weight="700" letter-spacing="1">DEPLOYED @ WeChat Video · Moments · Articles</text>
+    <text x="220" y="40" text-anchor="middle" font-size="16" fill="#fff" font-weight="800" filter="url(#glow)">GMV +2%~5%</text>
+  </g>
+
+  <!-- Effective Rank indicator near result -->
+  <g transform="translate(700, 550)">
+    <text x="0" y="14" font-size="9" fill="#636e72">Effective Rank</text>
+    <!-- Small rising bars -->
+    <rect x="0" y="22" width="8" height="12" rx="1" fill="#ff4757" opacity="0.6"/>
+    <rect x="12" y="18" width="8" height="16" rx="1" fill="#e17055" opacity="0.7"/>
+    <rect x="24" y="14" width="8" height="20" rx="1" fill="#f7c948" opacity="0.8"/>
+    <rect x="36" y="10" width="8" height="24" rx="1" fill="#2ed573" opacity="0.9"/>
+    <rect x="48" y="8" width="8" height="26" rx="1" fill="#2ed573"/>
+    <text x="28" y="48" text-anchor="middle" font-size="7" fill="#636e72">Layers →</text>
+  </g>
+
+  <!-- Central concept label -->
+  <g transform="translate(450, 215)">
+    <text x="0" y="0" text-anchor="middle" font-size="9" fill="#f7c948" font-weight="600" opacity="0.7">4 complementary mechanisms ↓ all boost effective rank</text>
+  </g>
+
+  <!-- Sparse features input indicator -->
+  <g transform="translate(30, 290)">
+    <text x="0" y="0" font-size="9" fill="#636e72" font-weight="500" transform="rotate(-90, 0, 0)">1200+ Sparse Features</text>
+  </g>
+  <path d="M 48 250 Q 100 250 248 350" fill="none" stroke="#636e72" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrowHeadWhite)" opacity="0.4"/>
+
+  <!-- Retrieval model input -->
+  <g transform="translate(780, 250)">
+    <rect x="0" y="0" width="100" height="50" rx="8" fill="#1a2e2e" stroke="#00b894" stroke-width="1" opacity="0.7"/>
+    <text x="50" y="18" text-anchor="middle" font-size="8" fill="#55efc4">Retrieval</text>
+    <text x="50" y="30" text-anchor="middle" font-size="8" fill="#55efc4">Model</text>
+    <text x="50" y="42" text-anchor="middle" font-size="7" fill="#636e72">User/Ad Emb</text>
+  </g>
+  <path d="M 780 280 Q 720 310 652 350" fill="none" stroke="#00b894" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrowHead)" opacity="0.4"/>
+
+</svg>

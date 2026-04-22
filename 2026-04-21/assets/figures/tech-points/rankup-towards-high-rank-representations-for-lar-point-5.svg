@@ -1,0 +1,155 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f1729"/>
+      <stop offset="100%" stop-color="#1a2744"/>
+    </linearGradient>
+    <linearGradient id="shared" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+    <linearGradient id="task1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="task2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="task3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#db2777"/>
+    </linearGradient>
+    <linearGradient id="backbone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrowY" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#f59e0b"/>
+    </marker>
+    <marker id="arrowG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#10b981"/>
+    </marker>
+    <marker id="arrowP" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ec4899"/>
+    </marker>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" fill="url(#bg)" rx="12"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" fill="#e2e8f0" font-size="22" font-weight="bold">任务专属 Token 解耦多目标</text>
+  <text x="450" y="66" text-anchor="middle" fill="#64748b" font-size="13">RankUp: 每个任务一个"联络员"Token，共享Backbone，独立输出</text>
+
+  <!-- ========== INPUT TOKENS (bottom area) ========== -->
+  <!-- Shared tokens -->
+  <rect x="140" y="110" width="100" height="40" rx="8" fill="url(#shared)" opacity="0.85"/>
+  <text x="190" y="135" text-anchor="middle" fill="white" font-size="13" font-weight="bold">共享 Tokens</text>
+
+  <!-- Task tokens -->
+  <rect x="290" y="110" width="70" height="40" rx="8" fill="url(#task1)" opacity="0.9"/>
+  <text x="325" y="135" text-anchor="middle" fill="white" font-size="11" font-weight="bold">🛒 下单</text>
+
+  <rect x="380" y="110" width="70" height="40" rx="8" fill="url(#task2)" opacity="0.9"/>
+  <text x="415" y="135" text-anchor="middle" fill="white" font-size="11" font-weight="bold">📖 加书</text>
+
+  <rect x="470" y="110" width="70" height="40" rx="8" fill="url(#task3)" opacity="0.9"/>
+  <text x="505" y="135" text-anchor="middle" fill="white" font-size="11" font-weight="bold">⊕ 服务</text>
+
+  <text x="575" y="135" fill="#64748b" font-size="13">… ×32</text>
+
+  <!-- Arrows down to backbone -->
+  <line x1="190" y1="150" x2="370" y2="195" stroke="#3b82f6" stroke-width="2" marker-end="url(#arrow)" opacity="0.6"/>
+  <line x1="325" y1="150" x2="370" y2="195" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrowY)" opacity="0.6"/>
+  <line x1="415" y1="150" x2="420" y2="195" stroke="#10b981" stroke-width="2" marker-end="url(#arrowG)" opacity="0.6"/>
+  <line x1="505" y1="150" x2="460" y2="195" stroke="#ec4899" stroke-width="2" marker-end="url(#arrowP)" opacity="0.6"/>
+
+  <!-- ========== SHARED BACKBONE ========== -->
+  <rect x="170" y="195" width="520" height="160" rx="16" fill="url(#backbone)" stroke="#475569" stroke-width="2"/>
+  <text x="430" y="225" text-anchor="middle" fill="#94a3b8" font-size="16" font-weight="bold">共享 MetaFormer Backbone</text>
+
+  <!-- Inside backbone: mixing illustration -->
+  <!-- Token mixing visual -->
+  <g transform="translate(220, 245)">
+    <rect width="420" height="90" rx="10" fill="#1e293b" stroke="#374151" stroke-width="1.5"/>
+    <text x="210" y="20" text-anchor="middle" fill="#64748b" font-size="11">Token Mixing: 所有token互相交互</text>
+
+    <!-- Shared token circles -->
+    <circle cx="60" cy="55" r="14" fill="#3b82f6" opacity="0.7"/>
+    <circle cx="100" cy="55" r="14" fill="#3b82f6" opacity="0.7"/>
+    <circle cx="140" cy="55" r="14" fill="#3b82f6" opacity="0.5"/>
+    <text x="100" y="59" text-anchor="middle" fill="white" font-size="9">共享</text>
+
+    <!-- Task token circles -->
+    <circle cx="230" cy="55" r="16" fill="#f59e0b" opacity="0.9" filter="url(#glow)"/>
+    <text x="230" y="59" text-anchor="middle" fill="white" font-size="9" font-weight="bold">T₁</text>
+    <circle cx="290" cy="55" r="16" fill="#10b981" opacity="0.9" filter="url(#glow)"/>
+    <text x="290" y="59" text-anchor="middle" fill="white" font-size="9" font-weight="bold">T₂</text>
+    <circle cx="350" cy="55" r="16" fill="#ec4899" opacity="0.9" filter="url(#glow)"/>
+    <text x="350" y="59" text-anchor="middle" fill="white" font-size="9" font-weight="bold">T₃</text>
+
+    <!-- Interaction lines -->
+    <line x1="100" y1="55" x2="214" y2="55" stroke="#f59e0b" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+    <line x1="100" y1="55" x2="274" y2="55" stroke="#10b981" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+    <line x1="100" y1="55" x2="334" y2="55" stroke="#ec4899" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+    <line x1="246" y1="55" x2="274" y2="55" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3" opacity="0.4"/>
+    <line x1="306" y1="55" x2="334" y2="55" stroke="#94a3b8" stroke-width="1" stroke-dasharray="3,3" opacity="0.4"/>
+  </g>
+
+  <!-- ========== OUTPUT: Branching to task towers ========== -->
+  <!-- Arrows from backbone to towers -->
+  <line x1="290" y1="355" x2="190" y2="410" stroke="#f59e0b" stroke-width="2.5" marker-end="url(#arrowY)"/>
+  <line x1="430" y1="355" x2="430" y2="410" stroke="#10b981" stroke-width="2.5" marker-end="url(#arrowG)"/>
+  <line x1="560" y1="355" x2="660" y2="410" stroke="#ec4899" stroke-width="2.5" marker-end="url(#arrowP)"/>
+
+  <!-- Pool arrows (shared) -->
+  <line x1="350" y1="355" x2="190" y2="408" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5"/>
+  <line x1="430" y1="355" x2="430" y2="408" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5"/>
+  <line x1="500" y1="355" x2="660" y2="408" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5"/>
+
+  <text x="265" y="390" text-anchor="middle" fill="#94a3b8" font-size="10" transform="rotate(-18, 265, 390)">T₁ + Pool</text>
+  <text x="430" y="393" text-anchor="middle" fill="#94a3b8" font-size="10">T₂ + Pool</text>
+  <text x="590" y="390" text-anchor="middle" fill="#94a3b8" font-size="10" transform="rotate(18, 590, 390)">T₃ + Pool</text>
+
+  <!-- Task Towers -->
+  <rect x="130" y="415" width="120" height="55" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="2"/>
+  <text x="190" y="440" text-anchor="middle" fill="#f59e0b" font-size="14" font-weight="bold">下单 Tower</text>
+  <text x="190" y="458" text-anchor="middle" fill="#64748b" font-size="10">购买意图信号</text>
+
+  <rect x="370" y="415" width="120" height="55" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+  <text x="430" y="440" text-anchor="middle" fill="#10b981" font-size="14" font-weight="bold">加书 Tower</text>
+  <text x="430" y="458" text-anchor="middle" fill="#64748b" font-size="10">阅读偏好信号</text>
+
+  <rect x="600" y="415" width="120" height="55" rx="10" fill="#1e293b" stroke="#ec4899" stroke-width="2"/>
+  <text x="660" y="440" text-anchor="middle" fill="#ec4899" font-size="14" font-weight="bold">服务 Tower</text>
+  <text x="660" y="458" text-anchor="middle" fill="#64748b" font-size="10">服务关注信号</text>
+
+  <!-- ========== MI comparison bar chart (right-bottom) ========== -->
+  <rect x="80" y="505" width="740" height="105" rx="12" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+  <text x="420" y="530" text-anchor="middle" fill="#cbd5e1" font-size="14" font-weight="bold">互信息（MI）对比：表征与任务标签对齐度</text>
+
+  <!-- Without task token bar -->
+  <rect x="180" y="548" width="180" height="28" rx="6" fill="#475569" opacity="0.7"/>
+  <text x="370" y="567" text-anchor="start" fill="#94a3b8" font-size="12" dx="8">无任务Token</text>
+
+  <!-- With task token bar -->
+  <rect x="180" y="582" width="270" height="28" rx="6" fill="#3b82f6" opacity="0.85"/>
+  <rect x="180" y="582" width="270" height="28" rx="6" fill="url(#task1)" opacity="0.3"/>
+  <text x="460" y="601" text-anchor="start" fill="#f59e0b" font-size="12" font-weight="bold" dx="8">+任务Token ↑50%</text>
+
+  <!-- Scale label -->
+  <text x="140" y="567" text-anchor="end" fill="#64748b" font-size="11">MI</text>
+
+  <!-- Key insight callout -->
+  <rect x="620" y="545" width="170" height="50" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5" opacity="0.9"/>
+  <text x="705" y="565" text-anchor="middle" fill="#60a5fa" font-size="11" font-weight="bold">每个任务一个"联络员"</text>
+  <text x="705" y="582" text-anchor="middle" fill="#94a3b8" font-size="10">共享交流 → 独立带回信息</text>
+</svg>

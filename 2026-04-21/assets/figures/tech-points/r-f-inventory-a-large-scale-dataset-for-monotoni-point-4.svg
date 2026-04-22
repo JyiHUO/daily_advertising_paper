@@ -1,0 +1,153 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A90D9;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#4A90D9;stop-opacity:0.05"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8833A;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#E8833A;stop-opacity:0.05"/>
+    </linearGradient>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#D94452;stop-opacity:0.18"/>
+      <stop offset="100%" style="stop-color:#D94452;stop-opacity:0.06"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="620" rx="16" fill="#FAFBFC"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#222">三种数据集划分：从已知→外推未知</text>
+  <text x="450" y="68" text-anchor="middle" font-size="13" fill="#888">R&amp;F-Inventory 评估核心设计 — 模拟"低预算/短周期 → 高预算/长周期"外推</text>
+
+  <!-- ========== Shared 2D Axes Concept ========== -->
+  <!-- Split 1: By CPM -->
+  <g transform="translate(30, 100)">
+    <rect x="0" y="0" width="260" height="230" rx="14" fill="url(#g1)" stroke="#4A90D9" stroke-width="2"/>
+    <text x="130" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="#4A90D9">Split 1: 按 CPM</text>
+
+    <!-- Mini chart -->
+    <line x1="40" y1="195" x2="235" y2="195" stroke="#666" stroke-width="1.5"/>
+    <line x1="40" y1="195" x2="40" y2="55" stroke="#666" stroke-width="1.5"/>
+    <text x="140" y="218" text-anchor="middle" font-size="11" fill="#666">CPM (出价)</text>
+    <text x="28" y="125" text-anchor="middle" font-size="11" fill="#666" transform="rotate(-90,28,125)">排期</text>
+
+    <!-- Train region -->
+    <rect x="42" y="57" width="90" height="136" rx="6" fill="#4A90D9" fill-opacity="0.25" stroke="#4A90D9" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <text x="87" y="132" text-anchor="middle" font-size="13" font-weight="bold" fill="#2C6DB3">Train</text>
+    <text x="87" y="148" text-anchor="middle" font-size="10" fill="#2C6DB3">低CPM</text>
+
+    <!-- Test region -->
+    <rect x="138" y="57" width="92" height="136" rx="6" fill="#4A90D9" fill-opacity="0.55" stroke="#4A90D9" stroke-width="2"/>
+    <text x="184" y="132" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">Test</text>
+    <text x="184" y="148" text-anchor="middle" font-size="10" fill="#fff">高CPM</text>
+
+    <!-- Arrow -->
+    <line x1="132" y1="120" x2="140" y2="120" stroke="#4A90D9" stroke-width="2" marker-end="url(#arr)"/>
+  </g>
+
+  <!-- Split 2: By Duration -->
+  <g transform="translate(320, 100)">
+    <rect x="0" y="0" width="260" height="230" rx="14" fill="url(#g2)" stroke="#E8833A" stroke-width="2"/>
+    <text x="130" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="#E8833A">Split 2: 按排期</text>
+
+    <!-- Mini chart -->
+    <line x1="40" y1="195" x2="235" y2="195" stroke="#666" stroke-width="1.5"/>
+    <line x1="40" y1="195" x2="40" y2="55" stroke="#666" stroke-width="1.5"/>
+    <text x="140" y="218" text-anchor="middle" font-size="11" fill="#666">CPM (出价)</text>
+    <text x="28" y="125" text-anchor="middle" font-size="11" fill="#666" transform="rotate(-90,28,125)">排期</text>
+
+    <!-- Train region (short duration, bottom) -->
+    <rect x="42" y="130" width="188" height="63" rx="6" fill="#E8833A" fill-opacity="0.25" stroke="#E8833A" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <text x="136" y="168" text-anchor="middle" font-size="13" font-weight="bold" fill="#B85F1A">Train · 短排期</text>
+
+    <!-- Test region (long duration, top) -->
+    <rect x="42" y="57" width="188" height="68" rx="6" fill="#E8833A" fill-opacity="0.55" stroke="#E8833A" stroke-width="2"/>
+    <text x="136" y="96" text-anchor="middle" font-size="13" font-weight="bold" fill="#fff">Test · 长排期</text>
+
+    <!-- Arrow -->
+    <line x1="136" y1="128" x2="136" y2="118" stroke="#E8833A" stroke-width="2" marker-end="url(#arr)"/>
+  </g>
+
+  <!-- Split 3: Joint (hardest) -->
+  <g transform="translate(610, 100)">
+    <rect x="0" y="0" width="260" height="230" rx="14" fill="url(#g3)" stroke="#D94452" stroke-width="2.5"/>
+    <text x="130" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="#D94452">Split 3: 联合外推</text>
+    <text x="130" y="46" text-anchor="middle" font-size="11" fill="#D94452">⚡ 最难</text>
+
+    <!-- Mini chart -->
+    <line x1="40" y1="195" x2="235" y2="195" stroke="#666" stroke-width="1.5"/>
+    <line x1="40" y1="195" x2="40" y2="55" stroke="#666" stroke-width="1.5"/>
+    <text x="140" y="218" text-anchor="middle" font-size="11" fill="#666">CPM (出价)</text>
+    <text x="28" y="125" text-anchor="middle" font-size="11" fill="#666" transform="rotate(-90,28,125)">排期</text>
+
+    <!-- Train L-shape -->
+    <rect x="42" y="130" width="188" height="63" rx="4" fill="#D94452" fill-opacity="0.18" stroke="#D94452" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <rect x="42" y="57" width="90" height="73" rx="4" fill="#D94452" fill-opacity="0.18" stroke="#D94452" stroke-width="1.5" stroke-dasharray="4,2"/>
+    <text x="87" y="100" text-anchor="middle" font-size="11" font-weight="bold" fill="#A03040">Train</text>
+    <text x="136" y="168" text-anchor="middle" font-size="11" font-weight="bold" fill="#A03040">Train</text>
+
+    <!-- Test corner: high CPM + long duration -->
+    <rect x="138" y="57" width="92" height="68" rx="6" fill="#D94452" fill-opacity="0.6" stroke="#D94452" stroke-width="2.5"/>
+    <text x="184" y="88" text-anchor="middle" font-size="12" font-weight="bold" fill="#fff">Test</text>
+    <text x="184" y="104" text-anchor="middle" font-size="10" fill="#fff">高CPM+长排期</text>
+
+    <!-- Arrows -->
+    <line x1="132" y1="90" x2="140" y2="88" stroke="#D94452" stroke-width="2" marker-end="url(#arr)"/>
+    <line x1="160" y1="128" x2="168" y2="118" stroke="#D94452" stroke-width="2" marker-end="url(#arr)"/>
+  </g>
+
+  <!-- ========== Bottom: Core Insight ========== -->
+  <g transform="translate(0, 360)">
+    <!-- Connecting bracket -->
+    <path d="M145,10 L145,30 Q145,40 155,40 L430,40 Q440,40 440,30 L440,10" fill="none" stroke="#999" stroke-width="1.5"/>
+    <path d="M455,10 L455,30 Q455,40 465,40 L740,40 Q750,40 750,30 L750,10" fill="none" stroke="#999" stroke-width="1.5"/>
+
+    <!-- Big insight box -->
+    <rect x="100" y="55" width="700" height="100" rx="16" fill="#2C3E50" fill-opacity="0.07" stroke="#2C3E50" stroke-width="2"/>
+
+    <!-- Left: what we have -->
+    <g transform="translate(160, 75)">
+      <rect x="0" y="0" width="160" height="60" rx="10" fill="#4A90D9" fill-opacity="0.15" stroke="#4A90D9" stroke-width="1.5"/>
+      <text x="80" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#2C6DB3">已有数据</text>
+      <text x="80" y="46" text-anchor="middle" font-size="12" fill="#555">低预算 · 短周期</text>
+    </g>
+
+    <!-- Arrow -->
+    <g transform="translate(360, 92)">
+      <line x1="0" y1="13" x2="100" y2="13" stroke="#555" stroke-width="2.5" marker-end="url(#arr)"/>
+      <text x="50" y="6" text-anchor="middle" font-size="11" fill="#888">外推</text>
+    </g>
+
+    <!-- Right: what we predict -->
+    <g transform="translate(490, 75)">
+      <rect x="0" y="0" width="160" height="60" rx="10" fill="#D94452" fill-opacity="0.2" stroke="#D94452" stroke-width="2"/>
+      <text x="80" y="24" text-anchor="middle" font-size="14" font-weight="bold" fill="#D94452">预估目标</text>
+      <text x="80" y="46" text-anchor="middle" font-size="12" fill="#555">高预算 · 长周期</text>
+    </g>
+  </g>
+
+  <!-- Example callout -->
+  <g transform="translate(150, 500)">
+    <rect x="0" y="0" width="600" height="80" rx="12" fill="#FFFBE6" stroke="#E8C33A" stroke-width="1.5"/>
+    <text x="20" y="26" font-size="13" font-weight="bold" fill="#B8860B">💡 例：Split 3 划分</text>
+    <text x="20" y="48" font-size="12" fill="#666">训练集：CPM &lt; 2.4 或 排期 &lt; 20天</text>
+    <text x="20" y="68" font-size="12" fill="#666">测试集：CPM ≥ 2.4 且 排期 ≥ 20天  →  模型需从"小额短投"推断"大额长投"</text>
+  </g>
+
+  <!-- Difficulty indicator -->
+  <g transform="translate(680, 340)">
+    <text x="0" y="0" font-size="12" fill="#999">难度</text>
+    <rect x="40" y="-12" width="30" height="14" rx="3" fill="#4A90D9" fill-opacity="0.4"/>
+    <rect x="75" y="-12" width="30" height="14" rx="3" fill="#E8833A" fill-opacity="0.5"/>
+    <rect x="110" y="-12" width="30" height="14" rx="3" fill="#D94452" fill-opacity="0.7"/>
+    <text x="55" y="0" text-anchor="middle" font-size="9" fill="#fff">1</text>
+    <text x="90" y="0" text-anchor="middle" font-size="9" fill="#fff">2</text>
+    <text x="125" y="0" text-anchor="middle" font-size="9" fill="#fff">3</text>
+    <line x1="40" y1="6" x2="140" y2="6" stroke="#D94452" stroke-width="1.5" marker-end="url(#arr)"/>
+  </g>
+</svg>

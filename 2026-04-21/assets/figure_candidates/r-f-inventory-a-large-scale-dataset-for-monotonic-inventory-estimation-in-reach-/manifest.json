@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-21/downloaded_pdfs/r-f-inventory-a-large-scale-dataset-for-monotonic-inventory-estimation-in-reach-.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-21/assets/figure_candidates/r-f-inventory-a-large-scale-dataset-for-monotonic-inventory-estimation-in-reach-",
+  "candidates": [
+    {
+      "id": "page-4-drawing-caption-38",
+      "page_index": 4,
+      "caption": "Figure 2: Schematic diagram of dataset splitting methods",
+      "clip": [
+        299.9549865722656,
+        67.68382263183594,
+        588.1613159179688,
+        334.31500244140625
+      ],
+      "clip_area": 76844.79362203041,
+      "page_area": 484704.0,
+      "text_density": 0.05251267762510972,
+      "kind": "drawing_cluster_with_caption",
+      "score": 29.85383104024478,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-21/assets/figure_candidates/r-f-inventory-a-large-scale-dataset-for-monotonic-inventory-estimation-in-reach-/01-p5-drawing_cluster_with_caption.png",
+      "filename": "01-p5-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-2-drawing-caption-12",
+      "page_index": 2,
+      "caption": "Figure 1: Simulation diagram of a single user inserting a CPM ad",
+      "clip": [
+        299.9549865722656,
+        67.68489074707031,
+        588.0833129882812,
+        237.4744415283203
+      ],
+      "clip_area": 48921.17910952866,
+      "page_area": 484704.0,
+      "text_density": 0.062087047683382836,
+      "kind": "drawing_cluster_with_caption",
+      "score": 28.54356865677254,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-21/assets/figure_candidates/r-f-inventory-a-large-scale-dataset-for-monotonic-inventory-estimation-in-reach-/02-p3-drawing_cluster_with_caption.png",
+      "filename": "02-p3-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-4-block-38",
+      "page_index": 4,
+      "caption": "Figure 2: Schematic diagram of dataset splitting methods",
+      "clip": [
+        292.3819946289062,
+        18.0,
+        583.7763916015625,
+        323.1673583984375
+      ],
+      "clip_area": 88924.05837625118,
+      "page_area": 484704.0,
+      "text_density": 0.0619590671522125,
+      "kind": "captioned_figure",
+      "score": 17.98804509306946,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-21/assets/figure_candidates/r-f-inventory-a-large-scale-dataset-for-monotonic-inventory-estimation-in-reach-/03-p5-captioned_figure.png",
+      "filename": "03-p5-captioned_figure.png"
+    },
+    {
+      "id": "page-2-block-12",
+      "page_index": 2,
+      "caption": "Figure 1: Simulation diagram of a single user inserting a CPM ad",
+      "clip": [
+        287.3549865722656,
+        18.0,
+        588.8023315429688,
+        226.4414825439453
+      ],
+      "clip_area": 62834.13149462949,
+      "page_area": 484704.0,
+      "text_density": 0.07906935791871535,
+      "kind": "captioned_figure",
+      "score": 16.698157016606995,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-21/assets/figure_candidates/r-f-inventory-a-large-scale-dataset-for-monotonic-inventory-estimation-in-reach-/04-p3-captioned_figure.png",
+      "filename": "04-p3-captioned_figure.png"
+    },
+    {
+      "id": "page-2-drawing-cluster-0",
+      "page_index": 2,
+      "caption": "第 3 页矢量图主图候选",
+      "clip": [
+        301.9549865722656,
+        69.68489074707031,
+        586.0833129882812,
+        235.4744415283203
+      ],
+      "clip_area": 47105.5076007396,
+      "page_area": 484704.0,
+      "text_density": 0.046315363270519674,
+      "kind": "drawing_cluster",
+      "score": 10.523394528897107,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-21/assets/figure_candidates/r-f-inventory-a-large-scale-dataset-for-monotonic-inventory-estimation-in-reach-/05-p3-drawing_cluster.png",
+      "filename": "05-p3-drawing_cluster.png"
+    },
+    {
+      "id": "page-4-drawing-cluster-0",
+      "page_index": 4,
+      "caption": "第 5 页矢量图主图候选",
+      "clip": [
+        301.9549865722656,
+        69.68382263183594,
+        586.1613159179688,
+        332.31500244140625
+      ],
+      "clip_area": 74641.44358540932,
+      "page_area": 484704.0,
+      "text_density": 0.042864833517171484,
+      "kind": "drawing_cluster",
+      "score": 8.829349373171215,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-21/assets/figure_candidates/r-f-inventory-a-large-scale-dataset-for-monotonic-inventory-estimation-in-reach-/06-p5-drawing_cluster.png",
+      "filename": "06-p5-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-21/assets/figure_candidates/r-f-inventory-a-large-scale-dataset-for-monotonic-inventory-estimation-in-reach-/contact-sheet.svg"
+}

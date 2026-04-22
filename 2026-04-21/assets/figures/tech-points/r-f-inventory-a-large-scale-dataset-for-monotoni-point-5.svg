@@ -1,0 +1,118 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f0f4f8"/>
+      <stop offset="100%" stop-color="#d9e2ec"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fee2e2"/>
+      <stop offset="100%" stop-color="#fecaca"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d1fae5"/>
+      <stop offset="100%" stop-color="#a7f3d0"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#475569"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="520" fill="url(#bgGrad)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1e293b">单调约束 = 更准 + 不矛盾</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#64748b">为什么预算-效果曲线需要显式单调保证？</text>
+
+  <!-- ===== LEFT: GBDT (Bad) ===== -->
+  <rect x="40" y="90" width="380" height="400" rx="14" fill="url(#redGrad)" stroke="#ef4444" stroke-width="2"/>
+  <text x="230" y="120" text-anchor="middle" font-size="18" font-weight="bold" fill="#dc2626">❌ GBDT（无单调约束）</text>
+
+  <!-- Mini chart - non-monotonic -->
+  <rect x="70" y="140" width="200" height="140" rx="6" fill="white" stroke="#e5e7eb"/>
+  <!-- Axes -->
+  <line x1="90" y1="260" x2="250" y2="260" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="90" y1="260" x2="90" y2="155" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="170" y="278" text-anchor="middle" font-size="10" fill="#64748b">预算 →</text>
+  <text x="78" y="208" text-anchor="middle" font-size="10" fill="#64748b" transform="rotate(-90,78,208)">PV</text>
+
+  <!-- Non-monotonic curve (zigzag) -->
+  <polyline points="100,245 130,215 155,230 180,195 210,210 240,185" fill="none" stroke="#ef4444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Violation arrows -->
+  <line x1="143" y1="218" x2="153" y2="228" stroke="#dc2626" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="168" y="243" font-size="9" fill="#dc2626" font-weight="bold">违反！↓</text>
+  <line x1="193" y1="198" x2="207" y2="208" stroke="#dc2626" stroke-width="2"/>
+  <text x="220" y="220" font-size="9" fill="#dc2626" font-weight="bold">违反！↓</text>
+
+  <!-- Stats box -->
+  <rect x="290" y="145" width="115" height="130" rx="8" fill="white" stroke="#fca5a5" stroke-width="1.5"/>
+  <text x="347" y="170" text-anchor="middle" font-size="12" font-weight="bold" fill="#991b1b">关键指标</text>
+  <line x1="300" y1="178" x2="395" y2="178" stroke="#fca5a5"/>
+  <text x="347" y="198" text-anchor="middle" font-size="11" fill="#64748b">PV MAE</text>
+  <text x="347" y="216" text-anchor="middle" font-size="20" font-weight="bold" fill="#dc2626">44万</text>
+  <text x="347" y="240" text-anchor="middle" font-size="11" fill="#64748b">违反率</text>
+  <text x="347" y="258" text-anchor="middle" font-size="20" font-weight="bold" fill="#dc2626">60%+</text>
+
+  <!-- Example -->
+  <rect x="65" y="300" width="340" height="75" rx="8" fill="white" stroke="#fca5a5" stroke-width="1"/>
+  <text x="235" y="320" text-anchor="middle" font-size="11" font-weight="bold" fill="#991b1b">示例：预算涨了，PV反降？</text>
+  <text x="235" y="340" text-anchor="middle" font-size="13" fill="#475569">CPM=2.0 → PV=<tspan font-weight="bold" fill="#dc2626">80,000</tspan></text>
+  <text x="235" y="360" text-anchor="middle" font-size="13" fill="#475569">CPM=2.5 → PV=<tspan font-weight="bold" fill="#dc2626">75,000</tspan>  ⬇ 逻辑矛盾</text>
+
+  <!-- Sad face -->
+  <circle cx="230" cy="430" r="28" fill="none" stroke="#ef4444" stroke-width="2.5"/>
+  <circle cx="220" cy="423" r="3" fill="#ef4444"/>
+  <circle cx="240" cy="423" r="3" fill="#ef4444"/>
+  <path d="M218,442 Q230,434 242,442" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="230" y="478" text-anchor="middle" font-size="12" fill="#991b1b" font-weight="bold">不可信赖</text>
+
+  <!-- ===== RIGHT: PWL (Good) ===== -->
+  <rect x="480" y="90" width="380" height="400" rx="14" fill="url(#greenGrad)" stroke="#10b981" stroke-width="2"/>
+  <text x="670" y="120" text-anchor="middle" font-size="18" font-weight="bold" fill="#047857">✅ PWL（显式单调约束）</text>
+
+  <!-- Mini chart - monotonic -->
+  <rect x="510" y="140" width="200" height="140" rx="6" fill="white" stroke="#e5e7eb"/>
+  <line x1="530" y1="260" x2="690" y2="260" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="530" y1="260" x2="530" y2="155" stroke="#94a3b8" stroke-width="1.5"/>
+  <text x="610" y="278" text-anchor="middle" font-size="10" fill="#64748b">预算 →</text>
+  <text x="518" y="208" text-anchor="middle" font-size="10" fill="#64748b" transform="rotate(-90,518,208)">PV</text>
+
+  <!-- Smooth monotonic curve -->
+  <polyline points="540,250 565,235 590,218 620,198 650,180 680,168" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Checkmarks along curve -->
+  <text x="618" y="172" font-size="14" fill="#059669">✓</text>
+  <text x="575" y="210" font-size="11" fill="#059669" font-weight="bold">始终↑</text>
+
+  <!-- Stats box -->
+  <rect x="730" y="145" width="115" height="130" rx="8" fill="white" stroke="#6ee7b7" stroke-width="1.5"/>
+  <text x="787" y="170" text-anchor="middle" font-size="12" font-weight="bold" fill="#065f46">关键指标</text>
+  <line x1="740" y1="178" x2="835" y2="178" stroke="#6ee7b7"/>
+  <text x="787" y="198" text-anchor="middle" font-size="11" fill="#64748b">PV MAE</text>
+  <text x="787" y="216" text-anchor="middle" font-size="20" font-weight="bold" fill="#059669">~1万</text>
+  <text x="787" y="240" text-anchor="middle" font-size="11" fill="#64748b">违反率</text>
+  <text x="787" y="258" text-anchor="middle" font-size="20" font-weight="bold" fill="#059669">0%</text>
+
+  <!-- Example -->
+  <rect x="505" y="300" width="340" height="75" rx="8" fill="white" stroke="#6ee7b7" stroke-width="1"/>
+  <text x="675" y="320" text-anchor="middle" font-size="11" font-weight="bold" fill="#065f46">示例：预算涨，PV必涨</text>
+  <text x="675" y="340" text-anchor="middle" font-size="13" fill="#475569">CPM=2.0 → PV=<tspan font-weight="bold" fill="#059669">78,000</tspan></text>
+  <text x="675" y="360" text-anchor="middle" font-size="13" fill="#475569">CPM=2.5 → PV=<tspan font-weight="bold" fill="#059669">82,000</tspan>  ⬆ 逻辑合理</text>
+
+  <!-- Happy face -->
+  <circle cx="670" cy="430" r="28" fill="none" stroke="#10b981" stroke-width="2.5"/>
+  <circle cx="660" cy="423" r="3" fill="#10b981"/>
+  <circle cx="680" cy="423" r="3" fill="#10b981"/>
+  <path d="M658,438 Q670,448 682,438" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="670" y="478" text-anchor="middle" font-size="12" fill="#065f46" font-weight="bold">准确可信</text>
+
+  <!-- VS divider -->
+  <circle cx="450" cy="290" r="24" fill="#1e293b"/>
+  <text x="450" y="296" text-anchor="middle" font-size="16" font-weight="bold" fill="white">VS</text>
+
+  <!-- Big arrow from left to right -->
+  <line x1="420" y1="440" x2="480" y2="440" stroke="#475569" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrow)"/>
+
+  <!-- Bottom insight -->
+  <rect x="200" y="496" width="500" height="22" rx="6" fill="#1e293b"/>
+  <text x="450" y="512" text-anchor="middle" font-size="12" font-weight="bold" fill="white">核心洞察：结构约束本身就是强大的归纳偏置</text>
+</svg>

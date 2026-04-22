@@ -1,0 +1,19 @@
+{
+  "date": "2026-04-21",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL"
+  ],
+  "candidate_count": 4,
+  "supplementary_count": 0,
+  "focus_titles": [
+    "RankUp: Towards High-rank Representations for Large Scale Advertising Recommender Systems",
+    "R&F-Inventory: A Large-Scale Dataset for Monotonic Inventory Estimation in Reach and Frequency Advertising"
+  ],
+  "focus_status": {
+    "RankUp: Towards High-rank Representations for Large Scale Advertising Recommender Systems": "completed",
+    "R&F-Inventory: A Large-Scale Dataset for Monotonic Inventory Estimation in Reach and Frequency Advertising": "completed"
+  }
+}

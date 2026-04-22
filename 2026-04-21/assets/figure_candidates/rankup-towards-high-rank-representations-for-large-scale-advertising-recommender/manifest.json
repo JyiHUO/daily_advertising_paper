@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-21/downloaded_pdfs/rankup-towards-high-rank-representations-for-large-scale-advertising-recommender.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-21/assets/figure_candidates/rankup-towards-high-rank-representations-for-large-scale-advertising-recommender",
+  "candidates": [
+    {
+      "id": "page-2-drawing-caption-38",
+      "page_index": 2,
+      "caption": "Figure 1: Overall Framework of RankUp",
+      "clip": [
+        106.93061065673828,
+        90.09969329833984,
+        560.5119018554688,
+        330.8026123046875
+      ],
+      "clip_area": 109178.34079820261,
+      "page_area": 484704.0,
+      "text_density": 0.14322012457541305,
+      "kind": "drawing_cluster_with_caption",
+      "score": 50.206792525475215,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-21/assets/figure_candidates/rankup-towards-high-rank-representations-for-large-scale-advertising-recommender/01-p3-drawing_cluster_with_caption.png",
+      "filename": "01-p3-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-6-drawing-caption-8",
+      "page_index": 6,
+      "caption": "Figure 5: Mutual Information across Different Cluster Granularities. Task-specific tokens consistently improve representation-task alignment, with larger gains observed under finer-grained clustering.",
+      "clip": [
+        35.79800033569336,
+        67.6850357055664,
+        312.0501708984375,
+        226.52301025390625
+      ],
+      "clip_area": 43879.33523676879,
+      "page_area": 484704.0,
+      "text_density": 0.16770100808986604,
+      "kind": "drawing_cluster_with_caption",
+      "score": 15.225487683905467,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-21/assets/figure_candidates/rankup-towards-high-rank-representations-for-large-scale-advertising-recommender/02-p7-drawing_cluster_with_caption.png",
+      "filename": "02-p7-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-5-drawing-caption-18",
+      "page_index": 5,
+      "caption": "Figure 4: Layer-wise Effective Rank Evolution under RankUp Ablations. This figure illustrates the distinct impact of dif- ferent RankUp components on layer-wise representation capacity.",
+      "clip": [
+        299.9549865722656,
+        67.68537902832031,
+        576.205810546875,
+        217.1309814453125
+      ],
+      "clip_area": 41284.470807075966,
+      "page_area": 484704.0,
+      "text_density": 0.12572167395606623,
+      "kind": "drawing_cluster_with_caption",
+      "score": 14.715415904936869,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-21/assets/figure_candidates/rankup-towards-high-rank-representations-for-large-scale-advertising-recommender/03-p6-drawing_cluster_with_caption.png",
+      "filename": "03-p6-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-5-embedded-0-0",
+      "page_index": 5,
+      "caption": "Figure 3: Effective rank comparison of token embeddings un- der randomized splitting and semantic splitting. The random- ized strategy yields consistently higher and more uniform effective ranks across all 32 sparse tokens, while semantic grouping suffers from rank collapse on tokens dominated by long-tail features.",
+      "clip": [
+        41.79800033569336,
+        167.42330932617188,
+        306.0447082519531,
+        280.2540283203125
+      ],
+      "clip_area": 29815.14604602626,
+      "page_area": 484704.0,
+      "text_density": 0.04200481026212196,
+      "kind": "embedded_image_with_caption",
+      "xref": 302,
+      "score": 13.331279400511402,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-21/assets/figure_candidates/rankup-towards-high-rank-representations-for-large-scale-advertising-recommender/04-p6-embedded_image_with_caption.png",
+      "filename": "04-p6-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-4-embedded-1-0",
+      "page_index": 4,
+      "caption": "Figure 2: MI difference matrices ( M Randomized − M Semantic ) of the lower triangle with 𝐾 = 48 (left) and 𝐾 = 64 (right) clusters. Blue entries indicate lower MI under the randomized strategy, demonstrating reduced inter-token redundancy. The pattern is consistent across different choices of 𝐾 .",
+      "clip": [
+        427.6669921875,
+        400.05657958984375,
+        570.1943969726562,
+        528.4169921875
+      ],
+      "clip_area": 18294.876484695822,
+      "page_area": 484704.0,
+      "text_density": 0.03009350413657079,
+      "kind": "embedded_image_with_caption",
+      "xref": 301,
+      "score": 13.203276405385509,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-21/assets/figure_candidates/rankup-towards-high-rank-representations-for-large-scale-advertising-recommender/05-p5-embedded_image_with_caption.png",
+      "filename": "05-p5-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-4-embedded-0-0",
+      "page_index": 4,
+      "caption": "Figure 2: MI difference matrices ( M Randomized − M Semantic ) of the lower triangle with 𝐾 = 48 (left) and 𝐾 = 64 (right) clusters. Blue entries indicate lower MI under the randomized strategy, demonstrating reduced inter-token redundancy. The pattern is consistent across different choices of 𝐾 .",
+      "clip": [
+        305.9549865722656,
+        400.05657958984375,
+        448.48236083984375,
+        528.4169921875
+      ],
+      "clip_area": 18294.872567446902,
+      "page_area": 484704.0,
+      "text_density": 0.02976480697740464,
+      "kind": "embedded_image_with_caption",
+      "xref": 300,
+      "score": 13.203276361860521,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-21/assets/figure_candidates/rankup-towards-high-rank-representations-for-large-scale-advertising-recommender/06-p5-embedded_image_with_caption.png",
+      "filename": "06-p5-embedded_image_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-21/assets/figure_candidates/rankup-towards-high-rank-representations-for-large-scale-advertising-recommender/contact-sheet.svg"
+}

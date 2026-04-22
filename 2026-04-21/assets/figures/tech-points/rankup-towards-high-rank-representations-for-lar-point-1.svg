@@ -1,0 +1,172 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
+    </marker>
+    <marker id="arrowG" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2e7d32"/>
+    </marker>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f5f7fa"/>
+      <stop offset="100%" stop-color="#e8ecf1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="520" fill="url(#bgGrad)" rx="16"/>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a237e">RankUp: 随机置换分割 vs 语义分组</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#666">降低 Token 间相关性 → 提升有效秩</text>
+
+  <!-- ===== LEFT SIDE: Semantic Grouping ===== -->
+  <rect x="30" y="80" width="400" height="420" rx="14" fill="#fff" stroke="#e0e0e0" stroke-width="1.5" opacity="0.9"/>
+  <rect x="30" y="80" width="400" height="36" rx="14" fill="#e53935" opacity="0.12"/>
+  <text x="230" y="104" text-anchor="middle" font-size="16" font-weight="bold" fill="#c62828">❌ 语义分组（传统）</text>
+
+  <!-- Feature pool -->
+  <rect x="60" y="130" width="340" height="50" rx="8" fill="#ffcdd2" stroke="#e53935" stroke-width="1.2"/>
+  <text x="230" y="152" text-anchor="middle" font-size="12" fill="#b71c1c" font-weight="bold">1200 个稀疏特征</text>
+  <text x="230" y="168" text-anchor="middle" font-size="11" fill="#c62828">按语义分组：用户人口 | 用户行为 | 广告属性 | …</text>
+
+  <!-- Arrow down -->
+  <line x1="230" y1="182" x2="230" y2="205" stroke="#e53935" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Grouped tokens -->
+  <g>
+    <rect x="60" y="210" width="78" height="44" rx="6" fill="#ef9a9a" stroke="#e53935" stroke-width="1"/>
+    <text x="99" y="228" text-anchor="middle" font-size="10" font-weight="bold" fill="#b71c1c">Token 1</text>
+    <text x="99" y="242" text-anchor="middle" font-size="9" fill="#c62828">年龄,性别,城市</text>
+
+    <rect x="145" y="210" width="78" height="44" rx="6" fill="#ef9a9a" stroke="#e53935" stroke-width="1"/>
+    <text x="184" y="228" text-anchor="middle" font-size="10" font-weight="bold" fill="#b71c1c">Token 2</text>
+    <text x="184" y="242" text-anchor="middle" font-size="9" fill="#c62828">点击,浏览,购买</text>
+
+    <rect x="230" y="210" width="78" height="44" rx="6" fill="#ef9a9a" stroke="#e53935" stroke-width="1"/>
+    <text x="269" y="228" text-anchor="middle" font-size="10" font-weight="bold" fill="#b71c1c">Token 3</text>
+    <text x="269" y="242" text-anchor="middle" font-size="9" fill="#c62828">广告类目,出价</text>
+
+    <rect x="315" y="210" width="78" height="44" rx="6" fill="#ef9a9a" stroke="#e53935" stroke-width="1"/>
+    <text x="354" y="228" text-anchor="middle" font-size="10" font-weight="bold" fill="#b71c1c">… ×32</text>
+    <text x="354" y="242" text-anchor="middle" font-size="9" fill="#c62828">长尾特征堆积</text>
+  </g>
+
+  <!-- Problem label -->
+  <text x="230" y="278" text-anchor="middle" font-size="12" fill="#b71c1c" font-weight="bold">⚠ 同组特征高度相关</text>
+
+  <!-- Mutual Info heatmap (simplified) -->
+  <rect x="80" y="292" width="120" height="90" rx="6" fill="#ffcdd2" stroke="#e53935" stroke-width="1"/>
+  <text x="140" y="310" text-anchor="middle" font-size="10" font-weight="bold" fill="#b71c1c">互信息矩阵</text>
+  <!-- Hot cells -->
+  <rect x="92" y="318" width="16" height="16" rx="2" fill="#e53935" opacity="0.9"/>
+  <rect x="110" y="318" width="16" height="16" rx="2" fill="#e53935" opacity="0.7"/>
+  <rect x="128" y="318" width="16" height="16" rx="2" fill="#ef5350" opacity="0.6"/>
+  <rect x="146" y="318" width="16" height="16" rx="2" fill="#e53935" opacity="0.5"/>
+  <rect x="164" y="318" width="16" height="16" rx="2" fill="#e53935" opacity="0.8"/>
+  <rect x="92" y="336" width="16" height="16" rx="2" fill="#e53935" opacity="0.7"/>
+  <rect x="110" y="336" width="16" height="16" rx="2" fill="#e53935" opacity="0.85"/>
+  <rect x="128" y="336" width="16" height="16" rx="2" fill="#ef5350" opacity="0.65"/>
+  <rect x="146" y="336" width="16" height="16" rx="2" fill="#e53935" opacity="0.6"/>
+  <rect x="164" y="336" width="16" height="16" rx="2" fill="#e53935" opacity="0.75"/>
+  <rect x="92" y="354" width="16" height="16" rx="2" fill="#ef5350" opacity="0.6"/>
+  <rect x="110" y="354" width="16" height="16" rx="2" fill="#e53935" opacity="0.5"/>
+  <rect x="128" y="354" width="16" height="16" rx="2" fill="#e53935" opacity="0.9"/>
+  <rect x="146" y="354" width="16" height="16" rx="2" fill="#e53935" opacity="0.7"/>
+  <rect x="164" y="354" width="16" height="16" rx="2" fill="#e53935" opacity="0.6"/>
+  <text x="140" y="385" text-anchor="middle" font-size="10" fill="#c62828">高互信息 🔴</text>
+
+  <!-- Effective rank bars (low) -->
+  <g transform="translate(260, 292)">
+    <text x="60" y="14" text-anchor="middle" font-size="10" font-weight="bold" fill="#b71c1c">有效秩分布</text>
+    <!-- bars -->
+    <rect x="10" y="26" width="10" height="50" rx="2" fill="#ef9a9a"/>
+    <rect x="24" y="36" width="10" height="40" rx="2" fill="#ef9a9a"/>
+    <rect x="38" y="56" width="10" height="20" rx="2" fill="#e53935" opacity="0.8"/>
+    <rect x="52" y="30" width="10" height="46" rx="2" fill="#ef9a9a"/>
+    <rect x="66" y="50" width="10" height="26" rx="2" fill="#e53935" opacity="0.8"/>
+    <rect x="80" y="60" width="10" height="16" rx="2" fill="#e53935"/>
+    <rect x="94" y="42" width="10" height="34" rx="2" fill="#ef9a9a"/>
+    <rect x="108" y="48" width="10" height="28" rx="2" fill="#ef9a9a"/>
+    <!-- baseline -->
+    <line x1="5" y1="76" x2="123" y2="76" stroke="#b71c1c" stroke-width="0.8"/>
+    <text x="60" y="90" text-anchor="middle" font-size="9" fill="#c62828">部分 Token 秩 ≈ 15 ↓</text>
+  </g>
+
+  <!-- ===== RIGHT SIDE: Random Permutation ===== -->
+  <rect x="470" y="80" width="400" height="420" rx="14" fill="#fff" stroke="#e0e0e0" stroke-width="1.5" opacity="0.9"/>
+  <rect x="470" y="80" width="400" height="36" rx="14" fill="#2e7d32" opacity="0.1"/>
+  <text x="670" y="104" text-anchor="middle" font-size="16" font-weight="bold" fill="#2e7d32">✅ 随机置换分割（RankUp）</text>
+
+  <!-- Feature pool -->
+  <rect x="500" y="130" width="340" height="50" rx="8" fill="#c8e6c9" stroke="#2e7d32" stroke-width="1.2"/>
+  <text x="670" y="152" text-anchor="middle" font-size="12" fill="#1b5e20" font-weight="bold">1200 个稀疏特征</text>
+  <text x="670" y="168" text-anchor="middle" font-size="11" fill="#2e7d32">🔀 随机打乱顺序 → 均匀切分</text>
+
+  <!-- Shuffle icon arrow -->
+  <line x1="670" y1="182" x2="670" y2="205" stroke="#2e7d32" stroke-width="2" marker-end="url(#arrowG)"/>
+
+  <!-- Shuffled tokens -->
+  <g>
+    <rect x="500" y="210" width="78" height="44" rx="6" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1"/>
+    <text x="539" y="228" text-anchor="middle" font-size="10" font-weight="bold" fill="#1b5e20">Token 1</text>
+    <text x="539" y="242" text-anchor="middle" font-size="9" fill="#2e7d32">年龄,类目,出价</text>
+
+    <rect x="585" y="210" width="78" height="44" rx="6" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1"/>
+    <text x="624" y="228" text-anchor="middle" font-size="10" font-weight="bold" fill="#1b5e20">Token 2</text>
+    <text x="624" y="242" text-anchor="middle" font-size="9" fill="#2e7d32">性别,点击,素材</text>
+
+    <rect x="670" y="210" width="78" height="44" rx="6" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1"/>
+    <text x="709" y="228" text-anchor="middle" font-size="10" font-weight="bold" fill="#1b5e20">Token 3</text>
+    <text x="709" y="242" text-anchor="middle" font-size="9" fill="#2e7d32">城市,浏览,标签</text>
+
+    <rect x="755" y="210" width="78" height="44" rx="6" fill="#a5d6a7" stroke="#2e7d32" stroke-width="1"/>
+    <text x="794" y="228" text-anchor="middle" font-size="10" font-weight="bold" fill="#1b5e20">… ×32</text>
+    <text x="794" y="242" text-anchor="middle" font-size="9" fill="#2e7d32">特征分散混合</text>
+  </g>
+
+  <!-- Benefit label -->
+  <text x="670" y="278" text-anchor="middle" font-size="12" fill="#1b5e20" font-weight="bold">✓ 组内特征天然低相关</text>
+
+  <!-- Mutual Info heatmap (cool) -->
+  <rect x="520" y="292" width="120" height="90" rx="6" fill="#e8f5e9" stroke="#2e7d32" stroke-width="1"/>
+  <text x="580" y="310" text-anchor="middle" font-size="10" font-weight="bold" fill="#1b5e20">互信息矩阵</text>
+  <rect x="532" y="318" width="16" height="16" rx="2" fill="#81c784" opacity="0.3"/>
+  <rect x="550" y="318" width="16" height="16" rx="2" fill="#a5d6a7" opacity="0.25"/>
+  <rect x="568" y="318" width="16" height="16" rx="2" fill="#81c784" opacity="0.2"/>
+  <rect x="586" y="318" width="16" height="16" rx="2" fill="#a5d6a7" opacity="0.3"/>
+  <rect x="604" y="318" width="16" height="16" rx="2" fill="#81c784" opacity="0.15"/>
+  <rect x="532" y="336" width="16" height="16" rx="2" fill="#a5d6a7" opacity="0.2"/>
+  <rect x="550" y="336" width="16" height="16" rx="2" fill="#81c784" opacity="0.3"/>
+  <rect x="568" y="336" width="16" height="16" rx="2" fill="#a5d6a7" opacity="0.25"/>
+  <rect x="586" y="336" width="16" height="16" rx="2" fill="#81c784" opacity="0.2"/>
+  <rect x="604" y="336" width="16" height="16" rx="2" fill="#a5d6a7" opacity="0.15"/>
+  <rect x="532" y="354" width="16" height="16" rx="2" fill="#81c784" opacity="0.25"/>
+  <rect x="550" y="354" width="16" height="16" rx="2" fill="#a5d6a7" opacity="0.2"/>
+  <rect x="568" y="354" width="16" height="16" rx="2" fill="#81c784" opacity="0.3"/>
+  <rect x="586" y="354" width="16" height="16" rx="2" fill="#a5d6a7" opacity="0.2"/>
+  <rect x="604" y="354" width="16" height="16" rx="2" fill="#81c784" opacity="0.25"/>
+  <text x="580" y="385" text-anchor="middle" font-size="10" fill="#2e7d32">低互信息 🟢</text>
+
+  <!-- Effective rank bars (high & uniform) -->
+  <g transform="translate(700, 292)">
+    <text x="60" y="14" text-anchor="middle" font-size="10" font-weight="bold" fill="#1b5e20">有效秩分布</text>
+    <rect x="10" y="24" width="10" height="52" rx="2" fill="#66bb6a"/>
+    <rect x="24" y="22" width="10" height="54" rx="2" fill="#66bb6a"/>
+    <rect x="38" y="26" width="10" height="50" rx="2" fill="#66bb6a"/>
+    <rect x="52" y="24" width="10" height="52" rx="2" fill="#66bb6a"/>
+    <rect x="66" y="22" width="10" height="54" rx="2" fill="#66bb6a"/>
+    <rect x="80" y="25" width="10" height="51" rx="2" fill="#66bb6a"/>
+    <rect x="94" y="23" width="10" height="53" rx="2" fill="#66bb6a"/>
+    <rect x="108" y="24" width="10" height="52" rx="2" fill="#66bb6a"/>
+    <line x1="5" y1="76" x2="123" y2="76" stroke="#1b5e20" stroke-width="0.8"/>
+    <text x="60" y="90" text-anchor="middle" font-size="9" fill="#2e7d32">所有 Token 秩 ≈ 35+ ↑</text>
+  </g>
+
+  <!-- Center divider -->
+  <line x1="450" y1="100" x2="450" y2="480" stroke="#bdbdbd" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- Bottom summary -->
+  <rect x="260" y="460" width="380" height="40" rx="10" fill="#1a237e" opacity="0.08"/>
+  <text x="450" y="478" text-anchor="middle" font-size="13" font-weight="bold" fill="#1a237e">核心思想：打乱特征顺序 → 每个 Token 信息更多样 → 有效秩 ↑</text>
+  <text x="450" y="494" text-anchor="middle" font-size="11" fill="#555">微信广告全量上线，GMV +2~5%</text>
+</svg>
