@@ -1,0 +1,87 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="560" fill="#fafbfd"/>
+
+  <text x="450" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#1a2a3a">
+    参数化衰减外推：短实验 → 长期效应 + 累计价值
+  </text>
+  <text x="450" y="56" text-anchor="middle" font-size="12" fill="#667">
+    f(t) = γ + α·exp(−β t)
+  </text>
+
+  <!-- Panel 1: 观测短期 -->
+  <g>
+    <rect x="40" y="90" width="250" height="210" rx="10" fill="#fff" stroke="#c9d3e0"/>
+    <text x="165" y="112" text-anchor="middle" font-size="13" font-weight="700" fill="#223">① 只有 2 周数据</text>
+    <line x1="70" y1="250" x2="270" y2="250" stroke="#888"/>
+    <line x1="70" y1="130" x2="70" y2="250" stroke="#888"/>
+    <text x="270" y="265" font-size="10" fill="#888" text-anchor="end">t</text>
+    <g fill="#e8833a">
+      <circle cx="85" cy="150" r="3"/><circle cx="100" cy="165" r="3"/>
+      <circle cx="115" cy="180" r="3"/><circle cx="130" cy="192" r="3"/>
+      <circle cx="145" cy="200" r="3"/><circle cx="160" cy="208" r="3"/>
+      <circle cx="175" cy="213" r="3"/>
+    </g>
+    <text x="185" y="160" font-size="11" fill="#c45a10">短期实测</text>
+    <text x="165" y="288" text-anchor="middle" font-size="11" fill="#556">看不到稳态</text>
+  </g>
+
+  <!-- Panel 2: 拟合 -->
+  <g>
+    <rect x="325" y="90" width="250" height="210" rx="10" fill="#fff" stroke="#c9d3e0"/>
+    <text x="450" y="112" text-anchor="middle" font-size="13" font-weight="700" fill="#223">② 拟合指数衰减</text>
+    <line x1="355" y1="250" x2="555" y2="250" stroke="#888"/>
+    <line x1="355" y1="130" x2="355" y2="250" stroke="#888"/>
+    <path d="M 360,145 Q 400,190 450,215 T 555,228" fill="none" stroke="#2d7ef7" stroke-width="2.5"/>
+    <line x1="355" y1="228" x2="555" y2="228" stroke="#2d7ef7" stroke-dasharray="4 3" opacity="0.6"/>
+    <text x="495" y="222" font-size="11" fill="#2d7ef7">γ = LTE</text>
+    <text x="395" y="160" font-size="11" fill="#2d7ef7">α·exp(−βt)</text>
+    <text x="450" y="288" text-anchor="middle" font-size="11" fill="#556">外推到 t → ∞</text>
+  </g>
+
+  <!-- Panel 3: 两组相乘 -->
+  <g>
+    <rect x="610" y="90" width="250" height="210" rx="10" fill="#fff" stroke="#c9d3e0"/>
+    <text x="735" y="112" text-anchor="middle" font-size="13" font-weight="700" fill="#223">③ 指标 × 留存</text>
+    <line x1="640" y1="260" x2="840" y2="260" stroke="#888"/>
+    <line x1="640" y1="140" x2="640" y2="260" stroke="#888"/>
+    <path d="M 645,170 Q 700,210 780,240 T 840,250" fill="none" stroke="#d64545" stroke-width="2.3"/>
+    <path d="M 645,185 Q 720,205 790,225 T 840,238" fill="none" stroke="#2a9d5a" stroke-width="2.3"/>
+    <path d="M 645,170 Q 700,210 780,240 T 840,250 L 840,238 Q 790,225 720,205 T 645,185 Z"
+          fill="#d64545" opacity="0.15"/>
+    <circle cx="655" cy="285" r="4" fill="#d64545"/>
+    <text x="665" y="289" font-size="11" fill="#d64545">处理 f_T·f_ST</text>
+    <circle cx="755" cy="285" r="4" fill="#2a9d5a"/>
+    <text x="765" y="289" font-size="11" fill="#2a9d5a">对照 f_C·f_SC</text>
+  </g>
+
+  <!-- arrows -->
+  <line x1="292" y1="190" x2="322" y2="190" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="577" y1="190" x2="607" y2="190" stroke="#333" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Bottom results -->
+  <g>
+    <rect x="90" y="340" width="330" height="160" rx="12" fill="#eef4ff" stroke="#2d7ef7"/>
+    <text x="255" y="368" text-anchor="middle" font-size="14" font-weight="700" fill="#1853b5">长期效应 LTE</text>
+    <text x="255" y="410" text-anchor="middle" font-size="28" font-weight="700" fill="#1853b5">γ ≈ 0</text>
+    <text x="255" y="440" text-anchor="middle" font-size="12" fill="#345">稳态人均点击没差</text>
+    <text x="255" y="475" text-anchor="middle" font-size="11" fill="#678">短期涨，长期打平</text>
+  </g>
+
+  <g>
+    <rect x="480" y="340" width="330" height="160" rx="12" fill="#fff0ef" stroke="#d64545"/>
+    <text x="645" y="368" text-anchor="middle" font-size="14" font-weight="700" fill="#a82020">累计价值 ΔERLV</text>
+    <text x="645" y="400" text-anchor="middle" font-size="20" font-weight="700" fill="#a82020">Σ (f_T·f_ST − f_C·f_SC)</text>
+    <text x="645" y="435" text-anchor="middle" font-size="24" font-weight="700" fill="#a82020">≈ −0.7</text>
+    <text x="645" y="475" text-anchor="middle" font-size="11" fill="#855">留存悄悄掉 → 长期其实在亏</text>
+  </g>
+
+  <text x="450" y="538" text-anchor="middle" font-size="12" fill="#556" font-style="italic">
+    同一套拟合，一次短实验同时给出稳态效应 γ 与累计业务价值差
+  </text>
+</svg>

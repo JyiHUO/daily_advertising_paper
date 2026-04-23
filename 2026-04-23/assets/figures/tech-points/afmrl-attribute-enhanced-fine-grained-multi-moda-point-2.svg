@@ -1,0 +1,85 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#444"/>
+    </marker>
+    <marker id="arG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2e8b57"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+    <marker id="arY" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b8860b"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="34" text-anchor="middle" font-size="22" font-weight="700" fill="#222">RAR：用检索 Recall@50 当奖励，反过来教属性生成器</text>
+  <text x="450" y="58" text-anchor="middle" font-size="13" fill="#666">不再背标准答案，而是 生成 → 真跑检索 → 看结果好坏 来学</text>
+
+  <!-- Query -->
+  <rect x="30" y="110" width="150" height="90" rx="10" fill="#eef4ff" stroke="#4a77c4" stroke-width="2"/>
+  <text x="105" y="140" text-anchor="middle" font-size="14" font-weight="700" fill="#234">Query 商品</text>
+  <text x="105" y="162" text-anchor="middle" font-size="12" fill="#456">V领 · 真丝</text>
+  <text x="105" y="180" text-anchor="middle" font-size="12" fill="#456">深红连衣裙</text>
+
+  <!-- Generator G -->
+  <rect x="240" y="100" width="190" height="110" rx="10" fill="#fff7e0" stroke="#d4a017" stroke-width="2"/>
+  <text x="335" y="130" text-anchor="middle" font-size="15" font-weight="700" fill="#6b4a00">属性生成器 G</text>
+  <text x="335" y="152" text-anchor="middle" font-size="12" fill="#6b4a00">采样 8 组候选属性</text>
+  <text x="335" y="172" text-anchor="middle" font-size="12" fill="#888">GRPO 优化</text>
+  <text x="335" y="192" text-anchor="middle" font-size="11" fill="#888">KL 约束不偏离 SFT</text>
+
+  <path d="M182,155 L238,155" stroke="#444" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+
+  <!-- Two sampled groups -->
+  <rect x="475" y="80" width="240" height="72" rx="8" fill="#e8f6ec" stroke="#2e8b57" stroke-width="2"/>
+  <text x="490" y="103" font-size="12" font-weight="700" fill="#1e6b3d">组1  系列:赤霞珠, 色:深红</text>
+  <text x="490" y="123" font-size="11" fill="#2e6b3d">精准、有区分度</text>
+  <text x="490" y="142" font-size="11" fill="#2e6b3d">→ 正样本大多进 top50</text>
+
+  <rect x="475" y="168" width="240" height="72" rx="8" fill="#fde8e8" stroke="#c0392b" stroke-width="2"/>
+  <text x="490" y="191" font-size="12" font-weight="700" fill="#8a2a1e">组2  红色 裙子 女装</text>
+  <text x="490" y="211" font-size="11" fill="#8a2a1e">太泛、同品牌杂 SKU 挤入</text>
+  <text x="490" y="230" font-size="11" fill="#8a2a1e">→ 正样本掉出 top50</text>
+
+  <path d="M430,135 L473,116" stroke="#2e8b57" stroke-width="2" fill="none" marker-end="url(#arG)"/>
+  <path d="M430,175 L473,200" stroke="#c0392b" stroke-width="2" fill="none" marker-end="url(#arR)"/>
+
+  <!-- Frozen Retrieval -->
+  <rect x="740" y="110" width="130" height="110" rx="10" fill="#eef0f2" stroke="#666" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="805" y="138" text-anchor="middle" font-size="14" font-weight="700" fill="#333">表征模型 R</text>
+  <text x="805" y="158" text-anchor="middle" font-size="11" fill="#555">❄ 冻结</text>
+  <text x="805" y="182" text-anchor="middle" font-size="12" fill="#333">query+属性</text>
+  <text x="805" y="200" text-anchor="middle" font-size="12" fill="#333">跑真实检索</text>
+
+  <path d="M715,116 L738,140" stroke="#2e8b57" stroke-width="2" fill="none" marker-end="url(#arG)"/>
+  <path d="M715,204 L738,190" stroke="#c0392b" stroke-width="2" fill="none" marker-end="url(#arR)"/>
+
+  <!-- Reward box -->
+  <rect x="240" y="290" width="470" height="140" rx="12" fill="#fffbea" stroke="#b8860b" stroke-width="2"/>
+  <text x="475" y="318" text-anchor="middle" font-size="16" font-weight="700" fill="#6b4a00">奖励 = Recall@50</text>
+
+  <rect x="270" y="338" width="180" height="72" rx="8" fill="#e8f6ec" stroke="#2e8b57"/>
+  <text x="360" y="363" text-anchor="middle" font-size="13" font-weight="700" fill="#1e6b3d">组1  R ≈ 1.0  ✓</text>
+  <text x="360" y="387" text-anchor="middle" font-size="11" fill="#2e6b3d">鼓励生成这种属性</text>
+
+  <rect x="500" y="338" width="180" height="72" rx="8" fill="#fde8e8" stroke="#c0392b"/>
+  <text x="590" y="363" text-anchor="middle" font-size="13" font-weight="700" fill="#8a2a1e">组2  R ≈ 0.2  ✗</text>
+  <text x="590" y="387" text-anchor="middle" font-size="11" fill="#8a2a1e">格式非法再罚 -0.1</text>
+
+  <!-- R -> Reward -->
+  <path d="M805,222 C805,270 720,285 680,290" stroke="#b8860b" stroke-width="2" fill="none" marker-end="url(#arY)"/>
+
+  <!-- Feedback arrow to Generator -->
+  <path d="M270,338 C160,330 150,240 240,185" stroke="#b8860b" stroke-width="2.5" fill="none" stroke-dasharray="6,4" marker-end="url(#arY)"/>
+  <text x="40" y="280" font-size="12" fill="#8a6a00" font-weight="700">GRPO 组内归一化</text>
+  <text x="40" y="298" font-size="12" fill="#8a6a00">更新 G 的策略</text>
+
+  <!-- Bottom insight -->
+  <rect x="130" y="460" width="640" height="130" rx="12" fill="#f4f0ff" stroke="#6a48c4" stroke-width="2"/>
+  <text x="450" y="490" text-anchor="middle" font-size="15" font-weight="700" fill="#3a2a7a">核心创新：下游检索指标 = 强化学习奖励</text>
+  <text x="450" y="518" text-anchor="middle" font-size="12" fill="#3a2a7a">不用人工标注"好属性"，检索效果自己说话</text>
+  <text x="450" y="542" text-anchor="middle" font-size="12" fill="#3a2a7a">k=50 甜点：太小信号稀疏，太大信号饱和</text>
+  <text x="450" y="568" text-anchor="middle" font-size="12" fill="#6a48c4" font-style="italic">副产物：属性自发变短 —— 冗余 = 噪声，会拉低 Recall</text>
+</svg>

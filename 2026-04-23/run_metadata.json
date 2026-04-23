@@ -1,0 +1,19 @@
+{
+  "date": "2026-04-23",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL"
+  ],
+  "candidate_count": 9,
+  "supplementary_count": 2,
+  "focus_titles": [
+    "Efficient Multi-Cohort Inference for Long-Term Effects and Lifetime Value in A/B Testing with User Learning",
+    "AFMRL: Attribute-Enhanced Fine-Grained Multi-Modal Representation Learning in E-commerce"
+  ],
+  "focus_status": {
+    "Efficient Multi-Cohort Inference for Long-Term Effects and Lifetime Value in A/B Testing with User Learning": "completed",
+    "AFMRL: Attribute-Enhanced Fine-Grained Multi-Modal Representation Learning in E-commerce": "completed"
+  }
+}

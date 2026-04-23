@@ -4,18 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-04-22
+- **日期**：2026-04-23
 - **分类**：cs.IR + cs.AI + cs.LG + cs.CL
-- **候选论文数**：11
+- **候选论文数**：9
 - **必读论文**：
-  - LoopCTR: Unlocking the Loop Scaling Power for Click-Through Rate Prediction
-  - CS3: Efficient Online Capability Synergy for Two-Tower Recommendation
-- **日报路径**：[2026-04-22/daily_report.md](2026-04-22/daily_report.md)
+  - Efficient Multi-Cohort Inference for Long-Term Effects and Lifetime Value in A/B Testing with User Learning
+  - AFMRL: Attribute-Enhanced Fine-Grained Multi-Modal Representation Learning in E-commerce
+- **日报路径**：[2026-04-23/daily_report.md](2026-04-23/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-04-23 | cs.IR + cs.AI + cs.LG + cs.CL | 9 | 1 | Efficient Multi-Cohort Inference for Long-Term Effects and Lifetime Value in A/B Testing with User Learning | [2026-04-23/daily_report.md](2026-04-23/daily_report.md) |
+|  |  |  | 2 | AFMRL: Attribute-Enhanced Fine-Grained Multi-Modal Representation Learning in E-commerce |  |
 | 2026-04-22 | cs.IR + cs.AI + cs.LG + cs.CL | 11 | 1 | LoopCTR: Unlocking the Loop Scaling Power for Click-Through Rate Prediction | [2026-04-22/daily_report.md](2026-04-22/daily_report.md) |
 |  |  |  | 2 | CS3: Efficient Online Capability Synergy for Two-Tower Recommendation |  |
 | 2026-04-21 | cs.IR + cs.AI + cs.LG + cs.CL | 4 | 1 | RankUp: Towards High-rank Representations for Large Scale Advertising Recommender Systems | [2026-04-21/daily_report.md](2026-04-21/daily_report.md) |

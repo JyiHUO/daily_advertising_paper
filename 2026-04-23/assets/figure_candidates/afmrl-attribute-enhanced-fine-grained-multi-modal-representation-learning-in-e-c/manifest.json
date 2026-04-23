@@ -1,0 +1,119 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-23/downloaded_pdfs/afmrl-attribute-enhanced-fine-grained-multi-modal-representation-learning-in-e-c.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-23/assets/figure_candidates/afmrl-attribute-enhanced-fine-grained-multi-modal-representation-learning-in-e-c",
+  "candidates": [
+    {
+      "id": "page-4-block-34",
+      "page_index": 4,
+      "caption": "Figure 4: The overall framework of our proposed Retrieval-aware Attribute Reinforcement training pipeline. G denotes the Attribute Generator, and R denotes the Representation Model (the frozen encoder used for reward calculation).",
+      "clip": [
+        41.102197265624994,
+        18.0,
+        554.1738952636719,
+        159.49728393554688
+      ],
+      "clip_area": 72598.25173092278,
+      "page_area": 501156.9211820215,
+      "text_density": 0.08169282082502403,
+      "kind": "captioned_figure",
+      "score": 51.70507799195325,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-23/assets/figure_candidates/afmrl-attribute-enhanced-fine-grained-multi-modal-representation-learning-in-e-c/01-p5-captioned_figure.png",
+      "filename": "01-p5-captioned_figure.png"
+    },
+    {
+      "id": "page-3-block-3",
+      "page_index": 3,
+      "caption": "Figure 3: Demonstration of our proposed Attribute- Guided Learning process and attribute’s influence on the retrieval.",
+      "clip": [
+        59.779998779296875,
+        331.68994140625,
+        300.2146911621094,
+        530.1950073242188
+      ],
+      "clip_area": 47727.504460416734,
+      "page_area": 501156.9211820215,
+      "text_density": 0.033631879341611645,
+      "kind": "image_block_with_caption",
+      "score": 26.530305605115743,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-23/assets/figure_candidates/afmrl-attribute-enhanced-fine-grained-multi-modal-representation-learning-in-e-c/02-p4-image_block_with_caption.png",
+      "filename": "02-p4-image_block_with_caption.png"
+    },
+    {
+      "id": "page-3-embedded-1-0",
+      "page_index": 3,
+      "caption": "Figure 3: Demonstration of our proposed Attribute- Guided Learning process and attribute’s influence on the retrieval.",
+      "clip": [
+        69.77999877929688,
+        337.68994140625,
+        290.2146911621094,
+        524.1950073242188
+      ],
+      "clip_area": 41112.18683346361,
+      "page_area": 501156.9211820215,
+      "text_density": 0.006929401880847296,
+      "kind": "embedded_image_with_caption",
+      "xref": 373,
+      "score": 25.456802075927374,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-23/assets/figure_candidates/afmrl-attribute-enhanced-fine-grained-multi-modal-representation-learning-in-e-c/03-p4-embedded_image_with_caption.png",
+      "filename": "03-p4-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-12-embedded-7-0",
+      "page_index": 12,
+      "caption": "Figure 12: Cases of product item and generated attributes w/o RL.",
+      "clip": [
+        354.6778564453125,
+        103.7170639038086,
+        571.7274169921875,
+        211.88397216796875
+      ],
+      "clip_area": 23477.579904450104,
+      "page_area": 501156.9211820215,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 489,
+      "score": 13.260861998938335,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-23/assets/figure_candidates/afmrl-attribute-enhanced-fine-grained-multi-modal-representation-learning-in-e-c/04-p13-embedded_image_with_caption.png",
+      "filename": "04-p13-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-12-embedded-5-0",
+      "page_index": 12,
+      "caption": "Figure 12: Cases of product item and generated attributes w/o RL.",
+      "clip": [
+        356.49639892578125,
+        48.05438232421875,
+        554.4158935546875,
+        159.74493408203125
+      ],
+      "clip_area": 22105.737558729947,
+      "page_area": 501156.9211820215,
+      "text_density": 0.023066667953698754,
+      "kind": "embedded_image_with_caption",
+      "xref": 487,
+      "score": 13.245619306208111,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-23/assets/figure_candidates/afmrl-attribute-enhanced-fine-grained-multi-modal-representation-learning-in-e-c/05-p13-embedded_image_with_caption.png",
+      "filename": "05-p13-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-12-embedded-1-0",
+      "page_index": 12,
+      "caption": "Figure 12: Cases of product item and generated attributes w/o RL.",
+      "clip": [
+        360.121337890625,
+        152.3227081298828,
+        522.7572326660156,
+        272.3397216796875
+      ],
+      "clip_area": 19519.074386942666,
+      "page_area": 501156.9211820215,
+      "text_density": 0.03550687126220367,
+      "kind": "embedded_image_with_caption",
+      "xref": 483,
+      "score": 13.216878604299364,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-23/assets/figure_candidates/afmrl-attribute-enhanced-fine-grained-multi-modal-representation-learning-in-e-c/06-p13-embedded_image_with_caption.png",
+      "filename": "06-p13-embedded_image_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-23/assets/figure_candidates/afmrl-attribute-enhanced-fine-grained-multi-modal-representation-learning-in-e-c/contact-sheet.svg"
+}
