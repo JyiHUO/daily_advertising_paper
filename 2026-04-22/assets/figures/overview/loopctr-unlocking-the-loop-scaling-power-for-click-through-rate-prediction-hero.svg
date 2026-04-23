@@ -1,243 +1,152 @@
-<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" font-family="-apple-system, 'Segoe UI', Roboto, sans-serif">
   <defs>
-    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#0a0e27"/>
-      <stop offset="100%" stop-color="#121a3a"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6f8fc"/>
+      <stop offset="1" stop-color="#eaeef6"/>
     </linearGradient>
-    <linearGradient id="entryGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#2563eb"/>
-      <stop offset="100%" stop-color="#1e40af"/>
+    <linearGradient id="loopG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6b7ff0"/>
+      <stop offset="1" stop-color="#9156e6"/>
     </linearGradient>
-    <linearGradient id="loopGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#f59e0b"/>
-      <stop offset="100%" stop-color="#d97706"/>
+    <linearGradient id="entryG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3fb6a8"/>
+      <stop offset="1" stop-color="#4fc3c8"/>
     </linearGradient>
-    <linearGradient id="exitGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#10b981"/>
-      <stop offset="100%" stop-color="#059669"/>
+    <linearGradient id="exitG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ef7a5a"/>
+      <stop offset="1" stop-color="#f2a04a"/>
     </linearGradient>
-    <linearGradient id="glowAmber" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0.05"/>
-    </linearGradient>
-    <linearGradient id="arrowGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#f59e0b"/>
-      <stop offset="100%" stop-color="#10b981"/>
-    </linearGradient>
-    <linearGradient id="skipGrad" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#ef4444"/>
-      <stop offset="100%" stop-color="#10b981"/>
-    </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <filter id="softShadow">
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.3"/>
-    </filter>
-    <filter id="bigGlow">
-      <feGaussianBlur stdDeviation="8" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <marker id="arrowHead" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-      <path d="M0,0 L8,3 L0,6" fill="#94a3b8"/>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#475069"/>
     </marker>
-    <marker id="arrowAmber" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-      <path d="M0,0 L8,3 L0,6" fill="#f59e0b"/>
+    <marker id="arrL" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#fff6c7"/>
     </marker>
-    <marker id="arrowGreen" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-      <path d="M0,0 L8,3 L0,6" fill="#10b981"/>
-    </marker>
-    <marker id="arrowRed" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
-      <path d="M0,0 L8,3 L0,6" fill="#ef4444"/>
+    <marker id="arrO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ef7a5a"/>
     </marker>
   </defs>
 
-  <!-- Background -->
-  <rect width="900" height="620" fill="url(#bgGrad)" rx="12"/>
+  <rect width="1200" height="760" fill="url(#bg)"/>
 
   <!-- Title -->
-  <text x="450" y="38" text-anchor="middle" fill="#f8fafc" font-size="20" font-weight="700" letter-spacing="0.5">LoopCTR</text>
-  <text x="450" y="60" text-anchor="middle" fill="#94a3b8" font-size="12">Train Multi-Loop · Infer Zero-Loop — Decoupling Computation from Parameters</text>
+  <text x="600" y="46" text-anchor="middle" font-size="24" font-weight="700" fill="#1f2640">LoopCTR · 用「循环缩放」解耦 参数量 与 计算深度</text>
+  <text x="600" y="70" text-anchor="middle" font-size="13" fill="#5a6480">训练时多次循环共享参数，推理时零循环直接出结果——延迟不变、效果超越 SOTA</text>
 
-  <!-- Core tension banner -->
-  <rect x="200" y="72" width="500" height="28" rx="14" fill="#ef4444" fill-opacity="0.12" stroke="#ef4444" stroke-opacity="0.3" stroke-width="0.8"/>
-  <text x="450" y="90" text-anchor="middle" fill="#fca5a5" font-size="11" font-weight="600">核心矛盾：堆叠更多层 → 参数↑ 延迟↑ &nbsp;vs&nbsp; 工业部署低延迟约束</text>
-
-  <!-- ============ MAIN ARCHITECTURE ============ -->
-
-  <!-- Entry Block -->
-  <rect x="60" y="130" width="160" height="200" rx="12" fill="url(#entryGrad)" fill-opacity="0.15" stroke="#2563eb" stroke-width="1.5" filter="url(#softShadow)"/>
-  <rect x="60" y="130" width="160" height="30" rx="12" fill="url(#entryGrad)" fill-opacity="0.6"/>
-  <rect x="60" y="148" width="160" height="12" fill="url(#entryGrad)" fill-opacity="0.6"/>
-  <text x="140" y="150" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">Entry Block</text>
-
-  <!-- Feature tokens -->
-  <g transform="translate(80, 175)">
-    <rect width="120" height="22" rx="4" fill="#3b82f6" fill-opacity="0.2" stroke="#3b82f6" stroke-opacity="0.5" stroke-width="0.8"/>
-    <text x="60" y="15" text-anchor="middle" fill="#93c5fd" font-size="9">短期行为 Tokens</text>
-  </g>
-  <g transform="translate(80, 205)">
-    <rect width="120" height="22" rx="4" fill="#3b82f6" fill-opacity="0.2" stroke="#3b82f6" stroke-opacity="0.5" stroke-width="0.8"/>
-    <text x="60" y="15" text-anchor="middle" fill="#93c5fd" font-size="9">长期压缩 Tokens</text>
-  </g>
-  <g transform="translate(80, 235)">
-    <rect width="120" height="22" rx="4" fill="#3b82f6" fill-opacity="0.2" stroke="#3b82f6" stroke-opacity="0.5" stroke-width="0.8"/>
-    <text x="60" y="15" text-anchor="middle" fill="#93c5fd" font-size="9">用户/物品/上下文</text>
+  <!-- Top tension bar -->
+  <g transform="translate(80,92)">
+    <rect width="1040" height="46" rx="10" fill="#ffffff" stroke="#d8ddec"/>
+    <text x="20" y="29" font-size="13" fill="#5a6480">既有范式 (深度/宽度/输入缩放)：</text>
+    <text x="210" y="29" font-size="13" font-weight="600" fill="#c43a3a">参数 ↑  计算 ↑  延迟 ↑</text>
+    <line x1="470" y1="23" x2="540" y2="23" stroke="#9aa3bd" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="560" y="29" font-size="13" fill="#5a6480">LoopCTR 循环缩放：</text>
+    <text x="720" y="29" font-size="13" font-weight="600" fill="#2a7d5a">参数不变 · 训练计算 ↑ · 推理计算 = 单次</text>
   </g>
 
-  <text x="140" y="285" text-anchor="middle" fill="#60a5fa" font-size="9">分组投影 + Self-Attn</text>
-  <text x="140" y="300" text-anchor="middle" fill="#60a5fa" font-size="9">→ 统一表征空间</text>
+  <!-- Process supervision label -->
+  <text x="600" y="168" text-anchor="middle" font-size="13" font-weight="700" fill="#c44a22">过程监督：每一循环深度都要能预测 → BCE 平均</text>
 
-  <!-- LOOP BLOCK — Central focal point -->
-  <!-- Ambient glow -->
-  <ellipse cx="450" cy="260" rx="170" ry="120" fill="url(#glowAmber)" filter="url(#bigGlow)"/>
-
-  <!-- Loop container -->
-  <rect x="280" y="140" width="340" height="250" rx="16" fill="#f59e0b" fill-opacity="0.06" stroke="#f59e0b" stroke-width="1.8" stroke-dasharray="6,3" filter="url(#softShadow)"/>
-  <rect x="280" y="140" width="340" height="32" rx="16" fill="#f59e0b" fill-opacity="0.2"/>
-  <rect x="280" y="160" width="340" height="12" fill="#f59e0b" fill-opacity="0.2"/>
-  <text x="450" y="161" text-anchor="middle" fill="#fbbf24" font-size="13" font-weight="700">Loop Block — 共享参数递归复用</text>
-
-  <!-- Loop iteration circles -->
-  <g filter="url(#glow)">
-    <circle cx="350" cy="215" r="28" fill="#f59e0b" fill-opacity="0.15" stroke="#f59e0b" stroke-width="1.5"/>
-    <text x="350" y="212" text-anchor="middle" fill="#fbbf24" font-size="10" font-weight="700">Loop</text>
-    <text x="350" y="225" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="700">l=1</text>
+  <!-- Process supervision: multiple exits (redrawn cleaner) -->
+  <g stroke="#ef7a5a" stroke-width="1.6" fill="none" stroke-dasharray="5 4">
+    <path d="M 360 250 C 500 190, 780 190, 878 300" marker-end="url(#arrO)"/>
+    <path d="M 550 250 C 650 210, 820 220, 882 310" marker-end="url(#arrO)"/>
+    <path d="M 740 250 C 790 235, 850 260, 884 320" marker-end="url(#arrO)"/>
   </g>
-  <g filter="url(#glow)">
-    <circle cx="450" cy="215" r="28" fill="#f59e0b" fill-opacity="0.2" stroke="#f59e0b" stroke-width="1.5"/>
-    <text x="450" y="212" text-anchor="middle" fill="#fbbf24" font-size="10" font-weight="700">Loop</text>
-    <text x="450" y="225" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="700">l=2</text>
-  </g>
-  <g filter="url(#glow)">
-    <circle cx="550" cy="215" r="28" fill="#f59e0b" fill-opacity="0.25" stroke="#f59e0b" stroke-width="1.5"/>
-    <text x="550" y="212" text-anchor="middle" fill="#fbbf24" font-size="10" font-weight="700">Loop</text>
-    <text x="550" y="225" text-anchor="middle" fill="#fbbf24" font-size="11" font-weight="700">l=3</text>
+  <g font-size="11" fill="#c44a22" font-weight="600">
+    <text x="360" y="198">l=1 exit</text>
+    <text x="550" y="198">l=2 exit</text>
+    <text x="720" y="216">l=L exit</text>
   </g>
 
-  <!-- Curved arrows between loops -->
-  <path d="M378,210 Q400,195 422,210" fill="none" stroke="#f59e0b" stroke-width="1.2" marker-end="url(#arrowAmber)"/>
-  <path d="M478,210 Q500,195 522,210" fill="none" stroke="#f59e0b" stroke-width="1.2" marker-end="url(#arrowAmber)"/>
-
-  <!-- Shared params label -->
-  <rect x="370" y="248" width="160" height="20" rx="10" fill="#f59e0b" fill-opacity="0.12" stroke="#fbbf24" stroke-width="0.8"/>
-  <text x="450" y="262" text-anchor="middle" fill="#fde68a" font-size="9" font-weight="600">🔗 同一组参数 × L 轮</text>
-
-  <!-- Hyper-Connected Residuals -->
-  <rect x="300" y="278" width="130" height="46" rx="8" fill="#8b5cf6" fill-opacity="0.12" stroke="#8b5cf6" stroke-width="1" filter="url(#softShadow)"/>
-  <text x="365" y="296" text-anchor="middle" fill="#c4b5fd" font-size="9" font-weight="600">超连接残差</text>
-  <text x="365" y="310" text-anchor="middle" fill="#a78bfa" font-size="8">n 条并行流 · 动态系数</text>
-  <text x="365" y="320" text-anchor="middle" fill="#a78bfa" font-size="7">适应不同循环深度</text>
-
-  <!-- MoE -->
-  <rect x="470" y="278" width="130" height="46" rx="8" fill="#06b6d4" fill-opacity="0.12" stroke="#06b6d4" stroke-width="1" filter="url(#softShadow)"/>
-  <text x="535" y="296" text-anchor="middle" fill="#67e8f9" font-size="9" font-weight="600">MoE 稀疏专家</text>
-  <text x="535" y="310" text-anchor="middle" fill="#22d3ee" font-size="8">V/O投影 + FFN</text>
-  <text x="535" y="320" text-anchor="middle" fill="#22d3ee" font-size="7">扩容量不增推理延迟</text>
-
-  <!-- Process supervision arrows down from each loop -->
-  <g opacity="0.7">
-    <line x1="350" y1="243" x2="350" y2="350" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,2"/>
-    <line x1="450" y1="243" x2="450" y2="350" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,2"/>
-    <line x1="550" y1="243" x2="550" y2="350" stroke="#ef4444" stroke-width="1" stroke-dasharray="3,2"/>
+  <!-- Entry block -->
+  <g transform="translate(70,270)">
+    <rect width="150" height="210" rx="14" fill="url(#entryG)"/>
+    <text x="75" y="34" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">Entry Block</text>
+    <text x="75" y="54" text-anchor="middle" font-size="11" fill="#e6fffa">特征对齐 · 分组投影</text>
+    <rect x="15" y="74" width="120" height="28" rx="6" fill="rgba(255,255,255,0.18)"/>
+    <text x="75" y="92" text-anchor="middle" font-size="11" fill="#fff">短期行为 tokens</text>
+    <rect x="15" y="110" width="120" height="28" rx="6" fill="rgba(255,255,255,0.18)"/>
+    <text x="75" y="128" text-anchor="middle" font-size="11" fill="#fff">长期压缩 tokens</text>
+    <rect x="15" y="146" width="120" height="28" rx="6" fill="rgba(255,255,255,0.18)"/>
+    <text x="75" y="164" text-anchor="middle" font-size="11" fill="#fff">全局 user/item/ctx</text>
+    <text x="75" y="192" text-anchor="middle" font-size="10" fill="#d6fff4">前缀注意力掩码</text>
   </g>
 
-  <!-- Process supervision label area -->
-  <rect x="310" y="350" width="280" height="28" rx="6" fill="#ef4444" fill-opacity="0.1" stroke="#ef4444" stroke-opacity="0.4" stroke-width="0.8"/>
-  <text x="450" y="368" text-anchor="middle" fill="#fca5a5" font-size="10" font-weight="600">过程监督：每个深度 l 都计算 BCE Loss</text>
+  <!-- Loop block (central) -->
+  <g transform="translate(320,240)">
+    <rect x="40" y="28" width="440" height="240" rx="18" fill="#b9a8f0" opacity="0.35"/>
+    <rect x="22" y="14" width="440" height="240" rx="18" fill="#a18ce8" opacity="0.45"/>
+    <rect x="0" y="0" width="440" height="240" rx="18" fill="url(#loopG)"/>
 
-  <!-- l=0 bypass path -->
-  <text x="300" y="340" text-anchor="middle" fill="#94a3b8" font-size="8" font-style="italic">l=0</text>
-  <text x="400" y="340" text-anchor="middle" fill="#94a3b8" font-size="8" font-style="italic">l=1</text>
-  <text x="500" y="340" text-anchor="middle" fill="#94a3b8" font-size="8" font-style="italic">l=2</text>
-  <text x="600" y="340" text-anchor="middle" fill="#94a3b8" font-size="8" font-style="italic">l=3</text>
+    <text x="220" y="32" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">Loop Block · 共享参数 × L 次</text>
+    <text x="220" y="52" text-anchor="middle" font-size="11" fill="#ecd9ff">同一组权重反复调用：参数量 O(1)，计算深度 O(L)</text>
 
-  <!-- Exit Block -->
-  <rect x="680" y="165" width="160" height="160" rx="12" fill="url(#exitGrad)" fill-opacity="0.15" stroke="#10b981" stroke-width="1.5" filter="url(#softShadow)"/>
-  <rect x="680" y="165" width="160" height="30" rx="12" fill="url(#exitGrad)" fill-opacity="0.5"/>
-  <rect x="680" y="183" width="160" height="12" fill="url(#exitGrad)" fill-opacity="0.5"/>
-  <text x="760" y="185" text-anchor="middle" fill="#fff" font-size="12" font-weight="700">Exit Block</text>
+    <g transform="translate(24,72)">
+      <rect width="180" height="70" rx="10" fill="rgba(255,255,255,0.16)" stroke="rgba(255,255,255,0.4)"/>
+      <text x="90" y="26" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">Hyper-Connected</text>
+      <text x="90" y="44" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">Residuals (n 流)</text>
+      <text x="90" y="60" text-anchor="middle" font-size="10" fill="#ecd9ff">多深度自适应混合</text>
+    </g>
+    <g transform="translate(224,72)">
+      <rect width="192" height="70" rx="10" fill="rgba(255,255,255,0.16)" stroke="rgba(255,255,255,0.4)"/>
+      <text x="96" y="26" text-anchor="middle" font-size="12" font-weight="600" fill="#fff">MoE 注意力 + FFN</text>
+      <text x="96" y="44" text-anchor="middle" font-size="10" fill="#ecd9ff">WV / WO 路由共享</text>
+      <text x="96" y="60" text-anchor="middle" font-size="10" fill="#ecd9ff">稀疏激活扩容量</text>
+    </g>
 
-  <text x="760" y="215" text-anchor="middle" fill="#6ee7b7" font-size="9">Cross-Attention</text>
-  <text x="760" y="230" text-anchor="middle" fill="#6ee7b7" font-size="9">全局token聚合序列</text>
-  <text x="760" y="250" text-anchor="middle" fill="#6ee7b7" font-size="9">↓ MLP</text>
-  <text x="760" y="270" text-anchor="middle" fill="#34d399" font-size="12" font-weight="700">P(click)</text>
-
-  <!-- Connecting arrows: Entry → Loop → Exit -->
-  <path d="M220,230 L275,230" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrowHead)"/>
-  <path d="M620,230 L675,230" fill="none" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrowHead)"/>
-
-  <!-- ============ ZERO-LOOP INFERENCE HIGHLIGHT ============ -->
-
-  <!-- Big red bypass arrow from Entry directly to Exit -->
-  <path d="M220,175 Q250,115 450,105 Q650,95 760,160" fill="none" stroke="#ef4444" stroke-width="2.5" stroke-dasharray="8,4" marker-end="url(#arrowRed)" filter="url(#glow)"/>
-
-  <rect x="355" y="96" width="190" height="24" rx="12" fill="#ef4444" fill-opacity="0.2" stroke="#ef4444" stroke-width="1"/>
-  <text x="450" y="112" text-anchor="middle" fill="#fca5a5" font-size="10" font-weight="700">⚡ 推理时 l=0 直接跳过</text>
-
-  <!-- ============ RESULTS PANEL ============ -->
-  <rect x="50" y="410" width="800" height="190" rx="14" fill="#1e293b" fill-opacity="0.5" stroke="#334155" stroke-width="1"/>
-
-  <!-- Left: Key insight -->
-  <g transform="translate(70, 430)">
-    <text x="0" y="0" fill="#f8fafc" font-size="13" font-weight="700">核心洞察</text>
-    <text x="0" y="22" fill="#cbd5e1" font-size="10">训练时多循环的监督信号被</text>
-    <text x="0" y="36" fill="#cbd5e1" font-size="10">"内化"到共享参数中</text>
-    <text x="0" y="56" fill="#fbbf24" font-size="11" font-weight="600">→ 推理零循环即超越所有基线</text>
-
-    <rect x="0" y="70" width="200" height="50" rx="8" fill="#10b981" fill-opacity="0.1" stroke="#10b981" stroke-width="0.8"/>
-    <text x="100" y="88" text-anchor="middle" fill="#6ee7b7" font-size="9">Amazon: AUC 0.8715 &gt; 最佳基线 0.8690</text>
-    <text x="100" y="104" text-anchor="middle" fill="#6ee7b7" font-size="9">FLOPs 13M vs HSTU 2150M (160×↓)</text>
-    <text x="100" y="116" text-anchor="middle" fill="#6ee7b7" font-size="9">延迟 9.26ms vs 775ms (84×↓)</text>
+    <!-- recursion arrow -->
+    <path d="M 70 180 C 50 215, 80 220, 140 220 L 300 220 C 360 220, 390 215, 370 180"
+          fill="none" stroke="#fff6c7" stroke-width="2.5" marker-end="url(#arrL)" opacity="0.95"/>
+    <text x="220" y="215" text-anchor="middle" font-size="12" font-weight="700" fill="#fff6c7">recursive × L  (共享参数)</text>
   </g>
 
-  <!-- Center: Visual comparison bars -->
-  <g transform="translate(340, 430)">
-    <text x="0" y="0" fill="#f8fafc" font-size="13" font-weight="700">效率对比</text>
-
-    <!-- FLOPs bars -->
-    <text x="0" y="25" fill="#94a3b8" font-size="9">FLOPs</text>
-    <rect x="55" y="16" width="200" height="14" rx="3" fill="#475569" fill-opacity="0.3"/>
-    <rect x="55" y="16" width="200" height="14" rx="3" fill="#ef4444" fill-opacity="0.5"/>
-    <text x="260" y="27" fill="#fca5a5" font-size="8">HSTU 2150M</text>
-    <rect x="55" y="34" width="200" height="14" rx="3" fill="#475569" fill-opacity="0.3"/>
-    <rect x="55" y="34" width="1.2" height="14" rx="1" fill="#10b981"/>
-    <text x="62" y="45" fill="#6ee7b7" font-size="8">LoopCTR 13M</text>
-
-    <!-- Latency bars -->
-    <text x="0" y="68" fill="#94a3b8" font-size="9">延迟</text>
-    <rect x="55" y="59" width="200" height="14" rx="3" fill="#475569" fill-opacity="0.3"/>
-    <rect x="55" y="59" width="200" height="14" rx="3" fill="#ef4444" fill-opacity="0.5"/>
-    <text x="260" y="70" fill="#fca5a5" font-size="8">775ms</text>
-    <rect x="55" y="77" width="200" height="14" rx="3" fill="#475569" fill-opacity="0.3"/>
-    <rect x="55" y="77" width="2.4" height="14" rx="1" fill="#10b981"/>
-    <text x="63" y="88" fill="#6ee7b7" font-size="8">9.26ms</text>
-
-    <!-- Oracle headroom -->
-    <rect x="0" y="105" width="220" height="32" rx="6" fill="#8b5cf6" fill-opacity="0.1" stroke="#8b5cf6" stroke-width="0.8"/>
-    <text x="110" y="120" text-anchor="middle" fill="#c4b5fd" font-size="9" font-weight="600">🔮 Oracle未挖掘空间</text>
-    <text x="110" y="133" text-anchor="middle" fill="#a78bfa" font-size="9">+0.02~0.04 AUC · 少循环天花板更高</text>
+  <!-- Exit block -->
+  <g transform="translate(880,270)">
+    <rect width="150" height="210" rx="14" fill="url(#exitG)"/>
+    <text x="75" y="34" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">Exit Block</text>
+    <text x="75" y="54" text-anchor="middle" font-size="11" fill="#fff2ea">Cross-Attn + MLP</text>
+    <rect x="15" y="82" width="120" height="46" rx="8" fill="rgba(255,255,255,0.2)"/>
+    <text x="75" y="102" text-anchor="middle" font-size="12" fill="#fff">全局 tokens 聚合</text>
+    <text x="75" y="120" text-anchor="middle" font-size="12" fill="#fff">→ p(click)</text>
+    <text x="75" y="158" text-anchor="middle" font-size="11" fill="#fff2ea">每一循环深度</text>
+    <text x="75" y="176" text-anchor="middle" font-size="11" fill="#fff2ea">都接一次 Exit</text>
   </g>
 
-  <!-- Right: Key formula / paradigm -->
-  <g transform="translate(630, 430)">
-    <text x="0" y="0" fill="#f8fafc" font-size="13" font-weight="700">范式突破</text>
+  <!-- flow arrows -->
+  <line x1="220" y1="375" x2="316" y2="375" stroke="#475069" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="762" y1="375" x2="878" y2="375" stroke="#475069" stroke-width="2" marker-end="url(#arr)"/>
 
-    <rect x="0" y="16" width="190" height="68" rx="8" fill="#f59e0b" fill-opacity="0.08" stroke="#f59e0b" stroke-width="0.8"/>
-    <text x="95" y="35" text-anchor="middle" fill="#fde68a" font-size="10" font-weight="600">传统缩放</text>
-    <text x="95" y="50" text-anchor="middle" fill="#fbbf24" font-size="9">更多层 = 更多参数 = 更高延迟</text>
-    <text x="95" y="65" text-anchor="middle" fill="#94a3b8" font-size="9">计算 ∝ 参数 ∝ 延迟</text>
-    <line x1="95" y1="72" x2="95" y2="95" stroke="#94a3b8" stroke-width="1" marker-end="url(#arrowHead)"/>
+  <!-- Bottom: training vs inference comparison -->
+  <g transform="translate(70,530)">
+    <rect width="1060" height="190" rx="14" fill="#ffffff" stroke="#d8ddec"/>
 
-    <rect x="0" y="95" width="190" height="48" rx="8" fill="#10b981" fill-opacity="0.1" stroke="#10b981" stroke-width="1.2"/>
-    <text x="95" y="114" text-anchor="middle" fill="#6ee7b7" font-size="10" font-weight="700">循环缩放 (LoopCTR)</text>
-    <text x="95" y="130" text-anchor="middle" fill="#34d399" font-size="9">训练计算↑ · 参数不变 · 推理更快</text>
-  </g>
+    <!-- Training side -->
+    <g transform="translate(24,20)">
+      <circle cx="14" cy="14" r="7" fill="#7c52e8"/>
+      <text x="32" y="19" font-size="14" font-weight="700" fill="#1f2640">训练 Training</text>
+      <text x="32" y="42" font-size="12" fill="#5a6480">Entry → Loop × L → Exit，每一深度监督</text>
+      <g transform="translate(0,62)">
+        <rect width="490" height="90" rx="10" fill="#f3eeff" stroke="#d6c8f5"/>
+        <text x="16" y="26" font-size="11" fill="#2d3553">• 共享参数被迫在每个深度都学出可用表征</text>
+        <text x="16" y="50" font-size="11" fill="#2d3553">• Hyper-Residual 打破 1:1 残差瓶颈</text>
+        <text x="16" y="74" font-size="11" fill="#2d3553">• MoE 扩容量，单 token 稀疏激活</text>
+      </g>
+    </g>
 
-  <!-- Subtle grid dots for texture -->
-  <g opacity="0.05" fill="#fff">
-    <circle cx="50" cy="50" r="1"/><circle cx="100" cy="50" r="1"/><circle cx="150" cy="50" r="1"/>
-    <circle cx="750" cy="50" r="1"/><circle cx="800" cy="50" r="1"/><circle cx="850" cy="50" r="1"/>
+    <!-- divider -->
+    <line x1="540" y1="30" x2="540" y2="170" stroke="#d8ddec" stroke-dasharray="4 4"/>
+
+    <!-- Inference side -->
+    <g transform="translate(564,20)">
+      <circle cx="14" cy="14" r="7" fill="#ef7a5a"/>
+      <text x="32" y="19" font-size="14" font-weight="700" fill="#1f2640">推理 Inference · 零循环</text>
+      <text x="32" y="42" font-size="12" fill="#5a6480">直接走 l=0：Entry → Exit，跳过 Loop Block</text>
+      <g transform="translate(0,62)">
+        <rect width="472" height="90" rx="10" fill="#fff0e8" stroke="#f5c8b1"/>
+        <text x="16" y="28" font-size="11" font-weight="600" fill="#c44a22">InHouse：13.38M FLOPs · 9.26ms</text>
+        <text x="16" y="52" font-size="11" fill="#5a6480">vs HSTU：2150M FLOPs · 775ms</text>
+        <text x="16" y="76" font-size="11" font-weight="600" fill="#2a7d5a">Amazon AUC 0.8715 &gt; 所有基线 0.8690</text>
+      </g>
+    </g>
   </g>
 </svg>
