@@ -1,0 +1,13 @@
+{
+  "report_date": "2026-04-23",
+  "provider": "bedrock-opus-47",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 3109,
+  "focus_titles": [
+    "Efficient Multi-Cohort Inference for Long-Term Effects and Lifetime Value in A/B Testing with User Learning",
+    "AFMRL: Attribute-Enhanced Fine-Grained Multi-Modal Representation Learning in E-commerce"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Xiaoyu"
+}
