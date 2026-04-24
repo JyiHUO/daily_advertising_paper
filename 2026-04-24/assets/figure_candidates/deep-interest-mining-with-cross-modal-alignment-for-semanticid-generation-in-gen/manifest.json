@@ -1,0 +1,116 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-24/downloaded_pdfs/deep-interest-mining-with-cross-modal-alignment-for-semanticid-generation-in-gen.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-24/assets/figure_candidates/deep-interest-mining-with-cross-modal-alignment-for-semanticid-generation-in-gen",
+  "candidates": [
+    {
+      "id": "page-7-drawing-caption-35",
+      "page_index": 7,
+      "caption": "Figure 3: Impact of QARM reinforcement learning across three datasets (HR@10). Orange bars: SFT-only baseline; Blue bars: full DeepInterestGR with GRPO optimization. All datasets show consistent improvements (9.2%–12.1%), with Sports benefiting most from interest-quality-aware policy learning.",
+      "clip": [
+        301.0293884277344,
+        34.86933517456055,
+        564.184814453125,
+        229.239990234375
+      ],
+      "clip_area": 51149.69253909972,
+      "page_area": 484704.0,
+      "text_density": 0.20414671349533817,
+      "kind": "drawing_cluster_with_caption",
+      "score": 20.11952710738082,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-24/assets/figure_candidates/deep-interest-mining-with-cross-modal-alignment-for-semanticid-generation-in-gen/01-p8-drawing_cluster_with_caption.png",
+      "filename": "01-p8-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-0-drawing-cluster-0",
+      "page_index": 0,
+      "caption": "第 1 页矢量图主图候选",
+      "clip": [
+        302.3043518066406,
+        166.52548217773438,
+        604.0,
+        340.7004699707031
+      ],
+      "clip_area": 52547.835841270164,
+      "page_area": 484704.0,
+      "text_density": 0.01371351125847399,
+      "kind": "drawing_cluster",
+      "score": 14.58386484268078,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-24/assets/figure_candidates/deep-interest-mining-with-cross-modal-alignment-for-semanticid-generation-in-gen/02-p1-drawing_cluster.png",
+      "filename": "02-p1-drawing_cluster.png"
+    },
+    {
+      "id": "page-4-block-28",
+      "page_index": 4,
+      "caption": "In this section, we empirically evaluate the effectiveness of the pro- posed DeepInterestGR framework. We aim to answer the following research questions:",
+      "clip": [
+        287.3549865722656,
+        37.40404052734374,
+        590.3138061523438,
+        346.20404052734375
+      ],
+      "clip_area": 93553.68348632814,
+      "page_area": 484704.0,
+      "text_density": 0.5418535937918127,
+      "kind": "captioned_figure",
+      "score": 13.039485372070313,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-24/assets/figure_candidates/deep-interest-mining-with-cross-modal-alignment-for-semanticid-generation-in-gen/03-p5-captioned_figure.png",
+      "filename": "03-p5-captioned_figure.png"
+    },
+    {
+      "id": "page-7-block-35",
+      "page_index": 7,
+      "caption": "Figure 3: Impact of QARM reinforcement learning across three datasets (HR@10). Orange bars: SFT-only baseline; Blue bars: full DeepInterestGR with GRPO optimization. All datasets show consistent improvements (9.2%–12.1%), with Sports benefiting most from interest-quality-aware policy learning.",
+      "clip": [
+        287.3549865722656,
+        18.0,
+        589.4900756835938,
+        218.0240020751953
+      ],
+      "clip_area": 60434.26969139362,
+      "page_area": 484704.0,
+      "text_density": 0.1733853260540917,
+      "kind": "captioned_figure",
+      "score": 10.068372322214426,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-24/assets/figure_candidates/deep-interest-mining-with-cross-modal-alignment-for-semanticid-generation-in-gen/04-p8-captioned_figure.png",
+      "filename": "04-p8-captioned_figure.png"
+    },
+    {
+      "id": "page-3-embedded-0-0",
+      "page_index": 3,
+      "caption": "第 4 页内嵌图片候选",
+      "clip": [
+        41.79800033569336,
+        71.68228149414062,
+        570.2189331054688,
+        349.3970031738281
+      ],
+      "clip_area": 146750.27227387903,
+      "page_area": 484704.0,
+      "text_density": 0.026752451831664616,
+      "kind": "embedded_image",
+      "xref": 276,
+      "score": 7.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-24/assets/figure_candidates/deep-interest-mining-with-cross-modal-alignment-for-semanticid-generation-in-gen/05-p4-embedded_image.png",
+      "filename": "05-p4-embedded_image.png"
+    },
+    {
+      "id": "page-7-drawing-cluster-0",
+      "page_index": 7,
+      "caption": "第 8 页矢量图主图候选",
+      "clip": [
+        303.0293884277344,
+        36.86933517456055,
+        562.184814453125,
+        227.239990234375
+      ],
+      "clip_area": 49335.5882147589,
+      "page_area": 484704.0,
+      "text_density": 0.20095724657509614,
+      "kind": "drawing_cluster",
+      "score": 1.2907384078804407,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-24/assets/figure_candidates/deep-interest-mining-with-cross-modal-alignment-for-semanticid-generation-in-gen/06-p8-drawing_cluster.png",
+      "filename": "06-p8-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-24/assets/figure_candidates/deep-interest-mining-with-cross-modal-alignment-for-semanticid-generation-in-gen/contact-sheet.svg"
+}

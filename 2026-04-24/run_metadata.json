@@ -1,0 +1,19 @@
+{
+  "date": "2026-04-24",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL"
+  ],
+  "candidate_count": 8,
+  "supplementary_count": 0,
+  "focus_titles": [
+    "Counterfactual Multi-task Learning for Delayed Conversion Modeling in E-commerce Sales Pre-Promotion",
+    "Deep Interest Mining with Cross-Modal Alignment for SemanticID Generation in Generative Recommendation"
+  ],
+  "focus_status": {
+    "Counterfactual Multi-task Learning for Delayed Conversion Modeling in E-commerce Sales Pre-Promotion": "completed",
+    "Deep Interest Mining with Cross-Modal Alignment for SemanticID Generation in Generative Recommendation": "completed"
+  }
+}

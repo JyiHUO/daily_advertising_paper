@@ -1,0 +1,223 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 820" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f1530"/>
+      <stop offset="1" stop-color="#1a1f48"/>
+    </linearGradient>
+    <linearGradient id="gCMSA" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3ec4ff"/>
+      <stop offset="1" stop-color="#2a7dd1"/>
+    </linearGradient>
+    <linearGradient id="gDCIM" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffb86b"/>
+      <stop offset="1" stop-color="#ff7a59"/>
+    </linearGradient>
+    <linearGradient id="gQARM" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8affb5"/>
+      <stop offset="1" stop-color="#3ed29a"/>
+    </linearGradient>
+    <linearGradient id="gBad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4a2030"/>
+      <stop offset="1" stop-color="#6a2838"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#cfd8ff"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8affb5"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ff7a7a"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="820" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="40" y="52" fill="#ffffff" font-size="26" font-weight="700">三管齐下修好 Semantic ID：让生成式推荐不再"压糊"语义</text>
+  <text x="40" y="80" fill="#9aa6d6" font-size="15">CMSA 对齐模态  ·  DCIM 注入深层兴趣  ·  QARM 用质量奖励筛掉劣质 SID</text>
+
+  <!-- Left: multimodal inputs -->
+  <g transform="translate(40,120)">
+    <rect width="230" height="290" rx="14" fill="#1b2350" stroke="#3a4580" stroke-width="1"/>
+    <text x="115" y="30" text-anchor="middle" fill="#cfd8ff" font-size="15" font-weight="600">物料输入</text>
+
+    <rect x="20" y="50" width="190" height="70" rx="8" fill="#232c5e"/>
+    <text x="32" y="72" fill="#9fd0ff" font-size="12">图像</text>
+    <text x="32" y="92" fill="#e4ecff" font-size="12">口红特写 / 青少年足球</text>
+    <text x="32" y="110" fill="#7d8ab8" font-size="11">视觉风格 · 配色 · 场景</text>
+
+    <rect x="20" y="135" width="190" height="55" rx="8" fill="#232c5e"/>
+    <text x="32" y="157" fill="#ffc79a" font-size="12">文本</text>
+    <text x="32" y="177" fill="#e4ecff" font-size="12">标题 + 描述</text>
+
+    <rect x="20" y="205" width="190" height="65" rx="8" fill="#232c5e"/>
+    <text x="32" y="227" fill="#b7ffd0" font-size="12">广告上下文</text>
+    <text x="32" y="247" fill="#e4ecff" font-size="12">投放定向 / 落地页</text>
+    <text x="32" y="263" fill="#7d8ab8" font-size="11">隐含用户动机信号</text>
+  </g>
+
+  <!-- Problem strip (old pipeline) at bottom -->
+  <g transform="translate(40,620)">
+    <rect width="1200" height="170" rx="14" fill="url(#gBad)" opacity="0.55"/>
+    <text x="24" y="32" fill="#ffd2d2" font-size="14" font-weight="700">✗ 传统两阶段 SID：信息退化 · 语义退化 · 模态失配</text>
+
+    <g transform="translate(30,55)" fill="#ffe6e6" font-size="12">
+      <rect width="170" height="85" rx="8" fill="#3a1a28"/>
+      <text x="85" y="24" text-anchor="middle" font-weight="600">图 encoder</text>
+      <text x="85" y="46" text-anchor="middle">文 encoder</text>
+      <text x="85" y="70" text-anchor="middle" fill="#ff9a9a" font-size="11">两个空间没对齐</text>
+    </g>
+    <path d="M205 97 L 235 97" stroke="#ff9a7a" stroke-width="2" fill="none" marker-end="url(#arrR)"/>
+    <g transform="translate(240,55)" fill="#ffe6e6" font-size="12">
+      <rect width="170" height="85" rx="8" fill="#3a1a28"/>
+      <text x="85" y="24" text-anchor="middle" font-weight="600">拼接 embedding</text>
+      <text x="85" y="46" text-anchor="middle">与量化目标不一致</text>
+      <text x="85" y="70" text-anchor="middle" fill="#ff9a9a" font-size="11">语义在压缩中丢失</text>
+    </g>
+    <path d="M415 97 L 445 97" stroke="#ff9a7a" stroke-width="2" fill="none" marker-end="url(#arrR)"/>
+    <g transform="translate(450,55)" fill="#ffe6e6" font-size="12">
+      <rect width="170" height="85" rx="8" fill="#3a1a28"/>
+      <text x="85" y="24" text-anchor="middle" font-weight="600">RQ-VAE 级联量化</text>
+      <text x="85" y="46" text-anchor="middle">后验无质量筛选</text>
+      <text x="85" y="70" text-anchor="middle" fill="#ff9a9a" font-size="11">劣质 SID 混入</text>
+    </g>
+    <path d="M625 97 L 655 97" stroke="#ff9a7a" stroke-width="2" fill="none" marker-end="url(#arrR)"/>
+    <g transform="translate(660,55)" fill="#ffe6e6" font-size="12">
+      <rect width="200" height="85" rx="8" fill="#3a1a28"/>
+      <text x="100" y="24" text-anchor="middle" font-weight="600">下游 GR 模型</text>
+      <text x="100" y="46" text-anchor="middle">相似动机聚不到一起</text>
+      <text x="100" y="70" text-anchor="middle" fill="#ff9a9a" font-size="11">next-token 质量受限</text>
+    </g>
+
+    <text x="890" y="88" fill="#ffd2d2" font-size="13" font-weight="600">本文：三处痛点</text>
+    <text x="890" y="110" fill="#ffd2d2" font-size="13" font-weight="600">在同一流程中同时修复</text>
+  </g>
+
+  <!-- Main pipeline: three stages -->
+  <!-- Stage 1: CMSA -->
+  <g transform="translate(300,140)">
+    <rect width="270" height="450" rx="16" fill="#13224a" stroke="url(#gCMSA)" stroke-width="2"/>
+    <rect x="0" y="0" width="270" height="46" rx="16" fill="url(#gCMSA)"/>
+    <text x="20" y="30" fill="#07233f" font-size="17" font-weight="700">① CMSA  跨模态对齐</text>
+    <text x="20" y="74" fill="#9fd0ff" font-size="12">让 VLM 把图像"讲出来"</text>
+
+    <g transform="translate(20,95)">
+      <rect width="230" height="80" rx="10" fill="#1c2d5e"/>
+      <text x="14" y="22" fill="#cfe6ff" font-size="12" font-weight="600">VLM 视觉文字化</text>
+      <text x="14" y="42" fill="#e4ecff" font-size="11.5">"哑光红棕 · 秋冬通勤</text>
+      <text x="14" y="58" fill="#e4ecff" font-size="11.5">  氛围感妆容"</text>
+      <text x="14" y="74" fill="#7d9dd0" font-size="10.5">视觉属性 → 统一文本空间</text>
+    </g>
+
+    <g transform="translate(20,195)">
+      <rect width="230" height="60" rx="10" fill="#1c2d5e"/>
+      <text x="115" y="26" text-anchor="middle" fill="#cfe6ff" font-size="12" font-weight="600">+ 原标题 / 描述</text>
+      <text x="115" y="46" text-anchor="middle" fill="#9fd0ff" font-size="11">拼成单一模态文本</text>
+    </g>
+
+    <g transform="translate(20,275)">
+      <rect width="230" height="58" rx="10" fill="#0f2450" stroke="#3ec4ff" stroke-dasharray="3 3"/>
+      <text x="115" y="26" text-anchor="middle" fill="#8affff" font-size="12" font-weight="600">🎯 修复模态失配</text>
+      <text x="115" y="44" text-anchor="middle" fill="#9fd0ff" font-size="10.5">量化器只需处理一种空间</text>
+    </g>
+
+    <text x="135" y="380" text-anchor="middle" fill="#6a78aa" font-size="11">统一多模态文本 → 下一阶段</text>
+  </g>
+
+  <!-- arrow CMSA -> DCIM -->
+  <path d="M570 310 L 610 310" stroke="#cfd8ff" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Stage 2: DCIM -->
+  <g transform="translate(610,140)">
+    <rect width="290" height="450" rx="16" fill="#2a1d38" stroke="url(#gDCIM)" stroke-width="2"/>
+    <rect x="0" y="0" width="290" height="46" rx="16" fill="url(#gDCIM)"/>
+    <text x="20" y="30" fill="#3a1c00" font-size="17" font-weight="700">② DCIM  深度兴趣挖掘</text>
+    <text x="20" y="74" fill="#ffc79a" font-size="12">LLM 推出动机，SID 要能重构它</text>
+
+    <g transform="translate(20,95)">
+      <rect width="250" height="90" rx="10" fill="#3b2747"/>
+      <text x="14" y="22" fill="#ffe0c8" font-size="12" font-weight="600">Qwen · Chain-of-Thought</text>
+      <text x="14" y="42" fill="#ffe0c8" font-size="11">"青少年体育训练"</text>
+      <text x="14" y="58" fill="#ffe0c8" font-size="11">"家长给孩子买娱乐球"</text>
+      <text x="14" y="74" fill="#ffe0c8" font-size="11">"入门团队装备" + 置信度</text>
+    </g>
+
+    <g transform="translate(20,205)">
+      <rect width="250" height="55" rx="10" fill="#3b2747"/>
+      <text x="125" y="24" text-anchor="middle" fill="#ffe0c8" font-size="12" font-weight="600">Qwen3-Embedding-4B</text>
+      <text x="125" y="42" text-anchor="middle" fill="#ffc79a" font-size="11">兴趣标签 + 原文本 → 富向量</text>
+    </g>
+
+    <g transform="translate(20,275)">
+      <rect width="250" height="60" rx="10" fill="#3b2747"/>
+      <text x="125" y="24" text-anchor="middle" fill="#ffe0c8" font-size="12" font-weight="600">RQ-VAE → (a8, b91, c66)</text>
+      <text x="125" y="44" text-anchor="middle" fill="#ffc79a" font-size="11">多级 Semantic ID</text>
+    </g>
+
+    <g transform="translate(20,350)">
+      <rect width="250" height="72" rx="10" fill="#1f1229" stroke="#ff7a59" stroke-dasharray="3 3"/>
+      <text x="125" y="24" text-anchor="middle" fill="#ffb86b" font-size="12" font-weight="600">⟲ 重构监督</text>
+      <text x="125" y="42" text-anchor="middle" fill="#ffd9b0" font-size="10.5">SID 必须能还原兴趣文本</text>
+      <text x="125" y="58" text-anchor="middle" fill="#ffd9b0" font-size="10.5">🎯 修复语义退化</text>
+    </g>
+
+    <!-- reconstruction loop arrow: from SID box right edge down to reconstruction box right edge -->
+    <path d="M270 305 C 295 305, 295 386, 272 386" stroke="#ff7a59" stroke-width="1.8" fill="none" marker-end="url(#arrR)"/>
+  </g>
+
+  <!-- arrow DCIM -> QARM -->
+  <path d="M900 310 L 940 310" stroke="#cfd8ff" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Stage 3: QARM -->
+  <g transform="translate(940,140)">
+    <rect width="300" height="450" rx="16" fill="#132e28" stroke="url(#gQARM)" stroke-width="2"/>
+    <rect x="0" y="0" width="300" height="46" rx="16" fill="url(#gQARM)"/>
+    <text x="20" y="30" fill="#07362a" font-size="17" font-weight="700">③ QARM  质量感知强化</text>
+    <text x="20" y="74" fill="#b7ffd0" font-size="12">奖励"清晰"，冷落"空泛"</text>
+
+    <g transform="translate(20,95)">
+      <rect width="260" height="56" rx="10" fill="#1b3b32"/>
+      <text x="14" y="22" fill="#d5ffe6" font-size="12" font-weight="600">SFT：用户历史 → 目标 SID</text>
+      <text x="14" y="42" fill="#9fe5c0" font-size="11">学会基础的 next-SID 预测</text>
+    </g>
+
+    <g transform="translate(20,165)">
+      <rect width="260" height="110" rx="10" fill="#1b3b32"/>
+      <text x="14" y="22" fill="#d5ffe6" font-size="12" font-weight="600">GRPO  组内相对优势</text>
+
+      <circle cx="40" cy="58" r="14" fill="#3ed29a"/>
+      <text x="40" y="62" text-anchor="middle" fill="#07362a" font-size="11" font-weight="700">A</text>
+      <text x="62" y="54" fill="#d5ffe6" font-size="11">命中 + 兴趣清晰</text>
+      <text x="62" y="70" fill="#8affb5" font-size="11" font-weight="700">reward = 1 + 0.5</text>
+
+      <circle cx="40" cy="92" r="14" fill="#5a6a66"/>
+      <text x="40" y="96" text-anchor="middle" fill="#1a1a1a" font-size="11" font-weight="700">B</text>
+      <text x="62" y="88" fill="#d5ffe6" font-size="11">命中但兴趣空泛</text>
+      <text x="62" y="104" fill="#a8b8b4" font-size="11" font-weight="700">reward = 1.0</text>
+    </g>
+
+    <g transform="translate(20,290)">
+      <rect width="260" height="60" rx="10" fill="#1b3b32"/>
+      <text x="130" y="24" text-anchor="middle" fill="#d5ffe6" font-size="12" font-weight="600">Qwen 分类器审核每条兴趣</text>
+      <text x="130" y="44" text-anchor="middle" fill="#9fe5c0" font-size="11">具体可执行 = 1 / 空泛幻觉 = 0</text>
+    </g>
+
+    <g transform="translate(20,365)">
+      <rect width="260" height="60" rx="10" fill="#0e241e" stroke="#3ed29a" stroke-dasharray="3 3"/>
+      <text x="130" y="26" text-anchor="middle" fill="#8affb5" font-size="12" font-weight="600">🎯 修复信息退化</text>
+      <text x="130" y="44" text-anchor="middle" fill="#b7ffd0" font-size="10.5">策略倾向生成语义清晰的 SID</text>
+    </g>
+  </g>
+
+  <!-- Left input to stage1 arrows -->
+  <path d="M270 200 L 300 200" stroke="#9fd0ff" stroke-width="1.6" fill="none" marker-end="url(#arr)"/>
+  <path d="M270 265 L 300 265" stroke="#9fd0ff" stroke-width="1.6" fill="none" marker-end="url(#arr)"/>
+  <path d="M270 330 L 300 330" stroke="#9fd0ff" stroke-width="1.6" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Output arrow from QARM to downstream -->
+  <g transform="translate(1090,600)">
+    <text x="0" y="0" text-anchor="middle" fill="#8affb5" font-size="12" font-weight="600">↓ 高质量 SID 序列</text>
+    <text x="0" y="18" text-anchor="middle" fill="#9aa6d6" font-size="11">供生成式推荐 / 广告召回使用</text>
+  </g>
+</svg>

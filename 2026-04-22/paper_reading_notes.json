@@ -85,6 +85,26 @@
         "value": "CS3直接部署于快手广告系统，三个场景分别获得8.36%、1.37%、2.18%的广告收入提升，同时DAC也有正向增长。三个模块即插即用，兼容DSSM、InTower等主流双塔架构，且QPS下降不到1%。CMS利用精排知识回补召回模型的思路尤其实用，适合所有存在召回-精排级联结构的广告系统。",
         "risk": "CMS依赖独立的Embedding Server基础设施，需要额外运维成本；cross vector和cascade vector的EMA更新依赖交互频次，对长尾用户和冷启动物品的缓存向量可能不够新鲜，论文中未深入讨论这一问题；此外CTS只用正样本更新cross vector，在正样本极度稀疏的广告场景下信号可能不足。"
       }
+    },
+    "selected_figure": {
+      "id": "page-1-drawing-caption-49",
+      "page_index": 1,
+      "caption": "Figure 1: An overview of the proposed CS3 framework.",
+      "clip": [
+        59.89900207519531,
+        58.71788024902344,
+        549.84716796875,
+        241.22943115234375
+      ],
+      "clip_area": 89421.19961946993,
+      "page_area": 484704.0,
+      "text_density": 0.17248687459749765,
+      "kind": "drawing_cluster_with_caption",
+      "score": 58.44435640881092,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-22/assets/figure_candidates/cs3-efficient-online-capability-synergy-for-two-tower-recommendation/02-p2-drawing_cluster_with_caption.png",
+      "filename": "02-p2-drawing_cluster_with_caption.png",
+      "selection_reason": "Figure 1 is the best main method overview because it directly presents the proposed CS3 framework itself, including the three core modules CAS, Cross-Tower Synchronization, and Cascade-Model Sharing, with clear module relationships and information flow. It is more representative of the paper’s core contribution than Figure 2, which mainly shows the production training/serving deployment workflow. This candidate is also a relatively clean, complete crop focused on the figure body rather than a partial page screenshot.",
+      "selection_confidence": "high"
     }
   }
 ]

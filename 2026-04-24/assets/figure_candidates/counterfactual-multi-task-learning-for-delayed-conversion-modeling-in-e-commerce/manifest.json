@@ -1,0 +1,117 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-24/downloaded_pdfs/counterfactual-multi-task-learning-for-delayed-conversion-modeling-in-e-commerce.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-24/assets/figure_candidates/counterfactual-multi-task-learning-for-delayed-conversion-modeling-in-e-commerce",
+  "candidates": [
+    {
+      "id": "page-2-block-2",
+      "page_index": 2,
+      "caption": "Figure 2: The architecture of the Counterfactual Multi-task Learning for Delayed Conversion Model (CM-DCM).",
+      "clip": [
+        31.79800033569336,
+        65.68516540527344,
+        316.0445556640625,
+        256.75701904296875
+      ],
+      "clip_area": 54311.51621672121,
+      "page_area": 484704.0,
+      "text_density": 0.03953162504230745,
+      "kind": "image_block_with_caption",
+      "score": 82.6034612912969,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-24/assets/figure_candidates/counterfactual-multi-task-learning-for-delayed-conversion-modeling-in-e-commerce/01-p3-image_block_with_caption.png",
+      "filename": "01-p3-image_block_with_caption.png"
+    },
+    {
+      "id": "page-2-embedded-0-0",
+      "page_index": 2,
+      "caption": "Figure 2: The architecture of the Counterfactual Multi-task Learning for Delayed Conversion Model (CM-DCM).",
+      "clip": [
+        41.79800033569336,
+        71.68516540527344,
+        306.0445556640625,
+        250.75701904296875
+      ],
+      "clip_area": 47319.120480026875,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 136,
+      "score": 81.52576800533363,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-24/assets/figure_candidates/counterfactual-multi-task-learning-for-delayed-conversion-modeling-in-e-commerce/02-p3-embedded_image_with_caption.png",
+      "filename": "02-p3-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-0-block-18",
+      "page_index": 0,
+      "caption": "Figure 1: User behavior trend during a Sales Promotion.",
+      "clip": [
+        295.9549865722656,
+        422.7897033691406,
+        580.1991577148438,
+        650.4669799804688
+      ],
+      "clip_area": 64715.93877838645,
+      "page_area": 484704.0,
+      "text_density": 0.04774872249596492,
+      "kind": "image_block_with_caption",
+      "score": 40.719065986426514,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-24/assets/figure_candidates/counterfactual-multi-task-learning-for-delayed-conversion-modeling-in-e-commerce/03-p1-image_block_with_caption.png",
+      "filename": "03-p1-image_block_with_caption.png"
+    },
+    {
+      "id": "page-0-embedded-0-0",
+      "page_index": 0,
+      "caption": "Figure 1: User behavior trend during a Sales Promotion.",
+      "clip": [
+        305.9549865722656,
+        428.7897033691406,
+        570.1991577148438,
+        644.4669799804688
+      ],
+      "clip_area": 56991.46319244895,
+      "page_area": 484704.0,
+      "text_density": 0.008392801319754716,
+      "kind": "embedded_image_with_caption",
+      "xref": 120,
+      "score": 39.6332384799161,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-24/assets/figure_candidates/counterfactual-multi-task-learning-for-delayed-conversion-modeling-in-e-commerce/04-p1-embedded_image_with_caption.png",
+      "filename": "04-p1-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-3-drawing-cluster-0",
+      "page_index": 3,
+      "caption": "第 4 页矢量图主图候选",
+      "clip": [
+        37.79800033569336,
+        69.68536376953125,
+        574.150146484375,
+        259.2239990234375
+      ],
+      "clip_area": 101659.45379652479,
+      "page_area": 484704.0,
+      "text_density": 0.026910266492317935,
+      "kind": "drawing_cluster",
+      "score": 11.129549486628052,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-24/assets/figure_candidates/counterfactual-multi-task-learning-for-delayed-conversion-modeling-in-e-commerce/05-p4-drawing_cluster.png",
+      "filename": "05-p4-drawing_cluster.png"
+    },
+    {
+      "id": "page-3-drawing-caption-11",
+      "page_index": 3,
+      "caption": "Figure 3: User action trends for the Taobao (a) and Tmall (b) datasets. \"#CLK\" \"#ATC\" and \"#BUY\" denote the number of clicks, add-to-cart actions, and orders respectively.",
+      "clip": [
+        35.79800033569336,
+        67.68536376953125,
+        576.150146484375,
+        261.2239990234375
+      ],
+      "clip_area": 104579.01692213514,
+      "page_area": 484704.0,
+      "text_density": 0.03316368128058479,
+      "kind": "drawing_cluster_with_caption",
+      "score": 9.161989076912613,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-24/assets/figure_candidates/counterfactual-multi-task-learning-for-delayed-conversion-modeling-in-e-commerce/06-p4-drawing_cluster_with_caption.png",
+      "filename": "06-p4-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-24/assets/figure_candidates/counterfactual-multi-task-learning-for-delayed-conversion-modeling-in-e-commerce/contact-sheet.svg"
+}

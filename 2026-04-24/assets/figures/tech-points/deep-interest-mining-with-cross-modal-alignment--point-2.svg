@@ -1,0 +1,84 @@
+<svg height="600" width="960" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+
+  <text x="480" y="34" text-anchor="middle" font-size="22" font-weight="700" fill="#1a1a1a">CMSA：让图片"说话"，再统一进量化器</text>
+  <text x="480" y="56" text-anchor="middle" font-size="13" fill="#666">绕开图/文双编码器的空间不一致问题</text>
+
+  <!-- 上半：传统做法 -->
+  <text x="60" y="100" font-size="14" font-weight="700" fill="#888">❌ 传统：双编码器拼接</text>
+  <rect x="60" y="115" width="110" height="60" rx="8" fill="#fdecea" stroke="#d9534f"/>
+  <text x="115" y="140" text-anchor="middle" font-size="13">🖼️ 图片</text>
+  <text x="115" y="160" text-anchor="middle" font-size="11" fill="#666">ViT 编码</text>
+
+  <rect x="60" y="190" width="110" height="60" rx="8" fill="#fdecea" stroke="#d9534f"/>
+  <text x="115" y="215" text-anchor="middle" font-size="13">📝 文本</text>
+  <text x="115" y="235" text-anchor="middle" font-size="11" fill="#666">Text 编码</text>
+
+  <path d="M170 145 L275 180" stroke="#c0392b" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M170 220 L275 195" stroke="#c0392b" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+
+  <rect x="280" y="155" width="150" height="60" rx="8" fill="#fff" stroke="#c0392b" stroke-dasharray="5,3"/>
+  <text x="355" y="180" text-anchor="middle" font-size="13" fill="#c0392b">concat 拼接</text>
+  <text x="355" y="200" text-anchor="middle" font-size="11" fill="#c0392b">两种向量空间错位</text>
+
+  <text x="470" y="190" font-size="26" fill="#c0392b">⚠</text>
+  <text x="500" y="180" font-size="12" fill="#c0392b">图指向一种语义</text>
+  <text x="500" y="198" font-size="12" fill="#c0392b">SID 落到另一种</text>
+
+  <!-- 分隔 -->
+  <line x1="40" y1="270" x2="920" y2="270" stroke="#ddd" stroke-dasharray="4,4"/>
+
+  <!-- 下半：CMSA -->
+  <text x="60" y="300" font-size="14" font-weight="700" fill="#2a8f5a">✅ CMSA：先让 VLM 把图讲成文字</text>
+
+  <!-- 图片 -->
+  <rect x="40" y="320" width="110" height="80" rx="8" fill="#eaf6ff" stroke="#3498db"/>
+  <text x="95" y="350" text-anchor="middle" font-size="13">🖼️ 口红图</text>
+  <text x="95" y="370" text-anchor="middle" font-size="11" fill="#666">商品图片</text>
+
+  <!-- VLM -->
+  <rect x="180" y="320" width="150" height="80" rx="8" fill="#fff7e0" stroke="#e0a800"/>
+  <text x="255" y="348" text-anchor="middle" font-size="14" font-weight="700">VLM 描述</text>
+  <text x="255" y="368" text-anchor="middle" font-size="11" fill="#555">风格·配色·场景</text>
+  <text x="255" y="385" text-anchor="middle" font-size="11" fill="#555" font-style="italic">"哑光复古红棕…"</text>
+
+  <path d="M150 360 L180 360" stroke="#333" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- 合并文本 -->
+  <rect x="360" y="310" width="180" height="100" rx="8" fill="#eafaf1" stroke="#2a8f5a"/>
+  <text x="450" y="335" text-anchor="middle" font-size="13" font-weight="700">统一多模态文本</text>
+  <text x="450" y="358" text-anchor="middle" font-size="11" fill="#333">VLM 描述</text>
+  <text x="450" y="376" text-anchor="middle" font-size="11" fill="#333">+ 标题/描述</text>
+  <text x="450" y="394" text-anchor="middle" font-size="11" fill="#333">+ 兴趣词</text>
+
+  <path d="M330 360 L360 360" stroke="#333" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- 单一文本encoder -->
+  <rect x="570" y="320" width="150" height="80" rx="8" fill="#f3eaff" stroke="#8e44ad"/>
+  <text x="645" y="350" text-anchor="middle" font-size="13" font-weight="700">同一个</text>
+  <text x="645" y="370" text-anchor="middle" font-size="13" font-weight="700">Text Embedding</text>
+  <text x="645" y="390" text-anchor="middle" font-size="11" fill="#666">只处理一种模态</text>
+
+  <path d="M540 360 L570 360" stroke="#333" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- RQ-VAE -->
+  <rect x="750" y="320" width="150" height="80" rx="8" fill="#ffe8d6" stroke="#d35400"/>
+  <text x="825" y="350" text-anchor="middle" font-size="13" font-weight="700">RQ-VAE → SID</text>
+  <text x="825" y="372" text-anchor="middle" font-size="11" fill="#666">视觉+场景同编码</text>
+  <text x="825" y="390" text-anchor="middle" font-size="11" fill="#666">单一空间量化</text>
+
+  <path d="M720 360 L750 360" stroke="#333" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- 收益标注 -->
+  <rect x="150" y="440" width="660" height="90" rx="10" fill="#f8f9fa" stroke="#bbb"/>
+  <text x="480" y="465" text-anchor="middle" font-size="13" font-weight="700" fill="#2a8f5a">核心：把"图"变成"文字"，量化器只需对齐一种空间</text>
+  <text x="480" y="488" text-anchor="middle" font-size="12" fill="#444">口红图 → "哑光复古红棕·秋冬通勤·氛围感妆容"</text>
+  <text x="480" y="508" text-anchor="middle" font-size="12" fill="#444">→ 与标题"XX唇膏 #104"合并 → SID 同时编码视觉风格与使用场景</text>
+</svg>

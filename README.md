@@ -4,18 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-04-23
+- **日期**：2026-04-24
 - **分类**：cs.IR + cs.AI + cs.LG + cs.CL
-- **候选论文数**：9
+- **候选论文数**：8
 - **必读论文**：
-  - Efficient Multi-Cohort Inference for Long-Term Effects and Lifetime Value in A/B Testing with User Learning
-  - AFMRL: Attribute-Enhanced Fine-Grained Multi-Modal Representation Learning in E-commerce
-- **日报路径**：[2026-04-23/daily_report.md](2026-04-23/daily_report.md)
+  - Counterfactual Multi-task Learning for Delayed Conversion Modeling in E-commerce Sales Pre-Promotion
+  - Deep Interest Mining with Cross-Modal Alignment for SemanticID Generation in Generative Recommendation
+- **日报路径**：[2026-04-24/daily_report.md](2026-04-24/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-04-24 | cs.IR + cs.AI + cs.LG + cs.CL | 8 | 1 | Counterfactual Multi-task Learning for Delayed Conversion Modeling in E-commerce Sales Pre-Promotion | [2026-04-24/daily_report.md](2026-04-24/daily_report.md) |
+|  |  |  | 2 | Deep Interest Mining with Cross-Modal Alignment for SemanticID Generation in Generative Recommendation |  |
 | 2026-04-23 | cs.IR + cs.AI + cs.LG + cs.CL | 9 | 1 | Efficient Multi-Cohort Inference for Long-Term Effects and Lifetime Value in A/B Testing with User Learning | [2026-04-23/daily_report.md](2026-04-23/daily_report.md) |
 |  |  |  | 2 | AFMRL: Attribute-Enhanced Fine-Grained Multi-Modal Representation Learning in E-commerce |  |
 | 2026-04-22 | cs.IR + cs.AI + cs.LG + cs.CL | 11 | 1 | LoopCTR: Unlocking the Loop Scaling Power for Click-Through Rate Prediction | [2026-04-22/daily_report.md](2026-04-22/daily_report.md) |

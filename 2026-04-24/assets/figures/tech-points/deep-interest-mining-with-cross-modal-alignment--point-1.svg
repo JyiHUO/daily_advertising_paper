@@ -1,0 +1,97 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="-apple-system,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c62828"/>
+    </marker>
+    <linearGradient id="gL" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#fff4e6"/>
+      <stop offset="1" stop-color="#ffe0b3"/>
+    </linearGradient>
+    <linearGradient id="gE" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#e3f2fd"/>
+      <stop offset="1" stop-color="#bbdefb"/>
+    </linearGradient>
+    <linearGradient id="gR" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#e8f5e9"/>
+      <stop offset="1" stop-color="#c8e6c9"/>
+    </linearGradient>
+  </defs>
+
+  <text x="450" y="34" text-anchor="middle" font-size="21" font-weight="700" fill="#222">DCIM：让 SID 记住"为什么买"，而不只是"是什么"</text>
+
+  <!-- Step1: raw item -->
+  <g>
+    <rect x="30" y="90" width="200" height="150" rx="12" fill="#fafafa" stroke="#888"/>
+    <text x="130" y="116" text-anchor="middle" font-size="14" font-weight="700" fill="#444">原始物料</text>
+    <text x="130" y="148" text-anchor="middle" font-size="13" fill="#222">Champion 3号青少年足球</text>
+    <text x="130" y="180" text-anchor="middle" font-size="11" fill="#777">标题 + 描述 + 图像文本</text>
+  </g>
+
+  <line x1="232" y1="165" x2="282" y2="165" stroke="#333" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Step2: LLM CoT -->
+  <g>
+    <rect x="285" y="80" width="260" height="175" rx="12" fill="url(#gL)" stroke="#e69500" stroke-width="1.5"/>
+    <text x="415" y="104" text-anchor="middle" font-size="14" font-weight="700" fill="#7a4a00">Qwen LLM · CoT 兴趣挖掘</text>
+    <text x="415" y="126" text-anchor="middle" font-size="12" fill="#333">表面：橡胶 / 青少年 / 训练级  ↓推理动机↓</text>
+
+    <rect x="300" y="138" width="230" height="22" rx="4" fill="#fff" stroke="#e69500"/>
+    <text x="310" y="154" font-size="12" fill="#222">家长给孩子买娱乐足球  0.92</text>
+    <rect x="300" y="164" width="230" height="22" rx="4" fill="#fff" stroke="#e69500"/>
+    <text x="310" y="180" font-size="12" fill="#222">青少年体育训练        0.88</text>
+    <rect x="300" y="190" width="230" height="22" rx="4" fill="#fff" stroke="#e69500"/>
+    <text x="310" y="206" font-size="12" fill="#222">入门团队装备          0.80</text>
+    <text x="415" y="234" text-anchor="middle" font-size="11" fill="#7a4a00">深层兴趣标签 + 置信度</text>
+  </g>
+
+  <line x1="547" y1="165" x2="597" y2="165" stroke="#333" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Step3: Embedding + RQ-VAE -->
+  <g>
+    <rect x="600" y="90" width="260" height="150" rx="12" fill="url(#gE)" stroke="#1976d2" stroke-width="1.5"/>
+    <text x="730" y="116" text-anchor="middle" font-size="14" font-weight="700" fill="#0d3c6e">拼接 → Embedding → RQ-VAE</text>
+    <text x="730" y="140" text-anchor="middle" font-size="12" fill="#333">标题 + 动机标签 一起编码</text>
+    <rect x="645" y="160" width="170" height="46" rx="8" fill="#fff" stroke="#1976d2"/>
+    <text x="730" y="190" text-anchor="middle" font-size="18" font-weight="700" fill="#0d3c6e">SID (a8, b91, c66)</text>
+  </g>
+
+  <!-- Reconstruction supervision loop: SID -> back to interest tags -->
+  <path d="M645 205 C 560 250, 470 250, 415 250 L 415 255" stroke="#c62828" stroke-width="2" fill="none" stroke-dasharray="6 4" marker-end="url(#arR)"/>
+  <text x="530" y="240" text-anchor="middle" font-size="12" fill="#c62828" font-weight="700">重构监督：SID 须能还原兴趣文本</text>
+
+  <!-- Effect comparison -->
+  <text x="450" y="310" text-anchor="middle" font-size="15" font-weight="700" fill="#222">效果：SID 按"动机"聚类，而不是按字面</text>
+
+  <!-- before -->
+  <g>
+    <rect x="40" y="330" width="380" height="200" rx="12" fill="#fbe9e7" stroke="#c62828"/>
+    <text x="230" y="356" text-anchor="middle" font-size="13" font-weight="700" fill="#b71c1c">✗ 仅用标题 embedding</text>
+    <circle cx="140" cy="430" r="40" fill="#fff" stroke="#b71c1c"/>
+    <text x="140" y="427" text-anchor="middle" font-size="11" fill="#333">儿童足球</text>
+    <text x="140" y="442" text-anchor="middle" font-size="11" fill="#333">(本商品)</text>
+    <circle cx="240" cy="430" r="38" fill="#fff" stroke="#b71c1c"/>
+    <text x="240" y="427" text-anchor="middle" font-size="11" fill="#333">职业比赛</text>
+    <text x="240" y="442" text-anchor="middle" font-size="11" fill="#333">足球</text>
+    <circle cx="355" cy="430" r="30" fill="#fff" stroke="#999" stroke-dasharray="3 2"/>
+    <text x="355" y="434" text-anchor="middle" font-size="11" fill="#777">儿童篮球</text>
+    <text x="230" y="505" text-anchor="middle" font-size="12" fill="#b71c1c">"都叫足球"就靠在一起</text>
+  </g>
+
+  <!-- after -->
+  <g>
+    <rect x="480" y="330" width="380" height="200" rx="12" fill="url(#gR)" stroke="#2e7d32"/>
+    <text x="670" y="356" text-anchor="middle" font-size="13" font-weight="700" fill="#1b5e20">✓ DCIM 深度兴趣 SID</text>
+    <circle cx="580" cy="430" r="40" fill="#fff" stroke="#1b5e20"/>
+    <text x="580" y="427" text-anchor="middle" font-size="11" fill="#333">儿童足球</text>
+    <text x="580" y="442" text-anchor="middle" font-size="11" fill="#333">(本商品)</text>
+    <circle cx="680" cy="430" r="38" fill="#fff" stroke="#1b5e20"/>
+    <text x="680" y="427" text-anchor="middle" font-size="11" fill="#333">儿童篮球</text>
+    <text x="680" y="442" text-anchor="middle" font-size="11" fill="#333">(同动机)</text>
+    <circle cx="795" cy="430" r="30" fill="#fff" stroke="#999" stroke-dasharray="3 2"/>
+    <text x="795" y="434" text-anchor="middle" font-size="11" fill="#777">职业足球</text>
+    <text x="670" y="505" text-anchor="middle" font-size="12" fill="#1b5e20">"家长为孩子买"的聚到一起</text>
+  </g>
+</svg>
