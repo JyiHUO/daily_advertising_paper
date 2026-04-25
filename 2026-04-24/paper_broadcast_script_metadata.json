@@ -1,0 +1,13 @@
+{
+  "report_date": "2026-04-24",
+  "provider": "bedrock-opus-47",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 3025,
+  "focus_titles": [
+    "Counterfactual Multi-task Learning for Delayed Conversion Modeling in E-commerce Sales Pre-Promotion",
+    "Deep Interest Mining with Cross-Modal Alignment for SemanticID Generation in Generative Recommendation"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Xiaoyu"
+}
