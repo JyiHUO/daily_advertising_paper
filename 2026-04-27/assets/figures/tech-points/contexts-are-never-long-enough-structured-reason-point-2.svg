@@ -1,0 +1,87 @@
+<svg height="620" width="900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a3b5f"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="620" fill="#f6f8fc"/>
+
+  <text x="450" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1a2540">带溯源的数据对账：按主键分区，SQL 修改</text>
+  <text x="450" y="65" text-anchor="middle" font-size="13" fill="#5a6a86">同一公司抽出的多条冲突记录 → Agent 按键分组局部推理</text>
+
+  <!-- LEFT: messy table -->
+  <g>
+    <rect x="40" y="100" width="300" height="230" rx="8" fill="#fff" stroke="#c9d2e3"/>
+    <text x="190" y="125" text-anchor="middle" font-size="14" font-weight="700" fill="#1a2540">抽取结果（同一公司 5 行）</text>
+
+    <rect x="55" y="140" width="270" height="26" fill="#fde7e7"/>
+    <text x="65" y="158" font-size="12" fill="#333">CompanyA · 长期借款 = 0  [p12]</text>
+
+    <rect x="55" y="168" width="270" height="26" fill="#fde7e7"/>
+    <text x="65" y="186" font-size="12" fill="#333">CompanyA · 长期借款 = 1740  [p34 合并]</text>
+
+    <rect x="55" y="196" width="270" height="26" fill="#fde7e7"/>
+    <text x="65" y="214" font-size="12" fill="#333">CompanyA · 长期借款 = 1663  [p34]</text>
+
+    <rect x="55" y="224" width="270" height="26" fill="#fde7e7"/>
+    <text x="65" y="242" font-size="12" fill="#333">CompanyA · 长期借款 = 0  [p56]</text>
+
+    <rect x="55" y="252" width="270" height="26" fill="#fde7e7"/>
+    <text x="65" y="270" font-size="12" fill="#333">CompanyA · 子项明细  [p78]</text>
+
+    <text x="190" y="310" text-anchor="middle" font-size="12" fill="#a04040">冲突 / 重复 / 互补</text>
+  </g>
+
+  <!-- Arrow with provenance label -->
+  <g>
+    <rect x="355" y="180" width="200" height="70" rx="6" fill="#fff6d6" stroke="#d4b647"/>
+    <text x="455" y="205" text-anchor="middle" font-size="12" font-weight="700" fill="#6b5410">每行带 provenance</text>
+    <text x="455" y="223" text-anchor="middle" font-size="11" fill="#6b5410">+ 抽取 rationale</text>
+    <text x="455" y="241" text-anchor="middle" font-size="11" fill="#2a3b5f">GROUP BY 公司</text>
+    <line x1="340" y1="215" x2="355" y2="215" stroke="#2a3b5f" stroke-width="2" marker-end="url(#arr)"/>
+    <line x1="555" y1="215" x2="558" y2="215" stroke="#2a3b5f" stroke-width="2" marker-end="url(#arr)"/>
+  </g>
+
+  <!-- Agent -->
+  <g>
+    <rect x="560" y="130" width="300" height="170" rx="10" fill="#e8f0ff" stroke="#4a6fb5" stroke-width="2"/>
+    <text x="710" y="157" text-anchor="middle" font-size="15" font-weight="700" fill="#1a2540">对账 Agent（分区内）</text>
+    <text x="710" y="178" text-anchor="middle" font-size="11" fill="#4a6fb5">看原文引用 → 写 SQL</text>
+
+    <rect x="578" y="195" width="85" height="36" rx="6" fill="#fff" stroke="#4a6fb5"/>
+    <text x="620" y="218" text-anchor="middle" font-size="12" fill="#1a2540">去重</text>
+
+    <rect x="670" y="195" width="85" height="36" rx="6" fill="#fff" stroke="#4a6fb5"/>
+    <text x="712" y="218" text-anchor="middle" font-size="12" fill="#1a2540">消冲突</text>
+
+    <rect x="762" y="195" width="85" height="36" rx="6" fill="#fff" stroke="#4a6fb5"/>
+    <text x="804" y="218" text-anchor="middle" font-size="12" fill="#1a2540">合并互补</text>
+
+    <text x="710" y="260" text-anchor="middle" font-size="11" fill="#2a3b5f">迭代直到无需修改</text>
+    <text x="710" y="280" text-anchor="middle" font-size="11" fill="#2a3b5f">所有改动 = SQL，可审计</text>
+  </g>
+
+  <!-- Iteration loop back arrow -->
+  <path d="M 870 215 Q 895 215 895 330 Q 895 390 880 405" fill="none" stroke="#2a3b5f" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="880" y="330" text-anchor="end" font-size="10" fill="#5a6a86">迭代</text>
+
+  <!-- Down arrow -->
+  <line x1="710" y1="300" x2="710" y2="362" stroke="#2a3b5f" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- Clean result -->
+  <g>
+    <rect x="540" y="365" width="340" height="90" rx="8" fill="#e4f5e4" stroke="#4a9a4a" stroke-width="2"/>
+    <text x="710" y="390" text-anchor="middle" font-size="14" font-weight="700" fill="#1a4a1a">对账后（1 行）</text>
+    <text x="710" y="415" text-anchor="middle" font-size="12" fill="#1a4a1a">CompanyA · 长期借款 = 0</text>
+    <text x="710" y="435" text-anchor="middle" font-size="11" fill="#3a6a3a">UPDATE ... WHERE company='A'</text>
+  </g>
+
+  <!-- Key insight -->
+  <g>
+    <rect x="40" y="490" width="820" height="100" rx="10" fill="#1a2540"/>
+    <text x="60" y="520" font-size="14" font-weight="700" fill="#ffd96b">关键：把 O(N²) 两两比较 → 按主键分区的局部推理</text>
+    <text x="60" y="548" font-size="12" fill="#dfe7f5">• provenance 让 Agent 有据可改，不是凭空猜</text>
+    <text x="60" y="570" font-size="12" fill="#dfe7f5">• 5 行压到 1 行，FinQ100 准确率 35.8% → 55.2%</text>
+  </g>
+</svg>

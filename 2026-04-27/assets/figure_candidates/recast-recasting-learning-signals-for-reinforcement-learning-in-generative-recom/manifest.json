@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-27/downloaded_pdfs/recast-recasting-learning-signals-for-reinforcement-learning-in-generative-recom.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-27/assets/figure_candidates/recast-recasting-learning-signals-for-reinforcement-learning-in-generative-recom",
+  "candidates": [
+    {
+      "id": "page-0-drawing-caption-16",
+      "page_index": 0,
+      "caption": "Figure 1: Signal degeneracy in the RL stage of OpenOneRec under a representative sparse-hit setting.",
+      "clip": [
+        54.0,
+        513.6045532226562,
+        541.2794189453125,
+        626.550048828125
+      ],
+      "clip_area": 55036.01547112316,
+      "page_area": 501156.9211820215,
+      "text_density": 0.23650530609603007,
+      "kind": "drawing_cluster_with_caption",
+      "score": 23.221192917250676,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-27/assets/figure_candidates/recast-recasting-learning-signals-for-reinforcement-learning-in-generative-recom/01-p1-drawing_cluster_with_caption.png",
+      "filename": "01-p1-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-10-drawing-caption-33",
+      "page_index": 10,
+      "caption": "Figure 7: Scaling with search width at fixed model size.",
+      "clip": [
+        54.0,
+        56.00065612792969,
+        541.2696533203125,
+        227.99798583984375
+      ],
+      "clip_area": 83809.07922074385,
+      "page_area": 501156.9211820215,
+      "text_density": 0.19217879634950863,
+      "kind": "drawing_cluster_with_caption",
+      "score": 19.20048421037108,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-27/assets/figure_candidates/recast-recasting-learning-signals-for-reinforcement-learning-in-generative-recom/02-p11-drawing_cluster_with_caption.png",
+      "filename": "02-p11-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-9-drawing-caption-60",
+      "page_index": 9,
+      "caption": "Figure 6: Scaling with model size. Thin lines denote individual tasks and thick line denotes the average.",
+      "clip": [
+        54.0,
+        530.007080078125,
+        541.2762451171875,
+        703.7039794921875
+      ],
+      "clip_area": 84638.37293498218,
+      "page_area": 501156.9211820215,
+      "text_density": 0.20805126046370215,
+      "kind": "drawing_cluster_with_caption",
+      "score": 18.25735073812212,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-27/assets/figure_candidates/recast-recasting-learning-signals-for-reinforcement-learning-in-generative-recom/03-p10-drawing_cluster_with_caption.png",
+      "filename": "03-p10-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-7-drawing-caption-60",
+      "page_index": 7,
+      "caption": "Figure 3: Early-stage learning efficiency on three representative tasks.",
+      "clip": [
+        54.0,
+        402.5338134765625,
+        541.2781982421875,
+        524.4850158691406
+      ],
+      "clip_area": 59424.162175323814,
+      "page_area": 501156.9211820215,
+      "text_density": 0.2539623747088091,
+      "kind": "drawing_cluster_with_caption",
+      "score": 13.222525986086165,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-27/assets/figure_candidates/recast-recasting-learning-signals-for-reinforcement-learning-in-generative-recom/04-p8-drawing_cluster_with_caption.png",
+      "filename": "04-p8-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-drawing-cluster-0",
+      "page_index": 3,
+      "caption": "第 4 页矢量图主图候选",
+      "clip": [
+        67.28299713134766,
+        57.997833251953125,
+        527.907470703125,
+        331.2307434082031
+      ],
+      "clip_area": 125857.76540320739,
+      "page_area": 501156.9211820215,
+      "text_density": 0.04299616733770904,
+      "kind": "drawing_cluster",
+      "score": 10.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-27/assets/figure_candidates/recast-recasting-learning-signals-for-reinforcement-learning-in-generative-recom/05-p4-drawing_cluster.png",
+      "filename": "05-p4-drawing_cluster.png"
+    },
+    {
+      "id": "page-8-drawing-caption-43",
+      "page_index": 8,
+      "caption": "Figure 4: Boundary-focused updating stabilizes optimization.",
+      "clip": [
+        54.0,
+        508.03564453125,
+        541.2708740234375,
+        641.658203125
+      ],
+      "clip_area": 65110.38091522455,
+      "page_area": 501156.9211820215,
+      "text_density": 0.1599059236467908,
+      "kind": "drawing_cluster_with_caption",
+      "score": 8.92909325802838,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-27/assets/figure_candidates/recast-recasting-learning-signals-for-reinforcement-learning-in-generative-recom/06-p9-drawing_cluster_with_caption.png",
+      "filename": "06-p9-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-27/assets/figure_candidates/recast-recasting-learning-signals-for-reinforcement-learning-in-generative-recom/contact-sheet.svg"
+}

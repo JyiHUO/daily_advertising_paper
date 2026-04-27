@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-27/downloaded_pdfs/contexts-are-never-long-enough-structured-reasoning-for-scalable-question-answer.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-27/assets/figure_candidates/contexts-are-never-long-enough-structured-reasoning-for-scalable-question-answer",
+  "candidates": [
+    {
+      "id": "page-1-drawing-caption-19",
+      "page_index": 1,
+      "caption": "Figure 2: Chunking based methods regenerate the long-context problem. SLIDERS mitigates it by using structured reasoning.",
+      "clip": [
+        90.0,
+        295.85772705078125,
+        522.0018005371094,
+        472.71099853515625
+      ],
+      "clip_area": 76400.93171212822,
+      "page_area": 484704.0,
+      "text_density": 0.0635464638204941,
+      "kind": "drawing_cluster_with_caption",
+      "score": 59.84889924124587,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-27/assets/figure_candidates/contexts-are-never-long-enough-structured-reasoning-for-scalable-question-answer/01-p2-drawing_cluster_with_caption.png",
+      "filename": "01-p2-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-0-drawing-caption-32",
+      "page_index": 0,
+      "caption": "Figure 1: Accuracy across long-context and ultra-long benchmarks. SLIDERS consistently outper- forms all baselines and is the only system to scale beyond 3.9M tokens. × denotes baselines that exceeded the model’s context window; $$ denotes prohibitively expensive runs.",
+      "clip": [
+        129.12257385253906,
+        534.75537109375,
+        516.2962036132812,
+        693.5616455078125
+      ],
+      "clip_area": 61485.60169367306,
+      "page_area": 484704.0,
+      "text_density": 0.19999984943881743,
+      "kind": "drawing_cluster_with_caption",
+      "score": 46.48318238582288,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-27/assets/figure_candidates/contexts-are-never-long-enough-structured-reasoning-for-scalable-question-answer/02-p1-drawing_cluster_with_caption.png",
+      "filename": "02-p1-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-2-drawing-caption-29",
+      "page_index": 2,
+      "caption": "Figure 3: SLIDERS overview showing the process of (1) Contextualization of chunks, (2) Inducing the schema , (3) Structured Extraction , (4) Data Reconciliation , and (5) Question Answering over the final database. An example from the Loong benchmark.",
+      "clip": [
+        90.0,
+        55.99937438964844,
+        521.9877624511719,
+        221.39300537109375
+      ],
+      "clip_area": 71448.02457134938,
+      "page_area": 484704.0,
+      "text_density": 0.07277281871353762,
+      "kind": "drawing_cluster_with_caption",
+      "score": 41.793866939681656,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-27/assets/figure_candidates/contexts-are-never-long-enough-structured-reasoning-for-scalable-question-answer/03-p3-drawing_cluster_with_caption.png",
+      "filename": "03-p3-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-2-block-29",
+      "page_index": 2,
+      "caption": "Figure 3: SLIDERS overview showing the process of (1) Contextualization of chunks, (2) Inducing the schema , (3) Structured Extraction , (4) Data Reconciliation , and (5) Question Answering over the final database. An example from the Loong benchmark.",
+      "clip": [
+        77.4,
+        18.0,
+        534.6014953613281,
+        204.433349609375
+      ],
+      "clip_area": 85237.60622662754,
+      "page_area": 484704.0,
+      "text_density": 0.019374512414356494,
+      "kind": "captioned_figure",
+      "score": 29.947084513629196,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-27/assets/figure_candidates/contexts-are-never-long-enough-structured-reasoning-for-scalable-question-answer/04-p3-captioned_figure.png",
+      "filename": "04-p3-captioned_figure.png"
+    },
+    {
+      "id": "page-0-block-32",
+      "page_index": 0,
+      "caption": "Figure 1: Accuracy across long-context and ultra-long benchmarks. SLIDERS consistently outper- forms all baselines and is the only system to scale beyond 3.9M tokens. × denotes baselines that exceeded the model’s context window; $$ denotes prohibitively expensive runs.",
+      "clip": [
+        77.4,
+        367.77781982421874,
+        536.2490173339844,
+        676.5778198242188
+      ],
+      "clip_area": 141692.5765527344,
+      "page_area": 484704.0,
+      "text_density": 0.3853310190928612,
+      "kind": "captioned_figure",
+      "score": 23.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-27/assets/figure_candidates/contexts-are-never-long-enough-structured-reasoning-for-scalable-question-answer/05-p1-captioned_figure.png",
+      "filename": "05-p1-captioned_figure.png"
+    },
+    {
+      "id": "page-8-drawing-caption-25",
+      "page_index": 8,
+      "caption": "Figure 4: Model accuracy across difficulty levels and question types.",
+      "clip": [
+        332.85400390625,
+        62.529998779296875,
+        419.0667419433594,
+        157.416015625
+      ],
+      "clip_area": 8180.383313703351,
+      "page_area": 484704.0,
+      "text_density": 0.23297664325564796,
+      "kind": "drawing_cluster_with_caption",
+      "score": 22.912294552591163,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-27/assets/figure_candidates/contexts-are-never-long-enough-structured-reasoning-for-scalable-question-answer/06-p9-drawing_cluster_with_caption.png",
+      "filename": "06-p9-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-27/assets/figure_candidates/contexts-are-never-long-enough-structured-reasoning-for-scalable-question-answer/contact-sheet.svg"
+}

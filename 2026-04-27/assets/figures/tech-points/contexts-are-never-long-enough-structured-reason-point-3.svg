@@ -1,0 +1,80 @@
+<svg height="640" width="960" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#394b6b"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c33"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a8a4a"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1b2540">相关性门控：先问一句“有关吗？”再抽取</text>
+  <text x="450" y="58" text-anchor="middle" font-size="13" fill="#6b7280">没证据就跳过，避免 LLM 硬填幻觉</text>
+
+  <!-- Chunks -->
+  <g>
+    <rect x="40" y="110" width="170" height="70" rx="8" fill="#eef2fb" stroke="#394b6b"/>
+    <text x="125" y="138" text-anchor="middle" font-size="13" font-weight="600" fill="#1b2540">Chunk #3</text>
+    <text x="125" y="162" text-anchor="middle" font-size="11" fill="#394b6b">合并资产负债表（含表头+数字）</text>
+
+    <rect x="40" y="210" width="170" height="70" rx="8" fill="#eef2fb" stroke="#394b6b"/>
+    <text x="125" y="238" text-anchor="middle" font-size="13" font-weight="600" fill="#1b2540">Chunk #7</text>
+    <text x="125" y="262" text-anchor="middle" font-size="11" fill="#394b6b">风险提示文字（无财务数字）</text>
+
+    <rect x="40" y="310" width="170" height="70" rx="8" fill="#eef2fb" stroke="#394b6b"/>
+    <text x="125" y="350" text-anchor="middle" font-size="13" font-weight="600" fill="#1b2540">… 共 516 chunks</text>
+  </g>
+
+  <!-- Gate -->
+  <g>
+    <polygon points="280,180 400,140 400,350 280,310" fill="#fff4d6" stroke="#b8860b" stroke-width="2"/>
+    <text x="340" y="228" text-anchor="middle" font-size="15" font-weight="700" fill="#8a5a00">Relevance</text>
+    <text x="340" y="250" text-anchor="middle" font-size="15" font-weight="700" fill="#8a5a00">Gate</text>
+    <text x="340" y="278" text-anchor="middle" font-size="11" fill="#8a5a00">跟 schema 有关吗？</text>
+  </g>
+
+  <line x1="210" y1="145" x2="278" y2="170" stroke="#394b6b" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="210" y1="245" x2="278" y2="245" stroke="#394b6b" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="210" y1="345" x2="278" y2="320" stroke="#394b6b" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Pass -->
+  <g>
+    <rect x="460" y="110" width="210" height="90" rx="8" fill="#e6f5ec" stroke="#2a8a4a" stroke-width="2"/>
+    <text x="565" y="138" text-anchor="middle" font-size="14" font-weight="700" fill="#1b5e34">✓ 通过 → 结构化抽取</text>
+    <text x="565" y="162" text-anchor="middle" font-size="11" fill="#1b5e34">AccountsPayable = $1,740</text>
+    <text x="565" y="182" text-anchor="middle" font-size="11" fill="#1b5e34">（带原文引用）</text>
+  </g>
+
+  <!-- Reject -->
+  <g>
+    <rect x="460" y="240" width="210" height="70" rx="8" fill="#fdecec" stroke="#c33" stroke-width="2"/>
+    <text x="565" y="270" text-anchor="middle" font-size="14" font-weight="700" fill="#8a1a1a">✗ 拒绝 → 跳过</text>
+    <text x="565" y="292" text-anchor="middle" font-size="11" fill="#8a1a1a">不调用抽取，省钱防幻觉</text>
+  </g>
+
+  <line x1="400" y1="180" x2="458" y2="155" stroke="#2a8a4a" stroke-width="2" marker-end="url(#arrG)"/>
+  <line x1="400" y1="245" x2="458" y2="270" stroke="#c33" stroke-width="2" marker-end="url(#arrR)"/>
+
+  <!-- DB -->
+  <g>
+    <ellipse cx="790" cy="125" rx="50" ry="13" fill="#dde7fb" stroke="#394b6b"/>
+    <path d="M740,125 V165 a50,13 0 0 0 100,0 V125" fill="#dde7fb" stroke="#394b6b"/>
+    <path d="M740,145 a50,13 0 0 0 100,0" fill="none" stroke="#394b6b"/>
+    <text x="790" y="195" text-anchor="middle" font-size="12" font-weight="600" fill="#1b2540">关系表 → SQL</text>
+  </g>
+  <line x1="670" y1="150" x2="738" y2="140" stroke="#2a8a4a" stroke-width="2" marker-end="url(#arrG)"/>
+
+  <!-- Stats bar -->
+  <g transform="translate(40,420)">
+    <text x="0" y="0" font-size="14" font-weight="700" fill="#1b2540">实测效果</text>
+    <rect x="0" y="15" width="820" height="38" rx="6" fill="#f3f5fa" stroke="#cbd3e2"/>
+    <rect x="0" y="15" width="449" height="38" rx="6" fill="#fdecec" stroke="#c33"/>
+    <text x="224" y="39" text-anchor="middle" font-size="13" font-weight="700" fill="#8a1a1a">拒掉 282 / 516 chunks（55%）</text>
+    <text x="635" y="39" text-anchor="middle" font-size="13" font-weight="700" fill="#1b5e34">误杀率仅 0.4%</text>
+  </g>
+
+  <text x="450" y="515" text-anchor="middle" font-size="13" fill="#394b6b">分块时保留章节标题/表头 → 抽出的数字不再“孤立漂浮”</text>
+</svg>

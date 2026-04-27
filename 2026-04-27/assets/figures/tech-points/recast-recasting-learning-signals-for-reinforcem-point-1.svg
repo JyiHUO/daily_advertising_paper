@@ -1,0 +1,78 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 540" font-family="system-ui,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2c7a5f"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="540" fill="#fafaf7"/>
+
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#222">Rollout 修复：给全零组塞一个标准答案</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#666">全错的一组无梯度可学 → 注入正样本，剔除最没用的负样本</text>
+
+  <!-- 左：问题组 -->
+  <g>
+    <rect x="40" y="100" width="300" height="380" rx="10" fill="#fff" stroke="#c0392b" stroke-width="2"/>
+    <text x="190" y="128" text-anchor="middle" font-size="15" font-weight="700" fill="#c0392b">全零组 (奖励全 = 0)</text>
+    <text x="190" y="148" text-anchor="middle" font-size="11" fill="#888">32 条采样响应全部猜错</text>
+
+    <g font-size="11" fill="#555">
+      <rect x="70" y="170" width="240" height="26" rx="4" fill="#fdecea" stroke="#e6b4ad"/>
+      <text x="82" y="187">✗ 负样本  结构分 0.42</text>
+      <rect x="70" y="204" width="240" height="26" rx="4" fill="#fdecea" stroke="#e6b4ad"/>
+      <text x="82" y="221">✗ 负样本  结构分 0.38</text>
+      <rect x="70" y="238" width="240" height="26" rx="4" fill="#fdecea" stroke="#e6b4ad"/>
+      <text x="82" y="255">✗ 负样本  结构分 0.35（近似）</text>
+      <rect x="70" y="272" width="240" height="26" rx="4" fill="#fdecea" stroke="#e6b4ad"/>
+      <text x="82" y="289">✗ 负样本  结构分 0.22</text>
+      <text x="190" y="315" text-anchor="middle" fill="#aaa">⋮</text>
+
+      <rect x="70" y="335" width="240" height="36" rx="4" fill="#f5c6c0" stroke="#c0392b" stroke-width="2"/>
+      <text x="82" y="352" font-weight="700" fill="#c0392b">✗ 最没用的一条</text>
+      <text x="82" y="366" fill="#c0392b">结构分 0.05（类目都不沾边）</text>
+    </g>
+
+    <text x="190" y="410" text-anchor="middle" font-size="12" fill="#c0392b">组内无正样本，对比无从谈起</text>
+    <text x="190" y="432" text-anchor="middle" font-size="12" fill="#c0392b">梯度 ≈ 0，算力浪费</text>
+    <text x="190" y="465" text-anchor="middle" font-size="11" fill="#999">论文观察：约 85% 的组属于此类</text>
+  </g>
+
+  <!-- 中间：ReCast 修复 -->
+  <g>
+    <rect x="370" y="260" width="160" height="40" rx="20" fill="#2c7a5f"/>
+    <text x="450" y="285" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">ReCast 修复</text>
+    <path d="M340,280 L370,280" stroke="#2c7a5f" stroke-width="3" fill="none" marker-end="url(#ar)"/>
+    <path d="M530,280 L560,280" stroke="#2c7a5f" stroke-width="3" fill="none" marker-end="url(#ar)"/>
+    <text x="450" y="325" text-anchor="middle" font-size="11" fill="#2c7a5f">注入 GT + 剔除最差</text>
+    <text x="450" y="342" text-anchor="middle" font-size="11" fill="#2c7a5f">重算奖励 &amp; 结构分</text>
+  </g>
+
+  <!-- 右：修复后 -->
+  <g>
+    <rect x="560" y="100" width="300" height="380" rx="10" fill="#fff" stroke="#2c7a5f" stroke-width="2"/>
+    <text x="710" y="128" text-anchor="middle" font-size="15" font-weight="700" fill="#2c7a5f">修复后：1 正 + 31 负</text>
+    <text x="710" y="148" text-anchor="middle" font-size="11" fill="#888">有锚点可对比，梯度复活</text>
+
+    <g font-size="11">
+      <rect x="590" y="170" width="240" height="36" rx="4" fill="#d6f0e3" stroke="#2c7a5f" stroke-width="2"/>
+      <text x="602" y="187" font-weight="700" fill="#2c7a5f">★ 注入 Ground Truth</text>
+      <text x="602" y="201" fill="#2c7a5f">真实目标商品（锚点正样本）</text>
+
+      <rect x="590" y="218" width="240" height="26" rx="4" fill="#fdecea" stroke="#e6b4ad"/>
+      <text x="602" y="235" fill="#555">✗ 负样本  0.42</text>
+      <rect x="590" y="252" width="240" height="26" rx="4" fill="#fdecea" stroke="#e6b4ad"/>
+      <text x="602" y="269" fill="#555">✗ 负样本  0.38</text>
+      <rect x="590" y="286" width="240" height="26" rx="4" fill="#fff3d6" stroke="#d9a441"/>
+      <text x="602" y="303" fill="#8a6418">✓ 保留近似答案 0.35</text>
+      <rect x="590" y="320" width="240" height="26" rx="4" fill="#fdecea" stroke="#e6b4ad"/>
+      <text x="602" y="337" fill="#555">✗ 负样本  0.22</text>
+      <text x="710" y="362" text-anchor="middle" fill="#aaa">⋮</text>
+
+      <rect x="590" y="378" width="240" height="32" rx="4" fill="#eee" stroke="#bbb" stroke-dasharray="4 3"/>
+      <text x="710" y="398" text-anchor="middle" fill="#999">✂ 结构分最低的被踢出</text>
+    </g>
+
+    <text x="710" y="445" text-anchor="middle" font-size="12" fill="#2c7a5f" font-weight="700">正负可对比 → 有效梯度</text>
+    <text x="710" y="465" text-anchor="middle" font-size="11" fill="#888">已有正样本的组不修复</text>
+  </g>
+</svg>

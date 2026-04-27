@@ -1,0 +1,178 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6f8fc"/>
+      <stop offset="1" stop-color="#eaeef7"/>
+    </linearGradient>
+    <linearGradient id="docG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd9c2"/>
+      <stop offset="1" stop-color="#ff9a6b"/>
+    </linearGradient>
+    <linearGradient id="dbG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4a6cf7"/>
+      <stop offset="1" stop-color="#2a3fb3"/>
+    </linearGradient>
+    <linearGradient id="ansG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a9f0c5"/>
+      <stop offset="1" stop-color="#3dc98a"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a3fb3"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d64545"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a9866"/>
+    </marker>
+    <marker id="arrY" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ffb347"/>
+    </marker>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="2"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.25"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="640" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="500" y="42" text-anchor="middle" font-size="22" font-weight="700" fill="#1a2340">SLIDERS：把长文档集抽成关系库，用 SQL 代替拼接上下文</text>
+  <text x="500" y="66" text-anchor="middle" font-size="13" fill="#5a6a8a">突破"聚合瓶颈"——在 3.9M / 36M token 基准上领先次优方法约 19 / 32 分</text>
+
+  <!-- LEFT: Document pile with chunks -->
+  <g transform="translate(50,110)">
+    <text x="90" y="-8" text-anchor="middle" font-size="13" font-weight="700" fill="#8a4522">长文档集合 D</text>
+    <g filter="url(#sh)">
+      <rect x="30" y="10" width="150" height="190" rx="6" fill="#fff" stroke="#e0a07a"/>
+      <rect x="20" y="20" width="150" height="190" rx="6" fill="url(#docG)" opacity="0.35"/>
+      <rect x="10" y="30" width="150" height="190" rx="6" fill="#fff" stroke="#d9895e"/>
+    </g>
+    <g font-size="10" fill="#4a2a12">
+      <rect x="22" y="44" width="125" height="14" fill="#ffe8d6"/>
+      <text x="28" y="55">章节标题 + 表头</text>
+      <rect x="22" y="62" width="125" height="14" fill="#ffdcbf"/>
+      <text x="28" y="73">Chunk 3: 资产负债表</text>
+      <rect x="22" y="80" width="125" height="14" fill="#ffe8d6"/>
+      <text x="28" y="91">Chunk 7: 风险提示</text>
+      <rect x="22" y="98" width="125" height="14" fill="#ffdcbf"/>
+      <text x="28" y="109">Chunk 8: 附注明细</text>
+      <text x="28" y="135" fill="#8a4522">… 数千 chunk</text>
+      <text x="28" y="155" fill="#8a4522" font-style="italic">∑ 可达 36M token</text>
+    </g>
+  </g>
+
+  <!-- Relevance gate -->
+  <g transform="translate(245,205)">
+    <polygon points="0,5 55,30 0,55 14,30" fill="#ffb347" stroke="#c97a1a" stroke-width="1.5" filter="url(#sh)"/>
+    <text x="27" y="-4" text-anchor="middle" font-size="11" font-weight="700" fill="#7a4a10">相关性门控</text>
+    <text x="27" y="74" text-anchor="middle" font-size="10" fill="#7a4a10">拒 282/516</text>
+    <text x="27" y="88" text-anchor="middle" font-size="10" fill="#7a4a10">误杀 0.4%</text>
+  </g>
+
+  <!-- arrow docs -> gate -->
+  <path d="M215,235 L242,235" stroke="#2a3fb3" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+  <!-- CENTER: Relational DB -->
+  <g transform="translate(370,130)">
+    <rect x="0" y="0" width="290" height="340" rx="14" fill="#fff" stroke="#2a3fb3" stroke-width="2" filter="url(#sh)"/>
+    <rect x="0" y="0" width="290" height="38" rx="14" fill="url(#dbG)"/>
+    <rect x="0" y="22" width="290" height="16" fill="url(#dbG)"/>
+    <text x="145" y="25" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">持久化关系数据库</text>
+    <text x="145" y="54" text-anchor="middle" font-size="11" fill="#2a3fb3" font-weight="600">核心：不再把证据塞回上下文</text>
+
+    <!-- Table -->
+    <g transform="translate(18,70)" font-size="10" fill="#1a2340">
+      <text x="0" y="0" font-weight="700" fill="#2a3fb3">表 AccountsPayable</text>
+      <rect x="0" y="6" width="254" height="18" fill="#e5ebff"/>
+      <text x="6" y="19" font-weight="700">公司 | 期 | 应付(千$) | 引用 | 理由</text>
+      <rect x="0" y="24" width="254" height="16" fill="#fff" stroke="#cdd5ef"/>
+      <text x="6" y="36">BioLargo | Q2 | 1,740 | p.3 | 含应计</text>
+      <rect x="0" y="40" width="254" height="16" fill="#fff" stroke="#cdd5ef"/>
+      <text x="6" y="52">BioLargo | Q2 | 1,663 | p.8 | 纯应付 ✓</text>
+      <rect x="0" y="56" width="254" height="16" fill="#fff" stroke="#cdd5ef"/>
+      <text x="6" y="68">BioLargo | Q2 | —     | p.12| 未披露</text>
+    </g>
+
+    <!-- Reconciliation loop -->
+    <g transform="translate(30,170)">
+      <rect x="0" y="0" width="230" height="150" rx="10" fill="#fff4f4" stroke="#d64545" stroke-dasharray="4 3"/>
+      <text x="115" y="20" text-anchor="middle" font-size="12" font-weight="700" fill="#a01f1f">带溯源的数据对账</text>
+      <text x="115" y="36" text-anchor="middle" font-size="10" fill="#7a2a2a">按主键 group by，局部 SQL 修复</text>
+
+      <!-- three ops with closed loop -->
+      <g font-size="10" fill="#a01f1f" text-anchor="middle">
+        <rect x="15" y="54" width="60" height="24" rx="6" fill="#fff" stroke="#d64545"/>
+        <text x="45" y="70">去重</text>
+        <rect x="85" y="54" width="60" height="24" rx="6" fill="#fff" stroke="#d64545"/>
+        <text x="115" y="70">解冲突</text>
+        <rect x="155" y="54" width="60" height="24" rx="6" fill="#fff" stroke="#d64545"/>
+        <text x="185" y="70">合并互补</text>
+      </g>
+      <!-- forward arrows -->
+      <path d="M75,66 L85,66" stroke="#d64545" stroke-width="1.5" fill="none" marker-end="url(#arrR)"/>
+      <path d="M145,66 L155,66" stroke="#d64545" stroke-width="1.5" fill="none" marker-end="url(#arrR)"/>
+      <!-- loop back -->
+      <path d="M185,78 L185,110 L45,110 L45,78" stroke="#d64545" stroke-width="1.5" fill="none" stroke-dasharray="4 3" marker-end="url(#arrR)"/>
+      <text x="115" y="128" text-anchor="middle" font-size="10" fill="#a01f1f">迭代直到稳定</text>
+    </g>
+  </g>
+
+  <!-- gate -> DB arrow with label -->
+  <path d="M305,235 C340,235 345,200 370,200" stroke="#2a3fb3" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <text x="340" y="195" font-size="10" fill="#2a3fb3">分块抽取(带 p, r)</text>
+
+  <!-- RIGHT: SQL Agent + Answer -->
+  <g transform="translate(700,130)">
+    <text x="125" y="-6" text-anchor="middle" font-size="13" font-weight="700" fill="#1a5a3a">SQL Agent</text>
+    <rect x="0" y="5" width="250" height="110" rx="10" fill="#fff" stroke="#2a9866" stroke-width="1.8" filter="url(#sh)"/>
+    <text x="15" y="28" font-size="11" fill="#1a5a3a" font-weight="700">Q: BioLargo 应付账款?</text>
+    <rect x="15" y="38" width="220" height="62" fill="#0f1a2e" rx="4"/>
+    <g font-family="monospace" font-size="10" fill="#a8e6c1">
+      <text x="22" y="52">SELECT value FROM AP</text>
+      <text x="22" y="66">WHERE company='BioLargo'</text>
+      <text x="22" y="80">  AND rationale LIKE</text>
+      <text x="22" y="94">      '%纯应付%';</text>
+    </g>
+
+    <!-- Answer -->
+    <g transform="translate(0,140)">
+      <rect x="0" y="0" width="250" height="70" rx="10" fill="url(#ansG)" filter="url(#sh)"/>
+      <text x="125" y="26" text-anchor="middle" font-size="12" font-weight="700" fill="#0d3a24">答案：1,663 千美元</text>
+      <text x="125" y="46" text-anchor="middle" font-size="10" fill="#0d3a24">可审计 · 可溯源 · 可扩展</text>
+      <text x="125" y="60" text-anchor="middle" font-size="10" fill="#0d3a24">超 GPT-4.1 平均 +6.6 分</text>
+    </g>
+
+    <!-- gains -->
+    <g transform="translate(0,225)" font-size="10">
+      <rect x="0" y="0" width="250" height="70" rx="10" fill="#fff" stroke="#2a9866" stroke-dasharray="3 2"/>
+      <text x="125" y="18" text-anchor="middle" font-weight="700" fill="#1a5a3a">关键收益</text>
+      <text x="14" y="36" fill="#2a4a3a">• FinQ100: 35.8% → 55.2%</text>
+      <text x="14" y="52" fill="#2a4a3a">• 3.9M token 基准 +19 分</text>
+      <text x="14" y="68" fill="#2a4a3a">• 36M token 基准 +32 分</text>
+    </g>
+  </g>
+
+  <!-- DB -> SQL agent arrow -->
+  <path d="M660,190 L700,175" stroke="#2a9866" stroke-width="2" fill="none" marker-end="url(#arrG)"/>
+  <text x="665" y="170" font-size="10" fill="#2a9866">SQL 查询</text>
+
+  <!-- reverse arrow -->
+  <path d="M700,255 L660,240" stroke="#2a9866" stroke-width="1.5" fill="none" stroke-dasharray="4 3" marker-end="url(#arrG)"/>
+  <text x="662" y="265" font-size="9" fill="#2a9866">结果 → 改写</text>
+
+  <!-- Bottom tension bar -->
+  <g transform="translate(50,560)">
+    <rect x="0" y="0" width="900" height="60" rx="10" fill="#1a2340"/>
+    <text x="20" y="24" font-size="12" font-weight="700" fill="#ffb347">聚合瓶颈</text>
+    <text x="20" y="44" font-size="11" fill="#dfe5f5">chunk 越多 → 拼回上下文越长 → LLM 聚合/去重/比较能力塌陷</text>
+
+    <line x1="430" y1="30" x2="510" y2="30" stroke="#ffb347" stroke-width="2" marker-end="url(#arrY)"/>
+    <text x="470" y="22" text-anchor="middle" font-size="10" fill="#ffb347">SLIDERS</text>
+
+    <text x="745" y="24" font-size="12" font-weight="700" fill="#a9f0c5" text-anchor="middle">结构化持久状态</text>
+    <text x="745" y="44" font-size="11" fill="#dfe5f5" text-anchor="middle">LLM 抽事实 + DB 做聚合，各司其职</text>
+  </g>
+</svg>

@@ -1,0 +1,56 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a9d8f"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="38" text-anchor="middle" font-size="24" font-weight="700" fill="#1d3557">ReCast：搜索 ≠ 更新</text>
+  <text x="450" y="62" text-anchor="middle" font-size="14" fill="#555">采样可以撒大网，梯度只回传"边界一对"</text>
+
+  <!-- Rollout pool -->
+  <rect x="50" y="110" width="260" height="360" rx="14" fill="#f1faee" stroke="#457b9d" stroke-width="2"/>
+  <text x="180" y="140" text-anchor="middle" font-size="16" font-weight="700" fill="#1d3557">Rollout 采样 (G=32)</text>
+  <text x="180" y="160" text-anchor="middle" font-size="12" fill="#666">宽度随意放大，成本便宜</text>
+
+  <!-- samples grid -->
+  <g fill="#cbd5e1" stroke="#94a3b8">
+    <circle cx="90" cy="195" r="10"/><circle cx="125" cy="195" r="10"/><circle cx="160" cy="195" r="10"/><circle cx="195" cy="195" r="10"/><circle cx="230" cy="195" r="10"/><circle cx="265" cy="195" r="10"/>
+    <circle cx="90" cy="230" r="10"/><circle cx="125" cy="230" r="10"/><circle cx="160" cy="230" r="10"/><circle cx="195" cy="230" r="10"/><circle cx="230" cy="230" r="10"/><circle cx="265" cy="230" r="10"/>
+    <circle cx="90" cy="265" r="10"/><circle cx="125" cy="265" r="10"/><circle cx="160" cy="265" r="10"/><circle cx="195" cy="265" r="10"/><circle cx="230" cy="265" r="10"/><circle cx="265" cy="265" r="10"/>
+    <circle cx="90" cy="300" r="10"/><circle cx="125" cy="300" r="10"/><circle cx="160" cy="300" r="10"/><circle cx="195" cy="300" r="10"/><circle cx="230" cy="300" r="10"/>
+    <circle cx="90" cy="335" r="10"/><circle cx="125" cy="335" r="10"/><circle cx="160" cy="335" r="10"/><circle cx="195" cy="335" r="10"/>
+  </g>
+  <!-- picked boundary pair -->
+  <circle cx="230" cy="335" r="12" fill="#e76f51" stroke="#b5380f" stroke-width="2"/>
+  <circle cx="265" cy="335" r="12" fill="#2a9d8f" stroke="#176b60" stroke-width="2"/>
+
+  <text x="180" y="395" text-anchor="middle" font-size="13" fill="#555">只挑出边界 1 对 → 送去更新</text>
+  <rect x="125" y="410" width="110" height="40" rx="8" fill="#fff" stroke="#2a9d8f" stroke-width="2"/>
+  <circle cx="150" cy="430" r="8" fill="#2a9d8f"/>
+  <circle cx="180" cy="430" r="8" fill="#e76f51"/>
+  <text x="215" y="434" text-anchor="middle" font-size="12" fill="#555">pair</text>
+
+  <!-- Arrow to actor -->
+  <path d="M 240 430 C 380 430, 420 300, 540 300" stroke="#2a9d8f" stroke-width="3" fill="none" marker-end="url(#ag)"/>
+  <text x="380" y="360" text-anchor="middle" font-size="13" fill="#2a9d8f" font-weight="600">O(1) 梯度</text>
+
+  <!-- Actor update -->
+  <rect x="540" y="200" width="310" height="200" rx="14" fill="#fff3e6" stroke="#e76f51" stroke-width="2"/>
+  <text x="695" y="232" text-anchor="middle" font-size="16" font-weight="700" fill="#b5380f">Actor 更新（固定 2 条）</text>
+
+  <rect x="570" y="255" width="120" height="50" rx="8" fill="#fff" stroke="#2a9d8f"/>
+  <text x="630" y="285" text-anchor="middle" font-size="13" fill="#2a9d8f">正样本</text>
+  <rect x="700" y="255" width="120" height="50" rx="8" fill="#fff" stroke="#e76f51"/>
+  <text x="760" y="285" text-anchor="middle" font-size="13" fill="#e76f51">负样本</text>
+
+  <text x="695" y="340" text-anchor="middle" font-size="12" fill="#333">不管 G 多大，前反向只算这一对</text>
+  <text x="695" y="370" text-anchor="middle" font-size="12" fill="#333">∇θ 与 G 解耦</text>
+
+  <!-- Gains -->
+  <rect x="540" y="420" width="310" height="110" rx="12" fill="#1d3557"/>
+  <text x="695" y="450" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">G=32 实测收益</text>
+  <text x="580" y="480" font-size="14" fill="#ffd166">Actor 更新 16.6× 提速</text>
+  <text x="580" y="503" font-size="14" fill="#ffd166">峰值显存 −16.5%</text>
+  <text x="580" y="522" font-size="14" fill="#ffd166">MFU +14.2%</text>
+</svg>

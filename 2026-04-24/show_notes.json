@@ -1,0 +1,9 @@
+{
+  "title": "AI计算广告论文播报｜0424 大促CVR延迟塔与生成式推荐SID重构",
+  "shownotes_html": "<p>转化建模正在从\"一个塔打天下\"走向场景化拆分——大促预热期单独拉延迟塔，生成式推荐重做多模态SID生成链路。本期围绕这两个方向展开精读，也聊到了Agent工具调用的token开销优化和Off-Policy Evaluation基础概念。</p><p><strong>本期重点</strong></p><ul><li><strong>反事实多任务延迟转化建模（Counterfactual Multi-task Learning for Delayed Conversion Modeling in E-commerce Sales Pre-Promotion）</strong>——电商大促预热期CVR塌陷是老问题，这篇把当天转化和延迟到促销日的转化拆成两个塔，冻住日常塔、新加延迟塔补残差，再用个性化门控按用户加购强度动态决定迁移多少日常知识。线上A/B验证广告收入提升，对出价塌陷问题给出了可落地的解法。</li><li><strong>跨模态对齐的Semantic ID生成（Deep Interest Mining with Cross-Modal Alignment for SemanticID Generation in Generative Recommendation）</strong>——生成式推荐的SID两阶段量化会丢语义、模态错位。这篇用LLM挖物料隐含购买动机、用VLM把图像翻成文本统一到文本空间再量化，还加了质量感知RL压制低质SID。对广告物料Token化和长尾冷启有直接参考价值。</li><li><strong>Tool Attention Is All You Need</strong>——把MCP协议里每轮注入全量工具schema的做法改成动态门控+懒加载，每轮省掉1–6万token的隐藏开销。搭Agent广告投放助手的团队可以直接省钱。</li><li><strong>Mixture of Sequence</strong>——用主题感知MoE切分长用户序列，不同专家只处理相关兴趣片段，缓解长序列兴趣漂移噪声，与广告CTR排序中的长序列建模高度同构。</li></ul><p><strong>今日趋势</strong></p><ul><li>转化侧与物料侧建模都在被\"场景化拆开\"：大促拆延迟塔、生成推荐拆多模态SID，\"一个通用模型吃所有分布\"的假设正在松动。</li><li>Agent方向今日集中在系统工程与安全（工具调用开销、跨会话攻击），而非单纯能力展示，工业落地关注点明显前移。</li></ul><p><strong>今日知识点：Off-Policy Evaluation</strong><br/>手里只有旧策略日志，想估计新策略上线效果——核心不是直接平均，而是用概率比修正系数校正采样偏差。广告排序、出价优化的离线评估都依赖这个思路，也是理解论文里propensity、reweighting、doubly robust等术语的前提。</p><p>以上内容由 AI 自动生成并经人工审校，如有疏漏欢迎留言指正交流。</p>",
+  "report_date": "2026-04-24",
+  "provider": "bedrock-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-04-25T16:10:06Z"
+}

@@ -1,0 +1,98 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2b6cb0"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="560" fill="#f7fafc"/>
+
+  <text x="450" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a365d">SLIDERS：长文档 → 关系表 → SQL 查询</text>
+  <text x="450" y="58" text-anchor="middle" font-size="13" fill="#4a5568">让 LLM 只做抽事实，把聚合交给数据库</text>
+
+  <!-- 模块1：文档堆 -->
+  <g>
+    <rect x="30" y="130" width="170" height="220" rx="8" fill="#fff" stroke="#2b6cb0" stroke-width="2"/>
+    <text x="115" y="158" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a365d">海量长文档</text>
+    <rect x="52" y="175" width="126" height="22" fill="#ebf4ff" stroke="#90cdf4"/>
+    <rect x="52" y="203" width="126" height="22" fill="#ebf4ff" stroke="#90cdf4"/>
+    <rect x="52" y="231" width="126" height="22" fill="#ebf4ff" stroke="#90cdf4"/>
+    <rect x="52" y="259" width="126" height="22" fill="#ebf4ff" stroke="#90cdf4"/>
+    <text x="115" y="310" text-anchor="middle" font-size="12" fill="#4a5568">3.9M ~ 36M tokens</text>
+    <text x="115" y="330" text-anchor="middle" font-size="12" fill="#e53e3e">装不进上下文窗口</text>
+  </g>
+
+  <!-- 箭头1 -->
+  <line x1="205" y1="240" x2="275" y2="240" stroke="#2b6cb0" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="240" y="230" text-anchor="middle" font-size="12" fill="#2b6cb0">分块抽取</text>
+
+  <!-- 模块2：关系表 -->
+  <g>
+    <rect x="280" y="110" width="360" height="260" rx="8" fill="#fff" stroke="#38a169" stroke-width="2"/>
+    <text x="460" y="135" text-anchor="middle" font-size="15" font-weight="bold" fill="#22543d">带溯源的关系表 AccountsPayable (千美元)</text>
+
+    <!-- 表头 -->
+    <rect x="296" y="150" width="328" height="26" fill="#c6f6d5" stroke="#38a169"/>
+    <text x="330" y="168" font-size="11" fill="#22543d" font-weight="bold">公司</text>
+    <text x="395" y="168" font-size="11" fill="#22543d" font-weight="bold">金额 v</text>
+    <text x="460" y="168" font-size="11" fill="#22543d" font-weight="bold">原文引用 p</text>
+    <text x="560" y="168" font-size="11" fill="#22543d" font-weight="bold">理由 r</text>
+
+    <!-- 行1 -->
+    <rect x="296" y="176" width="328" height="30" fill="#f0fff4" stroke="#9ae6b4"/>
+    <text x="302" y="195" font-size="11" fill="#2d3748">BioLargo</text>
+    <text x="395" y="195" font-size="11" fill="#2d3748">1,740</text>
+    <text x="460" y="195" font-size="11" fill="#2d3748">Chunk3:资产负债表</text>
+    <text x="560" y="195" font-size="11" fill="#c05621">含应计费用</text>
+
+    <!-- 行2 -->
+    <rect x="296" y="206" width="328" height="30" fill="#f0fff4" stroke="#9ae6b4"/>
+    <text x="302" y="225" font-size="11" fill="#2d3748">BioLargo</text>
+    <text x="395" y="225" font-size="11" font-weight="bold" fill="#22543d">1,663</text>
+    <text x="460" y="225" font-size="11" fill="#2d3748">Chunk8:附注明细</text>
+    <text x="560" y="225" font-size="11" fill="#2f855a">纯应付账款 ✓</text>
+
+    <text x="460" y="266" text-anchor="middle" font-size="12" fill="#4a5568">schema 自带：类型 / 单位 / 量级 / 归一化规则</text>
+    <text x="460" y="290" text-anchor="middle" font-size="12" fill="#4a5568">每行 = 值 v ＋ 原文引用 p ＋ 抽取理由 r</text>
+    <text x="460" y="320" text-anchor="middle" font-size="12" font-weight="bold" fill="#22543d">LLM 擅长：读一小段、抽一行事实</text>
+    <text x="460" y="350" text-anchor="middle" font-size="11" fill="#718096">（不把证据再拼回上下文）</text>
+  </g>
+
+  <!-- 箭头2 -->
+  <line x1="645" y1="240" x2="715" y2="240" stroke="#2b6cb0" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="680" y="230" text-anchor="middle" font-size="12" fill="#2b6cb0">SQL Agent</text>
+
+  <!-- 回箭头：SQL Agent 反复改写 -->
+  <path d="M 715 255 Q 680 285 645 255" stroke="#2b6cb0" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+  <text x="680" y="295" text-anchor="middle" font-size="10" fill="#718096">写→执行→改写</text>
+
+  <!-- 模块3：SQL结果 -->
+  <g>
+    <rect x="720" y="140" width="160" height="210" rx="8" fill="#fff" stroke="#d69e2e" stroke-width="2"/>
+    <text x="800" y="165" text-anchor="middle" font-size="14" font-weight="bold" fill="#744210">SQL 查询 → 答案</text>
+    <rect x="735" y="178" width="130" height="76" fill="#2d3748" rx="4"/>
+    <text x="745" y="196" font-size="10" fill="#faf089">SELECT 金额</text>
+    <text x="745" y="212" font-size="10" fill="#faf089">FROM AP</text>
+    <text x="745" y="228" font-size="10" fill="#faf089">WHERE 公司=</text>
+    <text x="745" y="244" font-size="10" fill="#faf089">'BioLargo'</text>
+
+    <text x="800" y="290" text-anchor="middle" font-size="24" font-weight="bold" fill="#c05621">1,663</text>
+    <text x="800" y="310" text-anchor="middle" font-size="11" fill="#744210">千美元</text>
+    <text x="800" y="332" text-anchor="middle" font-size="11" fill="#38a169">DB 擅长聚合 / 去重</text>
+  </g>
+
+  <!-- 底部对比 -->
+  <g>
+    <rect x="80" y="410" width="340" height="120" rx="8" fill="#fff5f5" stroke="#fc8181" stroke-width="1.5"/>
+    <text x="250" y="435" text-anchor="middle" font-size="13" font-weight="bold" fill="#9b2c2c">✗ 传统做法</text>
+    <text x="250" y="460" text-anchor="middle" font-size="12" fill="#742a2a">抽取结果再拼回上下文</text>
+    <text x="250" y="482" text-anchor="middle" font-size="12" fill="#742a2a">中间证据又变成新长文</text>
+    <text x="250" y="504" text-anchor="middle" font-size="12" fill="#742a2a">聚合瓶颈 · 算不准</text>
+
+    <rect x="480" y="410" width="340" height="120" rx="8" fill="#f0fff4" stroke="#68d391" stroke-width="1.5"/>
+    <text x="650" y="435" text-anchor="middle" font-size="13" font-weight="bold" fill="#22543d">✓ SLIDERS</text>
+    <text x="650" y="460" text-anchor="middle" font-size="12" fill="#22543d">证据落入 DB，不回灌 context</text>
+    <text x="650" y="482" text-anchor="middle" font-size="12" fill="#22543d">SQL 做聚合 / 去重 / 比大小</text>
+    <text x="650" y="504" text-anchor="middle" font-size="12" fill="#22543d">可溯源、可扩展到千万 token</text>
+  </g>
+</svg>

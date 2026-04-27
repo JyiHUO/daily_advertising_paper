@@ -1,0 +1,67 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="arG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1a9d5a"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c93a3a"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="34" text-anchor="middle" font-size="22" font-weight="700" fill="#222">ReCast: 只更新"边界上的一对"</text>
+  <text x="450" y="58" text-anchor="middle" font-size="13" fill="#666">32 条 rollout 里，只让 1 正 + 1 最像的负 贡献梯度</text>
+
+  <!-- Group box -->
+  <rect x="50" y="85" width="330" height="430" rx="12" fill="#f6f7fb" stroke="#bbb"/>
+  <text x="215" y="110" text-anchor="middle" font-size="15" font-weight="700" fill="#333">一组 rollout（目标 a,b,c）</text>
+
+  <!-- positive -->
+  <rect x="75" y="125" width="280" height="52" rx="8" fill="#e6f7ec" stroke="#1a9d5a" stroke-width="2"/>
+  <text x="90" y="150" font-size="14" font-weight="700" fill="#1a9d5a">✓ (a,b,c)   reward=1</text>
+  <text x="90" y="168" font-size="12" fill="#1a9d5a">→ i+ （任务奖励最高）</text>
+
+  <!-- hard negative -->
+  <rect x="75" y="190" width="280" height="52" rx="8" fill="#fdeaea" stroke="#c93a3a" stroke-width="2"/>
+  <text x="90" y="215" font-size="14" font-weight="700" fill="#c93a3a">✗ (a,b,d)   reward=0, ϕ=0.1</text>
+  <text x="90" y="233" font-size="12" fill="#c93a3a">→ i− （最像目标的错误答案）</text>
+
+  <!-- other negatives -->
+  <rect x="75" y="260" width="280" height="30" rx="6" fill="#eee" stroke="#bbb"/>
+  <text x="215" y="280" text-anchor="middle" font-size="12" fill="#888">✗ (a,y,z)   ϕ=0.01</text>
+
+  <rect x="75" y="296" width="280" height="30" rx="6" fill="#eee" stroke="#bbb"/>
+  <text x="215" y="316" text-anchor="middle" font-size="12" fill="#888">✗ (x,y,z)   ϕ=0</text>
+
+  <rect x="75" y="332" width="280" height="30" rx="6" fill="#eee" stroke="#bbb"/>
+  <text x="215" y="352" text-anchor="middle" font-size="12" fill="#888">✗ ...  （共 30 条 reward=0）</text>
+
+  <text x="215" y="400" text-anchor="middle" font-size="12" fill="#666">结构分 ϕ：前缀匹配越多越"像"</text>
+  <text x="215" y="420" text-anchor="middle" font-size="12" fill="#666">从 reward=0 中挑 ϕ 最大者 = 最易混淆</text>
+  <text x="215" y="485" text-anchor="middle" font-size="12" fill="#888">（其余 30 条不参与梯度）</text>
+
+  <!-- arrows to advantages -->
+  <line x1="355" y1="151" x2="555" y2="218" stroke="#1a9d5a" stroke-width="2.5" marker-end="url(#arG)"/>
+  <line x1="355" y1="216" x2="555" y2="320" stroke="#c93a3a" stroke-width="2.5" marker-end="url(#arR)"/>
+  <line x1="355" y1="275" x2="555" y2="425" stroke="#bbb" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#ar)"/>
+
+  <!-- Advantage assignment -->
+  <rect x="560" y="140" width="290" height="350" rx="12" fill="#fff" stroke="#333" stroke-width="1.5"/>
+  <text x="705" y="168" text-anchor="middle" font-size="15" font-weight="700" fill="#222">Advantage 分配</text>
+
+  <rect x="585" y="195" width="240" height="50" rx="8" fill="#e6f7ec" stroke="#1a9d5a"/>
+  <text x="705" y="225" text-anchor="middle" font-size="15" font-weight="700" fill="#1a9d5a">A(i+) = +w</text>
+
+  <rect x="585" y="295" width="240" height="50" rx="8" fill="#fdeaea" stroke="#c93a3a"/>
+  <text x="705" y="325" text-anchor="middle" font-size="15" font-weight="700" fill="#c93a3a">A(i−) = −w</text>
+
+  <rect x="585" y="400" width="240" height="60" rx="8" fill="#f3f3f3" stroke="#aaa" stroke-dasharray="5,3"/>
+  <text x="705" y="423" text-anchor="middle" font-size="13" fill="#666">其余 30 条</text>
+  <text x="705" y="445" text-anchor="middle" font-size="15" font-weight="700" fill="#666">A = 0  （不更新）</text>
+
+  <!-- bottom summary -->
+  <rect x="50" y="525" width="800" height="30" rx="6" fill="#fff8e1" stroke="#e0b84a"/>
+  <text x="450" y="545" text-anchor="middle" font-size="13" fill="#7a5a10">干净的梯度：把概率从"几乎蒙对"搬到"真正对"，不被零奖励样本稀释</text>
+</svg>

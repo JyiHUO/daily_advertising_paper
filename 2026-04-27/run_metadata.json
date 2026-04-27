@@ -1,0 +1,19 @@
+{
+  "date": "2026-04-27",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL"
+  ],
+  "candidate_count": 4,
+  "supplementary_count": 2,
+  "focus_titles": [
+    "ReCast: Recasting Learning Signals for Reinforcement Learning in Generative Recommendation",
+    "Contexts are Never Long Enough: Structured Reasoning for Scalable Question Answering over Long Document Sets"
+  ],
+  "focus_status": {
+    "ReCast: Recasting Learning Signals for Reinforcement Learning in Generative Recommendation": "completed",
+    "Contexts are Never Long Enough: Structured Reasoning for Scalable Question Answering over Long Document Sets": "completed"
+  }
+}

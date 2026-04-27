@@ -1,4 +1,12 @@
 {
   "feishu": "completed",
-  "wecom": "completed"
+  "wecom": "completed",
+  "xiaoyuzhou": "completed",
+  "xiaoyuzhou_result": {
+    "eid": "69ecf5981e94ae6921256a89",
+    "status": "INITIALIZED",
+    "review_status": "PENDING",
+    "audio_url": "https://media.xyzcdn.net/lgC9myVaDAx0-uu5nsexhmA13tWZ.mp3",
+    "title": "AI计算广告论文播报｜0424 大促CVR延迟塔与生成式推荐SID重构"
+  }
 }
