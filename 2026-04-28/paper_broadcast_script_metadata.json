@@ -1,0 +1,13 @@
+{
+  "report_date": "2026-04-28",
+  "provider": "bedrock-opus-47",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 3198,
+  "focus_titles": [
+    "Follow the TRACE: Exploiting Post-Click Trajectories for Online Delayed Conversion Rate Prediction",
+    "CS3: Efficient Online Capability Synergy for Two-Tower Recommendation"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Steve"
+}
