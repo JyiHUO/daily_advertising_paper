@@ -1,0 +1,88 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d9534f"/>
+    </marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3b7ad9"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="34" text-anchor="middle" font-size="22" font-weight="bold">CTS：把"过去喜欢的样子"塞进塔的输入</text>
+  <text x="450" y="58" text-anchor="middle" font-size="13" fill="#666">双塔打分前互不知情 → 用 EMA 交叉向量提前对齐</text>
+
+  <!-- 上方：普通双塔 -->
+  <text x="80" y="95" font-size="14" font-weight="bold" fill="#999">Before</text>
+  <rect x="80" y="105" width="140" height="55" rx="6" fill="#eef" stroke="#88a"/>
+  <text x="150" y="130" text-anchor="middle" font-size="13">用户塔</text>
+  <text x="150" y="148" text-anchor="middle" font-size="11" fill="#666">只看 U 特征</text>
+
+  <rect x="420" y="105" width="140" height="55" rx="6" fill="#fee" stroke="#a88"/>
+  <text x="490" y="130" text-anchor="middle" font-size="13">物品塔</text>
+  <text x="490" y="148" text-anchor="middle" font-size="11" fill="#666">只看 V 特征</text>
+
+  <line x1="220" y1="132" x2="420" y2="132" stroke="#bbb" stroke-dasharray="4 4"/>
+  <text x="320" y="125" text-anchor="middle" font-size="11" fill="#999">打分前无交互</text>
+
+  <!-- 分隔 -->
+  <line x1="60" y1="185" x2="840" y2="185" stroke="#ddd"/>
+
+  <!-- 下方：CTS -->
+  <text x="80" y="215" font-size="14" font-weight="bold" fill="#2a7">After · CTS</text>
+
+  <!-- 用户塔 -->
+  <rect x="60" y="240" width="170" height="110" rx="8" fill="#eaf3ff" stroke="#3b7ad9" stroke-width="2"/>
+  <text x="145" y="268" text-anchor="middle" font-size="14" font-weight="bold">用户塔</text>
+  <text x="145" y="293" text-anchor="middle" font-size="12">输入 = U 特征</text>
+  <text x="145" y="314" text-anchor="middle" font-size="13" fill="#d9534f" font-weight="bold">+ c_u</text>
+  <text x="145" y="335" text-anchor="middle" font-size="10" fill="#666">过去喜欢的物品均值</text>
+
+  <!-- 物品塔 -->
+  <rect x="670" y="240" width="170" height="110" rx="8" fill="#ffeeea" stroke="#d9534f" stroke-width="2"/>
+  <text x="755" y="268" text-anchor="middle" font-size="14" font-weight="bold">物品塔</text>
+  <text x="755" y="293" text-anchor="middle" font-size="12">输入 = V 特征</text>
+  <text x="755" y="314" text-anchor="middle" font-size="13" fill="#3b7ad9" font-weight="bold">+ c_v</text>
+  <text x="755" y="335" text-anchor="middle" font-size="10" fill="#666">过去喜欢它的用户均值</text>
+
+  <!-- 中间 EMA 模块 -->
+  <rect x="320" y="235" width="260" height="120" rx="10" fill="#fffbe6" stroke="#c9a227" stroke-width="2"/>
+  <text x="450" y="262" text-anchor="middle" font-size="14" font-weight="bold">EMA 交叉同步 (y=1 才更新)</text>
+  <text x="450" y="292" text-anchor="middle" font-size="13" fill="#333">c_u ← α·c_u + (1-α)·v</text>
+  <text x="450" y="315" text-anchor="middle" font-size="13" fill="#333">c_v ← α·c_v + (1-α)·u</text>
+  <text x="450" y="340" text-anchor="middle" font-size="11" fill="#888">α=0.8 · 无梯度 · 存参数服务器</text>
+
+  <!-- 箭头：塔 → EMA（正样本贡献 u/v） -->
+  <path d="M230 278 L320 278" stroke="#333" stroke-width="1.8" fill="none" marker-end="url(#a)"/>
+  <path d="M670 278 L580 278" stroke="#333" stroke-width="1.8" fill="none" marker-end="url(#a)"/>
+  <text x="275" y="270" text-anchor="middle" font-size="11" fill="#666">贡献 u</text>
+  <text x="625" y="270" text-anchor="middle" font-size="11" fill="#666">贡献 v</text>
+
+  <!-- 箭头：EMA → 塔输入（c_u / c_v 注入） -->
+  <path d="M320 320 L230 320" stroke="#d9534f" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M580 320 L670 320" stroke="#3b7ad9" stroke-width="2" fill="none" marker-end="url(#ab)"/>
+  <text x="275" y="314" text-anchor="middle" font-size="11" fill="#d9534f">注入 c_u</text>
+  <text x="625" y="314" text-anchor="middle" font-size="11" fill="#3b7ad9">注入 c_v</text>
+
+  <!-- 底部效果 -->
+  <rect x="120" y="395" width="660" height="135" rx="10" fill="#f5fff5" stroke="#4caf50"/>
+  <text x="450" y="420" text-anchor="middle" font-size="14" font-weight="bold" fill="#2a7">效果：t-SNE 上正样本聚拢，负样本被推开</text>
+
+  <circle cx="230" cy="478" r="8" fill="#3b7ad9"/>
+  <text x="230" y="505" text-anchor="middle" font-size="11">用户 U1</text>
+  <circle cx="260" cy="470" r="5" fill="#d9534f"/>
+  <circle cx="272" cy="485" r="5" fill="#d9534f"/>
+  <circle cx="255" cy="492" r="5" fill="#d9534f"/>
+  <text x="295" y="473" font-size="10" fill="#666">正样本聚拢</text>
+
+  <text x="400" y="482" font-size="13" fill="#2a7">→ 两塔空间提前对齐</text>
+
+  <circle cx="640" cy="478" r="8" fill="#3b7ad9"/>
+  <text x="640" y="505" text-anchor="middle" font-size="11">用户 U1</text>
+  <circle cx="710" cy="460" r="5" fill="#999"/>
+  <circle cx="735" cy="492" r="5" fill="#999"/>
+  <circle cx="720" cy="478" r="5" fill="#999"/>
+  <text x="722" y="505" text-anchor="middle" font-size="10" fill="#666">负样本被推开</text>
+</svg>

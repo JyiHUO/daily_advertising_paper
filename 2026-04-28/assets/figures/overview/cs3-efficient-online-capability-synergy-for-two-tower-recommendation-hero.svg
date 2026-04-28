@@ -1,0 +1,118 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f1830"/>
+      <stop offset="1" stop-color="#1a2142"/>
+    </linearGradient>
+    <linearGradient id="uTower" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="vTower" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f59e0b"/>
+      <stop offset="1" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="rank" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#ec4899"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#e2e8f0"/>
+    </marker>
+    <marker id="arrY" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#fbbf24"/>
+    </marker>
+    <marker id="arrP" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c084fc"/>
+    </marker>
+  </defs>
+
+  <rect width="1000" height="640" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="500" y="40" text-anchor="middle" fill="#f8fafc" font-size="22" font-weight="700">CS3：双塔召回的三重协同增强</text>
+  <text x="500" y="63" text-anchor="middle" fill="#94a3b8" font-size="13">保持毫秒级延迟，补齐容量 · 对齐 · 级联三大短板（广告收入 +8.36%）</text>
+
+  <!-- User Tower -->
+  <g>
+    <rect x="70" y="160" width="200" height="310" rx="14" fill="url(#uTower)" opacity="0.92"/>
+    <text x="170" y="188" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">用户塔 U</text>
+
+    <rect x="90" y="202" width="160" height="96" rx="8" fill="#0b1226" opacity="0.55" stroke="#93c5fd" stroke-dasharray="3,3"/>
+    <text x="170" y="220" text-anchor="middle" fill="#bfdbfe" font-size="11" font-weight="700">① CAS 自修正循环</text>
+    <text x="170" y="240" text-anchor="middle" fill="#e0e7ff" font-size="10">前向生成重要性 e</text>
+    <text x="170" y="258" text-anchor="middle" fill="#e0e7ff" font-size="10">2·σ(·) 逐位加权</text>
+    <text x="170" y="276" text-anchor="middle" fill="#e0e7ff" font-size="10">同参数再前向一次</text>
+    <path d="M 102 290 Q 86 268 102 246" stroke="#93c5fd" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+
+    <rect x="90" y="312" width="160" height="30" rx="6" fill="#fbbf24" opacity="0.85"/>
+    <text x="170" y="332" text-anchor="middle" fill="#1a1a1a" font-size="11" font-weight="700">+ c_u（CTS 向量）</text>
+
+    <rect x="90" y="350" width="160" height="30" rx="6" fill="#c084fc" opacity="0.85"/>
+    <text x="170" y="370" text-anchor="middle" fill="#1a1a1a" font-size="11" font-weight="700">+ s_u（CMS 向量）</text>
+
+    <rect x="90" y="398" width="160" height="40" rx="6" fill="#0b1226" opacity="0.6" stroke="#60a5fa"/>
+    <text x="170" y="423" text-anchor="middle" fill="#dbeafe" font-size="12">用户向量 u</text>
+  </g>
+
+  <!-- Item Tower -->
+  <g>
+    <rect x="730" y="160" width="200" height="310" rx="14" fill="url(#vTower)" opacity="0.92"/>
+    <text x="830" y="188" text-anchor="middle" fill="#fff" font-size="16" font-weight="700">物品塔 V</text>
+
+    <rect x="750" y="202" width="160" height="96" rx="8" fill="#0b1226" opacity="0.55" stroke="#fcd34d" stroke-dasharray="3,3"/>
+    <text x="830" y="220" text-anchor="middle" fill="#fde68a" font-size="11" font-weight="700">① CAS 自修正循环</text>
+    <text x="830" y="240" text-anchor="middle" fill="#fef3c7" font-size="10">预判哪些特征是噪声</text>
+    <text x="830" y="258" text-anchor="middle" fill="#fef3c7" font-size="10">重加权后再跑一遍</text>
+    <text x="830" y="276" text-anchor="middle" fill="#fef3c7" font-size="10">E[e]≈1，不塌缩</text>
+    <path d="M 898 290 Q 914 268 898 246" stroke="#fcd34d" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+
+    <rect x="750" y="312" width="160" height="30" rx="6" fill="#fbbf24" opacity="0.85"/>
+    <text x="830" y="332" text-anchor="middle" fill="#1a1a1a" font-size="11" font-weight="700">+ c_v（CTS 向量）</text>
+
+    <rect x="750" y="350" width="160" height="30" rx="6" fill="#c084fc" opacity="0.85"/>
+    <text x="830" y="370" text-anchor="middle" fill="#1a1a1a" font-size="11" font-weight="700">+ s_v（CMS 向量）</text>
+
+    <rect x="750" y="398" width="160" height="40" rx="6" fill="#0b1226" opacity="0.6" stroke="#fbbf24"/>
+    <text x="830" y="423" text-anchor="middle" fill="#fef3c7" font-size="12">物品向量 v</text>
+  </g>
+
+  <!-- Center dot product -->
+  <circle cx="500" cy="418" r="28" fill="#0b1226" stroke="#e2e8f0" stroke-width="2"/>
+  <text x="500" y="425" text-anchor="middle" fill="#e2e8f0" font-size="20" font-weight="700">·</text>
+  <text x="500" y="465" text-anchor="middle" fill="#cbd5e1" font-size="11">召回分 u·v</text>
+
+  <path d="M 270 418 L 470 418" stroke="#e2e8f0" stroke-width="2" marker-end="url(#arr)"/>
+  <path d="M 730 418 L 530 418" stroke="#e2e8f0" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- ② CTS mutual arc -->
+  <path d="M 175 160 Q 500 80 825 160" stroke="#fbbf24" stroke-width="2" fill="none" marker-end="url(#arrY)" stroke-dasharray="6,4"/>
+  <rect x="400" y="95" width="200" height="38" rx="8" fill="#1a2142" stroke="#fbbf24"/>
+  <text x="500" y="111" text-anchor="middle" fill="#fbbf24" font-size="12" font-weight="700">② CTS 两塔互知</text>
+  <text x="500" y="126" text-anchor="middle" fill="#fde68a" font-size="10">正样本 EMA：c_u ← α c_u + (1-α)v</text>
+
+  <!-- ③ CMS from ranking model -->
+  <rect x="350" y="525" width="300" height="70" rx="12" fill="url(#rank)" opacity="0.9"/>
+  <text x="500" y="550" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">③ CMS 精排级联共享</text>
+  <text x="500" y="568" text-anchor="middle" fill="#fce7f3" font-size="10">精排倒二层 h_uv（含交叉 / target-attn）</text>
+  <text x="500" y="584" text-anchor="middle" fill="#fce7f3" font-size="10">EMA 蒸到 s_u、s_v，存 Embedding Server (p99&lt;5ms)</text>
+
+  <path d="M 380 525 Q 280 480 220 385" stroke="#c084fc" stroke-width="2" fill="none" marker-end="url(#arrP)"/>
+  <path d="M 620 525 Q 720 480 780 385" stroke="#c084fc" stroke-width="2" fill="none" marker-end="url(#arrP)"/>
+
+  <!-- Legend -->
+  <g font-size="10">
+    <rect x="30" y="495" width="14" height="10" fill="#93c5fd"/>
+    <text x="50" y="504" fill="#cbd5e1">① 容量：塔内去噪循环</text>
+    <rect x="30" y="512" width="14" height="10" fill="#fbbf24"/>
+    <text x="50" y="521" fill="#cbd5e1">② 对齐：两塔 EMA 互知</text>
+    <rect x="30" y="529" width="14" height="10" fill="#c084fc"/>
+    <text x="50" y="538" fill="#cbd5e1">③ 级联：精排知识下放</text>
+  </g>
+
+  <g font-size="10">
+    <text x="970" y="504" text-anchor="end" fill="#94a3b8">在线学习友好</text>
+    <text x="970" y="521" text-anchor="end" fill="#94a3b8">QPS 下降 &lt; 1%</text>
+    <text x="970" y="538" text-anchor="end" fill="#94a3b8">快手广告三场景最高 +8.36%</text>
+  </g>
+</svg>

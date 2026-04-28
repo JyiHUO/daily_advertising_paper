@@ -1,0 +1,65 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="34" text-anchor="middle" font-size="22" font-weight="bold">CAS: 自我去噪的 FC 层</text>
+  <text x="450" y="58" text-anchor="middle" font-size="13" fill="#666">先试算一次 → 评估特征重要性 → 加权后再算一次（同一组 FC 参数）</text>
+
+  <!-- Input -->
+  <rect x="40" y="220" width="120" height="70" rx="8" fill="#ecf3fb" stroke="#3a6fb0" stroke-width="2"/>
+  <text x="100" y="250" text-anchor="middle" font-size="14" font-weight="bold">输入 x</text>
+  <text x="100" y="272" text-anchor="middle" font-size="11" fill="#555">点击/地域/设备…</text>
+
+  <!-- FC first pass -->
+  <rect x="220" y="130" width="150" height="70" rx="8" fill="#fff3e0" stroke="#e68a00" stroke-width="2"/>
+  <text x="295" y="160" text-anchor="middle" font-size="14" font-weight="bold">FC (第 1 次)</text>
+  <text x="295" y="182" text-anchor="middle" font-size="11" fill="#555">得到中间向量 z</text>
+
+  <!-- Gate -->
+  <rect x="420" y="130" width="170" height="70" rx="8" fill="#fdecec" stroke="#c0392b" stroke-width="2"/>
+  <text x="505" y="156" text-anchor="middle" font-size="14" font-weight="bold">小网络 + Sigmoid</text>
+  <text x="505" y="176" text-anchor="middle" font-size="11" fill="#555">输出权重 e，乘 2</text>
+  <text x="505" y="192" text-anchor="middle" font-size="11" fill="#555">期望=1，范围 (0,2)</text>
+
+  <!-- Reweight -->
+  <rect x="340" y="305" width="180" height="70" rx="8" fill="#e8f6ee" stroke="#2e8b57" stroke-width="2"/>
+  <text x="430" y="334" text-anchor="middle" font-size="14" font-weight="bold">x' = e ⊙ x</text>
+  <text x="430" y="356" text-anchor="middle" font-size="11" fill="#555">噪声位压低，关键位放大</text>
+
+  <!-- FC second -->
+  <rect x="620" y="220" width="170" height="70" rx="8" fill="#fff3e0" stroke="#e68a00" stroke-width="2"/>
+  <text x="705" y="248" text-anchor="middle" font-size="14" font-weight="bold">FC (第 2 次)</text>
+  <text x="705" y="268" text-anchor="middle" font-size="11" fill="#555">同一组参数 → 干净输出</text>
+
+  <!-- x -> FC1 -->
+  <path d="M160,240 L220,175" fill="none" stroke="#333" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- FC1 -> Gate -->
+  <path d="M370,165 L420,165" stroke="#333" stroke-width="2" marker-end="url(#ar)" fill="none"/>
+  <text x="378" y="158" font-size="11" fill="#555">z</text>
+
+  <!-- Gate -> Reweight -->
+  <path d="M505,200 L450,305" stroke="#c0392b" stroke-width="2" marker-end="url(#arR)" fill="none"/>
+  <text x="490" y="258" font-size="11" fill="#c0392b">权重 e</text>
+
+  <!-- x direct to reweight -->
+  <path d="M100,290 L100,340 L340,340" stroke="#333" stroke-width="2" marker-end="url(#ar)" fill="none" stroke-dasharray="5,4"/>
+  <text x="170" y="332" font-size="11" fill="#555">原始 x</text>
+
+  <!-- Reweight -> FC2 -->
+  <path d="M520,335 L620,270" stroke="#333" stroke-width="2" marker-end="url(#ar)" fill="none"/>
+  <text x="548" y="298" font-size="11" fill="#555">x'</text>
+
+  <!-- Example box -->
+  <rect x="60" y="420" width="780" height="110" rx="10" fill="#f7f9fc" stroke="#bbb" stroke-dasharray="4,4"/>
+  <text x="80" y="448" font-size="13" font-weight="bold" fill="#333">例子：</text>
+  <text x="80" y="472" font-size="12" fill="#444">• “设备型号” 权重 ≈ 0.1  →  视为噪声，压下去</text>
+  <text x="80" y="492" font-size="12" fill="#444">• “近期点击品类” 权重 ≈ 1.8  →  关键特征，放大</text>
+  <text x="80" y="514" font-size="12" fill="#2e8b57">→ 用同一套 FC 再跑一次，得到更干净的用户表示（不增加塔外延迟）</text>
+</svg>

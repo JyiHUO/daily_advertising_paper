@@ -4,18 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-04-27
+- **日期**：2026-04-28
 - **分类**：cs.IR + cs.AI + cs.LG + cs.CL
-- **候选论文数**：4
+- **候选论文数**：15
 - **必读论文**：
-  - ReCast: Recasting Learning Signals for Reinforcement Learning in Generative Recommendation
-  - Contexts are Never Long Enough: Structured Reasoning for Scalable Question Answering over Long Document Sets
-- **日报路径**：[2026-04-27/daily_report.md](2026-04-27/daily_report.md)
+  - Follow the TRACE: Exploiting Post-Click Trajectories for Online Delayed Conversion Rate Prediction
+  - CS3: Efficient Online Capability Synergy for Two-Tower Recommendation
+- **日报路径**：[2026-04-28/daily_report.md](2026-04-28/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-04-28 | cs.IR + cs.AI + cs.LG + cs.CL | 15 | 1 | Follow the TRACE: Exploiting Post-Click Trajectories for Online Delayed Conversion Rate Prediction | [2026-04-28/daily_report.md](2026-04-28/daily_report.md) |
+|  |  |  | 2 | CS3: Efficient Online Capability Synergy for Two-Tower Recommendation |  |
 | 2026-04-27 | cs.IR + cs.AI + cs.LG + cs.CL | 4 | 1 | ReCast: Recasting Learning Signals for Reinforcement Learning in Generative Recommendation | [2026-04-27/daily_report.md](2026-04-27/daily_report.md) |
 |  |  |  | 2 | Contexts are Never Long Enough: Structured Reasoning for Scalable Question Answering over Long Document Sets |  |
 | 2026-04-24 | cs.IR + cs.AI + cs.LG + cs.CL | 8 | 1 | Counterfactual Multi-task Learning for Delayed Conversion Modeling in E-commerce Sales Pre-Promotion | [2026-04-24/daily_report.md](2026-04-24/daily_report.md) |

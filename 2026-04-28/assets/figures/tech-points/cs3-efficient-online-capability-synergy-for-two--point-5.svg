@@ -1,0 +1,83 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d14"/>
+    </marker>
+    <marker id="arG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a8c52"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#222">CS3：让双塔召回对齐精排口径</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#666">Kendall Tau ↑ 意味着召回的排序更接近精排最终想要的结果</text>
+
+  <!-- LEFT: baseline -->
+  <g>
+    <rect x="60" y="90" width="340" height="210" rx="10" fill="#fdecea" stroke="#d14" stroke-width="2"/>
+    <text x="230" y="118" text-anchor="middle" font-size="16" font-weight="bold" fill="#b0222b">基线 DSSM 双塔</text>
+
+    <rect x="90" y="145" width="120" height="40" rx="6" fill="#fff" stroke="#b0222b"/>
+    <text x="150" y="170" text-anchor="middle" font-size="13">召回 Top100</text>
+
+    <rect x="250" y="145" width="120" height="40" rx="6" fill="#fff" stroke="#b0222b"/>
+    <text x="310" y="170" text-anchor="middle" font-size="13">精排 Top10</text>
+
+    <line x1="210" y1="165" x2="250" y2="165" stroke="#d14" stroke-width="2" marker-end="url(#arR)"/>
+
+    <text x="230" y="220" text-anchor="middle" font-size="14" fill="#b0222b">命中仅 3 / 10，Kendall Tau ≈ 0.62</text>
+    <text x="230" y="260" text-anchor="middle" font-size="12" fill="#888">召回的好货被精排当成普通货</text>
+  </g>
+
+  <!-- RIGHT: CS3 -->
+  <g>
+    <rect x="500" y="90" width="340" height="210" rx="10" fill="#e8f4ec" stroke="#2a8c52" stroke-width="2"/>
+    <text x="670" y="118" text-anchor="middle" font-size="16" font-weight="bold" fill="#1f6b3f">CS3 增强双塔</text>
+
+    <rect x="530" y="145" width="120" height="40" rx="6" fill="#fff" stroke="#1f6b3f"/>
+    <text x="590" y="170" text-anchor="middle" font-size="13">召回 Top100</text>
+
+    <rect x="690" y="145" width="120" height="40" rx="6" fill="#fff" stroke="#1f6b3f"/>
+    <text x="750" y="170" text-anchor="middle" font-size="13">精排 Top10</text>
+
+    <line x1="650" y1="165" x2="690" y2="165" stroke="#2a8c52" stroke-width="2" marker-end="url(#arG)"/>
+
+    <text x="670" y="220" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f6b3f">命中更多，Kendall Tau 0.62 → 0.64</text>
+    <text x="670" y="260" text-anchor="middle" font-size="12" fill="#555">Recall Loss ↓ 6%~9%，顺序更一致</text>
+  </g>
+
+  <!-- center arrow -->
+  <line x1="405" y1="195" x2="495" y2="195" stroke="#333" stroke-width="3" marker-end="url(#ar)"/>
+  <text x="450" y="185" text-anchor="middle" font-size="13" font-weight="bold" fill="#333">+CS3</text>
+
+  <!-- Bottom: three capabilities -->
+  <text x="450" y="350" text-anchor="middle" font-size="15" font-weight="bold" fill="#222">三个模块合力：让双塔逼近精排</text>
+
+  <g>
+    <rect x="90" y="375" width="220" height="100" rx="10" fill="#eaf2fb" stroke="#2b6cb0" stroke-width="2"/>
+    <text x="200" y="405" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e4e85">CAS</text>
+    <text x="200" y="430" text-anchor="middle" font-size="12" fill="#333">补强单塔表达力</text>
+    <text x="200" y="452" text-anchor="middle" font-size="11" fill="#666">塔内更像精排</text>
+  </g>
+
+  <g>
+    <rect x="340" y="375" width="220" height="100" rx="10" fill="#fef6e4" stroke="#c48a12" stroke-width="2"/>
+    <text x="450" y="405" text-anchor="middle" font-size="15" font-weight="bold" fill="#8a6208">CTS</text>
+    <text x="450" y="430" text-anchor="middle" font-size="12" fill="#333">两塔打分前对齐</text>
+    <text x="450" y="452" text-anchor="middle" font-size="11" fill="#666">弥补无交叉特征</text>
+  </g>
+
+  <g>
+    <rect x="590" y="375" width="220" height="100" rx="10" fill="#f3eaf7" stroke="#7a3aa8" stroke-width="2"/>
+    <text x="700" y="405" text-anchor="middle" font-size="15" font-weight="bold" fill="#5a2482">CMS</text>
+    <text x="700" y="430" text-anchor="middle" font-size="12" fill="#333">召回口径对齐精排</text>
+    <text x="700" y="452" text-anchor="middle" font-size="11" fill="#666">学精排的排序偏好</text>
+  </g>
+
+  <!-- Online gains -->
+  <rect x="90" y="505" width="720" height="70" rx="10" fill="#fffbe6" stroke="#b8860b" stroke-width="1.5"/>
+  <text x="450" y="530" text-anchor="middle" font-size="14" font-weight="bold" fill="#7a5a00">线上 A/B：三场景 Kendall Tau +3.2% / +2.9% / +6.0%</text>
+  <text x="450" y="555" text-anchor="middle" font-size="13" fill="#6b5000">广告收入最高 +8.36%，仍保持毫秒级延迟</text>
+</svg>

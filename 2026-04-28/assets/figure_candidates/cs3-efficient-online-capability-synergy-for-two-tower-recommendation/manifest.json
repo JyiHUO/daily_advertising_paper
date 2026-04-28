@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-28/downloaded_pdfs/cs3-efficient-online-capability-synergy-for-two-tower-recommendation.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-28/assets/figure_candidates/cs3-efficient-online-capability-synergy-for-two-tower-recommendation",
+  "candidates": [
+    {
+      "id": "page-3-drawing-caption-28",
+      "page_index": 3,
+      "caption": "Figure 3: An overview of the online learning framework in our system. Cross vectors in CTS and cascade vectors in CMS can be stored in the parameter server and embedding server, respectively.",
+      "clip": [
+        59.89900207519531,
+        58.71852111816406,
+        549.8206176757812,
+        252.45851135253906
+      ],
+      "clip_area": 94917.40902206674,
+      "page_area": 484704.0,
+      "text_density": 0.1795822094305432,
+      "kind": "drawing_cluster_with_caption",
+      "score": 56.07970531219037,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-28/assets/figure_candidates/cs3-efficient-online-capability-synergy-for-two-tower-recommendation/01-p4-drawing_cluster_with_caption.png",
+      "filename": "01-p4-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-drawing-cluster-0",
+      "page_index": 3,
+      "caption": "第 4 页矢量图主图候选",
+      "clip": [
+        61.89900207519531,
+        60.71852111816406,
+        547.8206176757812,
+        250.45851135253906
+      ],
+      "clip_area": 92198.7625987269,
+      "page_area": 484704.0,
+      "text_density": 0.17351503400682117,
+      "kind": "drawing_cluster",
+      "score": 5.41352865513214,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-28/assets/figure_candidates/cs3-efficient-online-capability-synergy-for-two-tower-recommendation/02-p4-drawing_cluster.png",
+      "filename": "02-p4-drawing_cluster.png"
+    },
+    {
+      "id": "page-5-drawing-caption-47",
+      "page_index": 5,
+      "caption": "Figure 5: Representation visualization of users and their pos- itive or negative items.",
+      "clip": [
+        299.9549865722656,
+        470.9248046875,
+        576.1969604492188,
+        617.3189697265625
+      ],
+      "clip_area": 40440.21311445907,
+      "page_area": 484704.0,
+      "text_density": 0.23275311439861504,
+      "kind": "drawing_cluster_with_caption",
+      "score": 4.284148837354865,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-28/assets/figure_candidates/cs3-efficient-online-capability-synergy-for-two-tower-recommendation/03-p6-drawing_cluster_with_caption.png",
+      "filename": "03-p6-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-2-drawing-cluster-0",
+      "page_index": 2,
+      "caption": "第 3 页矢量图主图候选",
+      "clip": [
+        49.288002014160156,
+        60.718780517578125,
+        560.4439697265625,
+        247.58827209472656
+      ],
+      "clip_area": 95519.45580304193,
+      "page_area": 484704.0,
+      "text_density": 0.2102252980500712,
+      "kind": "drawing_cluster",
+      "score": 3.247809403696193,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-28/assets/figure_candidates/cs3-efficient-online-capability-synergy-for-two-tower-recommendation/04-p3-drawing_cluster.png",
+      "filename": "04-p3-drawing_cluster.png"
+    },
+    {
+      "id": "page-5-drawing-cluster-1",
+      "page_index": 5,
+      "caption": "第 6 页矢量图主图候选",
+      "clip": [
+        301.9549865722656,
+        472.9248046875,
+        574.1969604492188,
+        615.3189697265625
+      ],
+      "clip_area": 38765.668558795005,
+      "page_area": 484704.0,
+      "text_density": 0.2178563932186271,
+      "kind": "drawing_cluster",
+      "score": 0.15934605753565378,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-28/assets/figure_candidates/cs3-efficient-online-capability-synergy-for-two-tower-recommendation/05-p6-drawing_cluster.png",
+      "filename": "05-p6-drawing_cluster.png"
+    },
+    {
+      "id": "page-6-drawing-caption-89",
+      "page_index": 6,
+      "caption": "Figure 8: Performance of CS3 with different smoothing coef- ficients of EMA in CTS and CMS.",
+      "clip": [
+        299.9549865722656,
+        330.6940002441406,
+        576.1987915039062,
+        457.11700439453125
+      ],
+      "clip_area": 34923.5716973925,
+      "page_area": 484704.0,
+      "text_density": 0.30457558013773567,
+      "kind": "drawing_cluster_with_caption",
+      "score": -3.0864951227375546,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-28/assets/figure_candidates/cs3-efficient-online-capability-synergy-for-two-tower-recommendation/06-p7-drawing_cluster_with_caption.png",
+      "filename": "06-p7-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-28/assets/figure_candidates/cs3-efficient-online-capability-synergy-for-two-tower-recommendation/contact-sheet.svg"
+}

@@ -1,0 +1,69 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#e67e22"/>
+    </marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5b8dc9"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#222">CMS：把精排的内功蒸给双塔</text>
+  <text x="450" y="58" text-anchor="middle" font-size="13" fill="#666">双塔没交叉？让用户塔和物品塔各自背一份精排记忆</text>
+
+  <!-- Ranking model -->
+  <rect x="310" y="85" width="280" height="85" rx="10" fill="#fde3cf" stroke="#e67e22" stroke-width="2"/>
+  <text x="450" y="112" text-anchor="middle" font-size="16" font-weight="bold" fill="#a0490b">精排模型</text>
+  <text x="450" y="133" text-anchor="middle" font-size="12" fill="#5c3311">user×item 交叉 + target attention</text>
+  <text x="450" y="153" text-anchor="middle" font-size="12" fill="#5c3311">取倒数第二层向量 h(u,v)</text>
+
+  <!-- EMA arrows to server -->
+  <path d="M380,170 L260,248" stroke="#e67e22" stroke-width="2" fill="none" marker-end="url(#ao)"/>
+  <path d="M520,170 L640,248" stroke="#e67e22" stroke-width="2" fill="none" marker-end="url(#ao)"/>
+  <text x="300" y="215" font-size="12" fill="#a0490b">EMA 更新 s_u</text>
+  <text x="555" y="215" font-size="12" fill="#a0490b">EMA 更新 s_v</text>
+
+  <!-- Embedding Server -->
+  <rect x="150" y="252" width="600" height="68" rx="8" fill="#eef4fb" stroke="#5b8dc9" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <text x="450" y="278" text-anchor="middle" font-size="14" font-weight="bold" fill="#2c5a8a">Embedding Server  （s_u / s_v 级联向量缓存）</text>
+  <text x="450" y="302" text-anchor="middle" font-size="12" fill="#2c5a8a">s ← β·s + (1-β)·h(u,v)      p99 &lt; 5ms，可与其他特征并行</text>
+
+  <!-- Read arrows from server to towers -->
+  <path d="M260,320 L220,368" stroke="#5b8dc9" stroke-width="2" fill="none" marker-end="url(#ab)"/>
+  <path d="M640,320 L680,368" stroke="#5b8dc9" stroke-width="2" fill="none" marker-end="url(#ab)"/>
+  <text x="120" y="352" font-size="11" fill="#2c5a8a">读 s_u</text>
+  <text x="740" y="352" font-size="11" fill="#2c5a8a">读 s_v</text>
+
+  <!-- User tower -->
+  <rect x="80" y="370" width="280" height="165" rx="10" fill="#e3f0ff" stroke="#3a78c2" stroke-width="2"/>
+  <text x="220" y="395" text-anchor="middle" font-size="16" font-weight="bold" fill="#1f4d87">用户塔</text>
+  <rect x="100" y="410" width="110" height="30" rx="4" fill="#fff" stroke="#3a78c2"/>
+  <text x="155" y="430" text-anchor="middle" font-size="12" fill="#1f4d87">原始特征</text>
+  <rect x="225" y="410" width="115" height="30" rx="4" fill="#fff" stroke="#3a78c2"/>
+  <text x="282" y="430" text-anchor="middle" font-size="12" fill="#1f4d87">c_u (CTS)</text>
+  <rect x="100" y="450" width="240" height="36" rx="4" fill="#ffe9b3" stroke="#c9911f" stroke-width="2"/>
+  <text x="220" y="473" text-anchor="middle" font-size="13" font-weight="bold" fill="#7a5512">+ s_u  精排视角摘要</text>
+  <text x="220" y="515" text-anchor="middle" font-size="12" fill="#1f4d87">→ user embedding</text>
+
+  <!-- Item tower -->
+  <rect x="540" y="370" width="280" height="165" rx="10" fill="#e3f0ff" stroke="#3a78c2" stroke-width="2"/>
+  <text x="680" y="395" text-anchor="middle" font-size="16" font-weight="bold" fill="#1f4d87">物品塔</text>
+  <rect x="560" y="410" width="110" height="30" rx="4" fill="#fff" stroke="#3a78c2"/>
+  <text x="615" y="430" text-anchor="middle" font-size="12" fill="#1f4d87">原始特征</text>
+  <rect x="685" y="410" width="115" height="30" rx="4" fill="#fff" stroke="#3a78c2"/>
+  <text x="742" y="430" text-anchor="middle" font-size="12" fill="#1f4d87">c_v (CTS)</text>
+  <rect x="560" y="450" width="240" height="36" rx="4" fill="#ffe9b3" stroke="#c9911f" stroke-width="2"/>
+  <text x="680" y="473" text-anchor="middle" font-size="13" font-weight="bold" fill="#7a5512">+ s_v  精排视角摘要</text>
+  <text x="680" y="515" text-anchor="middle" font-size="12" fill="#1f4d87">→ item embedding</text>
+
+  <!-- Dot product between towers -->
+  <path d="M360,515 L540,515" stroke="#333" stroke-width="2" fill="none" marker-end="url(#a)"/>
+  <text x="450" y="510" text-anchor="middle" font-size="12" fill="#333">点积</text>
+
+  <!-- Bottom takeaway -->
+  <rect x="210" y="568" width="480" height="38" rx="19" fill="#2c5a8a"/>
+  <text x="450" y="592" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">召回打分 ≈ 精排打分　　广告收入 +8.36%</text>
+</svg>

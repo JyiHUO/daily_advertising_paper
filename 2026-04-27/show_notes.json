@@ -1,0 +1,9 @@
+{
+  "title": "AI计算广告论文播报｜2026-04-27｜训练信号才是新天花板",
+  "shownotes_html": "<p>当生成式模型接管推荐与广告排序，真正的瓶颈已经不是模型多大、prompt 多巧，而是训练信号本身干不干净、学不学得动。今天这期围绕\"信号质量\"这条主线，精读两篇重点论文，聊聊它们对广告系统的启发。</p><p><strong>本期重点</strong></p><ul><li><strong>ReCast: Recasting Learning Signals for Reinforcement Learning in Generative Recommendation</strong><br/>生成式推荐用组内归一化 RL 训练时，约 85% 的采样组奖励全零、根本没法学。ReCast 提出\"先修复再对比\"——往全零组里注入真实正样本当锚点，再只挑最强正样本与最难负样本做边界对比更新，其余样本梯度置零。训练速度大幅提升，对广告场景天然稀疏的转化信号非常对口。</li><li><strong>SLIDERS: Structured Reasoning for Scalable Question Answering over Long Document Sets</strong><br/>面对上千万 token 的真实文档集，SLIDERS 不把证据塞回 LLM 上下文，而是让 LLM 逐块抽取结构化事实、落入关系数据库，再用 SQL Agent 做聚合与对账。每条记录带原文引用和抽取理由，全程可审计。对广告离线知识库构建（商家资质、素材合规、行业知识）有直接借鉴意义。</li><li><strong>Rethinking Semantic Collaborative Integration（趋势提及）</strong><br/>质疑当前 LLM 语义向量与协同过滤向量\"简单对齐\"的主流范式，指出两者并非共享潜在实体，硬对齐会破坏局部结构。提醒所有做语义+协同融合的团队重新审视默认假设。</li><li><strong>CLVAE: A Variational Autoencoder for Long-Term Customer Revenue Forecasting（补充关注）</strong><br/>用变分自编码器建模稀疏且不规则的交易序列来预测客户 LTV，兼顾概率模型的长周期稳健性与深度模型的灵活性，为营销资源分配和广告投放定向提供新的生成式路径。</li></ul><p><strong>今日趋势</strong></p><ul><li>全量 205 篇论文中，LLM 与语言理解主题占比最高；表示学习与检索排序方向多篇工作聚焦语义嵌入与协同信号融合、listwise 重排、稠密检索蒸馏，说明\"表示层\"仍是大量系统创新的隐形底座。</li><li>商业化落地类论文数量不多但开始冒头（生成式推荐 RL、LTV 预测），生成式排序 + RL 后训练正在从研究走向工程化，信号质量与训练效率将成为下一阶段竞争焦点。</li></ul><p><strong>今日知识点：表示学习为什么是很多系统的隐形底座</strong><br/>表示学习的目标不是简单把输入压成一个向量，而是把真正影响任务的结构信息保留下来、把噪声压下去。很多论文表面在做召回、排序、生成，真正的改进都发生在表示层。理解这一点，就能更快抓住一篇论文的创新位置。</p><p>📎 今日完整日报与论文列表：<a href=\"https://github.com/JyiHUO/daily_advertising_paper/blob/main/2026-04-27/daily_report.md\">GitHub 归档</a></p><p>欢迎在评论区留言交流，告诉我们你最关心哪个方向。本期内容由 AI 自动生成并经人工审校，如有疏漏欢迎指正。明天见 👋</p>",
+  "report_date": "2026-04-27",
+  "provider": "bedrock-opus",
+  "archive_url": "https://github.com/JyiHUO/daily_advertising_paper/blob/main/2026-04-27/daily_report.md",
+  "fallback": false,
+  "generated_at": "2026-04-27T22:32:24Z"
+}

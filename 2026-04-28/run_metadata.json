@@ -1,0 +1,19 @@
+{
+  "date": "2026-04-28",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL"
+  ],
+  "candidate_count": 15,
+  "supplementary_count": 1,
+  "focus_titles": [
+    "Follow the TRACE: Exploiting Post-Click Trajectories for Online Delayed Conversion Rate Prediction",
+    "CS3: Efficient Online Capability Synergy for Two-Tower Recommendation"
+  ],
+  "focus_status": {
+    "Follow the TRACE: Exploiting Post-Click Trajectories for Online Delayed Conversion Rate Prediction": "completed",
+    "CS3: Efficient Online Capability Synergy for Two-Tower Recommendation": "completed"
+  }
+}
