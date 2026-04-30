@@ -1,0 +1,288 @@
+# 2026-04-29 论文日报
+
+## 一、今日趋势与创新观察
+
+### 1. 趋势概况
+
+- 今日 306 篇论文中 LLM 与语言理解占 126 篇，仍是绝对主线
+- Agent 与多智能体方向 58 篇，工具调用与安全审计成新焦点
+- 表示学习与检索排序 80 篇，生成式召回排序统一框架持续发酵
+<details>
+<summary>展开趋势详细版</summary>
+
+- 全量 306 篇里 cs.AI 占 173 篇，主题集中在 LLM 与语言理解（126 篇），今日研究重心仍围绕大模型的推理、对齐与应用展开。
+- Agent 与多智能体相关论文有 58 篇，关注点从‘能不能跑起来’转向模块化、可观测性、失败恢复以及工具使用下的安全审计。
+- 表示学习与检索排序合计 80 篇，生成式召回排序一体化（OneRec 类）和超长用户行为序列训练基础设施成为工业界主要议题。
+- 迁移与跨域泛化 50 篇，覆盖冷启动跨域推荐、多语言越狱检测、领域自适应检索等，说明研究者越来越重视模型在异构场景下的稳健性。
+
+</details>
+
+
+### 2. 推荐系统 / 排序相关创新点
+
+- 生成式重排跳出本地索引，直接在全局 item 空间自回归生成
+- 超长行为序列训练用版本化延迟物化打破存储 I/O 墙
+- 再激活广告用后转化内容蒸馏，补齐留存预测的信息盲区
+<details>
+<summary>展开创新点详细版</summary>
+
+- 《From Local Indices to Global Identifiers》把 list-wise 重排从‘在候选下标里选’改成在全局 item ID 空间做自回归生成，让重排能跳出召回给的小盒子。
+- 《Versioned Late Materialization》针对工业级 DLRM 超长用户行为序列训练，用版本化的延迟物化替代传统 Fat Row 存储范式，直接打破训练数据的存储和 I/O 瓶颈。
+- 《Break the Inaccessible Boundary》在 RTB 再激活场景下，把用户转化后的内容消费信号蒸馏回竞价时刻的留存模型，让出价前看不到的后验行为也能指导出价。
+
+</details>
+
+
+### 3. 全局创新点
+
+- 跨语言越狱检测用语义码本把多语言安全统一到共享空间
+- Nautile-370M 把谱方法记忆和注意力混搭做小模型推理
+- Co-Director 用分层 agent 解决视频生成的语义漂移
+<details>
+<summary>展开全局创新详细版</summary>
+
+- 《Cross-Lingual Jailbreak Detection via Semantic Codebooks》用离散语义码本把多语言 prompt 映射到共享空间，绕开‘安全机制只懂英文’的结构性漏洞。
+- 《Nautile-370M》把线性时间的谱序列算子 SeqCond Attention 和标准注意力交替堆叠，探索小模型在严格参数预算下做推理的新骨架。
+- 《Co-Director》针对扩散视频生成的语义漂移和级联失败，用分层 agent 统一 prompt 规划，把独立模块的串联改成有全局导演的协作生成。
+
+</details>
+
+
+## 二、今日一个 AI 知识点
+
+### 表示学习：很多系统表面在排序，实际在学一张好地图
+
+- **快速理解：** 召回、排序、生成的真正胜负手，往往藏在把物体映射成向量那一层。
+
+<details>
+<summary>展开知识点详细版</summary>
+
+想象一次推荐请求进来，系统要从几亿个 item 里挑几十个给你。你以为关键是最后的打分模型，其实更底层的是：每个用户、每个 item、每一段文字、每一个行为，都要先被变成一个向量。表示学习做的就是这件事——把离散的、异构的东西塞进同一个连续空间，让‘相似’变成‘距离近’。它的训练通常这样走：先给模型成对或成组的样本，比如用户点过的 item 当正例、随机抽的当负例；模型把它们各自编码成向量，然后用对比损失拉近正例、推开负例；反复这样拧，空间就逐渐长出结构，相似的东西自然聚在一起，不相似的分开。有了这张‘地图’之后，召回只是用用户向量做一次近邻搜索，排序是在向量上叠几层打分，生成式推荐干脆把 item 变成语义 ID 序列去自回归，跨域迁移是把新域塞进同一张地图，冷启动是想办法给没行为的新用户先找一个临时坐标。所以你看今天很多论文，不管是 OneRec 这种生成式召回排序统一、还是跨域冷启动多兴趣建模、还是临床语义搜索，改进点其实都落在‘怎么把东西编码得更好’这一层。理解了这一点，你再读论文就会发现：表面在改排序、改检索、改生成，真正动的常常是底下那张地图怎么画。
+
+</details>
+
+
+## 三、今日论文总览
+
+### 1. Break the Inaccessible Boundary: Distilling Post-Conversion Content for User Retention Modeling
+- 挑选理由：明确针对RTB广告用户再激活场景的留存建模，含线上A/B，属于广告核心链路。
+
+### 2. Co-Director: Agentic Generative Video Storytelling
+- 挑选理由：命中广告核心词：advertising。
+
+### 3. Three Models of RLHF Annotation: Extension, Evidence, and Authority
+- 挑选理由：命中强迁移信号：recommendation, system, unified。
+
+### 4. From Local Indices to Global Identifiers: Generative Reranking for Recommender Systems via Global Action Space
+- 挑选理由：生成式list-wise重排，工业数据集+线上A/B，与广告重排高度同构。
+
+### 5. K-CARE: Knowledge-driven Symmetrical Contextual Anchoring and Analogical Prototype Reasoning for E-commerce Relevance
+- 挑选理由：电商搜索相关性，LLM方法，有线上A/B，直接商业化流量链路。
+
+### 6. Action-Aware Generative Sequence Modeling for Short Video Recommendation
+- 挑选理由：快手短视频推荐生成式序列建模，A/B实测上线，与商业化排序多任务预测链路高度同构。
+
+### 7. Harmonizing Generative Retrieval and Ranking in Chain-of-Recommendation
+- 挑选理由：OneRec系列生成式召回+排序统一框架，与广告粗/精排链路高度同构。
+
+### 8. Versioned Late Materialization for Ultra-Long Sequence Training in Recommendation Systems at Scale
+- 挑选理由：工业级DLRM超长用户行为序列训练的数据基础设施优化，与广告排序模型训练链路强同构。
+
+### 9. The Attention Market: Interpreting Online Fair Re-ranking as Manifold Optimization under Walrasian Equilibrium
+- 挑选理由：公平重排+市场均衡+流形优化，与广告重排分配机制同构。
+
+### 10. From Citation Selection to Citation Absorption: A Measurement Framework for Generative Engine Optimization Across AI Search Platforms
+- 挑选理由：生成式搜索引擎优化的引用测量，与广告分发决策链路关联弱。
+
+### 11. Scalable Inference Architectures for Compound AI Systems: A Production Deployment Study
+- 挑选理由：Salesforce推理架构部署，与广告分发链路无关。
+
+### 12. OxyGent: Making Multi-Agent Systems Modular, Observable, and Evolvable via Oxy Abstraction
+- 挑选理由：京东开源多agent框架，虽有工业背景但与广告商业化链路无直接关系。
+
+### 13. Kohn-Sham Hamiltonian from Effective Field Theory: Quasiparticle Band Narrowing from Frozen Core Dynamics
+- 挑选理由：物理论文，完全无关
+
+
+## 四、补充关注
+
+1. **TSN-Affinity: Similarity-Driven Parameter Reuse for Continual Offline Reinforcement Learning**
+   - 理由：有一定相关信号，但不足以进入正式候选：multi-task。
+2. **When Errors Can Be Beneficial: A Categorization of Imperfect Rewards for Policy Gradient**
+   - 理由：有一定相关信号，但不足以进入正式候选：ranking。
+3. **Cross-Lingual Jailbreak Detection via Semantic Codebooks**
+   - 理由：有一定相关信号，但不足以进入正式候选：recall。
+
+## 五、重点论文精读
+
+### 1. Break the Inaccessible Boundary: Distilling Post-Conversion Content for User Retention Modeling
+- **为什么值得看：** RTB再激活场景下，用未来行为蒸馏到当前可观测特征，预测用户留存。
+- **快速背景：** RTB出价时还拿不到用户转化后看的内容，但这恰恰是预测留存最强的信号。
+![Break the Inaccessible Boundary: Distilling Post-Conversion Content for User Retention Modeling 关键架构图](assets/figures/overview/break-the-inaccessible-boundary-distilling-post-conversion-content-for-user-rete-hero.png)
+*图示：这是论文最标准的方法总览图，直接展示了 OCARM 的两阶段框架：Stage 1 用 HAE 基于 onboarding content 学 teacher representation，Stage 2 用 SFE 基于可观测用户特征做蒸馏对齐，并明确给出 inference 时只启用 SFE 的无泄漏流程。图中模块、信息流、训练/推断关系都完整，且相比 Figure 1 的场景示意图，更能代表论文核心方法。虽然带少量 caption 和页眉，但主体完整清晰，明显优于实验曲线图。*
+
+<details>
+<summary>展开论文背景详细版</summary>
+
+- **详细背景：** 在RTB广告做用户再激活时，留存模型要在出价这一刻就预测未来用户会不会回来，但用户还没点击、还没进App，所以转化后实际消费的内容（论文称为Onboarding Content，比如回流后看了哪些短视频）是不可见的。作者实验发现如果把这部分未来内容直接塞进训练，AUC会显著提升，说明信号极强，但这就造成了训练-服务的特征穿越。论文要解决的就是怎么把这种不可见的未来信号通过蒸馏‘偷渡’到只用可观测特征的线上模型里，值得看的点在于它把广告侧出价系统和站内推荐系统之间的信息鸿沟显式建模了。
+
+</details>
+
+**核心技术点速览：**
+
+#### 技术点 1：两阶段蒸馏框架
+- 快速理解：先故意让teacher看未来，再把它蒸馏到只看可观测特征的student。
+
+![两阶段蒸馏框架 理解图](assets/figures/tech-points/break-the-inaccessible-boundary-distilling-post--point-1.svg)
+*图示：思路像考试作弊再戒掉：先让一个模型作弊看答案（未来看了哪些视频），学会把答案压成一个向量；再训练一个只能看考前资料（画像、历史行为）的学生，强迫它猜出那个作弊向量。线上就只让学生上场，这样既没真用未来信息，又享受了未来信息带来的判别力。*
+
+<details>
+<summary>展开技术点 1 详细版</summary>
+
+- 技术细节：第一阶段故意把未来的Onboarding内容序列喂给一个层级注意力编码器HAE，和留存模型联合训练，用BCE优化LT1、LT7等多天留存目标，得到一个知道未来的teacher表示。第二阶段冻结HAE，训练一个只吃用户画像、历史行为、广告上下文的user encoder（SFE），用余弦相似度把student表示对齐到teacher表示，并用stop-gradient防止表示坍塌，同时仍然联合优化留存BCE损失。上线时teacher丢掉，只用student估计出的潜在内容表示拼到留存模型里做预测。
+- 通俗讲解：思路像考试作弊再戒掉：先让一个模型作弊看答案（未来看了哪些视频），学会把答案压成一个向量；再训练一个只能看考前资料（画像、历史行为）的学生，强迫它猜出那个作弊向量。线上就只让学生上场，这样既没真用未来信息，又享受了未来信息带来的判别力。
+- 例子：比如一个老用户被广告召回，出价时系统只知道他的profile和历史行为。Teacher在训练时额外看到他回流后第一天刷了10条萌宠视频、第二天刷了游戏直播，HAE把这些压成一个teacher向量并学会预测LT7。Student在推断时虽然看不到这些，但通过蒸馏学会了‘这种画像回流后大概率会沉浸在萌宠+直播’的潜在向量，把它拼进留存模型后输出一个偏高的LT7概率，从而在RTB里给这个人出更高的价。
+
+</details>
+
+#### 技术点 2：HAE层级注意力编码
+- 快速理解：把回流后多天行为按天压缩，再用因果注意力串起来防未来泄露。
+
+![HAE层级注意力编码 理解图](assets/figures/tech-points/break-the-inaccessible-boundary-distilling-post--point-2.svg)
+*图示：把‘回流后几天行为’当成一本日记：先用用户画像当提问，去每天的日记里挑重点，浓缩成一句话；再按时间顺序读这些每日摘要，但读第3天时不许偷看第4天。这样teacher给出的每天表示既紧凑又严格遵守时间顺序，和LT1/LT7这类按天定义的留存目标自然对齐。*
+
+<details>
+<summary>展开技术点 2 详细版</summary>
+
+- 技术细节：Onboarding序列可能跨D天、每天上百条，作者按自然日切分，每天取前N条item embedding。先做day内cross-attention，用用户profile作query、当天item作key/value，得到每天一个压缩向量s(d)。再把D天的day向量送进带causal mask的self-attention，保证第d天只能看前d天，避免teacher内部就出现跨天未来泄露。最后用第d天的表示去预测对应的LT-d任务（如˜s(1)变成LT1，˜s(7)变成LT7）。
+- 通俗讲解：把‘回流后几天行为’当成一本日记：先用用户画像当提问，去每天的日记里挑重点，浓缩成一句话；再按时间顺序读这些每日摘要，但读第3天时不许偷看第4天。这样teacher给出的每天表示既紧凑又严格遵守时间顺序，和LT1/LT7这类按天定义的留存目标自然对齐。
+- 例子：比如预测LT7：用户回流后7天分别看了不同内容，HAE把每天压成一个向量s(1)…s(7)，causal self-attention处理后，˜s(7)是融合了第1到第7天的摘要，用它去预测‘未来7天回访频次’；而˜s(1)只看得到第1天，用来预测LT1，这样不同时长的留存任务各拿各的teacher信号。
+
+</details>
+
+#### 技术点 3：SFE多序列融合
+- 快速理解：用profile当锚点+Q-Former压缩异构行为序列，缓解历史陈旧问题。
+
+![SFE多序列融合 理解图](assets/figures/tech-points/break-the-inaccessible-boundary-distilling-post--point-3.svg)
+*图示：因为召回用户的老行为‘过期’严重，不能像普通推荐那样直接吃长序列，所以作者强制把‘这是谁’这条信息贴在每个历史item旁边，再用少量query去问‘这堆行为对这个人来说意味着什么兴趣’，得到一个浓缩的兴趣向量。这样student即便看不到未来，也能从稀薄的老数据里榨出比较稳定的用户偏好表征，便于去逼近teacher。*
+
+<details>
+<summary>展开技术点 3 详细版</summary>
+
+- 技术细节：再激活用户的历史行为距离当下很久、广告上下文又受投放机制影响，个性化弱。作者把用户profile拼到每条item embedding上作为统一锚点，得到条件化的序列表示，然后对每类序列（历史互动序列、广告上下文序列等）用独立的Q-Former配K个可学习query token，把变长序列压成定长兴趣表示。最后把profile和各序列表示拼在一起，过任务塔得到对应LT任务的用户表示e-u，再和teacher e-c做相似度对齐。
+- 通俗讲解：因为召回用户的老行为‘过期’严重，不能像普通推荐那样直接吃长序列，所以作者强制把‘这是谁’这条信息贴在每个历史item旁边，再用少量query去问‘这堆行为对这个人来说意味着什么兴趣’，得到一个浓缩的兴趣向量。这样student即便看不到未来，也能从稀薄的老数据里榨出比较稳定的用户偏好表征，便于去逼近teacher。
+- 例子：比如一个3个月没打开App的用户，历史序列里有50条老点击、20条老广告曝光。SFE会把profile分别拼到这70条上，用一组Q-Former query把点击序列压成几个兴趣token，再用另一组处理广告上下文，最后和profile一起进任务塔输出一个向量，去对齐teacher给出的‘他回流后可能刷萌宠+直播’的向量。
+
+</details>
+
+#### 技术点 4：消融与相似度正相关
+- 快速理解：student表示越像teacher，留存AUC越高，但离上限还有空间。
+
+![消融与相似度正相关 理解图](assets/figures/tech-points/break-the-inaccessible-boundary-distilling-post--point-4.svg)
+*图示：这块是在验证‘蒸馏确实起作用、并且对齐质量直接决定收益’。没有teacher先学好，直接让student和一个也在学的HAE互相对齐，会两边一起乱掉。而一旦teacher冻住，student越靠近teacher，留存预测就越准，说明真正被迁移的是‘未来内容的潜在信息’而不是噪声。*
+
+<details>
+<summary>展开技术点 4 详细版</summary>
+
+- 技术细节：论文做了几组消融：只用Stage1（特征泄露训练）给出AUC上界，LT1 AUC 0.7468；只用Stage2联合训练会崩到0.6709，说明没稳定teacher直接对齐会表示坍塌；完整两阶段达到0.7369，明显超过base 0.7297。又比较了encoder结构：MLP+MLP、HAE+MLP、HAE+SFE，越强的结构增益越大。作者还画了相似度-ΔAUC曲线，显示student和teacher表示的cosine相似度越高，留存AUC单调提升。线上A/B中对已卸载用户的再激活设备数+34%、LT30 +22%。
+- 通俗讲解：这块是在验证‘蒸馏确实起作用、并且对齐质量直接决定收益’。没有teacher先学好，直接让student和一个也在学的HAE互相对齐，会两边一起乱掉。而一旦teacher冻住，student越靠近teacher，留存预测就越准，说明真正被迁移的是‘未来内容的潜在信息’而不是噪声。
+- 例子：想象把HAE看成一位已经看过结局的老师，SFE是学生。如果两人一起边看边考试（Stage2 only），老师自己还没想清楚就被学生带偏，成绩反而下降；如果老师先看完剧再出题，学生模仿得越像，考试分越高，而且在‘最难留住的卸载用户’这类硬样本上提升最大。
+
+</details>
+
+- **对广告的启发：** RTB/拉活出价侧可以用‘未来行为teacher+可观测特征student’的蒸馏范式提分。
+
+<details>
+<summary>展开广告启发详细版</summary>
+
+- **详细启发：** 最适合层级：RTB出价与拉活/召回留存预估模型；价值：对于广告拉活、唤醒、重定向这类‘决策时点早于用户真正消费内容’的场景，可以把转化后站内的真实消费行为（视频、商品、落地页停留）作为teacher特征训练，再蒸馏给只吃曝光前可得特征的出价/ROI/LTV模型，有望在不引入穿越的前提下显著提升长期留存和LTV预估，从而改善出价和预算分配。；风险：一是teacher质量高度依赖站内行为日志的可得性和归因正确性，广告主侧往往拿不到深度站内行为；二是蒸馏对齐不稳定，若teacher没先训好或student容量不足，容易表示坍塌反而掉点；三是离线AUC提升和线上出价收益之间还要经过bidding策略放大，需要谨慎做A/B和安全兜底。
+
+</details>
+
+### 2. Co-Director: Agentic Generative Video Storytelling
+- **为什么值得看：** 把广告视频生成建模为全局优化，多臂老虎机探索创意方向
+- **快速背景：** 扩散模型能生成高清短片，但串成一个连贯广告片仍会语义漂移、身份跑偏。
+![Co-Director: Agentic Generative Video Storytelling 论文主图](assets/figures/overview/co-director-agentic-generative-video-storytelling-hero.svg)
+*图示：这是一篇直接面向数字广告的生成式视频论文，提出把'从一句广告词生成完整广告片'当成全局优化问题来解，用多臂老虎机在创意策略空间里探索，用多模态自我反思解决身份漂移，还配了一个400场景的虚构品牌广告评测集GenAD-Bench，对广告创意自动化很有参考价值。*
+
+<details>
+<summary>展开论文背景详细版</summary>
+
+- **详细背景：** 当前用LLM串联扩散模型做广告视频的流水线，每一步都用手写prompt，早期小错会层层放大，人物形象、产品外观容易跑偏，整个片子也缺乏统一创意方向。论文想解决的就是：如何从一句广告brief和几张产品/logo参考图，自动生成一支叙事连贯、视觉一致、营销有说服力的广告短片，并且能系统性地'探索'不同创意方向，而不是死守一个prompt模板。它同时提出了专门面向广告场景的评测基准GenAD-Bench，对于做AIGC广告创意生成的团队很值得看。
+
+</details>
+
+**核心技术点速览：**
+
+#### 技术点 1：创意方向作为老虎机臂
+- 快速理解：用多臂老虎机在创意策略、叙事方式、美学风格三轴上挑组合
+
+![创意方向作为老虎机臂 理解图](assets/figures/tech-points/co-director-agentic-generative-video-storytellin-point-1.svg)
+*图示：可以把它想成一个自动导演，在'要讲什么卖点、怎么讲故事、用什么视觉风格'三个维度上各有几个档位。系统每拍完一条片子，就请一个AI评委分别给'卖点选得好不好'、'叙事方式合不合适'、'视觉风格对不对味'各打一个分，然后分别更新这三个维度上被选档位的评分，下一轮就更倾向选历史上表现好、但又偶尔试试没试过的组合。*
+
+<details>
+<summary>展开技术点 1 详细版</summary>
+
+- 技术细节：论文把创意方向抽象成一个三元组：创意策略（信息型/转化型/对比型）、叙事模式（分析式/生活切片/戏剧冲突）、美学原型（明快活力/电影感高级/极简聚焦/粗粝动感）。每次生成一支完整广告片算作拉一次'臂'，用UCB1算法维护每个选项的期望回报，并且用一个多模态大模型评委给出分维度的奖励分数（分别对应这三条轴），分别更新对应臂，从而绕开传统信用分配难题。还用LLM根据产品和人群先做一次'热启动'，把明显合理的组合的初始期望调高。
+- 通俗讲解：可以把它想成一个自动导演，在'要讲什么卖点、怎么讲故事、用什么视觉风格'三个维度上各有几个档位。系统每拍完一条片子，就请一个AI评委分别给'卖点选得好不好'、'叙事方式合不合适'、'视觉风格对不对味'各打一个分，然后分别更新这三个维度上被选档位的评分，下一轮就更倾向选历史上表现好、但又偶尔试试没试过的组合。
+- 例子：比如输入是一款虚构高端咖啡机，目标人群是都市白领。热启动会先把'转化型+生活切片+电影感高级'这个组合的初始分调高；第一轮就按这个组合生成短片，评委发现视觉美学打了85分但叙事吸引力只有60分，系统就继续保留美学档位、下一轮改试'戏剧冲突'叙事，迭代几次后收敛到一组分数都不错的创意配置。
+
+</details>
+
+#### 技术点 2：分层多智能体流水线
+- 快速理解：一个总导演Agent把创意配置注入到剧本、分镜、视频、音频各子Agent
+
+![分层多智能体流水线 理解图](assets/figures/tech-points/co-director-agentic-generative-video-storytellin-point-2.svg)
+*图示：关键在于所有子Agent不是各写各的prompt，而是从同一个'创意配置'被统一改写出来，这样卖点、叙事、视觉风格在剧本、分镜、画面、音乐里就不会打架。关键帧先行的设计也很重要，它先把人物长相、产品外观钉死，再让视频模型只负责动起来，显著缓解身份漂移。*
+
+<details>
+<summary>展开技术点 2 详细版</summary>
+
+- 技术细节：整个系统由Orchestrator、Pre-Production、Production、Post-Production四大Agent组成。Orchestrator负责解析用户的六要素prompt（品牌/产品/性别/年龄/地域/兴趣）、给参考图打语义标签（产品、logo、主角），再把老虎机选出的创意配置翻译成具体的子Agent系统prompt。Pre-Production依次产出创意brief、分镜剧本、需要补充的角色和道具图、最终分镜板；Production再拆成关键帧Agent、视频Agent、音频Agent，先生成每个镜头的首帧作为视觉锚点，再用图生视频模型延展成片段，最后叠加TTS配音和背景音乐。
+- 通俗讲解：关键在于所有子Agent不是各写各的prompt，而是从同一个'创意配置'被统一改写出来，这样卖点、叙事、视觉风格在剧本、分镜、画面、音乐里就不会打架。关键帧先行的设计也很重要，它先把人物长相、产品外观钉死，再让视频模型只负责动起来，显著缓解身份漂移。
+- 例子：当创意配置是'转化型+生活切片+电影感高级'时，Orchestrator会告诉剧本Agent'多写情绪氛围、少写功能参数'，告诉关键帧Agent'用低对比暗调打光、慢推镜头'，告诉音频Agent'管弦乐、节奏偏慢'。于是第一个镜头先生成一张主角在窗边端咖啡的暖调首帧，再由视频Agent基于这张图生成3秒慢镜头，音频Agent叠上舒缓弦乐，整体风格一致。
+
+</details>
+
+#### 技术点 3：局部自我反思修错
+- 快速理解：用LLM/MLLM反复给剧本和关键帧打分、挑毛病、重写重画
+
+![局部自我反思修错 理解图](assets/figures/tech-points/co-director-agentic-generative-video-storytellin-point-3.svg)
+*图示：这相当于拍摄现场的'场记+剪辑师'，不是每帧单看，而是把一整组分镜放在一起比，看主角有没有换脸、产品包装有没有变样、场景是不是接得上。只重拍有问题的几帧既省算力，又避免把原本好的画面也改坏。*
+
+<details>
+<summary>展开技术点 3 详细版</summary>
+
+- 技术细节：在全局老虎机之外，论文还在两个容易出错的环节挂了局部反思循环：一是剧本层，LLM按钩子质量、叙事连贯、产品植入、情感共鸣、prompt贴合度打分并改写prompt，分数不过阈值就重生成；二是关键帧层，MLLM把整组关键帧作为一个序列一起看，评估角色一致性、产品一致性、环境连贯性和画面叙事，如果整体分不过关，它会指出具体哪几张有问题并给出改写建议，只重画被标记的那几帧，保留其它已经合格的帧。
+- 通俗讲解：这相当于拍摄现场的'场记+剪辑师'，不是每帧单看，而是把一整组分镜放在一起比，看主角有没有换脸、产品包装有没有变样、场景是不是接得上。只重拍有问题的几帧既省算力，又避免把原本好的画面也改坏。
+- 例子：比如某条广告第3帧里产品的logo突然变形、第4帧主角换了发色。MLLM评分综合判定序列一致性不合格，输出'第3帧logo失真、第4帧发色漂移'并给出改写prompt，关键帧Agent只重画这两帧，再跑一次序列评估通过后才进入视频生成阶段。消融实验显示，去掉这个关键帧反思会让视觉素材保真度VAF直接掉约10分。
+
+</details>
+
+#### 技术点 4：GenAD-Bench广告评测集
+- 快速理解：400个虚构品牌广告场景，用多模态评委打四项广告分
+
+![GenAD-Bench广告评测集 理解图](assets/figures/tech-points/co-director-agentic-generative-video-storytellin-point-4.svg)
+*图示：这套基准的聪明之处在于：用假品牌避免了'模型本来就见过可口可乐'这种作弊，又把广告的核心诉求（品牌还原、人群贴合、有没有卖货能力、画面能不能播出）拆成四个可量化维度。对工业界来说，它几乎可以直接当作内部AIGC广告素材的自动QA打分卡。*
+
+<details>
+<summary>展开技术点 4 详细版</summary>
+
+- 技术细节：作者构造了50个虚构品牌、每个品牌4款产品，共200款产品，每款产品再配两组对比鲜明的人群画像（典型人群vs反常人群），总计400个场景。每个场景用六要素prompt描述并附品牌logo和产品参考图，全部虚构以避免模型靠记忆投机取巧。评测用Gemini 3 Pro作为多模态评委，在0-100分上打四个维度：视觉素材保真VAF（logo/产品是否还原）、人群匹配DA（性别/年龄/地域/兴趣是否贴合）、营销吸引力MA（依托AIDA层级模型评钩子、价值主张、情感共鸣）、视觉质量VQ（扩散伪影、物理合理性）。论文还做了人评对照，证明MLLM打分与人类一致性接近人类之间的上限。
+- 通俗讲解：这套基准的聪明之处在于：用假品牌避免了'模型本来就见过可口可乐'这种作弊，又把广告的核心诉求（品牌还原、人群贴合、有没有卖货能力、画面能不能播出）拆成四个可量化维度。对工业界来说，它几乎可以直接当作内部AIGC广告素材的自动QA打分卡。
+- 例子：比如一个场景是'虚构品牌Aerolux的高端降噪耳机，目标人群是60岁日本乡村女性'。系统生成广告后，评委要检查耳机外观和logo是否和参考图一致（VAF）、画面里的人物年龄和环境是否真的像日本乡下老太太（DA）、广告是否讲清了降噪价值并引发情感（MA）、有没有明显的扭曲帧（VQ），最后给出四个分数和一个平均分。
+
+</details>
+
+- **对广告的启发：** 广告创意自动化可以把'选策略/叙事/风格'建成老虎机，用分维度奖励自动寻优。
+
+<details>
+<summary>展开广告启发详细版</summary>
+
+- **详细启发：** 最适合层级：广告创意与素材生成层（AIGC广告短片、动态创意优化DCO）；价值：对做AIGC广告生成平台非常有启发：1) 把创意维度结构化成几条正交轴（卖点类型、叙事方式、视觉风格），比起盲调prompt更可控、可复用；2) 用多臂老虎机+分维度奖励做在线创意探索，天然对应DCO里'哪种创意对哪类人群更有效'的问题，可以把奖励信号从MLLM评分换成真实CTR/CVR，形成创意层面的在线学习；3) 关键帧先行+序列级MLLM审核的思路可以直接落到品牌素材QA，自动拦截logo跑形、产品变样的片子；4) GenAD-Bench的四维评分卡（品牌保真/人群匹配/营销吸引力/画质）可作为内部AIGC素材准入的自动评审模板。；风险：风险在于：MLLM评委本身对'营销吸引力'的判断未必等价于真实转化，直接拿它当奖励容易把创意优化成'AI喜欢但用户不买单'的风格；多臂老虎机只在4轮左右探索，覆盖的创意组合有限，真实投放中人群和素材组合空间远比三轴八档大得多，需要扩展成上下文老虎机或结合真实反馈；另外论文用的都是虚构品牌，真实品牌还会有合规、商标、肖像权等约束，不能照搬。
+
+</details>
+
+## 六、候选但未完成深读的论文
+
+当前重点论文都已完成可用分析。

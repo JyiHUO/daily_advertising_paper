@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-29/downloaded_pdfs/break-the-inaccessible-boundary-distilling-post-conversion-content-for-user-rete.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-29/assets/figure_candidates/break-the-inaccessible-boundary-distilling-post-conversion-content-for-user-rete",
+  "candidates": [
+    {
+      "id": "page-2-drawing-caption-111",
+      "page_index": 2,
+      "caption": "Figure 2: Overview of the proposed framework OCARM. In Stage 1, HAE learns teacher representations from deliberately leaked onboarding content. In Stage 2, SFE is trained to align with the frozen teacher through distillation based on accessible user-side features. During inference, only SFE is activated for retention prediction without feature leakage.",
+      "clip": [
+        54.03778076171875,
+        58.312835693359375,
+        581.8458251953125,
+        366.954833984375
+      ],
+      "clip_area": 162903.72954805754,
+      "page_area": 484704.0,
+      "text_density": 0.19761461802396488,
+      "kind": "drawing_cluster_with_caption",
+      "score": 59.94312291856211,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-29/assets/figure_candidates/break-the-inaccessible-boundary-distilling-post-conversion-content-for-user-rete/01-p3-drawing_cluster_with_caption.png",
+      "filename": "01-p3-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-0-drawing-caption-29",
+      "page_index": 0,
+      "caption": "Figure 1: The journey of user retention, where bidding deci- sion is made prior to conversion, and the onboarding content is inaccessible at this time.",
+      "clip": [
+        301.8863220214844,
+        50.735015869140625,
+        604.0,
+        319.03900146484375
+      ],
+      "clip_area": 81058.30390461255,
+      "page_area": 484704.0,
+      "text_density": 0.38023714885386295,
+      "kind": "drawing_cluster_with_caption",
+      "score": 49.900647821162366,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-29/assets/figure_candidates/break-the-inaccessible-boundary-distilling-post-conversion-content-for-user-rete/02-p1-drawing_cluster_with_caption.png",
+      "filename": "02-p1-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-drawing-caption-52",
+      "page_index": 3,
+      "caption": "Figure 3: Performance gains of retention task from increased representation similarity.",
+      "clip": [
+        302.1969909667969,
+        77.64878845214844,
+        580.7898559570312,
+        194.68798828125
+      ],
+      "clip_area": 32606.285996553954,
+      "page_area": 484704.0,
+      "text_density": 0.12479209252085702,
+      "kind": "drawing_cluster_with_caption",
+      "score": 12.674766515376957,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-29/assets/figure_candidates/break-the-inaccessible-boundary-distilling-post-conversion-content-for-user-rete/03-p4-drawing_cluster_with_caption.png",
+      "filename": "03-p4-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-drawing-cluster-0",
+      "page_index": 3,
+      "caption": "第 4 页矢量图主图候选",
+      "clip": [
+        304.1969909667969,
+        79.64878845214844,
+        578.7898559570312,
+        192.68798828125
+      ],
+      "clip_area": 31039.75773727661,
+      "page_area": 484704.0,
+      "text_density": 0.130116591377348,
+      "kind": "drawing_cluster",
+      "score": 7.337890714439973,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-29/assets/figure_candidates/break-the-inaccessible-boundary-distilling-post-conversion-content-for-user-rete/04-p4-drawing_cluster.png",
+      "filename": "04-p4-drawing_cluster.png"
+    },
+    {
+      "id": "page-2-drawing-cluster-0",
+      "page_index": 2,
+      "caption": "第 3 页矢量图主图候选",
+      "clip": [
+        56.03778076171875,
+        60.312835693359375,
+        579.8458251953125,
+        364.954833984375
+      ],
+      "clip_area": 159573.9293771591,
+      "page_area": 484704.0,
+      "text_density": 0.1951977129388941,
+      "kind": "drawing_cluster",
+      "score": 3.0881372236663545,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-29/assets/figure_candidates/break-the-inaccessible-boundary-distilling-post-conversion-content-for-user-rete/05-p3-drawing_cluster.png",
+      "filename": "05-p3-drawing_cluster.png"
+    },
+    {
+      "id": "page-3-block-52",
+      "page_index": 3,
+      "caption": "Figure 3: Performance gains of retention task from increased representation similarity.",
+      "clip": [
+        287.3549865722656,
+        18.0,
+        588.802392578125,
+        189.8944854736328
+      ],
+      "clip_area": 51817.146752738496,
+      "page_area": 484704.0,
+      "text_density": 0.18372798206351276,
+      "kind": "captioned_figure",
+      "score": -2.6479328487803375,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-29/assets/figure_candidates/break-the-inaccessible-boundary-distilling-post-conversion-content-for-user-rete/06-p4-captioned_figure.png",
+      "filename": "06-p4-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-29/assets/figure_candidates/break-the-inaccessible-boundary-distilling-post-conversion-content-for-user-rete/contact-sheet.svg"
+}

@@ -1,0 +1,86 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#444"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d64545"/>
+    </marker>
+    <marker id="arrGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3ca04a"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="34" text-anchor="middle" font-size="22" font-weight="700" fill="#222">两阶段蒸馏：先"作弊"学答案，再让学生猜</text>
+  <text x="450" y="56" text-anchor="middle" font-size="13" fill="#666">Teacher 看未来回流内容 → Student 只用可观测特征对齐</text>
+
+  <!-- Stage 1 panel -->
+  <rect x="40" y="90" width="380" height="200" rx="10" fill="#fff3e6" stroke="#e08a3c" stroke-width="2"/>
+  <text x="60" y="115" font-size="15" font-weight="700" fill="#b35c00">Stage 1 · Teacher（训练时作弊）</text>
+
+  <!-- Future content -->
+  <rect x="60" y="135" width="130" height="60" rx="6" fill="#ffd9a8" stroke="#e08a3c"/>
+  <text x="125" y="160" text-anchor="middle" font-size="12" fill="#5a3800">未来 Onboarding</text>
+  <text x="125" y="178" text-anchor="middle" font-size="12" fill="#5a3800">萌宠·直播·游戏…</text>
+
+  <!-- HAE -->
+  <rect x="240" y="135" width="150" height="60" rx="6" fill="#ffb066" stroke="#b35c00"/>
+  <text x="315" y="162" text-anchor="middle" font-size="14" font-weight="700" fill="#3a1f00">HAE</text>
+  <text x="315" y="180" text-anchor="middle" font-size="11" fill="#3a1f00">层级注意力编码器</text>
+
+  <line x1="190" y1="165" x2="238" y2="165" stroke="#444" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Teacher vector -->
+  <ellipse cx="315" cy="240" rx="75" ry="22" fill="#ff8a1e" stroke="#b35c00"/>
+  <text x="315" y="245" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">Teacher 向量 z*</text>
+  <line x1="315" y1="195" x2="315" y2="216" stroke="#444" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Stage 2 panel -->
+  <rect x="480" y="90" width="380" height="200" rx="10" fill="#e6f0ff" stroke="#3c6fe0" stroke-width="2"/>
+  <text x="500" y="115" font-size="15" font-weight="700" fill="#1f3f99">Stage 2 · Student（只看考前资料）</text>
+
+  <!-- user features -->
+  <rect x="500" y="135" width="130" height="60" rx="6" fill="#cfdcff" stroke="#3c6fe0"/>
+  <text x="565" y="158" text-anchor="middle" font-size="12" fill="#1f3f99">画像 + 行为</text>
+  <text x="565" y="176" text-anchor="middle" font-size="12" fill="#1f3f99">+ 广告上下文</text>
+
+  <!-- SFE -->
+  <rect x="680" y="135" width="150" height="60" rx="6" fill="#7aa3ff" stroke="#1f3f99"/>
+  <text x="755" y="162" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">SFE</text>
+  <text x="755" y="180" text-anchor="middle" font-size="11" fill="#fff">User Encoder</text>
+
+  <line x1="630" y1="165" x2="678" y2="165" stroke="#444" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Student vector -->
+  <ellipse cx="755" cy="240" rx="75" ry="22" fill="#1f3f99" stroke="#13295f"/>
+  <text x="755" y="245" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">Student 向量 ẑ</text>
+  <line x1="755" y1="195" x2="755" y2="216" stroke="#444" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Distillation arrow -->
+  <line x1="392" y1="240" x2="678" y2="240" stroke="#d64545" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrRed)"/>
+  <text x="535" y="232" text-anchor="middle" font-size="13" font-weight="700" fill="#d64545">余弦对齐 + stop-grad（HAE 冻结）</text>
+
+  <!-- Inference -->
+  <rect x="200" y="360" width="500" height="140" rx="10" fill="#eafbe7" stroke="#3ca04a" stroke-width="2"/>
+  <text x="450" y="388" text-anchor="middle" font-size="15" font-weight="700" fill="#1f6b2c">线上推断：只用 Student，无特征穿越</text>
+
+  <rect x="230" y="410" width="140" height="60" rx="6" fill="#cdebd0" stroke="#3ca04a"/>
+  <text x="300" y="438" text-anchor="middle" font-size="12" fill="#1f6b2c">可观测用户特征</text>
+  <text x="300" y="456" text-anchor="middle" font-size="11" fill="#1f6b2c">(画像/行为/广告)</text>
+
+  <rect x="410" y="410" width="110" height="60" rx="6" fill="#7fd18b" stroke="#1f6b2c"/>
+  <text x="465" y="438" text-anchor="middle" font-size="13" font-weight="700" fill="#0d3a17">SFE</text>
+  <text x="465" y="456" text-anchor="middle" font-size="11" fill="#0d3a17">(估计 ẑ)</text>
+
+  <rect x="560" y="410" width="120" height="60" rx="6" fill="#3ca04a" stroke="#1f6b2c"/>
+  <text x="620" y="436" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">留存预测</text>
+  <text x="620" y="455" text-anchor="middle" font-size="11" fill="#fff">LT1 / LT7 → 出价</text>
+
+  <line x1="370" y1="440" x2="408" y2="440" stroke="#444" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="520" y1="440" x2="558" y2="440" stroke="#444" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- deploy arrow from SFE (stage2) to SFE (inference) -->
+  <line x1="755" y1="262" x2="510" y2="405" stroke="#3ca04a" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrGreen)"/>
+  <text x="660" y="340" font-size="12" font-weight="700" fill="#1f6b2c">部署 Student</text>
+</svg>

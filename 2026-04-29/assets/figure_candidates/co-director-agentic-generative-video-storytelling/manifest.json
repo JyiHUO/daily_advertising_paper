@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-29/downloaded_pdfs/co-director-agentic-generative-video-storytelling.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-29/assets/figure_candidates/co-director-agentic-generative-video-storytelling",
+  "candidates": [
+    {
+      "id": "page-8-drawing-caption-61",
+      "page_index": 8,
+      "caption": "Figure 2 | MAB Optimization Efficiency. Cumulative best performance over 10 iterations comparing Co-Director’s MAB optimization against an undirected Random Search.",
+      "clip": [
+        44.36199951171875,
+        69.03990173339844,
+        550.9134521484375,
+        211.15399169921875
+      ],
+      "clip_area": 71988.09871233162,
+      "page_area": 501156.9211820215,
+      "text_density": 0.14884518186982984,
+      "kind": "drawing_cluster_with_caption",
+      "score": 13.669156851280562,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-29/assets/figure_candidates/co-director-agentic-generative-video-storytelling/01-p9-drawing_cluster_with_caption.png",
+      "filename": "01-p9-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-8-drawing-cluster-0",
+      "page_index": 8,
+      "caption": "第 9 页矢量图主图候选",
+      "clip": [
+        46.36199951171875,
+        71.03990173339844,
+        548.9134521484375,
+        209.15399169921875
+      ],
+      "clip_area": 69409.43654192146,
+      "page_area": 501156.9211820215,
+      "text_density": 0.14080625670174934,
+      "kind": "drawing_cluster",
+      "score": 5.122840559471944,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-29/assets/figure_candidates/co-director-agentic-generative-video-storytelling/02-p9-drawing_cluster.png",
+      "filename": "02-p9-drawing_cluster.png"
+    },
+    {
+      "id": "page-16-drawing-cluster-0",
+      "page_index": 16,
+      "caption": "第 17 页矢量图主图候选",
+      "clip": [
+        8.0,
+        8.0,
+        584.9464721679688,
+        813.8886108398438
+      ],
+      "clip_area": 464954.5909843929,
+      "page_area": 501156.9211820215,
+      "text_density": 0.14868603719111667,
+      "kind": "drawing_cluster",
+      "score": -8.121162231467,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-29/assets/figure_candidates/co-director-agentic-generative-video-storytelling/03-p17-drawing_cluster.png",
+      "filename": "03-p17-drawing_cluster.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        151.54020263671873,
+        281.6852404785156,
+        471.45840820312503
+      ],
+      "clip_area": 84357.70896823303,
+      "kind": "layout_region_left_top",
+      "page_area": 501156.9211820215,
+      "text_density": 0.5931854416984113,
+      "score": -11.06269212257519,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-29/assets/figure_candidates/co-director-agentic-generative-video-storytelling/04-p1-layout_region_left_top.png",
+      "filename": "04-p1-layout_region_left_top.png"
+    },
+    {
+      "id": "page-1-region-upper-left",
+      "page_index": 1,
+      "caption": "第 2 页左上区域主图候选",
+      "clip": [
+        18.0,
+        151.54020263671873,
+        281.6852404785156,
+        471.45840820312503
+      ],
+      "clip_area": 84357.70896823303,
+      "kind": "layout_region_left_top",
+      "page_area": 501156.9211820215,
+      "text_density": 0.7848454200898665,
+      "score": -11.06269212257519,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-29/assets/figure_candidates/co-director-agentic-generative-video-storytelling/05-p2-layout_region_left_top.png",
+      "filename": "05-p2-layout_region_left_top.png"
+    },
+    {
+      "id": "page-15-block-41",
+      "page_index": 15,
+      "caption": "Figure 3 | Qualitative results on GenAd-Bench. Co-Director translates complex product prompts into cohesive visual narratives. The framework maintains character and product identity across dynamic poses and varied angles (top) and preserves precise product details during dramatic environmental and lighting transitions (bottom).",
+      "clip": [
+        32.59819946289062,
+        386.38828125,
+        562.9545959472656,
+        715.144287109375
+      ],
+      "clip_area": 174357.8505901742,
+      "page_area": 501156.9211820215,
+      "text_density": 0.4559311518554733,
+      "kind": "captioned_figure",
+      "score": -15.316427627413487,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-29/assets/figure_candidates/co-director-agentic-generative-video-storytelling/06-p16-captioned_figure.png",
+      "filename": "06-p16-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-29/assets/figure_candidates/co-director-agentic-generative-video-storytelling/contact-sheet.svg"
+}

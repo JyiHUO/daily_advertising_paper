@@ -1,0 +1,208 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" font-family="PingFang SC, Microsoft YaHei, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f1630"/>
+      <stop offset="1" stop-color="#1a1040"/>
+    </linearGradient>
+    <linearGradient id="gGlobal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ff6b9d"/>
+      <stop offset="1" stop-color="#ffa76b"/>
+    </linearGradient>
+    <linearGradient id="gLocal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4fc3f7"/>
+      <stop offset="1" stop-color="#6ee7b7"/>
+    </linearGradient>
+    <linearGradient id="gArm1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffb37a"/><stop offset="1" stop-color="#ff7a7a"/>
+    </linearGradient>
+    <linearGradient id="gArm2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b794f6"/><stop offset="1" stop-color="#7c5cff"/>
+    </linearGradient>
+    <linearGradient id="gArm3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4fd1c5"/><stop offset="1" stop-color="#2c9e93"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#e8ecff"/>
+    </marker>
+    <marker id="arrowPink" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#ff8fb8"/>
+    </marker>
+    <marker id="arrowCyan" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#6ee7b7"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="780" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="600" y="48" text-anchor="middle" font-size="26" font-weight="700" fill="#fff">Co-Director：把广告片生成写成一次全局优化</text>
+  <text x="600" y="74" text-anchor="middle" font-size="14" fill="#a8b2d1">外层老虎机探索创意方向 · 内层多模态自省修正身份漂移</text>
+
+  <!-- Input -->
+  <g>
+    <rect x="40" y="130" width="160" height="120" rx="14" fill="#232947" stroke="#3a4370"/>
+    <text x="120" y="156" text-anchor="middle" font-size="13" fill="#9fb0ff" font-weight="600">输入 Brief</text>
+    <text x="120" y="182" text-anchor="middle" font-size="11" fill="#d8def0">品牌 / 产品</text>
+    <text x="120" y="200" text-anchor="middle" font-size="11" fill="#d8def0">人群六要素</text>
+    <text x="120" y="218" text-anchor="middle" font-size="11" fill="#d8def0">logo · 参考图</text>
+    <text x="120" y="240" text-anchor="middle" font-size="10" fill="#7a85b0">（热启动先验）</text>
+  </g>
+
+  <!-- OUTER LOOP: Bandit -->
+  <g>
+    <path d="M220 170 Q260 120 320 120 L1060 120 Q1110 120 1110 175 L1110 300 Q1110 340 1070 340 L260 340 Q220 340 220 300 Z"
+          fill="none" stroke="url(#gGlobal)" stroke-width="2" stroke-dasharray="6 4" opacity="0.85"/>
+    <text x="246" y="108" font-size="13" font-weight="700" fill="#ff8fb8">① 外层闭环 · UCB1 多臂老虎机（探索 ↔ 利用）</text>
+
+    <!-- Three axes as arms -->
+    <g transform="translate(250,150)">
+      <text x="0" y="0" font-size="12" fill="#ffd9a8" font-weight="600">创意策略</text>
+      <rect x="0" y="10" width="70" height="26" rx="6" fill="url(#gArm1)"/>
+      <text x="35" y="27" text-anchor="middle" font-size="11" fill="#fff">信息型</text>
+      <rect x="76" y="10" width="70" height="26" rx="6" fill="url(#gArm1)" opacity="0.5"/>
+      <text x="111" y="27" text-anchor="middle" font-size="11" fill="#fff">转化型</text>
+      <rect x="152" y="10" width="70" height="26" rx="6" fill="url(#gArm1)" opacity="0.35"/>
+      <text x="187" y="27" text-anchor="middle" font-size="11" fill="#fff">对比型</text>
+    </g>
+
+    <g transform="translate(520,150)">
+      <text x="0" y="0" font-size="12" fill="#d5c4ff" font-weight="600">叙事模式</text>
+      <rect x="0" y="10" width="70" height="26" rx="6" fill="url(#gArm2)" opacity="0.4"/>
+      <text x="35" y="27" text-anchor="middle" font-size="11" fill="#fff">分析式</text>
+      <rect x="76" y="10" width="70" height="26" rx="6" fill="url(#gArm2)"/>
+      <text x="111" y="27" text-anchor="middle" font-size="11" fill="#fff">生活切片</text>
+      <rect x="152" y="10" width="70" height="26" rx="6" fill="url(#gArm2)" opacity="0.55"/>
+      <text x="187" y="27" text-anchor="middle" font-size="11" fill="#fff">戏剧冲突</text>
+    </g>
+
+    <g transform="translate(790,150)">
+      <text x="0" y="0" font-size="12" fill="#a8e6dc" font-weight="600">美学原型</text>
+      <rect x="0" y="10" width="72" height="26" rx="6" fill="url(#gArm3)" opacity="0.4"/>
+      <text x="36" y="27" text-anchor="middle" font-size="10" fill="#fff">明快活力</text>
+      <rect x="78" y="10" width="72" height="26" rx="6" fill="url(#gArm3)"/>
+      <text x="114" y="27" text-anchor="middle" font-size="10" fill="#fff">电影感</text>
+      <rect x="156" y="10" width="72" height="26" rx="6" fill="url(#gArm3)" opacity="0.5"/>
+      <text x="192" y="27" text-anchor="middle" font-size="10" fill="#fff">极简</text>
+      <rect x="234" y="10" width="72" height="26" rx="6" fill="url(#gArm3)" opacity="0.5"/>
+      <text x="270" y="27" text-anchor="middle" font-size="10" fill="#fff">粗粝动感</text>
+    </g>
+
+    <!-- Chosen config -->
+    <g transform="translate(440,230)">
+      <rect x="0" y="0" width="320" height="82" rx="12" fill="#2a1e4d" stroke="#ff8fb8" stroke-width="1.5"/>
+      <text x="160" y="22" text-anchor="middle" font-size="12" font-weight="700" fill="#ff8fb8">本轮被拉的臂 · 创意配置三元组</text>
+      <text x="160" y="46" text-anchor="middle" font-size="13" fill="#fff">转化型 · 生活切片 · 电影感高级</text>
+      <text x="160" y="68" text-anchor="middle" font-size="11" fill="#a8b2d1">统一改写给所有子 Agent 的系统 prompt</text>
+    </g>
+
+    <!-- Reward feedback curved arrow (inside bandit box) -->
+    <path d="M1060 280 Q1095 250 1060 210 Q1020 175 985 178" fill="none" stroke="#ff8fb8" stroke-width="1.8" marker-end="url(#arrowPink)"/>
+    <text x="1000" y="245" font-size="10" fill="#ff8fb8">分维度奖励</text>
+    <text x="1000" y="259" font-size="10" fill="#ff8fb8">更新各轴臂</text>
+  </g>
+
+  <!-- Arrow from input to bandit -->
+  <path d="M200 200 L238 200" stroke="#e8ecff" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Arrow from chosen config down to pipeline -->
+  <path d="M600 312 L600 368" stroke="#ff8fb8" stroke-width="2" marker-end="url(#arrowPink)"/>
+
+  <!-- INNER LOOP: Pipeline -->
+  <g>
+    <rect x="60" y="370" width="1080" height="280" rx="16" fill="#1a2145" stroke="#3a4370"/>
+    <text x="82" y="398" font-size="13" font-weight="700" fill="#6ee7b7">② 分层多 Agent 流水线 + 局部自省循环</text>
+
+    <!-- Orchestrator -->
+    <rect x="80" y="420" width="130" height="60" rx="10" fill="#2d3566" stroke="#6ee7b7"/>
+    <text x="145" y="446" text-anchor="middle" font-size="12" font-weight="700" fill="#fff">Orchestrator</text>
+    <text x="145" y="465" text-anchor="middle" font-size="10" fill="#a8b2d1">解析+配置下发</text>
+
+    <!-- Pre-Production with reflection -->
+    <g>
+      <rect x="240" y="410" width="200" height="120" rx="12" fill="#243060" stroke="#4fc3f7"/>
+      <text x="340" y="432" text-anchor="middle" font-size="12" font-weight="700" fill="#4fc3f7">Pre-Production</text>
+      <text x="340" y="454" text-anchor="middle" font-size="11" fill="#e8ecff">Brief → 剧本 → 分镜板</text>
+      <!-- reflection loop -->
+      <path d="M270 478 Q250 505 290 512 Q330 518 355 500" fill="none" stroke="#6ee7b7" stroke-width="1.5" marker-end="url(#arrowCyan)"/>
+      <text x="340" y="525" text-anchor="middle" font-size="9" fill="#6ee7b7">剧本评分低于阈值则重写</text>
+    </g>
+
+    <!-- Production: keyframe + video + audio -->
+    <g>
+      <rect x="470" y="410" width="340" height="180" rx="12" fill="#243060" stroke="#4fc3f7"/>
+      <text x="640" y="432" text-anchor="middle" font-size="12" font-weight="700" fill="#4fc3f7">Production</text>
+
+      <!-- Keyframes row -->
+      <text x="490" y="458" font-size="10" fill="#a8b2d1">关键帧序列（视觉锚点）</text>
+      <g>
+        <rect x="490" y="464" width="50" height="40" rx="5" fill="#3a4a80" stroke="#6ee7b7"/>
+        <text x="515" y="488" text-anchor="middle" font-size="10" fill="#fff">K1</text>
+        <rect x="548" y="464" width="50" height="40" rx="5" fill="#3a4a80" stroke="#6ee7b7"/>
+        <text x="573" y="488" text-anchor="middle" font-size="10" fill="#fff">K2</text>
+        <!-- flagged frames -->
+        <rect x="606" y="464" width="50" height="40" rx="5" fill="#5a2a3a" stroke="#ff6b9d" stroke-width="2"/>
+        <text x="631" y="488" text-anchor="middle" font-size="10" fill="#ffd0e0">K3!</text>
+        <rect x="664" y="464" width="50" height="40" rx="5" fill="#5a2a3a" stroke="#ff6b9d" stroke-width="2"/>
+        <text x="689" y="488" text-anchor="middle" font-size="10" fill="#ffd0e0">K4!</text>
+        <rect x="722" y="464" width="50" height="40" rx="5" fill="#3a4a80" stroke="#6ee7b7"/>
+        <text x="747" y="488" text-anchor="middle" font-size="10" fill="#fff">K5</text>
+      </g>
+
+      <!-- MLLM sequence review -->
+      <path d="M515 510 Q640 545 747 510" fill="none" stroke="#ff6b9d" stroke-width="1.5" stroke-dasharray="3 2"/>
+      <rect x="545" y="540" width="190" height="32" rx="8" fill="#3d1e3d" stroke="#ff6b9d"/>
+      <text x="640" y="560" text-anchor="middle" font-size="10" fill="#ffd0e0">MLLM 序列自省：只重画被标帧</text>
+    </g>
+
+    <!-- Video + Audio as final -->
+    <g>
+      <rect x="840" y="410" width="140" height="80" rx="10" fill="#2d3566" stroke="#4fc3f7"/>
+      <text x="910" y="434" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">视频 Agent</text>
+      <text x="910" y="452" text-anchor="middle" font-size="10" fill="#a8b2d1">图生视频延展</text>
+      <text x="910" y="470" text-anchor="middle" font-size="10" fill="#a8b2d1">帧作为视觉锚点</text>
+
+      <rect x="840" y="500" width="140" height="70" rx="10" fill="#2d3566" stroke="#4fc3f7"/>
+      <text x="910" y="524" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">音频 Agent</text>
+      <text x="910" y="542" text-anchor="middle" font-size="10" fill="#a8b2d1">TTS + BGM</text>
+    </g>
+
+    <!-- Output clip -->
+    <rect x="1010" y="440" width="110" height="120" rx="10" fill="url(#gLocal)" opacity="0.95"/>
+    <text x="1065" y="475" text-anchor="middle" font-size="12" font-weight="700" fill="#0f1630">广告短片</text>
+    <text x="1065" y="498" text-anchor="middle" font-size="10" fill="#0f1630">身份一致</text>
+    <text x="1065" y="514" text-anchor="middle" font-size="10" fill="#0f1630">风格统一</text>
+    <text x="1065" y="530" text-anchor="middle" font-size="10" fill="#0f1630">叙事连贯</text>
+
+    <!-- Arrows in pipeline -->
+    <path d="M210 450 L238 450" stroke="#e8ecff" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <path d="M440 450 L468 450" stroke="#e8ecff" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <path d="M810 450 L838 448" stroke="#e8ecff" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <path d="M810 520 L838 530" stroke="#e8ecff" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <path d="M980 470 L1008 480" stroke="#e8ecff" stroke-width="1.5" marker-end="url(#arrow)"/>
+    <path d="M980 535 L1008 520" stroke="#e8ecff" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+    <!-- Config broadcast hint -->
+    <text x="82" y="628" font-size="10" fill="#9fb0ff">所有子 Agent 的 prompt 由同一创意配置统一改写 → 跨模块语义一致</text>
+  </g>
+
+  <!-- Outer feedback: evaluation -->
+  <g>
+    <rect x="60" y="680" width="1080" height="80" rx="12" fill="#1d1440" stroke="#ff8fb8"/>
+    <text x="80" y="706" font-size="13" font-weight="700" fill="#ff8fb8">③ GenAD-Bench · MLLM 评委四维打分（400 场景 · 虚构品牌防记忆作弊）</text>
+    <g font-size="11" fill="#fff">
+      <rect x="90" y="720" width="220" height="28" rx="6" fill="#3a2250"/>
+      <text x="200" y="739" text-anchor="middle">VAF 视觉素材保真 → 美学臂</text>
+      <rect x="320" y="720" width="220" height="28" rx="6" fill="#3a2250"/>
+      <text x="430" y="739" text-anchor="middle">DA 人群匹配 → 策略臂</text>
+      <rect x="550" y="720" width="240" height="28" rx="6" fill="#3a2250"/>
+      <text x="670" y="739" text-anchor="middle">MA 营销吸引力（AIDA）→ 叙事臂</text>
+      <rect x="800" y="720" width="220" height="28" rx="6" fill="#3a2250"/>
+      <text x="910" y="739" text-anchor="middle">VQ 视觉质量 → 美学臂</text>
+    </g>
+    <!-- feedback arrow from bench up to bandit region -->
+    <path d="M1140 700 Q1175 520 1150 340" fill="none" stroke="#ff8fb8" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arrowPink)"/>
+  </g>
+
+  <!-- feedback label -->
+  <text x="1162" y="520" font-size="10" fill="#ff8fb8" transform="rotate(-88 1162 520)">分维度回流 · 更新 UCB1</text>
+</svg>

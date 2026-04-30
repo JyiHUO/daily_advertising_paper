@@ -1,0 +1,83 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2b4c7e"/>
+    </marker>
+    <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2f8a5a"/>
+    </marker>
+    <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff5e6"/>
+      <stop offset="1" stop-color="#ffd89b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="960" height="620" fill="#f7f9fc"/>
+
+  <text x="480" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1a2b45">
+    一份"创意配置" → 指挥所有子 Agent 同频
+  </text>
+  <text x="480" y="64" text-anchor="middle" font-size="13" fill="#55607a">
+    风格 / 叙事 / 卖点不再各写各的 prompt，避免层层跑偏
+  </text>
+
+  <!-- Central Orchestrator -->
+  <rect x="360" y="95" width="240" height="95" rx="12" fill="url(#g1)" stroke="#d98c1f" stroke-width="2"/>
+  <text x="480" y="125" text-anchor="middle" font-size="16" font-weight="700" fill="#7a3e00">Orchestrator</text>
+  <text x="480" y="148" text-anchor="middle" font-size="12" fill="#7a3e00">统一改写创意配置</text>
+  <text x="480" y="170" text-anchor="middle" font-size="11" fill="#7a3e00">转化型 + 生活切片 + 电影感</text>
+
+  <!-- Three sub-agents -->
+  <g>
+    <rect x="55" y="240" width="235" height="110" rx="10" fill="#e8f0ff" stroke="#2b4c7e" stroke-width="1.8"/>
+    <text x="172" y="268" text-anchor="middle" font-size="15" font-weight="700" fill="#1a2b45">剧本 Agent</text>
+    <text x="172" y="295" text-anchor="middle" font-size="12" fill="#2b4c7e">"多写情绪氛围，少写参数"</text>
+    <text x="172" y="320" text-anchor="middle" font-size="11" fill="#55607a">→ 窗边咖啡・独白</text>
+  </g>
+
+  <g>
+    <rect x="362" y="240" width="236" height="110" rx="10" fill="#e7f7ee" stroke="#2f8a5a" stroke-width="1.8"/>
+    <text x="480" y="268" text-anchor="middle" font-size="15" font-weight="700" fill="#1a2b45">关键帧 Agent</text>
+    <text x="480" y="295" text-anchor="middle" font-size="12" fill="#2f6a4a">"暗调打光，慢推镜头"</text>
+    <text x="480" y="320" text-anchor="middle" font-size="11" fill="#55607a">→ 先锚定人物 &amp; 产品</text>
+  </g>
+
+  <g>
+    <rect x="670" y="240" width="235" height="110" rx="10" fill="#fbe9f1" stroke="#a6336b" stroke-width="1.8"/>
+    <text x="787" y="268" text-anchor="middle" font-size="15" font-weight="700" fill="#1a2b45">音频 Agent</text>
+    <text x="787" y="295" text-anchor="middle" font-size="12" fill="#8a2a5a">"管弦乐，节奏偏慢"</text>
+    <text x="787" y="320" text-anchor="middle" font-size="11" fill="#55607a">→ 舒缓弦乐配底</text>
+  </g>
+
+  <!-- Arrows from orchestrator -->
+  <path d="M400,190 Q290,215 200,238" fill="none" stroke="#2b4c7e" stroke-width="2" marker-end="url(#a)"/>
+  <path d="M480,190 L480,238" fill="none" stroke="#2b4c7e" stroke-width="2" marker-end="url(#a)"/>
+  <path d="M560,190 Q670,215 760,238" fill="none" stroke="#2b4c7e" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- Keyframe-first zone -->
+  <rect x="310" y="430" width="340" height="150" rx="10" fill="#fff" stroke="#2f8a5a" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text x="480" y="455" text-anchor="middle" font-size="14" font-weight="700" fill="#1a2b45">关键帧先行 · 钉死身份</text>
+
+  <!-- anchor frame -->
+  <rect x="330" y="475" width="130" height="80" rx="4" fill="#2d3444"/>
+  <circle cx="372" cy="515" r="15" fill="#d9a06b"/>
+  <rect x="393" y="508" width="20" height="24" rx="2" fill="#c77a3a"/>
+  <text x="395" y="572" text-anchor="middle" font-size="10" fill="#55607a">锚定首帧</text>
+
+  <path d="M465,515 L505,515" stroke="#2f8a5a" stroke-width="2" marker-end="url(#b)"/>
+
+  <!-- video frame -->
+  <rect x="510" y="475" width="120" height="80" rx="4" fill="#2d3444" opacity="0.9"/>
+  <circle cx="548" cy="515" r="13" fill="#d9a06b"/>
+  <rect x="568" y="509" width="18" height="22" rx="2" fill="#c77a3a"/>
+  <text x="570" y="572" text-anchor="middle" font-size="10" fill="#55607a">视频仅负责动起来</text>
+
+  <!-- Side notes -->
+  <text x="60" y="410" font-size="12" fill="#2f6a4a">✓ 卖点 / 叙事 / 风格 / 音乐 同源</text>
+  <text x="60" y="430" font-size="12" fill="#2f6a4a">✓ 避免各写各 prompt 跑偏</text>
+  <text x="700" y="410" font-size="12" fill="#8a2a5a">✓ 人物长相不漂移</text>
+  <text x="700" y="430" font-size="12" fill="#8a2a5a">✓ 产品外观保持一致</text>
+
+  <!-- Arrow from keyframe agent to locking box -->
+  <path d="M480,350 L480,428" fill="none" stroke="#2f8a5a" stroke-width="2" marker-end="url(#b)"/>
+</svg>

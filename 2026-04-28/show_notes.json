@@ -1,0 +1,9 @@
+{
+  "title": "AI计算广告论文播报｜0428 召回与排序的墙正在被重写",
+  "shownotes_html": "<p>广告系统的每一层正在互相靠拢——召回要懂排序意图，排序要懂真实转化链路，在线服务要撑住更大模型。今天精读两篇直接落地的工业论文，再串联多篇候选工作，聊聊\"层与层之间的协同\"这个正在发生的趋势。</p><p><strong>🎯 本期重点</strong></p><ul><li><strong>Follow the TRACE（点击后行为轨迹建模 CVR 预测）</strong>：不再对未转化样本一律打硬负标签，而是把加购、收藏、停留等点击后行为组织成时间轨迹，用条件似然判断\"这条轨迹更像会转化还是不会转化\"，并用离线补全器给早期稀疏样本提供软监督。对 OCPX/CPA 出价链路的校准改善实用价值极高。</li><li><strong>CS3: 快手双塔召回三件套（自去噪 + 对塔对齐 + 精排蒸馏）</strong>：一次性补齐双塔的容量不足、两塔错位和召回-排序不一致三大短板，核心亮点是把精排倒数第二层向量按 EMA 回灌召回塔，线上广告收入最高提升超过 8%，工程方案（参数服务器 + 独立 Embedding Server 分层缓存）可直接复用。</li><li><strong>Adaptive Semantic ID（快手多模态语义 ID）</strong>：把静态码本升级为自适应学习，正面解决 token 碰撞与语义漂移，电商短视频召回线上 GMV 正向收益，做商品理解和生成式召回的同学值得跟进。</li><li><strong>Learning to Rotate（可学习 RoPE 旋转编码）</strong>：让 Transformer 中 RoPE 的旋转流形本身可学习，时间与语义共同参与编码，在大型社交 feed 生成式推荐中直接改善排序校准——对广告出价来说，校准往往比 AUC 微涨更值钱。</li></ul><p><strong>📈 今日趋势</strong></p><ul><li>当天 646 篇论文中，直接涉及商业化决策与资源优化的仅约 34 篇，但质量密度高：CVR 延迟反馈、双塔召回、Semantic ID、生成式推荐服务等方向均有工业级落地验证。</li><li>一个明显信号：召回、排序、在线服务三层之间的边界正在模糊化——召回带精排视角、标签贴近真实行为轨迹、KV 缓存从 LLM 推理迁移到推荐服务链路，\"层间协同\"可能成为未来一两年广告系统竞争力的关键变量。</li></ul><p>📄 完整日报与论文列表见：<a href=\"https://github.com/JyiHUO/daily_advertising_paper/blob/main/2026-04-28/daily_report.md\">GitHub 归档</a></p><p>欢迎在评论区留言交流，尤其欢迎分享你在延迟反馈、双塔改造或生成式召回上的实践经验。本期内容由 AI 自动生成并经人工审校，如有疏漏欢迎指正。</p>",
+  "report_date": "2026-04-28",
+  "provider": "bedrock-opus",
+  "archive_url": "https://github.com/JyiHUO/daily_advertising_paper/blob/main/2026-04-28/daily_report.md",
+  "fallback": false,
+  "generated_at": "2026-04-28T22:58:49Z"
+}

@@ -1,0 +1,107 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2b6cb0"/>
+    </marker>
+    <marker id="arr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c05621"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="30" text-anchor="middle" font-size="19" font-weight="700" fill="#1a202c">SFE：把"用户是谁"贴到每条旧行为上，再用少量 query 榨出兴趣</text>
+
+  <!-- Profile -->
+  <rect x="40" y="80" width="140" height="70" rx="10" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="110" y="110" text-anchor="middle" font-size="15" font-weight="700" fill="#78350f">User Profile</text>
+  <text x="110" y="132" text-anchor="middle" font-size="12" fill="#78350f">性别/年龄/标签</text>
+
+  <!-- 拼接说明 -->
+  <text x="265" y="70" text-anchor="middle" font-size="12" fill="#c05621" font-weight="700">拼到每个 item 作为统一锚点</text>
+
+  <!-- Sequence 1: clicks -->
+  <rect x="360" y="80" width="230" height="110" rx="10" fill="#e0f2fe" stroke="#0369a1" stroke-width="2"/>
+  <text x="475" y="103" text-anchor="middle" font-size="14" font-weight="700" fill="#0c4a6e">历史点击序列</text>
+  <g font-size="10" fill="#0c4a6e">
+    <rect x="372" y="118" width="58" height="28" rx="4" fill="#bae6fd" stroke="#0369a1"/>
+    <text x="401" y="136" text-anchor="middle">P⊕i₁</text>
+    <rect x="436" y="118" width="58" height="28" rx="4" fill="#bae6fd" stroke="#0369a1"/>
+    <text x="465" y="136" text-anchor="middle">P⊕i₂</text>
+    <rect x="500" y="118" width="58" height="28" rx="4" fill="#bae6fd" stroke="#0369a1"/>
+    <text x="529" y="136" text-anchor="middle">P⊕i₃</text>
+    <text x="570" y="136" text-anchor="middle" font-size="14">…</text>
+  </g>
+  <text x="475" y="175" text-anchor="middle" font-size="11" fill="#0c4a6e">50 条老点击（变长）</text>
+
+  <!-- Sequence 2: ad ctx -->
+  <rect x="360" y="210" width="230" height="110" rx="10" fill="#ede9fe" stroke="#6d28d9" stroke-width="2"/>
+  <text x="475" y="233" text-anchor="middle" font-size="14" font-weight="700" fill="#4c1d95">广告上下文序列</text>
+  <g font-size="10" fill="#4c1d95">
+    <rect x="372" y="248" width="58" height="28" rx="4" fill="#ddd6fe" stroke="#6d28d9"/>
+    <text x="401" y="266" text-anchor="middle">P⊕a₁</text>
+    <rect x="436" y="248" width="58" height="28" rx="4" fill="#ddd6fe" stroke="#6d28d9"/>
+    <text x="465" y="266" text-anchor="middle">P⊕a₂</text>
+    <rect x="500" y="248" width="58" height="28" rx="4" fill="#ddd6fe" stroke="#6d28d9"/>
+    <text x="529" y="266" text-anchor="middle">P⊕a₃</text>
+    <text x="570" y="266" text-anchor="middle" font-size="14">…</text>
+  </g>
+  <text x="475" y="305" text-anchor="middle" font-size="11" fill="#4c1d95">20 条老曝光（变长）</text>
+
+  <!-- Profile arrows to sequences -->
+  <path d="M180,115 Q270,115 360,125" fill="none" stroke="#c05621" stroke-width="2" marker-end="url(#arr2)"/>
+  <path d="M180,140 Q270,250 360,255" fill="none" stroke="#c05621" stroke-width="2" marker-end="url(#arr2)"/>
+
+  <!-- Q-Former 1 -->
+  <rect x="630" y="85" width="140" height="100" rx="10" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+  <text x="700" y="108" text-anchor="middle" font-size="14" font-weight="700" fill="#14532d">Q-Former</text>
+  <text x="700" y="126" text-anchor="middle" font-size="11" fill="#14532d">K 个 query token</text>
+  <g>
+    <circle cx="665" cy="155" r="9" fill="#86efac" stroke="#15803d"/>
+    <circle cx="690" cy="155" r="9" fill="#86efac" stroke="#15803d"/>
+    <circle cx="715" cy="155" r="9" fill="#86efac" stroke="#15803d"/>
+    <circle cx="740" cy="155" r="9" fill="#86efac" stroke="#15803d"/>
+  </g>
+  <text x="700" y="178" text-anchor="middle" font-size="10" fill="#14532d">定长兴趣向量</text>
+
+  <!-- Q-Former 2 -->
+  <rect x="630" y="215" width="140" height="100" rx="10" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+  <text x="700" y="238" text-anchor="middle" font-size="14" font-weight="700" fill="#14532d">Q-Former</text>
+  <text x="700" y="256" text-anchor="middle" font-size="11" fill="#14532d">独立一组 query</text>
+  <g>
+    <circle cx="665" cy="285" r="9" fill="#86efac" stroke="#15803d"/>
+    <circle cx="690" cy="285" r="9" fill="#86efac" stroke="#15803d"/>
+    <circle cx="715" cy="285" r="9" fill="#86efac" stroke="#15803d"/>
+    <circle cx="740" cy="285" r="9" fill="#86efac" stroke="#15803d"/>
+  </g>
+  <text x="700" y="308" text-anchor="middle" font-size="10" fill="#14532d">定长兴趣向量</text>
+
+  <path d="M590,135 L630,135" stroke="#2b6cb0" stroke-width="2" marker-end="url(#arr)"/>
+  <path d="M590,265 L630,265" stroke="#2b6cb0" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Task tower -->
+  <rect x="330" y="380" width="230" height="70" rx="10" fill="#fde68a" stroke="#b45309" stroke-width="2"/>
+  <text x="445" y="408" text-anchor="middle" font-size="15" font-weight="700" fill="#78350f">Task Tower</text>
+  <text x="445" y="430" text-anchor="middle" font-size="12" fill="#78350f">profile + 各兴趣 token 拼接</text>
+
+  <!-- profile -> task tower -->
+  <path d="M110,150 Q110,415 330,415" fill="none" stroke="#2b6cb0" stroke-width="2" marker-end="url(#arr)"/>
+  <!-- Q-Former1 -> task tower -->
+  <path d="M700,185 Q700,380 560,395" fill="none" stroke="#2b6cb0" stroke-width="2" marker-end="url(#arr)"/>
+  <!-- Q-Former2 -> task tower -->
+  <path d="M700,315 Q700,430 560,430" fill="none" stroke="#2b6cb0" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Output &amp; teacher align -->
+  <rect x="120" y="490" width="200" height="60" rx="10" fill="#fee2e2" stroke="#b91c1c" stroke-width="2"/>
+  <text x="220" y="515" text-anchor="middle" font-size="14" font-weight="700" fill="#7f1d1d">Student e_u</text>
+  <text x="220" y="535" text-anchor="middle" font-size="11" fill="#7f1d1d">只用可观测特征</text>
+
+  <rect x="570" y="490" width="200" height="60" rx="10" fill="#e0e7ff" stroke="#3730a3" stroke-width="2"/>
+  <text x="670" y="515" text-anchor="middle" font-size="14" font-weight="700" fill="#312e81">Teacher e_c</text>
+  <text x="670" y="535" text-anchor="middle" font-size="11" fill="#312e81">回流后刷萌宠+直播</text>
+
+  <!-- task tower -> student -->
+  <path d="M380,450 Q300,470 260,490" fill="none" stroke="#2b6cb0" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- alignment line -->
+  <line x1="320" y1="520" x2="570" y2="520" stroke="#b91c1c" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="445" y="512" text-anchor="middle" font-size="13" font-weight="700" fill="#b91c1c">相似度对齐（蒸馏）</text>
+</svg>

@@ -1,0 +1,67 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d9534f"/>
+    </marker>
+    <marker id="arGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3aa757"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="600" fill="#fafaf7"/>
+
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#222">关键帧级序列自反思：只重拍坏帧</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#666">MLLM 把整组关键帧当一个序列一起看，而不是逐帧孤立检查</text>
+
+  <!-- 4 frames -->
+  <g>
+    <rect x="70"  y="95" width="150" height="100" rx="6" fill="#e8f3ff" stroke="#4a90e2" stroke-width="2"/>
+    <text x="145" y="150" text-anchor="middle" font-size="14" fill="#333">帧 1 ✓</text>
+
+    <rect x="250" y="95" width="150" height="100" rx="6" fill="#e8f3ff" stroke="#4a90e2" stroke-width="2"/>
+    <text x="325" y="150" text-anchor="middle" font-size="14" fill="#333">帧 2 ✓</text>
+
+    <rect x="430" y="95" width="150" height="100" rx="6" fill="#fdecec" stroke="#d9534f" stroke-width="3"/>
+    <text x="505" y="140" text-anchor="middle" font-size="14" fill="#333">帧 3 ✗ logo 失真</text>
+
+    <rect x="610" y="95" width="150" height="100" rx="6" fill="#fdecec" stroke="#d9534f" stroke-width="3"/>
+    <text x="685" y="140" text-anchor="middle" font-size="14" fill="#333">帧 4 ✗ 发色漂移</text>
+  </g>
+
+  <!-- MLLM judge -->
+  <rect x="250" y="240" width="400" height="90" rx="10" fill="#fff4d6" stroke="#e0a020" stroke-width="2"/>
+  <text x="450" y="270" text-anchor="middle" font-size="16" font-weight="700" fill="#8a5a00">MLLM 序列评审</text>
+  <text x="450" y="293" text-anchor="middle" font-size="12" fill="#6b4500">角色一致 · 产品一致 · 环境连贯 · 画面叙事</text>
+  <text x="450" y="313" text-anchor="middle" font-size="12" fill="#6b4500">定位问题帧并给出改写 prompt</text>
+
+  <!-- arrows frames -> judge -->
+  <line x1="145" y1="195" x2="360" y2="240" stroke="#888" stroke-width="1.5" marker-end="url(#ar)"/>
+  <line x1="325" y1="195" x2="415" y2="240" stroke="#888" stroke-width="1.5" marker-end="url(#ar)"/>
+  <line x1="505" y1="195" x2="485" y2="240" stroke="#888" stroke-width="1.5" marker-end="url(#ar)"/>
+  <line x1="685" y1="195" x2="540" y2="240" stroke="#888" stroke-width="1.5" marker-end="url(#ar)"/>
+
+  <!-- outputs -->
+  <rect x="80" y="410" width="300" height="100" rx="8" fill="#e8f7ec" stroke="#3aa757" stroke-width="2"/>
+  <text x="230" y="442" text-anchor="middle" font-size="15" font-weight="700" fill="#1f6b35">保留合格帧（帧 1, 帧 2）</text>
+  <text x="230" y="466" text-anchor="middle" font-size="12" fill="#1f6b35">原画面不动</text>
+  <text x="230" y="486" text-anchor="middle" font-size="12" fill="#1f6b35">省算力，避免把好帧改坏</text>
+
+  <rect x="520" y="410" width="300" height="100" rx="8" fill="#fdecec" stroke="#d9534f" stroke-width="2"/>
+  <text x="670" y="442" text-anchor="middle" font-size="15" font-weight="700" fill="#a02828">只重画坏帧（帧 3, 帧 4）</text>
+  <text x="670" y="466" text-anchor="middle" font-size="12" fill="#a02828">按 MLLM 建议重生成</text>
+  <text x="670" y="486" text-anchor="middle" font-size="12" fill="#a02828">再次序列评审，通过才放行</text>
+
+  <!-- arrows judge -> outputs -->
+  <line x1="370" y1="330" x2="260" y2="410" stroke="#3aa757" stroke-width="2" marker-end="url(#arGreen)"/>
+  <line x1="530" y1="330" x2="640" y2="410" stroke="#d9534f" stroke-width="2" marker-end="url(#arRed)"/>
+
+  <!-- loop back: regen -> judge again -->
+  <path d="M 820 410 Q 870 360 820 310 L 660 310" fill="none" stroke="#d9534f" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arRed)"/>
+  <text x="845" y="360" text-anchor="middle" font-size="11" fill="#a02828">回到评审</text>
+
+  <!-- bottom note -->
+  <text x="450" y="560" text-anchor="middle" font-size="13" fill="#555">消融：去掉关键帧反思，视觉保真度 VAF 下降约 10 分</text>
+</svg>

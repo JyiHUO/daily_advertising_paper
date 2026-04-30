@@ -4,18 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-04-28
+- **日期**：2026-04-29
 - **分类**：cs.IR + cs.AI + cs.LG + cs.CL
-- **候选论文数**：15
+- **候选论文数**：13
 - **必读论文**：
-  - Follow the TRACE: Exploiting Post-Click Trajectories for Online Delayed Conversion Rate Prediction
-  - CS3: Efficient Online Capability Synergy for Two-Tower Recommendation
-- **日报路径**：[2026-04-28/daily_report.md](2026-04-28/daily_report.md)
+  - Break the Inaccessible Boundary: Distilling Post-Conversion Content for User Retention Modeling
+  - Co-Director: Agentic Generative Video Storytelling
+- **日报路径**：[2026-04-29/daily_report.md](2026-04-29/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-04-29 | cs.IR + cs.AI + cs.LG + cs.CL | 13 | 1 | Break the Inaccessible Boundary: Distilling Post-Conversion Content for User Retention Modeling | [2026-04-29/daily_report.md](2026-04-29/daily_report.md) |
+|  |  |  | 2 | Co-Director: Agentic Generative Video Storytelling |  |
 | 2026-04-28 | cs.IR + cs.AI + cs.LG + cs.CL | 15 | 1 | Follow the TRACE: Exploiting Post-Click Trajectories for Online Delayed Conversion Rate Prediction | [2026-04-28/daily_report.md](2026-04-28/daily_report.md) |
 |  |  |  | 2 | CS3: Efficient Online Capability Synergy for Two-Tower Recommendation |  |
 | 2026-04-27 | cs.IR + cs.AI + cs.LG + cs.CL | 4 | 1 | ReCast: Recasting Learning Signals for Reinforcement Learning in Generative Recommendation | [2026-04-27/daily_report.md](2026-04-27/daily_report.md) |

@@ -1,0 +1,19 @@
+{
+  "date": "2026-04-29",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL"
+  ],
+  "candidate_count": 13,
+  "supplementary_count": 3,
+  "focus_titles": [
+    "Break the Inaccessible Boundary: Distilling Post-Conversion Content for User Retention Modeling",
+    "Co-Director: Agentic Generative Video Storytelling"
+  ],
+  "focus_status": {
+    "Break the Inaccessible Boundary: Distilling Post-Conversion Content for User Retention Modeling": "completed",
+    "Co-Director: Agentic Generative Video Storytelling": "completed"
+  }
+}
