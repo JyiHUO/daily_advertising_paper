@@ -1,0 +1,61 @@
+<svg height="600" width="900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="-apple-system,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a9d5f"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#222">Thompson 探索加成：把边缘用户推过阈值</text>
+  <text x="450" y="58" text-anchor="middle" font-size="13" fill="#666">HTE 还没学准时，给“去试试”一点推力</text>
+
+  <!-- HTE box -->
+  <rect x="40" y="110" width="200" height="90" rx="10" fill="#eef3fb" stroke="#3a6fb0" stroke-width="2"/>
+  <text x="140" y="140" text-anchor="middle" font-size="15" font-weight="700" fill="#1f3d6b">HTE 估计</text>
+  <text x="140" y="168" text-anchor="middle" font-size="13" fill="#333">τ̂ = 0.001（边缘）</text>
+  <text x="140" y="188" text-anchor="middle" font-size="12" fill="#888">可能被跳过</text>
+
+  <!-- Beta treatment -->
+  <rect x="40" y="260" width="200" height="110" rx="10" fill="#fff4ea" stroke="#d08a3a" stroke-width="2"/>
+  <text x="140" y="285" text-anchor="middle" font-size="14" font-weight="700" fill="#8a4d0f">Beta(处理组) 抽样 0.004</text>
+  <path d="M60 355 Q100 305 140 325 T220 355" fill="none" stroke="#d08a3a" stroke-width="2"/>
+  <circle cx="165" cy="337" r="4" fill="#c0392b"/>
+
+  <!-- Beta control -->
+  <rect x="40" y="400" width="200" height="110" rx="10" fill="#eef7ef" stroke="#3a8a4d" stroke-width="2"/>
+  <text x="140" y="425" text-anchor="middle" font-size="14" font-weight="700" fill="#1f5a2b">Beta(对照组) 抽样 0.002</text>
+  <path d="M60 490 Q100 440 140 460 T220 490" fill="none" stroke="#3a8a4d" stroke-width="2"/>
+  <circle cx="150" cy="462" r="4" fill="#1f5a2b"/>
+
+  <!-- Score combine -->
+  <rect x="350" y="225" width="270" height="170" rx="12" fill="#ffffff" stroke="#333" stroke-width="2"/>
+  <text x="485" y="255" text-anchor="middle" font-size="15" font-weight="700" fill="#222">得分 = τ̂ + η·(T − C)</text>
+  <text x="485" y="290" text-anchor="middle" font-size="13" fill="#555">= 0.001 + 1·(0.004 − 0.002)</text>
+  <text x="485" y="315" text-anchor="middle" font-size="13" fill="#555">= 0.001 + <tspan fill="#2a9d5f" font-weight="700">0.002</tspan></text>
+  <text x="485" y="352" text-anchor="middle" font-size="18" font-weight="800" fill="#c0392b">= 0.003</text>
+  <text x="485" y="378" text-anchor="middle" font-size="11" fill="#888">探索加成把它抬起来</text>
+
+  <!-- Arrows into score box -->
+  <line x1="240" y1="155" x2="348" y2="250" stroke="#333" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="240" y1="315" x2="348" y2="305" stroke="#2a9d5f" stroke-width="2" marker-end="url(#ag)"/>
+  <line x1="240" y1="455" x2="348" y2="355" stroke="#2a9d5f" stroke-width="2" marker-end="url(#ag)"/>
+
+  <!-- Decision -->
+  <rect x="670" y="240" width="190" height="70" rx="10" fill="#2a9d5f" stroke="#1f6d42" stroke-width="2"/>
+  <text x="765" y="270" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">投放 ✓</text>
+  <text x="765" y="293" text-anchor="middle" font-size="11" fill="#e9fbee">并收集新样本回更新 Beta</text>
+
+  <rect x="670" y="325" width="190" height="55" rx="10" fill="#f3f3f3" stroke="#999" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text x="765" y="348" text-anchor="middle" font-size="12" fill="#888">若只看 τ̂ = 0.001</text>
+  <text x="765" y="368" text-anchor="middle" font-size="12" fill="#888">会被跳过 ✗</text>
+
+  <line x1="620" y1="285" x2="668" y2="275" stroke="#333" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- Feedback loop -->
+  <path d="M765 310 C 765 440, 400 540, 140 515" fill="none" stroke="#2a9d5f" stroke-width="1.8" stroke-dasharray="6,4" marker-end="url(#ag)"/>
+  <text x="455" y="500" text-anchor="middle" font-size="11" fill="#2a9d5f">观测转化后更新 Beta 后验（闭环）</text>
+
+  <text x="450" y="560" text-anchor="middle" font-size="12" fill="#666">模型没学好时不过早锁死 —— 给模糊用户一次被探索的机会</text>
+</svg>

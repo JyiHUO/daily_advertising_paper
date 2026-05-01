@@ -1,0 +1,59 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="600" fill="#fafafa"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a1a1a">自适应预算配速阈值</text>
+  <text x="450" y="65" text-anchor="middle" font-size="13" fill="#666">预算压力比 = (剩余预算 / 剩余轮数) 相对总体节奏</text>
+
+  <!-- Pace formula box -->
+  <rect x="270" y="90" width="360" height="76" rx="10" fill="#fff3d6" stroke="#d9a441" stroke-width="2"/>
+  <text x="450" y="118" text-anchor="middle" font-size="15" fill="#333">配速系数 ρ = (剩预算/总预算) ÷ (剩轮数/总轮数)</text>
+  <text x="450" y="144" text-anchor="middle" font-size="14" font-weight="bold" fill="#b36b00">决策：score / cost &gt; λ / ρ 才投放</text>
+
+  <!-- Left scenario: 钱多 -->
+  <g>
+    <rect x="60" y="210" width="320" height="190" rx="12" fill="#e6f4ea" stroke="#2e8b57" stroke-width="2"/>
+    <text x="220" y="238" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a6b3a">ρ &gt; 1  钱花得慢</text>
+    <text x="220" y="262" text-anchor="middle" font-size="13" fill="#2a2a2a">例：剩50%预算，只剩30%轮数</text>
+
+    <rect x="90" y="280" width="260" height="40" rx="6" fill="#fff" stroke="#2e8b57"/>
+    <text x="220" y="305" text-anchor="middle" font-size="13" fill="#1a6b3a">阈值放低 → 大方投放</text>
+
+    <rect x="90" y="332" width="260" height="54" rx="6" fill="#fff" stroke="#2e8b57"/>
+    <text x="220" y="354" text-anchor="middle" font-size="12" fill="#333">中等增量用户也能通过</text>
+    <text x="220" y="374" text-anchor="middle" font-size="12" fill="#333">避免"预算没花完"</text>
+  </g>
+
+  <!-- Right scenario: 钱紧 -->
+  <g>
+    <rect x="520" y="210" width="320" height="190" rx="12" fill="#fde8e8" stroke="#c0392b" stroke-width="2"/>
+    <text x="680" y="238" text-anchor="middle" font-size="16" font-weight="bold" fill="#8b1e15">ρ &lt; 1  钱花得太快</text>
+    <text x="680" y="262" text-anchor="middle" font-size="13" fill="#2a2a2a">例：剩30%预算，还剩50%轮数</text>
+
+    <rect x="550" y="280" width="260" height="40" rx="6" fill="#fff" stroke="#c0392b"/>
+    <text x="680" y="305" text-anchor="middle" font-size="13" fill="#8b1e15">阈值拉高 → 只挑性价比</text>
+
+    <rect x="550" y="332" width="260" height="54" rx="6" fill="#fff" stroke="#c0392b"/>
+    <text x="680" y="354" text-anchor="middle" font-size="12" fill="#333">高增量但贵 (cost=3) 跳过</text>
+    <text x="680" y="374" text-anchor="middle" font-size="12" fill="#333">中增量却便宜 (cost=0.2) 投</text>
+  </g>
+
+  <!-- Arrows from formula to two scenarios -->
+  <path d="M 340 166 Q 280 190 230 210" fill="none" stroke="#333" stroke-width="1.8" marker-end="url(#ar)"/>
+  <path d="M 560 166 Q 620 190 670 210" fill="none" stroke="#333" stroke-width="1.8" marker-end="url(#ar)"/>
+
+  <!-- Bottom: hard constraint -->
+  <rect x="200" y="430" width="500" height="60" rx="10" fill="#222"/>
+  <text x="450" y="457" text-anchor="middle" font-size="14" font-weight="bold" fill="#fff">硬约束：用户成本 &gt; 剩余预算 → 直接不投</text>
+  <text x="450" y="478" text-anchor="middle" font-size="12" fill="#bbb">保证任何时刻不会超支</text>
+
+  <!-- Key insight -->
+  <text x="450" y="530" text-anchor="middle" font-size="13" fill="#555">核心：把"省着花 / 大方花"直接编码进阈值，无需额外调度器</text>
+  <text x="450" y="555" text-anchor="middle" font-size="13" fill="#555">性价比 (score / cost) 取代单纯看增量，小成本用户也能上场</text>
+</svg>

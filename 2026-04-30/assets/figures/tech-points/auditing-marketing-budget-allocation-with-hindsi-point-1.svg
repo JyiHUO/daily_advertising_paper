@@ -1,0 +1,73 @@
+<svg height="640" width="960" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a1a1a">事后后悔 = 上帝重分一次，还能多赚多少？</text>
+
+  <!-- Left: Reality -->
+  <g>
+    <rect x="60" y="70" width="290" height="140" rx="10" fill="#e8eef7" stroke="#4a6fa5" stroke-width="2"/>
+    <text x="205" y="100" text-anchor="middle" font-size="17" font-weight="bold" fill="#2a4977">现实分配</text>
+    <text x="205" y="128" text-anchor="middle" font-size="13" fill="#333">预算 1 亿 → 8 个渠道</text>
+    <text x="205" y="165" text-anchor="middle" font-size="24" font-weight="bold" fill="#2a4977">回报 1.20 亿</text>
+    <text x="205" y="190" text-anchor="middle" font-size="12" fill="#666">（历史日志里真实发生的）</text>
+  </g>
+
+  <!-- Right: Hindsight optimal -->
+  <g>
+    <rect x="550" y="70" width="290" height="140" rx="10" fill="#fff1e0" stroke="#d97706" stroke-width="2"/>
+    <text x="695" y="100" text-anchor="middle" font-size="17" font-weight="bold" fill="#8a4a00">事后最优分配</text>
+    <text x="695" y="128" text-anchor="middle" font-size="13" fill="#333">同预算 + 稳定性 δ=30%</text>
+    <text x="695" y="165" text-anchor="middle" font-size="24" font-weight="bold" fill="#8a4a00">回报 1.32 亿</text>
+    <text x="695" y="190" text-anchor="middle" font-size="12" fill="#666">（花费-回报曲线反推）</text>
+  </g>
+
+  <!-- Minus -->
+  <text x="450" y="150" text-anchor="middle" font-size="44" font-weight="bold" fill="#333">−</text>
+
+  <!-- Arrows to regret box -->
+  <line x1="260" y1="210" x2="350" y2="260" stroke="#333" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="640" y1="210" x2="550" y2="260" stroke="#333" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- Regret box -->
+  <g>
+    <rect x="310" y="260" width="280" height="90" rx="10" fill="#ffe4e4" stroke="#c0392b" stroke-width="2.5"/>
+    <text x="450" y="288" text-anchor="middle" font-size="17" font-weight="bold" fill="#7a1d1d">后悔 Regret</text>
+    <text x="450" y="318" text-anchor="middle" font-size="20" font-weight="bold" fill="#c0392b">均值 ≈ 1200 万</text>
+    <text x="450" y="340" text-anchor="middle" font-size="12" fill="#555">（随机变量，不是一个数）</text>
+  </g>
+
+  <!-- Arrows from regret box down to the two lower panels -->
+  <line x1="400" y1="350" x2="260" y2="400" stroke="#333" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="500" y1="350" x2="640" y2="400" stroke="#333" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- Distribution visual -->
+  <g transform="translate(60,400)">
+    <rect x="0" y="0" width="380" height="175" rx="10" fill="#fafafa" stroke="#999" stroke-width="1.5"/>
+    <text x="190" y="22" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">后悔分布</text>
+    <!-- axis -->
+    <line x1="20" y1="130" x2="360" y2="130" stroke="#555" stroke-width="1.5"/>
+    <line x1="130" y1="55" x2="130" y2="140" stroke="#888" stroke-width="1" stroke-dasharray="4,3"/>
+    <text x="130" y="155" text-anchor="middle" font-size="11" fill="#666">0</text>
+
+    <!-- Bell curve -->
+    <path d="M 25,130 Q 95,128 145,95 Q 195,55 235,65 Q 285,82 335,125 L 355,130 Z"
+          fill="#c0392b" fill-opacity="0.35" stroke="#c0392b" stroke-width="2"/>
+    <text x="240" y="90" font-size="13" font-weight="bold" fill="#7a1d1d">P(后悔&gt;0) = 75%</text>
+    <text x="60" y="120" font-size="11" fill="#555">没赚到</text>
+    <text x="260" y="145" font-size="11" fill="#7a1d1d">本可多赚</text>
+  </g>
+
+  <!-- Right side: certification -->
+  <g transform="translate(470,400)">
+    <rect x="0" y="0" width="380" height="175" rx="10" fill="#eaf7ea" stroke="#2e7d32" stroke-width="2"/>
+    <text x="190" y="28" text-anchor="middle" font-size="15" font-weight="bold" fill="#1b5e20">可认证的改进空间</text>
+    <text x="20" y="62" font-size="13" fill="#333">• 稳定性 δ：相邻期预算可变 ±30%</text>
+    <text x="20" y="90" font-size="13" fill="#333">• 置信门槛：P(后悔&gt;0) ≥ ε</text>
+    <text x="20" y="118" font-size="13" fill="#333">• 在候选 δ 中，挑期望后悔最大者</text>
+    <text x="190" y="152" text-anchor="middle" font-size="13" font-style="italic" fill="#1b5e20">→ 报告："约 10% 可认证提升"</text>
+  </g>
+</svg>

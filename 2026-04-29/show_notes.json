@@ -1,0 +1,9 @@
+{
+  "title": "AI计算广告论文播报｜0429 用未来行为蒸馏出价模型与Agent自动拍广告片",
+  "shownotes_html": "<p>今天这期围绕一个核心判断展开：广告系统的下一个胜负手，正在从\"更好的打分模型\"迁移到\"更好的表示\"——谁能合法地扩大决策时刻可用的信息边界，谁就多赢一点。</p><p><strong>本期重点</strong></p><ul><li><strong>打破不可见边界：后转化内容蒸馏留存模型（Break the Inaccessible Boundary）</strong>——RTB 拉活场景下，用户回流后看了什么视频是预测留存最强的信号，但出价时根本拿不到。论文用两阶段蒸馏，先让 teacher 作弊看未来，再把\"感觉\"偷渡给只看可观测特征的 student，线上再激活设备数和 LT30 均有显著提升。对所有\"决策早于消费\"的广告场景都可迁移。</li><li><strong>Co-Director：Agent 驱动的广告视频叙事生成（Co-Director: Agentic Generative Video Storytelling）</strong>——把创意方向拆成三条正交轴（卖点策略/叙事模式/视觉风格），用多臂老虎机+分维度奖励自动探索最优组合；分层 agent 统一 prompt 解决语义漂移和身份跑偏。还提出了专门面向广告的评测基准 GenAD-Bench，对做 AIGC 广告素材和 DCO 的团队很有参考价值。</li><li><strong>从局部下标到全局标识：生成式重排（From Local Indices to Global Identifiers）</strong>——指出传统 list-wise 重排的隐蔽问题：模型对 item 本身缺乏稳定理解。把重排改成全局 item 空间的自回归生成，让排序能跳出召回给的候选小盒子。</li><li><strong>版本化延迟物化：超长序列训练基础设施（Versioned Late Materialization）</strong>——工业级 DLRM 超长用户行为序列训练的存储/IO 瓶颈被显式攻破，与广告排序模型训练链路高度同构。</li></ul><p><strong>今日趋势</strong></p><ul><li>表示学习仍是隐性主战场：无论是生成式召回排序统一、后转化行为蒸馏，还是跨域冷启动，改进点几乎都落在\"怎么把东西编码得更好\"这一层。</li><li>Agent 方向从\"跑起来\"转向可观测性、失败恢复与安全审计，工具调用场景开始正式讨论合规边界。</li></ul><p>📎 今日论文归档与完整日报：<a href=\"https://github.com/JyiHUO/daily_advertising_paper/blob/main/2026-04-29/daily_report.md\">GitHub 归档</a></p><p>本期内容由 AI 自动生成，如有疏漏欢迎留言指正交流。</p>",
+  "report_date": "2026-04-29",
+  "provider": "bedrock-opus",
+  "archive_url": "https://github.com/JyiHUO/daily_advertising_paper/blob/main/2026-04-29/daily_report.md",
+  "fallback": false,
+  "generated_at": "2026-04-30T02:53:02Z"
+}

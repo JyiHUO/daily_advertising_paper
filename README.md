@@ -4,18 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-04-29
+- **日期**：2026-04-30
 - **分类**：cs.IR + cs.AI + cs.LG + cs.CL
-- **候选论文数**：13
+- **候选论文数**：12
 - **必读论文**：
-  - Break the Inaccessible Boundary: Distilling Post-Conversion Content for User Retention Modeling
-  - Co-Director: Agentic Generative Video Storytelling
-- **日报路径**：[2026-04-29/daily_report.md](2026-04-29/daily_report.md)
+  - Budget-Constrained Causal Bandits: Bridging Uplift Modeling and Sequential Decision-Making
+  - Auditing Marketing Budget Allocation with Hindsight Regret
+- **日报路径**：[2026-04-30/daily_report.md](2026-04-30/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-04-30 | cs.IR + cs.AI + cs.LG + cs.CL | 12 | 1 | Budget-Constrained Causal Bandits: Bridging Uplift Modeling and Sequential Decision-Making | [2026-04-30/daily_report.md](2026-04-30/daily_report.md) |
+|  |  |  | 2 | Auditing Marketing Budget Allocation with Hindsight Regret |  |
 | 2026-04-29 | cs.IR + cs.AI + cs.LG + cs.CL | 13 | 1 | Break the Inaccessible Boundary: Distilling Post-Conversion Content for User Retention Modeling | [2026-04-29/daily_report.md](2026-04-29/daily_report.md) |
 |  |  |  | 2 | Co-Director: Agentic Generative Video Storytelling |  |
 | 2026-04-28 | cs.IR + cs.AI + cs.LG + cs.CL | 15 | 1 | Follow the TRACE: Exploiting Post-Click Trajectories for Online Delayed Conversion Rate Prediction | [2026-04-28/daily_report.md](2026-04-28/daily_report.md) |

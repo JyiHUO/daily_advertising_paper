@@ -1,0 +1,19 @@
+{
+  "date": "2026-04-30",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL"
+  ],
+  "candidate_count": 12,
+  "supplementary_count": 2,
+  "focus_titles": [
+    "Budget-Constrained Causal Bandits: Bridging Uplift Modeling and Sequential Decision-Making",
+    "Auditing Marketing Budget Allocation with Hindsight Regret"
+  ],
+  "focus_status": {
+    "Budget-Constrained Causal Bandits: Bridging Uplift Modeling and Sequential Decision-Making": "completed",
+    "Auditing Marketing Budget Allocation with Hindsight Regret": "completed"
+  }
+}

@@ -1,0 +1,73 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#b5433f"/>
+    </marker>
+    <linearGradient id="coreBand" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#4a90e2" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#4a90e2" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="outBand" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#d9534f" stop-opacity="0.28"/>
+      <stop offset="1" stop-color="#d9534f" stop-opacity="0.04"/>
+    </linearGradient>
+  </defs>
+
+  <text x="450" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#222">花费–回报曲线：灰盒建模</text>
+  <text x="450" y="58" text-anchor="middle" font-size="13" fill="#666">饱和主干 + GP 偏差/方差；外推区自动"承认不知道"</text>
+
+  <g transform="translate(70,90)">
+    <line x1="0" y1="360" x2="720" y2="360" stroke="#333" stroke-width="1.5"/>
+    <line x1="0" y1="360" x2="0" y2="20" stroke="#333" stroke-width="1.5"/>
+    <text x="720" y="385" font-size="12" fill="#333">花费 s</text>
+    <text x="-8" y="18" text-anchor="end" font-size="12" fill="#333">回报</text>
+
+    <rect x="140" y="20" width="200" height="340" fill="#eaf3fc" opacity="0.6"/>
+    <rect x="340" y="20" width="380" height="340" fill="#fdecea" opacity="0.5"/>
+
+    <path d="M140,245 Q240,155 340,115 L340,135 Q240,175 140,265 Z" fill="url(#coreBand)"/>
+    <path d="M340,115 Q500,90 720,80 L720,180 Q500,160 340,135 Z" fill="url(#outBand)"/>
+
+    <path d="M0,360 Q70,330 140,255 Q240,165 340,125 L720,125"
+          fill="none" stroke="#222" stroke-width="2.5"/>
+
+    <g fill="#1f5fa8">
+      <circle cx="155" cy="252" r="3.5"/>
+      <circle cx="180" cy="235" r="3.5"/>
+      <circle cx="205" cy="215" r="3.5"/>
+      <circle cx="230" cy="198" r="3.5"/>
+      <circle cx="255" cy="180" r="3.5"/>
+      <circle cx="280" cy="162" r="3.5"/>
+      <circle cx="305" cy="145" r="3.5"/>
+      <circle cx="330" cy="132" r="3.5"/>
+    </g>
+    <g fill="#999" opacity="0.8">
+      <circle cx="120" cy="278" r="3"/>
+      <circle cx="160" cy="245" r="3"/>
+      <circle cx="210" cy="220" r="3"/>
+      <circle cx="270" cy="175" r="3"/>
+      <circle cx="320" cy="140" r="3"/>
+    </g>
+
+    <line x1="140" y1="20" x2="140" y2="360" stroke="#4a90e2" stroke-dasharray="4,3" stroke-width="1"/>
+    <line x1="340" y1="20" x2="340" y2="360" stroke="#4a90e2" stroke-dasharray="4,3" stroke-width="1"/>
+
+    <text x="240" y="42" text-anchor="middle" font-size="13" font-weight="600" fill="#1f5fa8">实际花费区间（自信 · 窄置信带）</text>
+    <text x="530" y="42" text-anchor="middle" font-size="13" font-weight="600" fill="#b5433f">外推区（等距回归压平 · 方差放大）</text>
+
+    <g transform="translate(430,320)" font-size="12" fill="#333">
+      <circle cx="0" cy="0" r="3.5" fill="#1f5fa8"/>
+      <text x="10" y="4">本期数据</text>
+      <circle cx="110" cy="0" r="3" fill="#999"/>
+      <text x="120" y="4">相邻期（弱权重）</text>
+    </g>
+
+    <path d="M400,112 L650,92" stroke="#b5433f" stroke-width="1.4" fill="none" marker-end="url(#arr)"/>
+    <text x="525" y="82" text-anchor="middle" font-size="11" fill="#b5433f">越远越"不知道"</text>
+  </g>
+
+  <g transform="translate(70,495)">
+    <rect x="0" y="0" width="760" height="44" rx="8" fill="#222"/>
+    <text x="380" y="28" text-anchor="middle" font-size="13" fill="#fff">钱挪到没花过的量级 → 均值被压平 + 方差放大 → 后悔分布自动变宽，乐观方案被淘汰</text>
+  </g>
+</svg>

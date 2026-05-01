@@ -1,0 +1,117 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-30/downloaded_pdfs/budget-constrained-causal-bandits-bridging-uplift-modeling-and-sequential-decisi.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-30/assets/figure_candidates/budget-constrained-causal-bandits-bridging-uplift-modeling-and-sequential-decisi",
+  "candidates": [
+    {
+      "id": "page-7-block-4",
+      "page_index": 7,
+      "caption": "Figure 1: (a) Conversions versus budget for all online methods. BCCB (purple) achieves the strongest performance at $8,000 budget. (b) Conversions across dataset scales. BCCB achieves the highest conversions at 100K and 1.4M users while HTE Greedy is highly inconsistent across scales.",
+      "clip": [
+        94.65499877929688,
+        160.24375915527344,
+        514.8589782714844,
+        335.3789978027344
+      ],
+      "clip_area": 73592.52422897704,
+      "page_area": 484704.0,
+      "text_density": 0.04878002003997509,
+      "kind": "image_block_with_caption",
+      "score": 19.8176947136553,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-30/assets/figure_candidates/budget-constrained-causal-bandits-bridging-uplift-modeling-and-sequential-decisi/01-p8-image_block_with_caption.png",
+      "filename": "01-p8-image_block_with_caption.png"
+    },
+    {
+      "id": "page-7-embedded-0-0",
+      "page_index": 7,
+      "caption": "Figure 1: (a) Conversions versus budget for all online methods. BCCB (purple) achieves the strongest performance at $8,000 budget. (b) Conversions across dataset scales. BCCB achieves the highest conversions at 100K and 1.4M users while HTE Greedy is highly inconsistent across scales.",
+      "clip": [
+        104.65499877929688,
+        166.24375915527344,
+        504.8589782714844,
+        329.3789978027344
+      ],
+      "clip_area": 65287.37170212157,
+      "page_area": 484704.0,
+      "text_density": 0.009684123897405672,
+      "kind": "embedded_image_with_caption",
+      "xref": 300,
+      "score": 18.725415241134684,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-30/assets/figure_candidates/budget-constrained-causal-bandits-bridging-uplift-modeling-and-sequential-decisi/02-p8-embedded_image_with_caption.png",
+      "filename": "02-p8-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-8-block-4",
+      "page_index": 8,
+      "caption": "Figure 2: (a) Data-efficiency crossover between offline and online methods. Below 2,000 historical observations, offline methods fail entirely. BCCB operates from the first user. (b) Performance stability measured by coefficient of variation. BCCB is 3–5 × more stable than offline methods across all training data sizes.",
+      "clip": [
+        94.65499877929688,
+        183.40765380859375,
+        514.8423156738281,
+        357.15301513671875
+      ],
+      "clip_area": 73005.5971993357,
+      "page_area": 484704.0,
+      "text_density": 0.04376330417780941,
+      "kind": "image_block_with_caption",
+      "score": 6.811173302214841,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-30/assets/figure_candidates/budget-constrained-causal-bandits-bridging-uplift-modeling-and-sequential-decisi/03-p9-image_block_with_caption.png",
+      "filename": "03-p9-image_block_with_caption.png"
+    },
+    {
+      "id": "page-8-embedded-0-0",
+      "page_index": 8,
+      "caption": "Figure 2: (a) Data-efficiency crossover between offline and online methods. Below 2,000 historical observations, offline methods fail entirely. BCCB operates from the first user. (b) Performance stability measured by coefficient of variation. BCCB is 3–5 × more stable than offline methods across all training data sizes.",
+      "clip": [
+        104.65499877929688,
+        189.40765380859375,
+        504.8423156738281,
+        351.15301513671875
+      ],
+      "clip_area": 64728.44217003882,
+      "page_area": 484704.0,
+      "text_density": 0.01032472772640073,
+      "kind": "embedded_image_with_caption",
+      "xref": 301,
+      "score": 5.719204913000431,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-30/assets/figure_candidates/budget-constrained-causal-bandits-bridging-uplift-modeling-and-sequential-decisi/04-p9-embedded_image_with_caption.png",
+      "filename": "04-p9-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-8-block-9",
+      "page_index": 8,
+      "caption": "Figure 2 highlights a practically important but often overlooked property: the stability of algorithm performance across repeated runs. BCCB exhibits standard deviations of 7–13 conversions across all experimental conditions, while offline methods exhibit standard deviations of 35–65. This represents a 3–5 × difference in performance variability.",
+      "clip": [
+        77.4,
+        244.7106201171875,
+        534.6008850097656,
+        553.5106201171875
+      ],
+      "clip_area": 141183.63329101563,
+      "page_area": 484704.0,
+      "text_density": 0.39552645575293005,
+      "kind": "captioned_figure",
+      "score": -8.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-30/assets/figure_candidates/budget-constrained-causal-bandits-bridging-uplift-modeling-and-sequential-decisi/05-p9-captioned_figure.png",
+      "filename": "05-p9-captioned_figure.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.4022616769542786,
+      "score": -11.09083328,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-30/assets/figure_candidates/budget-constrained-causal-bandits-bridging-uplift-modeling-and-sequential-decisi/06-p1-layout_region_left_top.png",
+      "filename": "06-p1-layout_region_left_top.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-30/assets/figure_candidates/budget-constrained-causal-bandits-bridging-uplift-modeling-and-sequential-decisi/contact-sheet.svg"
+}

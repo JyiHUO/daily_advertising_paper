@@ -1,0 +1,119 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-30/downloaded_pdfs/auditing-marketing-budget-allocation-with-hindsight-regret.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-30/assets/figure_candidates/auditing-marketing-budget-allocation-with-hindsight-regret",
+  "candidates": [
+    {
+      "id": "page-3-drawing-caption-14",
+      "page_index": 3,
+      "caption": "Figure 1: Monotone grey-box spend–response estimation under bounded temporal drift. Current-period observations define the core realized spend range (blue), while adjacent periods (grey) provide weakly weighted curvature information. Posterior uncertainty widens outside the core range to reflect increased epistemic risk.",
+      "clip": [
+        35.79800033569336,
+        198.9344024658203,
+        312.03887939453125,
+        311.2909851074219
+      ],
+      "clip_area": 31037.481156962982,
+      "page_area": 484704.0,
+      "text_density": 0.0679372712235943,
+      "kind": "drawing_cluster_with_caption",
+      "score": 28.344860901744035,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-30/assets/figure_candidates/auditing-marketing-budget-allocation-with-hindsight-regret/01-p4-drawing_cluster_with_caption.png",
+      "filename": "01-p4-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-4-embedded-0-0",
+      "page_index": 4,
+      "caption": "Figure 2: Monte Carlo regret (lift) distributions under alternative stability constraints. Each violin summarizes posterior lift relative to the realized allocation across portfolio–horizon pairs. Increasing flexibility expands the feasible set but does not guarantee monotone improvements in uncertainty-aware lift.",
+      "clip": [
+        41.79800033569336,
+        71.68385314941406,
+        227.2138671875,
+        184.68499755859375
+      ],
+      "clip_area": 20952.205145874235,
+      "page_area": 484704.0,
+      "text_density": 0.012098849245306376,
+      "kind": "embedded_image_with_caption",
+      "xref": 144,
+      "score": 27.2328022793986,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-30/assets/figure_candidates/auditing-marketing-budget-allocation-with-hindsight-regret/02-p5-embedded_image_with_caption.png",
+      "filename": "02-p5-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-4-embedded-1-0",
+      "page_index": 4,
+      "caption": "Figure 2: Monte Carlo regret (lift) distributions under alternative stability constraints. Each violin summarizes posterior lift relative to the realized allocation across portfolio–horizon pairs. Increasing flexibility expands the feasible set but does not guarantee monotone improvements in uncertainty-aware lift.",
+      "clip": [
+        213.29400634765625,
+        71.68385314941406,
+        398.7098693847656,
+        184.68499755859375
+      ],
+      "clip_area": 20952.20471480908,
+      "page_area": 484704.0,
+      "text_density": 0.01223932353849456,
+      "kind": "embedded_image_with_caption",
+      "xref": 145,
+      "score": 27.23280227460899,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-30/assets/figure_candidates/auditing-marketing-budget-allocation-with-hindsight-regret/03-p5-embedded_image_with_caption.png",
+      "filename": "03-p5-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-4-embedded-2-0",
+      "page_index": 4,
+      "caption": "Figure 2: Monte Carlo regret (lift) distributions under alternative stability constraints. Each violin summarizes posterior lift relative to the realized allocation across portfolio–horizon pairs. Increasing flexibility expands the feasible set but does not guarantee monotone improvements in uncertainty-aware lift.",
+      "clip": [
+        384.78900146484375,
+        71.68385314941406,
+        570.204833984375,
+        184.68499755859375
+      ],
+      "clip_area": 20952.201266287826,
+      "page_area": 484704.0,
+      "text_density": 0.014752294681812666,
+      "kind": "embedded_image_with_caption",
+      "xref": 146,
+      "score": 27.232802236292088,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-30/assets/figure_candidates/auditing-marketing-budget-allocation-with-hindsight-regret/04-p5-embedded_image_with_caption.png",
+      "filename": "04-p5-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-3-drawing-cluster-0",
+      "page_index": 3,
+      "caption": "第 4 页矢量图主图候选",
+      "clip": [
+        37.79800033569336,
+        200.9344024658203,
+        310.03887939453125,
+        309.2909851074219
+      ],
+      "clip_area": 29499.091310161224,
+      "page_area": 484704.0,
+      "text_density": 0.055191640161177856,
+      "kind": "drawing_cluster",
+      "score": 10.327767681224014,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-30/assets/figure_candidates/auditing-marketing-budget-allocation-with-hindsight-regret/05-p4-drawing_cluster.png",
+      "filename": "05-p4-drawing_cluster.png"
+    },
+    {
+      "id": "page-5-embedded-1-0",
+      "page_index": 5,
+      "caption": "Figure 3: Ablation of stability for three portfolios and horizons. Mean lift (dashed line) and lift distributions are shown as a function of allowable inter-epoch change 𝛿 . Checkmarks denote 𝑃 ( Lift > 0 ) ≥ 0 . 8 . Gains typically concentrate at moderate flexibility and saturate thereafter.",
+      "clip": [
+        213.29400634765625,
+        71.68509674072266,
+        398.70745849609375,
+        184.6729736328125
+      ],
+      "clip_area": 20949.472305485047,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 148,
+      "score": -0.7672280854946105,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-30/assets/figure_candidates/auditing-marketing-budget-allocation-with-hindsight-regret/06-p6-embedded_image_with_caption.png",
+      "filename": "06-p6-embedded_image_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-04-30/assets/figure_candidates/auditing-marketing-budget-allocation-with-hindsight-regret/contact-sheet.svg"
+}

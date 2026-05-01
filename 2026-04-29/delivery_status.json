@@ -1,4 +1,13 @@
 {
   "feishu": "completed",
-  "wecom": "completed"
+  "wecom": "completed",
+  "xiaoyuzhou": "completed",
+  "xiaoyuzhou_result": {
+    "eid": "69f38d2b5c60a99573fee4f9",
+    "pid": "680e3c27d6274e74a99e502f",
+    "title": "AI计算广告论文播报｜0429 用未来行为蒸馏出价模型与Agent自动拍广告片",
+    "audio_url": "https://media.xyzcdn.net/lspDy41xjQYCb1Mg92WoYotixY4d.mp3",
+    "review_status": "PENDING",
+    "status": "INITIALIZED"
+  }
 }
