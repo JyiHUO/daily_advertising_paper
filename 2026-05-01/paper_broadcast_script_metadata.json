@@ -1,0 +1,13 @@
+{
+  "report_date": "2026-05-01",
+  "provider": "bedrock-opus-47",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 3015,
+  "focus_titles": [
+    "Learning to Spend: Model Predictive Control for Budgeting under Non-Stationary Returns",
+    "AgenticRecTune: Multi-Agent with Self-Evolving Skillhub for Recommendation System Optimization"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Steve"
+}
