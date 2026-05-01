@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-01/downloaded_pdfs/agenticrectune-multi-agent-with-self-evolving-skillhub-for-recommendation-system.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-01/assets/figure_candidates/agenticrectune-multi-agent-with-self-evolving-skillhub-for-recommendation-system",
+  "candidates": [
+    {
+      "id": "page-3-block-22",
+      "page_index": 3,
+      "caption": "To solve this issue, we propose the AgenticRecTune framework to manage and optimize the system configurations based on the reasoning ability of LLM as shown in Figure 1.",
+      "clip": [
+        287.3549865722656,
+        155.94261474609374,
+        589.0337158203125,
+        464.74261474609375
+      ],
+      "clip_area": 93158.3915917969,
+      "page_area": 484704.0,
+      "text_density": 0.5938999780963298,
+      "kind": "captioned_figure",
+      "score": 37.03509323990885,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-01/assets/figure_candidates/agenticrectune-multi-agent-with-self-evolving-skillhub-for-recommendation-system/01-p4-captioned_figure.png",
+      "filename": "01-p4-captioned_figure.png"
+    },
+    {
+      "id": "page-4-block-2",
+      "page_index": 4,
+      "caption": "Figure 2: Actor Agent Prompt",
+      "clip": [
+        31.79800033569336,
+        65.68759155273438,
+        316.0443115234375,
+        438.32598876953125
+      ],
+      "clip_area": 105921.08981578785,
+      "page_area": 484704.0,
+      "text_density": 0.014356230882836307,
+      "kind": "image_block_with_caption",
+      "score": 22.176900997953197,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-01/assets/figure_candidates/agenticrectune-multi-agent-with-self-evolving-skillhub-for-recommendation-system/02-p5-image_block_with_caption.png",
+      "filename": "02-p5-image_block_with_caption.png"
+    },
+    {
+      "id": "page-4-embedded-0-0",
+      "page_index": 4,
+      "caption": "Figure 2: Actor Agent Prompt",
+      "clip": [
+        41.79800033569336,
+        71.68759155273438,
+        306.0443115234375,
+        432.32598876953125
+      ],
+      "clip_area": 95297.36613719899,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 243,
+      "score": 21.058859623746656,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-01/assets/figure_candidates/agenticrectune-multi-agent-with-self-evolving-skillhub-for-recommendation-system/03-p5-embedded_image_with_caption.png",
+      "filename": "03-p5-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-4-embedded-1-0",
+      "page_index": 4,
+      "caption": "Figure 3: Critic Agent Prompt",
+      "clip": [
+        305.9549865722656,
+        71.68704223632812,
+        570.2066650390625,
+        448.4179992675781
+      ],
+      "clip_area": 99551.78772591054,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 244,
+      "score": 17.106130974732338,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-01/assets/figure_candidates/agenticrectune-multi-agent-with-self-evolving-skillhub-for-recommendation-system/04-p5-embedded_image_with_caption.png",
+      "filename": "04-p5-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-4-block-8",
+      "page_index": 4,
+      "caption": "Figure 3: Critic Agent Prompt",
+      "clip": [
+        295.9549865722656,
+        65.68704223632812,
+        580.2066650390625,
+        454.4179992675781
+      ],
+      "clip_area": 110497.4270081371,
+      "page_area": 484704.0,
+      "text_density": 0.013786909273509437,
+      "kind": "image_block_with_caption",
+      "score": 17.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-01/assets/figure_candidates/agenticrectune-multi-agent-with-self-evolving-skillhub-for-recommendation-system/05-p5-image_block_with_caption.png",
+      "filename": "05-p5-image_block_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-0-0",
+      "page_index": 1,
+      "caption": "第 2 页内嵌图片候选",
+      "clip": [
+        41.79800033569336,
+        71.68533325195312,
+        570.20166015625,
+        241.9940185546875
+      ],
+      "clip_area": 89991.73261319229,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image",
+      "xref": 232,
+      "score": 11.99990814014658,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-01/assets/figure_candidates/agenticrectune-multi-agent-with-self-evolving-skillhub-for-recommendation-system/06-p2-embedded_image.png",
+      "filename": "06-p2-embedded_image.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-01/assets/figure_candidates/agenticrectune-multi-agent-with-self-evolving-skillhub-for-recommendation-system/contact-sheet.svg"
+}

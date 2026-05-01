@@ -1,0 +1,9 @@
+{
+  "title": "AI计算广告论文播报｜04.30 预算决策从事前优化走向事后审计",
+  "shownotes_html": "<p>广告系统的研究重心正在从\"模型有多准\"转向\"决策过程可不可控、可不可审\"。本期聚焦两篇直接针对广告预算决策的论文，一篇解决冷启动期怎么边投边学，另一篇回答年度复盘时怎么量化\"本来还能多赚多少\"——再加一篇对 CTR 模型里 DNN 角色的结构性反思，干货密度很高。</p><p><strong>本期重点</strong></p><ul><li><strong>带预算约束的因果 Bandit（Budget-Constrained Causal Bandits）</strong>：把 uplift 建模、预算配速和探索合成一个在线 bandit，从第一个用户就能边投边学。在 Criteo 数据上，历史数据不足 2000 条时传统离线方法方差爆炸，该方法可将波动压缩到三分之一到五分之一，冷启动场景下非常实用。</li><li><strong>营销预算事后审计（Auditing Marketing Budget Allocation with Hindsight Regret）</strong>：提出\"事后后悔\"指标——在同样预算和运营约束下重分一次最多还能多赚多少，输出的是一条带置信度的分布而非一个点数字。花费-回报曲线建模中\"数据稀疏区主动放大不确定性\"的设计，对 ROI 曲线评估很有借鉴价值。</li><li><strong>特征交互 DNN 的维度坍缩视角（Understanding DNNs in Feature Interaction Models）</strong>：指出 CTR/CVR 模型中 DNN 所谓的\"隐式高阶交互\"往往被表示坍缩吞掉，给排序结构设计提供了一个新的诊断工具——加层之前先看 embedding 有没有塌缩到少数方向。</li></ul><p><strong>今日趋势</strong></p><ul><li>全天 254 篇论文中 LLM 相关超四成，重心继续向检索增强、长上下文服务和 Agent 化应用偏移；真正与广告直接相关的论文不多但高度集中在预算决策线上。</li><li>广告研究正从\"事前怎么优化\"双线扩展到\"过程中在线学\"和\"事后可审计\"，承认完美离线数据和随时 A/B 都不现实。</li></ul><p><strong>今日知识点：Off-Policy Evaluation</strong><br/>OPE 用历史日志加重要性加权，估计一个还没上线的新策略的期望收益。核心是对每条样本算\"新策略选该动作的概率 / 旧策略选它的概率\"作为权重，再加权平均真实回报。广告论文里反复出现的 propensity、IPS、DR 都在回答同一个问题：怎么让昨天的日志告诉你明天的策略值不值得上。</p><p>📄 完整日报与论文列表见：<a href=\"https://github.com/JyiHUO/daily_advertising_paper/blob/main/2026-04-30/daily_report.md\">GitHub 归档</a></p><p>欢迎在评论区留言交流。本期内容由 AI 自动生成并经人工审校，如有疏漏欢迎指正。我们明天见。</p>",
+  "report_date": "2026-04-30",
+  "provider": "bedrock-opus",
+  "archive_url": "https://github.com/JyiHUO/daily_advertising_paper/blob/main/2026-04-30/daily_report.md",
+  "fallback": false,
+  "generated_at": "2026-05-01T13:25:36Z"
+}

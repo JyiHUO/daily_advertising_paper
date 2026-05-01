@@ -1,0 +1,157 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f1630"/>
+      <stop offset="1" stop-color="#1a2148"/>
+    </linearGradient>
+    <linearGradient id="gActor" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5eead4"/><stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+    <linearGradient id="gCritic" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fca5a5"/><stop offset="1" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="gOnline" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#93c5fd"/><stop offset="1" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="gInsight" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fde68a"/><stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="gSkill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d8b4fe"/><stop offset="1" stop-color="#a855f7"/>
+    </linearGradient>
+    <radialGradient id="hub" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fbbf24" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#fbbf24" stop-opacity="0"/>
+    </radialGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#cbd5e1"/>
+    </marker>
+    <marker id="arrW" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#fbbf24"/>
+    </marker>
+    <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3b82f6"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="600" y="44" text-anchor="middle" fill="#f8fafc" font-size="24" font-weight="700">AgenticRecTune：五 Agent 闭环 + 自进化 Skillhub 自动调参</text>
+  <text x="600" y="70" text-anchor="middle" fill="#94a3b8" font-size="14">用 LLM 多智能体在工业推荐多阶段链路里，直接拿线上 A/B 当目标函数</text>
+
+  <!-- Left: Pipeline stages -->
+  <g>
+    <text x="135" y="118" text-anchor="middle" fill="#cbd5e1" font-size="13" font-weight="600">多阶段推荐链路</text>
+    <rect x="60" y="135" width="150" height="44" rx="8" fill="#1e293b" stroke="#475569"/>
+    <text x="135" y="162" text-anchor="middle" fill="#e2e8f0" font-size="13">粗排 Pre-Rank</text>
+    <rect x="60" y="188" width="150" height="44" rx="8" fill="#1e293b" stroke="#475569"/>
+    <text x="135" y="215" text-anchor="middle" fill="#e2e8f0" font-size="13">精排 Rank</text>
+    <rect x="60" y="241" width="150" height="44" rx="8" fill="#1e293b" stroke="#475569"/>
+    <text x="135" y="268" text-anchor="middle" fill="#e2e8f0" font-size="13">重排 Re-Rank</text>
+    <text x="135" y="310" text-anchor="middle" fill="#64748b" font-size="11">融合权重 / 阈值 / TopK</text>
+    <text x="135" y="326" text-anchor="middle" fill="#64748b" font-size="11">不可导 · 模型改版即重调</text>
+  </g>
+
+  <!-- Arrow from pipeline to Actor -->
+  <path d="M215,260 C265,260 295,260 335,260" stroke="#64748b" stroke-width="1.5" fill="none" stroke-dasharray="4 4" marker-end="url(#arr)"/>
+  <text x="275" y="250" text-anchor="middle" fill="#94a3b8" font-size="11">配置待调</text>
+
+  <!-- Skillhub center -->
+  <circle cx="640" cy="400" r="130" fill="url(#hub)"/>
+  <circle cx="640" cy="400" r="78" fill="#1e1b4b" stroke="#fbbf24" stroke-width="2"/>
+  <text x="640" y="388" text-anchor="middle" fill="#fde68a" font-size="16" font-weight="700">Skillhub</text>
+  <text x="640" y="408" text-anchor="middle" fill="#fef3c7" font-size="11">自进化调参手册</text>
+  <text x="640" y="424" text-anchor="middle" fill="#fcd34d" font-size="10">参数定义 · 搜索空间</text>
+  <text x="640" y="438" text-anchor="middle" fill="#fcd34d" font-size="10">领域知识 · 护栏规则</text>
+
+  <!-- Actor -->
+  <g>
+    <rect x="340" y="230" width="150" height="64" rx="12" fill="url(#gActor)"/>
+    <text x="415" y="256" text-anchor="middle" fill="#042f2e" font-size="15" font-weight="700">Actor</text>
+    <text x="415" y="276" text-anchor="middle" fill="#042f2e" font-size="11">生成候选配置</text>
+    <text x="415" y="289" text-anchor="middle" fill="#042f2e" font-size="11">并给出理由</text>
+  </g>
+
+  <!-- Critic -->
+  <g>
+    <rect x="790" y="230" width="150" height="64" rx="12" fill="url(#gCritic)"/>
+    <text x="865" y="256" text-anchor="middle" fill="#450a0a" font-size="15" font-weight="700">Critic</text>
+    <text x="865" y="276" text-anchor="middle" fill="#450a0a" font-size="11">格式 / 空间 / 护栏</text>
+    <text x="865" y="289" text-anchor="middle" fill="#450a0a" font-size="11">筛掉不靠谱提案</text>
+  </g>
+
+  <!-- Online -->
+  <g>
+    <rect x="790" y="500" width="150" height="64" rx="12" fill="url(#gOnline)"/>
+    <text x="865" y="526" text-anchor="middle" fill="#0c1a3a" font-size="15" font-weight="700">Online</text>
+    <text x="865" y="546" text-anchor="middle" fill="#0c1a3a" font-size="11">自动 A/B · 分流量</text>
+    <text x="865" y="559" text-anchor="middle" fill="#0c1a3a" font-size="11">跑到 p &lt; 0.05</text>
+  </g>
+
+  <!-- Insight -->
+  <g>
+    <rect x="565" y="600" width="150" height="64" rx="12" fill="url(#gInsight)"/>
+    <text x="640" y="626" text-anchor="middle" fill="#451a03" font-size="15" font-weight="700">Insight</text>
+    <text x="640" y="646" text-anchor="middle" fill="#451a03" font-size="11">提炼敏感参数</text>
+    <text x="640" y="659" text-anchor="middle" fill="#451a03" font-size="11">跨任务 MapReduce</text>
+  </g>
+
+  <!-- Skill agent -->
+  <g>
+    <rect x="340" y="500" width="150" height="64" rx="12" fill="url(#gSkill)"/>
+    <text x="415" y="526" text-anchor="middle" fill="#2e1065" font-size="15" font-weight="700">Skill</text>
+    <text x="415" y="546" text-anchor="middle" fill="#2e1065" font-size="11">写回领域知识</text>
+    <text x="415" y="559" text-anchor="middle" fill="#2e1065" font-size="11">收紧搜索空间</text>
+  </g>
+
+  <!-- Closed loop arrows: Actor -> Critic -> Online -> Insight -> Skill -> Actor -->
+  <path d="M490,262 L785,262" stroke="#cbd5e1" stroke-width="2.2" fill="none" marker-end="url(#arr)"/>
+  <text x="637" y="253" text-anchor="middle" fill="#e2e8f0" font-size="11">候选集</text>
+
+  <path d="M865,294 L865,495" stroke="#cbd5e1" stroke-width="2.2" fill="none" marker-end="url(#arr)"/>
+  <text x="878" y="400" fill="#e2e8f0" font-size="11">通过审查</text>
+
+  <path d="M790,560 C755,580 730,595 718,600" stroke="#cbd5e1" stroke-width="2.2" fill="none" marker-end="url(#arr)"/>
+  <text x="760" y="595" fill="#e2e8f0" font-size="11">线上指标</text>
+
+  <path d="M565,630 C525,625 500,600 492,568" stroke="#cbd5e1" stroke-width="2.2" fill="none" marker-end="url(#arr)"/>
+  <text x="478" y="615" fill="#e2e8f0" font-size="11">规律</text>
+
+  <path d="M415,500 C375,430 375,370 415,299" stroke="#cbd5e1" stroke-width="2.2" fill="none" marker-end="url(#arr)"/>
+  <text x="300" y="400" fill="#e2e8f0" font-size="11">更聪明的提案</text>
+
+  <!-- Hub read/write arrows (yellow) -->
+  <path d="M560,400 L495,370" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="3 3" fill="none" marker-end="url(#arrW)"/>
+  <path d="M495,520 L570,445" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="3 3" fill="none" marker-end="url(#arrW)"/>
+  <path d="M640,598 L640,482" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="3 3" fill="none" marker-end="url(#arrW)"/>
+
+  <!-- Right side: Online objective panel -->
+  <g>
+    <rect x="990" y="135" width="180" height="210" rx="12" fill="#0b1230" stroke="#334155"/>
+    <text x="1080" y="160" text-anchor="middle" fill="#f1f5f9" font-size="13" font-weight="700">线上即目标函数</text>
+    <line x1="1005" y1="172" x2="1155" y2="172" stroke="#334155"/>
+    <text x="1015" y="195" fill="#5eead4" font-size="12">↑ 北极星</text>
+    <text x="1025" y="213" fill="#cbd5e1" font-size="11">engagement 1 / 2</text>
+    <text x="1015" y="238" fill="#fca5a5" font-size="12">⛔ 护栏</text>
+    <text x="1025" y="256" fill="#cbd5e1" font-size="11">多样性 · 留存 · 成本</text>
+    <text x="1015" y="281" fill="#93c5fd" font-size="12">✓ 显著性</text>
+    <text x="1025" y="299" fill="#cbd5e1" font-size="11">p &lt; 0.05 才保留</text>
+    <text x="1015" y="324" fill="#fde68a" font-size="12">不可导</text>
+    <text x="1025" y="341" fill="#cbd5e1" font-size="11">Pareto 前沿搜索</text>
+  </g>
+
+  <!-- Online arrow from Online agent to this panel -->
+  <path d="M945,500 C985,440 990,360 995,310" stroke="#3b82f6" stroke-width="1.5" stroke-dasharray="4 3" fill="none" marker-end="url(#arrB)"/>
+
+  <!-- Bottom highlight stats -->
+  <g>
+    <rect x="60" y="670" width="1080" height="68" rx="10" fill="#0b1230" stroke="#334155"/>
+    <text x="80" y="697" fill="#94a3b8" font-size="12">消融 · Value-Based Retrieval</text>
+    <text x="80" y="720" fill="#e2e8f0" font-size="13">单 Agent：engagement1 <tspan fill="#fca5a5">+0.29%</tspan>　Actor+Critic：engagement1 <tspan fill="#5eead4" font-weight="700">+0.75%</tspan>，engagement2 <tspan fill="#5eead4" font-weight="700">+0.90%</tspan></text>
+
+    <line x1="720" y1="685" x2="720" y2="725" stroke="#334155"/>
+    <text x="740" y="697" fill="#94a3b8" font-size="12">重排多样性任务</text>
+    <text x="740" y="720" fill="#e2e8f0" font-size="13">多样性 <tspan fill="#5eead4" font-weight="700">+3.43%</tspan> · engagement 双涨 · Google Discover 真实上线</text>
+  </g>
+</svg>

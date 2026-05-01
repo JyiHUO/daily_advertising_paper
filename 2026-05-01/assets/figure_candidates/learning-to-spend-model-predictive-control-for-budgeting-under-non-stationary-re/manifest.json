@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-01/downloaded_pdfs/learning-to-spend-model-predictive-control-for-budgeting-under-non-stationary-re.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-01/assets/figure_candidates/learning-to-spend-model-predictive-control-for-budgeting-under-non-stationary-re",
+  "candidates": [
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.7876369974021965,
+      "score": -11.09083328,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-01/assets/figure_candidates/learning-to-spend-model-predictive-control-for-budgeting-under-non-stationary-re/01-p1-layout_region_left_top.png",
+      "filename": "01-p1-layout_region_left_top.png"
+    },
+    {
+      "id": "page-1-region-upper-left",
+      "page_index": 1,
+      "caption": "第 2 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.6744240333987342,
+      "score": -11.09083328,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-01/assets/figure_candidates/learning-to-spend-model-predictive-control-for-budgeting-under-non-stationary-re/02-p2-layout_region_left_top.png",
+      "filename": "02-p2-layout_region_left_top.png"
+    },
+    {
+      "id": "page-0-region-upper-right",
+      "page_index": 0,
+      "caption": "第 1 页右上区域主图候选",
+      "clip": [
+        318.24,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 82992.7296,
+      "kind": "layout_region_right_top",
+      "page_area": 484704.0,
+      "text_density": 0.8041768622110448,
+      "score": -17.07785856,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-01/assets/figure_candidates/learning-to-spend-model-predictive-control-for-budgeting-under-non-stationary-re/03-p1-layout_region_right_top.png",
+      "filename": "03-p1-layout_region_right_top.png"
+    },
+    {
+      "id": "page-1-region-upper-right",
+      "page_index": 1,
+      "caption": "第 2 页右上区域主图候选",
+      "clip": [
+        318.24,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 82992.7296,
+      "kind": "layout_region_right_top",
+      "page_area": 484704.0,
+      "text_density": 0.6844346469086784,
+      "score": -17.07785856,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-01/assets/figure_candidates/learning-to-spend-model-predictive-control-for-budgeting-under-non-stationary-re/04-p2-layout_region_right_top.png",
+      "filename": "04-p2-layout_region_right_top.png"
+    },
+    {
+      "id": "page-0-region-upper-full",
+      "page_index": 0,
+      "caption": "第 1 页上半页主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 173352.96000000002,
+      "kind": "layout_region_upper_page",
+      "page_area": 484704.0,
+      "text_density": 0.7832271778003782,
+      "score": -22.705882352941174,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-01/assets/figure_candidates/learning-to-spend-model-predictive-control-for-budgeting-under-non-stationary-re/05-p1-layout_region_upper_page.png",
+      "filename": "05-p1-layout_region_upper_page.png"
+    },
+    {
+      "id": "page-1-region-upper-full",
+      "page_index": 1,
+      "caption": "第 2 页上半页主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 173352.96000000002,
+      "kind": "layout_region_upper_page",
+      "page_area": 484704.0,
+      "text_density": 0.668369575711636,
+      "score": -22.705882352941174,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-01/assets/figure_candidates/learning-to-spend-model-predictive-control-for-budgeting-under-non-stationary-re/06-p2-layout_region_upper_page.png",
+      "filename": "06-p2-layout_region_upper_page.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-01/assets/figure_candidates/learning-to-spend-model-predictive-control-for-budgeting-under-non-stationary-re/contact-sheet.svg"
+}

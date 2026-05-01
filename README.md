@@ -4,18 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-04-30
+- **日期**：2026-05-01
 - **分类**：cs.IR + cs.AI + cs.LG + cs.CL
-- **候选论文数**：12
+- **候选论文数**：4
 - **必读论文**：
-  - Budget-Constrained Causal Bandits: Bridging Uplift Modeling and Sequential Decision-Making
-  - Auditing Marketing Budget Allocation with Hindsight Regret
-- **日报路径**：[2026-04-30/daily_report.md](2026-04-30/daily_report.md)
+  - Learning to Spend: Model Predictive Control for Budgeting under Non-Stationary Returns
+  - AgenticRecTune: Multi-Agent with Self-Evolving Skillhub for Recommendation System Optimization
+- **日报路径**：[2026-05-01/daily_report.md](2026-05-01/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-05-01 | cs.IR + cs.AI + cs.LG + cs.CL | 4 | 1 | Learning to Spend: Model Predictive Control for Budgeting under Non-Stationary Returns | [2026-05-01/daily_report.md](2026-05-01/daily_report.md) |
+|  |  |  | 2 | AgenticRecTune: Multi-Agent with Self-Evolving Skillhub for Recommendation System Optimization |  |
 | 2026-04-30 | cs.IR + cs.AI + cs.LG + cs.CL | 12 | 1 | Budget-Constrained Causal Bandits: Bridging Uplift Modeling and Sequential Decision-Making | [2026-04-30/daily_report.md](2026-04-30/daily_report.md) |
 |  |  |  | 2 | Auditing Marketing Budget Allocation with Hindsight Regret |  |
 | 2026-04-29 | cs.IR + cs.AI + cs.LG + cs.CL | 13 | 1 | Break the Inaccessible Boundary: Distilling Post-Conversion Content for User Retention Modeling | [2026-04-29/daily_report.md](2026-04-29/daily_report.md) |

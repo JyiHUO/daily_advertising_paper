@@ -1,0 +1,74 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#444"/>
+    </marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#27864a"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="36" text-anchor="middle" font-size="22" font-weight="700">Actor + Critic  &gt;&gt;  单 Agent</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#666">给 LLM 配一个"杠精"，配置质量翻倍</text>
+
+  <!-- 上半：单Agent -->
+  <g>
+    <rect x="40" y="90" width="820" height="170" rx="10" fill="#fff5f5" stroke="#e5b3b3"/>
+    <text x="60" y="115" font-size="15" font-weight="700" fill="#a33">① 单 Agent：拍脑袋直出</text>
+
+    <rect x="70" y="140" width="130" height="80" rx="8" fill="#e67e73" stroke="#a33"/>
+    <text x="135" y="175" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">Actor</text>
+    <text x="135" y="198" text-anchor="middle" fill="#fff" font-size="11">LLM 提配置</text>
+
+    <line x1="200" y1="180" x2="302" y2="180" stroke="#c0392b" stroke-width="2" marker-end="url(#ar)"/>
+
+    <rect x="310" y="140" width="240" height="80" rx="8" fill="#fff" stroke="#c0392b" stroke-dasharray="5,3"/>
+    <text x="430" y="168" text-anchor="middle" font-size="13">5 组候选里混着幻觉</text>
+    <text x="430" y="190" text-anchor="middle" font-size="12" fill="#a33">权重越界 / 重复历史失败</text>
+    <text x="430" y="208" text-anchor="middle" font-size="12" fill="#a33">无人审查，直接上线</text>
+
+    <line x1="550" y1="180" x2="652" y2="180" stroke="#c0392b" stroke-width="2" marker-end="url(#ar)"/>
+
+    <rect x="660" y="140" width="180" height="80" rx="8" fill="#fdecea" stroke="#c0392b"/>
+    <text x="750" y="170" text-anchor="middle" font-size="13" fill="#a33">线上效果</text>
+    <text x="750" y="195" text-anchor="middle" font-size="18" font-weight="700" fill="#c0392b">+0.29% / +0.26%</text>
+    <text x="750" y="212" text-anchor="middle" font-size="10" fill="#a33">engagement1 / engagement2</text>
+  </g>
+
+  <!-- 下半：Actor-Critic -->
+  <g>
+    <rect x="40" y="290" width="820" height="230" rx="10" fill="#f2faf4" stroke="#a8d6b6"/>
+    <text x="60" y="315" font-size="15" font-weight="700" fill="#206b3a">② Actor + Critic：提案 → 审查 → 上线</text>
+
+    <rect x="70" y="345" width="130" height="90" rx="8" fill="#52a574" stroke="#206b3a"/>
+    <text x="135" y="378" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">Actor</text>
+    <text x="135" y="400" text-anchor="middle" fill="#fff" font-size="11">产出 5 组候选</text>
+    <text x="135" y="418" text-anchor="middle" fill="#fff" font-size="11">(融合权重 / 阈值)</text>
+
+    <line x1="200" y1="390" x2="292" y2="390" stroke="#444" stroke-width="2" marker-end="url(#a)"/>
+
+    <rect x="300" y="345" width="160" height="90" rx="8" fill="#f6c95a" stroke="#b8860b"/>
+    <text x="380" y="378" text-anchor="middle" font-size="15" font-weight="700">Critic 杠精</text>
+    <text x="380" y="400" text-anchor="middle" font-size="11">✗ 越界配置</text>
+    <text x="380" y="418" text-anchor="middle" font-size="11">✗ 撞历史失败</text>
+
+    <line x1="460" y1="390" x2="552" y2="390" stroke="#444" stroke-width="2" marker-end="url(#a)"/>
+
+    <rect x="560" y="345" width="140" height="90" rx="8" fill="#fff" stroke="#206b3a"/>
+    <text x="630" y="378" text-anchor="middle" font-size="13" fill="#206b3a">通过 3 组</text>
+    <text x="630" y="400" text-anchor="middle" font-size="11" fill="#206b3a">进入 A/B 测试</text>
+
+    <line x1="700" y1="390" x2="722" y2="390" stroke="#27864a" stroke-width="2" marker-end="url(#ag)"/>
+
+    <rect x="730" y="345" width="130" height="90" rx="8" fill="#e6f5ec" stroke="#27864a"/>
+    <text x="795" y="372" text-anchor="middle" font-size="12" fill="#206b3a">线上效果</text>
+    <text x="795" y="398" text-anchor="middle" font-size="16" font-weight="700" fill="#27864a">+0.75%</text>
+    <text x="795" y="420" text-anchor="middle" font-size="16" font-weight="700" fill="#27864a">+0.90%</text>
+
+    <text x="450" y="480" text-anchor="middle" font-size="13" fill="#206b3a">Critic = 自动化的"工程师 review"，压住 LLM 幻觉</text>
+    <text x="450" y="502" text-anchor="middle" font-size="12" fill="#555">提升约 2.5× — 3.5× （Google Discover 真实上线）</text>
+  </g>
+</svg>

@@ -1,4 +1,12 @@
 {
   "feishu": "completed",
-  "wecom": "completed"
+  "wecom": "completed",
+  "xiaoyuzhou": "completed",
+  "xiaoyuzhou_result": {
+    "eid": "69f4a9da58f7cd89e0b806b4",
+    "status": "INITIALIZED",
+    "review_status": "PENDING",
+    "audio_url": "https://media.xyzcdn.net/ljfPCORFkR5NN2IXieFqwkO7gHF-.mp3",
+    "title": "AI计算广告论文播报｜04.30 预算决策从事前优化走向事后审计"
+  }
 }

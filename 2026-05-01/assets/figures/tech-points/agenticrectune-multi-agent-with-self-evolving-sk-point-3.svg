@@ -1,0 +1,69 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="system-ui,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#334"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+    <marker id="arG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1e7e4a"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="34" text-anchor="middle" font-size="22" font-weight="700" fill="#1a1a2e">
+    线上 A/B 当目标函数：北极星 + 护栏
+  </text>
+  <text x="450" y="58" text-anchor="middle" font-size="13" fill="#555">
+    Agent 提配置 → 真实流量跑 → 多指标共同判生死
+  </text>
+
+  <!-- Agent -->
+  <rect x="40" y="110" width="180" height="100" rx="12" fill="#eef2ff" stroke="#4f46e5" stroke-width="2"/>
+  <text x="130" y="148" text-anchor="middle" font-size="16" font-weight="700" fill="#1e1b4b">LLM Actor</text>
+  <text x="130" y="178" text-anchor="middle" font-size="12" fill="#333">提出一组融合权重 / 阈值</text>
+
+  <!-- AB -->
+  <rect x="310" y="95" width="280" height="130" rx="12" fill="#fff7e6" stroke="#d97706" stroke-width="2"/>
+  <text x="450" y="128" text-anchor="middle" font-size="16" font-weight="700" fill="#7c2d12">线上小流量 A/B</text>
+  <text x="450" y="154" text-anchor="middle" font-size="12" fill="#444">不可导的排序 / TopK / 业务规则</text>
+  <text x="450" y="176" text-anchor="middle" font-size="12" fill="#444">真实业务指标 = reward</text>
+  <text x="450" y="202" text-anchor="middle" font-size="12" font-weight="600" fill="#7c2d12">显著性 p &lt; 0.05 才算数</text>
+
+  <!-- Critic -->
+  <rect x="680" y="110" width="180" height="100" rx="12" fill="#f3e8ff" stroke="#7c3aed" stroke-width="2"/>
+  <text x="770" y="148" text-anchor="middle" font-size="16" font-weight="700" fill="#4c1d95">Critic</text>
+  <text x="770" y="174" text-anchor="middle" font-size="12" fill="#333">过关 → 进精英池</text>
+  <text x="770" y="194" text-anchor="middle" font-size="12" fill="#333">砸护栏 → 剪掉</text>
+
+  <!-- arrows -->
+  <path d="M220,160 L308,160" stroke="#334" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M590,160 L678,160" stroke="#334" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M770,210 Q770,260 450,260 Q130,260 130,212" stroke="#334" stroke-width="1.8" fill="none" stroke-dasharray="5,4" marker-end="url(#ar)"/>
+  <text x="450" y="254" text-anchor="middle" font-size="11" fill="#666">反馈：下一轮更好的配置</text>
+
+  <!-- Example split: pass vs fail -->
+  <rect x="60" y="320" width="360" height="220" rx="12" fill="#ecfdf5" stroke="#1e7e4a" stroke-width="2"/>
+  <text x="240" y="350" text-anchor="middle" font-size="15" font-weight="700" fill="#14532d">✓ 通过：进精英池</text>
+  <text x="85" y="385" font-size="13" fill="#14532d">北极星 engagement1</text>
+  <text x="395" y="385" text-anchor="end" font-size="13" font-weight="700" fill="#1e7e4a">+0.21%</text>
+  <text x="85" y="413" font-size="13" fill="#14532d">副指标 engagement2</text>
+  <text x="395" y="413" text-anchor="end" font-size="13" font-weight="700" fill="#1e7e4a">+0.29%</text>
+  <text x="85" y="441" font-size="13" fill="#14532d">多样性</text>
+  <text x="395" y="441" text-anchor="end" font-size="13" font-weight="700" fill="#1e7e4a">+3.43%</text>
+  <line x1="75" y1="460" x2="405" y2="460" stroke="#1e7e4a" stroke-dasharray="3,3"/>
+  <text x="240" y="488" text-anchor="middle" font-size="12" fill="#14532d">全部显著 &amp; 守住护栏</text>
+  <path d="M240,505 L240,535" stroke="#1e7e4a" stroke-width="2" marker-end="url(#arG)"/>
+
+  <rect x="480" y="320" width="360" height="220" rx="12" fill="#fef2f2" stroke="#c0392b" stroke-width="2"/>
+  <text x="660" y="350" text-anchor="middle" font-size="15" font-weight="700" fill="#7f1d1d">✗ 淘汰：砸了护栏</text>
+  <text x="505" y="385" font-size="13" fill="#7f1d1d">多样性</text>
+  <text x="815" y="385" text-anchor="end" font-size="13" font-weight="700" fill="#1e7e4a">+4.1%</text>
+  <text x="505" y="413" font-size="13" fill="#7f1d1d">engagement1</text>
+  <text x="815" y="413" text-anchor="end" font-size="13" font-weight="700" fill="#c0392b">−0.8% 跌破基线</text>
+  <text x="505" y="441" font-size="13" fill="#7f1d1d">留存</text>
+  <text x="815" y="441" text-anchor="end" font-size="13" font-weight="700" fill="#c0392b">−0.5%</text>
+  <line x1="495" y1="460" x2="825" y2="460" stroke="#c0392b" stroke-dasharray="3,3"/>
+  <text x="660" y="488" text-anchor="middle" font-size="12" fill="#7f1d1d">单指标涨 ≠ 赢，一票否决</text>
+  <path d="M660,505 L660,535" stroke="#c0392b" stroke-width="2" marker-end="url(#arR)"/>
+</svg>

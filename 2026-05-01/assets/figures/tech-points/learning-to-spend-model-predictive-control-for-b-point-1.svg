@@ -1,0 +1,78 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2b6cb0"/>
+    </marker>
+    <marker id="arrOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d97706"/>
+    </marker>
+    <marker id="arrGray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4a5568"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#1a202c">预算分配 = 每周一次的闭环控制</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#4a5568">计划 → 带噪执行 → 观察回报 → 再规划（滚动 12 周）</text>
+
+  <!-- Planner module -->
+  <rect x="60" y="110" width="220" height="130" rx="12" fill="#ebf4ff" stroke="#2b6cb0" stroke-width="2"/>
+  <text x="170" y="140" text-anchor="middle" font-size="16" font-weight="bold" fill="#2b6cb0">Planner (MPC)</text>
+  <text x="170" y="165" text-anchor="middle" font-size="12" fill="#2d3748">本周计划花 b_t</text>
+  <text x="170" y="188" text-anchor="middle" font-size="11" fill="#4a5568">约束: 累计 ≤ B_Q</text>
+  <text x="170" y="208" text-anchor="middle" font-size="11" fill="#4a5568">周环比 ±20%</text>
+  <text x="170" y="228" text-anchor="middle" font-size="11" fill="#4a5568">最大化 Σ 期望回报</text>
+
+  <!-- Execution module -->
+  <rect x="340" y="110" width="220" height="130" rx="12" fill="#fff7ed" stroke="#d97706" stroke-width="2"/>
+  <text x="450" y="140" text-anchor="middle" font-size="16" font-weight="bold" fill="#d97706">执行层 (拍卖 + pacing)</text>
+  <text x="450" y="170" text-anchor="middle" font-size="12" fill="#2d3748">一阶跟踪 + 噪声</text>
+  <text x="450" y="210" text-anchor="middle" font-size="13" fill="#1a202c">计划 100 万 → 实花 95 万</text>
+
+  <!-- Response module -->
+  <rect x="620" y="110" width="220" height="130" rx="12" fill="#f0fff4" stroke="#2f855a" stroke-width="2"/>
+  <text x="730" y="140" text-anchor="middle" font-size="16" font-weight="bold" fill="#2f855a">回报响应</text>
+  <text x="730" y="163" text-anchor="middle" font-size="12" fill="#2d3748">Richards 饱和曲线</text>
+  <path d="M650,222 Q690,222 710,202 T810,184" stroke="#2f855a" stroke-width="2.5" fill="none"/>
+  <line x1="650" y1="222" x2="820" y2="222" stroke="#2f855a" stroke-width="1"/>
+  <text x="730" y="238" text-anchor="middle" font-size="10" fill="#4a5568">效率随时间变 (非平稳)</text>
+
+  <!-- Forward arrows -->
+  <line x1="280" y1="175" x2="336" y2="175" stroke="#2b6cb0" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="308" y="166" text-anchor="middle" font-size="11" fill="#2b6cb0">b_t</text>
+
+  <line x1="560" y1="175" x2="616" y2="175" stroke="#d97706" stroke-width="2.5" marker-end="url(#arrOrange)"/>
+  <text x="588" y="166" text-anchor="middle" font-size="11" fill="#d97706">实花 s_t</text>
+
+  <!-- Feedback loop -->
+  <path d="M730,242 Q730,320 450,320 Q170,320 170,242" stroke="#2b6cb0" stroke-width="2.5" fill="none" stroke-dasharray="6,4" marker-end="url(#arr)"/>
+  <text x="450" y="312" text-anchor="middle" font-size="13" fill="#2b6cb0" font-weight="bold">观察回报 r_t → 下周重新规划 (receding horizon)</text>
+
+  <!-- Bottom: week timeline example -->
+  <text x="60" y="395" font-size="13" font-weight="bold" fill="#1a202c">例子：第 2 周重新规划</text>
+
+  <rect x="60" y="410" width="130" height="55" rx="6" fill="#edf2f7" stroke="#718096"/>
+  <text x="125" y="430" text-anchor="middle" font-size="11" fill="#2d3748">第1周计划 100</text>
+  <text x="125" y="450" text-anchor="middle" font-size="11" fill="#d97706">实花 95</text>
+
+  <line x1="195" y1="437" x2="233" y2="437" stroke="#4a5568" stroke-width="2" marker-end="url(#arrGray)"/>
+
+  <rect x="240" y="410" width="150" height="55" rx="6" fill="#edf2f7" stroke="#718096"/>
+  <text x="315" y="430" text-anchor="middle" font-size="11" fill="#2d3748">剩余 1105 万 / 11 周</text>
+  <text x="315" y="450" text-anchor="middle" font-size="11" fill="#2d3748">+ 观察到的回报</text>
+
+  <line x1="395" y1="437" x2="433" y2="437" stroke="#4a5568" stroke-width="2" marker-end="url(#arrGray)"/>
+
+  <rect x="440" y="410" width="150" height="55" rx="6" fill="#ebf4ff" stroke="#2b6cb0"/>
+  <text x="515" y="430" text-anchor="middle" font-size="11" fill="#2b6cb0">第2周计划 ≤ 114</text>
+  <text x="515" y="450" text-anchor="middle" font-size="10" fill="#4a5568">(受 ±20% 限制)</text>
+
+  <!-- Key insight -->
+  <rect x="610" y="395" width="230" height="90" rx="10" fill="#fffaf0" stroke="#d97706" stroke-width="2" stroke-dasharray="4,3"/>
+  <text x="725" y="419" text-anchor="middle" font-size="13" font-weight="bold" fill="#c05621">两大工业摩擦</text>
+  <text x="725" y="442" text-anchor="middle" font-size="11" fill="#2d3748">① 执行带噪，不是确定性</text>
+  <text x="725" y="462" text-anchor="middle" font-size="11" fill="#2d3748">② 周环比不能跳太大</text>
+  <text x="725" y="479" text-anchor="middle" font-size="10" fill="#718096">→ 更像控制，而非离线优化</text>
+
+  <text x="450" y="530" text-anchor="middle" font-size="12" fill="#4a5568" font-style="italic">W = 12 周一个季度，每周滚动求解一次</text>
+</svg>
