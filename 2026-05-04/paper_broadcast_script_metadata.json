@@ -1,0 +1,13 @@
+{
+  "report_date": "2026-05-04",
+  "provider": "bedrock-opus-47",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 2675,
+  "focus_titles": [
+    "Intelligent Elastic Feature Fading: Enabling Model Retrain-Free Feature Efficiency Rollouts at Scale",
+    "SiriusHelper: An LLM Agent-Based Operations Assistant for Big Data Platforms"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Steve"
+}
