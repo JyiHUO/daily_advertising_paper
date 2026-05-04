@@ -1,0 +1,19 @@
+{
+  "date": "2026-05-04",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL"
+  ],
+  "candidate_count": 3,
+  "supplementary_count": 0,
+  "focus_titles": [
+    "Intelligent Elastic Feature Fading: Enabling Model Retrain-Free Feature Efficiency Rollouts at Scale",
+    "SiriusHelper: An LLM Agent-Based Operations Assistant for Big Data Platforms"
+  ],
+  "focus_status": {
+    "Intelligent Elastic Feature Fading: Enabling Model Retrain-Free Feature Efficiency Rollouts at Scale": "completed",
+    "SiriusHelper: An LLM Agent-Based Operations Assistant for Big Data Platforms": "completed"
+  }
+}

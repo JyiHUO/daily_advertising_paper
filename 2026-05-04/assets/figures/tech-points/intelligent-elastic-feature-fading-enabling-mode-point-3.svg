@@ -1,0 +1,98 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#e8a03a"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+    <marker id="arrGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2a9d4a"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1a1a1a">IEFF 安全护栏：出问题就改配置，不碰模型</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#666">每天只淡出一点点 → 发现异常 → 秒级回滚</text>
+
+  <!-- Control plane (top) -->
+  <g>
+    <rect x="340" y="90" width="220" height="80" rx="10" fill="#2d3e50" stroke="#1a2530" stroke-width="2"/>
+    <text x="450" y="118" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">Control Plane</text>
+    <text x="450" y="140" text-anchor="middle" font-size="12" fill="#cfe2ff">持续监控 NE / 业务指标</text>
+    <text x="450" y="158" text-anchor="middle" font-size="12" fill="#cfe2ff">超阈值 → 自动暂停</text>
+  </g>
+
+  <!-- Timeline axis -->
+  <line x1="80" y1="260" x2="820" y2="260" stroke="#bbb" stroke-width="2"/>
+  <text x="70" y="265" text-anchor="end" font-size="12" fill="#888">时间</text>
+
+  <!-- Day 1 -->
+  <g>
+    <rect x="90" y="210" width="110" height="90" rx="8" fill="#e8f4ff" stroke="#4a90e2" stroke-width="2"/>
+    <text x="145" y="235" text-anchor="middle" font-size="13" font-weight="700" fill="#1a4a7a">Day 1</text>
+    <text x="145" y="265" text-anchor="middle" font-size="20" font-weight="700" fill="#1a4a7a">98%</text>
+    <text x="145" y="288" text-anchor="middle" font-size="11" fill="#4a6a8a">覆盖率</text>
+  </g>
+
+  <!-- Day 5 warning -->
+  <g>
+    <rect x="230" y="200" width="130" height="110" rx="8" fill="#fff4e0" stroke="#e8a03a" stroke-width="2"/>
+    <text x="295" y="225" text-anchor="middle" font-size="13" font-weight="700" fill="#8a5a10">Day 5 ⚠</text>
+    <text x="295" y="255" text-anchor="middle" font-size="20" font-weight="700" fill="#8a5a10">90%</text>
+    <text x="295" y="280" text-anchor="middle" font-size="11" fill="#8a5a10">NE 越过阈值</text>
+    <text x="295" y="298" text-anchor="middle" font-size="11" fill="#8a5a10">自动暂停</text>
+  </g>
+
+  <!-- Arrow from Day5 to control plane -->
+  <path d="M 320 200 L 360 170" stroke="#e8a03a" stroke-width="2" fill="none" marker-end="url(#arrOrange)"/>
+  <text x="355" y="195" font-size="10" fill="#8a5a10">告警</text>
+
+  <!-- Arrow down: revert config -->
+  <path d="M 470 170 L 470 210" stroke="#c0392b" stroke-width="2.5" fill="none" marker-end="url(#arrRed)"/>
+  <text x="478" y="195" font-size="11" fill="#c0392b" font-weight="700">revert 配置</text>
+
+  <!-- Rollback -->
+  <g>
+    <rect x="400" y="210" width="140" height="100" rx="8" fill="#e6f7ea" stroke="#2a9d4a" stroke-width="2"/>
+    <text x="470" y="235" text-anchor="middle" font-size="13" font-weight="700" fill="#1a6a30">一键回滚</text>
+    <text x="470" y="262" text-anchor="middle" font-size="20" font-weight="700" fill="#1a6a30">100%</text>
+    <text x="470" y="283" text-anchor="middle" font-size="11" fill="#1a6a30">改 schedule 即可</text>
+    <text x="470" y="300" text-anchor="middle" font-size="11" fill="#1a6a30">分钟级恢复</text>
+  </g>
+
+  <!-- Arrow to normal -->
+  <path d="M 540 260 L 605 260" stroke="#2a9d4a" stroke-width="2" fill="none" marker-end="url(#arrGreen)"/>
+
+  <!-- Day 6 normal -->
+  <g>
+    <rect x="610" y="210" width="200" height="100" rx="8" fill="#f5f5f5" stroke="#999" stroke-width="2"/>
+    <text x="710" y="238" text-anchor="middle" font-size="13" font-weight="700" fill="#333">继续服务</text>
+    <text x="710" y="263" text-anchor="middle" font-size="12" fill="#555">✗ 不重训模型</text>
+    <text x="710" y="283" text-anchor="middle" font-size="12" fill="#555">✗ 不改特征 pipeline</text>
+    <text x="710" y="303" text-anchor="middle" font-size="12" fill="#555">✓ 只改一行配置</text>
+  </g>
+
+  <!-- Bottom stats -->
+  <g>
+    <rect x="90" y="400" width="220" height="110" rx="10" fill="#fdf2f8" stroke="#c94f8a" stroke-width="2"/>
+    <text x="200" y="428" text-anchor="middle" font-size="13" font-weight="700" fill="#8a1f5a">上线前护栏</text>
+    <text x="200" y="455" text-anchor="middle" font-size="11" fill="#6a3050">QRT A/B pre-rollout validation</text>
+    <text x="200" y="480" text-anchor="middle" font-size="11" fill="#6a3050">确定安全淡出速率</text>
+  </g>
+
+  <g>
+    <rect x="340" y="400" width="220" height="110" rx="10" fill="#eef9f2" stroke="#2a9d4a" stroke-width="2"/>
+    <text x="450" y="428" text-anchor="middle" font-size="13" font-weight="700" fill="#1a6a30">上线中护栏</text>
+    <text x="450" y="455" text-anchor="middle" font-size="11" fill="#1a5a28">每日步长小，当天 revert</text>
+    <text x="450" y="480" text-anchor="middle" font-size="11" fill="#1a5a28">不会把模型训坏</text>
+  </g>
+
+  <g>
+    <rect x="590" y="400" width="220" height="110" rx="10" fill="#fff8e0" stroke="#c9a13a" stroke-width="2"/>
+    <text x="700" y="428" text-anchor="middle" font-size="13" font-weight="700" fill="#7a5a10">生产成果</text>
+    <text x="700" y="455" text-anchor="middle" font-size="11" fill="#5a4010">275 个特征 / 14 批次</text>
+    <text x="700" y="475" text-anchor="middle" font-size="11" fill="#5a4010">省掉 ~140 次全量重训</text>
+    <text x="700" y="495" text-anchor="middle" font-size="11" fill="#5a4010">基础设施成本 -15% / 年</text>
+  </g>
+</svg>

@@ -1,0 +1,61 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#d9534f"/>
+    </marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2b8a4f"/>
+    </marker>
+    <marker id="agray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#222">四层金字塔知识库：命中即停，逐层下钻</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#666">按"可直接执行程度"排优先级，减少上下文污染</text>
+
+  <!-- Pyramid layers -->
+  <polygon points="370,95 530,95 510,160 390,160" fill="#2b8a4f" stroke="#1e5f36" stroke-width="1.5"/>
+  <text x="450" y="125" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff">L1 · SOP</text>
+  <text x="450" y="147" text-anchor="middle" font-size="12" fill="#e8f5ea">错误码→根因→步骤 (679)</text>
+
+  <polygon points="390,160 510,160 540,240 360,240" fill="#4a90d9" stroke="#2c5d8a" stroke-width="1.5"/>
+  <text x="450" y="195" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">L2 · 内部文档 / FAQ</text>
+  <text x="450" y="218" text-anchor="middle" font-size="12" fill="#e3eef9">问题标题-正文 (538)</text>
+
+  <polygon points="360,240 540,240 580,335 320,335" fill="#e0a040" stroke="#a3721d" stroke-width="1.5"/>
+  <text x="450" y="278" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">L3 · 公网搜索</text>
+  <text x="450" y="302" text-anchor="middle" font-size="12" fill="#fbf0dc">Google API + Jina</text>
+
+  <polygon points="320,335 580,335 630,445 270,445" fill="#a9a9a9" stroke="#6e6e6e" stroke-width="1.5"/>
+  <text x="450" y="378" text-anchor="middle" font-size="15" font-weight="bold" fill="#fff">L4 · LLM 常识兜底</text>
+  <text x="450" y="402" text-anchor="middle" font-size="12" fill="#f0f0f0">附"信息不足"标签</text>
+
+  <!-- Query entry -->
+  <rect x="40" y="110" width="170" height="70" rx="10" fill="#fff5f5" stroke="#d9534f" stroke-width="2"/>
+  <text x="125" y="140" text-anchor="middle" font-size="14" font-weight="bold" fill="#b33">用户问题</text>
+  <text x="125" y="162" text-anchor="middle" font-size="12" fill="#555">"SQL 执行 OOM"</text>
+
+  <!-- Arrow from query into L1 -->
+  <path d="M210,140 Q290,128 378,122" fill="none" stroke="#d9534f" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="290" y="112" text-anchor="middle" font-size="12" fill="#b33">先问最顶层</text>
+
+  <!-- Down-drill arrow on right -->
+  <path d="M560,120 Q680,250 625,430" fill="none" stroke="#888" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#agray)"/>
+  <text x="695" y="240" font-size="12" fill="#666">不命中</text>
+  <text x="695" y="258" font-size="12" fill="#666">才下钻</text>
+
+  <!-- Hit/stop arrow on left -->
+  <path d="M385,150 Q300,190 252,215" fill="none" stroke="#2b8a4f" stroke-width="2.5" marker-end="url(#ag)"/>
+  <rect x="70" y="205" width="180" height="60" rx="8" fill="#e8f5ea" stroke="#2b8a4f" stroke-width="2"/>
+  <text x="160" y="230" text-anchor="middle" font-size="13" font-weight="bold" fill="#1e5f36">命中即停 ✓</text>
+  <text x="160" y="251" text-anchor="middle" font-size="12" fill="#2b8a4f">直接返回排查步骤</text>
+
+  <!-- Ablation callout -->
+  <rect x="55" y="485" width="790" height="95" rx="10" fill="#fffbea" stroke="#c79a2b" stroke-width="1.5"/>
+  <text x="75" y="512" font-size="14" font-weight="bold" fill="#8a6a1e">消融：若拍平成一层……</text>
+  <text x="95" y="540" font-size="13" fill="#4a3c10">• 准确率 ↓ 6%</text>
+  <text x="340" y="540" font-size="13" fill="#4a3c10">• 检索轮数 +0.33</text>
+  <text x="600" y="540" font-size="13" fill="#4a3c10">• 延迟 +3.6s</text>
+  <text x="75" y="565" font-size="12" fill="#8a6a1e">分层 = 更少上下文污染 + 更快命中最可执行的答案</text>
+</svg>

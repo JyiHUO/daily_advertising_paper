@@ -1,0 +1,56 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#222">一刀切 vs 渐变淡出：中段分布漂移才是真正的痛</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#666">特征覆盖率 100% → 0%，两种下线方式对模型稳定性的冲击</text>
+
+  <!-- Left panel: Zero-out -->
+  <g>
+    <rect x="40" y="90" width="390" height="370" rx="10" fill="#fdecec" stroke="#d94b4b" stroke-width="2"/>
+    <text x="235" y="118" text-anchor="middle" font-size="17" font-weight="bold" fill="#c0392b">Zero-out：一次砍到 0%</text>
+
+    <!-- Chart -->
+    <line x1="75" y1="380" x2="395" y2="380" stroke="#333" stroke-width="1.5"/>
+    <line x1="75" y1="150" x2="75" y2="380" stroke="#333" stroke-width="1.5"/>
+    <text x="90" y="145" text-anchor="start" font-size="11" fill="#555">NE</text>
+    <text x="400" y="395" font-size="11" fill="#555">time</text>
+
+    <!-- baseline -->
+    <line x1="75" y1="340" x2="150" y2="340" stroke="#888" stroke-width="2"/>
+    <!-- spike -->
+    <path d="M150,340 L160,170 L180,220 L210,260 L260,300 L320,320 L395,330" fill="none" stroke="#c0392b" stroke-width="3"/>
+    <circle cx="160" cy="170" r="5" fill="#c0392b"/>
+    <text x="180" y="175" font-size="12" fill="#c0392b" font-weight="bold">暴涨尖峰</text>
+
+    <text x="235" y="420" text-anchor="middle" font-size="13" fill="#333">线上指标回退 0.83%</text>
+    <text x="235" y="440" text-anchor="middle" font-size="13" fill="#333">需 70–100 亿样本才恢复</text>
+  </g>
+
+  <!-- Right panel: IEFF gradual -->
+  <g>
+    <rect x="470" y="90" width="390" height="370" rx="10" fill="#e8f5ec" stroke="#2e9c5a" stroke-width="2"/>
+    <text x="665" y="118" text-anchor="middle" font-size="17" font-weight="bold" fill="#1e7a44">IEFF 渐变：每天小步淡出</text>
+
+    <!-- Chart -->
+    <line x1="505" y1="380" x2="825" y2="380" stroke="#333" stroke-width="1.5"/>
+    <line x1="505" y1="150" x2="505" y2="380" stroke="#333" stroke-width="1.5"/>
+    <text x="520" y="145" text-anchor="start" font-size="11" fill="#555">NE</text>
+    <text x="830" y="395" font-size="11" fill="#555">time</text>
+
+    <!-- small bumps -->
+    <path d="M505,340 L540,335 L575,338 L610,332 L645,336 L680,330 L715,333 L750,328 L785,331 L825,328" fill="none" stroke="#1e7a44" stroke-width="3"/>
+
+    <text x="665" y="420" text-anchor="middle" font-size="13" fill="#333">线上指标回退 0.37%（↓55%）</text>
+    <text x="665" y="440" text-anchor="middle" font-size="13" fill="#333">平滑收敛，无需额外样本</text>
+  </g>
+
+  <!-- Bottom insight bar -->
+  <rect x="120" y="485" width="660" height="55" rx="8" fill="#fff6d6" stroke="#d4a84b" stroke-width="1.5"/>
+  <text x="450" y="508" text-anchor="middle" font-size="14" font-weight="bold" fill="#6b4a00">关键洞察：伤模型的不是终点（没特征），而是中间的剧烈分布跳变</text>
+  <text x="450" y="528" text-anchor="middle" font-size="13" fill="#6b4a00">coverage 70%→40% 是最痛区段 —— 模型还依赖它，渐变价值最大</text>
+</svg>

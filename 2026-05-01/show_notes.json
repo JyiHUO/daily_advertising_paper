@@ -1,0 +1,9 @@
+{
+  "title": "AI计算广告论文播报｜0501：MPC预算控制何时该用，多Agent自动调参上线",
+  "shownotes_html": "<p>当算法系统越来越复杂，我们到底该什么时候加一层智能、什么时候保持克制？今天两篇重点论文从不同角度回答了这个问题——一篇用控制实验拆解 MPC 预算分配的真实边界，一篇把 Google Discover 的多阶段调参交给 LLM 多智能体闭环执行。</p><p><strong>本期重点</strong></p><ul><li><strong>Learning to Spend: Model Predictive Control for Budgeting under Non-Stationary Returns</strong>：以 Expedia 数十亿美金营销预算为背景，严格比较 MPC 与反应式 pacing。核心发现：只有当非平稳具有可预测的结构（如广告疲劳、季节性衰减）时 MPC 才赚钱；纯噪声漂移下反而不如老实按历史比例分。更意外的是，瓶颈往往不在预测精度，而在业务方允许的周-周预算波动上限。</li><li><strong>AgenticRecTune: Multi-Agent with Self-Evolving Skillhub for Recommendation System Optimization</strong>：Google Discover 线上工作，用五个 LLM Agent（提案、审查、跑 A/B、复盘、沉淀规则）自动调粗排/精排/重排融合权重，并配备一个会自我进化的技能库。与广告 ECPM 多阶段链路高度同构，核心壁垒在于那本不断增厚的经验手册而非 Agent 本身。</li><li><strong>One Pass, Any Order（位置不变的 listwise 重排）</strong>：用结构化注意力掩码消除 decoder-only LLM 重排对输入顺序的敏感性，让候选集变成真正的集合式打分。如果你的团队在探索 LLM 做广告混排，这是一个工程上值得关注的方案。</li><li><strong>In-Context Prompting Obsoletes Agent Orchestration</strong>：控制实验表明，对程序化任务只用一段精心设计的上下文 prompt 就能打平甚至超越 LangGraph/CrewAI 等外部编排器。正在纠结 Agent 框架选型的团队值得一看。</li></ul><p><strong>今日趋势</strong></p><ul><li>372 篇论文中，商业化与资源优化类只有 12 篇，但出现了预算 MPC 控制、LLM 推理预算约束等把\"花钱\"显式建模进系统的工作，信号值得关注。</li><li>行业注意力正在从\"能不能做出来\"转向\"该不该上这一层复杂度\"——多篇论文用控制实验质疑现有复杂方案的必要性。</li></ul><p>📎 今日完整日报与论文列表：<a href=\"https://github.com/JyiHUO/daily_advertising_paper/blob/main/2026-05-01/daily_report.md\">GitHub 归档</a></p><p>欢迎在评论区留言交流。本期内容由 AI 自动生成并经人工审校，如有疏漏欢迎指正。</p>",
+  "report_date": "2026-05-01",
+  "provider": "bedrock-opus",
+  "archive_url": "https://github.com/JyiHUO/daily_advertising_paper/blob/main/2026-05-01/daily_report.md",
+  "fallback": false,
+  "generated_at": "2026-05-01T22:36:06Z"
+}

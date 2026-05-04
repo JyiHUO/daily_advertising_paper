@@ -1,0 +1,66 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#333"/>
+    </marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#222">DeepSearch: 像专家一样"想—查—筛"循环</text>
+  <text x="450" y="56" text-anchor="middle" font-size="13" fill="#666">关键区别：Filter 先剔噪声，再进推理上下文，防止幻觉累积</text>
+
+  <!-- Planner -->
+  <circle cx="180" cy="230" r="75" fill="#e8f1fb" stroke="#2a6fb8" stroke-width="2"/>
+  <text x="180" y="220" text-anchor="middle" font-size="16" font-weight="bold" fill="#1a4a82">Planner</text>
+  <text x="180" y="242" text-anchor="middle" font-size="12" fill="#333">证据够不够？</text>
+  <text x="180" y="260" text-anchor="middle" font-size="12" fill="#333">下一步查什么？</text>
+
+  <!-- Retriever -->
+  <circle cx="450" cy="230" r="75" fill="#eaf6ea" stroke="#2e8b3d" stroke-width="2"/>
+  <text x="450" y="225" text-anchor="middle" font-size="16" font-weight="bold" fill="#1f6b2b">Retriever</text>
+  <text x="450" y="248" text-anchor="middle" font-size="12" fill="#333">工具 / 分层KB</text>
+
+  <!-- Filter -->
+  <circle cx="720" cy="230" r="75" fill="#fdecec" stroke="#c0392b" stroke-width="3"/>
+  <text x="720" y="220" text-anchor="middle" font-size="16" font-weight="bold" fill="#8a2218">Filter ★</text>
+  <text x="720" y="242" text-anchor="middle" font-size="12" fill="#333">剔掉无关段落</text>
+  <text x="720" y="260" text-anchor="middle" font-size="12" fill="#333">防止幻觉累积</text>
+
+  <!-- Loop arrows -->
+  <path d="M248 198 Q 315 160 382 198" stroke="#333" stroke-width="2.2" fill="none" marker-end="url(#a)"/>
+  <text x="315" y="150" text-anchor="middle" font-size="12" fill="#333">发起查询</text>
+
+  <path d="M518 198 Q 585 160 652 198" stroke="#333" stroke-width="2.2" fill="none" marker-end="url(#a)"/>
+  <text x="585" y="150" text-anchor="middle" font-size="12" fill="#333">原始结果</text>
+
+  <path d="M655 275 Q 450 360 245 275" stroke="#c0392b" stroke-width="2.2" fill="none" marker-end="url(#ar)"/>
+  <text x="450" y="355" text-anchor="middle" font-size="12" fill="#c0392b">仅干净证据回流 Planner</text>
+
+  <!-- Example strip -->
+  <rect x="60" y="400" width="780" height="160" rx="10" fill="#fafafa" stroke="#bbb"/>
+  <text x="80" y="428" font-size="14" font-weight="bold" fill="#222">例：Flink 作业失败工单</text>
+
+  <rect x="80" y="445" width="150" height="55" rx="6" fill="#fff" stroke="#888"/>
+  <text x="155" y="468" text-anchor="middle" font-size="12" fill="#222">查日志→SOP层</text>
+  <text x="155" y="487" text-anchor="middle" font-size="12" fill="#888">未命中</text>
+
+  <rect x="260" y="445" width="170" height="55" rx="6" fill="#fff" stroke="#888"/>
+  <text x="345" y="468" text-anchor="middle" font-size="12" fill="#222">改写 query 下钻</text>
+  <text x="345" y="487" text-anchor="middle" font-size="12" fill="#888">checkpoint 超时根因</text>
+
+  <rect x="460" y="445" width="170" height="55" rx="6" fill="#fff" stroke="#c0392b"/>
+  <text x="545" y="468" text-anchor="middle" font-size="12" fill="#222">召回 5 段</text>
+  <text x="545" y="487" text-anchor="middle" font-size="12" fill="#c0392b">Filter 丢掉 3 段</text>
+
+  <rect x="660" y="445" width="170" height="55" rx="6" fill="#fff" stroke="#2e8b3d"/>
+  <text x="745" y="468" text-anchor="middle" font-size="12" fill="#222">输出根因+步骤</text>
+  <text x="745" y="487" text-anchor="middle" font-size="12" fill="#2e8b3d">证据充分</text>
+
+  <path d="M230 472 L258 472" stroke="#333" stroke-width="1.8" marker-end="url(#a)"/>
+  <path d="M430 472 L458 472" stroke="#333" stroke-width="1.8" marker-end="url(#a)"/>
+  <path d="M630 472 L658 472" stroke="#333" stroke-width="1.8" marker-end="url(#a)"/>
+
+  <text x="450" y="540" text-anchor="middle" font-size="12" fill="#555">工单解决后 → 蒸馏为新 SOP 合并入第1层，下次一击命中</text>
+</svg>

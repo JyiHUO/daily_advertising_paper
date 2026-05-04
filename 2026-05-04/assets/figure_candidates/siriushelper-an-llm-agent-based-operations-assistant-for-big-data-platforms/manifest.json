@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-04/downloaded_pdfs/siriushelper-an-llm-agent-based-operations-assistant-for-big-data-platforms.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-04/assets/figure_candidates/siriushelper-an-llm-agent-based-operations-assistant-for-big-data-platforms",
+  "candidates": [
+    {
+      "id": "page-2-drawing-caption-25",
+      "page_index": 2,
+      "caption": "Figure 1: SiriusHelper system overview.",
+      "clip": [
+        48.40895080566406,
+        67.68357849121094,
+        563.596923828125,
+        256.15687561035156
+      ],
+      "clip_area": 97099.17591167009,
+      "page_area": 484704.0,
+      "text_density": 0.1328361746968164,
+      "kind": "drawing_cluster_with_caption",
+      "score": 56.90870925054291,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-04/assets/figure_candidates/siriushelper-an-llm-agent-based-operations-assistant-for-big-data-platforms/01-p3-drawing_cluster_with_caption.png",
+      "filename": "01-p3-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-4-drawing-caption-22",
+      "page_index": 4,
+      "caption": "Figure 2: Specialized agent workflow in SiriusHelper.",
+      "clip": [
+        48.40895080566406,
+        67.68162536621094,
+        563.60205078125,
+        306.0151672363281
+      ],
+      "clip_area": 122787.79626422678,
+      "page_area": 484704.0,
+      "text_density": 0.1096025185977079,
+      "kind": "drawing_cluster_with_caption",
+      "score": 44.223848884137524,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-04/assets/figure_candidates/siriushelper-an-llm-agent-based-operations-assistant-for-big-data-platforms/02-p5-drawing_cluster_with_caption.png",
+      "filename": "02-p5-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-4-block-22",
+      "page_index": 4,
+      "caption": "Figure 2: Specialized agent workflow in SiriusHelper.",
+      "clip": [
+        167.96500244140626,
+        18.0,
+        444.03594360351565,
+        294.859375
+      ],
+      "clip_area": 76432.82822580339,
+      "page_area": 484704.0,
+      "text_density": 0.11512538051739861,
+      "kind": "captioned_figure",
+      "score": 32.741730815909456,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-04/assets/figure_candidates/siriushelper-an-llm-agent-based-operations-assistant-for-big-data-platforms/03-p5-captioned_figure.png",
+      "filename": "03-p5-captioned_figure.png"
+    },
+    {
+      "id": "page-6-drawing-caption-27",
+      "page_index": 6,
+      "caption": "Figure 3: SOP extraction workflow.",
+      "clip": [
+        48.40895080566406,
+        67.68437194824219,
+        563.6038818359375,
+        294.3193664550781
+      ],
+      "clip_area": 116761.20036399574,
+      "page_area": 484704.0,
+      "text_density": 0.11524476005024505,
+      "kind": "drawing_cluster_with_caption",
+      "score": 25.885314396985297,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-04/assets/figure_candidates/siriushelper-an-llm-agent-based-operations-assistant-for-big-data-platforms/04-p7-drawing_cluster_with_caption.png",
+      "filename": "04-p7-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-2-block-29",
+      "page_index": 2,
+      "caption": "In this section, we first present the overall architecture of Sir- iusHelper, and then describe the general workflow used to handle non-specialized requests.",
+      "clip": [
+        23.198000335693358,
+        181.7704345703125,
+        326.1560913085938,
+        490.5704345703125
+      ],
+      "clip_area": 93553.45849243166,
+      "page_area": 484704.0,
+      "text_density": 0.5160341959015358,
+      "kind": "captioned_figure",
+      "score": 13.03948287213813,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-04/assets/figure_candidates/siriushelper-an-llm-agent-based-operations-assistant-for-big-data-platforms/05-p3-captioned_figure.png",
+      "filename": "05-p3-captioned_figure.png"
+    },
+    {
+      "id": "page-2-drawing-cluster-0",
+      "page_index": 2,
+      "caption": "第 3 页矢量图主图候选",
+      "clip": [
+        50.40895080566406,
+        69.68357849121094,
+        561.596923828125,
+        254.15687561035156
+      ],
+      "clip_area": 94300.53083110368,
+      "page_area": 484704.0,
+      "text_density": 0.13338248368142785,
+      "kind": "drawing_cluster",
+      "score": 7.8448346550154815,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-04/assets/figure_candidates/siriushelper-an-llm-agent-based-operations-assistant-for-big-data-platforms/06-p3-drawing_cluster.png",
+      "filename": "06-p3-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-04/assets/figure_candidates/siriushelper-an-llm-agent-based-operations-assistant-for-big-data-platforms/contact-sheet.svg"
+}
