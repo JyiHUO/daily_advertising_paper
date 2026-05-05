@@ -3,7 +3,7 @@
   "provider": "bedrock-opus-47",
   "target_minutes": 12,
   "max_tokens": 6500,
-  "char_count": 2625,
+  "char_count": 2453,
   "focus_titles": [
     "The (Marginal) Value of a Search Ad: An Online Causal Framework for Repeated Second-price Auctions",
     "FEDIN: Frequency-Enhanced Deep Interest Network for Click-Through Rate Prediction"
