@@ -1,0 +1,57 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E3A5F">广告价值 ≠ 赢拍收益，而是"多赚的那部分"</text>
+  <text x="450" y="62" text-anchor="middle" font-size="14" fill="#3D4F65">Δv = v₁ (赢) − v₀ (输但自然流量也来了)</text>
+
+  <!-- Scenario box -->
+  <rect x="40" y="85" width="820" height="90" rx="10" fill="#FFF7ED" stroke="#E8B974" stroke-width="1.5"/>
+  <text x="60" y="115" font-size="15" fill="#1E3A5F" font-weight="bold">场景：用户搜索"猫粮"，品牌自然结果已排第一</text>
+  <text x="60" y="140" font-size="13" fill="#3D4F65">→ 就算不买赞助位，用户也大概率点进来</text>
+  <text x="60" y="160" font-size="13" fill="#3D4F65">→ 买了赞助位带来的"真正增量"其实很小</text>
+
+  <!-- Win branch -->
+  <rect x="60" y="210" width="340" height="140" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="230" y="238" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E3A5F">赢了拍卖</text>
+  <text x="230" y="268" text-anchor="middle" font-size="14" fill="#3D4F65">收益 = v₁</text>
+  <text x="230" y="290" text-anchor="middle" font-size="12" fill="#3D4F65">(自然点击 + 赞助点击)</text>
+  <circle cx="150" cy="322" r="6" fill="#4B8BDA"/>
+  <circle cx="170" cy="322" r="6" fill="#4B8BDA"/>
+  <circle cx="190" cy="322" r="6" fill="#4B8BDA"/>
+  <circle cx="210" cy="322" r="6" fill="#4B8BDA"/>
+  <circle cx="230" cy="322" r="6" fill="#4B8BDA"/>
+
+  <!-- Lose branch -->
+  <rect x="500" y="210" width="340" height="140" rx="10" fill="#F3F4F6" stroke="#6B7A8F" stroke-width="2"/>
+  <text x="670" y="238" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E3A5F">输了拍卖</text>
+  <text x="670" y="268" text-anchor="middle" font-size="14" fill="#3D4F65">收益 = v₀</text>
+  <text x="670" y="290" text-anchor="middle" font-size="12" fill="#3D4F65">(只靠自然结果，仍有点击)</text>
+  <circle cx="590" cy="322" r="6" fill="#6B7A8F"/>
+  <circle cx="610" cy="322" r="6" fill="#6B7A8F"/>
+  <circle cx="630" cy="322" r="6" fill="#6B7A8F"/>
+  <circle cx="650" cy="322" r="6" fill="#6B7A8F"/>
+
+  <!-- Minus -->
+  <text x="450" y="290" text-anchor="middle" font-size="34" font-weight="bold" fill="#1E3A5F">−</text>
+
+  <!-- Arrows down to Δv -->
+  <line x1="260" y1="350" x2="380" y2="408" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="640" y1="350" x2="520" y2="408" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Delta v -->
+  <rect x="320" y="410" width="260" height="62" rx="10" fill="#DCEBFB" stroke="#1E3A5F" stroke-width="2"/>
+  <text x="450" y="436" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E3A5F">真正广告价值</text>
+  <text x="450" y="459" text-anchor="middle" font-size="15" fill="#1E3A5F">Δv = v₁ − v₀ ≈ θ*·x</text>
+
+  <!-- Old vs new bid -->
+  <rect x="40" y="495" width="390" height="48" rx="8" fill="#FDECEA" stroke="#C75B4A" stroke-width="1.5"/>
+  <text x="60" y="524" font-size="13" fill="#8B2E1E">✗ 传统出价：按 v₁ 出高价 → 为本会发生的点击重复付费</text>
+
+  <rect x="470" y="495" width="390" height="48" rx="8" fill="#E8F5E9" stroke="#4A9B6E" stroke-width="1.5"/>
+  <text x="490" y="524" font-size="13" fill="#1E5A3A">✓ 本文出价：按 Δv 出价 → Δv≈0 时主动放弃，省预算</text>
+</svg>

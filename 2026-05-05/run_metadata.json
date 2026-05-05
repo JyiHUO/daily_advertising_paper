@@ -1,0 +1,19 @@
+{
+  "date": "2026-05-05",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL"
+  ],
+  "candidate_count": 12,
+  "supplementary_count": 1,
+  "focus_titles": [
+    "The (Marginal) Value of a Search Ad: An Online Causal Framework for Repeated Second-price Auctions",
+    "FEDIN: Frequency-Enhanced Deep Interest Network for Click-Through Rate Prediction"
+  ],
+  "focus_status": {
+    "The (Marginal) Value of a Search Ad: An Online Causal Framework for Repeated Second-price Auctions": "completed",
+    "FEDIN: Frequency-Enhanced Deep Interest Network for Click-Through Rate Prediction": "completed"
+  }
+}

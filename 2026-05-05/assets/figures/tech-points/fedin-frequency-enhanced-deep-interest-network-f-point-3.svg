@@ -1,0 +1,82 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="560" fill="#F7FAFC"/>
+
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">自适应谐振门控：在频域与时域间自动切换</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">target 注意力谱 → MLP+Sigmoid → 门控 g，缩放频域分支</text>
+
+  <!-- Input -->
+  <rect x="40" y="230" width="120" height="70" rx="10" fill="#FFF3E0" stroke="#E8A561" stroke-width="2"/>
+  <text x="100" y="262" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">用户序列 + target</text>
+  <text x="100" y="282" text-anchor="middle" font-size="12" fill="#3D4F65">RevIN 归一化</text>
+
+  <!-- Time branch -->
+  <rect x="220" y="120" width="220" height="90" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="330" y="152" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">时域分支</text>
+  <text x="330" y="178" text-anchor="middle" font-size="12" fill="#3D4F65">target attn → patch → Transformer</text>
+
+  <!-- Freq branch -->
+  <rect x="220" y="320" width="220" height="90" rx="12" fill="#E8F0FE" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="330" y="352" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">频域分支</text>
+  <text x="330" y="378" text-anchor="middle" font-size="12" fill="#3D4F65">FFT + 谱过滤，捕捉周期性兴趣</text>
+
+  <!-- Gate -->
+  <rect x="380" y="450" width="180" height="54" rx="12" fill="#FFE8E8" stroke="#D97757" stroke-width="2"/>
+  <text x="470" y="473" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">谐振门控 g</text>
+  <text x="470" y="492" text-anchor="middle" font-size="11" fill="#3D4F65">Sigmoid(MLP(谱振幅))</text>
+
+  <!-- gate multiplier on freq -->
+  <circle cx="510" cy="365" r="20" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
+  <text x="510" y="370" text-anchor="middle" font-size="15" font-weight="700" fill="#D97757">×g</text>
+
+  <!-- Sum -->
+  <circle cx="640" cy="265" r="26" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="640" y="272" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">+</text>
+
+  <!-- Top-k -->
+  <rect x="730" y="225" width="140" height="80" rx="12" fill="#E8F5E9" stroke="#5FA777" stroke-width="2"/>
+  <text x="800" y="253" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">Top-k Attn</text>
+  <text x="800" y="273" text-anchor="middle" font-size="11" fill="#3D4F65">保留最相关 k 个</text>
+  <text x="800" y="291" text-anchor="middle" font-size="11" fill="#3D4F65">→ 用户兴趣 U</text>
+
+  <!-- Arrows: input to branches -->
+  <path d="M160 250 Q190 200 220 175" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <path d="M160 280 Q190 330 220 355" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- time -> sum -->
+  <path d="M440 180 Q560 200 618 250" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- freq -> multiplier -->
+  <path d="M440 365 L488 365" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <!-- multiplier -> sum -->
+  <path d="M528 352 Q590 310 622 280" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- gate -> multiplier -->
+  <path d="M470 450 Q490 420 510 388" fill="none" stroke="#D97757" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrO)"/>
+
+  <!-- freq branch spectrum -> gate -->
+  <path d="M380 410 Q380 432 400 450" fill="none" stroke="#D97757" stroke-width="1.8" stroke-dasharray="3,3" marker-end="url(#arrO)"/>
+  <text x="320" y="438" font-size="11" fill="#D97757">谱振幅</text>
+
+  <!-- sum -> topk -->
+  <path d="M666 265 L728 265" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Bottom examples -->
+  <rect x="40" y="445" width="300" height="85" rx="10" fill="#FFFFFF" stroke="#C8D6E5" stroke-width="1.5"/>
+  <text x="190" y="468" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">规律用户：谱集中 · 低熵</text>
+  <text x="190" y="492" text-anchor="middle" font-size="12" fill="#D97757" font-weight="700">g ≈ 0.9，偏频域</text>
+  <text x="190" y="512" text-anchor="middle" font-size="11" fill="#3D4F65">周期性兴趣主导打分</text>
+
+  <rect x="600" y="445" width="280" height="85" rx="10" fill="#FFFFFF" stroke="#C8D6E5" stroke-width="1.5"/>
+  <text x="740" y="468" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">杂乱用户：谱像白噪声</text>
+  <text x="740" y="492" text-anchor="middle" font-size="12" fill="#4B8BDA" font-weight="700">g ≈ 0.2，偏时域</text>
+  <text x="740" y="512" text-anchor="middle" font-size="11" fill="#3D4F65">退回 patch Transformer</text>
+</svg>

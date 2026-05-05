@@ -4,18 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-05-04
+- **日期**：2026-05-05
 - **分类**：cs.IR + cs.AI + cs.LG + cs.CL
-- **候选论文数**：3
+- **候选论文数**：12
 - **必读论文**：
-  - Intelligent Elastic Feature Fading: Enabling Model Retrain-Free Feature Efficiency Rollouts at Scale
-  - SiriusHelper: An LLM Agent-Based Operations Assistant for Big Data Platforms
-- **日报路径**：[2026-05-04/daily_report.md](2026-05-04/daily_report.md)
+  - The (Marginal) Value of a Search Ad: An Online Causal Framework for Repeated Second-price Auctions
+  - FEDIN: Frequency-Enhanced Deep Interest Network for Click-Through Rate Prediction
+- **日报路径**：[2026-05-05/daily_report.md](2026-05-05/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-05-05 | cs.IR + cs.AI + cs.LG + cs.CL | 12 | 1 | The (Marginal) Value of a Search Ad: An Online Causal Framework for Repeated Second-price Auctions | [2026-05-05/daily_report.md](2026-05-05/daily_report.md) |
+|  |  |  | 2 | FEDIN: Frequency-Enhanced Deep Interest Network for Click-Through Rate Prediction |  |
 | 2026-05-04 | cs.IR + cs.AI + cs.LG + cs.CL | 3 | 1 | Intelligent Elastic Feature Fading: Enabling Model Retrain-Free Feature Efficiency Rollouts at Scale | [2026-05-04/daily_report.md](2026-05-04/daily_report.md) |
 |  |  |  | 2 | SiriusHelper: An LLM Agent-Based Operations Assistant for Big Data Platforms |  |
 | 2026-05-01 | cs.IR + cs.AI + cs.LG + cs.CL | 4 | 1 | Learning to Spend: Model Predictive Control for Budgeting under Non-Stationary Returns | [2026-05-01/daily_report.md](2026-05-01/daily_report.md) |

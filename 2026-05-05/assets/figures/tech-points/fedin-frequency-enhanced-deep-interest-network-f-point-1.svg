@@ -1,0 +1,85 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C45A5A"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E3A5F">Target-Conditioned Spectral Entropy</text>
+  <text x="450" y="62" text-anchor="middle" font-size="14" fill="#3D4F65">真兴趣 = 频谱集中；无关 target = 白噪声</text>
+
+  <!-- Input -->
+  <rect x="40" y="220" width="160" height="100" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="120" y="255" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">用户历史</text>
+  <text x="120" y="275" text-anchor="middle" font-size="12" fill="#3D4F65">behavior sequence</text>
+  <g transform="translate(55,292)">
+    <rect width="14" height="14" rx="2" fill="#4B8BDA"/>
+    <rect x="20" width="14" height="14" rx="2" fill="#F4A261"/>
+    <rect x="40" width="14" height="14" rx="2" fill="#4B8BDA"/>
+    <rect x="60" width="14" height="14" rx="2" fill="#F4A261"/>
+    <rect x="80" width="14" height="14" rx="2" fill="#4B8BDA"/>
+    <rect x="100" width="14" height="14" rx="2" fill="#F4A261"/>
+  </g>
+
+  <!-- Target attention block -->
+  <rect x="250" y="220" width="170" height="100" rx="10" fill="#FFF4E6" stroke="#F4A261" stroke-width="2"/>
+  <text x="335" y="252" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">Target Attention + FFT</text>
+  <text x="335" y="278" text-anchor="middle" font-size="12" fill="#3D4F65">score: a₁, a₂, …, aₙ</text>
+  <text x="335" y="300" text-anchor="middle" font-size="12" fill="#3D4F65">→ 频谱 X(f)</text>
+
+  <line x1="200" y1="270" x2="248" y2="270" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arrB)"/>
+
+  <!-- Case A: positive -->
+  <rect x="480" y="95" width="380" height="180" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="500" y="120" font-size="14" font-weight="bold" fill="#1E3A5F">target = 运动鞋 ✓ 真兴趣　→ 能量集中 · 熵低</text>
+
+  <line x1="500" y1="245" x2="840" y2="245" stroke="#3D4F65" stroke-width="1.2"/>
+  <g stroke="#4B8BDA" stroke-width="3">
+    <line x1="520" y1="245" x2="520" y2="150"/>
+    <line x1="555" y1="245" x2="555" y2="175"/>
+    <line x1="590" y1="245" x2="590" y2="230"/>
+    <line x1="625" y1="245" x2="625" y2="238"/>
+    <line x1="660" y1="245" x2="660" y2="240"/>
+    <line x1="695" y1="245" x2="695" y2="242"/>
+    <line x1="730" y1="245" x2="730" y2="239"/>
+    <line x1="765" y1="245" x2="765" y2="241"/>
+    <line x1="800" y1="245" x2="800" y2="243"/>
+  </g>
+  <text x="500" y="263" font-size="11" fill="#3D4F65">freq →</text>
+
+  <!-- Case B: negative -->
+  <rect x="480" y="310" width="380" height="180" rx="12" fill="#FBECEC" stroke="#C45A5A" stroke-width="2"/>
+  <text x="500" y="335" font-size="14" font-weight="bold" fill="#1E3A5F">target = 办公用品 ✗ 无关　→ 白噪声 · 熵高</text>
+
+  <line x1="500" y1="460" x2="840" y2="460" stroke="#3D4F65" stroke-width="1.2"/>
+  <g stroke="#C45A5A" stroke-width="3">
+    <line x1="515" y1="460" x2="515" y2="415"/>
+    <line x1="535" y1="460" x2="535" y2="400"/>
+    <line x1="555" y1="460" x2="555" y2="422"/>
+    <line x1="575" y1="460" x2="575" y2="395"/>
+    <line x1="595" y1="460" x2="595" y2="410"/>
+    <line x1="615" y1="460" x2="615" y2="402"/>
+    <line x1="635" y1="460" x2="635" y2="418"/>
+    <line x1="655" y1="460" x2="655" y2="392"/>
+    <line x1="675" y1="460" x2="675" y2="408"/>
+    <line x1="695" y1="460" x2="695" y2="415"/>
+    <line x1="715" y1="460" x2="715" y2="398"/>
+    <line x1="735" y1="460" x2="735" y2="420"/>
+    <line x1="755" y1="460" x2="755" y2="405"/>
+    <line x1="775" y1="460" x2="775" y2="412"/>
+    <line x1="795" y1="460" x2="795" y2="400"/>
+    <line x1="815" y1="460" x2="815" y2="418"/>
+  </g>
+  <text x="500" y="478" font-size="11" fill="#3D4F65">freq →</text>
+
+  <!-- arrows from attention block to two cases -->
+  <path d="M 420 245 Q 450 200 478 185" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arrB)"/>
+  <path d="M 420 295 Q 450 360 478 400" fill="none" stroke="#C45A5A" stroke-width="2" marker-end="url(#arrR)"/>
+
+  <!-- Bottom takeaway -->
+  <text x="450" y="532" text-anchor="middle" font-size="13" fill="#1E3A5F"><tspan font-weight="bold">洞察：</tspan><tspan>"是否真兴趣" 已编码在 target-conditioned 频谱里 → 指导频域过滤</tspan></text>
+</svg>

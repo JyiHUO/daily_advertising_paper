@@ -1,0 +1,76 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <rect width="880" height="560" fill="#FAF7F2"/>
+
+  <text x="440" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">二价拍卖：一次赢拍 → 所有低档位同时学习</text>
+  <text x="440" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">你出 b = 0.8 赢了，看到次高价 m = 0.35</text>
+
+  <!-- Left: one sample -->
+  <g>
+    <rect x="40" y="100" width="240" height="130" rx="10" fill="#FFF1E6" stroke="#E8A87C" stroke-width="2"/>
+    <text x="160" y="130" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">一次观测</text>
+    <text x="160" y="158" text-anchor="middle" font-size="14" fill="#3D4F65">出价 b = 0.8，赢拍</text>
+    <text x="160" y="180" text-anchor="middle" font-size="14" fill="#3D4F65">次高价 m = 0.35</text>
+    <text x="160" y="210" text-anchor="middle" font-size="12" fill="#8A5A3B">（二价付款规则直接暴露 m）</text>
+  </g>
+
+  <!-- Arrow from left box to right box -->
+  <path d="M285,165 L335,165" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#ar)"/>
+  <text x="310" y="155" text-anchor="middle" font-size="11" fill="#4B8BDA">推断多档</text>
+
+  <!-- Right: discretized bins -->
+  <g transform="translate(340,95)">
+    <rect x="0" y="0" width="500" height="360" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="250" y="28" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">离散档位上的反事实判断</text>
+
+    <text x="250" y="58" text-anchor="middle" font-size="13" fill="#1E3A5F">已知 m = 0.35，则所有 b ≥ 0.4 的档位都会赢</text>
+
+    <!-- b = 0.8 actually bid -->
+    <rect x="60" y="90" width="300" height="30" fill="#1E3A5F"/>
+    <text x="210" y="110" text-anchor="middle" font-size="13" fill="#FFFFFF" font-weight="700">b = 0.8 （实际出价） ✓ 赢</text>
+
+    <!-- b = 0.6 -->
+    <rect x="60" y="135" width="200" height="30" fill="#4B8BDA" opacity="0.8"/>
+    <text x="160" y="155" text-anchor="middle" font-size="13" fill="#FFFFFF" font-weight="700">b = 0.6 ✓ 赢（推断）</text>
+
+    <!-- b = 0.4 -->
+    <rect x="60" y="180" width="100" height="30" fill="#4B8BDA" opacity="0.65"/>
+    <text x="110" y="200" text-anchor="middle" font-size="13" fill="#FFFFFF" font-weight="700">b = 0.4 ✓ 赢</text>
+
+    <!-- b = 0.2 would lose -->
+    <rect x="60" y="225" width="40" height="30" fill="#C9D5E3" stroke="#8AA0B8"/>
+    <text x="135" y="245" text-anchor="start" font-size="13" fill="#6B7A8F" font-weight="700">b = 0.2 ✗ 会输</text>
+
+    <!-- number line -->
+    <line x1="60" y1="300" x2="460" y2="300" stroke="#1E3A5F" stroke-width="2"/>
+    <g font-size="12" fill="#1E3A5F" text-anchor="middle">
+      <line x1="60"  y1="295" x2="60"  y2="305" stroke="#1E3A5F" stroke-width="2"/>
+      <line x1="160" y1="295" x2="160" y2="305" stroke="#1E3A5F" stroke-width="2"/>
+      <line x1="260" y1="295" x2="260" y2="305" stroke="#1E3A5F" stroke-width="2"/>
+      <line x1="360" y1="295" x2="360" y2="305" stroke="#1E3A5F" stroke-width="2"/>
+      <line x1="460" y1="295" x2="460" y2="305" stroke="#1E3A5F" stroke-width="2"/>
+      <text x="60"  y="322">0.2</text>
+      <text x="160" y="322">0.4</text>
+      <text x="260" y="322">0.6</text>
+      <text x="360" y="322">0.8</text>
+      <text x="460" y="322">1.0</text>
+    </g>
+
+    <!-- m marker on the number line -->
+    <line x1="135" y1="275" x2="135" y2="305" stroke="#D95E5E" stroke-width="2.5"/>
+    <circle cx="135" cy="300" r="4" fill="#D95E5E"/>
+    <text x="135" y="268" text-anchor="middle" font-size="12" font-weight="700" fill="#D95E5E">m = 0.35</text>
+  </g>
+
+  <!-- bottom takeaway -->
+  <g>
+    <rect x="40" y="475" width="800" height="65" rx="10" fill="#FFF1E6" stroke="#E8A87C" stroke-width="2"/>
+    <text x="440" y="500" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">低档位累积样本最多 → p_i 估得最准 → CDF 置信区间更窄</text>
+    <text x="440" y="523" text-anchor="middle" font-size="12" fill="#3D4F65">这就是二价比一价在二元反馈下学习更快的来源</text>
+  </g>
+</svg>
