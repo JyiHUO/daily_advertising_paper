@@ -1,0 +1,17 @@
+{
+  "date": "2026-05-06",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL"
+  ],
+  "candidate_count": 1,
+  "supplementary_count": 1,
+  "focus_titles": [
+    "AniMatrix: An Anime Video Generation Model that Thinks in Art, Not Physics"
+  ],
+  "focus_status": {
+    "AniMatrix: An Anime Video Generation Model that Thinks in Art, Not Physics": "completed"
+  }
+}

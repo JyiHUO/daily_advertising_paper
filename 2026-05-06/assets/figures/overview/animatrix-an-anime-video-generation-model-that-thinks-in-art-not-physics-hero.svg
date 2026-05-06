@@ -1,0 +1,139 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 820" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F7F9FC"/>
+      <stop offset="1" stop-color="#EEF2F8"/>
+    </linearGradient>
+    <linearGradient id="physGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FDF2E9"/>
+      <stop offset="1" stop-color="#F5E0CE"/>
+    </linearGradient>
+    <linearGradient id="artGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E8F0FE"/>
+      <stop offset="1" stop-color="#D4E4FB"/>
+    </linearGradient>
+    <linearGradient id="coreGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4B8BDA"/>
+      <stop offset="1" stop-color="#2C5E9E"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E08B4A"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="820" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="640" y="50" text-anchor="middle" font-size="28" font-weight="700" fill="#1E3A5F">AniMatrix：让视频模型"以艺术思考"，而非"以物理思考"</text>
+  <text x="640" y="78" text-anchor="middle" font-size="15" fill="#3D4F65">覆盖物理先验 · 双通道条件注入 · 区分"有意艺术形变"与"结构崩坏"</text>
+
+  <!-- Physics side -->
+  <g>
+    <rect x="60" y="140" width="320" height="120" rx="14" fill="url(#physGrad)" stroke="#D8A67A" stroke-width="1.2"/>
+    <text x="220" y="170" text-anchor="middle" font-size="15" font-weight="700" fill="#8A4A1E">通用视频模型的物理先验</text>
+    <text x="220" y="195" text-anchor="middle" font-size="12" fill="#6B4320">真实运动 · 自然形变 · 光影守恒</text>
+    <text x="220" y="220" text-anchor="middle" font-size="12" fill="#A0522D">✗ 抹平 smear / 冲击帧 / Q版</text>
+    <text x="220" y="242" text-anchor="middle" font-size="12" fill="#A0522D">✗ 风格多样时训练崩溃</text>
+
+    <!-- Art side -->
+    <rect x="900" y="140" width="320" height="120" rx="14" fill="url(#artGrad)" stroke="#89A9D4" stroke-width="1.2"/>
+    <text x="1060" y="170" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">动漫的"艺术正确"</text>
+    <text x="1060" y="195" text-anchor="middle" font-size="12" fill="#3D4F65">Smear · 冲击帧 · Q版切换 · 速度线</text>
+    <text x="1060" y="220" text-anchor="middle" font-size="12" fill="#2C5E9E">✓ 故意违反物理 = 表达手段</text>
+    <text x="1060" y="242" text-anchor="middle" font-size="12" fill="#2C5E9E">✓ 千种并存、无统一"动漫物理"</text>
+
+    <!-- vs tension -->
+    <text x="640" y="215" text-anchor="middle" font-size="40" font-weight="700" fill="#B8462E" opacity="0.5">⇄</text>
+  </g>
+
+  <!-- Core engine -->
+  <g>
+    <rect x="380" y="300" width="520" height="230" rx="16" fill="url(#coreGrad)"/>
+    <text x="640" y="332" text-anchor="middle" font-size="18" font-weight="700" fill="#ffffff">AniMatrix：三步覆盖物理先验</text>
+
+    <!-- Step 1: redefine -->
+    <rect x="400" y="350" width="160" height="160" rx="10" fill="#ffffff" opacity="0.95"/>
+    <text x="480" y="372" text-anchor="middle" font-size="12" font-weight="700" fill="#2C5E9E">① 重定义"正确"</text>
+    <text x="480" y="392" text-anchor="middle" font-size="11" fill="#1E3A5F">Production Knowledge</text>
+    <text x="480" y="410" text-anchor="middle" font-size="10.5" fill="#3D4F65">S × M × C × V 四轴</text>
+    <text x="480" y="426" text-anchor="middle" font-size="10" fill="#3D4F65">风格·动作·镜头·特效</text>
+    <line x1="410" y1="440" x2="550" y2="440" stroke="#B8C8DC"/>
+    <text x="480" y="460" text-anchor="middle" font-size="10.5" font-weight="700" fill="#2C5E9E">AniCaption</text>
+    <text x="480" y="478" text-anchor="middle" font-size="10" fill="#3D4F65">像素 → 导演指令</text>
+    <text x="480" y="498" text-anchor="middle" font-size="9.5" fill="#6B7A8F">"画面是怎么做出来的"</text>
+
+    <!-- Step 2: override -->
+    <rect x="570" y="350" width="160" height="160" rx="10" fill="#ffffff" opacity="0.95"/>
+    <text x="650" y="372" text-anchor="middle" font-size="12" font-weight="700" fill="#2C5E9E">② 覆盖物理先验</text>
+    <text x="650" y="392" text-anchor="middle" font-size="11" fill="#1E3A5F">双通道 · 双路径注入</text>
+    <rect x="585" y="404" width="60" height="22" rx="4" fill="#E8F0FE" stroke="#4B8BDA"/>
+    <text x="615" y="419" text-anchor="middle" font-size="9.5" fill="#1E3A5F">Tag Enc.</text>
+    <rect x="655" y="404" width="60" height="22" rx="4" fill="#FDF2E9" stroke="#D8A67A"/>
+    <text x="685" y="419" text-anchor="middle" font-size="9.5" fill="#8A4A1E">T5 (冻结)</text>
+    <text x="650" y="448" text-anchor="middle" font-size="9.5" fill="#3D4F65">Cross-Attn 细控制</text>
+    <text x="650" y="466" text-anchor="middle" font-size="9.5" fill="#3D4F65">AdaLN 全局强制</text>
+    <text x="650" y="490" text-anchor="middle" font-size="9" fill="#6B7A8F">硬约束不被文本稀释</text>
+
+    <!-- Step 3: distinguish -->
+    <rect x="740" y="350" width="140" height="160" rx="10" fill="#ffffff" opacity="0.95"/>
+    <text x="810" y="372" text-anchor="middle" font-size="12" font-weight="700" fill="#2C5E9E">③ 区分艺术 / 失败</text>
+    <text x="810" y="392" text-anchor="middle" font-size="11" fill="#1E3A5F">课程 + 偏好优化</text>
+    <text x="810" y="412" text-anchor="middle" font-size="10" fill="#3D4F65">Style→Motion→Deform</text>
+    <text x="810" y="428" text-anchor="middle" font-size="10" fill="#3D4F65">由准物理 → 极端表达</text>
+    <line x1="750" y1="440" x2="870" y2="440" stroke="#B8C8DC"/>
+    <text x="810" y="460" text-anchor="middle" font-size="10.5" font-weight="700" fill="#2C5E9E">Deform-aware DPO</text>
+    <text x="810" y="478" text-anchor="middle" font-size="9.5" fill="#3D4F65">专用奖励模型打分</text>
+    <text x="810" y="496" text-anchor="middle" font-size="9.5" fill="#2C5E9E">✓ Smear　✗ 结构崩坏</text>
+  </g>
+
+  <!-- arrows from Physics bias into core (覆盖) -->
+  <path d="M260,260 Q300,290 400,335" fill="none" stroke="#E08B4A" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#arrO)"/>
+  <text x="150" y="295" font-size="11" fill="#8A4A1E">物理先验被逐步覆盖</text>
+
+  <!-- arrows from Art requirements into core -->
+  <path d="M1020,260 Q980,290 880,335" fill="none" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#arr)"/>
+  <text x="1020" y="295" font-size="11" fill="#2C5E9E">艺术约束被结构化注入</text>
+
+  <!-- Input example left -->
+  <g>
+    <rect x="60" y="580" width="300" height="180" rx="12" fill="#ffffff" stroke="#C9D6E6"/>
+    <text x="210" y="605" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">导演式输入</text>
+    <rect x="78" y="618" width="264" height="62" rx="6" fill="#EFF6FF" stroke="#B6CDE8"/>
+    <text x="88" y="636" font-size="10.5" fill="#1E3A5F" font-weight="700">结构化标签（硬约束）</text>
+    <text x="88" y="652" font-size="10" fill="#3D4F65">style: Shinkai + 2D Combat</text>
+    <text x="88" y="666" font-size="10" fill="#3D4F65">camera: dolly zoom, motion: sakuga</text>
+    <text x="88" y="678" font-size="9.5" fill="#3D4F65">vfx: speed lines + impact frame</text>
+    <rect x="78" y="688" width="264" height="56" rx="6" fill="#FDF2E9" stroke="#E5C9A8"/>
+    <text x="88" y="706" font-size="10.5" fill="#8A4A1E" font-weight="700">自由文本（软指导）</text>
+    <text x="88" y="722" font-size="10" fill="#6B4320">"樱花下忧郁的告别，</text>
+    <text x="88" y="736" font-size="10" fill="#6B4320">新海诚式光影"</text>
+  </g>
+
+  <!-- Output / results right -->
+  <g>
+    <rect x="920" y="580" width="300" height="180" rx="12" fill="#ffffff" stroke="#C9D6E6"/>
+    <text x="1070" y="605" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">专业动画师评测结果</text>
+    <text x="1070" y="628" text-anchor="middle" font-size="11" fill="#3D4F65">5 个制作维度中 4 项第一</text>
+
+    <text x="938" y="658" font-size="10.5" fill="#1E3A5F">Prompt Understanding</text>
+    <rect x="938" y="664" width="210" height="12" rx="3" fill="#E8F0FE"/>
+    <rect x="938" y="664" width="180" height="12" rx="3" fill="url(#coreGrad)"/>
+    <text x="1200" y="674" text-anchor="end" font-size="11" font-weight="700" fill="#2C5E9E">+22.4%</text>
+
+    <text x="938" y="698" font-size="10.5" fill="#1E3A5F">Artistic Motion</text>
+    <rect x="938" y="704" width="210" height="12" rx="3" fill="#E8F0FE"/>
+    <rect x="938" y="704" width="150" height="12" rx="3" fill="url(#coreGrad)"/>
+    <text x="1200" y="714" text-anchor="end" font-size="11" font-weight="700" fill="#2C5E9E">+16.9%</text>
+
+    <text x="938" y="742" font-size="10" fill="#6B7A8F">vs. Seedance-Pro 1.0</text>
+  </g>
+
+  <!-- connecting arrows: input -> core, core -> output -->
+  <path d="M210,580 Q210,550 400,530" fill="none" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#arr)"/>
+  <path d="M880,530 Q1070,550 1070,580" fill="none" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <text x="640" y="790" text-anchor="middle" font-size="11" fill="#6B7A8F">从"描述画面" → "描述制作决策"，让视频生成从物理先验迁移到艺术先验</text>
+</svg>

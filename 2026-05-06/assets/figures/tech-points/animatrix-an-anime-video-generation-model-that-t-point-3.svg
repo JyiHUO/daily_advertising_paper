@@ -1,0 +1,86 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#E8F1FB"/>
+      <stop offset="0.5" stop-color="#FFE8D6"/>
+      <stop offset="1" stop-color="#FFD1C2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="560" fill="#FAFBFD"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="24" font-weight="bold" fill="#1E3A5F">沿"偏离物理"三轴的课程学习</text>
+  <text x="450" y="68" text-anchor="middle" font-size="14" fill="#3D4F65">从接近物理的自然运动 → 逐步过渡到极端艺术表达</text>
+
+  <!-- Axis bar -->
+  <rect x="80" y="100" width="740" height="22" fill="url(#bg)" stroke="#4B8BDA" stroke-width="1" rx="11"/>
+  <text x="90" y="94" font-size="12" fill="#1E3A5F">接近物理</text>
+  <text x="810" y="94" font-size="12" text-anchor="end" fill="#B85C3A">极端艺术</text>
+
+  <!-- Stage 1 -->
+  <rect x="70" y="155" width="240" height="200" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="190" y="182" text-anchor="middle" font-size="17" font-weight="bold" fill="#1E3A5F">Stage 1 · 起步</text>
+  <text x="190" y="205" text-anchor="middle" font-size="12" fill="#3D4F65">写实风格 · 中等运动 · 低形变</text>
+  <rect x="100" y="220" width="180" height="90" rx="6" fill="#FFFFFF" stroke="#B8D0E8"/>
+  <circle cx="140" cy="260" r="14" fill="#F3C6A5"/>
+  <rect x="130" y="275" width="20" height="25" fill="#6B8FB8"/>
+  <circle cx="220" cy="260" r="14" fill="#F3C6A5"/>
+  <rect x="210" y="275" width="20" height="25" fill="#B85C3A"/>
+  <text x="190" y="330" text-anchor="middle" font-size="12" fill="#3D4F65">日常对话</text>
+
+  <!-- Stage 2 -->
+  <rect x="330" y="155" width="240" height="200" rx="12" fill="#FFF4E6" stroke="#E8A15A" stroke-width="2"/>
+  <text x="450" y="182" text-anchor="middle" font-size="17" font-weight="bold" fill="#1E3A5F">Stage 2 · 过渡</text>
+  <text x="450" y="205" text-anchor="middle" font-size="12" fill="#3D4F65">新海诚风 · 中等奔跑 · 中形变</text>
+  <rect x="360" y="220" width="180" height="90" rx="6" fill="#FFFFFF" stroke="#E8C89C"/>
+  <path d="M360,280 Q450,260 540,280 L540,310 L360,310 z" fill="#B8D4E8"/>
+  <circle cx="430" cy="255" r="12" fill="#F3C6A5"/>
+  <path d="M420,268 L440,268 L445,295 L415,295 z" fill="#D97848"/>
+  <path d="M445,290 L475,275" stroke="#D97848" stroke-width="4" stroke-linecap="round"/>
+  <text x="450" y="330" text-anchor="middle" font-size="12" fill="#3D4F65">奔跑 + 光影</text>
+
+  <!-- Stage 3 -->
+  <rect x="590" y="155" width="240" height="200" rx="12" fill="#FFE4DC" stroke="#D9663E" stroke-width="2"/>
+  <text x="710" y="182" text-anchor="middle" font-size="17" font-weight="bold" fill="#1E3A5F">Stage 3 · 极端</text>
+  <text x="710" y="205" text-anchor="middle" font-size="12" fill="#3D4F65">战斗冲击帧 · Q版切换 · 强形变</text>
+  <rect x="620" y="220" width="180" height="90" rx="6" fill="#FFFFFF" stroke="#E8A898"/>
+  <g stroke="#D9663E" stroke-width="2">
+    <line x1="660" y1="230" x2="640" y2="240"/>
+    <line x1="770" y1="230" x2="790" y2="240"/>
+    <line x1="660" y1="300" x2="640" y2="295"/>
+    <line x1="770" y1="300" x2="790" y2="295"/>
+  </g>
+  <polygon points="710,235 740,265 720,265 735,300 680,270 705,270 695,235" fill="#F5C542" stroke="#B85C3A" stroke-width="2"/>
+  <text x="710" y="330" text-anchor="middle" font-size="12" fill="#3D4F65">Q版 + 拉伸变形</text>
+
+  <!-- Arrows between stages -->
+  <line x1="312" y1="255" x2="326" y2="255" stroke="#4B8BDA" stroke-width="3" marker-end="url(#ar)"/>
+  <line x1="572" y1="255" x2="586" y2="255" stroke="#4B8BDA" stroke-width="3" marker-end="url(#ar)"/>
+
+  <!-- Three axes callout -->
+  <rect x="70" y="395" width="760" height="130" rx="10" fill="#F4F8FC" stroke="#B8D0E8"/>
+  <text x="450" y="422" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">三轴协同推进（非按分辨率/时长）</text>
+
+  <g font-size="13" fill="#1E3A5F">
+    <circle cx="150" cy="470" r="11" fill="#4B8BDA"/>
+    <text x="150" y="475" text-anchor="middle" fill="#FFF" font-weight="bold" font-size="12">S</text>
+    <text x="170" y="467">风格多样性</text>
+    <text x="170" y="487" font-size="11" fill="#3D4F65">写实 → 多元画风</text>
+
+    <circle cx="390" cy="470" r="11" fill="#E8A15A"/>
+    <text x="390" y="475" text-anchor="middle" fill="#FFF" font-weight="bold" font-size="12">M</text>
+    <text x="410" y="467">运动幅度</text>
+    <text x="410" y="487" font-size="11" fill="#3D4F65">Gini 0.71 → 0.38</text>
+
+    <circle cx="620" cy="470" r="11" fill="#D9663E"/>
+    <text x="620" y="475" text-anchor="middle" fill="#FFF" font-weight="bold" font-size="12">C</text>
+    <text x="640" y="467">形变强度</text>
+    <text x="640" y="487" font-size="11" fill="#3D4F65">低 → 拉伸/Q版切换</text>
+  </g>
+
+  <text x="450" y="515" text-anchor="middle" font-size="12" fill="#3D4F65" font-style="italic">动态重采样 wᵢ = (1 / nₛnₘnᴄnᵥ)^0.7  平衡长尾</text>
+</svg>

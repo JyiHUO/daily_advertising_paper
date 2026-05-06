@@ -1,0 +1,95 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="'Helvetica Neue',Arial,'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FAFBFD"/>
+      <stop offset="1" stop-color="#F1F5FB"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="560" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">不是"画面里有什么"，而是"导演怎么拍的"</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#3D4F65">AniMatrix 产品知识分类体系：把每帧映射到 4 轴坐标</text>
+
+  <!-- Left: anime frame -->
+  <g>
+    <rect x="50" y="100" width="220" height="180" rx="10" fill="#FFF3E0" stroke="#E8A87C" stroke-width="2"/>
+    <rect x="50" y="100" width="220" height="110" rx="10" fill="#FCD9A8"/>
+    <circle cx="200" cy="175" r="22" fill="#F7B267"/>
+    <line x1="70" y1="150" x2="110" y2="150" stroke="#E8A87C" stroke-width="2"/>
+    <line x1="70" y1="165" x2="120" y2="165" stroke="#E8A87C" stroke-width="2"/>
+    <line x1="70" y1="180" x2="105" y2="180" stroke="#E8A87C" stroke-width="2"/>
+    <circle cx="160" cy="215" r="10" fill="#1E3A5F"/>
+    <path d="M160 225 L155 255 L148 275 M160 225 L170 255 L177 275 M152 235 L140 245 M168 235 L182 230" stroke="#1E3A5F" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <text x="160" y="305" text-anchor="middle" font-size="14" fill="#1E3A5F" font-weight="600">一帧动漫画面</text>
+  </g>
+
+  <!-- Arrow to AniCaption -->
+  <line x1="278" y1="190" x2="352" y2="190" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="315" y="182" text-anchor="middle" font-size="11" fill="#3D4F65">AniCaption</text>
+
+  <!-- Middle: 4-axis box -->
+  <g>
+    <rect x="360" y="100" width="200" height="360" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="460" y="128" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">四轴坐标 T</text>
+    <text x="460" y="146" text-anchor="middle" font-size="11" fill="#3D4F65">S × M × C × V</text>
+
+    <g font-size="12" fill="#1E3A5F">
+      <rect x="378" y="162" width="164" height="62" rx="6" fill="#FFFFFF" stroke="#B9D4F1"/>
+      <text x="388" y="182" font-weight="700">S · 风格</text>
+      <text x="388" y="202" fill="#3D4F65">新海诚 + 2D 日常</text>
+      <text x="388" y="218" fill="#8A9AAE" font-size="10">11 视觉 / 9 运动</text>
+
+      <rect x="378" y="232" width="164" height="62" rx="6" fill="#FFFFFF" stroke="#B9D4F1"/>
+      <text x="388" y="252" font-weight="700">M · 动作</text>
+      <text x="388" y="272" fill="#3D4F65">奔跑 · 恐惧 · 高幅度</text>
+      <text x="388" y="288" fill="#8A9AAE" font-size="10">7 类 + 情绪 + 速度</text>
+
+      <rect x="378" y="302" width="164" height="62" rx="6" fill="#FFFFFF" stroke="#B9D4F1"/>
+      <text x="388" y="322" font-weight="700">C · 镜头</text>
+      <text x="388" y="342" fill="#3D4F65">中景 · 眼平 · 静止</text>
+      <text x="388" y="358" fill="#8A9AAE" font-size="10">5 景别 / 5 视角 / 12 运镜</text>
+
+      <rect x="378" y="372" width="164" height="62" rx="6" fill="#FFFFFF" stroke="#B9D4F1"/>
+      <text x="388" y="392" font-weight="700">V · 特效</text>
+      <text x="388" y="412" fill="#3D4F65">速度线 + 冲击帧</text>
+      <text x="388" y="428" fill="#8A9AAE" font-size="10">80+ 动漫专用标签</text>
+    </g>
+  </g>
+
+  <!-- Arrow to outputs -->
+  <line x1="562" y1="260" x2="632" y2="225" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <line x1="562" y1="300" x2="632" y2="375" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+
+  <!-- Right top: structured -->
+  <g>
+    <rect x="635" y="145" width="220" height="170" rx="10" fill="#E8F0FE" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="745" y="170" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">结构化标签</text>
+    <g font-size="11" fill="#1E3A5F" font-family="Menlo,Consolas,monospace">
+      <text x="650" y="195">{</text>
+      <text x="660" y="212">style: Shinkai+2D,</text>
+      <text x="660" y="228">motion: run+fear+high,</text>
+      <text x="660" y="244">camera: MS+eye+still,</text>
+      <text x="660" y="260">vfx: speed_lines</text>
+      <text x="650" y="276">}</text>
+    </g>
+    <text x="745" y="302" text-anchor="middle" font-size="11" fill="#3D4F65">制作决策 · 可控</text>
+  </g>
+
+  <!-- Right bottom: free text -->
+  <g>
+    <rect x="635" y="335" width="220" height="110" rx="10" fill="#FEF3E8" stroke="#E8A87C" stroke-width="1.8"/>
+    <text x="745" y="360" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">自由文本</text>
+    <text x="745" y="390" text-anchor="middle" font-size="12" fill="#3D4F65">"少年在黄昏天台</text>
+    <text x="745" y="408" text-anchor="middle" font-size="12" fill="#3D4F65">纵身跃起"</text>
+    <text x="745" y="432" text-anchor="middle" font-size="11" fill="#8A6240">叙事语境 · 灵动</text>
+  </g>
+
+  <!-- Bottom caption -->
+  <text x="450" y="505" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">两通道同时送入模型 → 学"怎么拍"，而不是"有什么"</text>
+  <line x1="260" y1="520" x2="640" y2="520" stroke="#4B8BDA" stroke-width="1" stroke-dasharray="3,3"/>
+</svg>
