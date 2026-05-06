@@ -1,0 +1,12 @@
+{
+  "report_date": "2026-05-06",
+  "provider": "bedrock-opus-47",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 2516,
+  "focus_titles": [
+    "AniMatrix: An Anime Video Generation Model that Thinks in Art, Not Physics"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Steve"
+}
