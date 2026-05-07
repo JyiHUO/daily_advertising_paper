@@ -1,0 +1,136 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="600" fill="#F7F5F0"/>
+
+  <text x="480" y="36" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E3A5F">截图锚定的四阶段 AOI 抽取</text>
+  <text x="480" y="58" text-anchor="middle" font-size="12" fill="#3D4F65">截图是唯一真相 · CV切条 → HTML贴标签 → 位置绑定 → 空隙填充</text>
+
+  <!-- Phase A: CV screenshot -->
+  <g>
+    <rect x="30" y="80" width="210" height="430" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="135" y="104" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">A. CV 切条</text>
+    <text x="135" y="122" text-anchor="middle" font-size="11" fill="#3D4F65">逐行标准差投影</text>
+
+    <rect x="55" y="140" width="160" height="42" fill="#FCE4A6" stroke="#C89B3C"/>
+    <text x="135" y="166" text-anchor="middle" font-size="11" fill="#5C4412">Ad card</text>
+
+    <rect x="55" y="188" width="160" height="36" fill="#FFFFFF" stroke="#8FA8C4"/>
+    <text x="135" y="211" text-anchor="middle" font-size="10" fill="#3D4F65">organic</text>
+    <rect x="55" y="230" width="160" height="36" fill="#FFFFFF" stroke="#8FA8C4"/>
+    <text x="135" y="253" text-anchor="middle" font-size="10" fill="#3D4F65">organic</text>
+    <rect x="55" y="272" width="160" height="36" fill="#FFFFFF" stroke="#8FA8C4"/>
+    <text x="135" y="295" text-anchor="middle" font-size="10" fill="#3D4F65">organic</text>
+
+    <rect x="55" y="314" width="160" height="48" fill="#E8F0E4" stroke="#7AA06B"/>
+    <text x="135" y="342" text-anchor="middle" font-size="11" fill="#3D4F65">PAA</text>
+
+    <rect x="55" y="368" width="160" height="36" fill="#FFFFFF" stroke="#8FA8C4"/>
+    <text x="135" y="391" text-anchor="middle" font-size="10" fill="#3D4F65">organic</text>
+    <rect x="55" y="410" width="160" height="36" fill="#FFFFFF" stroke="#8FA8C4"/>
+    <text x="135" y="433" text-anchor="middle" font-size="10" fill="#3D4F65">organic</text>
+
+    <text x="135" y="478" text-anchor="middle" font-size="10" fill="#3D4F65">输出：横向卡片跨度</text>
+  </g>
+
+  <!-- arrow A->B -->
+  <path d="M244 295 L294 295" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#ar)"/>
+
+  <!-- Phase B: HTML tag -->
+  <g>
+    <rect x="298" y="80" width="220" height="430" rx="8" fill="#FFF4E6" stroke="#E0923B" stroke-width="2"/>
+    <text x="408" y="104" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">B. HTML 贴标签</text>
+    <text x="408" y="122" text-anchor="middle" font-size="11" fill="#3D4F65">8层优先级 → 13 类之一</text>
+
+    <g font-size="11" fill="#1E3A5F">
+      <rect x="320" y="140" width="176" height="28" fill="#FCE4A6" stroke="#C89B3C"/>
+      <text x="408" y="158" text-anchor="middle">dd-top (广告)</text>
+
+      <rect x="320" y="172" width="176" height="28" fill="#FFFFFF" stroke="#8FA8C4"/>
+      <text x="408" y="190" text-anchor="middle">organic</text>
+
+      <rect x="320" y="204" width="176" height="28" fill="#FFFFFF" stroke="#8FA8C4"/>
+      <text x="408" y="222" text-anchor="middle">organic</text>
+
+      <rect x="320" y="236" width="176" height="28" fill="#FFFFFF" stroke="#8FA8C4"/>
+      <text x="408" y="254" text-anchor="middle">organic</text>
+
+      <rect x="320" y="268" width="176" height="28" fill="#E8F0E4" stroke="#7AA06B"/>
+      <text x="408" y="286" text-anchor="middle">paa</text>
+
+      <rect x="320" y="300" width="176" height="28" fill="#FFFFFF" stroke="#8FA8C4"/>
+      <text x="408" y="318" text-anchor="middle">organic</text>
+
+      <rect x="320" y="332" width="176" height="28" fill="#FFFFFF" stroke="#8FA8C4"/>
+      <text x="408" y="350" text-anchor="middle">organic</text>
+    </g>
+
+    <text x="408" y="390" text-anchor="middle" font-size="10" fill="#3D4F65">优先级链：</text>
+    <text x="408" y="408" text-anchor="middle" font-size="10" fill="#3D4F65">标题文本 → 结构类签名</text>
+    <text x="408" y="424" text-anchor="middle" font-size="10" fill="#3D4F65">→ data-attrid → 回退模式</text>
+    <text x="408" y="478" text-anchor="middle" font-size="10" fill="#3D4F65">输出：每卡片一个类型标签</text>
+  </g>
+
+  <!-- arrow B->C -->
+  <path d="M522 200 L582 200" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#ar)"/>
+  <!-- arrow B->D -->
+  <path d="M522 395 L750 395" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#ar)"/>
+
+  <!-- Phase C: bind position -->
+  <g>
+    <rect x="586" y="80" width="174" height="230" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="673" y="104" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">C. 绑定位置</text>
+    <text x="673" y="122" text-anchor="middle" font-size="11" fill="#3D4F65">主轴 0..N · 右栏/页脚 = -1</text>
+
+    <g font-size="11" fill="#1E3A5F">
+      <text x="605" y="150">pos 0 → dd-top</text>
+      <text x="605" y="170">pos 1 → organic</text>
+      <text x="605" y="190">pos 2 → organic</text>
+      <text x="605" y="210">pos 3 → organic</text>
+      <text x="605" y="230">pos 4 → paa</text>
+      <text x="605" y="250">pos 5 → organic</text>
+      <text x="605" y="270">pos 6 → organic</text>
+      <text x="605" y="294" fill="#9A3A30">右栏广告 → -1</text>
+    </g>
+  </g>
+
+  <!-- arrow C->D -->
+  <path d="M673 314 L673 350 L750 350" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#ar)"/>
+
+  <!-- Phase D: gap fill -->
+  <g>
+    <rect x="754" y="80" width="180" height="430" rx="8" fill="#FDECEC" stroke="#C9564B" stroke-width="2"/>
+    <text x="844" y="104" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">D. 空隙填充</text>
+    <text x="844" y="122" text-anchor="middle" font-size="11" fill="#3D4F65">相邻 organic 扩到中点</text>
+
+    <text x="844" y="150" text-anchor="middle" font-size="11" font-weight="bold" fill="#3D4F65">前</text>
+    <rect x="779" y="160" width="130" height="28" fill="#FFFFFF" stroke="#8FA8C4"/>
+    <text x="844" y="178" text-anchor="middle" font-size="10" fill="#1E3A5F">organic A</text>
+    <rect x="779" y="188" width="130" height="18" fill="#F0D9D9" stroke="#C9564B" stroke-dasharray="3,2"/>
+    <text x="844" y="201" text-anchor="middle" font-size="9" fill="#9A3A30">gap 点击丢失</text>
+    <rect x="779" y="206" width="130" height="28" fill="#FFFFFF" stroke="#8FA8C4"/>
+    <text x="844" y="224" text-anchor="middle" font-size="10" fill="#1E3A5F">organic B</text>
+
+    <path d="M844 250 L844 282" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+
+    <text x="844" y="304" text-anchor="middle" font-size="11" font-weight="bold" fill="#3D4F65">后</text>
+    <rect x="779" y="314" width="130" height="40" fill="#DCE8F7" stroke="#4B8BDA"/>
+    <text x="844" y="338" text-anchor="middle" font-size="10" fill="#1E3A5F">organic A ↓</text>
+    <line x1="779" y1="354" x2="909" y2="354" stroke="#4B8BDA" stroke-dasharray="4,3"/>
+    <rect x="779" y="354" width="130" height="40" fill="#DCE8F7" stroke="#4B8BDA"/>
+    <text x="844" y="378" text-anchor="middle" font-size="10" fill="#1E3A5F">organic B ↑</text>
+
+    <text x="844" y="430" text-anchor="middle" font-size="10" fill="#3D4F65">主列每个 Y 都有归属</text>
+    <text x="844" y="448" text-anchor="middle" font-size="10" fill="#3D4F65">（被广告/widget 截断）</text>
+    <text x="844" y="482" text-anchor="middle" font-size="10" fill="#3D4F65">输出：无缝像素级 AOI</text>
+  </g>
+
+  <!-- bottom note -->
+  <rect x="30" y="530" width="900" height="52" rx="6" fill="#1E3A5F"/>
+  <text x="480" y="552" text-anchor="middle" font-size="12" font-weight="bold" fill="#F7F5F0">为什么锚在截图？HTML 在新浏览器重渲染会漂移几十像素，只有当年截图坐标与眼动/鼠标对得上</text>
+  <text x="480" y="571" text-anchor="middle" font-size="11" fill="#D0DCEA">效果：84.5% 非广告点击从"混入绝对排名"升级为元素级语义归因</text>
+</svg>

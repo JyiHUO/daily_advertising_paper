@@ -4,17 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-05-06
+- **日期**：2026-05-07
 - **分类**：cs.IR + cs.AI + cs.LG + cs.CL
-- **候选论文数**：1
+- **候选论文数**：7
 - **必读论文**：
-  - AniMatrix: An Anime Video Generation Model that Thinks in Art, Not Physics
-- **日报路径**：[2026-05-06/daily_report.md](2026-05-06/daily_report.md)
+  - AllSERP: Exhaustive Per-Element Enrichment of the Versatile AdSERP Dataset
+  - One Pool, Two Caches: Adaptive HBM Partitioning for Accelerating Generative Recommender Serving
+- **日报路径**：[2026-05-07/daily_report.md](2026-05-07/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-05-07 | cs.IR + cs.AI + cs.LG + cs.CL | 7 | 1 | AllSERP: Exhaustive Per-Element Enrichment of the Versatile AdSERP Dataset | [2026-05-07/daily_report.md](2026-05-07/daily_report.md) |
+|  |  |  | 2 | One Pool, Two Caches: Adaptive HBM Partitioning for Accelerating Generative Recommender Serving |  |
 | 2026-05-06 | cs.IR + cs.AI + cs.LG + cs.CL | 1 | 1 | AniMatrix: An Anime Video Generation Model that Thinks in Art, Not Physics | [2026-05-06/daily_report.md](2026-05-06/daily_report.md) |
 | 2026-05-05 | cs.IR + cs.AI + cs.LG + cs.CL | 12 | 1 | The (Marginal) Value of a Search Ad: An Online Causal Framework for Repeated Second-price Auctions | [2026-05-05/daily_report.md](2026-05-05/daily_report.md) |
 |  |  |  | 2 | FEDIN: Frequency-Enhanced Deep Interest Network for Click-Through Rate Prediction |  |

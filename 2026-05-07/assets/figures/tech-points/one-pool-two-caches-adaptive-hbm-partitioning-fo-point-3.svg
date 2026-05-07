@@ -1,0 +1,71 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+    </marker>
+    <marker id="arG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5BA874"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">EMB-KV 双感知请求路由</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">给每个节点打一个"端到端延迟"分，三项合一</text>
+
+  <!-- Request -->
+  <rect x="40" y="230" width="150" height="100" rx="10" fill="#FFF4E6" stroke="#D97757" stroke-width="2"/>
+  <text x="115" y="262" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">请求 R</text>
+  <text x="115" y="286" text-anchor="middle" font-size="12" fill="#3D4F65">用户 u</text>
+  <text x="115" y="308" text-anchor="middle" font-size="11" fill="#3D4F65">Top-20 热分片画像</text>
+
+  <!-- Scorer -->
+  <rect x="250" y="170" width="280" height="220" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="390" y="200" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">打分器 score(n)</text>
+
+  <text x="270" y="236" font-size="12" fill="#3D4F65">w_kv · h_kv</text>
+  <text x="510" y="236" text-anchor="end" font-size="11" fill="#6B7A8F">KV 是否驻留</text>
+
+  <text x="270" y="266" font-size="12" fill="#3D4F65">w_emb · h_emb</text>
+  <text x="510" y="266" text-anchor="end" font-size="11" fill="#6B7A8F">热分片交集比例</text>
+
+  <text x="270" y="296" font-size="12" fill="#3D4F65">w_ld · (1 - load)</text>
+  <text x="510" y="296" text-anchor="end" font-size="11" fill="#6B7A8F">节点空闲度</text>
+
+  <line x1="270" y1="314" x2="510" y2="314" stroke="#B8C6D9" stroke-dasharray="3,3"/>
+  <text x="390" y="346" text-anchor="middle" font-size="11" fill="#6B7A8F">权重 = 离线 profile 归一化</text>
+  <text x="390" y="366" text-anchor="middle" font-size="11" fill="#6B7A8F">(miss 延迟 / 排队延迟)</text>
+
+  <!-- Arrow Req -> Scorer -->
+  <line x1="192" y1="280" x2="248" y2="280" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+
+  <!-- Node A -->
+  <rect x="600" y="110" width="240" height="110" rx="10" fill="#EEF7F0" stroke="#5BA874" stroke-width="2"/>
+  <text x="620" y="138" font-size="14" font-weight="700" fill="#1E3A5F">节点 A</text>
+  <text x="620" y="162" font-size="11" fill="#3D4F65">EMB 命中 14/20   h_emb=0.7</text>
+  <text x="620" y="182" font-size="11" fill="#3D4F65">KV 未驻留        h_kv=0</text>
+  <text x="620" y="202" font-size="11" fill="#5BA874">load 0.4  ✓ 可选</text>
+
+  <!-- Node B -->
+  <rect x="600" y="250" width="240" height="110" rx="10" fill="#FDECEC" stroke="#D97757" stroke-width="2"/>
+  <text x="620" y="278" font-size="14" font-weight="700" fill="#1E3A5F">节点 B</text>
+  <text x="620" y="302" font-size="11" fill="#3D4F65">KV 驻留          h_kv=1</text>
+  <text x="620" y="322" font-size="11" fill="#3D4F65">EMB 命中少       h_emb 低</text>
+  <text x="620" y="342" font-size="11" fill="#D97757">load 0.9  ✗ 超 85%</text>
+
+  <!-- Arrows Scorer -> Nodes -->
+  <line x1="532" y1="230" x2="598" y2="175" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <line x1="532" y1="320" x2="598" y2="305" stroke="#D97757" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arR)"/>
+
+  <!-- Decision box -->
+  <rect x="160" y="450" width="620" height="120" rx="10" fill="#FFF8E6" stroke="#E0B44A" stroke-width="2"/>
+  <text x="470" y="480" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">决策：B 综合分最高，但负载超阈 → 回退到 A</text>
+  <text x="470" y="508" text-anchor="middle" font-size="12" fill="#3D4F65">正常情况送 B（复用 KV）；挤爆时送 A（靠 EMB 亲和），避免 P99 爆 SLO</text>
+  <text x="470" y="534" text-anchor="middle" font-size="12" fill="#3D4F65">路由完成后更新用户亲和表</text>
+
+  <!-- Arrow Node A -> decision (actual landing) -->
+  <path d="M 720 222 Q 760 360 600 468" fill="none" stroke="#5BA874" stroke-width="2.5" marker-end="url(#arG)"/>
+  <text x="775" y="360" font-size="11" fill="#5BA874" font-weight="600">实际落点</text>
+</svg>

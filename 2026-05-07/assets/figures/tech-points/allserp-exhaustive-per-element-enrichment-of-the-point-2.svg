@@ -1,0 +1,85 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D64545"/>
+    </marker>
+  </defs>
+
+  <rect width="800" height="560" fill="#FAF7F2"/>
+
+  <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E3A5F">只用 Y 不够：X+Y 双轴点击归因</text>
+  <text x="400" y="56" text-anchor="middle" font-size="12" fill="#3D4F65">加上 X 约束，把右栏广告从自然结果点击里摘出来</text>
+
+  <!-- LEFT: Y-only (wrong) -->
+  <g>
+    <text x="200" y="90" text-anchor="middle" font-size="13" font-weight="bold" fill="#B4532A">✗ 只看 Y 坐标</text>
+    <rect x="60" y="100" width="280" height="370" fill="#FFFFFF" stroke="#D9B38C" stroke-width="1.5" rx="6"/>
+
+    <!-- main column -->
+    <rect x="80" y="125" width="170" height="55" fill="#EFF6FF" stroke="#9FC2E8"/>
+    <text x="165" y="157" text-anchor="middle" font-size="12" fill="#1E3A5F">自然结果 #1</text>
+
+    <rect x="80" y="190" width="170" height="55" fill="#FFE9D6" stroke="#E8A066"/>
+    <text x="165" y="214" text-anchor="middle" font-size="12" fill="#1E3A5F">自然结果 #2</text>
+    <text x="165" y="232" text-anchor="middle" font-size="10" fill="#3D4F65">y ≈ 400</text>
+
+    <rect x="80" y="255" width="170" height="55" fill="#EFF6FF" stroke="#9FC2E8"/>
+    <text x="165" y="287" text-anchor="middle" font-size="12" fill="#1E3A5F">自然结果 #3</text>
+
+    <!-- right rail ad -->
+    <rect x="265" y="190" width="60" height="70" fill="#FFD7B8" stroke="#E8A066" stroke-dasharray="3,3"/>
+    <text x="295" y="220" text-anchor="middle" font-size="10" fill="#B4532A">右栏</text>
+    <text x="295" y="235" text-anchor="middle" font-size="10" fill="#B4532A">广告</text>
+
+    <!-- click -->
+    <circle cx="295" cy="225" r="6" fill="#D64545" stroke="#fff" stroke-width="2"/>
+    <text x="295" y="275" text-anchor="middle" font-size="10" fill="#D64545">点击 (950, 400)</text>
+
+    <!-- wrong attribution arrow -->
+    <path d="M288,225 Q240,210 220,217" stroke="#D64545" stroke-width="2" fill="none" marker-end="url(#arrR)" stroke-dasharray="5,4"/>
+
+    <text x="200" y="410" text-anchor="middle" font-size="12" fill="#D64545">误判为点击了 #2</text>
+    <text x="200" y="430" text-anchor="middle" font-size="11" fill="#3D4F65">（只要 Y 对得上就算）</text>
+  </g>
+
+  <!-- RIGHT: X+Y (correct) -->
+  <g>
+    <text x="600" y="90" text-anchor="middle" font-size="13" font-weight="bold" fill="#2E7D5B">✓ X+Y 双轴（±5, ±10 容差）</text>
+    <rect x="460" y="100" width="280" height="370" fill="#FFFFFF" stroke="#9FC2E8" stroke-width="1.5" rx="6"/>
+
+    <!-- main axis zone -->
+    <rect x="480" y="120" width="170" height="260" fill="#EAF4EC" stroke="#7FB894" stroke-dasharray="4,3"/>
+    <text x="565" y="136" text-anchor="middle" font-size="10" fill="#2E7D5B">主轴 AOI 范围</text>
+
+    <rect x="490" y="150" width="150" height="50" fill="#EFF6FF" stroke="#9FC2E8"/>
+    <text x="565" y="179" text-anchor="middle" font-size="12" fill="#1E3A5F">自然结果 #1</text>
+
+    <rect x="490" y="210" width="150" height="50" fill="#EFF6FF" stroke="#9FC2E8"/>
+    <text x="565" y="239" text-anchor="middle" font-size="12" fill="#1E3A5F">自然结果 #2</text>
+
+    <rect x="490" y="270" width="150" height="50" fill="#EFF6FF" stroke="#9FC2E8"/>
+    <text x="565" y="299" text-anchor="middle" font-size="12" fill="#1E3A5F">自然结果 #3</text>
+
+    <!-- right rail -->
+    <rect x="660" y="210" width="60" height="70" fill="#FFD7B8" stroke="#E8A066"/>
+    <text x="690" y="240" text-anchor="middle" font-size="10" fill="#B4532A">右栏</text>
+    <text x="690" y="255" text-anchor="middle" font-size="10" fill="#B4532A">广告</text>
+    <circle cx="690" cy="270" r="6" fill="#D64545" stroke="#fff" stroke-width="2"/>
+
+    <!-- label arrow -->
+    <path d="M690,282 L690,330" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+    <rect x="608" y="335" width="130" height="50" fill="#FFF4E6" stroke="#E8A066" rx="4"/>
+    <text x="673" y="355" text-anchor="middle" font-size="12" font-weight="bold" fill="#B4532A">dd-right</text>
+    <text x="673" y="372" text-anchor="middle" font-size="10" fill="#3D4F65">X 超出主轴 → 打标剔除</text>
+
+    <text x="565" y="420" text-anchor="middle" font-size="11" fill="#2E7D5B">计算 organic CTR 时不计入</text>
+  </g>
+
+  <!-- Bottom summary -->
+  <rect x="80" y="490" width="640" height="55" fill="#EFF6FF" stroke="#4B8BDA" rx="6"/>
+  <text x="400" y="511" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">2776 次试验 → 231 次被标记剔除</text>
+  <text x="400" y="530" text-anchor="middle" font-size="11" fill="#3D4F65">67 右栏广告 · 91 页面 chrome/工具区 · 73 无点击或坐标异常</text>
+</svg>

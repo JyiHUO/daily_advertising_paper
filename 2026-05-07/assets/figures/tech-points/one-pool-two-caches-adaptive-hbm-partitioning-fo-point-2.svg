@@ -1,0 +1,69 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E4A14B"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">非侵入式边界调整：改地契，不搬家具</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#3D4F65">α: 0.50 → 0.54 ，EMB 多拿 3.2 GB</text>
+
+  <!-- ============ Step 1: Pagetable flip ============ -->
+  <g>
+    <rect x="40" y="90" width="820" height="170" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="60" y="115" font-size="15" font-weight="700" fill="#1E3A5F">① 瞬时翻页表（&lt; 1 µs） — KV 块物理不动，零迁移</text>
+
+    <!-- EMB part -->
+    <rect x="70" y="150" width="420" height="70" fill="#FCE8C8" stroke="#E4A14B" stroke-width="2"/>
+    <text x="280" y="182" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">EMB slab (LRU, 连续页)</text>
+
+    <!-- moved region -->
+    <rect x="490" y="150" width="55" height="70" fill="#FCE8C8" stroke="#E4A14B" stroke-width="2" stroke-dasharray="5 3"/>
+    <text x="517" y="143" text-anchor="middle" font-size="11" fill="#C87D2A">划给 EMB</text>
+
+    <!-- KV part -->
+    <rect x="545" y="150" width="285" height="70" fill="#DCEAF7" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="687" y="182" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">KV paged pool (free-list + 页表)</text>
+
+    <!-- boundary arrow -->
+    <line x1="478" y1="240" x2="555" y2="240" stroke="#4B8BDA" stroke-width="2" marker-end="url(#a)"/>
+    <text x="405" y="244" text-anchor="end" font-size="11" fill="#3D4F65">边界右移：仅改页表元数据</text>
+  </g>
+
+  <!-- ============ Step 2: Background refill ============ -->
+  <g>
+    <rect x="40" y="285" width="820" height="245" rx="10" fill="#FFF7EC" stroke="#E4A14B" stroke-width="1.5"/>
+    <text x="60" y="310" font-size="15" font-weight="700" fill="#1E3A5F">② 后台异步回填（~1 s，在 5 s 决策周期内摊掉）</text>
+
+    <!-- CPU DRAM -->
+    <rect x="70" y="350" width="170" height="130" rx="8" fill="#FFFFFF" stroke="#3D4F65" stroke-width="1.5"/>
+    <text x="155" y="400" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">CPU DRAM</text>
+    <text x="155" y="425" text-anchor="middle" font-size="12" fill="#3D4F65">完整 EMB 表（热页）</text>
+
+    <!-- HBM target -->
+    <rect x="660" y="350" width="170" height="130" rx="8" fill="#FCE8C8" stroke="#E4A14B" stroke-width="1.5"/>
+    <text x="745" y="400" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">HBM 新 EMB 区</text>
+    <text x="745" y="425" text-anchor="middle" font-size="12" fill="#3D4F65">3.2 GB 待填</text>
+
+    <!-- Critical stream (front) -->
+    <path d="M 240,385 Q 450,360 660,385" fill="none" stroke="#D14B4B" stroke-width="4" marker-end="url(#a)" opacity="0.85"/>
+    <text x="450" y="348" text-anchor="middle" font-size="12" font-weight="700" fill="#D14B4B">前台：EMB miss（关键路径，高优先）</text>
+
+    <!-- Background stream -->
+    <path d="M 240,450 Q 450,480 660,450" fill="none" stroke="#E4A14B" stroke-width="4" stroke-dasharray="8 5" marker-end="url(#ao)"/>
+    <text x="450" y="508" text-anchor="middle" font-size="12" font-weight="700" fill="#C87D2A">后台：cudaMemcpyAsync 独立流（可限流）</text>
+
+    <!-- Throttle indicator -->
+    <g transform="translate(415,410)">
+      <rect x="0" y="0" width="70" height="26" rx="4" fill="#FFFFFF" stroke="#D14B4B" stroke-width="1.5"/>
+      <text x="35" y="17" text-anchor="middle" font-size="11" font-weight="700" fill="#D14B4B">前台忙→让路</text>
+    </g>
+
+    <!-- PCIe label -->
+    <text x="450" y="378" text-anchor="middle" font-size="10" fill="#3D4F65" font-style="italic">PCIe H2D</text>
+  </g>
+</svg>

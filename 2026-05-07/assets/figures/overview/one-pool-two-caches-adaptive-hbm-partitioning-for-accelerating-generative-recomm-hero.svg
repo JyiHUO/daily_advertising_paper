@@ -1,0 +1,164 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="emb" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFE4CC"/>
+      <stop offset="1" stop-color="#F5A97F"/>
+    </linearGradient>
+    <linearGradient id="kv" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7FB0E0"/>
+      <stop offset="1" stop-color="#BFD6EC"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E07A4D"/>
+    </marker>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="2"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="760" fill="#FAFBFD"/>
+
+  <!-- Title -->
+  <text x="600" y="46" text-anchor="middle" font-size="25" font-weight="700" fill="#1E3A5F">HELM：一池两缓存，自适应 HBM 分区加速生成式推荐服务</text>
+  <text x="600" y="72" text-anchor="middle" font-size="14" fill="#3D4F65">EMB 热缓存 ⇄ KV 缓存：在有限 HBM 中联合调度分配与路由，P99 延迟降低 24–38%</text>
+
+  <!-- Central tension: HBM bar -->
+  <g transform="translate(180,120)">
+    <text x="420" y="0" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F">GPU HBM · 一块内存，两个争夺者</text>
+
+    <rect x="0" y="18" width="360" height="70" rx="8" fill="url(#emb)" filter="url(#sh)"/>
+    <text x="180" y="50" text-anchor="middle" font-size="18" font-weight="700" fill="#7A3E1D">EMB 热缓存</text>
+    <text x="180" y="72" text-anchor="middle" font-size="11" fill="#7A3E1D">embedding 查表 · 十TB级分片驻留</text>
+
+    <rect x="480" y="18" width="360" height="70" rx="8" fill="url(#kv)" filter="url(#sh)"/>
+    <text x="660" y="50" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">KV 缓存</text>
+    <text x="660" y="72" text-anchor="middle" font-size="11" fill="#1E3A5F">长序列 transformer · 解码复用</text>
+
+    <g transform="translate(420,53)">
+      <line x1="-60" y1="0" x2="60" y2="0" stroke="#E07A4D" stroke-width="2" stroke-dasharray="4 3"/>
+      <polygon points="-60,-8 -72,0 -60,8" fill="#E07A4D"/>
+      <polygon points="60,-8 72,0 60,8" fill="#E07A4D"/>
+      <circle r="22" fill="#FFFFFF" stroke="#E07A4D" stroke-width="2.2"/>
+      <text y="5" text-anchor="middle" font-size="17" font-weight="700" fill="#E07A4D">α</text>
+    </g>
+    <text x="420" y="108" text-anchor="middle" font-size="11.5" fill="#E07A4D" font-weight="600">最优 α 随负载漂移达 0.35 · 静态分配浪费 20–30% 延迟</text>
+  </g>
+
+  <!-- Core mechanism: HELM controller -->
+  <g transform="translate(140,280)">
+    <rect x="0" y="0" width="920" height="280" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="460" y="28" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">HELM · 运行时联合治理 HBM 分配与请求路由</text>
+
+    <!-- Left: 3-layer PPO -->
+    <g transform="translate(30,52)">
+      <rect width="270" height="210" rx="10" fill="#FFFFFF" stroke="#C9D6E6"/>
+      <text x="135" y="24" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1E3A5F">① 三层 PPO 自适应分配器</text>
+
+      <rect x="16" y="40" width="238" height="38" rx="6" fill="#E8EEF7"/>
+      <text x="135" y="57" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">离线 PPO 基策略（冻结）主方向 ΔαPPO</text>
+
+      <rect x="16" y="86" width="238" height="38" rx="6" fill="#FFE8D6"/>
+      <text x="135" y="103" text-anchor="middle" font-size="12" font-weight="600" fill="#7A3E1D">在线残差 MLP 适配器</text>
+      <text x="135" y="117" text-anchor="middle" font-size="10.5" fill="#7A3E1D">按 P99 偏差微调 ΔαAdap</text>
+
+      <rect x="16" y="132" width="238" height="38" rx="6" fill="#FCE4E4"/>
+      <text x="135" y="149" text-anchor="middle" font-size="12" font-weight="600" fill="#8B2F2F">突发恢复控制器</text>
+      <text x="135" y="163" text-anchor="middle" font-size="10.5" fill="#8B2F2F">P99 &gt; EMA+3σ 时强制偏向 KV</text>
+
+      <text x="135" y="192" text-anchor="middle" font-size="11" fill="#3D4F65">7 维状态 → α ∈ (0.1, 0.9)，单次 ≈ <tspan font-weight="700" fill="#E07A4D">32 μs</tspan></text>
+    </g>
+
+    <!-- Middle: non-intrusive boundary -->
+    <g transform="translate(325,52)">
+      <rect width="270" height="210" rx="10" fill="#FFFFFF" stroke="#C9D6E6"/>
+      <text x="135" y="24" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1E3A5F">② 非侵入式内存边界调整</text>
+
+      <g transform="translate(20,42)">
+        <rect x="0" y="0" width="100" height="18" rx="3" fill="#F5A97F"/>
+        <rect x="100" y="0" width="130" height="18" rx="3" fill="#7FB0E0"/>
+        <text x="50" y="13" text-anchor="middle" font-size="10" fill="#FFF" font-weight="600">EMB slab</text>
+        <text x="165" y="13" text-anchor="middle" font-size="10" fill="#FFF" font-weight="600">KV 页块池</text>
+
+        <path d="M100,26 C 115,38 125,38 140,26" stroke="#E07A4D" stroke-width="1.8" fill="none" marker-end="url(#arrO)"/>
+
+        <rect x="0" y="46" width="130" height="18" rx="3" fill="#F5A97F"/>
+        <rect x="130" y="46" width="100" height="18" rx="3" fill="#7FB0E0"/>
+        <text x="65" y="59" text-anchor="middle" font-size="10" fill="#FFF" font-weight="600">EMB slab ↑</text>
+        <text x="180" y="59" text-anchor="middle" font-size="10" fill="#FFF" font-weight="600">KV</text>
+      </g>
+
+      <text x="135" y="138" text-anchor="middle" font-size="11.5" font-weight="600" fill="#1E3A5F">改页表 &lt; 1 μs · 物理数据不搬迁</text>
+
+      <rect x="16" y="152" width="238" height="46" rx="6" fill="#EFF6FF"/>
+      <text x="135" y="170" text-anchor="middle" font-size="11" fill="#3D4F65">独立高优先级 CUDA 流异步回填</text>
+      <text x="135" y="188" text-anchor="middle" font-size="11" fill="#3D4F65">前台 miss 忙时限流，让路关键路径</text>
+    </g>
+
+    <!-- Right: routing -->
+    <g transform="translate(620,52)">
+      <rect width="270" height="210" rx="10" fill="#FFFFFF" stroke="#C9D6E6"/>
+      <text x="135" y="24" text-anchor="middle" font-size="13.5" font-weight="700" fill="#1E3A5F">③ EMB-KV 双感知路由</text>
+
+      <circle cx="30" cy="105" r="14" fill="#E07A4D"/>
+      <text x="30" y="109" text-anchor="middle" font-size="11" fill="#FFF" font-weight="700">R</text>
+      <text x="30" y="132" text-anchor="middle" font-size="10" fill="#3D4F65">请求 u</text>
+
+      <g transform="translate(80,50)">
+        <rect x="0" y="0" width="170" height="40" rx="5" fill="#E8EEF7"/>
+        <text x="10" y="17" font-size="10.5" font-weight="600" fill="#1E3A5F">节点 A</text>
+        <text x="10" y="32" font-size="9.5" fill="#3D4F65">h-emb=0.7  h-kv=0</text>
+
+        <rect x="0" y="50" width="170" height="40" rx="5" fill="#FFE4CC"/>
+        <text x="10" y="67" font-size="10.5" font-weight="600" fill="#7A3E1D">节点 B ★</text>
+        <text x="10" y="82" font-size="9.5" fill="#7A3E1D">h-kv=1 · 综合分最高</text>
+
+        <rect x="0" y="100" width="170" height="40" rx="5" fill="#E8EEF7"/>
+        <text x="10" y="117" font-size="10.5" font-weight="600" fill="#1E3A5F">节点 C</text>
+        <text x="10" y="132" font-size="9.5" fill="#3D4F65">负载 0.9 &gt; 85% · 跳过</text>
+      </g>
+
+      <path d="M44,105 Q 62,80 78,72" stroke="#4B8BDA" stroke-width="1.6" fill="none" marker-end="url(#arr)"/>
+      <path d="M44,105 Q 62,110 78,118" stroke="#E07A4D" stroke-width="2" fill="none" marker-end="url(#arrO)"/>
+      <path d="M44,105 Q 62,148 78,162" stroke="#C9D6E6" stroke-width="1.4" fill="none" stroke-dasharray="3 3"/>
+
+      <text x="135" y="200" text-anchor="middle" font-size="10.5" fill="#3D4F65">score = KV驻留 + EMB局部性 + 负载</text>
+    </g>
+  </g>
+
+  <!-- Feedback loop arrow (closed loop from outcomes back to controller) -->
+  <path d="M 1075 675 Q 1120 675 1120 420 Q 1120 280 1075 280" stroke="#4B8BDA" stroke-width="1.8" fill="none" stroke-dasharray="5 4" marker-end="url(#arr)"/>
+  <text x="1128" y="475" font-size="11" fill="#4B8BDA" transform="rotate(90 1128 475)">每 5s 指标反馈闭环</text>
+
+  <!-- Outcomes -->
+  <g transform="translate(140,620)">
+    <rect x="0" y="0" width="920" height="110" rx="12" fill="#FFF7ED" stroke="#E07A4D" stroke-width="1.2"/>
+    <text x="460" y="26" text-anchor="middle" font-size="14" font-weight="700" fill="#7A3E1D">生产级评测 · 32 节点 A100 · 三种负载形态</text>
+
+    <g transform="translate(40,42)">
+      <text x="0" y="18" font-size="26" font-weight="700" fill="#E07A4D">24–38%</text>
+      <text x="0" y="40" font-size="11.5" fill="#3D4F65">P99 延迟降低（对比最优静态策略）</text>
+    </g>
+    <g transform="translate(320,42)">
+      <text x="0" y="18" font-size="26" font-weight="700" fill="#E07A4D">93.5–99.6%</text>
+      <text x="0" y="40" font-size="11.5" fill="#3D4F65">SLO 满足率 · Steady / Trend / Burst</text>
+    </g>
+    <g transform="translate(640,42)">
+      <text x="0" y="18" font-size="26" font-weight="700" fill="#E07A4D">0.024–0.029</text>
+      <text x="0" y="40" font-size="11.5" fill="#3D4F65">与离线最优 α 的稳态偏差 · 不损吞吐</text>
+    </g>
+  </g>
+
+  <!-- side inputs to controller -->
+  <g>
+    <text x="132" y="400" text-anchor="end" font-size="10.5" fill="#3D4F65">热门用户占比</text>
+    <text x="132" y="416" text-anchor="end" font-size="10.5" fill="#3D4F65">KV / EMB 命中率</text>
+    <text x="132" y="432" text-anchor="end" font-size="10.5" fill="#3D4F65">序列长度 · P99</text>
+    <path d="M138 418 L 168 418" stroke="#4B8BDA" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+  </g>
+</svg>

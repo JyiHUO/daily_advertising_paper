@@ -1,0 +1,97 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="600" fill="#F7F5F0"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">元素级看 SERP：注意 ≠ 点击</text>
+  <text x="450" y="68" text-anchor="middle" font-size="13" fill="#3D4F65">原来只分"广告 vs 自然"，现在 13 类元素分别算注视率 / 点击份额</text>
+
+  <!-- Left: mock SERP -->
+  <rect x="50" y="95" width="280" height="455" rx="8" fill="#FFFFFF" stroke="#C9D4E2" stroke-width="1.5"/>
+  <text x="190" y="118" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">一次 SERP 上的视线路径</text>
+
+  <!-- dd-top -->
+  <rect x="80" y="135" width="240" height="60" rx="4" fill="#FFE3D5" stroke="#E88A5E" stroke-width="1.5"/>
+  <text x="92" y="157" font-size="12" font-weight="700" fill="#B4541C">dd-top 购物广告</text>
+  <text x="92" y="178" font-size="11" fill="#3D4F65">注视 99.7% · 点击 9.6%</text>
+
+  <!-- native-ad -->
+  <rect x="80" y="210" width="240" height="50" rx="4" fill="#FFF2DA" stroke="#D9A441" stroke-width="1.5"/>
+  <text x="92" y="232" font-size="12" font-weight="700" fill="#8A6410">native-ad 文字广告</text>
+  <text x="92" y="251" font-size="11" fill="#3D4F65">注视 36% · 点击 5.9%</text>
+
+  <!-- knowledge panel -->
+  <rect x="80" y="275" width="240" height="50" rx="4" fill="#E6E0F2" stroke="#8C7AB8" stroke-width="1.5"/>
+  <text x="92" y="297" font-size="12" font-weight="700" fill="#4A3B7A">knowledge / PAA</text>
+  <text x="92" y="316" font-size="11" fill="#3D4F65">注视 ~45% · 点击 &lt;2%</text>
+
+  <!-- organic -->
+  <rect x="80" y="340" width="240" height="75" rx="4" fill="#DCEBD8" stroke="#5FA04F" stroke-width="1.5"/>
+  <text x="92" y="362" font-size="12" font-weight="700" fill="#2E6B22">organic 自然结果</text>
+  <text x="92" y="382" font-size="11" fill="#3D4F65">首屏 97.3% · 点击 79.1%</text>
+  <text x="92" y="402" font-size="11" font-weight="700" fill="#2E6B22">← 转化主力</text>
+
+  <!-- eye path dashed (smooth down arrow along left edge) -->
+  <path d="M65,165 L65,235 L65,300 L65,377" fill="none" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#ar)"/>
+  <text x="58" y="275" font-size="11" fill="#4B8BDA" transform="rotate(-90 58,275)">视线下移</text>
+
+  <!-- click mark on organic -->
+  <circle cx="310" cy="377" r="9" fill="#E74C3C"/>
+  <text x="310" y="381" text-anchor="middle" font-size="11" font-weight="700" fill="#fff">✓</text>
+
+  <!-- Right: bar compare -->
+  <text x="635" y="118" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">看了 ≠ 点了</text>
+
+  <!-- legend -->
+  <rect x="470" y="135" width="14" height="10" fill="#8C7AB8"/>
+  <text x="490" y="144" font-size="11" fill="#3D4F65">注视率</text>
+  <rect x="560" y="135" width="14" height="10" fill="#C9D4E2"/>
+  <text x="580" y="144" font-size="11" fill="#3D4F65">点击份额</text>
+
+  <!-- axis -->
+  <line x1="420" y1="520" x2="850" y2="520" stroke="#1E3A5F" stroke-width="1.2"/>
+
+  <!-- group 1 dd-top : 99.7% vs 9.6% -->
+  <g>
+    <rect x="450" y="171" width="40" height="349" fill="#8C7AB8"/>
+    <text x="470" y="165" text-anchor="middle" font-size="10" fill="#4A3B7A">99.7%</text>
+    <rect x="495" y="486" width="40" height="34" fill="#C9D4E2"/>
+    <text x="515" y="480" text-anchor="middle" font-size="10" fill="#3D4F65">9.6%</text>
+    <text x="492" y="540" text-anchor="middle" font-size="11" font-weight="600" fill="#1E3A5F">dd-top</text>
+  </g>
+
+  <!-- group 2 native : 36% vs 5.9% -->
+  <g>
+    <rect x="570" y="394" width="40" height="126" fill="#8C7AB8"/>
+    <text x="590" y="388" text-anchor="middle" font-size="10" fill="#4A3B7A">36%</text>
+    <rect x="615" y="500" width="40" height="20" fill="#C9D4E2"/>
+    <text x="635" y="494" text-anchor="middle" font-size="10" fill="#3D4F65">5.9%</text>
+    <text x="612" y="540" text-anchor="middle" font-size="11" font-weight="600" fill="#1E3A5F">native-ad</text>
+  </g>
+
+  <!-- group 3 knowledge : 45% vs <2% -->
+  <g>
+    <rect x="690" y="363" width="40" height="157" fill="#8C7AB8"/>
+    <text x="710" y="357" text-anchor="middle" font-size="10" fill="#4A3B7A">45%</text>
+    <rect x="735" y="513" width="40" height="7" fill="#C9D4E2"/>
+    <text x="755" y="508" text-anchor="middle" font-size="10" fill="#3D4F65">&lt;2%</text>
+    <text x="732" y="540" text-anchor="middle" font-size="11" font-weight="600" fill="#1E3A5F">knowledge</text>
+  </g>
+
+  <!-- group 4 organic : ~? vs 79.1% (highlight click) -->
+  <g>
+    <rect x="810" y="100" width="40" height="420" fill="#C9D4E2" opacity="0.35"/>
+    <rect x="810" y="155" width="40" height="365" fill="#5FA04F"/>
+    <text x="830" y="149" text-anchor="middle" font-size="10" font-weight="700" fill="#2E6B22">79.1%</text>
+    <text x="830" y="540" text-anchor="middle" font-size="11" font-weight="600" fill="#1E3A5F">organic</text>
+    <text x="830" y="554" text-anchor="middle" font-size="9" fill="#2E6B22">(点击)</text>
+  </g>
+
+  <!-- bottom takeaway -->
+  <text x="450" y="585" text-anchor="middle" font-size="12" font-style="italic" fill="#1E3A5F">dd-top 被"强制观看"却不点，knowledge 一扫而过——广告位价值不能只看 CTR 平均值</text>
+</svg>

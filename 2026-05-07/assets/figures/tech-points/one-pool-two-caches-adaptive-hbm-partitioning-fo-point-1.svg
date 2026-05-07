@@ -1,0 +1,87 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D96A6A"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E3A5F">HBM 切蛋糕自动驾驶员：三层 PPO 分配器</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">每 5s 读 7 维仪表盘，微调 EMB 占比 α ∈ (0.1, 0.9)</text>
+
+  <!-- State input -->
+  <rect x="40" y="110" width="180" height="240" rx="10" fill="#FEF6E4" stroke="#E0A458" stroke-width="1.5"/>
+  <text x="130" y="135" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">7 维状态</text>
+  <text x="55" y="160" font-size="11.5" fill="#3D4F65">• 热门用户占比</text>
+  <text x="55" y="180" font-size="11.5" fill="#3D4F65">• KV / EMB 命中率</text>
+  <text x="55" y="200" font-size="11.5" fill="#3D4F65">• 平均序列长度</text>
+  <text x="55" y="220" font-size="11.5" fill="#3D4F65">• SLO 违约率 / 当前 α</text>
+  <text x="55" y="240" font-size="11.5" fill="#3D4F65">• 归一化 P99 延迟</text>
+  <rect x="55" y="260" width="150" height="72" rx="4" fill="#FFFFFF" stroke="#E0A458"/>
+  <text x="130" y="282" text-anchor="middle" font-size="11.5" font-weight="bold" fill="#1E3A5F">动作空间</text>
+  <text x="130" y="302" text-anchor="middle" font-size="11" fill="#3D4F65">Δα ∈ {±0.06, ±0.04,</text>
+  <text x="130" y="318" text-anchor="middle" font-size="11" fill="#3D4F65">±0.02, 0}</text>
+
+  <!-- Layer 1 PPO base -->
+  <rect x="270" y="100" width="230" height="80" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+  <text x="385" y="128" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">① PPO 基策略（冻结）</text>
+  <text x="385" y="150" text-anchor="middle" font-size="12" fill="#3D4F65">离线训练，给出主方向</text>
+  <text x="385" y="170" text-anchor="middle" font-size="13" font-weight="bold" fill="#2D6FBF">Δα_PPO = +0.04</text>
+
+  <!-- Layer 2 Residual -->
+  <rect x="270" y="215" width="230" height="80" rx="10" fill="#F0FAF3" stroke="#5BA678" stroke-width="1.8"/>
+  <text x="385" y="243" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">② 残差 MLP 适配器</text>
+  <text x="385" y="265" text-anchor="middle" font-size="12" fill="#3D4F65">在线微调，学习率随偏差放大</text>
+  <text x="385" y="285" text-anchor="middle" font-size="13" font-weight="bold" fill="#3F8F5A">Δα_Adap = −0.01</text>
+
+  <!-- Layer 3 Burst -->
+  <rect x="270" y="330" width="230" height="80" rx="10" fill="#FDEEEE" stroke="#D96A6A" stroke-width="1.8"/>
+  <text x="385" y="358" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">③ 突发恢复器</text>
+  <text x="385" y="380" text-anchor="middle" font-size="12" fill="#3D4F65">P99 &gt; EMA+3σ → 强制覆盖</text>
+  <text x="385" y="400" text-anchor="middle" font-size="13" font-weight="bold" fill="#B84A4A">保守：偏向 KV</text>
+
+  <!-- Arrows state -> layers -->
+  <path d="M220,170 L266,140" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M220,230 L266,255" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M220,290 L266,365" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+
+  <!-- Summation node -->
+  <circle cx="595" cy="255" r="38" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="2"/>
+  <text x="595" y="252" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E3A5F">Σ</text>
+  <text x="595" y="272" text-anchor="middle" font-size="10" fill="#3D4F65">clip(0.1, 0.9)</text>
+
+  <!-- Arrows layers -> sum -->
+  <path d="M500,140 L562,232" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M500,255 L557,255" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M500,370 L562,278" stroke="#D96A6A" stroke-width="2.2" fill="none" marker-end="url(#arR)" stroke-dasharray="5,3"/>
+  <text x="520" y="335" font-size="11" font-weight="bold" fill="#B84A4A">覆盖</text>
+
+  <!-- Output: HBM cake -->
+  <g transform="translate(690,130)">
+    <text x="85" y="18" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">HBM 分配</text>
+    <text x="85" y="38" text-anchor="middle" font-size="12" fill="#2D6FBF">α = 0.53</text>
+
+    <rect x="10" y="55" width="80" height="170" fill="#4B8BDA" stroke="#1E3A5F"/>
+    <text x="50" y="145" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFFFFF">EMB</text>
+    <text x="50" y="163" text-anchor="middle" font-size="11" fill="#EAF2FB">0.53</text>
+
+    <rect x="90" y="55" width="70" height="170" fill="#E8A95A" stroke="#1E3A5F"/>
+    <text x="125" y="145" text-anchor="middle" font-size="13" font-weight="bold" fill="#FFFFFF">KV</text>
+    <text x="125" y="163" text-anchor="middle" font-size="11" fill="#FFF4E0">0.47</text>
+
+    <text x="85" y="250" text-anchor="middle" font-size="11" fill="#3D4F65">单次决策 ≈ 32 μs</text>
+  </g>
+
+  <!-- Arrow sum -> HBM -->
+  <path d="M633,255 L695,255" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#ar)"/>
+
+  <!-- Bottom note -->
+  <rect x="40" y="460" width="820" height="115" rx="10" fill="#F4F7FB" stroke="#B8C9DF"/>
+  <text x="60" y="488" font-size="14" font-weight="bold" fill="#1E3A5F">例：热门用户 10% → 30%，KV 命中率飙升</text>
+  <text x="60" y="512" font-size="12.5" fill="#3D4F65">① PPO +0.04   ② 残差 −0.01   ⇒ α: 0.50 → 0.53（小步长 ±2–6% 防缓存震荡）</text>
+  <text x="60" y="535" font-size="12.5" fill="#B84A4A">③ 若 P99 突增超 EMA+3σ：恢复器覆盖输出，转向 KV，避免 EMB 扩张引发 H2D 拥塞</text>
+  <text x="60" y="558" font-size="12" fill="#3D4F65">联合治理 EMB &amp; KV 两侧，取代静态切分</text>
+</svg>

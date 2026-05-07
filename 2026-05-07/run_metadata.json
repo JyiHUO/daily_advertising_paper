@@ -1,0 +1,19 @@
+{
+  "date": "2026-05-07",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL"
+  ],
+  "candidate_count": 7,
+  "supplementary_count": 1,
+  "focus_titles": [
+    "AllSERP: Exhaustive Per-Element Enrichment of the Versatile AdSERP Dataset",
+    "One Pool, Two Caches: Adaptive HBM Partitioning for Accelerating Generative Recommender Serving"
+  ],
+  "focus_status": {
+    "AllSERP: Exhaustive Per-Element Enrichment of the Versatile AdSERP Dataset": "completed",
+    "One Pool, Two Caches: Adaptive HBM Partitioning for Accelerating Generative Recommender Serving": "completed"
+  }
+}
