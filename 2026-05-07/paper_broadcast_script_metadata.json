@@ -1,0 +1,13 @@
+{
+  "report_date": "2026-05-07",
+  "provider": "bedrock-opus-47",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 2833,
+  "focus_titles": [
+    "AllSERP: Exhaustive Per-Element Enrichment of the Versatile AdSERP Dataset",
+    "One Pool, Two Caches: Adaptive HBM Partitioning for Accelerating Generative Recommender Serving"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Steve"
+}
