@@ -1,0 +1,13 @@
+{
+  "report_date": "2026-05-08",
+  "provider": "bedrock-opus-47",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 3020,
+  "focus_titles": [
+    "Unified Value Alignment for Generative Recommendation in Industrial Advertising",
+    "Retrieval-Conditioned Topology Selection with Provable Budget Conservation for Multi-Agent Code Generation"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Steve"
+}
