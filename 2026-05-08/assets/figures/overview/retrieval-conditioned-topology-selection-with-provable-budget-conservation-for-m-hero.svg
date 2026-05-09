@@ -1,0 +1,220 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 820" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#F7FAFD"/>
+      <stop offset="1" stop-color="#EAF1F8"/>
+    </linearGradient>
+    <linearGradient id="gateG" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#FFE4B8"/>
+      <stop offset="1" stop-color="#FFC48A"/>
+    </linearGradient>
+    <linearGradient id="coreG" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#DCE9FB"/>
+      <stop offset="1" stop-color="#B9D3F3"/>
+    </linearGradient>
+    <filter id="sh" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dy="2"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.25"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D17F2B"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="820" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="640" y="48" text-anchor="middle" font-size="26" font-weight="700" fill="#1E3A5F">在烧钱之前就拦住：代码结构路由 + 预算守恒的静态契约</text>
+  <text x="640" y="76" text-anchor="middle" font-size="14" fill="#3D4F65">RGAO = 按仓库真实复杂度选拓扑  ⊕  LLM 调用前静态证明 ∑子预算 ≤ 父预算</text>
+
+  <!-- Left: Query + Retrieval -->
+  <g filter="url(#sh)">
+    <rect x="40" y="120" width="230" height="120" rx="14" fill="#FFFFFF" stroke="#B9C7DA"/>
+    <text x="155" y="148" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">用户任务 + 代码仓库</text>
+    <text x="155" y="174" text-anchor="middle" font-size="12" fill="#3D4F65">"把鉴权改成 OAuth"</text>
+    <text x="155" y="198" text-anchor="middle" font-size="11" fill="#6B7A90">树索引：目录→文件→符号</text>
+    <text x="155" y="218" text-anchor="middle" font-size="11" fill="#6B7A90">tree-sitter 抽取依赖元数据</text>
+  </g>
+
+  <!-- Retrieval as sensor -->
+  <g filter="url(#sh)">
+    <rect x="40" y="270" width="230" height="150" rx="14" fill="#EFF6FF" stroke="#8AB4E8"/>
+    <text x="155" y="296" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">层级检索（亚毫秒）</text>
+    <text x="155" y="318" text-anchor="middle" font-size="11" fill="#3D4F65">3 路并行 → RRF → rerank · 1-hop 依赖扩展</text>
+    <line x1="60" y1="336" x2="250" y2="336" stroke="#B9C7DA" stroke-dasharray="3,3"/>
+    <text x="155" y="358" text-anchor="middle" font-size="11" font-style="italic" fill="#4B6A8A">一次检索 · 两种用途</text>
+    <text x="155" y="380" text-anchor="middle" font-size="11" fill="#3AA07A">① 上下文 → Agent</text>
+    <text x="155" y="402" text-anchor="middle" font-size="11" fill="#D17F2B">② 复杂度向量 → 路由</text>
+  </g>
+
+  <!-- 5D complexity vector -->
+  <g filter="url(#sh)">
+    <rect x="305" y="265" width="200" height="160" rx="14" fill="#FFF7E8" stroke="#E8B872"/>
+    <text x="405" y="290" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">5 维复杂度向量</text>
+    <text x="320" y="315" font-size="11" fill="#3D4F65">• 依赖链最大深度</text>
+    <text x="320" y="335" font-size="11" fill="#3D4F65">• 涉及文件数 / 符号数</text>
+    <text x="320" y="355" font-size="11" fill="#3D4F65">• 树遍历深度</text>
+    <text x="320" y="375" font-size="11" fill="#3D4F65">• 跨模块耦合比率</text>
+    <text x="405" y="410" text-anchor="middle" font-size="10" fill="#A86B1F">误路由 30.1% → 8.2%</text>
+  </g>
+
+  <!-- Center core: Router + Topology -->
+  <g filter="url(#sh)">
+    <rect x="540" y="120" width="400" height="305" rx="18" fill="url(#coreG)" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="740" y="148" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">RGAO 路由器：按代码结构选拓扑</text>
+    <text x="740" y="168" text-anchor="middle" font-size="11" fill="#3D4F65">确定性阈值规则 · 毫秒级</text>
+
+    <!-- 4 topologies -->
+    <rect x="558" y="188" width="175" height="52" rx="8" fill="#FFFFFF" stroke="#8AB4E8"/>
+    <text x="645" y="208" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">FASTPATH 单体直出</text>
+    <text x="645" y="226" text-anchor="middle" font-size="10" fill="#6B7A90">1 文件 · 耦合 0</text>
+
+    <rect x="747" y="188" width="175" height="52" rx="8" fill="#FFFFFF" stroke="#8AB4E8"/>
+    <text x="835" y="208" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">单专家</text>
+    <text x="835" y="226" text-anchor="middle" font-size="10" fill="#6B7A90">局部小改动</text>
+
+    <rect x="558" y="250" width="175" height="52" rx="8" fill="#FFFFFF" stroke="#8AB4E8"/>
+    <text x="645" y="270" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">流水线 / 并行群</text>
+    <text x="645" y="288" text-anchor="middle" font-size="10" fill="#6B7A90">中等跨模块</text>
+
+    <rect x="747" y="250" width="175" height="52" rx="8" fill="#FFFFFF" stroke="#8AB4E8" stroke-width="2"/>
+    <text x="835" y="270" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">MULTIAGENT 深研</text>
+    <text x="835" y="288" text-anchor="middle" font-size="10" fill="#6B7A90">monorepo / 高耦合</text>
+
+    <!-- DAG construction -->
+    <rect x="558" y="320" width="364" height="90" rx="10" fill="#FFFFFF" stroke="#4B8BDA" stroke-dasharray="4,3"/>
+    <text x="740" y="342" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">构造执行 DAG · 尚未调用任何 LLM</text>
+    <!-- mini dag -->
+    <circle cx="630" cy="380" r="12" fill="#DCE9FB" stroke="#4B8BDA"/>
+    <text x="630" y="384" text-anchor="middle" font-size="10" fill="#1E3A5F">父</text>
+    <circle cx="710" cy="395" r="9" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <circle cx="770" cy="395" r="9" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <circle cx="830" cy="395" r="9" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <line x1="640" y1="385" x2="700" y2="393" stroke="#4B8BDA"/>
+    <line x1="641" y1="383" x2="761" y2="392" stroke="#4B8BDA"/>
+    <line x1="641" y1="381" x2="821" y2="390" stroke="#4B8BDA"/>
+    <text x="860" y="399" font-size="10" fill="#3D4F65">⟨指令,上下文,工具,模型⟩</text>
+  </g>
+
+  <!-- Right: Budget contract -->
+  <g filter="url(#sh)">
+    <rect x="975" y="120" width="265" height="305" rx="14" fill="#FEF2F2" stroke="#E8A4A4"/>
+    <text x="1107" y="148" text-anchor="middle" font-size="14" font-weight="700" fill="#8B2E2E">静态预算守恒校验</text>
+    <text x="1107" y="168" text-anchor="middle" font-size="11" fill="#6B4040">O(V+E) 拓扑序扫描</text>
+
+    <rect x="995" y="184" width="225" height="58" rx="8" fill="#FFFFFF" stroke="#E8A4A4"/>
+    <text x="1107" y="204" text-anchor="middle" font-size="11" font-weight="700" fill="#1E3A5F">父预算 B_root</text>
+    <text x="1107" y="221" text-anchor="middle" font-size="10" fill="#3D4F65">(迭代,调用,token,秒,重试,交接)</text>
+    <text x="1107" y="235" text-anchor="middle" font-size="10" fill="#6B7A90">(30,100,500k,300s,5,3)</text>
+
+    <text x="1107" y="266" text-anchor="middle" font-size="17" font-weight="700" fill="#8B2E2E">∑ B_child  ≤  B_parent</text>
+    <text x="1107" y="283" text-anchor="middle" font-size="10" font-style="italic" fill="#6B4040">逐维不等式 · 结构归纳</text>
+
+    <rect x="995" y="294" width="108" height="50" rx="8" fill="#E8F7EE" stroke="#3AA07A"/>
+    <text x="1049" y="314" text-anchor="middle" font-size="11" font-weight="700" fill="#1F6B4A">通过 ✓</text>
+    <text x="1049" y="332" text-anchor="middle" font-size="10" fill="#2E7A5A">执行 LLM 调用</text>
+
+    <rect x="1111" y="294" width="108" height="50" rx="8" fill="#FCE4E4" stroke="#D96464"/>
+    <text x="1165" y="314" text-anchor="middle" font-size="11" font-weight="700" fill="#8B2E2E">拒绝 ✗</text>
+    <text x="1165" y="332" text-anchor="middle" font-size="10" fill="#8B2E2E">0 token 浪费</text>
+
+    <text x="1107" y="366" text-anchor="middle" font-size="10" fill="#6B4040">重试也从父池扣除 · 与干预策略无关</text>
+    <text x="1107" y="394" text-anchor="middle" font-size="11" font-weight="700" fill="#8B2E2E">Agent Contracts 做不到：</text>
+    <text x="1107" y="412" text-anchor="middle" font-size="10" fill="#8B2E2E">它们只能运行时检查</text>
+  </g>
+
+  <!-- Flow arrows -->
+  <line x1="270" y1="175" x2="535" y2="200" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="395" y="170" text-anchor="middle" font-size="11" fill="#3D4F65">查询</text>
+
+  <line x1="270" y1="345" x2="300" y2="345" stroke="#D17F2B" stroke-width="2" marker-end="url(#arO)"/>
+
+  <path d="M505,345 Q520,345 535,305" stroke="#D17F2B" stroke-width="2" fill="none" marker-end="url(#arO)"/>
+  <text x="515" y="328" font-size="10" fill="#A86B1F">路由信号</text>
+
+  <line x1="940" y1="270" x2="972" y2="270" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="956" y="260" text-anchor="middle" font-size="10" fill="#3D4F65">DAG</text>
+
+  <!-- Gate bar: before any LLM call -->
+  <rect x="40" y="470" width="1200" height="46" rx="10" fill="url(#gateG)" stroke="#D17F2B"/>
+  <text x="640" y="499" text-anchor="middle" font-size="15" font-weight="700" fill="#8B4A12">🔒 强制顺序：检索 → 复杂度向量 → 选拓扑 → 构造 DAG → 静态校验预算 → 才允许任何 LLM 调用</text>
+
+  <!-- Bottom left: blind spots -->
+  <g filter="url(#sh)">
+    <rect x="40" y="548" width="380" height="220" rx="14" fill="#FFFFFF" stroke="#B9C7DA"/>
+    <text x="230" y="576" text-anchor="middle" font-size="14" font-weight="700" fill="#8B2E2E">现有方案的两类盲点</text>
+
+    <rect x="58" y="594" width="344" height="74" rx="8" fill="#FAFBFD" stroke="#D0D7E2"/>
+    <text x="70" y="614" font-size="12" font-weight="700" fill="#1E3A5F">纯文本路由器（AdaptOrch / 正则）</text>
+    <text x="70" y="634" font-size="11" fill="#3D4F65">同一句 query 打到不同仓库</text>
+    <text x="70" y="654" font-size="11" fill="#8B2E2E">→ 映射到同一拓扑，无视代码实际规模</text>
+
+    <rect x="58" y="676" width="344" height="74" rx="8" fill="#FAFBFD" stroke="#D0D7E2"/>
+    <text x="70" y="696" font-size="12" font-weight="700" fill="#1E3A5F">运行时预算（Agent Contracts）</text>
+    <text x="70" y="716" font-size="11" fill="#3D4F65">发现超预算时 LLM 已烧了一堆 token</text>
+    <text x="70" y="736" font-size="11" fill="#8B2E2E">→ 无法给出"调用前证明"的保证</text>
+  </g>
+
+  <!-- Bottom center: joint property -->
+  <g filter="url(#sh)">
+    <rect x="440" y="548" width="400" height="220" rx="14" fill="#F0F9F4" stroke="#3AA07A" stroke-width="2"/>
+    <text x="640" y="576" text-anchor="middle" font-size="14" font-weight="700" fill="#1F6B4A">两件事组合才拿到的联合性质 P</text>
+
+    <g transform="translate(460,600)">
+      <circle cx="70" cy="60" r="50" fill="#D17F2B" fill-opacity="0.22" stroke="#D17F2B"/>
+      <circle cx="140" cy="60" r="50" fill="#4B8BDA" fill-opacity="0.22" stroke="#4B8BDA"/>
+      <text x="40" y="50" font-size="10" fill="#A86B1F" text-anchor="middle">(i) 条件于</text>
+      <text x="40" y="66" font-size="10" fill="#A86B1F" text-anchor="middle">代码结构</text>
+      <text x="170" y="50" font-size="10" fill="#1E3A5F" text-anchor="middle">(ii) 调用前</text>
+      <text x="170" y="66" font-size="10" fill="#1E3A5F" text-anchor="middle">守恒证明</text>
+      <text x="105" y="58" font-size="12" font-weight="700" fill="#1F6B4A" text-anchor="middle">P</text>
+      <text x="105" y="74" font-size="9" fill="#1F6B4A" text-anchor="middle">仅此可得</text>
+    </g>
+
+    <text x="700" y="624" font-size="11" fill="#3D4F65">• 决策看真实代码状态</text>
+    <text x="700" y="648" font-size="11" fill="#3D4F65">• 烧钱之前就被拦住</text>
+    <text x="700" y="672" font-size="11" fill="#3D4F65">• 重试不会偷偷超预算</text>
+    <text x="700" y="696" font-size="11" fill="#3D4F65">• 与干预/重试策略无关</text>
+    <text x="640" y="744" text-anchor="middle" font-size="11" font-style="italic" fill="#1F6B4A">单独任何一派都不具备</text>
+  </g>
+
+  <!-- Bottom right: analogy to ads -->
+  <g filter="url(#sh)">
+    <rect x="860" y="548" width="380" height="220" rx="14" fill="#FFFFFF" stroke="#B9C7DA"/>
+    <text x="1050" y="576" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">迁移到广告系统的同构映射</text>
+
+    <g font-size="11">
+      <rect x="876" y="594" width="170" height="28" rx="6" fill="#EFF6FF" stroke="#8AB4E8"/>
+      <text x="961" y="613" text-anchor="middle" fill="#1E3A5F">代码复杂度向量</text>
+      <text x="1060" y="613" text-anchor="middle" fill="#3D4F65">↔</text>
+      <rect x="1080" y="594" width="150" height="28" rx="6" fill="#FFF7E8" stroke="#E8B872"/>
+      <text x="1155" y="613" text-anchor="middle" fill="#8B4A12">流量特征向量</text>
+
+      <rect x="876" y="628" width="170" height="28" rx="6" fill="#EFF6FF" stroke="#8AB4E8"/>
+      <text x="961" y="647" text-anchor="middle" fill="#1E3A5F">拓扑选择</text>
+      <text x="1060" y="647" text-anchor="middle" fill="#3D4F65">↔</text>
+      <rect x="1080" y="628" width="150" height="28" rx="6" fill="#FFF7E8" stroke="#E8B872"/>
+      <text x="1155" y="647" text-anchor="middle" fill="#8B4A12">召回/出价链路</text>
+
+      <rect x="876" y="662" width="170" height="28" rx="6" fill="#EFF6FF" stroke="#8AB4E8"/>
+      <text x="961" y="681" text-anchor="middle" fill="#1E3A5F">6 维预算向量</text>
+      <text x="1060" y="681" text-anchor="middle" fill="#3D4F65">↔</text>
+      <rect x="1080" y="662" width="150" height="28" rx="6" fill="#FFF7E8" stroke="#E8B872"/>
+      <text x="1155" y="681" text-anchor="middle" fill="#8B4A12">多维 pacing 配额</text>
+
+      <rect x="876" y="696" width="170" height="28" rx="6" fill="#FEF2F2" stroke="#E8A4A4"/>
+      <text x="961" y="715" text-anchor="middle" fill="#8B2E2E">调用前静态拒绝</text>
+      <text x="1060" y="715" text-anchor="middle" fill="#3D4F65">↔</text>
+      <rect x="1080" y="696" width="150" height="28" rx="6" fill="#E8F7EE" stroke="#3AA07A"/>
+      <text x="1155" y="715" text-anchor="middle" fill="#1F6B4A">请求前 admission</text>
+    </g>
+    <text x="1050" y="752" text-anchor="middle" font-size="10" font-style="italic" fill="#6B7A90">在昂贵召回/打分之前就证明预算守恒</text>
+  </g>
+
+  <text x="640" y="800" text-anchor="middle" font-size="11" fill="#6B7A90">核心：一次低成本检索同时供给"上下文"与"路由信号"，把拓扑选择和预算契约绑进同一张可静态验证的 DAG</text>
+</svg>

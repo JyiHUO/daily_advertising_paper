@@ -1,0 +1,73 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E08A3C"/>
+    </marker>
+    <marker id="arrK" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1E3A5F"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">生成即排序：每步解码都让"价值"投一票</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">生成头(语义) + 价值头(eCPM) 逐元素相加 → softmax</text>
+
+  <!-- Shared backbone -->
+  <rect x="60" y="125" width="180" height="100" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="150" y="158" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">共享骨干</text>
+  <text x="150" y="182" text-anchor="middle" font-size="12" fill="#3D4F65">HSTU Encoder</text>
+  <text x="150" y="202" text-anchor="middle" font-size="12" fill="#3D4F65">SID Decoder (MoE+MoR)</text>
+
+  <!-- Generation head -->
+  <rect x="310" y="95" width="200" height="90" rx="10" fill="#E8F1FB" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="410" y="125" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">生成头 (Policy)</text>
+  <text x="410" y="148" text-anchor="middle" font-size="12" fill="#3D4F65">语义 logits</text>
+  <text x="410" y="170" text-anchor="middle" font-size="11" fill="#3D4F65">"下一个 token 像不像"</text>
+
+  <!-- Value head -->
+  <rect x="310" y="215" width="200" height="90" rx="10" fill="#FDF1E3" stroke="#E08A3C" stroke-width="2"/>
+  <text x="410" y="245" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">价值头 (Critic)</text>
+  <text x="410" y="268" text-anchor="middle" font-size="12" fill="#3D4F65">eCPM token 价值分</text>
+  <text x="410" y="290" text-anchor="middle" font-size="11" fill="#3D4F65">"下一个 token 赚不赚"</text>
+
+  <!-- Arrows backbone -> heads -->
+  <line x1="240" y1="160" x2="308" y2="140" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="240" y1="195" x2="308" y2="260" stroke="#E08A3C" stroke-width="2" marker-end="url(#arrO)"/>
+
+  <!-- Fusion -->
+  <circle cx="600" cy="200" r="32" fill="#FFF7E8" stroke="#1E3A5F" stroke-width="2"/>
+  <text x="600" y="198" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">＋</text>
+  <text x="600" y="218" text-anchor="middle" font-size="10" fill="#3D4F65">softmax</text>
+
+  <line x1="510" y1="140" x2="574" y2="184" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="510" y1="260" x2="574" y2="216" stroke="#E08A3C" stroke-width="2" marker-end="url(#arrO)"/>
+
+  <!-- Next token -->
+  <rect x="690" y="165" width="160" height="70" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="770" y="195" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">下一个 SID token</text>
+  <text x="770" y="218" text-anchor="middle" font-size="11" fill="#3D4F65">语义 &amp; 价值 共同决定</text>
+  <line x1="632" y1="200" x2="688" y2="200" stroke="#1E3A5F" stroke-width="2" marker-end="url(#arrK)"/>
+
+  <!-- Example comparison -->
+  <rect x="60" y="360" width="780" height="210" rx="12" fill="#F7FAFD" stroke="#B8CCE2" stroke-width="1.5"/>
+  <text x="80" y="388" font-size="15" font-weight="700" fill="#1E3A5F">例：解第2层 SID，候选 a vs b</text>
+
+  <!-- Candidate a -->
+  <rect x="90" y="410" width="340" height="140" rx="8" fill="#EAF5EA" stroke="#4C9A4C" stroke-width="2"/>
+  <text x="110" y="435" font-size="13" font-weight="700" fill="#1E3A5F">候选 a （通向高 eCPM 广告）</text>
+  <text x="110" y="460" font-size="12" fill="#3D4F65">生成分: 2.0    价值分: 1.8</text>
+  <text x="110" y="482" font-size="12" fill="#3D4F65">融合: <tspan font-weight="700" fill="#2E7D32">3.8  ✓ 选中</tspan></text>
+  <text x="110" y="520" font-size="11" fill="#3D4F65">语义不最强，但被"价值"救回</text>
+  <text x="110" y="538" font-size="11" fill="#3D4F65">→ 保留通往高价值的前缀</text>
+
+  <!-- Candidate b -->
+  <rect x="470" y="410" width="340" height="140" rx="8" fill="#FBECEC" stroke="#C97373" stroke-width="2"/>
+  <text x="490" y="435" font-size="13" font-weight="700" fill="#1E3A5F">候选 b （只语义相似）</text>
+  <text x="490" y="460" font-size="12" fill="#3D4F65">生成分: 2.2    价值分: 0.3</text>
+  <text x="490" y="482" font-size="12" fill="#3D4F65">融合: <tspan font-weight="700" fill="#B33A3A">2.5  ✗ 淘汰</tspan></text>
+  <text x="490" y="520" font-size="11" fill="#3D4F65">传统解码会选 b（仅看生成分）</text>
+  <text x="490" y="538" font-size="11" fill="#3D4F65">→ 丢失商业价值</text>
+</svg>

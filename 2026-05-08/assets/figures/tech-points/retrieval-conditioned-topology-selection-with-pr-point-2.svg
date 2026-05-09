@@ -1,0 +1,67 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="36" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E3A5F">预算向量 · 契约代数：调用前就证明不超支</text>
+  <text x="450" y="60" text-anchor="middle" font-size="13" fill="#3D4F65">父预算 ≥ Σ 子预算（逐维），否则 DAG 构造阶段直接拒绝</text>
+
+  <!-- Parent budget card -->
+  <g>
+    <rect x="310" y="85" width="280" height="115" rx="12" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="2"/>
+    <text x="450" y="110" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">根编排器 · 预算卡</text>
+    <text x="450" y="134" text-anchor="middle" font-size="12" fill="#3D4F65">迭代 / 调用 / token / 秒 / 重试 / 交接</text>
+    <text x="450" y="162" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E3A5F">( 30, 100, 500k, 300s, 5, 3 )</text>
+    <text x="450" y="186" text-anchor="middle" font-size="12" fill="#6B7C93">6 维消费卡 · 父卡覆盖所有子卡</text>
+  </g>
+
+  <!-- Three children -->
+  <g>
+    <rect x="60" y="250" width="220" height="80" rx="10" fill="#FFF4E6" stroke="#D98E3C" stroke-width="1.8"/>
+    <text x="170" y="275" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">研究员 · 子预算卡</text>
+    <text x="170" y="305" text-anchor="middle" font-size="13" fill="#3D4F65">(5, 15, 10k, 30s, 1, 0)</text>
+  </g>
+
+  <g>
+    <rect x="340" y="250" width="220" height="80" rx="10" fill="#FFF4E6" stroke="#D98E3C" stroke-width="1.8"/>
+    <text x="450" y="275" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">编码员 · 子预算卡</text>
+    <text x="450" y="305" text-anchor="middle" font-size="13" fill="#3D4F65">(15, 50, 100k, 120s, 2, 1)</text>
+  </g>
+
+  <g>
+    <rect x="620" y="250" width="220" height="80" rx="10" fill="#FFF4E6" stroke="#D98E3C" stroke-width="1.8"/>
+    <text x="730" y="275" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">测试员 · 子预算卡</text>
+    <text x="730" y="305" text-anchor="middle" font-size="13" fill="#3D4F65">(10, 35, 50k, 60s, 2, 1)</text>
+  </g>
+
+  <!-- arrows parent to children -->
+  <line x1="360" y1="200" x2="210" y2="248" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="450" y1="202" x2="450" y2="248" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="540" y1="200" x2="690" y2="248" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Sum box -->
+  <g>
+    <rect x="180" y="390" width="540" height="75" rx="10" fill="#E8F0FA" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="450" y="415" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">逐维相加  Σ 子预算</text>
+    <text x="450" y="445" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E3A5F">= ( 30, 100, 160k, 210s, 5, 2 )</text>
+  </g>
+
+  <line x1="170" y1="331" x2="290" y2="388" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#arr)"/>
+  <line x1="450" y1="331" x2="450" y2="388" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#arr)"/>
+  <line x1="730" y1="331" x2="610" y2="388" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <!-- Verdicts -->
+  <g>
+    <rect x="60" y="505" width="370" height="85" rx="10" fill="#E6F7EC" stroke="#2E9E5B" stroke-width="2"/>
+    <text x="245" y="532" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E6B3E">✓ 每维 ≤ 父预算  → 静态通过</text>
+    <text x="245" y="562" text-anchor="middle" font-size="12" fill="#3D4F65">才开始真正调用 LLM，一分钱不浪费</text>
+  </g>
+
+  <g>
+    <rect x="470" y="505" width="370" height="85" rx="10" fill="#FBE9E7" stroke="#C0392B" stroke-width="2"/>
+    <text x="655" y="532" text-anchor="middle" font-size="14" font-weight="bold" fill="#8B1E1E">✗ 编码员改 20 → 30+20 &gt; 30</text>
+    <text x="655" y="562" text-anchor="middle" font-size="12" fill="#3D4F65">DAG 构造阶段拒绝 · 零 LLM 调用</text>
+  </g>
+</svg>

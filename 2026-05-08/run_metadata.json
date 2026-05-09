@@ -1,0 +1,19 @@
+{
+  "date": "2026-05-08",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG",
+    "cs.CL"
+  ],
+  "candidate_count": 12,
+  "supplementary_count": 10,
+  "focus_titles": [
+    "Unified Value Alignment for Generative Recommendation in Industrial Advertising",
+    "Retrieval-Conditioned Topology Selection with Provable Budget Conservation for Multi-Agent Code Generation"
+  ],
+  "focus_status": {
+    "Unified Value Alignment for Generative Recommendation in Industrial Advertising": "completed",
+    "Retrieval-Conditioned Topology Selection with Provable Budget Conservation for Multi-Agent Code Generation": "completed"
+  }
+}

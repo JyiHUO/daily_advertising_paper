@@ -1,0 +1,75 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D9534F"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E3A5F">两件事必须拼起来，才拿得到保证</text>
+  <text x="450" y="58" text-anchor="middle" font-size="13" fill="#3D4F65">看代码结构的路由 + 调模型前的静态预算校验</text>
+
+  <!-- Left: only query routing -->
+  <g>
+    <rect x="40" y="90" width="320" height="210" rx="10" fill="#FDECEC" stroke="#D9534F" stroke-width="1.5"/>
+    <text x="200" y="116" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">只看 query 文本 (AdaptOrch 等)</text>
+
+    <rect x="60" y="140" width="125" height="38" rx="6" fill="#fff" stroke="#D9534F"/>
+    <text x="122" y="164" text-anchor="middle" font-size="12" fill="#1E3A5F">仓库 A · 1 文件</text>
+    <rect x="215" y="140" width="125" height="38" rx="6" fill="#fff" stroke="#D9534F"/>
+    <text x="277" y="164" text-anchor="middle" font-size="12" fill="#1E3A5F">仓库 B · 12 包</text>
+
+    <path d="M122,178 L175,215" stroke="#D9534F" stroke-width="1.5" marker-end="url(#ar)"/>
+    <path d="M277,178 L225,215" stroke="#D9534F" stroke-width="1.5" marker-end="url(#ar)"/>
+    <rect x="140" y="220" width="120" height="34" rx="6" fill="#D9534F"/>
+    <text x="200" y="242" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold">同一条拓扑</text>
+    <text x="200" y="280" text-anchor="middle" font-size="12" fill="#8B3A3A">✗ 违反性质 (i)：没看代码</text>
+  </g>
+
+  <!-- Plus sign -->
+  <text x="450" y="200" text-anchor="middle" font-size="44" font-weight="bold" fill="#3D4F65">+</text>
+
+  <!-- Right: only runtime budget -->
+  <g>
+    <rect x="540" y="90" width="320" height="210" rx="10" fill="#FDECEC" stroke="#D9534F" stroke-width="1.5"/>
+    <text x="700" y="116" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">只在运行时查预算 (Agent Contracts 等)</text>
+
+    <rect x="560" y="145" width="100" height="38" rx="6" fill="#fff" stroke="#D9534F"/>
+    <text x="610" y="169" text-anchor="middle" font-size="12" fill="#1E3A5F">调 LLM</text>
+    <path d="M660,164 L705,164" stroke="#D9534F" stroke-width="1.5" marker-end="url(#ar)"/>
+    <rect x="715" y="145" width="125" height="38" rx="6" fill="#fff" stroke="#D9534F"/>
+    <text x="777" y="169" text-anchor="middle" font-size="12" fill="#1E3A5F">🔥 烧 token</text>
+    <rect x="630" y="215" width="140" height="34" rx="6" fill="#D9534F"/>
+    <text x="700" y="237" text-anchor="middle" font-size="12" fill="#fff" font-weight="bold">事后才发现超标</text>
+    <text x="700" y="280" text-anchor="middle" font-size="12" fill="#8B3A3A">✗ 违反性质 (ii)：已烧钱</text>
+  </g>
+
+  <!-- Bottom: RGAO combined -->
+  <rect x="90" y="330" width="720" height="200" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="450" y="360" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E3A5F">RGAO：两件事拼起来，性质 (i) 和 (ii) 同时成立</text>
+
+  <rect x="120" y="385" width="170" height="115" rx="8" fill="#fff" stroke="#4B8BDA"/>
+  <text x="205" y="410" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">① 看代码选拓扑</text>
+  <text x="205" y="435" text-anchor="middle" font-size="11" fill="#3D4F65">检索 → 复杂度向量</text>
+  <text x="205" y="455" text-anchor="middle" font-size="11" fill="#3D4F65">A → FastPath</text>
+  <text x="205" y="475" text-anchor="middle" font-size="11" fill="#3D4F65">B → MultiAgent</text>
+
+  <path d="M290,442 L362,442" stroke="#4B8BDA" stroke-width="2" marker-end="url(#a)"/>
+
+  <rect x="365" y="385" width="170" height="115" rx="8" fill="#fff" stroke="#4B8BDA"/>
+  <text x="450" y="410" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">② 静态校验预算</text>
+  <text x="450" y="435" text-anchor="middle" font-size="11" fill="#3D4F65">Σ 子预算 ≤ 父预算</text>
+  <text x="450" y="455" text-anchor="middle" font-size="11" fill="#3D4F65">在 DAG 上验证</text>
+  <text x="450" y="475" text-anchor="middle" font-size="11" fill="#3D4F65">不过就拒绝派发</text>
+
+  <path d="M535,442 L607,442" stroke="#4B8BDA" stroke-width="2" marker-end="url(#a)"/>
+
+  <rect x="610" y="385" width="170" height="115" rx="8" fill="#E8F5E9" stroke="#4CAF50" stroke-width="1.5"/>
+  <text x="695" y="412" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">③ 才允许调 LLM</text>
+  <text x="695" y="445" text-anchor="middle" font-size="11" fill="#2E7D32">✓ 决策看到了代码</text>
+  <text x="695" y="465" text-anchor="middle" font-size="11" fill="#2E7D32">✓ 烧钱之前就拦住</text>
+
+  <text x="450" y="522" text-anchor="middle" font-size="12" font-style="italic" fill="#3D4F65">强制顺序：抽向量 → 选拓扑 → 校验预算 → 最后才点火</text>
+</svg>

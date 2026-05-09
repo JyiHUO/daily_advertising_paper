@@ -1,0 +1,87 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="580" fill="#FAF7F2"/>
+
+  <text x="450" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1E3A5F">先看代码结构，再决定派几个 Agent</text>
+  <text x="450" y="58" text-anchor="middle" font-size="13" fill="#3D4F65">误路由率 30.1% → 8.2%</text>
+
+  <!-- Query -->
+  <rect x="40" y="100" width="170" height="80" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="125" y="130" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">用户 Query</text>
+  <text x="125" y="152" text-anchor="middle" font-size="11" fill="#3D4F65">"给 X 模块加重试"</text>
+  <text x="125" y="168" text-anchor="middle" font-size="11" fill="#3D4F65">"实现 xxx"</text>
+
+  <!-- Retrieval + Vector -->
+  <rect x="260" y="90" width="280" height="100" rx="10" fill="#FFF4E6" stroke="#E89A3C" stroke-width="1.8"/>
+  <text x="400" y="115" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">树索引检索 → 5维复杂度向量</text>
+  <text x="280" y="138" font-size="11" fill="#3D4F65">• 依赖链深度  • 文件数 / 符号数</text>
+  <text x="280" y="156" font-size="11" fill="#3D4F65">• 跨模块耦合比率  • 树遍历深度</text>
+  <text x="520" y="180" text-anchor="end" font-size="10" fill="#8A6A3B" font-style="italic">毫秒级，不调 LLM</text>
+
+  <line x1="210" y1="140" x2="255" y2="140" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Router -->
+  <rect x="590" y="100" width="170" height="80" rx="10" fill="#E8F0FF" stroke="#1E3A5F" stroke-width="1.8"/>
+  <text x="675" y="130" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">确定性阈值路由</text>
+  <text x="675" y="152" text-anchor="middle" font-size="11" fill="#3D4F65">规则映射，非 LLM</text>
+  <text x="675" y="170" text-anchor="middle" font-size="11" fill="#3D4F65">100 条调参 / 150 条验证</text>
+
+  <line x1="540" y1="140" x2="585" y2="140" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Four topologies -->
+  <text x="450" y="235" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">映射到 4 种拓扑</text>
+
+  <!-- FASTPATH -->
+  <rect x="40" y="255" width="190" height="165" rx="10" fill="#E6F4EA" stroke="#3A9D6B" stroke-width="1.8"/>
+  <text x="135" y="280" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">FASTPATH 单体</text>
+  <text x="135" y="302" text-anchor="middle" font-size="11" fill="#3D4F65">1 文件 · 耦合 0 · 深度 1</text>
+  <circle cx="135" cy="345" r="16" fill="#3A9D6B"/>
+  <text x="135" y="350" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">1x</text>
+  <text x="135" y="395" text-anchor="middle" font-size="10" fill="#3A9D6B" font-style="italic">一次 LLM 搞定</text>
+
+  <!-- Single expert -->
+  <rect x="245" y="255" width="190" height="165" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="340" y="280" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">单专家</text>
+  <text x="340" y="302" text-anchor="middle" font-size="11" fill="#3D4F65">小范围、单领域</text>
+  <circle cx="320" cy="345" r="12" fill="#4B8BDA"/>
+  <circle cx="360" cy="345" r="12" fill="#4B8BDA" opacity="0.35"/>
+  <text x="340" y="395" text-anchor="middle" font-size="10" fill="#2F5A96" font-style="italic">专家 + 轻量校验</text>
+
+  <!-- Pipeline -->
+  <rect x="450" y="255" width="190" height="165" rx="10" fill="#FFF4E6" stroke="#E89A3C" stroke-width="1.8"/>
+  <text x="545" y="280" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">流水线 / 并行群</text>
+  <text x="545" y="302" text-anchor="middle" font-size="11" fill="#3D4F65">3 文件 · 耦合 0.4 · 深度 4</text>
+  <circle cx="505" cy="345" r="10" fill="#E89A3C"/>
+  <circle cx="545" cy="345" r="10" fill="#E89A3C"/>
+  <circle cx="585" cy="345" r="10" fill="#E89A3C"/>
+  <line x1="515" y1="345" x2="535" y2="345" stroke="#E89A3C" stroke-width="2"/>
+  <line x1="555" y1="345" x2="575" y2="345" stroke="#E89A3C" stroke-width="2"/>
+  <text x="545" y="395" text-anchor="middle" font-size="10" fill="#A66A1F" font-style="italic">规划 → 编码 → 测试</text>
+
+  <!-- Deep research -->
+  <rect x="655" y="255" width="205" height="165" rx="10" fill="#FCE8E6" stroke="#C5483F" stroke-width="1.8"/>
+  <text x="757" y="280" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">多阶段深研</text>
+  <text x="757" y="302" text-anchor="middle" font-size="11" fill="#3D4F65">12+ 包跨模块重构</text>
+  <circle cx="710" cy="345" r="9" fill="#C5483F"/>
+  <circle cx="735" cy="345" r="9" fill="#C5483F"/>
+  <circle cx="780" cy="345" r="9" fill="#C5483F"/>
+  <circle cx="805" cy="345" r="9" fill="#C5483F"/>
+  <text x="757" y="395" text-anchor="middle" font-size="10" fill="#8C332C" font-style="italic">多团队 + 多轮综合</text>
+
+  <!-- Arrows from router to topologies -->
+  <line x1="620" y1="185" x2="160" y2="252" stroke="#4B8BDA" stroke-width="1.3" opacity="0.5" marker-end="url(#ar)"/>
+  <line x1="640" y1="185" x2="345" y2="252" stroke="#4B8BDA" stroke-width="1.3" opacity="0.5" marker-end="url(#ar)"/>
+  <line x1="690" y1="185" x2="540" y2="252" stroke="#4B8BDA" stroke-width="1.3" opacity="0.5" marker-end="url(#ar)"/>
+  <line x1="720" y1="185" x2="755" y2="252" stroke="#4B8BDA" stroke-width="1.3" opacity="0.5" marker-end="url(#ar)"/>
+
+  <!-- Bottom insight -->
+  <rect x="80" y="455" width="740" height="80" rx="10" fill="#1E3A5F"/>
+  <text x="450" y="485" text-anchor="middle" font-size="14" font-weight="700" fill="#FFF4E6">关键：路由只看代码结构元数据，不烧 LLM</text>
+  <text x="450" y="508" text-anchor="middle" font-size="12" fill="#EFF6FF">小 bug 不再被误派进 12 包重构的流水线</text>
+  <text x="450" y="526" text-anchor="middle" font-size="11" fill="#BFD3E6" font-style="italic">同构思路：广告系统按流量特征路由到不同召回 / 出价链路</text>
+</svg>

@@ -1,0 +1,68 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L10,6 L0,12 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E3A5F">按场景热度分配 bid 分桶预算</text>
+  <text x="450" y="62" text-anchor="middle" font-size="14" fill="#3D4F65">目标：最大化加权熵 H = Σ wₖ · Hₖ   (预算 V ≈ 2048)</text>
+
+  <!-- Left: Hot scenario -->
+  <rect x="60" y="100" width="340" height="170" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="230" y="128" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E3A5F">热门场景  wₖ = 20%  (电商·ROI·高价值)</text>
+
+  <!-- many bins -->
+  <g fill="#4B8BDA" opacity="0.85">
+    <rect x="80" y="160" width="12" height="70"/>
+    <rect x="94" y="160" width="12" height="70"/>
+    <rect x="108" y="160" width="12" height="70"/>
+    <rect x="122" y="160" width="12" height="70"/>
+    <rect x="136" y="160" width="12" height="70"/>
+    <rect x="150" y="160" width="12" height="70"/>
+    <rect x="164" y="160" width="12" height="70"/>
+    <rect x="178" y="160" width="12" height="70"/>
+    <rect x="192" y="160" width="12" height="70"/>
+    <rect x="206" y="160" width="12" height="70"/>
+    <rect x="220" y="160" width="12" height="70"/>
+    <rect x="234" y="160" width="12" height="70"/>
+    <rect x="248" y="160" width="12" height="70"/>
+    <rect x="262" y="160" width="12" height="70"/>
+    <rect x="276" y="160" width="12" height="70"/>
+    <rect x="290" y="160" width="12" height="70"/>
+    <rect x="304" y="160" width="12" height="70"/>
+    <rect x="318" y="160" width="12" height="70"/>
+    <rect x="332" y="160" width="12" height="70"/>
+    <rect x="346" y="160" width="12" height="70"/>
+    <rect x="360" y="160" width="12" height="70"/>
+    <rect x="374" y="160" width="12" height="70"/>
+  </g>
+  <text x="230" y="256" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">nₖ ≈ 25 桶   bid 分辨率高</text>
+
+  <!-- Right: Tail scenario -->
+  <rect x="500" y="100" width="340" height="170" rx="12" fill="#FFF4E6" stroke="#E8A857" stroke-width="2"/>
+  <text x="670" y="128" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E3A5F">长尾场景  wₖ = 0.5%  (小行业·无 ROI)</text>
+
+  <rect x="560" y="160" width="50" height="70" fill="#E8A857" opacity="0.85"/>
+  <rect x="645" y="160" width="50" height="70" fill="#E8A857" opacity="0.85"/>
+  <rect x="730" y="160" width="50" height="70" fill="#E8A857" opacity="0.85"/>
+  <text x="670" y="256" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">nₖ ≈ 3 桶   粗粒度更稳</text>
+
+  <!-- Allocator -->
+  <rect x="320" y="330" width="260" height="80" rx="14" fill="#1E3A5F"/>
+  <text x="450" y="360" text-anchor="middle" font-size="16" font-weight="bold" fill="#FFFFFF">加权熵分桶分配器</text>
+  <text x="450" y="385" text-anchor="middle" font-size="13" fill="#C9D9EE">max Σ wₖ · Hₖ    s.t. Σ nₖ ≤ V</text>
+
+  <!-- Arrows from allocator to two scenarios -->
+  <path d="M 360 330 Q 290 300 250 278" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
+  <path d="M 540 330 Q 610 300 650 278" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Bottom result -->
+  <rect x="140" y="445" width="620" height="90" rx="12" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="1.5"/>
+  <text x="450" y="473" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">Classify-then-Bin + 等频  ⇒  加权熵 7.487，词表 1939 ≈ 预算 2048</text>
+  <text x="450" y="499" text-anchor="middle" font-size="13" fill="#3D4F65">预算按商业语义"按需分配"：样本多的场景切得细，样本少的不过拟合，价值信号进入 SID</text>
+
+  <!-- connector from allocator down -->
+  <path d="M 450 410 L 450 443" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
+</svg>

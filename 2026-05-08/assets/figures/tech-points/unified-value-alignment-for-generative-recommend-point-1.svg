@@ -1,0 +1,65 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 560" font-family="'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="460" y="36" text-anchor="middle" font-size="21" font-weight="700" fill="#1E3A5F">商业化分层 SID：前几层管"长啥样"，最后一层管"值多少钱"</text>
+
+  <!-- Layer 1-2: semantic -->
+  <rect x="50" y="80" width="360" height="170" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="230" y="110" text-anchor="middle" font-size="17" font-weight="700" fill="#1E3A5F">前 L-1 层 · 语义</text>
+  <text x="230" y="132" text-anchor="middle" font-size="13" fill="#3D4F65">RQ-Kmeans 对多模态 embedding 残差量化</text>
+
+  <rect x="80" y="155" width="140" height="70" rx="8" fill="#FFFFFF" stroke="#8FB4DB"/>
+  <text x="150" y="180" text-anchor="middle" font-size="13" fill="#3D4F65">游戏广告 A</text>
+  <text x="150" y="205" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">( 12, 87 )</text>
+
+  <rect x="240" y="155" width="140" height="70" rx="8" fill="#FFFFFF" stroke="#8FB4DB"/>
+  <text x="310" y="180" text-anchor="middle" font-size="13" fill="#3D4F65">游戏广告 B</text>
+  <text x="310" y="205" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">( 12, 87 )</text>
+
+  <!-- Layer L: commercial -->
+  <rect x="510" y="80" width="370" height="170" rx="12" fill="#FFF3E6" stroke="#E89B4B" stroke-width="2"/>
+  <text x="695" y="110" text-anchor="middle" font-size="17" font-weight="700" fill="#1E3A5F">最后一层 Φcom · 价值</text>
+  <text x="695" y="132" text-anchor="middle" font-size="13" fill="#3D4F65">商业 key = (目标 × ROI × 行业) → bid 等频分桶</text>
+
+  <rect x="540" y="155" width="150" height="70" rx="8" fill="#FFFFFF" stroke="#E89B4B"/>
+  <text x="615" y="178" text-anchor="middle" font-size="12" fill="#3D4F65">游戏·ROI·中 bid</text>
+  <text x="615" y="205" text-anchor="middle" font-size="15" font-weight="700" fill="#B8641C">token #34</text>
+
+  <rect x="710" y="155" width="150" height="70" rx="8" fill="#FFFFFF" stroke="#E89B4B"/>
+  <text x="785" y="178" text-anchor="middle" font-size="12" fill="#3D4F65">游戏·ROI·高 bid</text>
+  <text x="785" y="205" text-anchor="middle" font-size="15" font-weight="700" fill="#B8641C">token #71</text>
+
+  <!-- Arrows from semantic to commercial -->
+  <path d="M220 190 L 535 190" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <path d="M310 228 C 500 295, 650 295, 780 232" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Result panel -->
+  <rect x="80" y="300" width="780" height="220" rx="12" fill="#F5F8FC" stroke="#8FB4DB" stroke-width="1.5"/>
+  <text x="470" y="330" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">同一条完整 SID = 语义相近 + 价值相近</text>
+
+  <!-- Ad A full SID -->
+  <text x="180" y="375" font-size="13" fill="#3D4F65">广告 A  bid=5元</text>
+  <rect x="180" y="385" width="70" height="40" rx="6" fill="#EFF6FF" stroke="#4B8BDA"/>
+  <text x="215" y="410" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">12</text>
+  <rect x="258" y="385" width="70" height="40" rx="6" fill="#EFF6FF" stroke="#4B8BDA"/>
+  <text x="293" y="410" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">87</text>
+  <rect x="336" y="385" width="90" height="40" rx="6" fill="#FFF3E6" stroke="#E89B4B"/>
+  <text x="381" y="410" text-anchor="middle" font-size="14" font-weight="700" fill="#B8641C">#34</text>
+
+  <!-- Ad B full SID -->
+  <text x="500" y="375" font-size="13" fill="#3D4F65">广告 B  bid=50元</text>
+  <rect x="500" y="385" width="70" height="40" rx="6" fill="#EFF6FF" stroke="#4B8BDA"/>
+  <text x="535" y="410" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">12</text>
+  <rect x="578" y="385" width="70" height="40" rx="6" fill="#EFF6FF" stroke="#4B8BDA"/>
+  <text x="613" y="410" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">87</text>
+  <rect x="656" y="385" width="90" height="40" rx="6" fill="#FFF3E6" stroke="#E89B4B"/>
+  <text x="701" y="410" text-anchor="middle" font-size="14" font-weight="700" fill="#B8641C">#71</text>
+
+  <!-- Conclusion -->
+  <text x="470" y="475" text-anchor="middle" font-size="14" fill="#3D4F65">前两层共享 → 语义聚类</text>
+  <text x="470" y="498" text-anchor="middle" font-size="14" font-weight="700" fill="#B8641C">最后一层分开 → 路径内 bid 方差降低 ~10×</text>
+</svg>
