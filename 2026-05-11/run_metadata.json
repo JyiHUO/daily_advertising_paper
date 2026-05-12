@@ -1,0 +1,18 @@
+{
+  "date": "2026-05-11",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 4,
+  "supplementary_count": 1,
+  "focus_titles": [
+    "PRISM: Refracting the Entangled User Behavior Space for E-Commerce Search",
+    "Tracking Large-scale Shared Bikes with Inertial Motion Learning in GNSS Blocked Environments"
+  ],
+  "focus_status": {
+    "PRISM: Refracting the Entangled User Behavior Space for E-Commerce Search": "completed",
+    "Tracking Large-scale Shared Bikes with Inertial Motion Learning in GNSS Blocked Environments": "completed"
+  }
+}

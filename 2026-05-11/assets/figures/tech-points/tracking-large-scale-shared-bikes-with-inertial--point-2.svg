@@ -1,0 +1,55 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E08B4A"/>
+    </marker>
+    <marker id="ar3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5BA572"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="440" y="38" text-anchor="middle" font-size="21" font-weight="bold" fill="#1E3A5F">误差 = 系统偏置 e + 随机噪声 η</text>
+  <text x="440" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">不再当作一团高斯，而是分成"能纠正的"和"不确定的"</text>
+
+  <!-- Input box -->
+  <rect x="40" y="230" width="160" height="80" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="120" y="265" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">初始位移估计</text>
+  <text x="120" y="292" text-anchor="middle" font-size="18" fill="#3D4F65">2.0 m</text>
+
+  <!-- Branch 1: residual -->
+  <rect x="290" y="120" width="260" height="110" rx="10" fill="#FEF3E8" stroke="#E08B4A" stroke-width="2"/>
+  <text x="420" y="152" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">残差分支 e（可纠正偏置）</text>
+  <text x="420" y="178" text-anchor="middle" font-size="13" fill="#3D4F65">"我系统性低估了 0.3 m"</text>
+  <text x="420" y="210" text-anchor="middle" font-size="12" fill="#A85A1F" font-style="italic">监督: Smooth L1 拟合真实残差</text>
+
+  <!-- Branch 2: uncertainty -->
+  <rect x="290" y="320" width="260" height="110" rx="10" fill="#EAF4EC" stroke="#5BA572" stroke-width="2"/>
+  <text x="420" y="352" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">不确定性分支 η（随机噪声）</text>
+  <text x="420" y="378" text-anchor="middle" font-size="13" fill="#3D4F65">"我有多不确定：σ ≈ 0.1 m"</text>
+  <text x="420" y="410" text-anchor="middle" font-size="12" fill="#2F6B45" font-style="italic">监督: NLL 回归 log 方差</text>
+
+  <!-- Output -->
+  <rect x="650" y="200" width="200" height="140" rx="10" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="2.5"/>
+  <text x="750" y="232" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">最终输出</text>
+  <line x1="670" y1="245" x2="830" y2="245" stroke="#4B8BDA" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="750" y="270" text-anchor="middle" font-size="14" fill="#3D4F65">位移 = 2.0 + 0.3</text>
+  <text x="750" y="295" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E3A5F">= 2.3 m</text>
+  <text x="750" y="320" text-anchor="middle" font-size="13" fill="#3D4F65">95% CI: (2.1, 2.5)</text>
+
+  <!-- Arrows: input -> two branches -->
+  <path d="M200,255 L260,180 L288,178" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <path d="M200,285 L260,372 L288,372" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Arrows: branches -> output -->
+  <path d="M550,178 L610,178 L648,238" fill="none" stroke="#E08B4A" stroke-width="2.2" marker-end="url(#ar2)"/>
+  <path d="M550,372 L610,372 L648,302" fill="none" stroke="#5BA572" stroke-width="2.2" marker-end="url(#ar3)"/>
+
+  <!-- Bottom callout -->
+  <rect x="160" y="475" width="560" height="60" rx="8" fill="#F5F1EA" stroke="#C9A87A" stroke-width="1.5"/>
+  <text x="440" y="500" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="bold">实测：94.7% 真值落入位移置信区间，95.2% 落入航向置信区间</text>
+  <text x="440" y="521" text-anchor="middle" font-size="12" fill="#3D4F65">→ 偏置可被纠正，不确定性被准确校准</text>
+</svg>

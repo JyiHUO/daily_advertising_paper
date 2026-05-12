@@ -1,0 +1,91 @@
+<svg height="640" width="960" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 580" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E89A4F"/>
+    </marker>
+  </defs>
+
+  <text x="450" y="32" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E3A5F">偏好条件证据路由 (Preference-Routed Evidence)</text>
+  <text x="450" y="56" text-anchor="middle" font-size="13" fill="#3D4F65">用编辑后偏好 p_edit 作 query，从 6 个证据中加权选择，对相关性做 logit 级修正</text>
+
+  <!-- Router (preference as query) -->
+  <rect x="40" y="115" width="180" height="80" rx="10" fill="#FFF2E0" stroke="#E89A4F" stroke-width="2"/>
+  <text x="130" y="145" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">p_edit</text>
+  <text x="130" y="168" text-anchor="middle" font-size="12" fill="#3D4F65">编辑后偏好</text>
+  <text x="130" y="185" text-anchor="middle" font-size="11" fill="#7A5A2F">(作为路由 query)</text>
+
+  <!-- 6 evidence tokens -->
+  <rect x="290" y="90" width="320" height="225" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="450" y="112" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">6 个证据 token  ·  softmax(加性注意力 / τ)</text>
+
+  <!-- one-order with weights inside -->
+  <rect x="305" y="125" width="90" height="50" rx="6" fill="#FFFFFF" stroke="#9BBCE3"/>
+  <text x="350" y="144" text-anchor="middle" font-size="12" fill="#3D4F65">query</text>
+  <text x="350" y="163" text-anchor="middle" font-size="11" fill="#3D4F65">α=0.10</text>
+
+  <rect x="405" y="125" width="90" height="50" rx="6" fill="#FFFFFF" stroke="#9BBCE3"/>
+  <text x="450" y="144" text-anchor="middle" font-size="12" fill="#3D4F65">item</text>
+  <text x="450" y="163" text-anchor="middle" font-size="11" fill="#3D4F65">α=0.12</text>
+
+  <rect x="505" y="125" width="90" height="50" rx="6" fill="#FFFFFF" stroke="#9BBCE3"/>
+  <text x="550" y="144" text-anchor="middle" font-size="12" fill="#3D4F65">user</text>
+  <text x="550" y="163" text-anchor="middle" font-size="11" fill="#3D4F65">α=0.08</text>
+
+  <!-- interactions -->
+  <rect x="305" y="190" width="90" height="50" rx="6" fill="#FFFFFF" stroke="#9BBCE3"/>
+  <text x="350" y="209" text-anchor="middle" font-size="12" fill="#3D4F65">q × item</text>
+  <text x="350" y="228" text-anchor="middle" font-size="11" fill="#3D4F65">α=0.15</text>
+
+  <rect x="405" y="190" width="90" height="50" rx="6" fill="#FFFFFF" stroke="#9BBCE3"/>
+  <text x="450" y="209" text-anchor="middle" font-size="12" fill="#3D4F65">q × user</text>
+  <text x="450" y="228" text-anchor="middle" font-size="11" fill="#3D4F65">α=0.15</text>
+
+  <!-- highlighted user-item -->
+  <rect x="505" y="190" width="90" height="50" rx="6" fill="#FFE2A8" stroke="#E89A4F" stroke-width="2.5"/>
+  <text x="550" y="209" text-anchor="middle" font-size="12" font-weight="bold" fill="#8A4A0F">user × item</text>
+  <text x="550" y="228" text-anchor="middle" font-size="11" font-weight="bold" fill="#8A4A0F">α=0.40 ★</text>
+
+  <text x="450" y="275" text-anchor="middle" font-size="11" fill="#7A5A2F">加权求和 → 证据摘要 c_route</text>
+
+  <!-- Arrow router -> evidence -->
+  <line x1="220" y1="155" x2="288" y2="155" stroke="#E89A4F" stroke-width="2.5" marker-end="url(#arrO)"/>
+  <text x="254" y="147" text-anchor="middle" font-size="10" fill="#8A4A0F">路由</text>
+
+  <!-- c_route -->
+  <rect x="660" y="170" width="200" height="70" rx="10" fill="#E0EDFF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="760" y="200" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">c_route</text>
+  <text x="760" y="222" text-anchor="middle" font-size="11" fill="#3D4F65">加权证据摘要</text>
+
+  <line x1="610" y1="205" x2="658" y2="205" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- correction MLP -->
+  <rect x="290" y="380" width="320" height="80" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="450" y="406" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">修正 MLP</text>
+  <text x="450" y="428" text-anchor="middle" font-size="12" fill="#3D4F65">[ r ; c_route ; r ⊙ c_route ; |r − c_route| ]</text>
+  <text x="450" y="448" text-anchor="middle" font-size="12" fill="#3D4F65">→ 输出标量 δ_rel</text>
+
+  <!-- arrows into MLP -->
+  <line x1="760" y1="240" x2="560" y2="378" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="450" y1="315" x2="450" y2="378" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- original s_rel -->
+  <rect x="80" y="380" width="170" height="80" rx="10" fill="#FFF2E0" stroke="#E89A4F" stroke-width="2"/>
+  <text x="165" y="408" text-anchor="middle" font-size="13" fill="#1E3A5F">原始相关性 s_rel</text>
+  <text x="165" y="432" text-anchor="middle" font-size="11" fill="#7A5A2F">0.55  (logit=0.2)</text>
+
+  <!-- corrected s'_rel -->
+  <rect x="650" y="380" width="200" height="80" rx="10" fill="#E5F4E5" stroke="#4FA86B" stroke-width="2"/>
+  <text x="750" y="408" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">s'_rel = σ(logit(s_rel)+δ)</text>
+  <text x="750" y="432" text-anchor="middle" font-size="11" fill="#2F6B43">0.55 → 0.62  (δ=+0.3)</text>
+
+  <line x1="290" y1="420" x2="252" y2="420" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="610" y1="420" x2="648" y2="420" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- bottom note -->
+  <rect x="80" y="500" width="770" height="55" rx="8" fill="#F5F0E6" stroke="#C9B68A"/>
+  <text x="465" y="522" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="bold">例：搜"露营椅" · 户外达人 → user×item 最关键 (α=0.4)</text>
+  <text x="465" y="542" text-anchor="middle" font-size="11" fill="#3D4F65">logit 空间小幅加法修正，不覆盖原相关性；配熵正则控制选择性</text>
+</svg>

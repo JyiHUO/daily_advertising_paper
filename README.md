@@ -4,20 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-05-08
-- **分类**：cs.IR + cs.AI + cs.LG + cs.CL
-- **候选论文数**：12
+- **日期**：2026-05-11
+- **分类**：cs.IR + cs.AI + cs.LG
+- **候选论文数**：4
 - **必读论文**：
-  - Unified Value Alignment for Generative Recommendation in Industrial Advertising
-  - Retrieval-Conditioned Topology Selection with Provable Budget Conservation for Multi-Agent Code Generation
-- **日报路径**：[2026-05-08/daily_report.md](2026-05-08/daily_report.md)
+  - PRISM: Refracting the Entangled User Behavior Space for E-Commerce Search
+  - Tracking Large-scale Shared Bikes with Inertial Motion Learning in GNSS Blocked Environments
+- **日报路径**：[2026-05-11/daily_report.md](2026-05-11/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
-| 2026-05-08 | cs.IR + cs.AI + cs.LG + cs.CL | 12 | 1 | Unified Value Alignment for Generative Recommendation in Industrial Advertising | [2026-05-08/daily_report.md](2026-05-08/daily_report.md) |
-|  |  |  | 2 | Retrieval-Conditioned Topology Selection with Provable Budget Conservation for Multi-Agent Code Generation |  |
+| 2026-05-11 | cs.IR + cs.AI + cs.LG | 4 | 1 | PRISM: Refracting the Entangled User Behavior Space for E-Commerce Search | [2026-05-11/daily_report.md](2026-05-11/daily_report.md) |
+|  |  |  | 2 | Tracking Large-scale Shared Bikes with Inertial Motion Learning in GNSS Blocked Environments |  |
+| 2026-05-08 | cs.IR + cs.AI + cs.LG | 13 | 1 | On the Role of Language Representations in Auto-Bidding: Findings and Implications | [2026-05-08/daily_report.md](2026-05-08/daily_report.md) |
+|  |  |  | 2 | AGPO: Asymmetric Group Policy Optimization for Verifiable Reasoning and Search Ads Relevance at JD |  |
 | 2026-05-07 | cs.IR + cs.AI + cs.LG + cs.CL | 7 | 1 | AllSERP: Exhaustive Per-Element Enrichment of the Versatile AdSERP Dataset | [2026-05-07/daily_report.md](2026-05-07/daily_report.md) |
 |  |  |  | 2 | One Pool, Two Caches: Adaptive HBM Partitioning for Accelerating Generative Recommender Serving |  |
 | 2026-05-06 | cs.IR + cs.AI + cs.LG + cs.CL | 1 | 1 | AniMatrix: An Anime Video Generation Model that Thinks in Art, Not Physics | [2026-05-06/daily_report.md](2026-05-06/daily_report.md) |

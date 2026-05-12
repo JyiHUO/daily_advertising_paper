@@ -1,0 +1,177 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" font-family="'Helvetica Neue',Arial,'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F7FAFD"/>
+      <stop offset="1" stop-color="#EAF1F8"/>
+    </linearGradient>
+    <linearGradient id="prefG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFE9D6"/>
+      <stop offset="1" stop-color="#FFD0A8"/>
+    </linearGradient>
+    <linearGradient id="relG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#DCEBFB"/>
+      <stop offset="1" stop-color="#B5D2F2"/>
+    </linearGradient>
+    <radialGradient id="prism" cx="50%" cy="45%" r="55%">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.55" stop-color="#E0E9F7"/>
+      <stop offset="1" stop-color="#9FB6D8"/>
+    </radialGradient>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E08A4A"/>
+    </marker>
+    <marker id="arG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5BA37F"/>
+    </marker>
+  </defs>
+
+  <rect width="1280" height="800" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="60" y="58" font-size="26" font-weight="700" fill="#1E3A5F">PRISM · 把纠缠的用户行为信号"折射"开</text>
+  <text x="60" y="86" font-size="15" fill="#3D4F65">电商搜索：偏好 与 相关性 不是独立信号，而是被曝光 / 反馈 / 语义共同搅动 — 显式建模二者交互</text>
+
+  <!-- LEFT: entangled input -->
+  <g>
+    <text x="60" y="130" font-size="14" font-weight="700" fill="#8A4A2C">纠缠的行为观测</text>
+    <g transform="translate(60,145)">
+      <rect width="240" height="62" rx="10" fill="#FFF1E3" stroke="#E0B58E"/>
+      <text x="14" y="24" font-size="13" font-weight="600" fill="#8A4A2C">曝光偏置</text>
+      <text x="14" y="46" font-size="12" fill="#5C4A3A">热门 item 看似偏好高</text>
+    </g>
+    <g transform="translate(60,220)">
+      <rect width="240" height="62" rx="10" fill="#FFF1E3" stroke="#E0B58E"/>
+      <text x="14" y="24" font-size="13" font-weight="600" fill="#8A4A2C">反馈循环</text>
+      <text x="14" y="46" font-size="12" fill="#5C4A3A">点击越多 → 越被推 → 越像"相关"</text>
+    </g>
+    <g transform="translate(60,295)">
+      <rect width="240" height="62" rx="10" fill="#FFF1E3" stroke="#E0B58E"/>
+      <text x="14" y="24" font-size="13" font-weight="600" fill="#8A4A2C">语义漂移</text>
+      <text x="14" y="46" font-size="12" fill="#5C4A3A">相关性表征被行为污染</text>
+    </g>
+
+    <!-- 混合的 p / r 信号 -->
+    <g transform="translate(60,380)">
+      <rect width="240" height="130" rx="12" fill="#F1E0CD" stroke="#C49870"/>
+      <text x="120" y="26" font-size="13" font-weight="700" fill="#6B3C1B" text-anchor="middle">混合的偏好 p 与相关性 r</text>
+      <circle cx="80" cy="78" r="26" fill="#FFB070" opacity="0.85"/>
+      <text x="80" y="83" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">p</text>
+      <circle cx="160" cy="78" r="26" fill="#7FAEE5" opacity="0.85"/>
+      <text x="160" y="83" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">r</text>
+      <path d="M100,78 Q120,58 140,78" stroke="#8A4A2C" stroke-width="1.5" fill="none" stroke-dasharray="3,3"/>
+      <path d="M100,85 Q120,105 140,85" stroke="#8A4A2C" stroke-width="1.5" fill="none" stroke-dasharray="3,3"/>
+      <text x="120" y="120" font-size="11" fill="#6B3C1B" text-anchor="middle">互相污染</text>
+    </g>
+  </g>
+
+  <!-- arrow into prism -->
+  <path d="M305,445 L515,380" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#ar)"/>
+  <text x="370" y="400" font-size="12" fill="#3D4F65">输入</text>
+
+  <!-- CENTER: PRISM core -->
+  <g transform="translate(520,140)">
+    <polygon points="120,30 230,230 10,230" fill="url(#prism)" stroke="#6E8AB4" stroke-width="1.5" opacity="0.7"/>
+    <text x="120" y="195" font-size="22" font-weight="800" fill="#1E3A5F" text-anchor="middle">PRISM</text>
+    <text x="120" y="218" font-size="11" fill="#3D4F65" text-anchor="middle">折射出干净的偏好与相关性</text>
+  </g>
+
+  <!-- M1 偏好矫正 (below prism) -->
+  <g transform="translate(490,420)">
+    <rect width="290" height="135" rx="12" fill="url(#prefG)" stroke="#E08A4A"/>
+    <text x="14" y="24" font-size="14" font-weight="700" fill="#8A4A2C">① 偏好矫正</text>
+    <text x="14" y="48" font-size="12" fill="#5C4A3A">注意力自保权重 α_pp → p_clean</text>
+    <text x="14" y="68" font-size="12" fill="#5C4A3A">残差编辑：p_edit = p + Δp</text>
+    <text x="14" y="88" font-size="12" fill="#5C4A3A">幅度正则 ‖Δp‖₂ + 方向正则 cos</text>
+    <text x="14" y="116" font-size="11" font-style="italic" fill="#6B3C1B">"挤掉曝光带来的伪偏好，但别改太狠"</text>
+  </g>
+
+  <!-- arrow prism -> M1 -->
+  <path d="M635,375 L635,418" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+
+  <!-- M2 LLM anchor -->
+  <g transform="translate(840,140)">
+    <rect width="370" height="195" rx="14" fill="url(#relG)" stroke="#4B8BDA"/>
+    <text x="20" y="28" font-size="14" font-weight="700" fill="#1E3A5F">② LLM 语义锚定相关性</text>
+    <text x="20" y="50" font-size="12" fill="#2E4A6B">BGE 编码两个固定语义灯塔</text>
+
+    <g transform="translate(50,80)">
+      <circle cx="0" cy="30" r="26" fill="#5BA37F"/>
+      <text x="0" y="35" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">r-pos</text>
+      <text x="0" y="80" font-size="11" fill="#1E3A5F" text-anchor="middle">相关原型</text>
+    </g>
+    <g transform="translate(320,80)">
+      <circle cx="0" cy="30" r="26" fill="#C97A6E"/>
+      <text x="0" y="35" font-size="11" font-weight="700" fill="#fff" text-anchor="middle">r-neg</text>
+      <text x="0" y="80" font-size="11" fill="#1E3A5F" text-anchor="middle">不相关原型</text>
+    </g>
+
+    <circle cx="185" cy="110" r="18" fill="#7FAEE5" stroke="#1E3A5F"/>
+    <text x="185" y="115" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">r</text>
+    <path d="M168,110 L108,110" stroke="#5BA37F" stroke-width="2" fill="none" marker-end="url(#arG)"/>
+    <path d="M202,110 L290,110" stroke="#C97A6E" stroke-width="2" stroke-dasharray="4,3" fill="none"/>
+    <text x="138" y="102" font-size="10" fill="#2A6B4A">hinge 拉近</text>
+    <text x="240" y="102" font-size="10" fill="#8A3E32">推远</text>
+
+    <text x="20" y="180" font-size="11" font-style="italic" fill="#2E4A6B">外部先验把漂移的 r 拽回真正的语义匹配方向</text>
+  </g>
+
+  <!-- M3 Routing -->
+  <g transform="translate(840,360)">
+    <rect width="370" height="200" rx="14" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="20" y="28" font-size="14" font-weight="700" fill="#1E3A5F">③ 偏好条件证据路由</text>
+    <text x="20" y="48" font-size="12" fill="#2E4A6B">p_edit 作为 query，在 6 个证据 token 上路由</text>
+
+    <g font-size="10" fill="#1E3A5F">
+      <rect x="20" y="62" width="65" height="22" rx="4" fill="#fff" stroke="#9FB6D8"/><text x="52" y="77" text-anchor="middle">query</text>
+      <rect x="92" y="62" width="65" height="22" rx="4" fill="#fff" stroke="#9FB6D8"/><text x="124" y="77" text-anchor="middle">item</text>
+      <rect x="164" y="62" width="65" height="22" rx="4" fill="#fff" stroke="#9FB6D8"/><text x="196" y="77" text-anchor="middle">user</text>
+      <rect x="20" y="90" width="65" height="22" rx="4" fill="#FFE9D6" stroke="#E08A4A"/><text x="52" y="105" text-anchor="middle">q×i</text>
+      <rect x="92" y="90" width="65" height="22" rx="4" fill="#FFE9D6" stroke="#E08A4A"/><text x="124" y="105" text-anchor="middle">q×u</text>
+      <rect x="164" y="90" width="65" height="22" rx="4" fill="#FFD0A8" stroke="#E08A4A" stroke-width="2"/><text x="196" y="105" text-anchor="middle" font-weight="700">u×i ★</text>
+    </g>
+
+    <path d="M235,100 L255,130" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+    <g transform="translate(258,135)">
+      <rect width="92" height="55" rx="10" fill="#1E3A5F"/>
+      <text x="46" y="24" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">δ_rel</text>
+      <text x="46" y="42" font-size="10" fill="#CFE0F5" text-anchor="middle">logit 级微调</text>
+    </g>
+
+    <text x="20" y="190" font-size="11" font-style="italic" fill="#2E4A6B">让"当前偏好"决定看哪类证据，再小幅修正相关性 logit</text>
+  </g>
+
+  <!-- arrows from PRISM core to M2 / M3 -->
+  <path d="M745,235 L838,225" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M745,290 L838,420" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+
+  <!-- arrow from M1 to routing as condition -->
+  <path d="M780,475 L838,460" stroke="#E08A4A" stroke-width="2" stroke-dasharray="5,4" fill="none" marker-end="url(#arO)"/>
+  <text x="785" y="455" font-size="11" fill="#8A4A2C">p_edit 作路由条件</text>
+
+  <!-- BOTTOM RIGHT: output -->
+  <g transform="translate(870,610)">
+    <rect width="340" height="150" rx="14" fill="#1E3A5F"/>
+    <text x="20" y="32" font-size="15" font-weight="700" fill="#FFFFFF">折射后的输出</text>
+    <text x="20" y="60" font-size="12" fill="#CFE0F5">· 净化后的偏好打分（不再被曝光带偏）</text>
+    <text x="20" y="84" font-size="12" fill="#CFE0F5">· 语义对齐的相关性 s'_rel = σ(logit(s_rel)+δ_rel)</text>
+    <text x="20" y="108" font-size="12" fill="#CFE0F5">· 二者显式交互，而非独立相加</text>
+    <text x="20" y="134" font-size="12" font-weight="700" fill="#FFD0A8">→ 在两个公开电商基准上稳定超过强基线</text>
+  </g>
+
+  <!-- arrow from M3 to output -->
+  <path d="M1040,565 L1040,608" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+
+  <!-- bottom left tag: takeaway -->
+  <g transform="translate(60,580)">
+    <rect width="540" height="180" rx="14" fill="#FFFFFF" stroke="#9FB6D8"/>
+    <text x="20" y="32" font-size="14" font-weight="700" fill="#1E3A5F">核心张力 · 一句话</text>
+    <text x="20" y="62" font-size="13" fill="#3D4F65">点击不是单纯"喜欢"，也不是单纯"相关"——</text>
+    <text x="20" y="86" font-size="13" fill="#3D4F65">PRISM 把混合信号当作一束光，用三块"棱镜"折射开：</text>
+    <text x="36" y="116" font-size="12" fill="#8A4A2C">① 偏好矫正去伪偏好</text>
+    <text x="36" y="138" font-size="12" fill="#1E3A5F">② LLM 原型锚定语义</text>
+    <text x="36" y="160" font-size="12" fill="#1E3A5F">③ 偏好条件路由让相关性按场景被微调</text>
+  </g>
+</svg>
