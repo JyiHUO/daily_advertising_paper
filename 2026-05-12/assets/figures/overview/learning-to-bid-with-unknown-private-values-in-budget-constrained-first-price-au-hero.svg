@@ -1,0 +1,127 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F7FAFD"/>
+      <stop offset="1" stop-color="#EAF1F8"/>
+    </linearGradient>
+    <linearGradient id="core" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3B6FB6"/>
+      <stop offset="1" stop-color="#1E3A5F"/>
+    </linearGradient>
+    <linearGradient id="valG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FDE9D6"/>
+      <stop offset="1" stop-color="#F7C893"/>
+    </linearGradient>
+    <linearGradient id="cdfG" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#DCE9F8"/>
+      <stop offset="1" stop-color="#A9C7EE"/>
+    </linearGradient>
+    <linearGradient id="dualG" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFF1E0"/>
+      <stop offset="1" stop-color="#F4B97A"/>
+    </linearGradient>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#E08A3C"/>
+    </marker>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dy="2"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.18"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="760" fill="url(#bg)"/>
+
+  <!-- Title -->
+  <text x="600" y="50" text-anchor="middle" font-size="26" font-weight="700" fill="#1E3A5F">删失反馈下的受约束一价拍卖出价</text>
+  <text x="600" y="78" text-anchor="middle" font-size="15" fill="#3D4F65">同时学习潜在价值（LTE）与对手分布，且在 Budget / RoS 约束下保证近似最优后悔</text>
+
+  <!-- Top tension band -->
+  <g filter="url(#sh)">
+    <rect x="60" y="105" width="500" height="70" rx="12" fill="#FFF6EC" stroke="#E8B27A"/>
+    <text x="80" y="135" font-size="14" font-weight="700" fill="#9C5A1F">现实痛点</text>
+    <text x="80" y="158" font-size="13" fill="#5C3B1A">赢了才看到转化，输了什么都看不到 · 价值需从删失数据反推</text>
+  </g>
+  <g filter="url(#sh)">
+    <rect x="640" y="105" width="500" height="70" rx="12" fill="#ECF3FB" stroke="#9CBDE5"/>
+    <text x="660" y="135" font-size="14" font-weight="700" fill="#1E3A5F">硬约束</text>
+    <text x="660" y="158" font-size="13" fill="#3D4F65">预算上限 B  ·  RoS 目标   →   乘子 λ 会放大估计误差</text>
+  </g>
+
+  <!-- Center core -->
+  <g filter="url(#sh)">
+    <rect x="430" y="305" width="340" height="140" rx="18" fill="url(#core)"/>
+    <text x="600" y="342" text-anchor="middle" font-size="18" font-weight="700" fill="#FFFFFF">原始-对偶联合学习框架</text>
+    <text x="600" y="372" text-anchor="middle" font-size="13" fill="#D8E4F4">Constrained SquareCB · 双分支 Lagrangian</text>
+    <text x="600" y="398" text-anchor="middle" font-size="13" fill="#D8E4F4">分支打分 L0 / L1  +  贪心 b̂  ⇄  信息 b-info</text>
+    <text x="600" y="424" text-anchor="middle" font-size="13" fill="#FCD9A8">混合概率 p = 1 / (2 + α·Δ打分)</text>
+  </g>
+
+  <!-- Left upper: LTE value learning -->
+  <g filter="url(#sh)">
+    <rect x="70" y="220" width="320" height="170" rx="14" fill="url(#valG)" stroke="#E0A867"/>
+    <text x="90" y="248" font-size="15" font-weight="700" fill="#7A4612">① 潜在价值估计  θ̂</text>
+    <text x="90" y="272" font-size="12.5" fill="#5C3B1A">IPW 伪标签：赢 ÷ F̂  ,  输 ÷ (1−F̂)</text>
+    <text x="90" y="293" font-size="12.5" fill="#5C3B1A">权重 ω = F̂(1−F̂)  → 加权岭回归</text>
+    <text x="90" y="314" font-size="12.5" fill="#5C3B1A">置信半径  ρ_t ~ √(d/t) · ‖x‖_{A⁻¹}</text>
+    <rect x="90" y="335" width="280" height="38" rx="8" fill="#FFFFFF" opacity="0.7"/>
+    <text x="230" y="358" text-anchor="middle" font-size="12" fill="#7A4612">v(t,1) − v(t,0)  ≈  θ*ᵀx</text>
+  </g>
+
+  <!-- Left lower: Split-sample CDF -->
+  <g filter="url(#sh)">
+    <rect x="70" y="470" width="320" height="170" rx="14" fill="url(#cdfG)" stroke="#7AA8DC"/>
+    <text x="90" y="498" font-size="15" font-weight="700" fill="#1E3A5F">② 对手分布构造性估计  F̂</text>
+    <text x="90" y="522" font-size="12.5" fill="#2A4A6E">历史轮 split-sample · 一半学 φ̂</text>
+    <text x="90" y="543" font-size="12.5" fill="#2A4A6E">另一半残差  m_s − φ̂ᵀx_s  → 经验 CDF</text>
+    <text x="90" y="564" font-size="12.5" fill="#2A4A6E">F̂_t(b) = Ψ̂(b − φ̂ᵀx_t)  · Bernstein 误差</text>
+    <g transform="translate(220,580)">
+      <rect x="-5" y="-5" width="160" height="55" rx="6" fill="#FFFFFF" opacity="0.75"/>
+      <polyline points="0,45 25,42 50,32 75,18 100,8 125,5 150,3" fill="none" stroke="#1E3A5F" stroke-width="2"/>
+      <line x1="0" y1="45" x2="150" y2="45" stroke="#7AA8DC"/>
+      <text x="75" y="60" text-anchor="middle" font-size="10" fill="#1E3A5F">F̂(b)</text>
+    </g>
+  </g>
+
+  <!-- Right upper: Dual stabilization -->
+  <g filter="url(#sh)">
+    <rect x="810" y="220" width="320" height="170" rx="14" fill="url(#dualG)" stroke="#E0A867"/>
+    <text x="830" y="248" font-size="15" font-weight="700" fill="#7A4612">③ 对偶变量稳定  λ_t</text>
+    <text x="830" y="272" font-size="12.5" fill="#5C3B1A">关键挑战：误差被 λ 动态放大</text>
+    <text x="830" y="293" font-size="12.5" fill="#5C3B1A">Burn-in（√T 轮）估 Slater 裕度 δ̂</text>
+    <text x="830" y="314" font-size="12.5" fill="#5C3B1A">投影上界  Λ = 2C_r / δ̂</text>
+    <rect x="830" y="335" width="280" height="38" rx="8" fill="#FFFFFF" opacity="0.7"/>
+    <text x="970" y="358" text-anchor="middle" font-size="12" fill="#7A4612">λ_t ∈ ( T^(−1/2), Λ )  乘性更新+投影</text>
+  </g>
+
+  <!-- Right lower: Result / guarantee -->
+  <g filter="url(#sh)">
+    <rect x="810" y="470" width="320" height="170" rx="14" fill="#E8F1E4" stroke="#8FBF7A"/>
+    <text x="830" y="498" font-size="15" font-weight="700" fill="#2E5C24">④ 理论保证</text>
+    <text x="830" y="522" font-size="12.5" fill="#3D5B33">近似最优  Regret  =  Õ(√T)</text>
+    <text x="830" y="543" font-size="12.5" fill="#3D5B33">约束违背  Violation  受控</text>
+    <text x="830" y="564" font-size="12.5" fill="#3D5B33">首个：潜在价值 + 受约束 FPA 出价</text>
+    <text x="830" y="585" font-size="12.5" fill="#3D5B33">下凸包顶点 + 安全网格 → 凸化支付</text>
+    <text x="830" y="615" font-size="12" font-weight="700" fill="#2E5C24">★ 出价 b_t  执行 →  反馈进闭环</text>
+  </g>
+
+  <!-- Arrows: modules into core -->
+  <path d="M390 305 L 430 340" fill="none" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#ar)"/>
+  <path d="M390 510 L 430 420" fill="none" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#ar)"/>
+  <path d="M810 305 L 770 340" fill="none" stroke="#E08A3C" stroke-width="2.2" marker-end="url(#arO)"/>
+
+  <!-- Core -> result -->
+  <path d="M770 420 L 810 510" fill="none" stroke="#4B8BDA" stroke-width="2.4" marker-end="url(#ar)"/>
+
+  <!-- Closed feedback loop: result -> back to estimators -->
+  <path d="M810 625 C 600 705, 320 705, 230 645" fill="none" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#ar)"/>
+  <text x="555" y="700" text-anchor="middle" font-size="12.5" fill="#1E3A5F" font-style="italic">观测到的赢/输 + 支付  →  更新 θ̂, F̂, λ</text>
+
+  <!-- Tension arrows from top dilemmas to core -->
+  <path d="M310 175 L 470 305" fill="none" stroke="#C97A3C" stroke-width="1.6" stroke-dasharray="3 3" marker-end="url(#arO)"/>
+  <path d="M890 175 L 730 305" fill="none" stroke="#C97A3C" stroke-width="1.6" stroke-dasharray="3 3" marker-end="url(#arO)"/>
+</svg>

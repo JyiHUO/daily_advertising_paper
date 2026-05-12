@@ -1,0 +1,18 @@
+{
+  "date": "2026-05-12",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 37,
+  "supplementary_count": 6,
+  "focus_titles": [
+    "Learning to Bid with Unknown Private Values in Budget-Constrained First-Price Auctions",
+    "Beyond the Black Box: An Interpretable Machine Learning Framework for Predicting Electronic Structure Microdescriptors and Structure-Performance Relationships in Fe-based Catalytic Systems"
+  ],
+  "focus_status": {
+    "Learning to Bid with Unknown Private Values in Budget-Constrained First-Price Auctions": "completed",
+    "Beyond the Black Box: An Interpretable Machine Learning Framework for Predicting Electronic Structure Microdescriptors and Structure-Performance Relationships in Fe-based Catalytic Systems": "completed"
+  }
+}

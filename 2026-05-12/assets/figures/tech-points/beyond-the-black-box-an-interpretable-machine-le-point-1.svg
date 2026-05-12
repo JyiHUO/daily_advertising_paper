@@ -1,0 +1,75 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="-apple-system,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="560" fill="#FAFBFD"/>
+
+  <text x="450" y="38" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">SHAP 给带隙预测分账：谁在推高？谁在压低？</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">CatBoost 预测 Fe/Si/Al/O 材料带隙，SHAP 拆解每个特征的贡献</text>
+
+  <!-- Module 1: Input features -->
+  <rect x="40" y="110" width="220" height="230" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.6"/>
+  <text x="150" y="135" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">13 个材料描述符</text>
+  <text x="60" y="165" font-size="12" fill="#3D4F65">• 每原子形成能</text>
+  <text x="60" y="188" font-size="12" fill="#3D4F65">• 每原子能量</text>
+  <text x="60" y="211" font-size="12" fill="#3D4F65">• 距凸包能量</text>
+  <text x="60" y="234" font-size="12" fill="#3D4F65">• 密度 / 体积 / 位点数</text>
+  <text x="60" y="257" font-size="12" fill="#3D4F65">• Fe / Si / Al 元素分数</text>
+  <text x="150" y="320" text-anchor="middle" font-size="11" fill="#7A8AA0" font-style="italic">某 Fe-zeolite 样本</text>
+
+  <!-- Module 2: Model -->
+  <rect x="310" y="160" width="180" height="130" rx="10" fill="#FFF4E6" stroke="#E6A45C" stroke-width="1.6"/>
+  <text x="400" y="188" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">CatBoost</text>
+  <text x="400" y="210" text-anchor="middle" font-size="12" fill="#3D4F65">贝叶斯优化树模型</text>
+  <text x="400" y="234" text-anchor="middle" font-size="12" fill="#3D4F65">R² ≈ 0.77 (线性基线 0.32)</text>
+  <text x="400" y="262" text-anchor="middle" font-size="13" font-weight="700" fill="#C0762B">→ 带隙 ≈ 3 eV</text>
+
+  <!-- arrow input -> model -->
+  <line x1="262" y1="225" x2="308" y2="225" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- arrow model -> SHAP -->
+  <line x1="492" y1="225" x2="538" y2="225" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="515" y="216" text-anchor="middle" font-size="11" fill="#4B8BDA">SHAP 回溯</text>
+
+  <!-- Module 3: SHAP attribution bars -->
+  <rect x="540" y="110" width="320" height="330" rx="10" fill="#F3F0FA" stroke="#7B61C4" stroke-width="1.6"/>
+  <text x="700" y="135" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">SHAP 贡献分账</text>
+  <text x="700" y="153" text-anchor="middle" font-size="11" fill="#7A8AA0">每个特征推高(+) 或压低(−) 带隙</text>
+
+  <!-- center axis -->
+  <line x1="700" y1="175" x2="700" y2="410" stroke="#B5BFCE" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="700" y="425" text-anchor="middle" font-size="10" fill="#7A8AA0">0</text>
+
+  <!-- Bar: formation energy +0.8 (推高，57%) -->
+  <rect x="700" y="185" width="130" height="22" fill="#4B8BDA"/>
+  <text x="555" y="200" font-size="12" fill="#1E3A5F">每原子形成能 (57%)</text>
+  <text x="836" y="200" font-size="11" fill="#1E3A5F" font-weight="700">+0.8 eV</text>
+
+  <!-- Bar: per atom energy +0.35 (19%) -->
+  <rect x="700" y="230" width="58" height="20" fill="#6BA3DC"/>
+  <text x="555" y="245" font-size="12" fill="#1E3A5F">每原子能量 (19%)</text>
+  <text x="764" y="245" font-size="11" fill="#1E3A5F" font-weight="700">+0.35</text>
+
+  <!-- Bar: hull energy +0.12 (5.5%) -->
+  <rect x="700" y="275" width="20" height="18" fill="#9CC2E5"/>
+  <text x="555" y="289" font-size="12" fill="#1E3A5F">距凸包能量 (5.5%)</text>
+  <text x="726" y="289" font-size="11" fill="#1E3A5F" font-weight="700">+0.12</text>
+
+  <!-- Bar: volume -0.2 -->
+  <rect x="666" y="320" width="34" height="20" fill="#E89A9A"/>
+  <text x="555" y="334" font-size="12" fill="#1E3A5F">体积</text>
+  <text x="630" y="334" font-size="11" fill="#1E3A5F" font-weight="700">−0.2</text>
+
+  <!-- Bar: composition tiny -->
+  <rect x="694" y="365" width="6" height="16" fill="#D4B5E8"/>
+  <text x="555" y="378" font-size="12" fill="#1E3A5F">Fe/Si/Al 分数 (贡献很小)</text>
+
+  <!-- bottom insight -->
+  <rect x="40" y="460" width="820" height="80" rx="10" fill="#1E3A5F"/>
+  <text x="60" y="488" font-size="14" font-weight="700" fill="#FFFFFF">化学直觉对得上：</text>
+  <text x="60" y="512" font-size="13" fill="#D6E4F5">形成能越负 → 晶格越稳定 → 键合更强 → SHAP 把带隙往"宽"的方向推</text>
+  <text x="60" y="531" font-size="12" fill="#9CC2E5">黑箱 → 可解释：从"模型说 3 eV"升级到"为什么是 3 eV"</text>
+</svg>

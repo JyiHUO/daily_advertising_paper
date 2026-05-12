@@ -1,0 +1,68 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <rect width="880" height="560" fill="#FAF7F2"/>
+
+  <text x="440" y="36" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">Split-Sample 估胜率：把均值剥掉，只留噪声</text>
+  <text x="440" y="60" text-anchor="middle" font-size="13" fill="#3D4F65">对手最高出价 m = φ·x + ξ  →  胜率 F(b) = Ψ(b − φ·x)</text>
+
+  <!-- History pile -->
+  <rect x="40" y="110" width="220" height="120" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="150" y="138" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">历史轮次数据</text>
+  <text x="150" y="160" text-anchor="middle" font-size="12" fill="#3D4F65">(x_s , 赢/输 , m_s)</text>
+  <g>
+    <circle cx="70" cy="195" r="5" fill="#4B8BDA"/>
+    <circle cx="100" cy="200" r="5" fill="#E8A87C"/>
+    <circle cx="130" cy="190" r="5" fill="#4B8BDA"/>
+    <circle cx="160" cy="205" r="5" fill="#E8A87C"/>
+    <circle cx="190" cy="195" r="5" fill="#4B8BDA"/>
+    <circle cx="220" cy="200" r="5" fill="#E8A87C"/>
+  </g>
+
+  <!-- Split arrows -->
+  <path d="M260 150 L320 128" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M260 200 L320 222" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <text x="270" y="125" font-size="11" fill="#1E3A5F" font-weight="600">随机一半</text>
+  <text x="270" y="246" font-size="11" fill="#1E3A5F" font-weight="600">另一半</text>
+
+  <!-- Half A: ridge -->
+  <rect x="328" y="92" width="230" height="86" rx="10" fill="#FFF1E0" stroke="#E8A87C" stroke-width="1.5"/>
+  <text x="443" y="118" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">A. 岭回归学 φ̂</text>
+  <text x="443" y="140" text-anchor="middle" font-size="12" fill="#3D4F65">把 x 决定的均值剥掉： m ≈ φ̂·x</text>
+  <text x="443" y="162" text-anchor="middle" font-size="12" fill="#3D4F65">输出：均值方向估计 φ̂</text>
+
+  <!-- Half B: ECDF -->
+  <rect x="328" y="198" width="230" height="104" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="443" y="224" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">B. 残差经验 CDF</text>
+  <text x="443" y="247" text-anchor="middle" font-size="12" fill="#3D4F65">ξ̂_s = m_s − φ̂·x_s （与 x 无关的噪声）</text>
+  <text x="443" y="269" text-anchor="middle" font-size="12" fill="#3D4F65">堆叠经验分布 → Ψ̂(·)</text>
+
+  <!-- Combine arrows -->
+  <path d="M558 135 L638 220" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M558 250 L638 250" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+
+  <!-- Output: win-rate curve -->
+  <rect x="640" y="170" width="210" height="200" rx="10" fill="#F4ECE0" stroke="#1E3A5F" stroke-width="1.5"/>
+  <text x="745" y="194" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">本轮胜率 F̂_t(b)</text>
+  <text x="745" y="212" text-anchor="middle" font-size="11" fill="#3D4F65">= Ψ̂( b − φ̂·x_t )</text>
+
+  <!-- mini curve -->
+  <line x1="670" y1="345" x2="835" y2="345" stroke="#3D4F65" stroke-width="1"/>
+  <line x1="670" y1="232" x2="670" y2="345" stroke="#3D4F65" stroke-width="1"/>
+  <path d="M670 340 Q715 335 745 290 T830 240" stroke="#4B8BDA" stroke-width="2.5" fill="none"/>
+  <line x1="760" y1="232" x2="760" y2="345" stroke="#E8A87C" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="763" y="332" font-size="10" fill="#E8A87C">b=0.7</text>
+  <text x="820" y="358" font-size="10" fill="#3D4F65" text-anchor="end">出价 b</text>
+  <text x="660" y="240" font-size="10" fill="#3D4F65">1</text>
+
+  <!-- Bottom note -->
+  <rect x="120" y="400" width="640" height="130" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.2"/>
+  <text x="440" y="428" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">为什么要劈两半？</text>
+  <text x="440" y="455" text-anchor="middle" font-size="12.5" fill="#3D4F65">A、B 互相独立 → φ̂ 与 Ψ̂ 的误差不纠缠</text>
+  <text x="440" y="478" text-anchor="middle" font-size="12.5" fill="#3D4F65">得到 Bernstein 型置信半径  ε_t · √(F(1−F)) + ε_t²</text>
+  <text x="440" y="501" text-anchor="middle" font-size="12.5" fill="#3D4F65">替代旧 LTE 的非构造性子集选择，可落地于在线出价</text>
+</svg>

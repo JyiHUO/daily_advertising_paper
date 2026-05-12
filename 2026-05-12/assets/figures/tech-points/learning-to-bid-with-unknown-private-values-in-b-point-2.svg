@@ -1,0 +1,44 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 560" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <rect width="880" height="560" fill="#FAF7F2"/>
+
+  <text x="440" y="40" text-anchor="middle" font-size="22" font-weight="bold" fill="#1E3A5F">删失反馈下的 IPW 伪标签 + 加权最小二乘</text>
+  <text x="440" y="64" text-anchor="middle" font-size="13" fill="#3D4F65">赢只见 v₁，输只见 v₀ — 用胜率把两半拼成 uplift</text>
+
+  <!-- WIN box -->
+  <rect x="60" y="100" width="300" height="160" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="210" y="130" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E3A5F">赢了 (看到 v₁)</text>
+  <text x="210" y="160" text-anchor="middle" font-size="14" fill="#3D4F65">伪标签 = v₁ / F̂</text>
+  <rect x="95" y="180" width="230" height="60" rx="6" fill="#FFFFFF" stroke="#A8C7E8"/>
+  <text x="210" y="205" text-anchor="middle" font-size="13" fill="#3D4F65">例: 0.9 / 0.7 ≈ <tspan fill="#1E3A5F" font-weight="bold">+1.29</tspan></text>
+  <text x="210" y="226" text-anchor="middle" font-size="11" fill="#6B7C92">F̂ = 胜率</text>
+
+  <!-- LOSE box -->
+  <rect x="520" y="100" width="300" height="160" rx="12" fill="#FCEFE8" stroke="#D98660" stroke-width="2"/>
+  <text x="670" y="130" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E3A5F">输了 (看到 v₀)</text>
+  <text x="670" y="160" text-anchor="middle" font-size="14" fill="#3D4F65">伪标签 = − v₀ / (1−F̂)</text>
+  <rect x="555" y="180" width="230" height="60" rx="6" fill="#FFFFFF" stroke="#E5B79A"/>
+  <text x="670" y="205" text-anchor="middle" font-size="13" fill="#3D4F65">例: −0.2 / 0.3 ≈ <tspan fill="#A0421A" font-weight="bold">−0.67</tspan></text>
+  <text x="670" y="226" text-anchor="middle" font-size="11" fill="#6B7C92">1−F̂ = 败率</text>
+
+  <!-- arrows down to merge -->
+  <path d="M210,260 L210,310 L290,340" fill="none" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#ar)"/>
+  <path d="M670,260 L670,310 L590,340" fill="none" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#ar)"/>
+
+  <!-- Weighted regression box -->
+  <rect x="220" y="345" width="440" height="135" rx="12" fill="#E8EEF5" stroke="#1E3A5F" stroke-width="2"/>
+  <text x="440" y="375" text-anchor="middle" font-size="17" font-weight="bold" fill="#1E3A5F">加权岭回归 → θ̂</text>
+  <text x="440" y="403" text-anchor="middle" font-size="14" fill="#3D4F65">权重 ω = F̂ · (1−F̂)，胜率接近 0.5 的样本最值钱</text>
+  <text x="440" y="430" text-anchor="middle" font-size="12" fill="#6B7C92">极端胜率 → 权重小，自动防分母爆炸</text>
+  <text x="440" y="460" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="bold">θ̂ᵀx ≈ 真实 uplift  |  置信半径 ρₜ 量化不确定性</text>
+
+  <!-- closed loop: feedback from theta back to F̂ usage next round -->
+  <path d="M220,412 C150,412 130,330 200,300" fill="none" stroke="#9AB4CF" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#ar)"/>
+  <text x="105" y="380" text-anchor="middle" font-size="11" fill="#6B7C92">下一轮再用</text>
+  <text x="105" y="395" text-anchor="middle" font-size="11" fill="#6B7C92">更新后的 F̂</text>
+</svg>
