@@ -1,0 +1,13 @@
+{
+  "report_date": "2026-05-12",
+  "provider": "bedrock-opus-47",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 2776,
+  "focus_titles": [
+    "Learning to Bid with Unknown Private Values in Budget-Constrained First-Price Auctions",
+    "Beyond the Black Box: An Interpretable Machine Learning Framework for Predicting Electronic Structure Microdescriptors and Structure-Performance Relationships in Fe-based Catalytic Systems"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Steve"
+}
