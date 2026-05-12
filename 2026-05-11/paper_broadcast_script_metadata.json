@@ -1,0 +1,13 @@
+{
+  "report_date": "2026-05-11",
+  "provider": "bedrock-opus-47",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 2405,
+  "focus_titles": [
+    "PRISM: Refracting the Entangled User Behavior Space for E-Commerce Search",
+    "Tracking Large-scale Shared Bikes with Inertial Motion Learning in GNSS Blocked Environments"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Steve"
+}
