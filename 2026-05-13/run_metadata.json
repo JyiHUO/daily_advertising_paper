@@ -1,0 +1,18 @@
+{
+  "date": "2026-05-13",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 5,
+  "supplementary_count": 9,
+  "focus_titles": [
+    "FedMM: Federated Collaborative Signal Quantization for Multi-Market CTR Prediction",
+    "Design Your Ad: Personalized Advertising Image and Text Generation with Unified Autoregressive Models"
+  ],
+  "focus_status": {
+    "FedMM: Federated Collaborative Signal Quantization for Multi-Market CTR Prediction": "completed",
+    "Design Your Ad: Personalized Advertising Image and Text Generation with Unified Autoregressive Models": "completed"
+  }
+}

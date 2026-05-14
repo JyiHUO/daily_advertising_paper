@@ -1,0 +1,92 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <rect width="900" height="620" fill="#FAF8F4"/>
+
+  <!-- Title -->
+  <text x="450" y="50" font-size="22" font-weight="700" fill="#1E3A5F" text-anchor="middle">FedMM · 多市场 CTR 的联邦码本桥</text>
+  <text x="450" y="76" font-size="13" fill="#3D4F65" text-anchor="middle">不传数据、不传参数，只传"语义原型"</text>
+
+  <!-- side keyword tags -->
+  <g font-size="11" fill="#1E3A5F">
+    <text x="60" y="120" font-weight="700">数据合规</text>
+    <text x="60" y="138" fill="#3D4F65">GDPR · 不出境</text>
+
+    <text x="840" y="120" font-weight="700" text-anchor="end">市场异构</text>
+    <text x="840" y="138" fill="#3D4F65" text-anchor="end">ID 不交 · 偏好不同</text>
+
+    <text x="450" y="178" font-weight="700" fill="#1E3A5F" text-anchor="middle">共享原型，不共享身份</text>
+  </g>
+
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#A0623A"/>
+    </marker>
+  </defs>
+
+  <!-- Central global codebook -->
+  <g>
+    <ellipse cx="450" cy="320" rx="105" ry="105" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <ellipse cx="450" cy="320" rx="70" ry="70" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="3 3"/>
+    <text x="450" y="305" font-size="14" font-weight="700" fill="#1E3A5F" text-anchor="middle">全局码本</text>
+    <text x="450" y="324" font-size="11" fill="#3D4F65" text-anchor="middle">共享语义原型</text>
+    <text x="450" y="342" font-size="10" fill="#A0623A" text-anchor="middle" font-style="italic">+ Laplace 噪声</text>
+
+    <g font-size="10" fill="#4B8BDA">
+      <circle cx="395" cy="280" r="9" fill="#DCE9F8"/><text x="395" y="284" text-anchor="middle">c₁</text>
+      <circle cx="505" cy="280" r="9" fill="#DCE9F8"/><text x="505" y="284" text-anchor="middle">c₂</text>
+      <circle cx="395" cy="360" r="9" fill="#DCE9F8"/><text x="395" y="364" text-anchor="middle">c₃</text>
+      <circle cx="505" cy="360" r="9" fill="#DCE9F8"/><text x="505" y="364" text-anchor="middle">cₖ</text>
+    </g>
+  </g>
+
+  <!-- Three markets as clients -->
+  <g font-size="12">
+    <g transform="translate(95,200)">
+      <rect width="140" height="80" rx="10" fill="#FFF3E6" stroke="#D08A4F" stroke-width="1.5"/>
+      <text x="70" y="26" font-size="13" font-weight="700" fill="#1E3A5F" text-anchor="middle">市场 A</text>
+      <text x="70" y="46" fill="#3D4F65" text-anchor="middle">本地数据 · 不出境</text>
+      <text x="70" y="64" fill="#A0623A" text-anchor="middle" font-size="10">本地码本（方言）</text>
+    </g>
+
+    <g transform="translate(95,420)">
+      <rect width="140" height="80" rx="10" fill="#FFF3E6" stroke="#D08A4F" stroke-width="1.5"/>
+      <text x="70" y="26" font-size="13" font-weight="700" fill="#1E3A5F" text-anchor="middle">市场 B</text>
+      <text x="70" y="46" fill="#3D4F65" text-anchor="middle">ID 空间不交</text>
+      <text x="70" y="64" fill="#A0623A" text-anchor="middle" font-size="10">本地码本（方言）</text>
+    </g>
+
+    <g transform="translate(665,280)">
+      <rect width="140" height="80" rx="10" fill="#FFF3E6" stroke="#D08A4F" stroke-width="1.5"/>
+      <text x="70" y="26" font-size="13" font-weight="700" fill="#1E3A5F" text-anchor="middle">市场 C</text>
+      <text x="70" y="46" fill="#3D4F65" text-anchor="middle">偏好异构</text>
+      <text x="70" y="64" fill="#A0623A" text-anchor="middle" font-size="10">本地码本（方言）</text>
+    </g>
+  </g>
+
+  <!-- up arrows (upload) -->
+  <path d="M235,235 Q310,250 348,278" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <path d="M235,445 Q310,400 348,365" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <path d="M665,310 Q605,315 558,318" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- down arrows (broadcast) -->
+  <path d="M360,290 Q300,250 240,235" fill="none" stroke="#A0623A" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#ar2)"/>
+  <path d="M360,355 Q300,410 240,425" fill="none" stroke="#A0623A" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#ar2)"/>
+  <path d="M548,332 Q605,345 663,338" fill="none" stroke="#A0623A" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#ar2)"/>
+
+  <!-- Legend -->
+  <g transform="translate(335,455)">
+    <line x1="0" y1="0" x2="30" y2="0" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+    <text x="38" y="4" font-size="11" fill="#3D4F65">上传本地码本</text>
+    <line x1="135" y1="0" x2="165" y2="0" stroke="#A0623A" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#ar2)"/>
+    <text x="173" y="4" font-size="11" fill="#3D4F65">下发聚合码本</text>
+  </g>
+
+  <!-- Output -->
+  <g transform="translate(305,520)">
+    <rect width="290" height="62" rx="10" fill="#E8F1E5" stroke="#5C8A4E" stroke-width="1.5"/>
+    <text x="145" y="24" font-size="13" font-weight="700" fill="#1E3A5F" text-anchor="middle">离散 token 对 (全局, 本地) → CTR 模型</text>
+    <text x="145" y="46" font-size="11" fill="#3D4F65" text-anchor="middle">DNN / DeepFM / DCN · AUC ↑ 优于集中训练</text>
+  </g>
+</svg>

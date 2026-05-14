@@ -4,18 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-05-12
+- **日期**：2026-05-13
 - **分类**：cs.IR + cs.AI + cs.LG
-- **候选论文数**：37
+- **候选论文数**：5
 - **必读论文**：
-  - Learning to Bid with Unknown Private Values in Budget-Constrained First-Price Auctions
-  - Beyond the Black Box: An Interpretable Machine Learning Framework for Predicting Electronic Structure Microdescriptors and Structure-Performance Relationships in Fe-based Catalytic Systems
-- **日报路径**：[2026-05-12/daily_report.md](2026-05-12/daily_report.md)
+  - FedMM: Federated Collaborative Signal Quantization for Multi-Market CTR Prediction
+  - Design Your Ad: Personalized Advertising Image and Text Generation with Unified Autoregressive Models
+- **日报路径**：[2026-05-13/daily_report.md](2026-05-13/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-05-13 | cs.IR + cs.AI + cs.LG | 5 | 1 | FedMM: Federated Collaborative Signal Quantization for Multi-Market CTR Prediction | [2026-05-13/daily_report.md](2026-05-13/daily_report.md) |
+|  |  |  | 2 | Design Your Ad: Personalized Advertising Image and Text Generation with Unified Autoregressive Models |  |
 | 2026-05-12 | cs.IR + cs.AI + cs.LG | 37 | 1 | Learning to Bid with Unknown Private Values in Budget-Constrained First-Price Auctions | [2026-05-12/daily_report.md](2026-05-12/daily_report.md) |
 |  |  |  | 2 | Beyond the Black Box: An Interpretable Machine Learning Framework for Predicting Electronic Structure Microdescriptors and Structure-Performance Relationships in Fe-based Catalytic Systems |  |
 | 2026-05-11 | cs.IR + cs.AI + cs.LG | 4 | 1 | PRISM: Refracting the Entangled User Behavior Space for E-Commerce Search | [2026-05-11/daily_report.md](2026-05-11/daily_report.md) |

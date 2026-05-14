@@ -1,0 +1,63 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E89B4C"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="32" text-anchor="middle" font-size="17" font-weight="700" fill="#1E3A5F">两本词典，组合表达一个用户</text>
+
+  <!-- User vector -->
+  <circle cx="70" cy="220" r="34" fill="#FFF3E6" stroke="#E89B4C" stroke-width="2"/>
+  <text x="70" y="216" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">用户向量</text>
+  <text x="70" y="232" text-anchor="middle" font-size="12" fill="#3D4F65">z</text>
+
+  <!-- Global codebook -->
+  <rect x="180" y="70" width="240" height="140" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="300" y="92" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">全局码本 · 通用词典</text>
+  <text x="300" y="108" text-anchor="middle" font-size="11" fill="#3D4F65">跨市场共享 · 粗粒度</text>
+  <g font-size="11" fill="#1E3A5F">
+    <rect x="210" y="125" width="50" height="26" rx="4" fill="#fff" stroke="#4B8BDA"/>
+    <text x="235" y="142" text-anchor="middle">户外</text>
+    <rect x="275" y="125" width="50" height="26" rx="4" fill="#fff" stroke="#4B8BDA"/>
+    <text x="300" y="142" text-anchor="middle">美妆</text>
+    <rect x="340" y="125" width="50" height="26" rx="4" fill="#fff" stroke="#4B8BDA"/>
+    <text x="365" y="142" text-anchor="middle">数码</text>
+  </g>
+  <text x="300" y="180" text-anchor="middle" font-size="12" fill="#E89B4C" font-weight="600">选中 #17 户外（共性标签）</text>
+
+  <!-- Local codebook -->
+  <rect x="180" y="240" width="240" height="140" rx="10" fill="#FDF2EC" stroke="#E89B4C" stroke-width="2"/>
+  <text x="300" y="262" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">本地码本 · 方言词典</text>
+  <text x="300" y="278" text-anchor="middle" font-size="11" fill="#3D4F65">市场专属 · 细粒度</text>
+  <g font-size="11" fill="#1E3A5F">
+    <rect x="210" y="295" width="50" height="26" rx="4" fill="#fff" stroke="#E89B4C"/>
+    <text x="235" y="312" text-anchor="middle">英伦</text>
+    <rect x="275" y="295" width="50" height="26" rx="4" fill="#fff" stroke="#E89B4C"/>
+    <text x="300" y="312" text-anchor="middle">日系</text>
+    <rect x="340" y="295" width="50" height="26" rx="4" fill="#fff" stroke="#E89B4C"/>
+    <text x="365" y="312" text-anchor="middle">国潮</text>
+  </g>
+  <text x="300" y="350" text-anchor="middle" font-size="12" fill="#E89B4C" font-weight="600">选中 #42 英伦（地方标签）</text>
+
+  <!-- z -> global -->
+  <path d="M104,210 Q150,150 178,135" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ab)"/>
+  <text x="120" y="170" font-size="11" fill="#1E3A5F">匹配</text>
+
+  <!-- residual: global -> local -->
+  <path d="M300,210 L300,238" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ab)" stroke-dasharray="4,3"/>
+  <text x="310" y="228" font-size="11" fill="#3D4F65">残差 z − c₀</text>
+
+  <!-- Result token -->
+  <rect x="445" y="190" width="130" height="64" rx="10" fill="#1E3A5F"/>
+  <text x="510" y="216" text-anchor="middle" font-size="13" fill="#fff" font-weight="600">token 对</text>
+  <text x="510" y="238" text-anchor="middle" font-size="14" fill="#FFD9A8" font-weight="700">(17, 42)</text>
+
+  <path d="M420,150 Q438,170 448,198" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ab)"/>
+  <path d="M420,300 Q438,278 448,250" stroke="#E89B4C" stroke-width="2" fill="none" marker-end="url(#ao)"/>
+
+  <text x="510" y="278" text-anchor="middle" font-size="11" fill="#3D4F65">共性 + 地方特色</text>
+</svg>

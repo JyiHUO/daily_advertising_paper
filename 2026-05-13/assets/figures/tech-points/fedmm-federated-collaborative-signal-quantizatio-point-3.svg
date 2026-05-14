@@ -1,0 +1,48 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="38" text-anchor="middle" font-family="Helvetica,Arial" font-size="17" font-weight="bold" fill="#1E3A5F">两枚 token = 两列新特征</text>
+
+  <!-- Original feature row -->
+  <text x="200" y="78" text-anchor="middle" font-family="Helvetica" font-size="11" fill="#3D4F65" font-style="italic">原始 CTR 特征</text>
+  <rect x="60" y="90" width="280" height="50" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <line x1="130" y1="90" x2="130" y2="140" stroke="#4B8BDA" stroke-width="1"/>
+  <line x1="200" y1="90" x2="200" y2="140" stroke="#4B8BDA" stroke-width="1"/>
+  <line x1="270" y1="90" x2="270" y2="140" stroke="#4B8BDA" stroke-width="1"/>
+  <text x="95" y="120" text-anchor="middle" font-family="Helvetica" font-size="12" fill="#3D4F65">user</text>
+  <text x="165" y="120" text-anchor="middle" font-family="Helvetica" font-size="12" fill="#3D4F65">item</text>
+  <text x="235" y="120" text-anchor="middle" font-family="Helvetica" font-size="12" fill="#3D4F65">ctx</text>
+  <text x="305" y="120" text-anchor="middle" font-family="Helvetica" font-size="12" fill="#3D4F65">...</text>
+
+  <!-- Plus -->
+  <text x="370" y="125" text-anchor="middle" font-family="Helvetica" font-size="26" font-weight="bold" fill="#E8893C">+</text>
+
+  <!-- Two new tokens -->
+  <text x="470" y="78" text-anchor="middle" font-family="Helvetica" font-size="11" fill="#3D4F65" font-style="italic">FedMM 两枚 token</text>
+  <rect x="400" y="90" width="140" height="50" rx="6" fill="#FFF4E6" stroke="#E8893C" stroke-width="1.5"/>
+  <line x1="470" y1="90" x2="470" y2="140" stroke="#E8893C" stroke-width="1"/>
+  <text x="435" y="114" text-anchor="middle" font-family="Helvetica" font-size="11" fill="#1E3A5F">id-fed</text>
+  <text x="435" y="131" text-anchor="middle" font-family="Helvetica" font-size="9" fill="#3D4F65">全球兴趣群</text>
+  <text x="505" y="114" text-anchor="middle" font-family="Helvetica" font-size="11" fill="#1E3A5F">id-local</text>
+  <text x="505" y="131" text-anchor="middle" font-family="Helvetica" font-size="9" fill="#3D4F65">本地细分群</text>
+
+  <!-- Arrow down: concat -->
+  <line x1="300" y1="155" x2="300" y2="228" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="312" y="195" font-family="Helvetica" font-size="11" fill="#3D4F65">拼接 embedding</text>
+
+  <!-- Backbone -->
+  <rect x="180" y="230" width="240" height="60" rx="8" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="1.8"/>
+  <text x="300" y="258" text-anchor="middle" font-family="Helvetica" font-size="14" font-weight="bold" fill="#1E3A5F">任意 CTR backbone</text>
+  <text x="300" y="278" text-anchor="middle" font-family="Helvetica" font-size="11" fill="#3D4F65">DNN · DeepFM · DCN 不变</text>
+
+  <!-- Arrow to result -->
+  <line x1="300" y1="290" x2="300" y2="335" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Result -->
+  <text x="300" y="358" text-anchor="middle" font-family="Helvetica" font-size="13" font-weight="bold" fill="#1E3A5F">AUC ↑  模型无关增强</text>
+  <text x="300" y="378" text-anchor="middle" font-family="Helvetica" font-size="11" fill="#E8893C">0.9024 → 0.9083</text>
+</svg>

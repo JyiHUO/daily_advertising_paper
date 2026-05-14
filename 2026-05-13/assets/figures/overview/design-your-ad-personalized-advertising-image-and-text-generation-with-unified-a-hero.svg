@@ -1,0 +1,123 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Helvetica Neue',Arial,'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ahw" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C9A24A"/>
+    </marker>
+    <radialGradient id="core" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#FFF6E2"/>
+      <stop offset="100%" stop-color="#F4D98A"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="900" height="620" fill="#FAFBFD"/>
+
+  <!-- Title -->
+  <text x="450" y="46" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">Design Your Ad · 个性化图文广告统一生成</text>
+  <text x="450" y="70" text-anchor="middle" font-size="13" fill="#3D4F65">一个自回归模型 · 同时写文案与画广告图 · 看懂"这个用户"的偏好</text>
+
+  <!-- LEFT: 旧范式 -->
+  <g transform="translate(40,110)">
+    <text x="105" y="0" text-anchor="middle" font-size="13" font-weight="700" fill="#8A6A2E">以往：多模型流水线</text>
+    <rect x="20" y="20" width="170" height="40" rx="8" fill="#F4ECDA" stroke="#C9A24A"/>
+    <text x="105" y="45" text-anchor="middle" font-size="12" fill="#5C4318">LLM 写文案</text>
+    <rect x="20" y="70" width="170" height="40" rx="8" fill="#F4ECDA" stroke="#C9A24A"/>
+    <text x="105" y="95" text-anchor="middle" font-size="12" fill="#5C4318">T2I 画图</text>
+    <rect x="20" y="120" width="170" height="40" rx="8" fill="#F4ECDA" stroke="#C9A24A"/>
+    <text x="105" y="145" text-anchor="middle" font-size="12" fill="#5C4318">CTR 群体平均偏好</text>
+    <text x="105" y="180" text-anchor="middle" font-size="11" fill="#A07A33" font-style="italic">模态割裂 · 千人一面</text>
+  </g>
+
+  <!-- Center core: unified AR model -->
+  <g transform="translate(450,310)">
+    <circle r="120" fill="url(#core)" stroke="#C99A2E" stroke-width="2"/>
+    <text y="-78" text-anchor="middle" font-size="13" font-weight="700" fill="#7A5410">Uni-AdGen 统一自回归</text>
+
+    <!-- text token -->
+    <rect x="-90" y="-50" width="80" height="24" rx="5" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="-50" y="-33" text-anchor="middle" font-size="11" fill="#1E3A5F">text 文案</text>
+
+    <!-- arrow next-token -->
+    <path d="M -8,-38 L 8,-38" stroke="#1E3A5F" stroke-width="1.4" marker-end="url(#ah)" fill="none"/>
+
+    <rect x="10" y="-50" width="80" height="24" rx="5" fill="#FFF1E0" stroke="#E08A3C"/>
+    <text x="50" y="-33" text-anchor="middle" font-size="11" fill="#7A4318">image 图</text>
+
+    <text y="-6" text-anchor="middle" font-size="11" fill="#5C4318">next-token 一气呵成</text>
+
+    <!-- foreground inject -->
+    <g transform="translate(-78,18)">
+      <rect width="72" height="24" rx="4" fill="#FFFFFF" stroke="#E08A3C" stroke-dasharray="3 2"/>
+      <text x="36" y="16" text-anchor="middle" font-size="10" fill="#7A4318">前景注入</text>
+    </g>
+    <!-- instruction tuning -->
+    <g transform="translate(6,18)">
+      <rect width="82" height="24" rx="4" fill="#FFFFFF" stroke="#4B8BDA" stroke-dasharray="3 2"/>
+      <text x="41" y="16" text-anchor="middle" font-size="10" fill="#1E3A5F">卖点指令约束</text>
+    </g>
+
+    <text y="68" text-anchor="middle" font-size="10" fill="#7A5410">个体级偏好 · 非 CTR 群体平均</text>
+  </g>
+
+  <!-- LEFT arrow to core (旧 → 新, dimmed) -->
+  <path d="M 240,200 Q 300,230 332,270" stroke="#C9A24A" stroke-width="1.4" stroke-dasharray="4 4" fill="none" marker-end="url(#ahw)"/>
+
+  <!-- TOP input: user history (coarse-to-fine) -->
+  <g transform="translate(330,108)">
+    <text x="120" y="0" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">用户历史点击（图+文）</text>
+    <g>
+      <rect x="10" y="12" width="34" height="34" rx="4" fill="#DCE9F7" stroke="#4B8BDA"/>
+      <rect x="50" y="12" width="34" height="34" rx="4" fill="#DCE9F7" stroke="#4B8BDA"/>
+      <rect x="90" y="12" width="34" height="34" rx="4" fill="#E6E9EE" stroke="#9AA6B5" opacity="0.55"/>
+      <rect x="130" y="12" width="34" height="34" rx="4" fill="#DCE9F7" stroke="#4B8BDA"/>
+      <rect x="170" y="12" width="34" height="34" rx="4" fill="#E6E9EE" stroke="#9AA6B5" opacity="0.55"/>
+      <rect x="210" y="12" width="34" height="34" rx="4" fill="#DCE9F7" stroke="#4B8BDA"/>
+    </g>
+    <text x="120" y="64" text-anchor="middle" font-size="11" fill="#3D4F65">粗采样 → token 级 Top-K 细筛</text>
+  </g>
+
+  <!-- arrow from history into core top -->
+  <path d="M 450,182 L 450,192" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+  <text x="458" y="195" font-size="10" fill="#4B8BDA">个性化偏好</text>
+
+  <!-- RIGHT: outputs -->
+  <g transform="translate(660,148)">
+    <text x="100" y="0" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">个性化广告输出</text>
+
+    <!-- ad image -->
+    <rect x="20" y="14" width="160" height="100" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <circle cx="100" cy="64" r="22" fill="#FFFFFF" stroke="#1E3A5F"/>
+    <rect x="92" y="56" width="16" height="22" rx="2" fill="#C9A24A"/>
+    <text x="100" y="106" text-anchor="middle" font-size="10" fill="#3D4F65">前景稳 · 背景按用户风格</text>
+
+    <!-- ad copy -->
+    <rect x="20" y="128" width="160" height="56" rx="8" fill="#FFF8EC" stroke="#C9A24A"/>
+    <text x="100" y="150" text-anchor="middle" font-size="11" fill="#5C4318">"瑞士机械 · 潜水系列"</text>
+    <text x="100" y="170" text-anchor="middle" font-size="10" fill="#7A5410">仅由卖点生成</text>
+  </g>
+
+  <!-- arrow core -> outputs -->
+  <path d="M 568,290 L 658,230" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+  <path d="M 568,330 L 658,330" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+
+  <!-- BOTTOM: dataset &amp; metric -->
+  <g transform="translate(80,500)">
+    <rect width="320" height="78" rx="10" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="160" y="26" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">PAd1M 数据集</text>
+    <text x="160" y="48" text-anchor="middle" font-size="11" fill="#3D4F65">114 万用户 · 1892 万图文点击</text>
+    <text x="160" y="65" text-anchor="middle" font-size="11" fill="#3D4F65">京东多模态广告 · 含透明前景</text>
+  </g>
+
+  <g transform="translate(500,500)">
+    <rect width="320" height="78" rx="10" fill="#FFF8EC" stroke="#C9A24A"/>
+    <text x="160" y="26" text-anchor="middle" font-size="13" font-weight="700" fill="#7A5410">PBS 评测指标</text>
+    <text x="160" y="48" text-anchor="middle" font-size="11" fill="#5C4318">同商品换背景：CLIP Δ &lt; 0.05</text>
+    <text x="160" y="65" text-anchor="middle" font-size="11" fill="#5C4318">PBS Δ = 0.42 · 真正看背景风格</text>
+  </g>
+
+  <!-- light connectors from core down -->
+  <path d="M 405,420 Q 350,465 295,498" stroke="#4B8BDA" stroke-width="1.2" fill="none" stroke-dasharray="3 3"/>
+  <path d="M 495,420 Q 560,465 620,498" stroke="#C9A24A" stroke-width="1.2" fill="none" stroke-dasharray="3 3"/>
+</svg>

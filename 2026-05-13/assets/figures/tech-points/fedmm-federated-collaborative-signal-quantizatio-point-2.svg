@@ -1,0 +1,75 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E8A87C"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="300" y="34" text-anchor="middle" font-size="17" font-weight="700" fill="#1E3A5F">码本：跨市场的语义"中介"</text>
+  <text x="300" y="56" text-anchor="middle" font-size="11" fill="#3D4F65">不传参数，不传 embedding，只传共享的语义原型</text>
+
+  <!-- Three local markets -->
+  <g>
+    <circle cx="80" cy="170" r="38" fill="#FFF1E6" stroke="#E8A87C" stroke-width="1.6"/>
+    <text x="80" y="168" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">市场 A</text>
+    <text x="80" y="184" text-anchor="middle" font-size="10" fill="#3D4F65">本地ID</text>
+
+    <circle cx="80" cy="265" r="38" fill="#FFF1E6" stroke="#E8A87C" stroke-width="1.6"/>
+    <text x="80" y="263" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">市场 B</text>
+    <text x="80" y="279" text-anchor="middle" font-size="10" fill="#3D4F65">本地ID</text>
+
+    <circle cx="80" cy="355" r="38" fill="#FFF1E6" stroke="#E8A87C" stroke-width="1.6"/>
+    <text x="80" y="353" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">市场 C</text>
+    <text x="80" y="369" text-anchor="middle" font-size="10" fill="#3D4F65">本地ID</text>
+  </g>
+
+  <!-- Codebook in middle -->
+  <g>
+    <rect x="240" y="150" width="120" height="220" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="300" y="173" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">共享码本</text>
+    <text x="300" y="189" text-anchor="middle" font-size="10" fill="#3D4F65">按索引对齐</text>
+
+    <g font-size="10" fill="#1E3A5F">
+      <rect x="256" y="200" width="88" height="22" rx="4" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="300" y="215" text-anchor="middle">#0  户外爱好</text>
+      <rect x="256" y="228" width="88" height="22" rx="4" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="300" y="243" text-anchor="middle">#1  数码迷</text>
+      <rect x="256" y="256" width="88" height="22" rx="4" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="300" y="271" text-anchor="middle">#2  亲子族</text>
+      <rect x="256" y="284" width="88" height="22" rx="4" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="300" y="299" text-anchor="middle">⋯</text>
+      <rect x="256" y="312" width="88" height="22" rx="4" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="300" y="327" text-anchor="middle">#k  美食家</text>
+      <text x="300" y="356" text-anchor="middle" font-size="9.5" fill="#3D4F65">同号码字 = 同一语义</text>
+    </g>
+  </g>
+
+  <!-- Server -->
+  <g>
+    <rect x="450" y="220" width="110" height="80" rx="10" fill="#E8EEF7" stroke="#1E3A5F" stroke-width="1.6"/>
+    <text x="505" y="248" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">服务器</text>
+    <text x="505" y="266" text-anchor="middle" font-size="10" fill="#3D4F65">按位加权平均</text>
+    <text x="505" y="282" text-anchor="middle" font-size="10" fill="#3D4F65">→ 全局码本</text>
+  </g>
+
+  <!-- upload arrows: markets -> codebook -->
+  <line x1="116" y1="180" x2="238" y2="225" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+  <line x1="118" y1="265" x2="238" y2="265" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+  <line x1="116" y1="345" x2="238" y2="305" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+
+  <!-- upload label -->
+  <text x="175" y="145" text-anchor="middle" font-size="10" fill="#1E3A5F">上传码本 + Laplace 噪声</text>
+
+  <!-- codebook <-> server -->
+  <line x1="362" y1="245" x2="448" y2="250" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+  <line x1="448" y1="275" x2="362" y2="280" stroke="#E8A87C" stroke-width="1.8" marker-end="url(#ar2)"/>
+  <text x="405" y="240" text-anchor="middle" font-size="10" fill="#1E3A5F">聚合</text>
+  <text x="405" y="298" text-anchor="middle" font-size="10" fill="#E8A87C">下发全局码本</text>
+
+  <!-- bottom note -->
+  <text x="300" y="402" text-anchor="middle" font-size="10.5" fill="#3D4F65" font-style="italic">索引对齐的聚合，绕开各市场 ID 空间不交的难题</text>
+</svg>
