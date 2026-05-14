@@ -1,0 +1,13 @@
+{
+  "report_date": "2026-05-13",
+  "provider": "bedrock-opus-47",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 3043,
+  "focus_titles": [
+    "FedMM: Federated Collaborative Signal Quantization for Multi-Market CTR Prediction",
+    "Design Your Ad: Personalized Advertising Image and Text Generation with Unified Autoregressive Models"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Steve"
+}
