@@ -1,0 +1,13 @@
+{
+  "report_date": "2026-05-14",
+  "provider": "bedrock-opus-47",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 3311,
+  "focus_titles": [
+    "Decision Support for Marketplace Policies under Incomplete Evidence: From Replay to Launch Readiness",
+    "When Attention Closes: How LLMs Lose the Thread in Multi-Turn Interaction"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Steve"
+}
