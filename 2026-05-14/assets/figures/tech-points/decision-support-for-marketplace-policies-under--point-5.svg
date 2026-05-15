@@ -1,0 +1,57 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">跨期冻结验证：不许回头改参数</text>
+
+  <!-- Season 2: discovery, with lock -->
+  <g>
+    <rect x="50" y="80" width="200" height="200" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="150" y="108" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">Season 2 · 发现</text>
+    <text x="150" y="130" text-anchor="middle" font-size="11" fill="#3D4F65">候选集 / 分位阈值 / margin</text>
+
+    <!-- Lock icon -->
+    <g transform="translate(110,158)">
+      <rect x="0" y="20" width="80" height="60" rx="6" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="2"/>
+      <path d="M15 20 V8 a25 25 0 0 1 50 0 V20" fill="none" stroke="#1E3A5F" stroke-width="3"/>
+      <circle cx="40" cy="50" r="6" fill="#C97A4A"/>
+      <rect x="37" y="50" width="6" height="14" fill="#C97A4A"/>
+    </g>
+    <text x="150" y="262" text-anchor="middle" font-size="12" font-weight="600" fill="#C97A4A">参数全部冻结</text>
+  </g>
+
+  <!-- Arrow -->
+  <line x1="252" y1="180" x2="348" y2="180" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#ar)"/>
+  <text x="300" y="172" text-anchor="middle" font-size="11" fill="#3D4F65">原样搬到新窗口</text>
+
+  <!-- Season 3: triple gate -->
+  <g>
+    <rect x="350" y="80" width="200" height="200" rx="10" fill="#FFF4EC" stroke="#C97A4A" stroke-width="1.5"/>
+    <text x="450" y="108" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">Season 3 · 考验</text>
+    <text x="450" y="128" text-anchor="middle" font-size="11" fill="#3D4F65">市场结构已改变</text>
+
+    <!-- Three gates -->
+    <g font-size="12">
+      <circle cx="375" cy="170" r="9" fill="#4B8BDA"/>
+      <text x="375" y="174" text-anchor="middle" fill="#FFFFFF" font-weight="700" font-size="11">1</text>
+      <text x="390" y="174" fill="#3D4F65">replay lift &gt; 0</text>
+
+      <circle cx="375" cy="210" r="9" fill="#4B8BDA"/>
+      <text x="375" y="214" text-anchor="middle" fill="#FFFFFF" font-weight="700" font-size="11">2</text>
+      <text x="390" y="214" fill="#3D4F65">排名仍在前列</text>
+
+      <circle cx="375" cy="250" r="9" fill="#4B8BDA"/>
+      <text x="375" y="254" text-anchor="middle" fill="#FFFFFF" font-weight="700" font-size="11">3</text>
+      <text x="390" y="254" fill="#3D4F65">guardrail 保留</text>
+    </g>
+  </g>
+
+  <!-- Outcome -->
+  <text x="300" y="322" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">三条同时成立 → T(策略) = 1，可进下一步</text>
+  <text x="300" y="344" text-anchor="middle" font-size="12" fill="#3D4F65">否则被新窗口淘汰，无资格上线</text>
+
+  <text x="300" y="390" text-anchor="middle" font-size="11" fill="#7A8699" font-style="italic">防止对历史流量过拟合 · 把策略当作已上线规则来考</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg height="500" width="800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+    </marker>
+    <marker id="arB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="40" text-anchor="middle" font-family="Helvetica,Arial" font-size="20" font-weight="bold" fill="#1E3A5F">脑子里知道 ≠ 嘴上守住</text>
+
+  <!-- Brain (residual stream) -->
+  <circle cx="180" cy="230" r="95" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="180" y="195" text-anchor="middle" font-family="Helvetica,Arial" font-size="15" font-weight="bold" fill="#1E3A5F">残差流（脑）</text>
+  <text x="180" y="225" text-anchor="middle" font-family="Helvetica,Arial" font-size="13" fill="#3D4F65">线性探针 AUC 0.99</text>
+  <text x="180" y="250" text-anchor="middle" font-family="Helvetica,Arial" font-size="12" fill="#3D4F65">"它其实知道"</text>
+
+  <!-- Mouth (behavior) -->
+  <rect x="525" y="155" width="170" height="150" rx="12" fill="#FFF1E6" stroke="#D97757" stroke-width="2"/>
+  <text x="610" y="195" text-anchor="middle" font-family="Helvetica,Arial" font-size="15" font-weight="bold" fill="#1E3A5F">行为输出（嘴）</text>
+  <text x="610" y="230" text-anchor="middle" font-family="Helvetica,Arial" font-size="13" fill="#3D4F65">recall ≈ 0%</text>
+  <text x="610" y="270" text-anchor="middle" font-family="Helvetica,Arial" font-size="12" fill="#3D4F65">"却用不上"</text>
+
+  <!-- Broken arrow brain -> mouth -->
+  <line x1="275" y1="230" x2="370" y2="230" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arB)"/>
+  <line x1="430" y1="230" x2="520" y2="230" stroke="#D97757" stroke-width="2.5" stroke-dasharray="6,5" marker-end="url(#ar)"/>
+  <text x="400" y="237" text-anchor="middle" font-family="Helvetica,Arial" font-size="26" fill="#D97757" font-weight="bold">✕</text>
+  <text x="400" y="200" text-anchor="middle" font-family="Helvetica,Arial" font-size="12" fill="#D97757">通道关闭：信息传不到</text>
+
+  <!-- Bottom contrast -->
+  <line x1="120" y1="370" x2="680" y2="370" stroke="#CBD5E0" stroke-width="1"/>
+  <text x="400" y="395" text-anchor="middle" font-family="Helvetica,Arial" font-size="14" font-weight="bold" fill="#1E3A5F">解码能力 ≠ 行为存活</text>
+
+  <text x="200" y="430" text-anchor="middle" font-family="Helvetica,Arial" font-size="12" fill="#3D4F65">LLaMA：探针 0.99 / 行为 ~0%（早熟却脆弱）</text>
+  <text x="600" y="430" text-anchor="middle" font-family="Helvetica,Arial" font-size="12" fill="#3D4F65">Mistral：探针 0.87 / 行为 45%（晚熟更稳）</text>
+  <text x="400" y="460" text-anchor="middle" font-family="Helvetica,Arial" font-size="12" fill="#1E3A5F">残差里能解码出目标，不代表模型还守得住目标</text>
+</svg>

@@ -4,18 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-05-13
+- **日期**：2026-05-14
 - **分类**：cs.IR + cs.AI + cs.LG
-- **候选论文数**：5
+- **候选论文数**：10
 - **必读论文**：
-  - FedMM: Federated Collaborative Signal Quantization for Multi-Market CTR Prediction
-  - Design Your Ad: Personalized Advertising Image and Text Generation with Unified Autoregressive Models
-- **日报路径**：[2026-05-13/daily_report.md](2026-05-13/daily_report.md)
+  - Decision Support for Marketplace Policies under Incomplete Evidence: From Replay to Launch Readiness
+  - When Attention Closes: How LLMs Lose the Thread in Multi-Turn Interaction
+- **日报路径**：[2026-05-14/daily_report.md](2026-05-14/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-05-14 | cs.IR + cs.AI + cs.LG | 10 | 1 | Decision Support for Marketplace Policies under Incomplete Evidence: From Replay to Launch Readiness | [2026-05-14/daily_report.md](2026-05-14/daily_report.md) |
+|  |  |  | 2 | When Attention Closes: How LLMs Lose the Thread in Multi-Turn Interaction |  |
 | 2026-05-13 | cs.IR + cs.AI + cs.LG | 5 | 1 | FedMM: Federated Collaborative Signal Quantization for Multi-Market CTR Prediction | [2026-05-13/daily_report.md](2026-05-13/daily_report.md) |
 |  |  |  | 2 | Design Your Ad: Personalized Advertising Image and Text Generation with Unified Autoregressive Models |  |
 | 2026-05-12 | cs.IR + cs.AI + cs.LG | 37 | 1 | Learning to Bid with Unknown Private Values in Budget-Constrained First-Price Auctions | [2026-05-12/daily_report.md](2026-05-12/daily_report.md) |

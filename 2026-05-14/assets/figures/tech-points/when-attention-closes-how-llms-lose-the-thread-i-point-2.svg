@@ -1,0 +1,60 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E3A5F">滑动窗口因果干预</text>
+  <text x="400" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">用窗口遮住系统提示，验证"通道关闭"导致遗忘</text>
+
+  <!-- Long ribbon representing dialogue tokens -->
+  <rect x="60" y="130" width="680" height="60" rx="6" fill="#EFF6FF" stroke="#B8D4F0"/>
+
+  <!-- Shaded blocked area -->
+  <rect x="60" y="130" width="370" height="60" rx="6" fill="#1E3A5F" fill-opacity="0.18"/>
+  <text x="245" y="166" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="bold">被结构性屏蔽</text>
+  <text x="245" y="182" text-anchor="middle" font-size="10" fill="#3D4F65">距离 ≥ W</text>
+
+  <!-- System prompt block at start -->
+  <rect x="60" y="130" width="110" height="60" rx="6" fill="#FFE8D6" stroke="#E5A06A"/>
+  <text x="115" y="155" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="bold">系统提示</text>
+  <text x="115" y="173" text-anchor="middle" font-size="11" fill="#3D4F65">目标 / 人设</text>
+
+  <!-- Current query position -->
+  <circle cx="700" cy="160" r="14" fill="#4B8BDA"/>
+  <text x="700" y="164" text-anchor="middle" font-size="11" fill="#fff" font-weight="bold">Q</text>
+  <text x="700" y="212" text-anchor="middle" font-size="11" fill="#3D4F65">当前回复</text>
+
+  <!-- Sliding window bracket -->
+  <path d="M 430 110 L 430 95 L 700 95 L 700 110" stroke="#4B8BDA" stroke-width="2" fill="none"/>
+  <text x="565" y="85" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="bold">窗口 W</text>
+
+  <!-- Arrow from Q showing it cannot reach prompt -->
+  <path d="M 686 152 Q 430 50 175 128" stroke="#C44545" stroke-width="2" fill="none" stroke-dasharray="5,4"/>
+  <line x1="380" y1="80" x2="420" y2="96" stroke="#C44545" stroke-width="3"/>
+  <line x1="420" y1="80" x2="380" y2="96" stroke="#C44545" stroke-width="3"/>
+
+  <!-- Outcome panels -->
+  <g>
+    <rect x="80" y="240" width="280" height="160" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="220" y="268" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">轮次 &lt; τ_cross</text>
+    <text x="220" y="290" text-anchor="middle" font-size="11" fill="#3D4F65">提示仍在窗口内</text>
+    <text x="220" y="345" text-anchor="middle" font-size="28" font-weight="bold" fill="#2A7F4F">≈ 100%</text>
+    <text x="220" y="375" text-anchor="middle" font-size="11" fill="#3D4F65">recall · 守住人设</text>
+  </g>
+
+  <g>
+    <rect x="440" y="240" width="280" height="160" rx="8" fill="#FBE9E9" stroke="#C44545"/>
+    <text x="580" y="268" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">轮次 ≥ τ_cross</text>
+    <text x="580" y="290" text-anchor="middle" font-size="11" fill="#3D4F65">提示被滑出窗口</text>
+    <text x="580" y="345" text-anchor="middle" font-size="28" font-weight="bold" fill="#C44545">11.2%</text>
+    <text x="580" y="375" text-anchor="middle" font-size="11" fill="#3D4F65">recall 崩塌 · 违规↑</text>
+  </g>
+
+  <!-- Causal arrow between panels -->
+  <line x1="365" y1="320" x2="435" y2="320" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="400" y="312" text-anchor="middle" font-size="11" fill="#1E3A5F" font-style="italic">越过 τ</text>
+
+  <text x="400" y="445" text-anchor="middle" font-size="11" fill="#3D4F65">注意力通道关闭 ⇒ 行为退化（因果证据，R² ≈ 1）</text>
+</svg>

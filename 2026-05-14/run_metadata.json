@@ -1,0 +1,18 @@
+{
+  "date": "2026-05-14",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 10,
+  "supplementary_count": 1,
+  "focus_titles": [
+    "Decision Support for Marketplace Policies under Incomplete Evidence: From Replay to Launch Readiness",
+    "When Attention Closes: How LLMs Lose the Thread in Multi-Turn Interaction"
+  ],
+  "focus_status": {
+    "Decision Support for Marketplace Policies under Incomplete Evidence: From Replay to Launch Readiness": "completed",
+    "When Attention Closes: How LLMs Lose the Thread in Multi-Turn Interaction": "completed"
+  }
+}

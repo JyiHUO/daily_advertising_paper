@@ -1,0 +1,60 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C25450"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="40" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">Replay = 机械回放，不是因果</text>
+  <text x="400" y="62" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#3D4F65">假设竞价者出价与参与完全不变</text>
+
+  <!-- Log box -->
+  <g>
+    <rect x="50" y="120" width="200" height="180" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="150" y="150" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">历史日志 (bid · pay · floor)</text>
+
+    <!-- tape reels -->
+    <circle cx="100" cy="230" r="22" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="2"/>
+    <circle cx="100" cy="230" r="6" fill="#1E3A5F"/>
+    <circle cx="200" cy="230" r="22" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="2"/>
+    <circle cx="200" cy="230" r="6" fill="#1E3A5F"/>
+    <rect x="100" y="222" width="100" height="16" fill="#1E3A5F"/>
+  </g>
+
+  <!-- arrow 1 -->
+  <line x1="252" y1="210" x2="322" y2="210" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="287" y="200" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">套用新 floor</text>
+
+  <!-- Rule box -->
+  <g>
+    <rect x="325" y="140" width="180" height="140" rx="8" fill="#FFF4E6" stroke="#E8A05C" stroke-width="1.5"/>
+    <text x="415" y="170" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">机械规则 (不重跑拍卖)</text>
+    <text x="415" y="208" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#3D4F65">bid ≥ floor ?</text>
+    <text x="415" y="240" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#3D4F65">pay ← max(pay, floor)</text>
+  </g>
+
+  <!-- arrow 2 -->
+  <line x1="508" y1="210" x2="585" y2="210" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+
+  <!-- Output -->
+  <g>
+    <rect x="590" y="150" width="160" height="120" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="670" y="180" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#1E3A5F">Replay Lift</text>
+    <text x="670" y="220" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#4B8BDA">+47.7%</text>
+    <text x="670" y="250" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">仅作筛选层</text>
+  </g>
+
+  <!-- caveat arrow from output to warning -->
+  <path d="M670 272 Q670 330 560 368" stroke="#C25450" stroke-width="1.5" stroke-dasharray="5 4" fill="none" marker-end="url(#arR)"/>
+
+  <!-- Bottom warning -->
+  <g>
+    <rect x="120" y="370" width="440" height="90" rx="8" fill="#FBEAEA" stroke="#C25450" stroke-width="1.5"/>
+    <text x="340" y="400" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#9A2F2B">未回答的问题</text>
+    <text x="340" y="424" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#3D4F65">广告主会改出价 / 还会来参与吗？</text>
+    <text x="340" y="446" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#9A2F2B">→ 非因果效应，不可直接上线</text>
+  </g>
+</svg>

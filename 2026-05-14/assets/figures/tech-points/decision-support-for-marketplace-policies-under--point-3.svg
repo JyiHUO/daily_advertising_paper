@@ -1,0 +1,66 @@
+<svg height="600" width="960" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="36" text-anchor="middle" font-size="19" font-weight="bold" fill="#1E3A5F">不只看点估计：先过 guardrail，再按保守下界排序</text>
+
+  <!-- Candidate strategies pool -->
+  <g>
+    <ellipse cx="110" cy="265" rx="80" ry="95" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="110" y="190" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="bold">候选策略池</text>
+    <circle cx="85" cy="230" r="9" fill="#4B8BDA" opacity="0.7"/>
+    <circle cx="130" cy="248" r="9" fill="#4B8BDA" opacity="0.7"/>
+    <circle cx="92" cy="278" r="9" fill="#4B8BDA" opacity="0.7"/>
+    <circle cx="135" cy="300" r="9" fill="#4B8BDA" opacity="0.7"/>
+    <circle cx="98" cy="328" r="9" fill="#4B8BDA" opacity="0.7"/>
+  </g>
+
+  <!-- Guardrail filter (sieve) -->
+  <g>
+    <path d="M 280 175 L 470 175 L 408 295 L 342 295 Z" fill="#FFF4EC" stroke="#C2603C" stroke-width="2"/>
+    <text x="375" y="160" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">多边 Guardrail（硬阈值）</text>
+    <text x="375" y="200" text-anchor="middle" font-size="11" fill="#3D4F65">填充 ≥ 98%   点击保留 ≥ 97%</text>
+    <text x="375" y="220" text-anchor="middle" font-size="11" fill="#3D4F65">转化保留 ≥ 90%   价值代理 ≥ 97%</text>
+    <text x="375" y="240" text-anchor="middle" font-size="11" fill="#3D4F65">每日 yield 提升 &gt; 0</text>
+
+    <!-- Rejected drops -->
+    <circle cx="345" cy="325" r="6" fill="#C2603C" opacity="0.6"/>
+    <circle cx="375" cy="345" r="6" fill="#C2603C" opacity="0.6"/>
+    <circle cx="405" cy="325" r="6" fill="#C2603C" opacity="0.6"/>
+    <text x="375" y="380" text-anchor="middle" font-size="11" fill="#C2603C" font-style="italic">高 lift 但伤广告主 → 淘汰</text>
+  </g>
+
+  <!-- Arrow pool -> sieve -->
+  <line x1="190" y1="235" x2="278" y2="210" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Conservative lower bound -->
+  <g>
+    <rect x="555" y="170" width="215" height="135" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="662" y="198" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">按保守下界排序</text>
+
+    <!-- Lift visualization -->
+    <line x1="585" y1="255" x2="740" y2="255" stroke="#3D4F65" stroke-width="1"/>
+    <line x1="585" y1="250" x2="585" y2="260" stroke="#3D4F65" stroke-width="1"/>
+    <line x1="740" y1="250" x2="740" y2="260" stroke="#3D4F65" stroke-width="1"/>
+    <circle cx="720" cy="255" r="5" fill="#9FB8D6"/>
+    <text x="720" y="243" text-anchor="middle" font-size="10" fill="#3D4F65">点估计</text>
+    <circle cx="650" cy="255" r="6" fill="#1E3A5F"/>
+    <text x="650" y="243" text-anchor="middle" font-size="10" fill="#1E3A5F" font-weight="bold">lift − z·SE</text>
+    <text x="662" y="285" text-anchor="middle" font-size="11" fill="#3D4F65">用下界排，不被高方差骗</text>
+  </g>
+
+  <!-- Arrow sieve -> ranking -->
+  <line x1="470" y1="215" x2="552" y2="225" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Output -->
+  <g>
+    <rect x="505" y="395" width="290" height="65" rx="8" fill="#FFF4EC" stroke="#C2603C" stroke-width="2"/>
+    <text x="650" y="421" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">验证优先候选</text>
+    <text x="650" y="442" text-anchor="middle" font-size="11" fill="#3D4F65">过所有阈值 + 下界最高 → 上线在线验证</text>
+  </g>
+
+  <line x1="655" y1="305" x2="650" y2="392" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+</svg>

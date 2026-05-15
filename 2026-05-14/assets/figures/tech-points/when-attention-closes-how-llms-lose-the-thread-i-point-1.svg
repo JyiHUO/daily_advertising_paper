@@ -1,0 +1,56 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrowThin" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8FB4DC"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="30" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="bold" fill="#1E3A5F">GAR：模型还在多大程度上盯着系统提示</text>
+
+  <!-- System prompt anchor on the left -->
+  <g>
+    <rect x="30" y="130" width="100" height="90" rx="8" fill="#FFF7E6" stroke="#C99A2E" stroke-width="1.5"/>
+    <text x="80" y="158" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1E3A5F">系统提示</text>
+    <text x="80" y="180" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">目标 token</text>
+    <text x="80" y="200" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#7A6020">人设/规则/事实</text>
+  </g>
+
+  <!-- Turn 1: thick attention beam -->
+  <g>
+    <rect x="200" y="100" width="130" height="110" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="265" y="125" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1E3A5F">第 1 轮</text>
+    <circle cx="265" cy="165" r="26" fill="#4B8BDA" opacity="0.85"/>
+    <text x="265" y="170" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">GAR↑</text>
+    <line x1="130" y1="170" x2="200" y2="165" stroke="#4B8BDA" stroke-width="6" marker-end="url(#arrow)"/>
+    <text x="265" y="200" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">注意力充沛</text>
+  </g>
+
+  <!-- Turn N: thin attention beam, channel closing -->
+  <g>
+    <rect x="410" y="100" width="160" height="110" rx="8" fill="#FDF2E9" stroke="#D97757" stroke-width="1.5"/>
+    <text x="490" y="125" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1E3A5F">第 N 轮</text>
+    <circle cx="490" cy="165" r="8" fill="#D97757" opacity="0.85"/>
+    <line x1="330" y1="165" x2="410" y2="165" stroke="#8FB4DC" stroke-width="1.2" stroke-dasharray="3,3" marker-end="url(#arrowThin)"/>
+    <text x="490" y="200" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">注意力稀释 → 通道关闭</text>
+  </g>
+
+  <!-- bottom: monotonic decay illustration -->
+  <g transform="translate(80,275)">
+    <line x1="0" y1="70" x2="440" y2="70" stroke="#3D4F65" stroke-width="1"/>
+    <line x1="0" y1="0" x2="0" y2="70" stroke="#3D4F65" stroke-width="1"/>
+    <text x="-6" y="6" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#3D4F65">1.0</text>
+    <text x="-6" y="73" text-anchor="end" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#3D4F65">0</text>
+    <text x="220" y="95" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">对话轮数 →</text>
+    <text x="-32" y="35" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E3A5F" font-weight="bold" transform="rotate(-90 -32 35)">GAR</text>
+
+    <!-- decay curve -->
+    <path d="M0,8 Q120,18 220,42 T440,66" fill="none" stroke="#4B8BDA" stroke-width="2.5"/>
+
+    <!-- closure threshold -->
+    <line x1="0" y1="58" x2="440" y2="58" stroke="#D97757" stroke-width="1" stroke-dasharray="4,3"/>
+    <text x="445" y="61" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#D97757" font-weight="bold">闭合阈值</text>
+  </g>
+</svg>

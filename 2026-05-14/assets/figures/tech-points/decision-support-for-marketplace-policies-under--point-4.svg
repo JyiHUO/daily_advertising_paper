@@ -1,0 +1,65 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E3A5F">离线证据 ≠ 上线许可</text>
+
+  <!-- Offline gate -->
+  <g>
+    <rect x="60" y="100" width="200" height="170" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="160" y="130" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">离线六门</text>
+    <text x="160" y="156" text-anchor="middle" font-size="13" fill="#3D4F65">R · T · S · C · H · B</text>
+    <text x="160" y="188" text-anchor="middle" font-size="11" fill="#3D4F65">replay / 跨期 / 支持度</text>
+    <text x="160" y="208" text-anchor="middle" font-size="11" fill="#3D4F65">下界 / guardrail / 余量</text>
+    <text x="160" y="248" text-anchor="middle" font-size="14" font-weight="bold" fill="#C97A3F">Q-I = 1</text>
+  </g>
+
+  <!-- Online gate -->
+  <g>
+    <rect x="320" y="100" width="200" height="170" rx="10" fill="#FFF4E6" stroke="#C97A3F" stroke-width="2"/>
+    <text x="420" y="130" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">在线门 I</text>
+    <text x="420" y="172" text-anchor="middle" font-size="11" fill="#3D4F65">竞价反应 / 预算节奏</text>
+    <text x="420" y="194" text-anchor="middle" font-size="11" fill="#3D4F65">跨拍卖干扰</text>
+    <text x="420" y="232" text-anchor="middle" font-size="11" fill="#3D4F65">shadow + switchback</text>
+  </g>
+
+  <!-- Lock / Launch -->
+  <g>
+    <rect x="580" y="100" width="170" height="170" rx="10" fill="#E8F3EC" stroke="#4A8C5F" stroke-width="2"/>
+    <text x="665" y="130" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">Launch</text>
+    <text x="665" y="156" text-anchor="middle" font-size="13" fill="#3D4F65">Q = Q-I · I = 1</text>
+    <rect x="640" y="184" width="50" height="40" rx="4" fill="none" stroke="#4A8C5F" stroke-width="2"/>
+    <path d="M650 184 v-12 a15 15 0 0 1 30 0 v12" fill="none" stroke="#4A8C5F" stroke-width="2"/>
+    <circle cx="665" cy="204" r="3" fill="#4A8C5F"/>
+  </g>
+
+  <!-- arrows -->
+  <line x1="260" y1="185" x2="318" y2="185" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="522" y1="185" x2="578" y2="185" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <!-- Bottom decision lane -->
+  <text x="400" y="335" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">离线全过 → 仅获得"在线验证"资格，而非上线许可</text>
+
+  <g>
+    <rect x="80" y="370" width="150" height="50" rx="6" fill="#FDECEC" stroke="#C25450" stroke-width="1.5"/>
+    <text x="155" y="392" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E3A5F">redesign</text>
+    <text x="155" y="409" text-anchor="middle" font-size="10" fill="#3D4F65">核心门失败</text>
+
+    <rect x="245" y="370" width="150" height="50" rx="6" fill="#FFF4E6" stroke="#C97A3F" stroke-width="1.5"/>
+    <text x="320" y="392" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E3A5F">hold</text>
+    <text x="320" y="409" text-anchor="middle" font-size="10" fill="#3D4F65">证据混杂</text>
+
+    <rect x="410" y="370" width="150" height="50" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="485" y="392" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E3A5F">在线验证</text>
+    <text x="485" y="409" text-anchor="middle" font-size="10" fill="#3D4F65">Q-I=1, I=0</text>
+
+    <rect x="575" y="370" width="150" height="50" rx="6" fill="#E8F3EC" stroke="#4A8C5F" stroke-width="1.5"/>
+    <text x="650" y="392" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E3A5F">launch</text>
+    <text x="650" y="409" text-anchor="middle" font-size="10" fill="#3D4F65">Q=1</text>
+  </g>
+
+  <text x="400" y="465" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">简化pipeline会把"在线验证"误判为"launch"</text>
+</svg>

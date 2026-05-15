@@ -1,0 +1,88 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Helvetica Neue',Arial,'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="fade" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#4B8BDA" stop-opacity="0.85"/>
+      <stop offset="0.55" stop-color="#4B8BDA" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#4B8BDA" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="resid" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#E8893B" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#E8893B" stop-opacity="0.75"/>
+    </linearGradient>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ahO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E8893B"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="620" fill="#FAFBFD"/>
+
+  <!-- Title -->
+  <text x="450" y="50" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">注意力闭合之时：LLM 如何在多轮对话中"丢失主线"</text>
+  <text x="450" y="74" text-anchor="middle" font-size="13" fill="#3D4F65">通道转换框架 · GAR 诊断指标 · 残差解码 ≠ 行为存活</text>
+
+  <!-- Goal token at left -->
+  <g>
+    <rect x="55" y="240" width="130" height="90" rx="10" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="1.5"/>
+    <text x="120" y="270" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">系统提示</text>
+    <text x="120" y="292" text-anchor="middle" font-size="11" fill="#3D4F65">人设 · 规则</text>
+    <text x="120" y="310" text-anchor="middle" font-size="11" fill="#3D4F65">事实 · 目标</text>
+  </g>
+
+  <!-- Turn axis -->
+  <line x1="200" y1="285" x2="820" y2="285" stroke="#C8D1DD" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="820" y="278" text-anchor="end" font-size="10" fill="#7B8AA0">对话轮数 →</text>
+
+  <!-- Attention channel: fading wedge (top) -->
+  <path d="M 200 250 L 800 275 L 800 295 L 200 270 Z" fill="url(#fade)"/>
+  <text x="215" y="240" font-size="12" font-weight="700" fill="#1E3A5F">注意力通道：GAR 单调下降 →</text>
+  <text x="700" y="240" text-anchor="middle" font-size="11" font-weight="700" fill="#B85C2E">通道闭合</text>
+
+  <!-- crossover marker -->
+  <line x1="660" y1="220" x2="660" y2="370" stroke="#B85C2E" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="660" y="215" text-anchor="middle" font-size="11" font-weight="700" fill="#B85C2E">τ_cross</text>
+
+  <!-- Residual channel: persistent bar (bottom) -->
+  <rect x="200" y="305" width="600" height="22" fill="url(#resid)" rx="3"/>
+  <text x="215" y="321" font-size="12" font-weight="700" fill="#FFFFFF">残差流：目标信息仍可线性解码 (AUC ≤ 0.99)</text>
+
+  <!-- Generated tokens at right, two outcomes -->
+  <!-- Outcome A: survives -->
+  <g>
+    <rect x="715" y="120" width="155" height="78" rx="10" fill="#EAF4EA" stroke="#3F8A56" stroke-width="1.5"/>
+    <text x="792" y="146" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">行为存活 (Mistral)</text>
+    <text x="792" y="166" text-anchor="middle" font-size="10.5" fill="#3D4F65">recall 45% · L27 晚熟</text>
+    <text x="792" y="184" text-anchor="middle" font-size="10.5" fill="#3D4F65">残差 → 行为可用</text>
+  </g>
+
+  <!-- Outcome B: collapse -->
+  <g>
+    <rect x="715" y="395" width="155" height="78" rx="10" fill="#FBECEC" stroke="#B85C2E" stroke-width="1.5"/>
+    <text x="792" y="421" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">行为崩塌 (LLaMA)</text>
+    <text x="792" y="441" text-anchor="middle" font-size="10.5" fill="#3D4F65">recall ≈ 0 · L2 早熟</text>
+    <text x="792" y="459" text-anchor="middle" font-size="10.5" fill="#3D4F65">"知道"却"用不上"</text>
+  </g>
+
+  <!-- Connectors from channels to outcomes -->
+  <path d="M 800 275 Q 730 240 718 198" fill="none" stroke="#4B8BDA" stroke-width="1.4" marker-end="url(#ah)" opacity="0.6"/>
+  <path d="M 800 316 Q 730 380 718 395" fill="none" stroke="#E8893B" stroke-width="1.6" marker-end="url(#ahO)"/>
+  <path d="M 800 305 Q 740 250 718 198" fill="none" stroke="#E8893B" stroke-width="1.4" marker-end="url(#ahO)" opacity="0.7"/>
+
+  <!-- Connector from goal box to channels -->
+  <path d="M 185 275 L 200 268" stroke="#4B8BDA" stroke-width="1.4" fill="none"/>
+  <path d="M 185 305 L 200 312" stroke="#E8893B" stroke-width="1.4" fill="none"/>
+
+  <!-- Bottom key insight -->
+  <g>
+    <rect x="120" y="510" width="660" height="80" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.2"/>
+    <text x="450" y="535" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">核心张力：注意力丢失 vs 残差可解码</text>
+    <text x="450" y="557" text-anchor="middle" font-size="11.5" fill="#3D4F65">两者之间的"鸿沟"决定了通道闭合后，目标约束行为是否还能存活</text>
+    <text x="450" y="577" text-anchor="middle" font-size="11" fill="#7B8AA0">滑动窗口因果干预：Mistral recall 100% → 11%，人设违规超过对抗压力基线</text>
+  </g>
+
+  <!-- Side annotations -->
+  <text x="50" y="195" font-size="11" font-weight="700" fill="#4B8BDA">通道 1 attention</text>
+  <text x="50" y="375" font-size="11" font-weight="700" fill="#B85C2E">通道 2 residual</text>
+</svg>
