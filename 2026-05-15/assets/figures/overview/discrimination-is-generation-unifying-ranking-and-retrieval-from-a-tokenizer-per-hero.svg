@@ -1,0 +1,85 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ahO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E08B4A"/>
+    </marker>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFE9D2"/>
+      <stop offset="100%" stop-color="#F5C58A"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="900" height="620" fill="#FAFBFD"/>
+
+  <!-- Title -->
+  <text x="450" y="48" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">判别即生成 · 一次训练，召回与排序同源</text>
+  <text x="450" y="72" text-anchor="middle" font-size="13" fill="#3D4F65">DIG：把 Tokenizer 嵌入排序模型，码本边界 = 推荐决策边界</text>
+
+  <!-- Top tension: Old vs New -->
+  <g>
+    <rect x="50" y="105" width="300" height="70" rx="10" fill="#F2F2F2" stroke="#C9CDD4" stroke-dasharray="4 3"/>
+    <text x="200" y="132" text-anchor="middle" font-size="13" font-weight="600" fill="#7A8494">传统：Tokenizer 与排序解耦</text>
+    <text x="200" y="155" text-anchor="middle" font-size="11" fill="#8C95A3">SID 不带个性化，召回打不过排序</text>
+
+    <path d="M360,140 L420,140" stroke="#1E3A5F" stroke-width="2" marker-end="url(#ah)" fill="none"/>
+
+    <rect x="430" y="105" width="420" height="70" rx="10" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="640" y="132" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">DIG：排序在物品空间 argmax · 召回在 token 空间 argmax</text>
+    <text x="640" y="155" text-anchor="middle" font-size="11" fill="#3D4F65">同一问题不同粒度 — 一次训练得到排序器 + 召回器</text>
+  </g>
+
+  <!-- Central core tokenizer -->
+  <g transform="translate(450,360)">
+    <circle r="118" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="2"/>
+    <circle r="118" fill="url(#core)" opacity="0.55"/>
+    <polygon points="0,-72 64,0 0,72 -64,0" fill="#FFFFFF" stroke="#E08B4A" stroke-width="2.5"/>
+    <text y="-22" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">RQ Tokenizer</text>
+    <text y="2" text-anchor="middle" font-size="11" fill="#3D4F65">嵌入排序器内部</text>
+    <text y="24" text-anchor="middle" font-size="11" fill="#3D4F65">4 层 × 256 码字</text>
+  </g>
+  <text x="450" y="245" text-anchor="middle" font-size="11" fill="#A65A1F" font-style="italic">码本边界 ⇄ 推荐决策边界</text>
+
+  <!-- Left top: u2i features -->
+  <g>
+    <rect x="40" y="270" width="200" height="78" rx="10" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="140" y="300" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">u2i 交叉特征</text>
+    <text x="140" y="322" text-anchor="middle" font-size="11" fill="#3D4F65">用户×物品历史 CTR</text>
+    <text x="140" y="338" text-anchor="middle" font-size="11" fill="#3D4F65">驱动码本 → 决策边界</text>
+    <path d="M242,310 C300,310 318,330 338,346" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+  </g>
+
+  <!-- Left bottom: items -->
+  <g>
+    <rect x="40" y="392" width="200" height="78" rx="10" fill="#FFF4E8" stroke="#E08B4A"/>
+    <text x="140" y="422" text-anchor="middle" font-size="13" font-weight="600" fill="#A65A1F">物品静态特征</text>
+    <text x="140" y="444" text-anchor="middle" font-size="11" fill="#7A4A1E">编码进 SID，点击 BCE 回流</text>
+    <path d="M242,420 C300,420 318,400 338,384" stroke="#E08B4A" stroke-width="2" fill="none" marker-end="url(#ahO)"/>
+  </g>
+
+  <!-- Right top: Ranking -->
+  <g>
+    <rect x="660" y="270" width="200" height="78" rx="10" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="760" y="300" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">排序 Ranking</text>
+    <text x="760" y="322" text-anchor="middle" font-size="11" fill="#3D4F65">物品空间 argmax</text>
+    <text x="760" y="338" text-anchor="middle" font-size="11" fill="#3D4F65">真实 u2i + 共享 Mixer</text>
+    <path d="M562,346 C600,330 620,315 658,310" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ah)"/>
+  </g>
+
+  <!-- Right bottom: Retrieval -->
+  <g>
+    <rect x="660" y="392" width="200" height="78" rx="10" fill="#FFF4E8" stroke="#E08B4A"/>
+    <text x="760" y="422" text-anchor="middle" font-size="13" font-weight="600" fill="#A65A1F">召回 Retrieval</text>
+    <text x="760" y="444" text-anchor="middle" font-size="11" fill="#7A4A1E">token 空间 argmax · MLPu2t</text>
+    <path d="M562,384 C600,400 620,415 658,420" stroke="#E08B4A" stroke-width="2" fill="none" marker-end="url(#ahO)"/>
+  </g>
+
+  <!-- Bottom result strip -->
+  <g>
+    <rect x="160" y="520" width="580" height="56" rx="28" fill="#1E3A5F"/>
+    <text x="450" y="545" text-anchor="middle" font-size="13" font-weight="600" fill="#FFFFFF">同一套参数 · Beam Search 召回 → Mixer 精排</text>
+    <text x="450" y="563" text-anchor="middle" font-size="11" fill="#BFD4EE">3 个公开基准 + 2 个工业数据集：召回与排序指标同时提升</text>
+  </g>
+</svg>

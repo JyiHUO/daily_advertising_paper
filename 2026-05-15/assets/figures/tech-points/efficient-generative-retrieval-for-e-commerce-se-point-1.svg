@@ -1,0 +1,75 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="600" fill="#1E3A5F">CQ-SID：从"一物一码"到"一簇一码"</text>
+  <text x="400" y="56" text-anchor="middle" font-size="13" fill="#3D4F65">语义相近的商品共享同一个三段式 SID</text>
+
+  <!-- LEFT: traditional one-id-per-item -->
+  <g>
+    <text x="170" y="100" text-anchor="middle" font-size="14" font-weight="600" fill="#3D4F65">传统：每个商品独立 ID</text>
+    <rect x="50" y="115" width="240" height="170" rx="10" fill="#F5F1EA" stroke="#D9C9A8" stroke-width="1.5"/>
+    <g font-size="10" fill="#1E3A5F">
+      <circle cx="95" cy="150" r="12" fill="#FBE7C6"/><text x="95" y="153" text-anchor="middle">7421</text>
+      <circle cx="155" cy="145" r="12" fill="#FBE7C6"/><text x="155" y="148" text-anchor="middle">3098</text>
+      <circle cx="215" cy="155" r="12" fill="#FBE7C6"/><text x="215" y="158" text-anchor="middle">5512</text>
+      <circle cx="115" cy="200" r="12" fill="#FBE7C6"/><text x="115" y="203" text-anchor="middle">8841</text>
+      <circle cx="180" cy="205" r="12" fill="#FBE7C6"/><text x="180" y="208" text-anchor="middle">2270</text>
+      <circle cx="245" cy="195" r="12" fill="#FBE7C6"/><text x="245" y="198" text-anchor="middle">6634</text>
+      <circle cx="140" cy="250" r="12" fill="#FBE7C6"/><text x="140" y="253" text-anchor="middle">4456</text>
+      <circle cx="205" cy="255" r="12" fill="#FBE7C6"/><text x="205" y="258" text-anchor="middle">9903</text>
+    </g>
+    <text x="170" y="308" text-anchor="middle" font-size="11" fill="#8A6E3F">码空间巨大 · beam 要开很宽</text>
+  </g>
+
+  <!-- Arrow middle -->
+  <line x1="305" y1="200" x2="403" y2="200" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="354" y="190" text-anchor="middle" font-size="11" fill="#4B8BDA">语义聚簇</text>
+
+  <!-- RIGHT: clustered tree -->
+  <g>
+    <text x="600" y="100" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">CQ-SID：三段式语义簇 ID</text>
+    <rect x="410" y="115" width="350" height="220" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+
+    <rect x="515" y="135" width="170" height="32" rx="6" fill="#4B8BDA"/>
+    <text x="600" y="155" text-anchor="middle" font-size="12" fill="#FFFFFF" font-weight="600">L1 类目码 · 女鞋-靴子</text>
+
+    <line x1="600" y1="167" x2="600" y2="190" stroke="#4B8BDA" stroke-width="2"/>
+    <rect x="515" y="190" width="170" height="32" rx="6" fill="#9CC3EE"/>
+    <text x="600" y="210" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">L2 残差 · 雪地靴/加绒</text>
+
+    <line x1="600" y1="222" x2="600" y2="245" stroke="#4B8BDA" stroke-width="2"/>
+    <line x1="600" y1="245" x2="475" y2="265" stroke="#4B8BDA" stroke-width="1.5"/>
+    <line x1="600" y1="245" x2="600" y2="265" stroke="#4B8BDA" stroke-width="1.5"/>
+    <line x1="600" y1="245" x2="725" y2="265" stroke="#4B8BDA" stroke-width="1.5"/>
+
+    <g font-size="10.5" fill="#1E3A5F">
+      <rect x="430" y="265" width="90" height="28" rx="5" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="475" y="283" text-anchor="middle">子簇 a · 40件</text>
+      <rect x="555" y="265" width="90" height="28" rx="5" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="600" y="283" text-anchor="middle">子簇 b · 40件</text>
+      <rect x="680" y="265" width="90" height="28" rx="5" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="725" y="283" text-anchor="middle">子簇 c · 40件</text>
+    </g>
+
+    <text x="600" y="318" text-anchor="middle" font-size="11" fill="#3D4F65">热门簇拆分 · 防塌缩</text>
+  </g>
+
+  <!-- Bottom: query lands on SID, returns whole cluster -->
+  <g>
+    <rect x="60" y="400" width="220" height="56" rx="8" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="170" y="422" text-anchor="middle" font-size="12" fill="#3D4F65">查询</text>
+    <text x="170" y="442" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">"冬天加绒靴子"</text>
+
+    <line x1="285" y1="428" x2="393" y2="428" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arr)"/>
+    <text x="339" y="419" text-anchor="middle" font-size="11" fill="#4B8BDA">beam 解码三段码</text>
+
+    <rect x="400" y="400" width="340" height="56" rx="8" fill="#1E3A5F"/>
+    <text x="570" y="422" text-anchor="middle" font-size="12" fill="#9CC3EE">命中 SID = (女鞋靴子, 加绒, b)</text>
+    <text x="570" y="442" text-anchor="middle" font-size="13" fill="#FFFFFF" font-weight="600">一次性召回整簇 40 个商品</text>
+  </g>
+</svg>

@@ -1,0 +1,46 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="-apple-system,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arGray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3D4F65"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">由易到难的四级台阶</text>
+  <text x="400" y="56" text-anchor="middle" font-size="13" fill="#3D4F65">Progressive Query → SID Learning</text>
+
+  <!-- Step 1 -->
+  <rect x="60" y="360" width="160" height="60" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="140" y="384" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">Stage 1 · 认 ID 体系</text>
+  <text x="140" y="404" text-anchor="middle" font-size="12" fill="#3D4F65">title → SID</text>
+
+  <!-- Step 2 -->
+  <rect x="220" y="300" width="160" height="120" rx="6" fill="#E0EDFB" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="300" y="324" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">Stage 2 · 学搜索意图</text>
+  <text x="300" y="344" text-anchor="middle" font-size="12" fill="#3D4F65">query → SID</text>
+
+  <!-- Step 3 -->
+  <rect x="380" y="220" width="160" height="200" rx="6" fill="#FCE7D6" stroke="#E89B5C" stroke-width="1.5"/>
+  <text x="460" y="244" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">Stage 3 · 个性化</text>
+  <text x="460" y="264" text-anchor="middle" font-size="12" fill="#3D4F65">user + query → SID</text>
+
+  <!-- Step 4 -->
+  <rect x="540" y="120" width="180" height="300" rx="6" fill="#F5D7C0" stroke="#D67A3C" stroke-width="1.5"/>
+  <text x="630" y="144" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">Stage 4 · 对齐排序</text>
+  <text x="630" y="164" text-anchor="middle" font-size="12" fill="#3D4F65">EG-GRPO (RL)</text>
+
+  <!-- climbing arrows: from top edge of lower step to left edge of upper step -->
+  <line x1="220" y1="360" x2="218" y2="302" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="380" y1="300" x2="378" y2="222" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="540" y1="220" x2="538" y2="122" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- ground line -->
+  <line x1="40" y1="420" x2="760" y2="420" stroke="#1E3A5F" stroke-width="1.2"/>
+
+  <!-- difficulty axis -->
+  <line x1="40" y1="448" x2="760" y2="448" stroke="#3D4F65" stroke-width="1" marker-end="url(#arGray)"/>
+  <text x="40" y="468" font-size="11" fill="#3D4F65">简单 / 数据多</text>
+  <text x="760" y="468" text-anchor="end" font-size="11" fill="#3D4F65">复杂 / 贴近线上</text>
+</svg>

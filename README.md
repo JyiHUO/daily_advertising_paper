@@ -4,18 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-05-14
+- **日期**：2026-05-15
 - **分类**：cs.IR + cs.AI + cs.LG
-- **候选论文数**：10
+- **候选论文数**：13
 - **必读论文**：
-  - Decision Support for Marketplace Policies under Incomplete Evidence: From Replay to Launch Readiness
-  - When Attention Closes: How LLMs Lose the Thread in Multi-Turn Interaction
-- **日报路径**：[2026-05-14/daily_report.md](2026-05-14/daily_report.md)
+  - Efficient Generative Retrieval for E-commerce Search with Semantic Cluster IDs and Expert-Guided RL
+  - Discrimination Is Generation: Unifying Ranking and Retrieval from a Tokenizer Perspective
+- **日报路径**：[2026-05-15/daily_report.md](2026-05-15/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-05-15 | cs.IR + cs.AI + cs.LG | 13 | 1 | Efficient Generative Retrieval for E-commerce Search with Semantic Cluster IDs and Expert-Guided RL | [2026-05-15/daily_report.md](2026-05-15/daily_report.md) |
+|  |  |  | 2 | Discrimination Is Generation: Unifying Ranking and Retrieval from a Tokenizer Perspective |  |
 | 2026-05-14 | cs.IR + cs.AI + cs.LG | 10 | 1 | Decision Support for Marketplace Policies under Incomplete Evidence: From Replay to Launch Readiness | [2026-05-14/daily_report.md](2026-05-14/daily_report.md) |
 |  |  |  | 2 | When Attention Closes: How LLMs Lose the Thread in Multi-Turn Interaction |  |
 | 2026-05-13 | cs.IR + cs.AI + cs.LG | 5 | 1 | FedMM: Federated Collaborative Signal Quantization for Multi-Market CTR Prediction | [2026-05-13/daily_report.md](2026-05-13/daily_report.md) |

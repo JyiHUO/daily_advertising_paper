@@ -1,0 +1,56 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C77B5C"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="38" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="20" font-weight="bold" fill="#1E3A5F">码本边界：内容相似 vs 决策相似</text>
+
+  <!-- LEFT: traditional -->
+  <g>
+    <text x="200" y="78" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" fill="#3D4F65">传统：内容驱动</text>
+
+    <ellipse cx="140" cy="200" rx="70" ry="55" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="140" y="152" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#1E3A5F">运动鞋簇</text>
+    <circle cx="120" cy="200" r="10" fill="#4B8BDA"/>
+    <circle cx="160" cy="215" r="10" fill="#4B8BDA"/>
+
+    <ellipse cx="280" cy="290" rx="70" ry="55" fill="#FFF4EC" stroke="#C77B5C" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="280" y="242" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#1E3A5F">手环簇</text>
+    <circle cx="260" cy="290" r="10" fill="#C77B5C"/>
+    <circle cx="300" cy="305" r="10" fill="#C77B5C"/>
+
+    <text x="200" y="390" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65">文本不同 → 不同 SID（用户行为缺席）</text>
+  </g>
+
+  <!-- divider -->
+  <line x1="400" y1="80" x2="400" y2="430" stroke="#C7D3E0" stroke-width="1" stroke-dasharray="3 4"/>
+
+  <!-- RIGHT: DIG -->
+  <g>
+    <text x="600" y="78" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" fill="#3D4F65">DIG：判别信号驱动</text>
+
+    <ellipse cx="600" cy="245" rx="105" ry="80" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="2"/>
+    <text x="600" y="175" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#1E3A5F">同一 token 桶</text>
+
+    <circle cx="560" cy="230" r="10" fill="#4B8BDA"/>
+    <circle cx="585" cy="270" r="10" fill="#4B8BDA"/>
+    <circle cx="625" cy="225" r="10" fill="#C77B5C"/>
+    <circle cx="645" cy="270" r="10" fill="#C77B5C"/>
+
+    <!-- pulling arrows: blue pulled toward orange, orange pulled toward blue -->
+    <path d="M568,232 Q595,225 616,225" stroke="#4B8BDA" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+    <path d="M637,270 Q610,272 593,270" stroke="#C77B5C" stroke-width="1.5" fill="none" marker-end="url(#arrO)"/>
+
+    <text x="600" y="350" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#1E3A5F">点击梯度拉近残差向量</text>
+    <text x="600" y="390" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65" font-style="italic">同类用户都点 → SID 天然带判别力</text>
+  </g>
+
+  <!-- bottom takeaway -->
+  <rect x="180" y="445" width="440" height="38" rx="6" fill="#1E3A5F"/>
+  <text x="400" y="469" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#FFFFFF">码本边界 = 推荐决策边界，而非内容相似度</text>
+</svg>

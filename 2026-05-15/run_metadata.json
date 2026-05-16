@@ -1,0 +1,18 @@
+{
+  "date": "2026-05-15",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 13,
+  "supplementary_count": 4,
+  "focus_titles": [
+    "Efficient Generative Retrieval for E-commerce Search with Semantic Cluster IDs and Expert-Guided RL",
+    "Discrimination Is Generation: Unifying Ranking and Retrieval from a Tokenizer Perspective"
+  ],
+  "focus_status": {
+    "Efficient Generative Retrieval for E-commerce Search with Semantic Cluster IDs and Expert-Guided RL": "completed",
+    "Discrimination Is Generation: Unifying Ranking and Retrieval from a Tokenizer Perspective": "completed"
+  }
+}

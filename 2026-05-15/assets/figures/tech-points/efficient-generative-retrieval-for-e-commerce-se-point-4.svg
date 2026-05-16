@@ -1,0 +1,61 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="44" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">只把"值得曝光"的商品挂到语义簇下</text>
+  <text x="400" y="68" text-anchor="middle" font-size="13" fill="#3D4F65">每日增量入池，无需重训生成模型</text>
+
+  <!-- Left: full catalog -->
+  <g>
+    <ellipse cx="135" cy="260" rx="100" ry="115" fill="#F4EEE4" stroke="#C9A36B" stroke-width="1.5"/>
+    <text x="135" y="240" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">全量商品库</text>
+    <text x="135" y="265" text-anchor="middle" font-size="13" fill="#3D4F65">亿级 · 每日更新</text>
+    <text x="135" y="298" text-anchor="middle" font-size="11" fill="#7A6A4F">· · · · · · · · ·</text>
+  </g>
+
+  <!-- Funnel arrow + label -->
+  <path d="M242,260 L348,260" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
+  <text x="295" y="248" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">CQ-SID 编码 · 高效率筛选</text>
+
+  <!-- Right: SID cluster pool -->
+  <g>
+    <rect x="360" y="150" width="380" height="220" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="550" y="180" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">召回池 · 2100 万高效商品</text>
+    <text x="550" y="200" text-anchor="middle" font-size="12" fill="#3D4F65">按 SID 语义簇聚合，新增商品当天挂入已有簇</text>
+
+    <g>
+      <circle cx="425" cy="265" r="38" fill="#DCE9F8" stroke="#4B8BDA"/>
+      <text x="425" y="269" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">SID·A</text>
+      <circle cx="408" cy="320" r="4" fill="#4B8BDA"/>
+      <circle cx="425" cy="327" r="4" fill="#4B8BDA"/>
+      <circle cx="442" cy="320" r="4" fill="#4B8BDA"/>
+    </g>
+    <g>
+      <circle cx="550" cy="265" r="38" fill="#DCE9F8" stroke="#4B8BDA"/>
+      <text x="550" y="269" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">SID·B</text>
+      <circle cx="533" cy="320" r="4" fill="#4B8BDA"/>
+      <circle cx="550" cy="327" r="4" fill="#4B8BDA"/>
+      <circle cx="567" cy="320" r="4" fill="#4B8BDA"/>
+    </g>
+    <g>
+      <circle cx="675" cy="265" r="38" fill="#DCE9F8" stroke="#4B8BDA"/>
+      <text x="675" y="269" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">SID·C</text>
+      <circle cx="658" cy="320" r="4" fill="#4B8BDA"/>
+      <circle cx="675" cy="327" r="4" fill="#E8A04A"/>
+      <circle cx="692" cy="320" r="4" fill="#4B8BDA"/>
+    </g>
+  </g>
+
+  <!-- Bottom result strip -->
+  <g>
+    <rect x="120" y="410" width="560" height="60" rx="10" fill="#FFF6E8" stroke="#E8A04A" stroke-width="1.5"/>
+    <text x="400" y="434" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">线上效果 · 天猫 APP</text>
+    <text x="220" y="458" text-anchor="middle" font-size="12" fill="#3D4F65">GMV +1.15%</text>
+    <text x="400" y="458" text-anchor="middle" font-size="12" fill="#3D4F65">成交占比 72.63%</text>
+    <text x="585" y="458" text-anchor="middle" font-size="12" fill="#3D4F65">端到端 ~40ms</text>
+  </g>
+</svg>
