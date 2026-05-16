@@ -1,0 +1,13 @@
+{
+  "report_date": "2026-05-15",
+  "provider": "bedrock-opus-47",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 2985,
+  "focus_titles": [
+    "Efficient Generative Retrieval for E-commerce Search with Semantic Cluster IDs and Expert-Guided RL",
+    "Discrimination Is Generation: Unifying Ranking and Retrieval from a Tokenizer Perspective"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Steve"
+}
