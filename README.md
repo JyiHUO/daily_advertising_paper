@@ -4,18 +4,18 @@
 
 ## 最新日报
 
-- **日期**：2026-05-15
+- **日期**：2026-05-18
 - **分类**：cs.IR + cs.AI + cs.LG
-- **候选论文数**：13
+- **候选论文数**：1
 - **必读论文**：
-  - Efficient Generative Retrieval for E-commerce Search with Semantic Cluster IDs and Expert-Guided RL
-  - Discrimination Is Generation: Unifying Ranking and Retrieval from a Tokenizer Perspective
-- **日报路径**：[2026-05-15/daily_report.md](2026-05-15/daily_report.md)
+  - Generative Long-term User Interest Modeling for Click-Through Rate Prediction
+- **日报路径**：[2026-05-18/daily_report.md](2026-05-18/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-05-18 | cs.IR + cs.AI + cs.LG | 1 | 1 | Generative Long-term User Interest Modeling for Click-Through Rate Prediction | [2026-05-18/daily_report.md](2026-05-18/daily_report.md) |
 | 2026-05-15 | cs.IR + cs.AI + cs.LG | 13 | 1 | Efficient Generative Retrieval for E-commerce Search with Semantic Cluster IDs and Expert-Guided RL | [2026-05-15/daily_report.md](2026-05-15/daily_report.md) |
 |  |  |  | 2 | Discrimination Is Generation: Unifying Ranking and Retrieval from a Tokenizer Perspective |  |
 | 2026-05-14 | cs.IR + cs.AI + cs.LG | 10 | 1 | Decision Support for Marketplace Policies under Incomplete Evidence: From Replay to Launch Readiness | [2026-05-14/daily_report.md](2026-05-14/daily_report.md) |

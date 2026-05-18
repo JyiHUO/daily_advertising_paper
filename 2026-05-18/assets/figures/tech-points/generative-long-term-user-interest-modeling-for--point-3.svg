@@ -1,0 +1,49 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">三路兴趣 · 门控融合</text>
+  <text x="300" y="56" text-anchor="middle" font-size="12" fill="#3D4F65">target 广告决定该信哪一路</text>
+
+  <!-- Three interest views -->
+  <g>
+    <rect x="50" y="100" width="140" height="60" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="120" y="128" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">显式兴趣</text>
+    <text x="120" y="146" text-anchor="middle" font-size="11" fill="#3D4F65">最近点的咖啡奶茶</text>
+
+    <rect x="230" y="100" width="140" height="60" rx="10" fill="#FEF3E7" stroke="#E8A24B" stroke-width="1.5"/>
+    <text x="300" y="128" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">隐式兴趣</text>
+    <text x="300" y="146" text-anchor="middle" font-size="11" fill="#3D4F65">泛泛的曝光记忆</text>
+
+    <rect x="410" y="100" width="140" height="60" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="480" y="128" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">相对兴趣</text>
+    <text x="480" y="146" text-anchor="middle" font-size="11" fill="#3D4F65">饮品 &gt; 快餐</text>
+  </g>
+
+  <!-- arrows from views to gate -->
+  <line x1="130" y1="160" x2="220" y2="218" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="300" y1="160" x2="300" y2="218" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="470" y1="160" x2="380" y2="218" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Weight indicators on arrows -->
+  <text x="140" y="200" font-size="11" font-weight="700" fill="#4B8BDA">w₁ 高</text>
+  <text x="312" y="195" font-size="11" font-weight="700" fill="#E8A24B">w₂ 低</text>
+  <text x="420" y="200" font-size="11" font-weight="700" fill="#4B8BDA">w₃ 高</text>
+
+  <!-- Gate -->
+  <g>
+    <rect x="180" y="220" width="240" height="56" rx="28" fill="#1E3A5F"/>
+    <text x="300" y="244" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">门控 (target-aware)</text>
+    <text x="300" y="262" text-anchor="middle" font-size="11" fill="#BFD4EC">看广告，决定权重</text>
+  </g>
+
+  <!-- Output -->
+  <line x1="300" y1="276" x2="300" y2="326" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <rect x="170" y="332" width="260" height="58" rx="10" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="1.8"/>
+  <text x="300" y="357" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">长期兴趣特征</text>
+  <text x="300" y="376" text-anchor="middle" font-size="11" fill="#3D4F65">聚焦饮品偏好 → CTR ↑</text>
+</svg>
