@@ -1,0 +1,9 @@
+{
+  "title": "AI计算广告论文播报｜0518 生成式查表替代GSU，美团长序列CTR新范式",
+  "shownotes_html": "<p>长序列广告CTR预估正在从\"匹配\"范式滑向\"生成\"范式——本期围绕美团上线的生成式长期兴趣建模方法展开深度拆解，同时梳理当天推荐系统稳定性、向量检索加速、Agent记忆等散点信号。</p><p><strong>本期重点</strong></p><ul><li><strong>生成式长期用户兴趣建模（Generative Long-term User Interest Modeling for CTR Prediction）</strong>：用短期行为生成三张兴趣分布，再以 O(1) 哈希查表替代逐条相似度计算，美团线上 RPM +1.5%，是当天最贴广告排序的工作，值得精读。</li><li><strong>搜索推荐稳定性案例（Fortress）</strong>：通过时序数据增强与特征剪枝稳住线上波动，少见公开讨论\"不掉\"而非\"再涨\"的工业论文，对商业化排序系统日常运维有直接参考。</li><li><strong>十亿级量化检索加速（Ascend-RaBitQ）</strong>：NPU-CPU 异构调度 + 1-bit 量化把向量检索成本再压一档，召回基础设施团队值得关注。</li><li><strong>循环式 Agent 记忆巩固（RecMem）</strong>：用 recurrence 替代纯外挂向量库做长时记忆，对长会话推荐与对话 Agent 都有迁移空间。</li></ul><p><strong>今日趋势</strong></p><ul><li>推荐链路研究正在向\"生成式表示 + Agent 化召回 + 工程稳定性\"三条线并进；当天 cs.IR 仅 14 篇持续走低，LLM/Agent 合计 98 篇仍是绝对主线。</li><li>检索加速与 Agent 记忆看似分属系统和算法，实际都在回答同一个问题：大规模上下文如何被高效且安全地存取。</li></ul><p>本期为 AI 辅助生成的论文播报，如有疏漏欢迎留言指正交流。完整日报与论文列表可参考：<a href=\"https://github.com/JyiHUO/daily_advertising_paper/blob/main/2026-05-18/daily_report.md\">GitHub 归档</a></p>",
+  "report_date": "2026-05-18",
+  "provider": "bedrock-opus",
+  "archive_url": "https://github.com/JyiHUO/daily_advertising_paper/blob/main/2026-05-18/daily_report.md",
+  "fallback": false,
+  "generated_at": "2026-05-18T16:21:53Z"
+}

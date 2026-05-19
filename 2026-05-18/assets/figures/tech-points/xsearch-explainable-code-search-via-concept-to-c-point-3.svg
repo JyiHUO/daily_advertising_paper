@@ -1,0 +1,56 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" font-family="-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arW" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97B63"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="38" text-anchor="middle" font-size="20" font-weight="600" fill="#1E3A5F">每个概念都必须找到对应的代码行</text>
+  <text x="360" y="60" text-anchor="middle" font-size="13" fill="#3D4F65">max-per-concept then mean —— 漏一个概念，全局分被拉低</text>
+
+  <!-- Query concepts (left) -->
+  <text x="115" y="100" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">Query 概念</text>
+  <circle cx="115" cy="160" r="34" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="115" y="164" text-anchor="middle" font-size="12" fill="#1E3A5F">merge dicts</text>
+  <circle cx="115" cy="260" r="34" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="115" y="256" text-anchor="middle" font-size="12" fill="#1E3A5F">overwrite</text>
+  <text x="115" y="272" text-anchor="middle" font-size="12" fill="#1E3A5F">keys</text>
+
+  <!-- Code lines (right) -->
+  <text x="540" y="100" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">候选代码行</text>
+
+  <rect x="430" y="125" width="220" height="34" rx="5" fill="#FBF5EE" stroke="#C9B79C" stroke-width="1.5"/>
+  <text x="442" y="147" font-size="12" fill="#3D4F65" font-family="Menlo,monospace">for k,v in b.items():</text>
+
+  <rect x="430" y="170" width="220" height="34" rx="5" fill="#FBF5EE" stroke="#C9B79C" stroke-width="1.5"/>
+  <text x="442" y="192" font-size="12" fill="#3D4F65" font-family="Menlo,monospace">a.update(b)</text>
+
+  <rect x="430" y="215" width="220" height="34" rx="5" fill="#FBF5EE" stroke="#C9B79C" stroke-width="1.5"/>
+  <text x="442" y="237" font-size="12" fill="#3D4F65" font-family="Menlo,monospace">a[k] = v</text>
+
+  <rect x="430" y="260" width="220" height="34" rx="5" fill="#FBF5EE" stroke="#C9B79C" stroke-width="1.5"/>
+  <text x="442" y="282" font-size="12" fill="#3D4F65" font-family="Menlo,monospace">return a</text>
+
+  <!-- Greedy max links -->
+  <line x1="149" y1="155" x2="428" y2="183" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#ar)"/>
+  <text x="285" y="150" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">max 0.85</text>
+
+  <line x1="149" y1="255" x2="428" y2="228" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#ar)"/>
+  <text x="285" y="266" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">max 0.80</text>
+
+  <!-- Mean aggregation -->
+  <rect x="250" y="335" width="220" height="48" rx="8" fill="#1E3A5F"/>
+  <text x="360" y="357" text-anchor="middle" font-size="13" fill="#EFF6FF">mean( max1 , max2 )</text>
+  <text x="360" y="374" text-anchor="middle" font-size="13" fill="#FBF5EE" font-weight="600">score = 0.83</text>
+
+  <line x1="160" y1="294" x2="300" y2="335" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="430" y1="245" x2="420" y2="335" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+  <!-- Warning case -->
+  <rect x="80" y="400" width="560" height="56" rx="6" fill="#FDF2EE" stroke="#C97B63" stroke-width="1.2"/>
+  <text x="360" y="422" text-anchor="middle" font-size="12" fill="#C97B63">若候选用 setdefault 不覆盖 → "overwrite" 概念最大相似度仅 0.40</text>
+  <text x="360" y="442" text-anchor="middle" font-size="12" font-weight="600" fill="#C97B63">→ 平均被拉低，整体排名下降（功能完整性写进打分）</text>
+</svg>

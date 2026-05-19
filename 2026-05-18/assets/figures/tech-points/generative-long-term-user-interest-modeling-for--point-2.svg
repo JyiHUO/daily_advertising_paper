@@ -1,95 +1,85 @@
-<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="-apple-system,Helvetica,Arial,sans-serif">
-  <!-- Title -->
-  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">O(1) 查表式行为检索</text>
-  <text x="400" y="62" text-anchor="middle" font-size="12" fill="#3D4F65">用哈希查表代替逐条相似度计算</text>
-
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
   <defs>
-    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
       <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
     </marker>
-    <marker id="arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-      <path d="M0,0 L10,5 L0,10 z" fill="#C97A3F"/>
+    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97B6B"/>
     </marker>
   </defs>
 
-  <!-- LEFT: Old way -->
+  <text x="400" y="34" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">配对相似度  →  哈希查表</text>
+  <text x="400" y="56" text-anchor="middle" font-size="13" fill="#3D4F65">把 O(L·d) 的两两打分换成 O(1) 的桶查询</text>
+
+  <!-- LEFT: traditional pairwise -->
   <g>
-    <text x="200" y="100" text-anchor="middle" font-size="13" font-weight="600" fill="#9A6B3F">传统：逐条比对 O(L·d)</text>
+    <text x="180" y="92" text-anchor="middle" font-size="13" font-weight="600" fill="#C97B6B">传统 GSU：逐条对比</text>
 
     <!-- target -->
-    <circle cx="70" cy="240" r="22" fill="#FCE9D6" stroke="#C97A3F" stroke-width="2"/>
-    <text x="70" y="244" text-anchor="middle" font-size="11" fill="#1E3A5F">target</text>
+    <circle cx="80" cy="200" r="26" fill="#FBE9E4" stroke="#C97B6B" stroke-width="1.5"/>
+    <text x="80" y="204" text-anchor="middle" font-size="11" fill="#1E3A5F">目标</text>
 
     <!-- behaviors stack -->
-    <g fill="#F5EFE6" stroke="#B59477" stroke-width="1.3">
-      <rect x="220" y="140" width="110" height="22" rx="3"/>
-      <rect x="220" y="170" width="110" height="22" rx="3"/>
-      <rect x="220" y="200" width="110" height="22" rx="3"/>
-      <rect x="220" y="230" width="110" height="22" rx="3"/>
-      <rect x="220" y="260" width="110" height="22" rx="3"/>
-      <rect x="220" y="290" width="110" height="22" rx="3"/>
-      <rect x="220" y="320" width="110" height="22" rx="3"/>
+    <g stroke="#C97B6B" stroke-width="1.2" fill="#FFF6F2">
+      <rect x="240" y="140" width="70" height="22" rx="3"/>
+      <rect x="240" y="170" width="70" height="22" rx="3"/>
+      <rect x="240" y="200" width="70" height="22" rx="3"/>
+      <rect x="240" y="230" width="70" height="22" rx="3"/>
+      <rect x="240" y="260" width="70" height="22" rx="3"/>
     </g>
-    <text x="275" y="360" text-anchor="middle" font-size="11" fill="#3D4F65">L 条历史行为</text>
+    <text x="275" y="300" text-anchor="middle" font-size="11" fill="#3D4F65">L 条历史</text>
 
-    <!-- comparison lines -->
-    <g stroke="#C97A3F" stroke-width="1" opacity="0.55">
-      <line x1="92" y1="240" x2="220" y2="151"/>
-      <line x1="92" y1="240" x2="220" y2="181"/>
-      <line x1="92" y1="240" x2="220" y2="211"/>
-      <line x1="92" y1="240" x2="220" y2="241"/>
-      <line x1="92" y1="240" x2="220" y2="271"/>
-      <line x1="92" y1="240" x2="220" y2="301"/>
-      <line x1="92" y1="240" x2="220" y2="331"/>
+    <!-- many arrows -->
+    <g stroke="#C97B6B" stroke-width="1" fill="none" marker-end="url(#arRed)" opacity="0.75">
+      <line x1="106" y1="192" x2="238" y2="151"/>
+      <line x1="106" y1="197" x2="238" y2="181"/>
+      <line x1="106" y1="200" x2="238" y2="211"/>
+      <line x1="106" y1="204" x2="238" y2="241"/>
+      <line x1="106" y1="208" x2="238" y2="271"/>
     </g>
+
+    <text x="180" y="345" text-anchor="middle" font-size="13" font-weight="600" fill="#C97B6B">O(L · d)</text>
+    <text x="180" y="363" text-anchor="middle" font-size="11" fill="#3D4F65">序列越长越慢</text>
   </g>
 
   <!-- divider -->
-  <line x1="400" y1="90" x2="400" y2="400" stroke="#D6D9DE" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="400" y1="80" x2="400" y2="400" stroke="#CBD5E1" stroke-width="1" stroke-dasharray="4 4"/>
 
-  <!-- RIGHT: New way -->
+  <!-- RIGHT: GenLI lookup -->
   <g>
-    <text x="600" y="100" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">GenLI：查表 O(1) / 条</text>
+    <text x="610" y="92" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">GenLI：桶查表</text>
 
-    <!-- hash table (interest distribution) -->
-    <text x="600" y="135" text-anchor="middle" font-size="11" fill="#3D4F65">兴趣分布（哈希桶）</text>
-    <g>
-      <rect x="475" y="148" width="250" height="30" rx="3" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.4"/>
-      <line x1="525" y1="148" x2="525" y2="178" stroke="#4B8BDA"/>
-      <line x1="575" y1="148" x2="575" y2="178" stroke="#4B8BDA"/>
-      <line x1="625" y1="148" x2="625" y2="178" stroke="#4B8BDA"/>
-      <line x1="675" y1="148" x2="675" y2="178" stroke="#4B8BDA"/>
-      <text x="500" y="168" text-anchor="middle" font-size="10" fill="#3D4F65">.01</text>
-      <text x="550" y="168" text-anchor="middle" font-size="10" fill="#3D4F65">.04</text>
-      <!-- highlighted bucket -->
-      <rect x="600" y="149" width="25" height="28" fill="#FCE9D6" stroke="#C97A3F" stroke-width="1.5"/>
-      <text x="612" y="168" text-anchor="middle" font-size="10" font-weight="700" fill="#1E3A5F">.21</text>
-      <text x="650" y="168" text-anchor="middle" font-size="10" fill="#3D4F65">.03</text>
-      <text x="700" y="168" text-anchor="middle" font-size="10" fill="#3D4F65">.02</text>
+    <!-- distribution table -->
+    <rect x="500" y="110" width="220" height="140" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="610" y="130" text-anchor="middle" font-size="11" fill="#1E3A5F" font-weight="600">实时兴趣分布（N 桶）</text>
+
+    <!-- bars -->
+    <g fill="#4B8BDA">
+      <rect x="515" y="225" width="14" height="14"/>
+      <rect x="535" y="210" width="14" height="29"/>
+      <rect x="555" y="195" width="14" height="44"/>
+      <rect x="575" y="180" width="14" height="59" fill="#F4A261"/>
+      <rect x="595" y="200" width="14" height="39"/>
+      <rect x="615" y="215" width="14" height="24"/>
+      <rect x="635" y="220" width="14" height="19"/>
+      <rect x="655" y="205" width="14" height="34"/>
+      <rect x="675" y="218" width="14" height="21"/>
+      <rect x="695" y="228" width="14" height="11"/>
     </g>
-
-    <!-- mod -->
-    <rect x="540" y="225" width="120" height="32" rx="16" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.5"/>
-    <text x="600" y="246" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">ID mod N</text>
+    <text x="582" y="174" text-anchor="middle" font-size="10" fill="#1E3A5F">桶 732</text>
 
     <!-- behavior -->
-    <rect x="500" y="295" width="200" height="34" rx="4" fill="#F5EFE6" stroke="#B59477" stroke-width="1.4"/>
-    <text x="600" y="316" text-anchor="middle" font-size="12" fill="#1E3A5F">行为 ID</text>
+    <rect x="540" y="310" width="140" height="34" rx="4" fill="#FFF6F2" stroke="#C97B6B" stroke-width="1.2"/>
+    <text x="610" y="331" text-anchor="middle" font-size="12" fill="#1E3A5F">行为 ID  %  N</text>
 
-    <!-- behavior -> mod -->
-    <line x1="600" y1="295" x2="600" y2="259" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
-    <!-- mod -> bucket -->
-    <line x1="600" y1="225" x2="612" y2="182" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+    <!-- arrow up to bucket -->
+    <line x1="600" y1="310" x2="585" y2="252" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+    <text x="640" y="285" font-size="11" fill="#3D4F65">查表</text>
 
-    <!-- score readout -->
-    <line x1="725" y1="163" x2="755" y2="163" stroke="#C97A3F" stroke-width="1.8" marker-end="url(#arO)"/>
-    <text x="740" y="152" text-anchor="middle" font-size="11" fill="#C97A3F" font-weight="600">分数</text>
-
-    <text x="600" y="362" text-anchor="middle" font-size="11" fill="#3D4F65">桶号即得分，无需算相似度</text>
+    <text x="610" y="378" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">每条打分  O(1)</text>
+    <text x="610" y="396" text-anchor="middle" font-size="11" fill="#3D4F65">无关序列长度</text>
   </g>
 
-  <!-- Bottom takeaway -->
-  <rect x="180" y="420" width="440" height="46" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.3"/>
-  <text x="400" y="440" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">每条行为打分：O(d) → O(1)</text>
-  <text x="400" y="458" text-anchor="middle" font-size="11" fill="#3D4F65">三种兴趣分布各取 top-k，长序列检索接近 O(L)</text>
+  <!-- bottom note -->
+  <text x="400" y="445" text-anchor="middle" font-size="12" fill="#3D4F65">三类分布 × Top-k  →  60 条候选行为送入下游 attention</text>
 </svg>

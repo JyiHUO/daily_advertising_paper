@@ -5,12 +5,14 @@
     "cs.AI",
     "cs.LG"
   ],
-  "candidate_count": 1,
-  "supplementary_count": 1,
+  "candidate_count": 5,
+  "supplementary_count": 2,
   "focus_titles": [
-    "Generative Long-term User Interest Modeling for Click-Through Rate Prediction"
+    "Generative Long-term User Interest Modeling for Click-Through Rate Prediction",
+    "XSearch: Explainable Code Search via Concept-to-Code Alignment"
   ],
   "focus_status": {
-    "Generative Long-term User Interest Modeling for Click-Through Rate Prediction": "completed"
+    "Generative Long-term User Interest Modeling for Click-Through Rate Prediction": "completed",
+    "XSearch: Explainable Code Search via Concept-to-Code Alignment": "completed"
   }
 }
