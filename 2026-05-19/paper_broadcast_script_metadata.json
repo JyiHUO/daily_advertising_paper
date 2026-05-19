@@ -1,0 +1,13 @@
+{
+  "report_date": "2026-05-19",
+  "provider": "litellm-opus",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 2798,
+  "focus_titles": [
+    "LERA: LLM-Enhanced RAG for Ad Auction in Generative Chatbots",
+    "Towards Sustainable Growth: A Multi-Value-Aware Retrieval Framework for E-Commerce Search"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Steve"
+}

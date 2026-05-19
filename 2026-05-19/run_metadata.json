@@ -1,0 +1,18 @@
+{
+  "date": "2026-05-19",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 20,
+  "supplementary_count": 7,
+  "focus_titles": [
+    "LERA: LLM-Enhanced RAG for Ad Auction in Generative Chatbots",
+    "Towards Sustainable Growth: A Multi-Value-Aware Retrieval Framework for E-Commerce Search"
+  ],
+  "focus_status": {
+    "LERA: LLM-Enhanced RAG for Ad Auction in Generative Chatbots": "completed",
+    "Towards Sustainable Growth: A Multi-Value-Aware Retrieval Framework for E-Commerce Search": "completed"
+  }
+}
