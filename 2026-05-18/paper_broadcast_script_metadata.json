@@ -3,9 +3,10 @@
   "provider": "bedrock-opus-47",
   "target_minutes": 12,
   "max_tokens": 6500,
-  "char_count": 1970,
+  "char_count": 3067,
   "focus_titles": [
-    "Generative Long-term User Interest Modeling for Click-Through Rate Prediction"
+    "Generative Long-term User Interest Modeling for Click-Through Rate Prediction",
+    "XSearch: Explainable Code Search via Concept-to-Code Alignment"
   ],
   "audio_provider": "moss",
   "audio_voice_name": "Steve"
