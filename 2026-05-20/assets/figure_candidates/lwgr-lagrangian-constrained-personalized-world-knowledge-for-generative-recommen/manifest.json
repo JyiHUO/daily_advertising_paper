@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-20/downloaded_pdfs/lwgr-lagrangian-constrained-personalized-world-knowledge-for-generative-recommen.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-20/assets/figure_candidates/lwgr-lagrangian-constrained-personalized-world-knowledge-for-generative-recommen",
+  "candidates": [
+    {
+      "id": "page-4-drawing-cluster-0",
+      "page_index": 4,
+      "caption": "第 5 页矢量图主图候选",
+      "clip": [
+        35.667842864990234,
+        70.13198852539062,
+        576.4401245117188,
+        310.2413024902344
+      ],
+      "clip_area": 129844.46155739925,
+      "page_area": 484704.0,
+      "text_density": 0.212060572058458,
+      "kind": "drawing_cluster",
+      "score": 0.0763656764925198,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-20/assets/figure_candidates/lwgr-lagrangian-constrained-personalized-world-knowledge-for-generative-recommen/01-p5-drawing_cluster.png",
+      "filename": "01-p5-drawing_cluster.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.7371914527774629,
+      "score": -11.09083328,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-20/assets/figure_candidates/lwgr-lagrangian-constrained-personalized-world-knowledge-for-generative-recommen/02-p1-layout_region_left_top.png",
+      "filename": "02-p1-layout_region_left_top.png"
+    },
+    {
+      "id": "page-1-region-upper-left",
+      "page_index": 1,
+      "caption": "第 2 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.5981612829014492,
+      "score": -11.09083328,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-20/assets/figure_candidates/lwgr-lagrangian-constrained-personalized-world-knowledge-for-generative-recommen/03-p2-layout_region_left_top.png",
+      "filename": "03-p2-layout_region_left_top.png"
+    },
+    {
+      "id": "page-0-region-upper-right",
+      "page_index": 0,
+      "caption": "第 1 页右上区域主图候选",
+      "clip": [
+        318.24,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 82992.7296,
+      "kind": "layout_region_right_top",
+      "page_area": 484704.0,
+      "text_density": 0.5794542813586232,
+      "score": -17.07785856,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-20/assets/figure_candidates/lwgr-lagrangian-constrained-personalized-world-knowledge-for-generative-recommen/04-p1-layout_region_right_top.png",
+      "filename": "04-p1-layout_region_right_top.png"
+    },
+    {
+      "id": "page-1-region-upper-right",
+      "page_index": 1,
+      "caption": "第 2 页右上区域主图候选",
+      "clip": [
+        318.24,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 82992.7296,
+      "kind": "layout_region_right_top",
+      "page_area": 484704.0,
+      "text_density": 0.895095714528145,
+      "score": -17.07785856,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-20/assets/figure_candidates/lwgr-lagrangian-constrained-personalized-world-knowledge-for-generative-recommen/05-p2-layout_region_right_top.png",
+      "filename": "05-p2-layout_region_right_top.png"
+    },
+    {
+      "id": "page-0-region-upper-full",
+      "page_index": 0,
+      "caption": "第 1 页上半页主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 173352.96000000002,
+      "kind": "layout_region_upper_page",
+      "page_area": 484704.0,
+      "text_density": 0.6540308779837958,
+      "score": -22.705882352941174,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-20/assets/figure_candidates/lwgr-lagrangian-constrained-personalized-world-knowledge-for-generative-recommen/06-p1-layout_region_upper_page.png",
+      "filename": "06-p1-layout_region_upper_page.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-20/assets/figure_candidates/lwgr-lagrangian-constrained-personalized-world-knowledge-for-generative-recommen/contact-sheet.svg"
+}

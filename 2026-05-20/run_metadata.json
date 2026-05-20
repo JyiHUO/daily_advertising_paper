@@ -1,0 +1,18 @@
+{
+  "date": "2026-05-20",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 34,
+  "supplementary_count": 10,
+  "focus_titles": [
+    "Generative Auto-Bidding with Unified Modeling and Exploration",
+    "LWGR: Lagrangian-Constrained Personalized World Knowledge for Generative Recommendation"
+  ],
+  "focus_status": {
+    "Generative Auto-Bidding with Unified Modeling and Exploration": "llm_failed",
+    "LWGR: Lagrangian-Constrained Personalized World Knowledge for Generative Recommendation": "llm_failed"
+  }
+}
