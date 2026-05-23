@@ -1,0 +1,37 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">语义近邻：两步缩圈</text>
+
+  <!-- Seed ad -->
+  <circle cx="80" cy="220" r="30" fill="#FCD9B6" stroke="#D98E4A" stroke-width="2"/>
+  <text x="80" y="224" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">种子</text>
+  <text x="80" y="270" text-anchor="middle" font-size="11" fill="#3D4F65">Nike 跑鞋</text>
+
+  <!-- Coarse circle (Step 1) -->
+  <circle cx="280" cy="220" r="100" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="280" y="138" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">Step 1 · 粗类目召回</text>
+  <text x="280" y="340" text-anchor="middle" font-size="11" fill="#3D4F65">共享"跑鞋" → 千级候选</text>
+
+  <!-- Fine circle inside (Step 2) -->
+  <circle cx="280" cy="225" r="52" fill="#DCE9FB" stroke="#1E3A5F" stroke-width="2"/>
+  <text x="280" y="216" text-anchor="middle" font-size="11" font-weight="700" fill="#1E3A5F">Step 2 细属性</text>
+  <text x="280" y="234" text-anchor="middle" font-size="10" fill="#3D4F65">品牌·产品·上下文</text>
+
+  <!-- Score bubble -->
+  <rect x="430" y="170" width="150" height="100" rx="8" fill="#FFF6E5" stroke="#D98E4A" stroke-width="1.5"/>
+  <text x="505" y="193" text-anchor="middle" font-size="11" font-weight="700" fill="#1E3A5F">相关性打分</text>
+  <text x="505" y="222" text-anchor="middle" font-size="14" fill="#1E3A5F">Σ S₁(c)·S₂(c)</text>
+  <text x="505" y="245" text-anchor="middle" font-size="10" fill="#3D4F65">c ∈ 类目交集</text>
+  <text x="505" y="261" text-anchor="middle" font-size="10" fill="#3D4F65">→ Top-K 送排序</text>
+
+  <!-- Arrows -->
+  <line x1="112" y1="220" x2="176" y2="220" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="334" y1="222" x2="426" y2="220" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <text x="300" y="395" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">语义版协同过滤：先粗筛，再细评</text>
+</svg>

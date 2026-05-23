@@ -1,0 +1,13 @@
+{
+  "report_date": "2026-05-22",
+  "provider": "litellm-opus",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 2475,
+  "focus_titles": [
+    "LLM Retrieval for Stable and Predictable Ad Recommendations",
+    "Beyond Single Slot: Joint Optimization for Multi-Slot Guaranteed Display Advertising"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Steve"
+}

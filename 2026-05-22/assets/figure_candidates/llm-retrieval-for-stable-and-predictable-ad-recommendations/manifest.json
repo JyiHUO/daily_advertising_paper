@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-22/downloaded_pdfs/llm-retrieval-for-stable-and-predictable-ad-recommendations.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-22/assets/figure_candidates/llm-retrieval-for-stable-and-predictable-ad-recommendations",
+  "candidates": [
+    {
+      "id": "page-2-block-9",
+      "page_index": 2,
+      "caption": "Figure 1: LLM Ad to Ad Generator",
+      "clip": [
+        31.79800033569336,
+        391.39117431640625,
+        316.0431213378906,
+        611.97998046875
+      ],
+      "clip_area": 62701.291896503186,
+      "page_area": 484704.0,
+      "text_density": 0.02727119120580117,
+      "kind": "image_block_with_caption",
+      "score": 29.69668102107226,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-22/assets/figure_candidates/llm-retrieval-for-stable-and-predictable-ad-recommendations/01-p3-image_block_with_caption.png",
+      "filename": "01-p3-image_block_with_caption.png"
+    },
+    {
+      "id": "page-2-embedded-0-0",
+      "page_index": 2,
+      "caption": "Figure 1: LLM Ad to Ad Generator",
+      "clip": [
+        41.79800033569336,
+        397.39117431640625,
+        306.0431213378906,
+        605.97998046875
+      ],
+      "clip_area": 55118.574321429944,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 119,
+      "score": 28.612428603571445,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-22/assets/figure_candidates/llm-retrieval-for-stable-and-predictable-ad-recommendations/02-p3-embedded_image_with_caption.png",
+      "filename": "02-p3-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-2-block-18",
+      "page_index": 2,
+      "caption": "Figure 2: LLM Contextual Category Graph",
+      "clip": [
+        295.9549865722656,
+        246.13018798828125,
+        580.1989135742188,
+        438.96600341796875
+      ],
+      "clip_area": 54812.4094443582,
+      "page_area": 484704.0,
+      "text_density": 0.016025102949756252,
+      "kind": "image_block_with_caption",
+      "score": 23.60902677160398,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-22/assets/figure_candidates/llm-retrieval-for-stable-and-predictable-ad-recommendations/03-p3-image_block_with_caption.png",
+      "filename": "03-p3-image_block_with_caption.png"
+    },
+    {
+      "id": "page-2-embedded-1-0",
+      "page_index": 2,
+      "caption": "Figure 2: LLM Contextual Category Graph",
+      "clip": [
+        305.9549865722656,
+        252.13018798828125,
+        570.1989135742188,
+        432.96600341796875
+      ],
+      "clip_area": 47784.76601174101,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 120,
+      "score": 22.5309418445749,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-22/assets/figure_candidates/llm-retrieval-for-stable-and-predictable-ad-recommendations/04-p3-embedded_image_with_caption.png",
+      "filename": "04-p3-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-3-block-21",
+      "page_index": 3,
+      "caption": "Figure 3: Daily impression relative difference between the A/A’ ad pairs for the test vs control.",
+      "clip": [
+        295.9549865722656,
+        369.1727600097656,
+        580.202392578125,
+        522.6340026855469
+      ],
+      "clip_area": 43620.960153026506,
+      "page_area": 484704.0,
+      "text_density": 0.05078716064261737,
+      "kind": "image_block_with_caption",
+      "score": 12.484677335033627,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-22/assets/figure_candidates/llm-retrieval-for-stable-and-predictable-ad-recommendations/05-p4-image_block_with_caption.png",
+      "filename": "05-p4-image_block_with_caption.png"
+    },
+    {
+      "id": "page-3-embedded-0-0",
+      "page_index": 3,
+      "caption": "Figure 3: Daily impression relative difference between the A/A’ ad pairs for the test vs control.",
+      "clip": [
+        305.9549865722656,
+        375.1727600097656,
+        570.202392578125,
+        516.6340026855469
+      ],
+      "clip_area": 37380.76642744057,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 121,
+      "score": 11.415341849193783,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-22/assets/figure_candidates/llm-retrieval-for-stable-and-predictable-ad-recommendations/06-p4-embedded_image_with_caption.png",
+      "filename": "06-p4-embedded_image_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-22/assets/figure_candidates/llm-retrieval-for-stable-and-predictable-ad-recommendations/contact-sheet.svg"
+}

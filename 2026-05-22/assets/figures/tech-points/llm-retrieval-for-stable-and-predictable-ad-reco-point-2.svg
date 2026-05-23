@@ -1,0 +1,62 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="600" fill="#1E3A5F">文案变了，标签不变 → 图结构稳定</text>
+
+  <!-- Ad A -->
+  <g>
+    <rect x="50" y="90" width="200" height="90" rx="10" fill="#FFF4E6" stroke="#E8A857" stroke-width="1.5"/>
+    <text x="150" y="118" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">广告 A</text>
+    <text x="150" y="140" text-anchor="middle" font-size="11" fill="#3D4F65">Nike Air Zoom</text>
+    <text x="150" y="158" text-anchor="middle" font-size="11" fill="#3D4F65">男士跑鞋 透气</text>
+  </g>
+
+  <!-- Ad B -->
+  <g>
+    <rect x="50" y="320" width="200" height="90" rx="10" fill="#FFF4E6" stroke="#E8A857" stroke-width="1.5"/>
+    <text x="150" y="348" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">广告 B（改写）</text>
+    <text x="150" y="370" text-anchor="middle" font-size="11" fill="#3D4F65">耐克男款气垫</text>
+    <text x="150" y="388" text-anchor="middle" font-size="11" fill="#3D4F65">舒适透气跑鞋</text>
+  </g>
+
+  <!-- LLM lens -->
+  <g>
+    <circle cx="380" cy="250" r="58" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="380" y="245" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">LLM</text>
+    <text x="380" y="265" text-anchor="middle" font-size="11" fill="#3D4F65">语义抽取</text>
+  </g>
+
+  <!-- arrows in -->
+  <line x1="250" y1="150" x2="328" y2="218" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="250" y1="355" x2="328" y2="285" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- shared tag set -->
+  <g>
+    <rect x="540" y="155" width="220" height="190" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="650" y="180" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">同一组语义属性</text>
+
+    <rect x="560" y="195" width="80" height="26" rx="13" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="600" y="213" text-anchor="middle" font-size="11" fill="#1E3A5F">品牌:Nike</text>
+
+    <rect x="660" y="195" width="80" height="26" rx="13" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="700" y="213" text-anchor="middle" font-size="11" fill="#1E3A5F">品类:跑鞋</text>
+
+    <rect x="560" y="231" width="80" height="26" rx="13" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="600" y="249" text-anchor="middle" font-size="11" fill="#1E3A5F">人群:男士</text>
+
+    <rect x="660" y="231" width="80" height="26" rx="13" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="700" y="249" text-anchor="middle" font-size="11" fill="#1E3A5F">卖点:透气</text>
+
+    <text x="650" y="290" text-anchor="middle" font-size="12" fill="#3D4F65">Jaccard ≈ 1.0</text>
+    <text x="650" y="320" text-anchor="middle" font-size="12" font-weight="600" fill="#C8553D">→ 图上连边</text>
+  </g>
+
+  <!-- arrow out -->
+  <line x1="438" y1="250" x2="538" y2="250" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <text x="400" y="475" text-anchor="middle" font-size="12" fill="#3D4F65" font-style="italic">创意扰动被语义标签吸收 · 召回结果可预测</text>
+</svg>

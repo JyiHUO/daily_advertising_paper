@@ -1,0 +1,47 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="34" text-anchor="middle" font-size="17" font-weight="600" fill="#1E3A5F">约束 = 价格，违反就涨价</text>
+  <text x="300" y="54" text-anchor="middle" font-size="12" fill="#3D4F65">KKT 闭式解 + 对偶迭代</text>
+
+  <g>
+    <rect x="50" y="95" width="140" height="78" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="120" y="120" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">合约超额 (demand)</text>
+    <text x="120" y="150" text-anchor="middle" font-size="16" fill="#D97757" font-style="italic">α ↑</text>
+  </g>
+
+  <g>
+    <rect x="225" y="95" width="140" height="78" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="295" y="120" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">请求超容 (capacity)</text>
+    <text x="295" y="150" text-anchor="middle" font-size="16" fill="#D97757" font-style="italic">β ↑</text>
+  </g>
+
+  <g>
+    <rect x="400" y="95" width="150" height="78" rx="8" fill="#FFF1EC" stroke="#D97757" stroke-width="1.8"/>
+    <text x="475" y="120" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">坑位超上限 (PV cap)</text>
+    <text x="475" y="150" text-anchor="middle" font-size="16" fill="#D97757" font-style="italic">δ ↑  (新增)</text>
+  </g>
+
+  <path d="M120,173 L255,238" stroke="#4B8BDA" stroke-width="1.5" fill="none" marker-end="url(#ar)"/>
+  <path d="M295,173 L300,238" stroke="#4B8BDA" stroke-width="1.5" fill="none" marker-end="url(#ar)"/>
+  <path d="M475,173 L345,238" stroke="#D97757" stroke-width="1.5" fill="none" marker-end="url(#arRed)"/>
+
+  <rect x="120" y="240" width="360" height="72" rx="10" fill="#1E3A5F"/>
+  <text x="300" y="263" text-anchor="middle" font-size="12" fill="#9FC2EA">闭式解 (KKT)</text>
+  <text x="300" y="293" text-anchor="middle" font-size="13" fill="#FFFFFF" font-style="italic">x = max(0, θ·(1 + (w + λc − α − β − δ)/V))</text>
+
+  <path d="M480,278 Q560,278 560,200 Q560,80 475,82" stroke="#4B8BDA" stroke-width="1.5" fill="none" stroke-dasharray="5,4" marker-end="url(#ar)"/>
+  <text x="572" y="195" text-anchor="end" font-size="11" fill="#4B8BDA" font-style="italic">投影梯度迭代</text>
+
+  <path d="M300,312 L300,355" stroke="#4B8BDA" stroke-width="1.8" fill="none" marker-end="url(#ar)"/>
+  <rect x="170" y="360" width="260" height="56" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="300" y="382" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">满足约束的最优分配</text>
+  <text x="300" y="402" text-anchor="middle" font-size="10" fill="#3D4F65">(i,j) 对并行更新</text>
+</svg>
