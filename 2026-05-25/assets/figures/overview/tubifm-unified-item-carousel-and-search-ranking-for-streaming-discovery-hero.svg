@@ -1,0 +1,144 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="'Helvetica Neue',Arial,'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E08B4A"/>
+    </marker>
+    <linearGradient id="scrollGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFF7EC"/>
+      <stop offset="1" stop-color="#FCEAD0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="600" fill="#F7FAFD"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">TubiFM：用一份「用户故事」统一三种排序</text>
+  <text x="450" y="64" text-anchor="middle" font-size="13" fill="#3D4F65">item · carousel · search  →  同一个 LLM，同一份 token 词表</text>
+
+  <!-- LEFT: behaviors -->
+  <g>
+    <text x="120" y="105" text-anchor="middle" font-size="12" fill="#7A8AA0" font-style="italic">异构行为信号</text>
+
+    <g transform="translate(40,125)">
+      <rect width="160" height="34" rx="17" fill="#EFF6FF" stroke="#9EC0E8"/>
+      <circle cx="18" cy="17" r="7" fill="#4B8BDA"/>
+      <text x="34" y="22" font-size="12" fill="#1E3A5F">观看 watch · surface</text>
+    </g>
+    <g transform="translate(40,170)">
+      <rect width="160" height="34" rx="17" fill="#EFF6FF" stroke="#9EC0E8"/>
+      <circle cx="18" cy="17" r="7" fill="#4B8BDA"/>
+      <text x="34" y="22" font-size="12" fill="#1E3A5F">carousel 容器上下文</text>
+    </g>
+    <g transform="translate(40,215)">
+      <rect width="160" height="34" rx="17" fill="#EFF6FF" stroke="#9EC0E8"/>
+      <circle cx="18" cy="17" r="7" fill="#4B8BDA"/>
+      <text x="34" y="22" font-size="12" fill="#1E3A5F">搜索 query（含中间态）</text>
+    </g>
+    <g transform="translate(40,260)">
+      <rect width="160" height="34" rx="17" fill="#EFF6FF" stroke="#9EC0E8"/>
+      <circle cx="18" cy="17" r="7" fill="#4B8BDA"/>
+      <text x="34" y="22" font-size="12" fill="#1E3A5F">用户属性 · session</text>
+    </g>
+
+    <!-- merge arrows into scroll left edge (~310,310) -->
+    <path d="M205,142 C 260,160 285,280 308,305" fill="none" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#arr)"/>
+    <path d="M205,187 C 260,210 285,290 308,310" fill="none" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#arr)"/>
+    <path d="M205,232 C 260,260 285,300 308,315" fill="none" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#arr)"/>
+    <path d="M205,277 C 250,290 285,310 308,320" fill="none" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#arr)"/>
+  </g>
+
+  <!-- CENTER: User Story scroll -->
+  <g transform="translate(310,260)">
+    <path d="M0,40 Q 15,20 30,40 L 250,40 Q 265,20 280,40 L 280,90 Q 265,110 250,90 L 30,90 Q 15,110 0,90 Z"
+          fill="url(#scrollGrad)" stroke="#E0A968" stroke-width="1.5"/>
+    <text x="140" y="32" text-anchor="middle" font-size="11" font-weight="700" fill="#9C5A1F">USER STORY · 单条 token 序列</text>
+
+    <g font-size="9" font-family="'Courier New',monospace">
+      <rect x="14"  y="55" width="34" height="20" rx="3" fill="#FFFFFF" stroke="#C68A4D"/><text x="31"  y="69" text-anchor="middle" fill="#9C5A1F">attr</text>
+      <rect x="52"  y="55" width="40" height="20" rx="3" fill="#FFFFFF" stroke="#C68A4D"/><text x="72"  y="69" text-anchor="middle" fill="#9C5A1F">sess</text>
+      <rect x="96"  y="55" width="44" height="20" rx="3" fill="#DCEBFC" stroke="#4B8BDA"/><text x="118" y="69" text-anchor="middle" fill="#1E3A5F">watch</text>
+      <rect x="144" y="55" width="46" height="20" rx="3" fill="#DCEBFC" stroke="#4B8BDA"/><text x="167" y="69" text-anchor="middle" fill="#1E3A5F">carou.</text>
+      <rect x="194" y="55" width="36" height="20" rx="3" fill="#FCE3CC" stroke="#E08B4A"/><text x="212" y="69" text-anchor="middle" fill="#9C5A1F">srch</text>
+      <rect x="234" y="55" width="34" height="20" rx="3" fill="#DCEBFC" stroke="#4B8BDA"/><text x="251" y="69" text-anchor="middle" fill="#1E3A5F">id</text>
+    </g>
+  </g>
+
+  <!-- LLM core diamond -->
+  <g transform="translate(450,180)">
+    <polygon points="0,-70 95,0 0,70 -95,0" fill="#1E3A5F"/>
+    <polygon points="0,-62 87,0 0,62 -87,0" fill="none" stroke="#4B8BDA" stroke-width="1"/>
+    <text x="0" y="-10" text-anchor="middle" font-size="16" font-weight="700" fill="#FFFFFF">Llama 3.2 1B</text>
+    <text x="0" y="12" text-anchor="middle" font-size="11" fill="#A8C4E5">next-token prediction</text>
+    <text x="0" y="32" text-anchor="middle" font-size="10" fill="#A8C4E5">共享词表 · prompt 切任务</text>
+  </g>
+
+  <!-- arrow story -> LLM -->
+  <path d="M450,300 L450,253" fill="none" stroke="#E08B4A" stroke-width="2" marker-end="url(#arrOrange)"/>
+  <text x="458" y="282" font-size="10" fill="#9C5A1F" font-style="italic">序列化</text>
+
+  <!-- RIGHT: three task prompts -->
+  <g>
+    <text x="770" y="105" text-anchor="middle" font-size="12" fill="#7A8AA0" font-style="italic">prompt 切换 · 一次 forward</text>
+
+    <g transform="translate(670,125)">
+      <rect width="200" height="74" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+      <text x="14" y="22" font-size="13" font-weight="700" fill="#1E3A5F">▶ Item 排序</text>
+      <text x="14" y="40" font-size="10" fill="#3D4F65">尾部追加 watch 头 (carousel=MASK)</text>
+      <text x="14" y="56" font-size="10" fill="#3D4F65">→ 在 item-id 位置出 logits</text>
+      <text x="14" y="69" font-size="10" font-weight="700" fill="#2E7D5B">线上：TVT 持平，链路大幅简化</text>
+    </g>
+
+    <g transform="translate(670,220)">
+      <rect width="200" height="74" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+      <text x="14" y="22" font-size="13" font-weight="700" fill="#1E3A5F">▶ Carousel 排序</text>
+      <text x="14" y="40" font-size="10" fill="#3D4F65">追加 surface 上下文</text>
+      <text x="14" y="56" font-size="10" fill="#3D4F65">→ 在 carousel 位置出 logits</text>
+      <text x="14" y="69" font-size="10" font-weight="700" fill="#2E7D5B">线上 TVT  +0.30%</text>
+    </g>
+
+    <g transform="translate(670,315)">
+      <rect width="200" height="74" rx="10" fill="#FFF1E2" stroke="#E08B4A" stroke-width="1.5"/>
+      <text x="14" y="22" font-size="13" font-weight="700" fill="#9C5A1F">▶ Search 排序</text>
+      <text x="14" y="40" font-size="10" fill="#3D4F65">拼 query + search-surface 头</text>
+      <text x="14" y="56" font-size="10" fill="#3D4F65">→ 在 item-id 位置出 logits</text>
+      <text x="14" y="69" font-size="10" font-weight="700" fill="#C5621F">线上 TVT  +3.9% (长尾 +20%)</text>
+    </g>
+
+    <!-- arrows from diamond right tip (545,180) to each card -->
+    <path d="M545,165 C 600,160 630,162 668,162" fill="none" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#arr)"/>
+    <path d="M545,185 C 600,220 630,255 668,257" fill="none" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#arr)"/>
+    <path d="M545,200 C 600,300 630,348 668,352" fill="none" stroke="#E08B4A" stroke-width="1.8" marker-end="url(#arrOrange)"/>
+  </g>
+
+  <!-- Bottom strip: serving -->
+  <g transform="translate(0,470)">
+    <rect x="60" y="20" width="780" height="90" rx="14" fill="#FFFFFF" stroke="#C9D6E5"/>
+    <text x="450" y="46" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">一个模型替代多链路 · L40S 单卡部署</text>
+
+    <g transform="translate(110,62)">
+      <text x="0" y="0" font-size="11" fill="#3D4F65">原系统：多召回 + DCN 精排 + 搜索专用栈</text>
+      <rect x="0" y="10" width="180" height="14" rx="7" fill="#F2D7D7" stroke="#C97373"/>
+      <text x="90" y="21" text-anchor="middle" font-size="10" fill="#8B2F2F" font-weight="700">p99  500 ms</text>
+    </g>
+
+    <text x="332" y="78" font-size="20" font-weight="700" fill="#4B8BDA">→</text>
+
+    <g transform="translate(360,62)">
+      <text x="0" y="0" font-size="11" fill="#3D4F65">TubiFM 单模型，三任务共享</text>
+      <rect x="0" y="10" width="72" height="14" rx="7" fill="#D7EFE0" stroke="#5BA47C"/>
+      <text x="36" y="21" text-anchor="middle" font-size="10" fill="#1F5C3A" font-weight="700">p99 200 ms</text>
+    </g>
+
+    <g font-size="10">
+      <rect x="475" y="55" width="160" height="22" rx="11" fill="#EFF6FF" stroke="#9EC0E8"/>
+      <text x="555" y="70" text-anchor="middle" fill="#1E3A5F">原子 item token，免解码</text>
+      <rect x="645" y="55" width="180" height="22" rx="11" fill="#EFF6FF" stroke="#9EC0E8"/>
+      <text x="735" y="70" text-anchor="middle" fill="#1E3A5F">carousel MASK：容器无关</text>
+      <rect x="475" y="83" width="350" height="22" rx="11" fill="#FFF1E2" stroke="#E0A968"/>
+      <text x="650" y="98" text-anchor="middle" fill="#9C5A1F">跨任务行为互补 → 搜索长尾被浏览历史消歧</text>
+    </g>
+  </g>
+</svg>

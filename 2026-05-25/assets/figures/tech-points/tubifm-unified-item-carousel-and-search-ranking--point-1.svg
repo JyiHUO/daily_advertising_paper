@@ -1,0 +1,74 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="42" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">用户故事 = 一条统一的 Token 流</text>
+  <text x="400" y="65" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#3D4F65">异构行为 → 同一种"语法"</text>
+
+  <!-- Left: heterogeneous sources -->
+  <g font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1E3A5F">
+    <rect x="40" y="110" width="160" height="40" rx="8" fill="#FFF1E6" stroke="#E89B6C" stroke-width="1.5"/>
+    <text x="120" y="135" text-anchor="middle">用户属性</text>
+
+    <rect x="40" y="170" width="160" height="40" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="120" y="195" text-anchor="middle">观看事件</text>
+
+    <rect x="40" y="230" width="160" height="40" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="120" y="255" text-anchor="middle">搜索 query</text>
+
+    <rect x="40" y="290" width="160" height="40" rx="8" fill="#FFF1E6" stroke="#E89B6C" stroke-width="1.5"/>
+    <text x="120" y="315" text-anchor="middle">surface / carousel</text>
+  </g>
+
+  <!-- Arrows merging into the token tape -->
+  <g stroke="#4B8BDA" stroke-width="1.8" fill="none" marker-end="url(#ar)">
+    <path d="M205,130 C265,130 285,215 330,215"/>
+    <path d="M205,190 C265,190 285,225 330,225"/>
+    <path d="M205,250 C265,250 285,235 330,235"/>
+    <path d="M205,310 C265,310 285,245 330,245"/>
+  </g>
+
+  <!-- Right: unified token stream as one tape -->
+  <text x="555" y="200" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">按时间排序的 token 序列</text>
+
+  <g font-family="Menlo, monospace" font-size="11">
+    <rect x="335" y="210" width="440" height="50" rx="6" fill="#F4F8FD" stroke="#1E3A5F" stroke-width="1.5"/>
+    <g stroke="#B7C7DA">
+      <line x1="390" y1="210" x2="390" y2="260"/>
+      <line x1="440" y1="210" x2="440" y2="260"/>
+      <line x1="495" y1="210" x2="495" y2="260"/>
+      <line x1="555" y1="210" x2="555" y2="260"/>
+      <line x1="615" y1="210" x2="615" y2="260"/>
+      <line x1="670" y1="210" x2="670" y2="260"/>
+      <line x1="725" y1="210" x2="725" y2="260"/>
+    </g>
+    <g>
+      <text x="362" y="240" text-anchor="middle" fill="#B8682E">[US]</text>
+      <text x="415" y="240" text-anchor="middle" fill="#B8682E">[Sat]</text>
+      <text x="467" y="240" text-anchor="middle" fill="#2E5FA8">"lan"</text>
+      <text x="525" y="240" text-anchor="middle" fill="#2E5FA8">"tern"</text>
+      <text x="585" y="240" text-anchor="middle" fill="#2E5FA8">item_42</text>
+      <text x="642" y="240" text-anchor="middle" fill="#B8682E">87m</text>
+      <text x="697" y="240" text-anchor="middle" fill="#B8682E">[home]</text>
+      <text x="750" y="240" text-anchor="middle" fill="#2E5FA8">…</text>
+    </g>
+  </g>
+
+  <!-- Bottom callout -->
+  <g font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#3D4F65">
+    <text x="400" y="335" text-anchor="middle">语法固定 · 新增信号 = 新增 token 字段</text>
+    <text x="400" y="362" text-anchor="middle" fill="#1E3A5F" font-weight="600">→ 一个模型同时服务 item / carousel / search 排序</text>
+  </g>
+
+  <!-- Legend dots -->
+  <g font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">
+    <circle cx="230" cy="425" r="5" fill="#B8682E"/>
+    <text x="242" y="429">领域 token (属性 / surface / 时长)</text>
+    <circle cx="490" cy="425" r="5" fill="#2E5FA8"/>
+    <text x="502" y="429">文本 token (query 子词 / item id)</text>
+  </g>
+</svg>

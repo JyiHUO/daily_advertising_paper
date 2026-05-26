@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-25/downloaded_pdfs/harness-lm-a-three-phase-training-recipe-for-harnessing-slms-in-sponsored-search.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-25/assets/figure_candidates/harness-lm-a-three-phase-training-recipe-for-harnessing-slms-in-sponsored-search",
+  "candidates": [
+    {
+      "id": "page-6-drawing-caption-16",
+      "page_index": 6,
+      "caption": "Figure 2: Alignment loss (Eq. 2) as a function of training points for a randomly initialized model versus a pretrained model, showing that pretraining yields significantly faster convergence and a lower final loss.",
+      "clip": [
+        309.56500244140625,
+        67.6855239868164,
+        566.596435546875,
+        205.68597412109375
+      ],
+      "clip_area": 35470.45346721308,
+      "page_area": 484704.0,
+      "text_density": 0.14993321027377352,
+      "kind": "drawing_cluster_with_caption",
+      "score": 35.19812353320929,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-25/assets/figure_candidates/harness-lm-a-three-phase-training-recipe-for-harnessing-slms-in-sponsored-search/01-p7-drawing_cluster_with_caption.png",
+      "filename": "01-p7-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-8-drawing-caption-7",
+      "page_index": 8,
+      "caption": "Figure 3: 2-D projection of query (stars) and document (circles) embeddings across HLM training phases.",
+      "clip": [
+        88.18386840820312,
+        63.37239074707031,
+        524.269775390625,
+        232.6600799560547
+      ],
+      "clip_area": 73823.9754896583,
+      "page_area": 484704.0,
+      "text_density": 0.0674174682979842,
+      "kind": "drawing_cluster_with_caption",
+      "score": 30.820266394329536,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-25/assets/figure_candidates/harness-lm-a-three-phase-training-recipe-for-harnessing-slms-in-sponsored-search/02-p9-drawing_cluster_with_caption.png",
+      "filename": "02-p9-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-6-block-16",
+      "page_index": 6,
+      "caption": "Figure 2: Alignment loss (Eq. 2) as a function of training points for a randomly initialized model versus a pretrained model, showing that pretraining yields significantly faster convergence and a lower final loss.",
+      "clip": [
+        287.3549865722656,
+        18.0,
+        588.9869018554688,
+        194.46998596191406
+      ],
+      "clip_area": 53228.979855692116,
+      "page_area": 484704.0,
+      "text_density": 0.08889393560345515,
+      "kind": "captioned_figure",
+      "score": 27.05779697330038,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-25/assets/figure_candidates/harness-lm-a-three-phase-training-recipe-for-harnessing-slms-in-sponsored-search/03-p7-captioned_figure.png",
+      "filename": "03-p7-captioned_figure.png"
+    },
+    {
+      "id": "page-8-block-7",
+      "page_index": 8,
+      "caption": "Figure 3: 2-D projection of query (stars) and document (circles) embeddings across HLM training phases.",
+      "clip": [
+        67.62698974609376,
+        18.0,
+        544.3748413085938,
+        221.14036560058594
+      ],
+      "clip_area": 96846.73286570013,
+      "page_area": 484704.0,
+      "text_density": 0.043687247740487566,
+      "kind": "captioned_figure",
+      "score": 19.07607480961889,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-25/assets/figure_candidates/harness-lm-a-three-phase-training-recipe-for-harnessing-slms-in-sponsored-search/04-p9-captioned_figure.png",
+      "filename": "04-p9-captioned_figure.png"
+    },
+    {
+      "id": "page-8-drawing-cluster-0",
+      "page_index": 8,
+      "caption": "第 9 页矢量图主图候选",
+      "clip": [
+        90.18386840820312,
+        65.37239074707031,
+        522.269775390625,
+        230.6600799560547
+      ],
+      "clip_area": 71418.48110489268,
+      "page_area": 484704.0,
+      "text_density": 0.05384995833597538,
+      "kind": "drawing_cluster",
+      "score": 8.793538678943252,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-25/assets/figure_candidates/harness-lm-a-three-phase-training-recipe-for-harnessing-slms-in-sponsored-search/05-p9-drawing_cluster.png",
+      "filename": "05-p9-drawing_cluster.png"
+    },
+    {
+      "id": "page-6-drawing-cluster-0",
+      "page_index": 6,
+      "caption": "第 7 页矢量图主图候选",
+      "clip": [
+        311.56500244140625,
+        69.6855239868164,
+        564.596435546875,
+        203.68597412109375
+      ],
+      "clip_area": 33906.3259342541,
+      "page_area": 484704.0,
+      "text_density": 0.1426676289557047,
+      "kind": "drawing_cluster",
+      "score": 4.616679217482763,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-25/assets/figure_candidates/harness-lm-a-three-phase-training-recipe-for-harnessing-slms-in-sponsored-search/06-p7-drawing_cluster.png",
+      "filename": "06-p7-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-25/assets/figure_candidates/harness-lm-a-three-phase-training-recipe-for-harnessing-slms-in-sponsored-search/contact-sheet.svg"
+}

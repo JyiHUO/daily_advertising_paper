@@ -1,0 +1,47 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="34" text-anchor="middle" font-size="17" font-weight="700" fill="#1E3A5F">三条独立链路 → 一个共享用户故事</text>
+
+  <!-- LEFT: three separate silos -->
+  <g>
+    <rect x="40" y="90" width="170" height="50" rx="8" fill="#FEF3E7" stroke="#E8A765" stroke-width="1.5"/>
+    <text x="125" y="120" text-anchor="middle" font-size="13" fill="#1E3A5F">Item 排序</text>
+
+    <rect x="40" y="180" width="170" height="50" rx="8" fill="#FEF3E7" stroke="#E8A765" stroke-width="1.5"/>
+    <text x="125" y="210" text-anchor="middle" font-size="13" fill="#1E3A5F">Carousel 排序</text>
+
+    <rect x="40" y="270" width="170" height="50" rx="8" fill="#FEF3E7" stroke="#E8A765" stroke-width="1.5"/>
+    <text x="125" y="300" text-anchor="middle" font-size="13" fill="#1E3A5F">Search 排序</text>
+
+    <text x="125" y="345" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">各自建模 · 信号孤立</text>
+  </g>
+
+  <!-- arrows merging into unified box -->
+  <path d="M210,115 Q275,115 335,195" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M210,205 L335,210" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M210,295 Q275,295 335,225" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+
+  <!-- RIGHT: unified model -->
+  <g>
+    <rect x="340" y="150" width="220" height="120" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="450" y="183" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">统一生成式排序</text>
+    <text x="450" y="210" text-anchor="middle" font-size="12" fill="#3D4F65">单一用户旅程 · prompt 切换任务</text>
+    <text x="450" y="240" text-anchor="middle" font-size="12" fill="#4B8BDA">观看 ⇄ 搜索 ⇄ 点击</text>
+  </g>
+
+  <!-- key gains -->
+  <g>
+    <text x="450" y="300" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">长尾 query 消歧 +20% · p99 500ms→200ms</text>
+  </g>
+
+  <!-- example illustration -->
+  <g transform="translate(40,365)">
+    <text x="0" y="0" font-size="11" fill="#3D4F65">例：query "lan" + 最近看恐怖片  →  </text>
+    <text x="0" y="18" font-size="11" fill="#1E3A5F" font-weight="600">The Lantern at Exit 13 排到搜索第一位</text>
+  </g>
+</svg>

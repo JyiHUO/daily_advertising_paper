@@ -1,0 +1,18 @@
+{
+  "date": "2026-05-25",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 8,
+  "supplementary_count": 0,
+  "focus_titles": [
+    "HARNESS-LM: A Three-Phase Training Recipe for Harnessing SLMs in Sponsored Search Retrieval",
+    "TubiFM: Unified Item, Carousel, and Search Ranking for Streaming Discovery"
+  ],
+  "focus_status": {
+    "HARNESS-LM: A Three-Phase Training Recipe for Harnessing SLMs in Sponsored Search Retrieval": "completed",
+    "TubiFM: Unified Item, Carousel, and Search Ranking for Streaming Discovery": "completed"
+  }
+}

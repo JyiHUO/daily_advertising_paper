@@ -1,0 +1,13 @@
+{
+  "report_date": "2026-05-25",
+  "provider": "litellm-opus",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 2657,
+  "focus_titles": [
+    "HARNESS-LM: A Three-Phase Training Recipe for Harnessing SLMs in Sponsored Search Retrieval",
+    "TubiFM: Unified Item, Carousel, and Search Ranking for Streaming Discovery"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Steve"
+}
