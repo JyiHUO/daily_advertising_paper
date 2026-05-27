@@ -1,0 +1,56 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4FA877"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="36" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="20" font-weight="bold" fill="#1E3A5F">GSU 双路检索：同样的召回，十分之一的代价</text>
+
+  <!-- Target -->
+  <circle cx="400" cy="100" r="36" fill="#FEF3E2" stroke="#E0A461" stroke-width="2"/>
+  <text x="400" y="96" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1E3A5F" font-weight="bold">Target</text>
+  <text x="400" y="113" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">美妆广告</text>
+
+  <!-- arrows from target -->
+  <line x1="372" y1="120" x2="270" y2="178" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="428" y1="120" x2="530" y2="178" stroke="#4FA877" stroke-width="2" marker-end="url(#arG)"/>
+
+  <!-- Left: Soft retrieval -->
+  <rect x="70" y="180" width="280" height="240" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+  <text x="210" y="208" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">软检索 · 稠密向量</text>
+  <text x="210" y="228" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">target 与 4000 条逐一余弦</text>
+
+  <g fill="#4B8BDA" opacity="0.85">
+    <circle cx="120" cy="270" r="5"/><circle cx="150" cy="262" r="5"/><circle cx="180" cy="278" r="5"/>
+    <circle cx="210" cy="268" r="5"/><circle cx="240" cy="275" r="5"/><circle cx="270" cy="265" r="5"/>
+    <circle cx="300" cy="280" r="5"/><circle cx="135" cy="300" r="5"/><circle cx="165" cy="308" r="5"/>
+    <circle cx="195" cy="298" r="5"/><circle cx="225" cy="305" r="5"/><circle cx="255" cy="295" r="5"/>
+    <circle cx="285" cy="310" r="5"/>
+  </g>
+  <text x="210" y="348" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65">逐条点积 → 排序取 Top-K</text>
+
+  <text x="210" y="385" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1E3A5F" font-weight="bold">GAUC 0.6155</text>
+  <text x="210" y="405" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#B45A3C">延迟 / 存储 ×10</text>
+
+  <!-- Right: Hard retrieval -->
+  <rect x="450" y="180" width="280" height="240" rx="14" fill="#EAF5EE" stroke="#4FA877" stroke-width="1.8"/>
+  <text x="590" y="208" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">硬检索 · SemID 哈希</text>
+  <text x="590" y="228" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">顶层码倒排查表</text>
+
+  <rect x="520" y="248" width="140" height="36" rx="8" fill="#ffffff" stroke="#4FA877" stroke-width="1.5"/>
+  <text x="590" y="271" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" fill="#1E3A5F">top code = 8</text>
+
+  <line x1="590" y1="286" x2="590" y2="312" stroke="#4FA877" stroke-width="2" marker-end="url(#arG)"/>
+
+  <rect x="495" y="318" width="190" height="36" rx="8" fill="#ffffff" stroke="#4FA877" stroke-width="1.5"/>
+  <text x="590" y="341" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65">同码桶：美妆 / 护肤 …</text>
+
+  <text x="590" y="385" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1E3A5F" font-weight="bold">GAUC 0.6148</text>
+  <text x="590" y="405" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#2E7D4F">延迟 / 存储 −90%</text>
+
+  <text x="400" y="460" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#1E3A5F" font-weight="bold">召回质量几乎等价 → 工业上线选哈希</text>
+</svg>

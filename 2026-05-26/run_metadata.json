@@ -1,0 +1,18 @@
+{
+  "date": "2026-05-26",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 20,
+  "supplementary_count": 2,
+  "focus_titles": [
+    "Memento: Personalized RAG-Style Long-Retention Data Scaling for META Ads Recommendation",
+    "SIREN: Unified Multi-Granularity Semantic Interaction for Multi-Modal Lifelong User Interest Modeling"
+  ],
+  "focus_status": {
+    "Memento: Personalized RAG-Style Long-Retention Data Scaling for META Ads Recommendation": "completed",
+    "SIREN: Unified Multi-Granularity Semantic Interaction for Multi-Modal Lifelong User Interest Modeling": "completed"
+  }
+}

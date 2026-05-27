@@ -1,0 +1,80 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Helvetica, Arial, sans-serif">
+  <!-- Title -->
+  <text x="400" y="42" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">长期画像 → 调音师 + 交叉镜</text>
+  <text x="400" y="66" text-anchor="middle" font-size="13" fill="#3D4F65">365天历史 embedding 如何参与当前预测</text>
+
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D96A6A"/>
+    </marker>
+  </defs>
+
+  <!-- Long history context (left top) -->
+  <g>
+    <rect x="50" y="150" width="170" height="110" rx="14" fill="#FFF4E6" stroke="#E8A24A" stroke-width="2"/>
+    <text x="135" y="186" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">长期上下文 c</text>
+    <text x="135" y="210" text-anchor="middle" font-size="11" fill="#3D4F65">MMR 召回 · 365天</text>
+    <text x="135" y="230" text-anchor="middle" font-size="11" fill="#3D4F65">压缩历史画像</text>
+  </g>
+
+  <!-- Current features (left bottom) -->
+  <g>
+    <rect x="50" y="340" width="170" height="100" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="135" y="378" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">当前特征 e(x)</text>
+    <text x="135" y="402" text-anchor="middle" font-size="11" fill="#3D4F65">raw embeddings</text>
+  </g>
+
+  <!-- Affine: tuner metaphor -->
+  <g>
+    <rect x="320" y="130" width="200" height="140" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="420" y="158" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">Ember-Affine（调音师）</text>
+    <text x="420" y="178" text-anchor="middle" font-size="11" fill="#3D4F65">γ ⊙ e(x) + β</text>
+    <circle cx="370" cy="220" r="18" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="2"/>
+    <line x1="370" y1="220" x2="380" y2="210" stroke="#1E3A5F" stroke-width="2"/>
+    <text x="370" y="254" text-anchor="middle" font-size="11" fill="#3D4F65">γ 缩放</text>
+    <circle cx="450" cy="220" r="18" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="2"/>
+    <line x1="450" y1="220" x2="462" y2="225" stroke="#1E3A5F" stroke-width="2"/>
+    <text x="450" y="254" text-anchor="middle" font-size="11" fill="#3D4F65">β 偏移</text>
+  </g>
+
+  <!-- Quadratic: cross metaphor -->
+  <g>
+    <rect x="320" y="320" width="200" height="130" rx="14" fill="#FDECEC" stroke="#D96A6A" stroke-width="2"/>
+    <text x="420" y="348" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">Ember-Quadratic（交叉镜）</text>
+    <text x="420" y="368" text-anchor="middle" font-size="11" fill="#3D4F65">Hadamard积 + ReLU + 残差</text>
+    <circle cx="380" cy="405" r="14" fill="#FFFFFF" stroke="#D96A6A" stroke-width="2"/>
+    <text x="380" y="409" text-anchor="middle" font-size="11" fill="#1E3A5F">a</text>
+    <text x="420" y="411" text-anchor="middle" font-size="18" font-weight="700" fill="#D96A6A">×</text>
+    <circle cx="460" cy="405" r="14" fill="#FFFFFF" stroke="#D96A6A" stroke-width="2"/>
+    <text x="460" y="409" text-anchor="middle" font-size="11" fill="#1E3A5F">b</text>
+    <text x="420" y="438" text-anchor="middle" font-size="11" fill="#3D4F65">压缩前保留显式交叉</text>
+  </g>
+
+  <!-- Downstream -->
+  <g>
+    <rect x="620" y="230" width="140" height="130" rx="14" fill="#E8F0E8" stroke="#5A8A5A" stroke-width="2"/>
+    <text x="690" y="270" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">DCPP</text>
+    <text x="690" y="295" text-anchor="middle" font-size="13" fill="#1E3A5F">+ ResidualMLP</text>
+    <text x="690" y="325" text-anchor="middle" font-size="11" fill="#3D4F65">CTR ↑ 1% · CVR ↑ 1.2%</text>
+  </g>
+
+  <!-- c drives Affine -->
+  <path d="M220 200 L 318 200" fill="none" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#arr)"/>
+  <text x="269" y="192" text-anchor="middle" font-size="10" fill="#3D4F65">驱动 γ,β</text>
+
+  <!-- e(x) into Affine -->
+  <path d="M220 370 Q 270 260 318 245" fill="none" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#arr)"/>
+  <!-- e(x) into Quadratic -->
+  <path d="M220 400 L 318 400" fill="none" stroke="#D96A6A" stroke-width="2.2" marker-end="url(#arrR)"/>
+
+  <!-- Affine -> DCPP -->
+  <path d="M520 230 Q 580 240 620 275" fill="none" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#arr)"/>
+  <!-- Quadratic -> DCPP -->
+  <path d="M520 370 Q 580 360 620 320" fill="none" stroke="#D96A6A" stroke-width="2.2" marker-end="url(#arrR)"/>
+
+  <!-- bottom note -->
+  <text x="400" y="482" text-anchor="middle" font-size="11" fill="#3D4F65">长期画像不直接拼接，而是去调制 &amp; 交叉当前特征</text>
+</svg>

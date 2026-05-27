@@ -1,0 +1,59 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">把昂贵的事挪到离线，线上只做一次轻量取用</text>
+
+  <!-- Offline (left) -->
+  <g>
+    <rect x="50" y="100" width="280" height="280" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="190" y="130" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">离线 / 异步</text>
+
+    <rect x="80" y="160" width="220" height="22" rx="4" fill="#C9DEF5"/>
+    <rect x="80" y="160" width="16" height="22" rx="4" fill="#4B8BDA"/>
+    <text x="190" y="200" text-anchor="middle" font-size="13" fill="#3D4F65">7天分块 · 14× 压缩</text>
+
+    <g transform="translate(110,225)">
+      <rect width="50" height="40" rx="4" fill="#FCE9C7" stroke="#D9A24A"/>
+      <text x="25" y="25" text-anchor="middle" font-size="13" fill="#1E3A5F">FP16</text>
+    </g>
+    <text x="195" y="252" text-anchor="middle" font-size="18" fill="#4B8BDA">→</text>
+    <g transform="translate(220,225)">
+      <rect width="50" height="40" rx="4" fill="#D9A24A" stroke="#1E3A5F"/>
+      <text x="25" y="25" text-anchor="middle" font-size="12" fill="#FFFFFF" font-weight="700">Int8</text>
+    </g>
+    <text x="190" y="285" text-anchor="middle" font-size="13" fill="#3D4F65">NormInt8 量化 · 再省 50%</text>
+
+    <g transform="translate(140,310)">
+      <rect width="100" height="50" rx="6" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="50" y="22" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">向量索引</text>
+      <text x="50" y="40" text-anchor="middle" font-size="11" fill="#3D4F65">异步重建</text>
+    </g>
+  </g>
+
+  <!-- Online (right) -->
+  <g>
+    <rect x="470" y="100" width="280" height="280" rx="14" fill="#FFF6EC" stroke="#D9A24A" stroke-width="1.5"/>
+    <text x="610" y="130" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">线上请求 (&lt; 10ms)</text>
+
+    <circle cx="540" cy="180" r="22" fill="#FFFFFF" stroke="#D9A24A" stroke-width="1.5"/>
+    <text x="540" y="184" text-anchor="middle" font-size="11" fill="#1E3A5F">请求</text>
+
+    <rect x="510" y="225" width="200" height="40" rx="6" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="610" y="250" text-anchor="middle" font-size="12" fill="#1E3A5F">查询构造 → KNN + MMR</text>
+
+    <rect x="510" y="280" width="200" height="40" rx="6" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="610" y="305" text-anchor="middle" font-size="12" fill="#1E3A5F">主模型推理（并行）</text>
+
+    <text x="610" y="355" text-anchor="middle" font-size="12" fill="#3D4F65" font-style="italic">QPS 增幅 &lt; 5%</text>
+  </g>
+
+  <!-- snapshot arrow from index to online KNN box -->
+  <path d="M 240 365 C 340 430, 470 430, 540 270" fill="none" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#ar)"/>
+  <text x="390" y="438" text-anchor="middle" font-size="12" fill="#4B8BDA">索引快照</text>
+
+  <text x="400" y="475" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="700">资源效率 5–10× · 365天历史可用</text>
+</svg>

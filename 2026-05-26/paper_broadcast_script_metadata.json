@@ -1,0 +1,13 @@
+{
+  "report_date": "2026-05-26",
+  "provider": "litellm-opus",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 2824,
+  "focus_titles": [
+    "Memento: Personalized RAG-Style Long-Retention Data Scaling for META Ads Recommendation",
+    "SIREN: Unified Multi-Granularity Semantic Interaction for Multi-Modal Lifelong User Interest Modeling"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Steve"
+}

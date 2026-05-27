@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-26/downloaded_pdfs/siren-unified-multi-granularity-semantic-interaction-for-multi-modal-lifelong-us.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-26/assets/figure_candidates/siren-unified-multi-granularity-semantic-interaction-for-multi-modal-lifelong-us",
+  "candidates": [
+    {
+      "id": "page-2-drawing-caption-26",
+      "page_index": 2,
+      "caption": "Figure 3: Overview of SIREN. SIREN follows the two-stage GSU–ESU paradigm. The GSU retrieves target-relevant be- haviors via similarity-based soft retrieval or SemID-based hard retrieval. The ESU incorporates SemIDs and similarity buckets as side information for unified target-conditioned sequence modeling.",
+      "clip": [
+        213.6187744140625,
+        66.15156555175781,
+        604.0,
+        334.3583679199219
+      ],
+      "clip_area": 104702.90021896921,
+      "page_area": 484704.0,
+      "text_density": 0.31102051860766294,
+      "kind": "drawing_cluster_with_caption",
+      "score": 50.302134441528764,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-26/assets/figure_candidates/siren-unified-multi-granularity-semantic-interaction-for-multi-modal-lifelong-us/01-p3-drawing_cluster_with_caption.png",
+      "filename": "01-p3-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-2-block-26",
+      "page_index": 2,
+      "caption": "Figure 3: Overview of SIREN. SIREN follows the two-stage GSU–ESU paradigm. The GSU retrieves target-relevant be- haviors via similarity-based soft retrieval or SemID-based hard retrieval. The ESU incorporates SemIDs and similarity buckets as side information for unified target-conditioned sequence modeling.",
+      "clip": [
+        287.3549865722656,
+        18.0,
+        590.4046875,
+        320.2399597167969
+      ],
+      "clip_area": 91593.7294005858,
+      "page_area": 484704.0,
+      "text_density": 0.16574655819382042,
+      "kind": "captioned_figure",
+      "score": 46.87291461282173,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-26/assets/figure_candidates/siren-unified-multi-granularity-semantic-interaction-for-multi-modal-lifelong-us/02-p3-captioned_figure.png",
+      "filename": "02-p3-captioned_figure.png"
+    },
+    {
+      "id": "page-1-embedded-0-0",
+      "page_index": 1,
+      "caption": "第 2 页内嵌图片候选",
+      "clip": [
+        41.79800033569336,
+        71.68952941894531,
+        317.97650146484375,
+        266.5770263671875
+      ],
+      "clip_area": 53823.7367959774,
+      "page_area": 484704.0,
+      "text_density": 0.006967422586900369,
+      "kind": "embedded_image",
+      "xref": 328,
+      "score": 11.598041519955304,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-26/assets/figure_candidates/siren-unified-multi-granularity-semantic-interaction-for-multi-modal-lifelong-us/03-p2-embedded_image.png",
+      "filename": "03-p2-embedded_image.png"
+    },
+    {
+      "id": "page-6-embedded-1-0",
+      "page_index": 6,
+      "caption": "第 7 页内嵌图片候选",
+      "clip": [
+        407.7690124511719,
+        71.6872329711914,
+        567.9605102539062,
+        178.06402587890625
+      ],
+      "clip_area": 17040.657787338132,
+      "page_area": 484704.0,
+      "text_density": 0.03617679872045708,
+      "kind": "embedded_image",
+      "xref": 341,
+      "score": 5.189340642081535,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-26/assets/figure_candidates/siren-unified-multi-granularity-semantic-interaction-for-multi-modal-lifelong-us/04-p7-embedded_image.png",
+      "filename": "04-p7-embedded_image.png"
+    },
+    {
+      "id": "page-6-block-4",
+      "page_index": 6,
+      "caption": "Table 3: Online A/B test results of SIREN across different advertising scenarios and pipeline stages.",
+      "clip": [
+        31.79800033569336,
+        74.29336547851562,
+        428.8737487792969,
+        184.06402587890625
+      ],
+      "clip_area": 43587.26713563374,
+      "page_area": 484704.0,
+      "text_density": 0.08683543438895619,
+      "kind": "image_block_with_caption",
+      "score": -0.925823095163663,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-26/assets/figure_candidates/siren-unified-multi-granularity-semantic-interaction-for-multi-modal-lifelong-us/05-p7-image_block_with_caption.png",
+      "filename": "05-p7-image_block_with_caption.png"
+    },
+    {
+      "id": "page-6-embedded-0-0",
+      "page_index": 6,
+      "caption": "Table 3: Online A/B test results of SIREN across different advertising scenarios and pipeline stages.",
+      "clip": [
+        41.79800033569336,
+        80.29336547851562,
+        418.8737487792969,
+        178.06402587890625
+      ],
+      "clip_area": 36866.94494630268,
+      "page_area": 484704.0,
+      "text_density": 0.04051200851995885,
+      "kind": "embedded_image_with_caption",
+      "xref": 340,
+      "score": -1.5903672783744147,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-26/assets/figure_candidates/siren-unified-multi-granularity-semantic-interaction-for-multi-modal-lifelong-us/06-p7-embedded_image_with_caption.png",
+      "filename": "06-p7-embedded_image_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-26/assets/figure_candidates/siren-unified-multi-granularity-semantic-interaction-for-multi-modal-lifelong-us/contact-sheet.svg"
+}
