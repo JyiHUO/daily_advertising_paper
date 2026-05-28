@@ -1,0 +1,120 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <linearGradient id="rulerGrad" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#EFF6FF"/>
+      <stop offset="1" stop-color="#DCEAFB"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">Uniboost：把混排打分对齐到一把"完播率尺子"</text>
+  <text x="450" y="64" text-anchor="middle" font-size="13" fill="#3D4F65">乘法堆叠 → 加法独立，让每个加权方案都能单独计价</text>
+
+  <!-- LEFT: BEFORE (chaotic multiplication stack) -->
+  <g>
+    <text x="200" y="105" text-anchor="middle" font-size="15" font-weight="600" fill="#B45A3C">改造前 · 乘法耦合</text>
+
+    <g transform="translate(120,125)">
+      <rect x="0" y="0" width="160" height="30" rx="6" fill="#FBE8DD" stroke="#D88A6A"/>
+      <text x="80" y="20" text-anchor="middle" font-size="12" fill="#1E3A5F">原始分 score</text>
+
+      <text x="80" y="50" text-anchor="middle" font-size="15" fill="#B45A3C">×</text>
+
+      <rect x="-10" y="58" width="180" height="28" rx="6" fill="#FBE8DD" stroke="#D88A6A"/>
+      <text x="80" y="76" text-anchor="middle" font-size="12" fill="#1E3A5F">广告 PID 保量</text>
+
+      <text x="80" y="100" text-anchor="middle" font-size="15" fill="#B45A3C">×</text>
+
+      <rect x="-20" y="108" width="200" height="28" rx="6" fill="#FBE8DD" stroke="#D88A6A"/>
+      <text x="80" y="126" text-anchor="middle" font-size="12" fill="#1E3A5F">冷启 Boost</text>
+
+      <text x="80" y="150" text-anchor="middle" font-size="15" fill="#B45A3C">×</text>
+
+      <rect x="-30" y="158" width="220" height="28" rx="6" fill="#FBE8DD" stroke="#D88A6A"/>
+      <text x="80" y="176" text-anchor="middle" font-size="12" fill="#1E3A5F">运营 Plan-A / B / …</text>
+
+      <!-- inflated balloon -->
+      <ellipse cx="80" cy="240" rx="125" ry="38" fill="#F5C6B0" stroke="#B45A3C" stroke-width="1.5"/>
+      <text x="80" y="236" text-anchor="middle" font-size="13" font-weight="600" fill="#7A2F18">分数膨胀</text>
+      <text x="80" y="254" text-anchor="middle" font-size="11" fill="#7A2F18">物理含义丢失 · 互相干扰</text>
+    </g>
+  </g>
+
+  <!-- Center arrow -->
+  <g transform="translate(320,290)">
+    <path d="M0,0 L180,0" stroke="#4B8BDA" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+    <text x="90" y="-10" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">价值对齐 + 线性加法</text>
+  </g>
+
+  <!-- RIGHT: AFTER -->
+  <g>
+    <text x="680" y="105" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F">改造后 · 加法独立</text>
+
+    <!-- Ruler: aligned anchor metric -->
+    <g transform="translate(540,125)">
+      <rect x="0" y="0" width="280" height="44" rx="8" fill="url(#rulerGrad)" stroke="#4B8BDA"/>
+      <g stroke="#4B8BDA" stroke-width="1.5">
+        <line x1="20" y1="28" x2="20" y2="40"/>
+        <line x1="60" y1="32" x2="60" y2="40"/>
+        <line x1="100" y1="28" x2="100" y2="40"/>
+        <line x1="140" y1="32" x2="140" y2="40"/>
+        <line x1="180" y1="28" x2="180" y2="40"/>
+        <line x1="220" y1="32" x2="220" y2="40"/>
+        <line x1="260" y1="28" x2="260" y2="40"/>
+      </g>
+      <text x="140" y="18" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">锚指标尺子 · 有效完播率</text>
+    </g>
+
+    <!-- Base score arrow on ruler -->
+    <g transform="translate(540,185)">
+      <circle cx="20" cy="10" r="6" fill="#4B8BDA"/>
+      <text x="34" y="14" font-size="12" fill="#3D4F65">对齐基分 y（语义=完播率期望）</text>
+    </g>
+
+    <!-- additive boost bars, each independent -->
+    <g transform="translate(540,215)">
+      <rect x="0" y="0" width="80" height="22" rx="4" fill="#DCEAFB" stroke="#4B8BDA"/>
+      <text x="40" y="15" text-anchor="middle" font-size="11" fill="#1E3A5F">+ 广告保量</text>
+      <text x="90" y="15" font-size="11" fill="#3D4F65">b_ad</text>
+
+      <rect x="0" y="32" width="55" height="22" rx="4" fill="#DCEAFB" stroke="#4B8BDA"/>
+      <text x="27" y="47" text-anchor="middle" font-size="11" fill="#1E3A5F">+ 冷启</text>
+      <text x="90" y="47" font-size="11" fill="#3D4F65">w·y</text>
+
+      <rect x="0" y="64" width="100" height="22" rx="4" fill="#DCEAFB" stroke="#4B8BDA"/>
+      <text x="50" y="79" text-anchor="middle" font-size="11" fill="#1E3A5F">+ Plan-B</text>
+      <text x="110" y="79" font-size="11" fill="#3D4F65">w·y + b</text>
+
+      <rect x="0" y="96" width="40" height="22" rx="4" fill="#F1E0E0" stroke="#C97A7A" stroke-dasharray="3,2"/>
+      <text x="20" y="111" text-anchor="middle" font-size="10" fill="#7A2F18">Plan-A</text>
+      <text x="50" y="111" font-size="10" fill="#7A2F18" font-style="italic">ROI 低 · 下线</text>
+    </g>
+
+    <!-- Final score = sum -->
+    <g transform="translate(540,355)">
+      <line x1="0" y1="0" x2="280" y2="0" stroke="#1E3A5F" stroke-width="1"/>
+      <rect x="0" y="10" width="280" height="34" rx="6" fill="#1E3A5F"/>
+      <text x="140" y="32" text-anchor="middle" font-size="13" font-weight="600" fill="#FFFFFF">r = y + Σ 各方案独立加分</text>
+    </g>
+
+    <text x="680" y="420" text-anchor="middle" font-size="11" fill="#3D4F65">每条加分独立可归因 → 方案级 ROI 看板</text>
+  </g>
+
+  <!-- Bottom takeaways -->
+  <g transform="translate(0,500)">
+    <rect x="80" y="0" width="220" height="60" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="190" y="24" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">后验价值对齐</text>
+    <text x="190" y="44" text-anchor="middle" font-size="11" fill="#3D4F65">分数 = 期望有效完播率</text>
+
+    <rect x="340" y="0" width="220" height="60" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="450" y="24" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">独立线性 Boost</text>
+    <text x="450" y="44" text-anchor="middle" font-size="11" fill="#3D4F65">PID / 冷启 / 运营 同一公式</text>
+
+    <rect x="600" y="0" width="220" height="60" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="710" y="24" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">方案级 ROI 归因</text>
+    <text x="710" y="44" text-anchor="middle" font-size="11" fill="#3D4F65">加权分 ↓92%，曝光占比稳定</text>
+  </g>
+</svg>

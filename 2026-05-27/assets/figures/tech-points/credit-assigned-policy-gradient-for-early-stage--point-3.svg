@@ -1,0 +1,56 @@
+<svg height="600" width="960" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="40" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#1E3A5F">从组合爆炸到一次 softmax</text>
+
+  <!-- Left: V-PG heavy -->
+  <g>
+    <rect x="60" y="90" width="280" height="320" rx="14" fill="#FEF3EC" stroke="#E89B6C" stroke-width="2"/>
+    <text x="200" y="125" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#1E3A5F">V-PG：联合分布</text>
+    <text x="200" y="148" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#3D4F65">从亿级里抽 K 个组合</text>
+
+    <!-- many dots representing combinations -->
+    <g fill="#E89B6C" opacity="0.75">
+      <circle cx="100" cy="195" r="6"/><circle cx="135" cy="210" r="6"/>
+      <circle cx="170" cy="190" r="6"/><circle cx="205" cy="220" r="6"/>
+      <circle cx="240" cy="200" r="6"/><circle cx="275" cy="215" r="6"/>
+      <circle cx="305" cy="195" r="6"/>
+      <circle cx="115" cy="245" r="6"/><circle cx="155" cy="260" r="6"/>
+      <circle cx="195" cy="248" r="6"/><circle cx="235" cy="265" r="6"/>
+      <circle cx="275" cy="250" r="6"/><circle cx="310" cy="265" r="6"/>
+      <circle cx="95" cy="295" r="6"/><circle cx="140" cy="305" r="6"/>
+      <circle cx="180" cy="295" r="6"/><circle cx="225" cy="310" r="6"/>
+      <circle cx="265" cy="298" r="6"/><circle cx="300" cy="312" r="6"/>
+    </g>
+
+    <text x="200" y="360" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#3D4F65">方差爆炸 · 信用错配</text>
+    <text x="200" y="388" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#B5562B">复杂度 O(K)</text>
+  </g>
+
+  <!-- Arrow -->
+  <line x1="350" y1="250" x2="460" y2="250" stroke="#4B8BDA" stroke-width="3" marker-end="url(#arr)"/>
+  <text x="405" y="240" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1E3A5F">单 logit 简化</text>
+
+  <!-- Right: TOP1-PG -->
+  <g>
+    <rect x="465" y="90" width="280" height="320" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="605" y="125" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#1E3A5F">TOP1-PG：单点概率</text>
+    <text x="605" y="148" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#3D4F65">只问：目标 a 是 top-1 吗？</text>
+
+    <!-- single highlighted item -->
+    <circle cx="605" cy="235" r="42" fill="#4B8BDA"/>
+    <text x="605" y="245" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="26" font-weight="bold" fill="#FFFFFF">a</text>
+
+    <!-- softmax label -->
+    <text x="605" y="312" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#1E3A5F">∇ log softmax(a) · r</text>
+
+    <text x="605" y="360" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#3D4F65">一次 softmax · 信用清晰</text>
+    <text x="605" y="388" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1E5FA8">复杂度 O(L)</text>
+  </g>
+
+  <text x="400" y="465" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#3D4F65">把组合空间求联合换成单物品分类概率 —— 比 V-PG 还便宜</text>
+</svg>

@@ -1,0 +1,56 @@
+<svg height="600" width="900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C75D5D"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="36" text-anchor="middle" font-family="Helvetica,Arial" font-size="19" font-weight="bold" fill="#1E3A5F">CA-PG：奖励只归功于真正赚钱的那个物品</text>
+
+  <!-- LEFT: V-PG -->
+  <text x="200" y="78" text-anchor="middle" font-family="Helvetica,Arial" font-size="15" font-weight="bold" fill="#3D4F65">V-PG · 整桶受奖</text>
+
+  <ellipse cx="200" cy="200" rx="130" ry="80" fill="#FFF4E6" stroke="#E0A24E" stroke-width="2"/>
+  <text x="200" y="130" text-anchor="middle" font-family="Helvetica,Arial" font-size="12" fill="#8A6A2E">候选集 {A,B,C}</text>
+
+  <circle cx="160" cy="200" r="22" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="160" y="205" text-anchor="middle" font-family="Helvetica,Arial" font-size="14" font-weight="bold" fill="#1E3A5F">A</text>
+  <circle cx="215" cy="220" r="22" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="215" y="225" text-anchor="middle" font-family="Helvetica,Arial" font-size="14" fill="#3D4F65">B</text>
+  <circle cx="255" cy="180" r="22" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="255" y="185" text-anchor="middle" font-family="Helvetica,Arial" font-size="14" fill="#3D4F65">C</text>
+
+  <path d="M 200 285 L 200 335" stroke="#C75D5D" stroke-width="2.5" marker-end="url(#arrRed)"/>
+  <text x="200" y="365" text-anchor="middle" font-family="Helvetica,Arial" font-size="13" fill="#C75D5D">A, B, C 全部被推高</text>
+  <text x="200" y="388" text-anchor="middle" font-family="Helvetica,Arial" font-size="12" fill="#8A4040">动作空间 |A|^K · 方差爆炸</text>
+
+  <!-- Divider -->
+  <line x1="400" y1="70" x2="400" y2="430" stroke="#CBD5E0" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- RIGHT: CA-PG -->
+  <text x="600" y="78" text-anchor="middle" font-family="Helvetica,Arial" font-size="15" font-weight="bold" fill="#3D4F65">CA-PG · 边际归因</text>
+
+  <!-- spotlight on A -->
+  <circle cx="600" cy="200" r="95" fill="#FEF9E7" stroke="#F0C419" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+  <circle cx="540" cy="160" r="14" fill="#F4F6F8" stroke="#9AA5B1" stroke-width="1.5" opacity="0.6"/>
+  <text x="540" y="164" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#7A8694">B</text>
+  <circle cx="670" cy="170" r="14" fill="#F4F6F8" stroke="#9AA5B1" stroke-width="1.5" opacity="0.6"/>
+  <text x="670" y="174" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#7A8694">C</text>
+  <circle cx="555" cy="245" r="14" fill="#F4F6F8" stroke="#9AA5B1" stroke-width="1.5" opacity="0.6"/>
+  <text x="555" y="249" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#7A8694">D</text>
+
+  <circle cx="600" cy="200" r="32" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="3"/>
+  <text x="600" y="207" text-anchor="middle" font-family="Helvetica,Arial" font-size="20" font-weight="bold" fill="#1E3A5F">A</text>
+
+  <text x="600" y="310" text-anchor="middle" font-family="Helvetica,Arial" font-size="12" fill="#8A6A2E">P(A 出现在任意候选集)</text>
+
+  <path d="M 600 320 L 600 355" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="600" y="378" text-anchor="middle" font-family="Helvetica,Arial" font-size="13" font-weight="bold" fill="#1E3A5F">仅 A 的边际概率被推高</text>
+  <text x="600" y="398" text-anchor="middle" font-family="Helvetica,Arial" font-size="12" fill="#3D4F65">动作空间 |A| · 方差骤降</text>
+
+  <text x="400" y="460" text-anchor="middle" font-family="Helvetica,Arial" font-size="12" fill="#3D4F65" font-style="italic">精排不"反向最优"，CA-PG 仍能学到正确的 top-K 排序</text>
+</svg>

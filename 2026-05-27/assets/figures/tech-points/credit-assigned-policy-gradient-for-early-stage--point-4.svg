@@ -1,0 +1,41 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="42" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="22" font-weight="700" fill="#1E3A5F">精排只要"比掷骰子强一点"</text>
+  <text x="400" y="68" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" fill="#3D4F65">召回端的学习方向就仍然正确</text>
+
+  <!-- 天平 -->
+  <polygon points="380,470 420,470 410,200 390,200" fill="#1E3A5F"/>
+  <line x1="180" y1="200" x2="620" y2="200" stroke="#1E3A5F" stroke-width="4"/>
+
+  <!-- 左盘：选中top-K的概率比 -->
+  <line x1="180" y1="200" x2="180" y2="240" stroke="#1E3A5F" stroke-width="2"/>
+  <rect x="80" y="240" width="200" height="110" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="180" y="272" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">精排的选择倾向</text>
+  <text x="180" y="305" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">P(选好) / P(选坏)</text>
+  <text x="180" y="332" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65">均匀 / 最优 / ε-greedy / softmax</text>
+
+  <!-- 右盘：奖励比 -->
+  <line x1="620" y1="200" x2="620" y2="240" stroke="#1E3A5F" stroke-width="2"/>
+  <rect x="520" y="240" width="200" height="110" rx="10" fill="#FFF4E6" stroke="#E8A04B" stroke-width="2"/>
+  <text x="620" y="272" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">真实奖励比</text>
+  <text x="620" y="305" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="20" font-weight="700" fill="#1E3A5F">r(好) / r(坏)</text>
+  <text x="620" y="332" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65">top-K 与尾部的差距</text>
+
+  <!-- 不等式 -->
+  <text x="400" y="300" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="44" font-weight="700" fill="#C25A4B">&lt;</text>
+  <text x="400" y="328" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65">充分条件</text>
+
+  <!-- 底部结论 -->
+  <rect x="140" y="400" width="520" height="90" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="400" y="428" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="700" fill="#1E3A5F">CA-PG：放弃无偏，换来低方差</text>
+  <text x="400" y="454" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65">允许 top-K 内乱序，允许小幅跨界错排</text>
+  <text x="400" y="476" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65">但 top-K 与尾部的边界仍能划对</text>
+
+  <line x1="180" y1="350" x2="270" y2="400" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="620" y1="350" x2="530" y2="400" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+</svg>

@@ -1,0 +1,13 @@
+{
+  "report_date": "2026-05-27",
+  "provider": "litellm-opus",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 2641,
+  "focus_titles": [
+    "Uniboost: Global Coordination with Value Alignment for Fair and Efficient Traffic Allocation",
+    "Credit-assigned Policy Gradient for Early Stage Retrieval in Two-stage Ranking"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Steve"
+}

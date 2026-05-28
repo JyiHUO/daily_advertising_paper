@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-27/downloaded_pdfs/credit-assigned-policy-gradient-for-early-stage-retrieval-in-two-stage-ranking.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-27/assets/figure_candidates/credit-assigned-policy-gradient-for-early-stage-retrieval-in-two-stage-ranking",
+  "candidates": [
+    {
+      "id": "page-0-block-8",
+      "page_index": 0,
+      "caption": "Figure 1. Illustration of the two-stage ranking problem in a large-scale recommender system.",
+      "clip": [
+        290.1199951171875,
+        187.15985107421875,
+        558.7568359375,
+        332.3009948730469
+      ],
+      "clip_area": 38990.25834316388,
+      "page_area": 484704.0,
+      "text_density": 0.06528008873578507,
+      "kind": "image_block_with_caption",
+      "score": 59.43322509270182,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-27/assets/figure_candidates/credit-assigned-policy-gradient-for-early-stage-retrieval-in-two-stage-ranking/01-p1-image_block_with_caption.png",
+      "filename": "01-p1-image_block_with_caption.png"
+    },
+    {
+      "id": "page-0-embedded-0-0",
+      "page_index": 0,
+      "caption": "Figure 1. Illustration of the two-stage ranking problem in a large-scale recommender system.",
+      "clip": [
+        300.1199951171875,
+        193.15966796875,
+        548.7574462890625,
+        326.3009948730469
+      ],
+      "clip_area": 33103.92016712576,
+      "page_area": 484704.0,
+      "text_density": 0.034375919959771996,
+      "kind": "embedded_image_with_caption",
+      "xref": 542,
+      "score": 58.367821335190285,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-27/assets/figure_candidates/credit-assigned-policy-gradient-for-early-stage-retrieval-in-two-stage-ranking/02-p1-embedded_image_with_caption.png",
+      "filename": "02-p1-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-3-block-2",
+      "page_index": 3,
+      "caption": "Figure 2. (Left) Credit-assignment issue of V-PG and (Right) Concept of the “credit-assigned” PG.",
+      "clip": [
+        57.74199676513672,
+        49.05900573730469,
+        539.1250610351562,
+        199.364013671875
+      ],
+      "clip_area": 72354.28529467306,
+      "page_area": 484704.0,
+      "text_density": 0.07673572474040583,
+      "kind": "image_block_with_caption",
+      "score": 30.803936503274144,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-27/assets/figure_candidates/credit-assigned-policy-gradient-for-early-stage-retrieval-in-two-stage-ranking/03-p4-image_block_with_caption.png",
+      "filename": "03-p4-image_block_with_caption.png"
+    },
+    {
+      "id": "page-3-embedded-0-0",
+      "page_index": 3,
+      "caption": "Figure 2. (Left) Credit-assignment issue of V-PG and (Right) Concept of the “credit-assigned” PG.",
+      "clip": [
+        67.74199676513672,
+        55.05873107910156,
+        529.1261596679688,
+        193.364013671875
+      ],
+      "clip_area": 63811.8670341064,
+      "page_area": 484704.0,
+      "text_density": 0.03335346384758511,
+      "kind": "embedded_image_with_caption",
+      "xref": 639,
+      "score": 29.709020744823405,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-27/assets/figure_candidates/credit-assigned-policy-gradient-for-early-stage-retrieval-in-two-stage-ranking/04-p4-embedded_image_with_caption.png",
+      "filename": "04-p4-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-7-embedded-1-0",
+      "page_index": 7,
+      "caption": "第 8 页内嵌图片候选",
+      "clip": [
+        55.59100341796875,
+        70.06255340576172,
+        541.2791137695312,
+        181.73098754882812
+      ],
+      "clip_area": 54236.030764863826,
+      "page_area": 484704.0,
+      "text_density": 0.04295190038946873,
+      "kind": "embedded_image",
+      "xref": 646,
+      "score": 5.602622564054043,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-27/assets/figure_candidates/credit-assigned-policy-gradient-for-early-stage-retrieval-in-two-stage-ranking/05-p8-embedded_image.png",
+      "filename": "05-p8-embedded_image.png"
+    },
+    {
+      "id": "page-0-region-upper-right",
+      "page_index": 0,
+      "caption": "第 1 页右上区域主图候选",
+      "clip": [
+        318.24,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 82992.7296,
+      "kind": "layout_region_right_top",
+      "page_area": 484704.0,
+      "text_density": 0.27668426020738596,
+      "score": -10.878914172443157,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-27/assets/figure_candidates/credit-assigned-policy-gradient-for-early-stage-retrieval-in-two-stage-ranking/06-p1-layout_region_right_top.png",
+      "filename": "06-p1-layout_region_right_top.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-27/assets/figure_candidates/credit-assigned-policy-gradient-for-early-stage-retrieval-in-two-stage-ranking/contact-sheet.svg"
+}

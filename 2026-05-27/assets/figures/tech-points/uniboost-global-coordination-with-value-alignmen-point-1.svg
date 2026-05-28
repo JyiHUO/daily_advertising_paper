@@ -1,0 +1,63 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="-apple-system,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="44" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">后验价值对齐：给打分装上一把尺子</text>
+
+  <!-- Left: raw score, no unit -->
+  <g>
+    <rect x="50" y="110" width="220" height="180" rx="14" fill="#F4F1EC" stroke="#C9A77A" stroke-width="1.5"/>
+    <text x="160" y="142" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F">原始混排分</text>
+    <text x="160" y="164" text-anchor="middle" font-size="12" fill="#3D4F65">无量纲偏好值</text>
+
+    <text x="95" y="215" font-size="22" fill="#3D4F65" opacity="0.7">0.8</text>
+    <text x="175" y="205" font-size="16" fill="#3D4F65" opacity="0.7">0.5</text>
+    <text x="215" y="245" font-size="20" fill="#3D4F65" opacity="0.7">0.3</text>
+
+    <text x="160" y="278" text-anchor="middle" font-size="11" fill="#8C6A3F" font-style="italic">谁大谁小有意义，数值含义未知</text>
+  </g>
+
+  <!-- Middle: ruler / anchor -->
+  <g>
+    <text x="400" y="135" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">锚指标 · 有效完播率</text>
+
+    <rect x="320" y="175" width="160" height="40" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <g stroke="#1E3A5F" stroke-width="1.5">
+      <line x1="340" y1="175" x2="340" y2="195"/>
+      <line x1="360" y1="175" x2="360" y2="189"/>
+      <line x1="380" y1="175" x2="380" y2="189"/>
+      <line x1="400" y1="175" x2="400" y2="195"/>
+      <line x1="420" y1="175" x2="420" y2="189"/>
+      <line x1="440" y1="175" x2="440" y2="189"/>
+      <line x1="460" y1="175" x2="460" y2="195"/>
+    </g>
+    <text x="400" y="240" text-anchor="middle" font-size="12" fill="#3D4F65">× (锚均值 / 分均值)</text>
+    <text x="400" y="258" text-anchor="middle" font-size="11" fill="#3D4F65" opacity="0.8">线性缩放，不改排序</text>
+  </g>
+
+  <!-- Arrows: raw -> ruler -> aligned -->
+  <line x1="275" y1="195" x2="316" y2="195" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="482" y1="195" x2="525" y2="195" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Right: aligned score with physical meaning -->
+  <g>
+    <rect x="530" y="110" width="220" height="180" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="640" y="142" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F">对齐后的分</text>
+    <text x="640" y="164" text-anchor="middle" font-size="12" fill="#3D4F65">期望有效完播率</text>
+
+    <text x="640" y="220" text-anchor="middle" font-size="34" font-weight="700" fill="#1E3A5F">0.48</text>
+    <text x="640" y="246" text-anchor="middle" font-size="11" fill="#3D4F65">高于平均 0.30</text>
+
+    <text x="640" y="278" text-anchor="middle" font-size="11" fill="#1E3A5F" font-style="italic">分数可读出业务含义</text>
+  </g>
+
+  <!-- bottom takeaway -->
+  <g>
+    <rect x="140" y="370" width="520" height="80" rx="10" fill="#FAF6F0" stroke="#C9A77A" stroke-width="1"/>
+    <text x="400" y="400" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">后续 boost 都在“完播率空间”里加减</text>
+    <text x="400" y="424" text-anchor="middle" font-size="12" fill="#3D4F65">广告保量 · 冷启加权 · 运营活动 → 量纲统一，可独立归因</text>
+  </g>
+</svg>

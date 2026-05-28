@@ -1,0 +1,47 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#FAF7F2"/>
+  
+  <text x="300" y="38" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="bold" fill="#1E3A5F">每个方案，一个独立计价器</text>
+  
+  <!-- Plan A meter (low ROI) -->
+  <g>
+    <rect x="60" y="90" width="180" height="220" rx="10" fill="#FDECEC" stroke="#D9534F" stroke-width="2"/>
+    <text x="150" y="118" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">Plan-A</text>
+    
+    <text x="80" y="148" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">流量消耗 123</text>
+    <rect x="80" y="155" width="140" height="14" fill="#F5D5D5"/>
+    <rect x="80" y="155" width="135" height="14" fill="#D9534F"/>
+    
+    <text x="80" y="195" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">业务收益 低</text>
+    <rect x="80" y="202" width="140" height="14" fill="#F5D5D5"/>
+    <rect x="80" y="202" width="26" height="14" fill="#D9534F"/>
+    
+    <text x="150" y="252" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65">ROI</text>
+    <text x="150" y="288" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="30" font-weight="bold" fill="#D9534F">0.72</text>
+  </g>
+  
+  <!-- Plan B meter (high ROI) -->
+  <g>
+    <rect x="360" y="90" width="180" height="220" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="450" y="118" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">Plan-B</text>
+    
+    <text x="380" y="148" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">流量消耗 96</text>
+    <rect x="380" y="155" width="140" height="14" fill="#D6E5F5"/>
+    <rect x="380" y="155" width="105" height="14" fill="#4B8BDA"/>
+    
+    <text x="380" y="195" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">业务收益 高</text>
+    <rect x="380" y="202" width="140" height="14" fill="#D6E5F5"/>
+    <rect x="380" y="202" width="138" height="14" fill="#4B8BDA"/>
+    
+    <text x="450" y="252" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65">ROI</text>
+    <text x="450" y="288" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="30" font-weight="bold" fill="#4B8BDA">3.27</text>
+  </g>
+  
+  <!-- VS -->
+  <circle cx="300" cy="200" r="22" fill="#1E3A5F"/>
+  <text x="300" y="205" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" fill="#FAF7F2">VS</text>
+  
+  <!-- Bottom: action -->
+  <text x="150" y="340" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#D9534F">↓ 下线低效方案 Plan-A</text>
+  <text x="300" y="375" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" fill="#1E3A5F">VV +0.95%   时长 +3.49%   Valued Score +4.13%</text>
+</svg>

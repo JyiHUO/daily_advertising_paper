@@ -1,0 +1,18 @@
+{
+  "date": "2026-05-27",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 7,
+  "supplementary_count": 1,
+  "focus_titles": [
+    "Uniboost: Global Coordination with Value Alignment for Fair and Efficient Traffic Allocation",
+    "Credit-assigned Policy Gradient for Early Stage Retrieval in Two-stage Ranking"
+  ],
+  "focus_status": {
+    "Uniboost: Global Coordination with Value Alignment for Fair and Efficient Traffic Allocation": "completed",
+    "Credit-assigned Policy Gradient for Early Stage Retrieval in Two-stage Ranking": "completed"
+  }
+}

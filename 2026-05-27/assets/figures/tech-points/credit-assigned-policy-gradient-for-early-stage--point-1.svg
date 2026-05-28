@@ -1,0 +1,49 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" font-family="-apple-system,Segoe UI,Helvetica,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="34" text-anchor="middle" font-size="17" font-weight="600" fill="#1E3A5F">V-PG 的信用分配病</text>
+  <text x="300" y="55" text-anchor="middle" font-size="12" fill="#3D4F65">奖励被记到整桶头上，谁有功无法区分</text>
+
+  <!-- Bucket / candidate set -->
+  <ellipse cx="170" cy="220" rx="115" ry="95" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+  <text x="170" y="138" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">候选集 A_K</text>
+
+  <!-- Items inside bucket -->
+  <circle cx="130" cy="210" r="22" fill="#FFFFFF" stroke="#2E7D5B" stroke-width="2"/>
+  <text x="130" y="215" text-anchor="middle" font-size="13" font-weight="600" fill="#2E7D5B">A +</text>
+
+  <circle cx="210" cy="210" r="22" fill="#FFFFFF" stroke="#C75D5D" stroke-width="2"/>
+  <text x="210" y="215" text-anchor="middle" font-size="13" font-weight="600" fill="#C75D5D">B −</text>
+
+  <circle cx="170" cy="270" r="22" fill="#FFFFFF" stroke="#8A93A6" stroke-width="2"/>
+  <text x="170" y="275" text-anchor="middle" font-size="13" font-weight="600" fill="#8A93A6">C ?</text>
+
+  <!-- Reward source -->
+  <text x="500" y="120" text-anchor="middle" font-size="22" fill="#E0A52A">★</text>
+  <text x="500" y="145" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">奖励 r (A 被点击)</text>
+
+  <!-- Arrow: reward applied to whole bucket edge -->
+  <path d="M460 130 Q360 165 287 197" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <text x="375" y="155" font-size="11" fill="#1E3A5F">联合概率 ↑↑</text>
+
+  <!-- Splash arrows: reward leaks to all three -->
+  <path d="M155 165 L138 188" stroke="#4B8BDA" stroke-width="1.4" stroke-dasharray="3,3" fill="none" marker-end="url(#ar)"/>
+  <path d="M190 165 L205 188" stroke="#4B8BDA" stroke-width="1.4" stroke-dasharray="3,3" fill="none" marker-end="url(#ar)"/>
+  <path d="M170 245 L170 250" stroke="#4B8BDA" stroke-width="1.4" stroke-dasharray="3,3" fill="none" marker-end="url(#ar)"/>
+
+  <!-- Divider -->
+  <line x1="60" y1="345" x2="540" y2="345" stroke="#D4DDE8" stroke-width="1"/>
+
+  <!-- Bottom comparison -->
+  <text x="160" y="375" text-anchor="middle" font-size="12" font-weight="600" fill="#2E7D5B">直觉应该</text>
+  <text x="160" y="397" text-anchor="middle" font-size="12" fill="#3D4F65">A↑   B↓   C 不变</text>
+
+  <text x="440" y="375" text-anchor="middle" font-size="12" font-weight="600" fill="#C75D5D">V-PG 实际</text>
+  <text x="440" y="397" text-anchor="middle" font-size="12" fill="#3D4F65">A↑   B↑   C↑  (一起推)</text>
+
+  <text x="300" y="425" text-anchor="middle" font-size="11" fill="#8A93A6">|A|^K 动作空间 → 方差爆炸 (K=20 时梯度溢出)</text>
+</svg>
