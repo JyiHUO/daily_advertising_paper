@@ -1,0 +1,44 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- LLM source -->
+  <ellipse cx="300" cy="70" rx="115" ry="44" fill="#FEF3E2" stroke="#D9A05B" stroke-width="2"/>
+  <text x="300" y="65" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">LLM 预测输出</text>
+  <text x="300" y="88" text-anchor="middle" font-size="12" fill="#3D4F65">广告主列表 · 兴趣标签</text>
+
+  <!-- Two arrows -->
+  <path d="M240,108 Q175,155 165,200" stroke="#4B8BDA" stroke-width="2.2" fill="none" marker-end="url(#a)"/>
+  <path d="M360,108 Q425,155 435,200" stroke="#4B8BDA" stroke-width="2.2" fill="none" marker-end="url(#a)"/>
+
+  <text x="120" y="160" font-size="12" fill="#4B8BDA" font-style="italic">作为定向条件</text>
+  <text x="420" y="160" font-size="12" fill="#4B8BDA" font-style="italic">作为先验特征</text>
+
+  <!-- Retrieval side -->
+  <rect x="55" y="205" width="220" height="160" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="165" y="230" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">召回侧 · 新增通道</text>
+
+  <!-- funnel -->
+  <path d="M95,250 L235,250 L185,295 L185,330 L145,330 L145,295 Z" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.8"/>
+  <text x="165" y="273" text-anchor="middle" font-size="11" fill="#3D4F65">在预测广告主中</text>
+  <text x="165" y="316" text-anchor="middle" font-size="11" fill="#3D4F65">双塔检索</text>
+
+  <text x="165" y="355" text-anchor="middle" font-size="11" fill="#1E3A5F" font-weight="600">补充候选 (US Shopping)</text>
+
+  <!-- Ranking side -->
+  <rect x="325" y="205" width="220" height="160" rx="10" fill="#F0F7F0" stroke="#5A9E6F" stroke-width="2"/>
+  <text x="435" y="230" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">排序侧 · CVR 模型</text>
+
+  <!-- CVR model box -->
+  <rect x="365" y="252" width="140" height="68" rx="6" fill="#FFFFFF" stroke="#5A9E6F" stroke-width="1.8"/>
+  <text x="435" y="275" text-anchor="middle" font-size="12" fill="#3D4F65">ctcvr / vtcvr</text>
+  <text x="435" y="295" text-anchor="middle" font-size="11" fill="#3D4F65">+ LLM 广告主/兴趣特征</text>
+
+  <text x="435" y="355" text-anchor="middle" font-size="11" fill="#1E3A5F" font-weight="600">提升转化预估精度</text>
+
+  <!-- Bottom result -->
+  <text x="300" y="398" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="700">同一份 LLM 输出，双路赋能 · RoAS +4.94% ~ +6.69%</text>
+</svg>

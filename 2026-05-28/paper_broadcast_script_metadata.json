@@ -1,0 +1,13 @@
+{
+  "report_date": "2026-05-28",
+  "provider": "litellm-opus",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 3068,
+  "focus_titles": [
+    "Constrained Auto-Bidding via Generative Response Modeling",
+    "Fine-Tuned LLM as a Complementary Predictor Improving Ads System"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Steve"
+}

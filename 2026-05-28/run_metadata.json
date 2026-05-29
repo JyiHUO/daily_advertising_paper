@@ -1,0 +1,18 @@
+{
+  "date": "2026-05-28",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 16,
+  "supplementary_count": 3,
+  "focus_titles": [
+    "Constrained Auto-Bidding via Generative Response Modeling",
+    "Fine-Tuned LLM as a Complementary Predictor Improving Ads System"
+  ],
+  "focus_status": {
+    "Constrained Auto-Bidding via Generative Response Modeling": "completed",
+    "Fine-Tuned LLM as a Complementary Predictor Improving Ads System": "completed"
+  }
+}

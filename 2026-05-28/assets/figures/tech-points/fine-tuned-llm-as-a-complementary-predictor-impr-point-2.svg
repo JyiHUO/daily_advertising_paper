@@ -1,0 +1,60 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="42" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">SFT + GRPO 两段训练</text>
+  <text x="400" y="66" text-anchor="middle" font-size="13" fill="#3D4F65">先学准 Top-1，再撑起整条排名</text>
+
+  <!-- Stage 1 SFT -->
+  <g>
+    <rect x="70" y="120" width="290" height="280" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="215" y="156" text-anchor="middle" font-size="17" font-weight="700" fill="#1E3A5F">Stage 1 · SFT</text>
+    <text x="215" y="178" text-anchor="middle" font-size="12" fill="#3D4F65">最该押的那一个要准</text>
+
+    <!-- bullseye -->
+    <circle cx="215" cy="278" r="68" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="1.5"/>
+    <circle cx="215" cy="278" r="44" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="1.5"/>
+    <circle cx="215" cy="278" r="20" fill="#E07A5F" stroke="#1E3A5F" stroke-width="1.5"/>
+    <circle cx="215" cy="278" r="5" fill="#1E3A5F"/>
+
+    <text x="215" y="372" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">predict 1 advertiser</text>
+    <text x="215" y="390" text-anchor="middle" font-size="11" fill="#3D4F65">Recall@1 ↑</text>
+  </g>
+
+  <!-- arrow between stages -->
+  <line x1="368" y1="260" x2="432" y2="260" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+
+  <!-- Stage 2 GRPO -->
+  <g>
+    <rect x="440" y="120" width="290" height="280" rx="14" fill="#FFF4EC" stroke="#E07A5F" stroke-width="1.8"/>
+    <text x="585" y="156" text-anchor="middle" font-size="17" font-weight="700" fill="#1E3A5F">Stage 2 · GRPO</text>
+    <text x="585" y="178" text-anchor="middle" font-size="12" fill="#3D4F65">整条排名要顺，格式要严</text>
+
+    <!-- ranking list of 20 -->
+    <g font-size="10" fill="#3D4F65">
+      <rect x="500" y="200" width="170" height="18" rx="3" fill="#FFFFFF" stroke="#E07A5F"/>
+      <text x="510" y="213">1.</text>
+      <rect x="500" y="222" width="170" height="18" rx="3" fill="#E07A5F" stroke="#1E3A5F" stroke-width="1.5"/>
+      <text x="510" y="235" fill="#FFFFFF" font-weight="700">2.  ★ ground truth</text>
+      <rect x="500" y="244" width="170" height="18" rx="3" fill="#FFFFFF" stroke="#E07A5F"/>
+      <text x="510" y="257">3.</text>
+      <rect x="500" y="266" width="170" height="18" rx="3" fill="#FFFFFF" stroke="#E07A5F"/>
+      <text x="510" y="279">4.</text>
+      <text x="585" y="300" text-anchor="middle" fill="#3D4F65">⋮</text>
+      <rect x="500" y="308" width="170" height="18" rx="3" fill="#FFFFFF" stroke="#E07A5F"/>
+      <text x="510" y="321">20.</text>
+    </g>
+
+    <!-- reward annotation -->
+    <text x="585" y="358" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">reward: rank-bonus + format</text>
+    <text x="585" y="378" text-anchor="middle" font-size="11" fill="#3D4F65">20 ads + 5 interests · XML</text>
+    <text x="585" y="394" text-anchor="middle" font-size="11" fill="#3D4F65">Recall@20 ↑↑</text>
+  </g>
+
+  <!-- bottom outcome -->
+  <text x="400" y="448" text-anchor="middle" font-size="12" fill="#3D4F65">SFT 把靶心打准  →  GRPO 把整张榜拉对</text>
+  <text x="400" y="470" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">Recall@1: 0.117 → 0.214      Recall@20: 0.422 → 0.683</text>
+</svg>

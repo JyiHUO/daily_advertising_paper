@@ -1,0 +1,105 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E07A5F"/>
+    </marker>
+    <marker id="ahd" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1E3A5F"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="620" fill="#FAFBFD"/>
+
+  <!-- Title -->
+  <text x="450" y="48" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">不学动作，学环境的回应</text>
+  <text x="450" y="74" text-anchor="middle" font-size="13" fill="#3D4F65">约束自动出价 · 生成式响应建模 + 解析控制器</text>
+
+  <!-- LEFT: Old way -->
+  <g opacity="0.92">
+    <rect x="50" y="110" width="240" height="120" rx="10" fill="#F3F1EE" stroke="#C9B8A8" stroke-width="1.2"/>
+    <text x="170" y="138" text-anchor="middle" font-size="14" font-weight="600" fill="#7A5A3F">旧路线：把约束塞进 reward</text>
+    <text x="170" y="162" text-anchor="middle" font-size="12" fill="#3D4F65">RL / Decision Transformer</text>
+    <text x="170" y="184" text-anchor="middle" font-size="12" fill="#3D4F65">直接学「该出多少 α」</text>
+    <text x="170" y="210" text-anchor="middle" font-size="11.5" fill="#A0522D">⚠ 违规不可见 · 漂移即崩</text>
+  </g>
+
+  <!-- Arrow turn -->
+  <path d="M 290 170 Q 360 170 395 198" stroke="#4B8BDA" stroke-width="1.6" fill="none" stroke-dasharray="4,3" marker-end="url(#ah)"/>
+  <text x="345" y="160" font-size="11" fill="#4B8BDA">视角翻转</text>
+
+  <!-- CENTER: GRM curves (the hero) -->
+  <g>
+    <rect x="310" y="200" width="510" height="250" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="565" y="226" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">GRM：预测响应曲线 f(α)</text>
+
+    <!-- Axes -->
+    <line x1="350" y1="420" x2="780" y2="420" stroke="#3D4F65" stroke-width="1.2"/>
+    <line x1="350" y1="420" x2="350" y2="248" stroke="#3D4F65" stroke-width="1.2"/>
+    <text x="785" y="424" font-size="11" fill="#3D4F65">α</text>
+    <text x="345" y="244" text-anchor="end" font-size="11" fill="#3D4F65">累计</text>
+
+    <!-- Cost curve (orange) -->
+    <path d="M 350 410 Q 460 380 560 320 T 780 270" stroke="#E07A5F" stroke-width="2.6" fill="none"/>
+    <text x="700" y="262" font-size="12" fill="#E07A5F" font-weight="600">成本曲线</text>
+
+    <!-- Value curve (blue) -->
+    <path d="M 350 410 Q 470 390 580 350 T 780 320" stroke="#2C6BB8" stroke-width="2.6" fill="none"/>
+    <text x="700" y="338" font-size="12" fill="#2C6BB8" font-weight="600">价值曲线</text>
+
+    <!-- alpha_B marker -->
+    <line x1="640" y1="420" x2="640" y2="295" stroke="#4B8BDA" stroke-width="1" stroke-dasharray="3,3"/>
+    <circle cx="640" cy="295" r="4" fill="#E07A5F"/>
+    <text x="640" y="437" text-anchor="middle" font-size="11" fill="#1E3A5F" font-weight="600">α_B</text>
+
+    <!-- alpha_C marker -->
+    <line x1="540" y1="420" x2="540" y2="332" stroke="#4B8BDA" stroke-width="1" stroke-dasharray="3,3"/>
+    <circle cx="540" cy="332" r="4" fill="#2C6BB8"/>
+    <text x="540" y="437" text-anchor="middle" font-size="11" fill="#1E3A5F" font-weight="600">α_C</text>
+
+    <!-- min pacing -->
+    <rect x="498" y="455" width="134" height="22" rx="11" fill="#1E3A5F"/>
+    <text x="565" y="470" text-anchor="middle" font-size="11.5" fill="#fff" font-weight="600">α* = min(α_B, α_C)</text>
+  </g>
+
+  <!-- History feeding GRM -->
+  <g>
+    <rect x="50" y="270" width="220" height="80" rx="10" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.2"/>
+    <text x="160" y="296" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">历史轨迹</text>
+    <text x="160" y="316" text-anchor="middle" font-size="11.5" fill="#3D4F65">预算消耗 · CPA · 流量</text>
+    <text x="160" y="334" text-anchor="middle" font-size="11.5" fill="#3D4F65">Causal Transformer 编码</text>
+  </g>
+  <path d="M 272 310 L 308 310" stroke="#4B8BDA" stroke-width="1.8" fill="none" marker-end="url(#ah)"/>
+
+  <!-- Constraints feeding controller -->
+  <g>
+    <rect x="50" y="380" width="220" height="80" rx="10" fill="#FFFFFF" stroke="#E07A5F" stroke-width="1.2"/>
+    <text x="160" y="406" text-anchor="middle" font-size="13" font-weight="600" fill="#7A3F2A">约束</text>
+    <text x="160" y="426" text-anchor="middle" font-size="11.5" fill="#3D4F65">剩余预算 B_t</text>
+    <text x="160" y="444" text-anchor="middle" font-size="11.5" fill="#3D4F65">CPA 松弛 Δ_t</text>
+  </g>
+  <path d="M 272 420 L 308 420" stroke="#E07A5F" stroke-width="1.8" fill="none" marker-end="url(#ahr)"/>
+
+  <!-- Rolling replan note -->
+  <text x="565" y="495" font-size="11" fill="#3D4F65" text-anchor="middle">每 tick 滚动重规划：1D 求根 → 解析最优</text>
+
+  <!-- Bottom results bar -->
+  <g>
+    <rect x="50" y="525" width="800" height="80" rx="10" fill="#F4F8FE" stroke="#4B8BDA" stroke-width="1"/>
+    <text x="80" y="552" font-size="13" font-weight="700" fill="#1E3A5F">AuctionNet 漂移测试</text>
+
+    <text x="280" y="552" font-size="12" fill="#3D4F65" font-weight="600">竞争加剧</text>
+    <text x="280" y="572" font-size="11.5" fill="#A0522D">DT −22.6%</text>
+    <text x="280" y="590" font-size="11.5" fill="#2C6BB8" font-weight="700">GRM −7.2%</text>
+
+    <text x="430" y="552" font-size="12" fill="#3D4F65" font-weight="600">CPA 收紧</text>
+    <text x="430" y="572" font-size="11.5" fill="#A0522D">DT −13.9%</text>
+    <text x="430" y="590" font-size="11.5" fill="#2C6BB8" font-weight="700">GRM −5.0%</text>
+
+    <text x="600" y="552" font-size="12" fill="#3D4F65" font-weight="600">理论保证</text>
+    <text x="600" y="572" font-size="11.5" fill="#3D4F65">单 α 与全局最优差距</text>
+    <text x="600" y="590" font-size="11.5" fill="#3D4F65">受效率离散度 bound</text>
+  </g>
+</svg>

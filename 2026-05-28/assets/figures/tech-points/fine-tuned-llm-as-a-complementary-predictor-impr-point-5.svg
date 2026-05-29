@@ -1,0 +1,56 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="32" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">只对值得的用户、用关键的特征</text>
+
+  <!-- Funnel: user selection -->
+  <g>
+    <text x="120" y="74" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">用户漏斗</text>
+    <polygon points="40,90 200,90 160,170 80,170" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="120" y="118" text-anchor="middle" font-size="11" fill="#3D4F65">全量用户</text>
+    <text x="120" y="152" text-anchor="middle" font-size="11" font-weight="600" fill="#1E3A5F">90天活跃转化</text>
+  </g>
+
+  <!-- LLM core -->
+  <g>
+    <circle cx="300" cy="220" r="60" fill="#FFF4E6" stroke="#E89B4C" stroke-width="2.5"/>
+    <text x="300" y="215" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">LLM</text>
+    <text x="300" y="234" text-anchor="middle" font-size="11" fill="#3D4F65">广告主预测</text>
+  </g>
+
+  <!-- Feature weights (right) -->
+  <g>
+    <text x="480" y="74" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">特征重要性</text>
+
+    <rect x="370" y="88" width="220" height="34" rx="4" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="382" y="110" font-size="12" font-weight="700" fill="#1E3A5F">历史转化广告主</text>
+    <text x="582" y="110" text-anchor="end" font-size="11" font-weight="700" fill="#C0392B">R@5 −0.10</text>
+
+    <rect x="380" y="132" width="200" height="28" rx="4" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="392" y="151" font-size="11" fill="#3D4F65">站外 URL / 搜索</text>
+
+    <rect x="395" y="170" width="170" height="24" rx="4" fill="#F4F6F8" stroke="#9CB0C2" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="407" y="187" font-size="10.5" fill="#7A8A9C">用户画像（弱）</text>
+
+    <rect x="405" y="204" width="150" height="24" rx="4" fill="#F4F6F8" stroke="#9CB0C2" stroke-width="1" stroke-dasharray="3,2"/>
+    <text x="417" y="221" font-size="10.5" fill="#7A8A9C">top 类目（去掉略涨）</text>
+  </g>
+
+  <!-- Arrows from funnel to LLM -->
+  <line x1="170" y1="170" x2="245" y2="208" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#ar)"/>
+
+  <!-- Arrow from features to LLM -->
+  <line x1="370" y1="120" x2="358" y2="195" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#ar)"/>
+
+  <!-- bottom: efficiency callout -->
+  <g>
+    <line x1="60" y1="310" x2="540" y2="310" stroke="#D6DEE8" stroke-width="1"/>
+    <text x="300" y="338" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">增量重算 + Prefix Cache</text>
+    <text x="300" y="362" text-anchor="middle" font-size="11" fill="#3D4F65">只算有新行为的用户 · 模板 KV 复用</text>
+    <text x="300" y="384" text-anchor="middle" font-size="11" fill="#3D4F65">日推断量大幅下降</text>
+  </g>
+</svg>

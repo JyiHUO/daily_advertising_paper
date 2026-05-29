@@ -1,0 +1,55 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arGray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9AA8BC"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="42" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">预测越准 → 出价越接近最优</text>
+  <text x="400" y="66" text-anchor="middle" font-size="13" fill="#3D4F65">控制器是解析确定的，唯一误差来自预测</text>
+
+  <!-- Top-left: low loss -->
+  <g>
+    <rect x="70" y="110" width="240" height="140" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="190" y="142" text-anchor="middle" font-size="15" fill="#1E3A5F" font-weight="600">低验证 Loss</text>
+    <text x="190" y="184" text-anchor="middle" font-size="30" fill="#1E3A5F" font-weight="700">0.96</text>
+    <text x="190" y="218" text-anchor="middle" font-size="12" fill="#3D4F65">流量 + 成本 + 价值 加权 MSE</text>
+  </g>
+
+  <!-- Top-right: high score -->
+  <g>
+    <rect x="490" y="110" width="240" height="140" rx="14" fill="#FFF4E6" stroke="#E89B4A" stroke-width="2"/>
+    <text x="610" y="142" text-anchor="middle" font-size="15" fill="#1E3A5F" font-weight="600">高在线分数</text>
+    <text x="610" y="184" text-anchor="middle" font-size="30" fill="#B8541C" font-weight="700">33.88</text>
+    <text x="610" y="218" text-anchor="middle" font-size="12" fill="#3D4F65">AuctionNet</text>
+  </g>
+
+  <line x1="312" y1="180" x2="488" y2="180" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+
+  <!-- Bottom-left: high loss -->
+  <g>
+    <rect x="70" y="310" width="240" height="120" rx="14" fill="#F4F6F9" stroke="#9AA8BC" stroke-width="2" stroke-dasharray="5 4"/>
+    <text x="190" y="342" text-anchor="middle" font-size="15" fill="#1E3A5F" font-weight="600">高验证 Loss</text>
+    <text x="190" y="380" text-anchor="middle" font-size="26" fill="#3D4F65" font-weight="700">1.04+</text>
+    <text x="190" y="410" text-anchor="middle" font-size="12" fill="#3D4F65">约束违反量随误差线性增长</text>
+  </g>
+
+  <!-- Bottom-right: low score -->
+  <g>
+    <rect x="490" y="310" width="240" height="120" rx="14" fill="#F4F6F9" stroke="#9AA8BC" stroke-width="2" stroke-dasharray="5 4"/>
+    <text x="610" y="342" text-anchor="middle" font-size="15" fill="#1E3A5F" font-weight="600">分数下跌</text>
+    <text x="610" y="380" text-anchor="middle" font-size="26" fill="#3D4F65" font-weight="700">&lt; 30</text>
+    <text x="610" y="410" text-anchor="middle" font-size="12" fill="#3D4F65">出价偏离最优</text>
+  </g>
+
+  <line x1="312" y1="370" x2="488" y2="370" stroke="#9AA8BC" stroke-width="2.5" stroke-dasharray="5 4" marker-end="url(#arGray)"/>
+
+  <!-- Correlation badge -->
+  <g>
+    <rect x="300" y="452" width="200" height="32" rx="16" fill="#1E3A5F"/>
+    <text x="400" y="473" text-anchor="middle" font-size="13" fill="#FFFFFF" font-weight="600">Loss 与分数 相关系数 ρ = −0.78</text>
+  </g>
+</svg>

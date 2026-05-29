@@ -1,0 +1,42 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="34" text-anchor="middle" font-family="sans-serif" font-size="17" font-weight="700" fill="#1E3A5F">单一 α 近似：T 条曲线 → 1 条曲线</text>
+
+  <!-- Left: T curves -->
+  <g>
+    <rect x="40" y="70" width="200" height="180" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="140" y="92" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">每个 tick 一条曲线</text>
+    <path d="M60 220 Q 110 150 220 135" fill="none" stroke="#9BB8D9" stroke-width="1.6"/>
+    <path d="M60 230 Q 110 175 220 150" fill="none" stroke="#9BB8D9" stroke-width="1.6"/>
+    <path d="M60 210 Q 110 140 220 125" fill="none" stroke="#9BB8D9" stroke-width="1.6"/>
+    <path d="M60 235 Q 110 185 220 165" fill="none" stroke="#9BB8D9" stroke-width="1.6"/>
+    <text x="140" y="244" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#3D4F65">难学 · 高维</text>
+  </g>
+
+  <!-- Arrow with bound condition -->
+  <line x1="248" y1="160" x2="352" y2="160" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#ar)"/>
+  <text x="300" y="144" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="600" fill="#C97B3F">效率离散度小</text>
+  <text x="300" y="180" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#3D4F65">gap ≤ C · σ²</text>
+
+  <!-- Right: single curve -->
+  <g>
+    <rect x="360" y="70" width="200" height="180" rx="8" fill="#FFF4E6" stroke="#C97B3F" stroke-width="1.5"/>
+    <text x="460" y="92" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">一个 α 覆盖全程</text>
+    <path d="M380 220 Q 430 145 540 130" fill="none" stroke="#C97B3F" stroke-width="3"/>
+    <circle cx="465" cy="158" r="5" fill="#C97B3F"/>
+    <text x="465" y="182" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="600" fill="#1E3A5F">α*</text>
+    <text x="460" y="244" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#3D4F65">几乎最优 · 易预测</text>
+  </g>
+
+  <!-- Bottom takeaway -->
+  <g>
+    <rect x="100" y="300" width="400" height="68" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.2"/>
+    <text x="300" y="326" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="600" fill="#1E3A5F">各时段边际效率相近</text>
+    <text x="300" y="350" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#3D4F65">→ 单 α 解的损失被方差平方所控</text>
+  </g>
+</svg>

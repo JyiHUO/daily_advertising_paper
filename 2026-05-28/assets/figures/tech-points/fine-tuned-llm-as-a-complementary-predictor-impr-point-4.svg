@@ -1,0 +1,73 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">让 LLM "看见" 图像内容</text>
+  <text x="360" y="60" text-anchor="middle" font-size="13" fill="#3D4F65">把视觉语义压成离散 token，加入词表</text>
+
+  <g>
+    <rect x="50" y="110" width="160" height="120" rx="8" fill="#FFF4E6" stroke="#E8A867" stroke-width="2"/>
+    <circle cx="90" cy="145" r="10" fill="#E8A867"/>
+    <polygon points="115,200 145,160 175,185 195,170 195,210 115,210" fill="#E8A867" opacity="0.7"/>
+    <text x="130" y="100" text-anchor="middle" font-size="13" fill="#3D4F65">Pin 图像</text>
+    <text x="130" y="252" text-anchor="middle" font-size="11" fill="#7A6244">文本只记到 "dining table"</text>
+  </g>
+
+  <path d="M 215 170 L 266 170" stroke="#4B8BDA" stroke-width="2.2" fill="none" marker-end="url(#arr)"/>
+  <text x="240" y="160" text-anchor="middle" font-size="10" fill="#4B8BDA">RQ-VAE</text>
+
+  <g>
+    <rect x="270" y="125" width="180" height="90" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="360" y="148" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">Semantic ID (5层 × 2048码)</text>
+    <g font-family="monospace" font-size="13" fill="#1E3A5F">
+      <rect x="285" y="165" width="36" height="22" rx="4" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="303" y="181" text-anchor="middle">⟨s₁⟩</text>
+      <rect x="326" y="165" width="36" height="22" rx="4" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="344" y="181" text-anchor="middle">⟨s₂⟩</text>
+      <rect x="367" y="165" width="36" height="22" rx="4" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="385" y="181" text-anchor="middle">⟨s₃⟩</text>
+      <rect x="408" y="165" width="36" height="22" rx="4" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="426" y="181" text-anchor="middle">⟨s₄⟩</text>
+    </g>
+    <text x="360" y="207" text-anchor="middle" font-size="10" fill="#3D4F65">作为新 token 加入 LLM 词表</text>
+  </g>
+
+  <path d="M 455 170 L 506 170" stroke="#4B8BDA" stroke-width="2.2" fill="none" marker-end="url(#arr)"/>
+  <text x="480" y="160" text-anchor="middle" font-size="10" fill="#4B8BDA">扩词表</text>
+
+  <g>
+    <rect x="510" y="110" width="160" height="120" rx="60" fill="#E8F0FE" stroke="#1E3A5F" stroke-width="2"/>
+    <text x="590" y="160" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">LLM</text>
+    <text x="590" y="184" text-anchor="middle" font-size="11" fill="#3D4F65">读到视觉风格而非仅文本</text>
+  </g>
+
+  <text x="60" y="300" font-size="13" font-weight="600" fill="#1E3A5F">三阶段训练 · 防遗忘</text>
+
+  <g>
+    <rect x="60" y="315" width="180" height="90" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="150" y="340" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">① 对齐</text>
+    <text x="150" y="362" text-anchor="middle" font-size="10" fill="#3D4F65">只更新 SID embedding，冻结主体</text>
+    <text x="150" y="382" text-anchor="middle" font-size="10" fill="#3D4F65">SID ↔ 文本 token 空间对齐</text>
+  </g>
+
+  <path d="M 244 360 L 266 360" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <g>
+    <rect x="270" y="315" width="180" height="90" rx="6" fill="#FFF4E6" stroke="#E8A867" stroke-width="1.5"/>
+    <text x="360" y="340" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">② CPT</text>
+    <text x="360" y="362" text-anchor="middle" font-size="10" fill="#3D4F65">解冻全模型，混入通用语料</text>
+    <text x="360" y="382" text-anchor="middle" font-size="10" fill="#3D4F65">不忘世界知识</text>
+  </g>
+
+  <path d="M 454 360 L 476 360" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <g>
+    <rect x="480" y="315" width="180" height="90" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="570" y="340" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">③ SFT</text>
+    <text x="570" y="362" text-anchor="middle" font-size="10" fill="#3D4F65">prompt 拼最近 SID 序列</text>
+    <text x="570" y="382" text-anchor="middle" font-size="10" fill="#2E7D5B" font-weight="600">Recall@5: 0.461 → 0.515</text>
+  </g>
+</svg>
