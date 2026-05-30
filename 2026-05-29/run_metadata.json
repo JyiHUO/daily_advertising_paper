@@ -1,0 +1,18 @@
+{
+  "date": "2026-05-29",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 15,
+  "supplementary_count": 1,
+  "focus_titles": [
+    "On the Practice of Scaling Search Conversion Rate Prediction",
+    "Rec-Distill: An Industrial Distillation Pipeline for Large-Scale Recommendation Models"
+  ],
+  "focus_status": {
+    "On the Practice of Scaling Search Conversion Rate Prediction": "completed",
+    "Rec-Distill: An Industrial Distillation Pipeline for Large-Scale Recommendation Models": "completed"
+  }
+}

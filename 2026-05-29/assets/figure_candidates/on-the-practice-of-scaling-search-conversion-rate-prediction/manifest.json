@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-29/downloaded_pdfs/on-the-practice-of-scaling-search-conversion-rate-prediction.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-29/assets/figure_candidates/on-the-practice-of-scaling-search-conversion-rate-prediction",
+  "candidates": [
+    {
+      "id": "page-2-drawing-caption-28",
+      "page_index": 2,
+      "caption": "Figure 1: Overall CVR Model Framework.",
+      "clip": [
+        129.5989990234375,
+        56.00030517578125,
+        482.4057312011719,
+        340.67999267578125
+      ],
+      "clip_area": 100436.91026425362,
+      "page_area": 484704.0,
+      "text_density": 0.1625768731087886,
+      "kind": "drawing_cluster_with_caption",
+      "score": 48.1613532830755,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-29/assets/figure_candidates/on-the-practice-of-scaling-search-conversion-rate-prediction/01-p3-drawing_cluster_with_caption.png",
+      "filename": "01-p3-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-8-drawing-caption-10",
+      "page_index": 8,
+      "caption": "Figure 3: Impact of data scaling for a MaskNet model on mAP.",
+      "clip": [
+        129.5989990234375,
+        55.99858093261719,
+        482.4018859863281,
+        246.4000244140625
+      ],
+      "clip_area": 67174.17894215556,
+      "page_area": 484704.0,
+      "text_density": 0.10907911769431493,
+      "kind": "drawing_cluster_with_caption",
+      "score": 34.00163270436505,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-29/assets/figure_candidates/on-the-practice-of-scaling-search-conversion-rate-prediction/02-p9-drawing_cluster_with_caption.png",
+      "filename": "02-p9-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-8-drawing-caption-35",
+      "page_index": 8,
+      "caption": "Figure 4: FLOPs vs mAP gain for models and scaling factors.",
+      "clip": [
+        129.5989990234375,
+        515.8786010742188,
+        482.4018859863281,
+        706.280029296875
+      ],
+      "clip_area": 67174.17355881073,
+      "page_area": 484704.0,
+      "text_density": 0.20165781471911615,
+      "kind": "drawing_cluster_with_caption",
+      "score": 25.446910823062037,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-29/assets/figure_candidates/on-the-practice-of-scaling-search-conversion-rate-prediction/03-p9-drawing_cluster_with_caption.png",
+      "filename": "03-p9-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-8-block-10",
+      "page_index": 8,
+      "caption": "Figure 3: Impact of data scaling for a MaskNet model on mAP.",
+      "clip": [
+        149.4780029296875,
+        18.0,
+        462.52263793945315,
+        229.45545959472656
+      ],
+      "clip_area": 66194.99716965343,
+      "page_area": 484704.0,
+      "text_density": 0.0760711276326979,
+      "kind": "captioned_figure",
+      "score": 23.735499968551704,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-29/assets/figure_candidates/on-the-practice-of-scaling-search-conversion-rate-prediction/04-p9-captioned_figure.png",
+      "filename": "04-p9-captioned_figure.png"
+    },
+    {
+      "id": "page-6-drawing-caption-24",
+      "page_index": 6,
+      "caption": "Figure 2: FLOPs vs mAP gain against DCNv2 for different scaling factors.",
+      "clip": [
+        90.0,
+        211.72547912597656,
+        521.9941711425781,
+        331.52099609375
+      ],
+      "clip_area": 51750.96505908994,
+      "page_area": 484704.0,
+      "text_density": 0.1829222346892123,
+      "kind": "drawing_cluster_with_caption",
+      "score": 21.39967664152604,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-29/assets/figure_candidates/on-the-practice-of-scaling-search-conversion-rate-prediction/05-p7-drawing_cluster_with_caption.png",
+      "filename": "05-p7-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-9-drawing-caption-25",
+      "page_index": 9,
+      "caption": "Figure 5: Performance gains over different durations of training data with (a) different model backbones and with (b) different item embedding dimension sizes for MaskNet.",
+      "clip": [
+        122.45832824707031,
+        305.34521484375,
+        315.972900390625,
+        470.3181457519531
+      ],
+      "clip_area": 31924.666139969137,
+      "page_area": 484704.0,
+      "text_density": 0.19548834097696458,
+      "kind": "drawing_cluster_with_caption",
+      "score": 8.42541805404845,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-29/assets/figure_candidates/on-the-practice-of-scaling-search-conversion-rate-prediction/06-p10-drawing_cluster_with_caption.png",
+      "filename": "06-p10-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-29/assets/figure_candidates/on-the-practice-of-scaling-search-conversion-rate-prediction/contact-sheet.svg"
+}

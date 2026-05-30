@@ -1,0 +1,13 @@
+{
+  "report_date": "2026-05-29",
+  "provider": "litellm-opus",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 2701,
+  "focus_titles": [
+    "On the Practice of Scaling Search Conversion Rate Prediction",
+    "Rec-Distill: An Industrial Distillation Pipeline for Large-Scale Recommendation Models"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Steve"
+}

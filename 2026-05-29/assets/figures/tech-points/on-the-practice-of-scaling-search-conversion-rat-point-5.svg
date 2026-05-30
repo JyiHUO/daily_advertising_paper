@@ -1,0 +1,62 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="40" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="20" font-weight="bold" fill="#1E3A5F">Embedding 扩维 &gt; 扩词表</text>
+  <text x="400" y="64" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#3D4F65">头部集中，扩维让高频 item 表达更精细</text>
+
+  <!-- Left: 扩词表 -->
+  <g>
+    <rect x="60" y="110" width="280" height="320" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="200" y="140" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">扩词表 10×（变宽）</text>
+
+    <g fill="#9BB8D9">
+      <rect x="90" y="180" width="14" height="50"/>
+      <rect x="110" y="180" width="14" height="40"/>
+      <rect x="130" y="180" width="14" height="20"/>
+      <rect x="150" y="180" width="14" height="14"/>
+      <rect x="170" y="180" width="14" height="10"/>
+      <rect x="190" y="180" width="14" height="8"/>
+      <rect x="210" y="180" width="14" height="6"/>
+      <rect x="230" y="180" width="14" height="6"/>
+      <rect x="250" y="180" width="14" height="5"/>
+      <rect x="270" y="180" width="14" height="5"/>
+      <rect x="290" y="180" width="14" height="4"/>
+    </g>
+    <line x1="85" y1="232" x2="315" y2="232" stroke="#3D4F65" stroke-width="1"/>
+    <text x="200" y="252" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">长尾 ID 多，但样本稀少</text>
+
+    <text x="200" y="310" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#3D4F65">mAP 收益</text>
+    <text x="200" y="360" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="34" font-weight="bold" fill="#A0AEC0">+0.02%</text>
+    <text x="200" y="400" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65">边际收益弱</text>
+  </g>
+
+  <!-- Right: 扩维 -->
+  <g>
+    <rect x="460" y="110" width="280" height="320" rx="12" fill="#FFF4E6" stroke="#E8954A" stroke-width="1.5"/>
+    <text x="600" y="140" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">扩维度 8×（变深）</text>
+
+    <g fill="#E8954A">
+      <rect x="510" y="160" width="30" height="70"/>
+      <rect x="555" y="170" width="30" height="60"/>
+      <rect x="600" y="155" width="30" height="75"/>
+      <rect x="645" y="180" width="30" height="50"/>
+      <rect x="690" y="165" width="30" height="65"/>
+    </g>
+    <line x1="500" y1="232" x2="730" y2="232" stroke="#3D4F65" stroke-width="1"/>
+    <text x="600" y="252" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">头部 item 表达更精细</text>
+
+    <text x="600" y="310" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#3D4F65">mAP 收益</text>
+    <text x="600" y="360" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="34" font-weight="bold" fill="#E8954A">+0.10%</text>
+    <text x="600" y="400" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65">性价比更高</text>
+  </g>
+
+  <!-- compare arrow -->
+  <line x1="345" y1="270" x2="455" y2="270" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="400" y="262" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#1E3A5F">优先</text>
+
+  <text x="400" y="470" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65">文本 token 扩维很快饱和（+0.03%）：共享语义被稀释</text>
+</svg>

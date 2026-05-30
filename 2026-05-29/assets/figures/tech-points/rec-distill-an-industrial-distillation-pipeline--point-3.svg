@@ -1,0 +1,60 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="34" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E3A5F">Decoupled Distillation via Shared Logit Cache</text>
+
+  <!-- Teacher -->
+  <circle cx="140" cy="180" r="70" fill="#FFF1E6" stroke="#E8A87C" stroke-width="2"/>
+  <text x="140" y="175" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E3A5F">Teacher</text>
+  <text x="140" y="200" text-anchor="middle" font-size="13" fill="#3D4F65">24B · streaming</text>
+
+  <!-- Cache (central shared store) -->
+  <ellipse cx="400" cy="180" rx="95" ry="55" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <ellipse cx="400" cy="135" rx="95" ry="18" fill="none" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="400" y="180" text-anchor="middle" font-size="17" font-weight="bold" fill="#1E3A5F">Logit Cache</text>
+  <text x="400" y="202" text-anchor="middle" font-size="12" fill="#3D4F65">teacher scores</text>
+
+  <!-- arrow teacher -> cache -->
+  <line x1="212" y1="180" x2="302" y2="180" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="257" y="170" text-anchor="middle" font-size="11" fill="#3D4F65">write once</text>
+
+  <!-- Three students -->
+  <rect x="600" y="60" width="150" height="60" rx="10" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="1.5"/>
+  <text x="675" y="95" text-anchor="middle" font-size="14" fill="#1E3A5F">Student A · CVR</text>
+
+  <rect x="600" y="150" width="150" height="60" rx="10" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="1.5"/>
+  <text x="675" y="185" text-anchor="middle" font-size="14" fill="#1E3A5F">Student B · Rank</text>
+
+  <rect x="600" y="240" width="150" height="60" rx="10" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="1.5"/>
+  <text x="675" y="275" text-anchor="middle" font-size="14" fill="#1E3A5F">Student C · Live</text>
+
+  <!-- arrows cache -> students -->
+  <line x1="478" y1="148" x2="598" y2="95" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="495" y1="180" x2="598" y2="180" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="478" y1="212" x2="598" y2="265" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="540" y="240" font-size="11" fill="#3D4F65">read · reuse</text>
+
+  <!-- Two-phase note bottom-left -->
+  <g transform="translate(140,360)">
+    <rect x="-100" y="0" width="200" height="90" rx="8" fill="#FFF8F0" stroke="#E8A87C" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="0" y="22" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">Two-phase teacher</text>
+    <text x="0" y="48" text-anchor="middle" font-size="12" fill="#3D4F65">1. Batch — fast warm-up</text>
+    <text x="0" y="68" text-anchor="middle" font-size="12" fill="#3D4F65">2. Stream — fresh logits</text>
+  </g>
+
+  <line x1="140" y1="250" x2="140" y2="358" stroke="#E8A87C" stroke-width="1.5" stroke-dasharray="3 3"/>
+
+  <!-- Key insight -->
+  <g transform="translate(520,380)">
+    <rect x="-10" y="-20" width="240" height="90" rx="8" fill="#F4F8FE" stroke="#4B8BDA" stroke-width="1.2" stroke-dasharray="4 3"/>
+    <text x="0" y="0" font-size="13" font-weight="bold" fill="#1E3A5F">Teacher runs once,</text>
+    <text x="0" y="18" font-size="13" font-weight="bold" fill="#1E3A5F">N students benefit.</text>
+    <text x="0" y="40" font-size="11" fill="#3D4F65">No train-time coupling,</text>
+    <text x="0" y="56" font-size="11" fill="#3D4F65">no feature leakage.</text>
+  </g>
+</svg>

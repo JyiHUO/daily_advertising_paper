@@ -1,0 +1,64 @@
+<svg height="600" width="960" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="-apple-system, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="36" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">让 GPU 吃饱</text>
+  <text x="400" y="58" text-anchor="middle" font-size="13" fill="#3D4F65">Hybrid execution + Two-level batching</text>
+
+  <!-- LEFT: 饥饿的GPU -->
+  <g>
+    <text x="180" y="100" text-anchor="middle" font-size="13" font-weight="600" fill="#B8693D">Before · 逐个小请求，GPU 空转</text>
+
+    <g fill="#F5C6A5" stroke="#B8693D" stroke-width="1.2">
+      <circle cx="80" cy="180" r="8"/>
+      <circle cx="105" cy="180" r="8"/>
+      <circle cx="130" cy="180" r="8"/>
+      <circle cx="155" cy="180" r="8"/>
+    </g>
+
+    <rect x="200" y="150" width="110" height="80" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="255" y="185" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">GPU</text>
+    <text x="255" y="208" text-anchor="middle" font-size="11" fill="#B8693D">P99 82ms</text>
+
+    <line x1="168" y1="180" x2="196" y2="180" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ar)"/>
+  </g>
+
+  <!-- divider -->
+  <line x1="400" y1="90" x2="400" y2="260" stroke="#D5DEE8" stroke-width="1" stroke-dasharray="3,4"/>
+
+  <!-- RIGHT: 吃饱的GPU -->
+  <g>
+    <text x="600" y="100" text-anchor="middle" font-size="13" font-weight="600" fill="#2E7D5B">After · 大批量打包，GPU 喂饱</text>
+
+    <rect x="445" y="150" width="80" height="60" rx="6" fill="#D9EAD9" stroke="#2E7D5B" stroke-width="1.5"/>
+    <g fill="#2E7D5B">
+      <circle cx="460" cy="165" r="3"/><circle cx="475" cy="165" r="3"/><circle cx="490" cy="165" r="3"/><circle cx="505" cy="165" r="3"/>
+      <circle cx="460" cy="180" r="3"/><circle cx="475" cy="180" r="3"/><circle cx="490" cy="180" r="3"/><circle cx="505" cy="180" r="3"/>
+      <circle cx="460" cy="195" r="3"/><circle cx="475" cy="195" r="3"/><circle cx="490" cy="195" r="3"/><circle cx="505" cy="195" r="3"/>
+    </g>
+
+    <rect x="560" y="140" width="140" height="100" rx="12" fill="#DCE9F8" stroke="#1E3A5F" stroke-width="2.5"/>
+    <text x="630" y="180" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">GPU</text>
+    <text x="630" y="205" text-anchor="middle" font-size="11" fill="#2E7D5B">P99 32ms · QPS ×4.4</text>
+
+    <line x1="528" y1="180" x2="558" y2="180" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  </g>
+
+  <!-- TWO LEVERS at bottom -->
+  <g transform="translate(0,290)">
+    <rect x="80" y="20" width="280" height="120" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="220" y="50" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">① CPU / GPU 分工</text>
+    <text x="220" y="78" text-anchor="middle" font-size="12" fill="#3D4F65">特征预处理 → CPU</text>
+    <text x="220" y="100" text-anchor="middle" font-size="12" fill="#3D4F65">Backbone 推理 → GPU</text>
+    <text x="220" y="124" text-anchor="middle" font-size="11" fill="#7A8AA0">减少跨设备通信</text>
+
+    <rect x="440" y="20" width="280" height="120" rx="10" fill="#FFF4E8" stroke="#D89556" stroke-width="1.5"/>
+    <text x="580" y="50" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">② 双层动态 batching</text>
+    <text x="580" y="78" text-anchor="middle" font-size="12" fill="#3D4F65">客户端：同请求 ×20 候选</text>
+    <text x="580" y="100" text-anchor="middle" font-size="12" fill="#3D4F65">服务端：10ms 拼跨请求</text>
+    <text x="580" y="124" text-anchor="middle" font-size="11" fill="#7A8AA0">每次推理一大锅</text>
+  </g>
+</svg>

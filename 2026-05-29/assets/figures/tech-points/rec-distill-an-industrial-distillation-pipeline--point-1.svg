@@ -1,0 +1,57 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E89A4F"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">
+    Student Gain  =  Teacher Gain  ×  Transfer Rate
+  </text>
+  <text x="400" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">
+    把蒸馏增益拆成两个独立可优化的量
+  </text>
+
+  <!-- Teacher Gain block -->
+  <g>
+    <rect x="60" y="100" width="280" height="230" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="200" y="128" text-anchor="middle" font-size="17" font-weight="700" fill="#1E3A5F">Teacher Gain Δ</text>
+    <text x="200" y="148" text-anchor="middle" font-size="12" fill="#3D4F65">老师比原学生多考的分 (scaling law)</text>
+
+    <!-- scaling bars -->
+    <rect x="95" y="225" width="50" height="65" fill="#B8D4F0" stroke="#4B8BDA"/>
+    <rect x="175" y="200" width="50" height="90" fill="#7FB0E0" stroke="#4B8BDA"/>
+    <rect x="255" y="170" width="50" height="120" fill="#4B8BDA"/>
+    <text x="120" y="305" text-anchor="middle" font-size="10" fill="#1E3A5F">1B</text>
+    <text x="200" y="305" text-anchor="middle" font-size="10" fill="#1E3A5F">8B</text>
+    <text x="280" y="305" text-anchor="middle" font-size="10" fill="#1E3A5F">24B / 20K</text>
+    <text x="200" y="324" text-anchor="middle" font-size="12" font-style="italic" fill="#3D4F65">scale up — 不计 serving 成本</text>
+  </g>
+
+  <!-- multiply sign -->
+  <text x="400" y="220" text-anchor="middle" font-size="42" font-weight="700" fill="#1E3A5F">×</text>
+
+  <!-- Transfer Rate block -->
+  <g>
+    <rect x="460" y="100" width="280" height="230" rx="14" fill="#FFF4E8" stroke="#E89A4F" stroke-width="2"/>
+    <text x="600" y="128" text-anchor="middle" font-size="17" font-weight="700" fill="#1E3A5F">Transfer Rate η</text>
+    <text x="600" y="148" text-anchor="middle" font-size="12" fill="#3D4F65">学生能"抄"到老师几成 (decoupled tower)</text>
+
+    <!-- funnel -->
+    <polygon points="500,180 700,180 640,250 560,250" fill="#FCE4C4" stroke="#E89A4F" stroke-width="2"/>
+    <text x="600" y="210" text-anchor="middle" font-size="12" fill="#3D4F65">teacher signal</text>
+    <line x1="600" y1="252" x2="600" y2="285" stroke="#E89A4F" stroke-width="2" marker-end="url(#arO)"/>
+    <text x="600" y="310" text-anchor="middle" font-size="14" font-weight="700" fill="#C2691A">η ≈ 64%</text>
+  </g>
+
+  <!-- bottom result -->
+  <rect x="230" y="390" width="340" height="62" rx="10" fill="#1E3A5F"/>
+  <text x="400" y="416" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">Student Δ = 0.69% × 64% ≈ 0.44%</text>
+  <text x="400" y="438" text-anchor="middle" font-size="11" fill="#B8D4F0">Ad CVR · AUC lift</text>
+
+  <line x1="200" y1="332" x2="320" y2="388" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arB)"/>
+  <line x1="600" y1="332" x2="480" y2="388" stroke="#E89A4F" stroke-width="2" marker-end="url(#arO)"/>
+</svg>

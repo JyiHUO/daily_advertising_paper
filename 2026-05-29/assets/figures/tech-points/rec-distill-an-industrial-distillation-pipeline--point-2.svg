@@ -1,0 +1,64 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 460" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E59A52"/>
+    </marker>
+    <marker id="arG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#7FA3C9"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="32" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">解耦双塔学生：学习与答题分离</text>
+  <text x="300" y="52" text-anchor="middle" font-size="12" fill="#3D4F65">共享 backbone · 主塔上线 · 辅塔吃教师信号</text>
+
+  <!-- Online output -->
+  <rect x="80" y="72" width="160" height="36" rx="18" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="1.5"/>
+  <text x="160" y="95" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">线上 CVR 预估</text>
+
+  <!-- Teacher logit -->
+  <rect x="360" y="72" width="160" height="36" rx="18" fill="#FFFFFF" stroke="#E59A52" stroke-width="1.5"/>
+  <text x="440" y="95" text-anchor="middle" font-size="12" fill="#1E3A5F">教师 logit（缓存）</text>
+
+  <!-- Main tower -->
+  <rect x="60" y="135" width="200" height="150" rx="10" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="2"/>
+  <text x="160" y="162" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">主塔 · 答题</text>
+  <text x="160" y="182" text-anchor="middle" font-size="11" fill="#3D4F65">仅 Task Loss（真实标签）</text>
+  <circle cx="160" cy="228" r="24" fill="none" stroke="#1E3A5F" stroke-width="2"/>
+  <circle cx="160" cy="228" r="13" fill="none" stroke="#1E3A5F" stroke-width="2"/>
+  <circle cx="160" cy="228" r="5" fill="#E59A52"/>
+  <text x="160" y="272" text-anchor="middle" font-size="11" font-weight="700" fill="#1E3A5F">用于线上打分</text>
+
+  <!-- Aux tower -->
+  <rect x="340" y="135" width="200" height="150" rx="10" fill="#FDF3E7" stroke="#E59A52" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="440" y="162" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">辅塔 · 学习</text>
+  <text x="440" y="182" text-anchor="middle" font-size="11" fill="#3D4F65">Task Loss + KL(教师)</text>
+  <path d="M412 210 L412 250 L440 244 L468 250 L468 210 L440 216 Z" fill="none" stroke="#E59A52" stroke-width="2"/>
+  <line x1="440" y1="216" x2="440" y2="244" stroke="#E59A52" stroke-width="2"/>
+  <text x="440" y="272" text-anchor="middle" font-size="11" font-weight="700" fill="#E59A52">仅离线训练</text>
+
+  <!-- Shared backbone -->
+  <rect x="180" y="335" width="240" height="60" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="300" y="362" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">共享 Backbone</text>
+  <text x="300" y="382" text-anchor="middle" font-size="11" fill="#3D4F65">特征表示 · 接收两路梯度</text>
+
+  <!-- backbone -> towers (forward) -->
+  <path d="M240 335 L175 285" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <path d="M360 335 L425 285" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- main tower -> online output -->
+  <path d="M160 135 L160 112" fill="none" stroke="#1E3A5F" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- teacher -> aux tower -->
+  <path d="M440 110 L440 133" fill="none" stroke="#E59A52" stroke-width="2" stroke-dasharray="4,3" marker-end="url(#arO)"/>
+
+  <!-- gradient back to backbone -->
+  <path d="M195 285 L255 335" fill="none" stroke="#7FA3C9" stroke-width="1.2" stroke-dasharray="3,3" marker-end="url(#arG)"/>
+  <path d="M405 285 L345 335" fill="none" stroke="#7FA3C9" stroke-width="1.2" stroke-dasharray="3,3" marker-end="url(#arG)"/>
+  <text x="208" y="318" font-size="10" fill="#7FA3C9">梯度</text>
+  <text x="370" y="318" font-size="10" fill="#7FA3C9">梯度</text>
+
+  <text x="300" y="430" text-anchor="middle" font-size="11" fill="#3D4F65">两塔梯度都回传 backbone；教师信号抖动不影响线上主塔打分</text>
+</svg>

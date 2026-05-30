@@ -1,0 +1,53 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L8,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="36" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#1E3A5F">教师吃数据，学生白嫖涨点</text>
+
+  <!-- Teacher -->
+  <g>
+    <ellipse cx="180" cy="240" rx="120" ry="100" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2.5"/>
+    <text x="180" y="222" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" fill="#1E3A5F">Teacher</text>
+    <text x="180" y="250" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#3D4F65">24B · 20K seq · 大数据量</text>
+  </g>
+
+  <!-- Data drops falling into teacher -->
+  <g fill="#E8924A">
+    <circle cx="120" cy="125" r="7"/>
+    <circle cx="160" cy="108" r="9"/>
+    <circle cx="200" cy="120" r="7"/>
+    <circle cx="240" cy="108" r="8"/>
+  </g>
+  <text x="180" y="92" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#3D4F65">海量训练样本</text>
+
+  <!-- Student -->
+  <g>
+    <rect x="560" y="200" width="160" height="120" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2.5"/>
+    <text x="640" y="240" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#1E3A5F">Student</text>
+    <text x="640" y="278" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#3D4F65">线上小模型 · 数据量不变</text>
+  </g>
+
+  <!-- Single drop above student -->
+  <circle cx="640" cy="175" r="7" fill="#E8924A"/>
+
+  <!-- Logit transfer arrow -->
+  <line x1="305" y1="240" x2="555" y2="240" stroke="#4B8BDA" stroke-width="3" marker-end="url(#arrow)"/>
+  <text x="430" y="228" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">logit 蒸馏</text>
+  <text x="430" y="262" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#3D4F65">隐式吸收教师红利</text>
+
+  <!-- Bottom: gain numbers -->
+  <g font-family="Helvetica, Arial, sans-serif">
+    <rect x="100" y="390" width="160" height="70" rx="8" fill="#FFF4E6" stroke="#E8924A" stroke-width="1.5"/>
+    <text x="180" y="414" text-anchor="middle" font-size="13" fill="#3D4F65">教师涨幅</text>
+    <text x="180" y="444" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E3A5F">+0.42% → +0.69%</text>
+
+    <rect x="540" y="390" width="200" height="70" rx="8" fill="#FFF4E6" stroke="#E8924A" stroke-width="1.5"/>
+    <text x="640" y="414" text-anchor="middle" font-size="13" fill="#3D4F65">学生跟涨</text>
+    <text x="640" y="444" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E3A5F">+0.28% → +0.44%</text>
+  </g>
+
+  <line x1="262" y1="425" x2="538" y2="425" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrow)"/>
+</svg>

@@ -1,0 +1,119 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-29/downloaded_pdfs/rec-distill-an-industrial-distillation-pipeline-for-large-scale-recommendation-m.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-29/assets/figure_candidates/rec-distill-an-industrial-distillation-pipeline-for-large-scale-recommendation-m",
+  "candidates": [
+    {
+      "id": "page-3-embedded-0-0",
+      "page_index": 3,
+      "caption": "Figure 1: The overall architecture of the Rec-Distill framework. The left side illustrates teacher scaling to maximize Δ Gain scale . The right side depicts the student model with its decoupled-tower structure, designed to maximize distillation transferability 𝜂 .",
+      "clip": [
+        92.23799896240234,
+        71.68829345703125,
+        519.7518310546875,
+        318.8450012207031
+      ],
+      "clip_area": 105662.91126336041,
+      "page_area": 484704.0,
+      "text_density": 0.04653782749633867,
+      "kind": "embedded_image_with_caption",
+      "xref": 315,
+      "score": 86.17403234737067,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-29/assets/figure_candidates/rec-distill-an-industrial-distillation-pipeline-for-large-scale-recommendation-m/01-p4-embedded_image_with_caption.png",
+      "filename": "01-p4-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-3-block-2",
+      "page_index": 3,
+      "caption": "Figure 1: The overall architecture of the Rec-Distill framework. The left side illustrates teacher scaling to maximize Δ Gain scale . The right side depicts the student model with its decoupled-tower structure, designed to maximize distillation transferability 𝜂 .",
+      "clip": [
+        82.23799896240234,
+        65.68829345703125,
+        529.7518310546875,
+        324.8450012207031
+      ],
+      "clip_area": 115976.21140374127,
+      "page_area": 484704.0,
+      "text_density": 0.08084490700534276,
+      "kind": "image_block_with_caption",
+      "score": 85.94930557967943,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-29/assets/figure_candidates/rec-distill-an-industrial-distillation-pipeline-for-large-scale-recommendation-m/02-p4-image_block_with_caption.png",
+      "filename": "02-p4-image_block_with_caption.png"
+    },
+    {
+      "id": "page-5-block-2",
+      "page_index": 5,
+      "caption": "Figure 2: The hybrid batch-streaming distillation pipeline. Batch distillation enables fast initial convergence, while streaming distillation ensures continuous adaptation to real-time data distribution shifts.",
+      "clip": [
+        82.23799896240234,
+        65.68528747558594,
+        529.7561645507812,
+        340.0740051269531
+      ],
+      "clip_area": 122793.93558148749,
+      "page_area": 484704.0,
+      "text_density": 0.0748042009440485,
+      "kind": "image_block_with_caption",
+      "score": 47.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-29/assets/figure_candidates/rec-distill-an-industrial-distillation-pipeline-for-large-scale-recommendation-m/03-p6-image_block_with_caption.png",
+      "filename": "03-p6-image_block_with_caption.png"
+    },
+    {
+      "id": "page-5-embedded-0-0",
+      "page_index": 5,
+      "caption": "Figure 2: The hybrid batch-streaming distillation pipeline. Batch distillation enables fast initial convergence, while streaming distillation ensures continuous adaptation to real-time data distribution shifts.",
+      "clip": [
+        92.23799896240234,
+        71.68528747558594,
+        519.7561645507812,
+        334.0740051269531
+      ],
+      "clip_area": 112175.9432413996,
+      "page_area": 484704.0,
+      "text_density": 0.04220097259190806,
+      "kind": "embedded_image_with_caption",
+      "xref": 319,
+      "score": 46.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-29/assets/figure_candidates/rec-distill-an-industrial-distillation-pipeline-for-large-scale-recommendation-m/04-p6-embedded_image_with_caption.png",
+      "filename": "04-p6-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-7-embedded-0-0",
+      "page_index": 7,
+      "caption": "Figure 3: Distillation transferability as a function of student model capacity. Smaller students still benefit from distilla- tion, but transferability drops as the teacher-student capacity gap increases.",
+      "clip": [
+        329.97900390625,
+        71.68740844726562,
+        546.168701171875,
+        238.0830078125
+      ],
+      "clip_area": 35973.01425310224,
+      "page_area": 484704.0,
+      "text_density": 0.0664850541527104,
+      "kind": "embedded_image_with_caption",
+      "xref": 320,
+      "score": 35.3997001583678,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-29/assets/figure_candidates/rec-distill-an-industrial-distillation-pipeline-for-large-scale-recommendation-m/05-p8-embedded_image_with_caption.png",
+      "filename": "05-p8-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-8-embedded-0-0",
+      "page_index": 8,
+      "caption": "Figure 4: Student scaling trend before and after distillation. Distillation raises the overall AUC curve while preserving the relative scaling behavior of the Base model.",
+      "clip": [
+        65.822998046875,
+        71.68728637695312,
+        282.0126953125,
+        237.97198486328125
+      ],
+      "clip_area": 35949.03862566501,
+      "page_area": 484704.0,
+      "text_density": 0.06695746985079513,
+      "kind": "embedded_image_with_caption",
+      "xref": 321,
+      "score": 32.39943376250739,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-29/assets/figure_candidates/rec-distill-an-industrial-distillation-pipeline-for-large-scale-recommendation-m/06-p9-embedded_image_with_caption.png",
+      "filename": "06-p9-embedded_image_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-05-29/assets/figure_candidates/rec-distill-an-industrial-distillation-pipeline-for-large-scale-recommendation-m/contact-sheet.svg"
+}
