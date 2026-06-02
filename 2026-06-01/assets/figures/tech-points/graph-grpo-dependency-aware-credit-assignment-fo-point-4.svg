@@ -1,0 +1,53 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="38" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="bold" fill="#1E3A5F">推理段随机抽查 · 决策端始终压住</text>
+
+  <g font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1E3A5F">
+    <rect x="40" y="170" width="110" height="60" rx="8" fill="#FFE8D6" stroke="#E89B5A" stroke-width="2"/>
+    <text x="95" y="195" text-anchor="middle" font-weight="bold">初步标签</text>
+    <text x="95" y="215" text-anchor="middle" font-size="11" fill="#3D4F65">全监督</text>
+
+    <rect x="170" y="170" width="260" height="60" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="5 4"/>
+    <text x="300" y="195" text-anchor="middle" font-weight="bold">推理过程</text>
+    <text x="300" y="215" text-anchor="middle" font-size="11" fill="#3D4F65">伯努利随机 mask</text>
+
+    <g>
+      <circle cx="195" cy="158" r="4" fill="#4B8BDA"/>
+      <circle cx="215" cy="158" r="4" fill="#C9D6E5" opacity="0.6"/>
+      <circle cx="235" cy="158" r="4" fill="#4B8BDA"/>
+      <circle cx="255" cy="158" r="4" fill="#4B8BDA"/>
+      <circle cx="275" cy="158" r="4" fill="#C9D6E5" opacity="0.6"/>
+      <circle cx="295" cy="158" r="4" fill="#4B8BDA"/>
+      <circle cx="315" cy="158" r="4" fill="#C9D6E5" opacity="0.6"/>
+      <circle cx="335" cy="158" r="4" fill="#4B8BDA"/>
+      <circle cx="355" cy="158" r="4" fill="#4B8BDA"/>
+      <circle cx="375" cy="158" r="4" fill="#C9D6E5" opacity="0.6"/>
+      <circle cx="395" cy="158" r="4" fill="#4B8BDA"/>
+      <circle cx="415" cy="158" r="4" fill="#4B8BDA"/>
+    </g>
+
+    <rect x="450" y="170" width="110" height="60" rx="8" fill="#FFE8D6" stroke="#E89B5A" stroke-width="2"/>
+    <text x="505" y="195" text-anchor="middle" font-weight="bold">最终决策</text>
+    <text x="505" y="215" text-anchor="middle" font-size="11" fill="#3D4F65">全监督</text>
+  </g>
+
+  <line x1="150" y1="200" x2="168" y2="200" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="430" y1="200" x2="448" y2="200" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <g font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#3D4F65">
+    <circle cx="160" cy="290" r="5" fill="#4B8BDA"/>
+    <text x="172" y="294">参与 loss</text>
+    <circle cx="260" cy="290" r="5" fill="#C9D6E5"/>
+    <text x="272" y="294">被 mask</text>
+    <rect x="350" y="285" width="14" height="10" fill="#FFE8D6" stroke="#E89B5A"/>
+    <text x="370" y="294">锁定全监督</text>
+  </g>
+
+  <text x="300" y="360" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#1E3A5F">先学会"拍板"，再学"解释"</text>
+  <text x="300" y="382" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#3D4F65">避免冗长推理稀释决策梯度</text>
+</svg>

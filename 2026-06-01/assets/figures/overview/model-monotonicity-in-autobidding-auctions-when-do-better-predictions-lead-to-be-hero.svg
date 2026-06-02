@@ -1,0 +1,88 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="620" fill="#FAFBFD"/>
+
+  <!-- Title -->
+  <text x="450" y="48" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">更准的预测模型 = 平台收入更高？</text>
+  <text x="450" y="74" text-anchor="middle" font-size="14" fill="#3D4F65">自动出价拍卖中的模型单调性</text>
+
+  <!-- LEFT: Coarse model -->
+  <g transform="translate(80,140)">
+    <text x="110" y="0" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">粗模型 M_B</text>
+    <rect x="10" y="20" width="200" height="90" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5" rx="6"/>
+    <circle cx="55" cy="50" r="6" fill="#4B8BDA"/>
+    <circle cx="80" cy="50" r="6" fill="#4B8BDA"/>
+    <circle cx="55" cy="80" r="6" fill="#4B8BDA"/>
+    <circle cx="80" cy="80" r="6" fill="#4B8BDA"/>
+    <text x="155" y="68" font-size="11" fill="#3D4F65">p̂ = 0.10</text>
+    <text x="110" y="130" text-anchor="middle" font-size="11" fill="#3D4F65">用户被粗分箱</text>
+  </g>
+
+  <!-- Refinement arrow -->
+  <g transform="translate(310,200)">
+    <path d="M0,15 L80,15" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+    <text x="40" y="6" text-anchor="middle" font-size="11" font-weight="600" fill="#1E3A5F">细化 refinement</text>
+  </g>
+
+  <!-- RIGHT: Fine model -->
+  <g transform="translate(420,140)">
+    <text x="110" y="0" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">细模型 M_A</text>
+    <rect x="10" y="20" width="200" height="90" fill="#FFF4E8" stroke="#E89B4A" stroke-width="1.5" rx="6"/>
+    <line x1="110" y1="20" x2="110" y2="110" stroke="#E89B4A" stroke-width="1" stroke-dasharray="3 3"/>
+    <line x1="10" y1="65" x2="210" y2="65" stroke="#E89B4A" stroke-width="1" stroke-dasharray="3 3"/>
+    <circle cx="55" cy="42" r="6" fill="#E89B4A"/>
+    <circle cx="160" cy="42" r="6" fill="#E89B4A"/>
+    <circle cx="55" cy="88" r="6" fill="#E89B4A"/>
+    <circle cx="160" cy="88" r="6" fill="#E89B4A"/>
+    <text x="110" y="130" text-anchor="middle" font-size="11" fill="#3D4F65">分辨率更高、保持校准</text>
+  </g>
+
+  <!-- Central balance / question -->
+  <g transform="translate(450,340)">
+    <polygon points="0,40 -14,70 14,70" fill="#1E3A5F"/>
+    <line x1="-180" y1="20" x2="180" y2="60" stroke="#1E3A5F" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- left pan: green up -->
+    <g transform="translate(-180,20)">
+      <circle r="44" fill="#E6F4EE" stroke="#2E8B6B" stroke-width="2"/>
+      <text y="-8" text-anchor="middle" font-size="11" font-weight="700" fill="#2E8B6B">FPA + tCPA</text>
+      <text y="8" text-anchor="middle" font-size="10" fill="#2E8B6B">无预算</text>
+      <text y="26" text-anchor="middle" font-size="14" font-weight="700" fill="#2E8B6B">↑ 单调</text>
+    </g>
+
+    <!-- right pan: red down -->
+    <g transform="translate(180,60)">
+      <circle r="46" fill="#FBECE8" stroke="#C8553D" stroke-width="2"/>
+      <text y="-10" text-anchor="middle" font-size="11" font-weight="700" fill="#C8553D">VCG 或带预算</text>
+      <text y="8" text-anchor="middle" font-size="10" fill="#C8553D">竞争被稀释</text>
+      <text y="26" text-anchor="middle" font-size="14" font-weight="700" fill="#C8553D">↓ 反例存在</text>
+    </g>
+  </g>
+
+  <!-- Arrows from models to balance -->
+  <path d="M190,265 Q210,310 265,355" stroke="#4B8BDA" stroke-width="1.5" fill="none" marker-end="url(#ar)" opacity="0.6"/>
+  <path d="M530,265 Q570,330 615,395" stroke="#4B8BDA" stroke-width="1.5" fill="none" marker-end="url(#ar)" opacity="0.6"/>
+
+  <!-- center takeaway -->
+  <text x="450" y="490" text-anchor="middle" font-size="12" font-style="italic" fill="#1E3A5F">模型变好 ≠ 平台指标变好：取决于拍卖格式与预算</text>
+
+  <!-- Bottom labels -->
+  <g transform="translate(80,520)">
+    <rect width="240" height="68" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1" rx="6"/>
+    <text x="120" y="24" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">为什么会单调</text>
+    <text x="120" y="46" text-anchor="middle" font-size="11" fill="#3D4F65">一价下 max 出价是凸函数</text>
+    <text x="120" y="62" text-anchor="middle" font-size="11" fill="#3D4F65">细化 + Jensen 不等式</text>
+  </g>
+
+  <g transform="translate(580,520)">
+    <rect width="240" height="68" fill="#FBECE8" stroke="#C8553D" stroke-width="1" rx="6"/>
+    <text x="120" y="24" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">为什么会破坏</text>
+    <text x="120" y="46" text-anchor="middle" font-size="11" fill="#3D4F65">externality 削弱 · 预算 pacing</text>
+    <text x="120" y="62" text-anchor="middle" font-size="11" fill="#3D4F65">竞争稀释，收入反降</text>
+  </g>
+</svg>

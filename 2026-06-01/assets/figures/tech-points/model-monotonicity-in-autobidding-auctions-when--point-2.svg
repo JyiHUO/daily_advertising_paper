@@ -1,0 +1,45 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="600" fill="#1E3A5F">FPA + tCPA 无预算：模型越细，收入不降</text>
+  <text x="400" y="65" text-anchor="middle" font-size="13" fill="#3D4F65">凸函数 max(·) + Jensen 不等式</text>
+
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Left: coarse cluster -->
+  <g>
+    <text x="160" y="115" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">粗模型</text>
+    <circle cx="160" cy="200" r="62" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="160" y="195" text-anchor="middle" font-size="13" fill="#3D4F65">平均预测 p = 0.10</text>
+    <text x="160" y="215" text-anchor="middle" font-size="13" fill="#3D4F65">max bid = 1.00</text>
+    <text x="160" y="295" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">收入 = 1.00</text>
+  </g>
+
+  <!-- Arrow: refinement -->
+  <line x1="225" y1="200" x2="418" y2="200" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="320" y="190" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">细化（加权平均不变）</text>
+
+  <!-- Right: refined two sub-clusters -->
+  <g>
+    <text x="560" y="115" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">细模型</text>
+
+    <circle cx="500" cy="180" r="48" fill="#FFF1E6" stroke="#E8A063" stroke-width="2"/>
+    <text x="500" y="178" text-anchor="middle" font-size="12" fill="#3D4F65">高价值子簇</text>
+    <text x="500" y="196" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">max = 1.80</text>
+
+    <circle cx="630" cy="220" r="48" fill="#FFF1E6" stroke="#E8A063" stroke-width="2"/>
+    <text x="630" y="218" text-anchor="middle" font-size="12" fill="#3D4F65">低价值子簇</text>
+    <text x="630" y="236" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">max = 1.50</text>
+
+    <text x="565" y="295" text-anchor="middle" font-size="14" fill="#C2410C" font-weight="600">期望收入 = 1.65 ↑</text>
+  </g>
+
+  <!-- Bottom inequality -->
+  <g>
+    <rect x="160" y="360" width="480" height="90" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="400" y="392" text-anchor="middle" font-size="15" fill="#1E3A5F" font-weight="600">E[ maxᵢ tᵢ · pᵢ ]  ≥  maxᵢ tᵢ · E[pᵢ]</text>
+    <text x="400" y="422" text-anchor="middle" font-size="12" fill="#3D4F65">细模型期望收入  ≥  粗模型收入  （Jensen）</text>
+  </g>
+</svg>

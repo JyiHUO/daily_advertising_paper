@@ -1,0 +1,65 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <marker id="ard" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C0504D"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="34" text-anchor="middle" font-size="18" font-weight="600" fill="#1E3A5F">更准的预测 ≠ 更好的结果</text>
+  <text x="360" y="56" text-anchor="middle" font-size="12" fill="#3D4F65">VCG / 二价拍卖下，模型细化稀释竞争</text>
+
+  <!-- LEFT: coarse model -->
+  <g>
+    <rect x="40" y="100" width="280" height="280" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="180" y="126" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">粗模型：机会被打包</text>
+
+    <rect x="70" y="150" width="100" height="70" rx="6" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="120" y="178" text-anchor="middle" font-size="11" fill="#3D4F65">机会 0,1</text>
+    <text x="120" y="202" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">A 赢</text>
+
+    <rect x="190" y="150" width="100" height="70" rx="6" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="240" y="178" text-anchor="middle" font-size="11" fill="#3D4F65">机会 2,3</text>
+    <text x="240" y="202" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">B 赢</text>
+
+    <text x="180" y="258" text-anchor="middle" font-size="12" fill="#3D4F65">A、B 在各自包里竞争</text>
+
+    <rect x="100" y="290" width="160" height="60" rx="8" fill="#DCEBFB" stroke="#4B8BDA"/>
+    <text x="180" y="313" text-anchor="middle" font-size="12" fill="#1E3A5F">收入 + 福利</text>
+    <text x="180" y="338" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">3.23</text>
+  </g>
+
+  <!-- RIGHT: refined model -->
+  <g>
+    <rect x="400" y="100" width="280" height="280" rx="10" fill="#FDF1EE" stroke="#C0504D" stroke-width="1.5"/>
+    <text x="540" y="126" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">细模型：单点可见</text>
+
+    <rect x="420" y="150" width="55" height="70" rx="5" fill="#FFFFFF" stroke="#C0504D"/>
+    <text x="447" y="178" text-anchor="middle" font-size="11" fill="#3D4F65">机会 0</text>
+    <text x="447" y="202" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">A</text>
+
+    <rect x="485" y="150" width="55" height="70" rx="5" fill="#FFFFFF" stroke="#C0504D"/>
+    <text x="512" y="178" text-anchor="middle" font-size="11" fill="#3D4F65">机会 1</text>
+    <text x="512" y="202" text-anchor="middle" font-size="13" font-weight="700" fill="#C0504D">B 抢</text>
+
+    <rect x="550" y="150" width="55" height="70" rx="5" fill="#FFFFFF" stroke="#C0504D"/>
+    <text x="577" y="178" text-anchor="middle" font-size="11" fill="#3D4F65">机会 2</text>
+    <text x="577" y="202" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">B</text>
+
+    <rect x="615" y="150" width="55" height="70" rx="5" fill="#FFFFFF" stroke="#C0504D"/>
+    <text x="642" y="178" text-anchor="middle" font-size="11" fill="#3D4F65">机会 3</text>
+    <text x="642" y="202" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">B</text>
+
+    <text x="540" y="258" text-anchor="middle" font-size="12" fill="#3D4F65">A 只盯子簇 → 竞争稀释</text>
+
+    <rect x="460" y="290" width="160" height="60" rx="8" fill="#F8D9D2" stroke="#C0504D"/>
+    <text x="540" y="313" text-anchor="middle" font-size="12" fill="#1E3A5F">收入 + 福利</text>
+    <text x="540" y="338" text-anchor="middle" font-size="20" font-weight="700" fill="#C0504D">3.03 ↓</text>
+  </g>
+
+  <!-- arrow between -->
+  <line x1="322" y1="240" x2="398" y2="240" stroke="#C0504D" stroke-width="2" marker-end="url(#ard)"/>
+  <text x="360" y="230" text-anchor="middle" font-size="10" fill="#C0504D">模型细化</text>
+  <text x="360" y="256" text-anchor="middle" font-size="11" font-weight="700" fill="#C0504D">−6.2%</text>
+
+  <text x="360" y="418" text-anchor="middle" font-size="11" fill="#3D4F65">VCG 付费 ∝ externality：对手不再碰撞，付费就塌了</text>
+</svg>

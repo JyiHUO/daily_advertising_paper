@@ -1,0 +1,13 @@
+{
+  "report_date": "2026-06-01",
+  "provider": "litellm-opus",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 2825,
+  "focus_titles": [
+    "Model Monotonicity in Autobidding Auctions: When Do Better Predictions Lead to Better Outcomes?",
+    "Graph-GRPO: Dependency-Aware Credit Assignment for Generative E-commerce Search Relevance"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Steve"
+}

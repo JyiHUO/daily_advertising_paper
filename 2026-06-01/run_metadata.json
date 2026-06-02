@@ -1,0 +1,18 @@
+{
+  "date": "2026-06-01",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 6,
+  "supplementary_count": 1,
+  "focus_titles": [
+    "Model Monotonicity in Autobidding Auctions: When Do Better Predictions Lead to Better Outcomes?",
+    "Graph-GRPO: Dependency-Aware Credit Assignment for Generative E-commerce Search Relevance"
+  ],
+  "focus_status": {
+    "Model Monotonicity in Autobidding Auctions: When Do Better Predictions Lead to Better Outcomes?": "completed",
+    "Graph-GRPO: Dependency-Aware Credit Assignment for Generative E-commerce Search Relevance": "completed"
+  }
+}
