@@ -1,0 +1,68 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="42" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">一条样本，喂饱两个目标</text>
+  <text x="400" y="66" text-anchor="middle" font-size="13" fill="#3D4F65">Blended Sample · Joint Loss</text>
+
+  <!-- Sample container -->
+  <rect x="80" y="110" width="640" height="150" rx="14" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="2"/>
+
+  <!-- Left half: past positives -->
+  <rect x="92" y="122" width="304" height="126" rx="10" fill="#EFF6FF"/>
+  <text x="244" y="148" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">过去 · 正反馈序列（召回口味）</text>
+  <text x="244" y="167" text-anchor="middle" font-size="11" fill="#3D4F65">save / click …</text>
+  <g fill="#4B8BDA">
+    <circle cx="120" cy="215" r="7"/>
+    <circle cx="150" cy="215" r="7"/>
+    <circle cx="180" cy="215" r="7"/>
+    <circle cx="210" cy="215" r="7"/>
+    <circle cx="240" cy="215" r="7"/>
+    <circle cx="270" cy="215" r="7"/>
+    <circle cx="300" cy="215" r="7"/>
+    <circle cx="330" cy="215" r="7"/>
+    <circle cx="360" cy="215" r="7"/>
+  </g>
+
+  <!-- Divider -->
+  <line x1="404" y1="128" x2="404" y2="244" stroke="#C9B79C" stroke-width="2" stroke-dasharray="4 4"/>
+
+  <!-- Right half: future feedview -->
+  <rect x="412" y="122" width="296" height="126" rx="10" fill="#FBF1E4"/>
+  <text x="560" y="148" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">未来 · 一屏曝光（排序口味）</text>
+  <text x="560" y="167" text-anchor="middle" font-size="11" fill="#3D4F65">candidates + 真实动作标签</text>
+  <g>
+    <circle cx="436" cy="215" r="7" fill="#E07A3C"/>
+    <circle cx="466" cy="215" r="7" fill="#C9B79C"/>
+    <circle cx="496" cy="215" r="7" fill="#C9B79C"/>
+    <circle cx="526" cy="215" r="7" fill="#E07A3C"/>
+    <circle cx="556" cy="215" r="7" fill="#C9B79C"/>
+    <circle cx="586" cy="215" r="7" fill="#C9B79C"/>
+    <circle cx="616" cy="215" r="7" fill="#C9B79C"/>
+    <circle cx="646" cy="215" r="7" fill="#E07A3C"/>
+    <circle cx="676" cy="215" r="7" fill="#C9B79C"/>
+  </g>
+
+  <!-- Two arrows down to two losses -->
+  <path d="M244,260 L244,343" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <path d="M560,260 L560,343" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Loss boxes -->
+  <rect x="148" y="345" width="192" height="56" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="244" y="370" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">next-item（召回 loss）</text>
+  <text x="244" y="389" text-anchor="middle" font-size="12" fill="#3D4F65">前半段 → 下一个 Pin</text>
+
+  <rect x="464" y="345" width="192" height="56" rx="10" fill="#FBF1E4" stroke="#E07A3C" stroke-width="1.5"/>
+  <text x="560" y="370" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">per-action BCE（排序 loss）</text>
+  <text x="560" y="389" text-anchor="middle" font-size="12" fill="#3D4F65">后半段 → 每个候选动作</text>
+
+  <!-- Merge to joint loss -->
+  <path d="M244,401 C244,432 340,448 318,448" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <path d="M560,401 C560,432 460,448 482,448" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+  <rect x="320" y="430" width="160" height="44" rx="22" fill="#1E3A5F"/>
+  <text x="400" y="458" text-anchor="middle" font-size="15" font-weight="700" fill="#FFFFFF">联合 Loss = α·R + β·K</text>
+</svg>

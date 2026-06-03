@@ -1,0 +1,13 @@
+{
+  "report_date": "2026-06-02",
+  "provider": "litellm-opus",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 3030,
+  "focus_titles": [
+    "Quantizing Intent: Cross-Domain Semantic IDs from Organic Activity for Industrial Ranking",
+    "UniPinRec: Unifying Generative Retrieval and Ranking at Pinterest Scale"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Steve"
+}

@@ -1,0 +1,39 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="Helvetica, Arial, sans-serif">
+  <text x="300" y="38" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">轮廓 + 纹理 = 稠密向量</text>
+  <text x="300" y="60" text-anchor="middle" font-size="12" fill="#3D4F65">RQ-FSQ：两路量化互补</text>
+
+  <circle cx="80" cy="220" r="46" fill="#FFF1E6" stroke="#E07A3C" stroke-width="2"/>
+  <text x="80" y="217" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">稠密向量</text>
+  <text x="80" y="234" text-anchor="middle" font-size="11" fill="#3D4F65">256 B</text>
+
+  <rect x="240" y="100" width="170" height="110" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="325" y="122" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">RQ · 轮廓</text>
+  <polygon points="265,185 295,150 315,170 340,140 380,185" fill="none" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="325" y="202" text-anchor="middle" font-size="10" fill="#3D4F65">残差码本 · 全局几何</text>
+
+  <rect x="240" y="230" width="170" height="110" rx="10" fill="#FFF1E6" stroke="#E07A3C" stroke-width="2"/>
+  <text x="325" y="252" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">FSQ · 纹理</text>
+  <g fill="#E07A3C">
+    <circle cx="270" cy="278" r="2.5"/><circle cx="290" cy="278" r="2.5"/><circle cx="310" cy="278" r="2.5"/><circle cx="330" cy="278" r="2.5"/><circle cx="350" cy="278" r="2.5"/><circle cx="370" cy="278" r="2.5"/>
+    <circle cx="270" cy="296" r="2.5"/><circle cx="290" cy="296" r="2.5"/><circle cx="310" cy="296" r="2.5"/><circle cx="330" cy="296" r="2.5"/><circle cx="350" cy="296" r="2.5"/><circle cx="370" cy="296" r="2.5"/>
+  </g>
+  <text x="325" y="324" text-anchor="middle" font-size="10" fill="#3D4F65">逐维 round · 细节</text>
+
+  <circle cx="520" cy="220" r="50" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="2"/>
+  <text x="520" y="215" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">SID 相加</text>
+  <text x="520" y="234" text-anchor="middle" font-size="11" fill="#3D4F65">≈36 B · 280×</text>
+
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <line x1="124" y1="195" x2="238" y2="155" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="124" y1="245" x2="238" y2="285" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <line x1="410" y1="155" x2="475" y2="198" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="410" y1="285" x2="475" y2="242" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <text x="300" y="390" text-anchor="middle" font-size="11" fill="#3D4F65">一支画山形，一支补颗粒 — 极小字节，重建判别力</text>
+</svg>

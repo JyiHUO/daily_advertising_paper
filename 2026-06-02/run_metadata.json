@@ -1,0 +1,18 @@
+{
+  "date": "2026-06-02",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 15,
+  "supplementary_count": 0,
+  "focus_titles": [
+    "Quantizing Intent: Cross-Domain Semantic IDs from Organic Activity for Industrial Ranking",
+    "UniPinRec: Unifying Generative Retrieval and Ranking at Pinterest Scale"
+  ],
+  "focus_status": {
+    "Quantizing Intent: Cross-Domain Semantic IDs from Organic Activity for Industrial Ranking": "completed",
+    "UniPinRec: Unifying Generative Retrieval and Ranking at Pinterest Scale": "completed"
+  }
+}

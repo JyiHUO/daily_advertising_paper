@@ -1,0 +1,85 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <marker id="arB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E89B5A"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="30" text-anchor="middle" font-size="17" font-weight="700" fill="#1E3A5F">Masked Action Modeling</text>
+  <text x="300" y="50" text-anchor="middle" font-size="11" fill="#3D4F65">动作贴在物品上，而不是排在物品后面</text>
+
+  <!-- BEFORE: HSTU -->
+  <text x="150" y="86" text-anchor="middle" font-size="12" font-weight="600" fill="#3D4F65">传统：交错排列 → 序列翻倍</text>
+  <g>
+    <rect x="35" y="100" width="34" height="34" rx="4" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="52" y="122" text-anchor="middle" font-size="11" fill="#1E3A5F">Pin</text>
+    <rect x="71" y="100" width="34" height="34" rx="4" fill="#FFF1E6" stroke="#E89B5A"/>
+    <text x="88" y="122" text-anchor="middle" font-size="10" fill="#8B5A2B">act</text>
+    <rect x="107" y="100" width="34" height="34" rx="4" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="124" y="122" text-anchor="middle" font-size="11" fill="#1E3A5F">Pin</text>
+    <rect x="143" y="100" width="34" height="34" rx="4" fill="#FFF1E6" stroke="#E89B5A"/>
+    <text x="160" y="122" text-anchor="middle" font-size="10" fill="#8B5A2B">act</text>
+    <rect x="179" y="100" width="34" height="34" rx="4" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="196" y="122" text-anchor="middle" font-size="11" fill="#1E3A5F">Pin</text>
+    <rect x="215" y="100" width="34" height="34" rx="4" fill="#FFF1E6" stroke="#E89B5A"/>
+    <text x="232" y="122" text-anchor="middle" font-size="10" fill="#8B5A2B">act</text>
+  </g>
+  <text x="150" y="152" text-anchor="middle" font-size="10" fill="#A04040">长度 × 2</text>
+
+  <!-- AFTER: MAM -->
+  <text x="442" y="86" text-anchor="middle" font-size="12" font-weight="600" fill="#3D4F65">MAM：拼接为一体 → 长度不变</text>
+  <g>
+    <rect x="345" y="95" width="44" height="44" rx="5" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="367" y="114" text-anchor="middle" font-size="11" fill="#1E3A5F">Pin</text>
+    <line x1="348" y1="120" x2="386" y2="120" stroke="#B8C7D6" stroke-dasharray="2,2"/>
+    <rect x="346" y="120" width="42" height="18" fill="#FFF1E6"/>
+    <text x="367" y="133" text-anchor="middle" font-size="9" fill="#8B5A2B">act</text>
+
+    <rect x="395" y="95" width="44" height="44" rx="5" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="417" y="114" text-anchor="middle" font-size="11" fill="#1E3A5F">Pin</text>
+    <line x1="398" y1="120" x2="436" y2="120" stroke="#B8C7D6" stroke-dasharray="2,2"/>
+    <rect x="396" y="120" width="42" height="18" fill="#D6D6D6"/>
+    <text x="417" y="133" text-anchor="middle" font-size="9" font-weight="700" fill="#1E3A5F">MASK</text>
+
+    <rect x="445" y="95" width="44" height="44" rx="5" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="467" y="114" text-anchor="middle" font-size="11" fill="#1E3A5F">Pin</text>
+    <line x1="448" y1="120" x2="486" y2="120" stroke="#B8C7D6" stroke-dasharray="2,2"/>
+    <rect x="446" y="120" width="42" height="18" fill="#FFF1E6"/>
+    <text x="467" y="133" text-anchor="middle" font-size="9" fill="#8B5A2B">act</text>
+
+    <rect x="495" y="95" width="44" height="44" rx="5" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="517" y="114" text-anchor="middle" font-size="11" fill="#1E3A5F">Pin</text>
+    <line x1="498" y1="120" x2="536" y2="120" stroke="#B8C7D6" stroke-dasharray="2,2"/>
+    <rect x="496" y="120" width="42" height="18" fill="#D6D6D6"/>
+    <text x="517" y="133" text-anchor="middle" font-size="9" font-weight="700" fill="#1E3A5F">MASK</text>
+  </g>
+  <text x="442" y="155" text-anchor="middle" font-size="10" fill="#3D7A4D">特征维度拼接 + 随机遮罩 (p=0.2)</text>
+
+  <!-- arrows from both styles to backbone -->
+  <line x1="150" y1="170" x2="260" y2="208" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#arB)"/>
+  <line x1="442" y1="170" x2="340" y2="208" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#arB)"/>
+
+  <!-- shared backbone -->
+  <rect x="195" y="210" width="210" height="54" rx="8" fill="#E8EEF7" stroke="#1E3A5F" stroke-width="1.5"/>
+  <text x="300" y="232" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">共享 Backbone (GPT-2)</text>
+  <text x="300" y="252" text-anchor="middle" font-size="10" fill="#3D4F65">单次前向 · 因果序列不破</text>
+
+  <!-- two losses -->
+  <rect x="80" y="320" width="170" height="64" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
+  <text x="165" y="344" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">召回 Loss</text>
+  <text x="165" y="362" text-anchor="middle" font-size="10" fill="#3D4F65">未mask位置 · 预测下一个 Pin</text>
+  <text x="165" y="376" text-anchor="middle" font-size="10" fill="#3D4F65">sampled softmax</text>
+
+  <rect x="350" y="320" width="170" height="64" rx="8" fill="#FFF1E6" stroke="#E89B5A"/>
+  <text x="435" y="344" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">排序 Loss</text>
+  <text x="435" y="362" text-anchor="middle" font-size="10" fill="#3D4F65">mask位置 · 预测动作类型</text>
+  <text x="435" y="376" text-anchor="middle" font-size="10" fill="#3D4F65">每动作头 BCE</text>
+
+  <line x1="255" y1="266" x2="190" y2="316" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#arB)"/>
+  <line x1="345" y1="266" x2="410" y2="316" stroke="#E89B5A" stroke-width="1.8" marker-end="url(#arO)"/>
+
+  <text x="300" y="406" text-anchor="middle" font-size="10" fill="#3D4F65">同一前向同时贡献两类 loss，权重可从召回 checkpoint 直接继承</text>
+</svg>

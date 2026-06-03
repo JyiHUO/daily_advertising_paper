@@ -1,0 +1,51 @@
+<svg height="500" width="800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E89B5C"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="36" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#1E3A5F">Multi-Source SID with Backfill</text>
+  <text x="400" y="58" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#3D4F65">缺失源由 LLaMA 翻译回填，避免冷用户</text>
+
+  <!-- Backbone LLaMA -->
+  <rect x="50" y="200" width="180" height="100" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="140" y="230" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">LLaMA (骨干 · 覆盖最广)</text>
+  <text x="140" y="252" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">Activity-Tuned</text>
+  <text x="140" y="282" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#4B8BDA">c1 c2 c3</text>
+
+  <!-- Profile Qwen -->
+  <rect x="320" y="100" width="180" height="90" rx="10" fill="#FFF5EC" stroke="#E89B5C" stroke-width="2"/>
+  <text x="410" y="128" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#1E3A5F">Profile Qwen</text>
+  <text x="410" y="148" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#3D4F65" font-style="italic">缺失 → RQ-VAE-P 回填</text>
+  <text x="410" y="175" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#E89B5C">c4 c5 c6</text>
+
+  <!-- Feed Activity -->
+  <rect x="320" y="310" width="180" height="90" rx="10" fill="#FFF5EC" stroke="#E89B5C" stroke-width="2"/>
+  <text x="410" y="338" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#1E3A5F">Feed Activity</text>
+  <text x="410" y="358" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#3D4F65" font-style="italic">缺失 → RQ-VAE-F 回填</text>
+  <text x="410" y="385" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#E89B5C">c7 c8 c9</text>
+
+  <!-- Backfill arrows from LLaMA (translate) -->
+  <path d="M200,200 Q 250,160 320,150" fill="none" stroke="#E89B5C" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrO)"/>
+  <path d="M200,300 Q 250,340 320,350" fill="none" stroke="#E89B5C" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arrO)"/>
+  <text x="240" y="172" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#B86A2B">翻译</text>
+  <text x="240" y="338" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#B86A2B">翻译</text>
+
+  <!-- Combined 9-code SID -->
+  <rect x="585" y="210" width="170" height="80" rx="10" fill="#1E3A5F"/>
+  <text x="670" y="238" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">9-code SID</text>
+  <text x="670" y="268" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFD89E">c1..c3 | c4..c6 | c7..c9</text>
+
+  <!-- arrows to combined -->
+  <path d="M500,150 Q 560,180 605,220" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="230" y1="250" x2="582" y2="250" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <path d="M500,355 Q 560,320 605,280" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- bottom note -->
+  <text x="400" y="445" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#3D4F65">每源独立 prefix n-gram 查表 · 全量用户都有非零表示</text>
+  <text x="400" y="470" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#4B8BDA">naive 相加 +0.260%  →  结构化 Multi-Source +0.296%</text>
+</svg>
