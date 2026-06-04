@@ -1,0 +1,18 @@
+{
+  "date": "2026-06-03",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 4,
+  "supplementary_count": 0,
+  "focus_titles": [
+    "Taiji: Pareto Optimal Policy Optimization with Semantics-IDs Trade-off for Industrial LLM-Enhanced Recommendation",
+    "Privacy-Robust Incrementality Measurement for Advertising Systems under Signal Loss"
+  ],
+  "focus_status": {
+    "Taiji: Pareto Optimal Policy Optimization with Semantics-IDs Trade-off for Industrial LLM-Enhanced Recommendation": "completed",
+    "Privacy-Robust Incrementality Measurement for Advertising Systems under Signal Loss": "completed"
+  }
+}

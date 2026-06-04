@@ -1,0 +1,75 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <linearGradient id="bal" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#4B8BDA"/>
+      <stop offset="1" stop-color="#E89B5C"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="620" fill="#FBFAF7"/>
+
+  <!-- Title -->
+  <text x="450" y="42" font-size="22" font-weight="700" fill="#1E3A5F" text-anchor="middle">Taiji：在 LLM 语义与 ID 协同之间，找到 Pareto 最优</text>
+  <text x="450" y="66" font-size="13" fill="#3D4F65" text-anchor="middle">快手广告平台 · 4 亿日活 · LLM-as-Enhancer</text>
+
+  <!-- Top: SFT bottleneck arrow into the system -->
+  <rect x="295" y="95" width="310" height="68" rx="10" fill="#F4F0E8" stroke="#1E3A5F" stroke-width="1.5"/>
+  <text x="450" y="120" font-size="14" font-weight="700" fill="#1E3A5F" text-anchor="middle">高质量 CoT 数据 (SFT)</text>
+  <text x="450" y="140" font-size="11" fill="#3D4F65" text-anchor="middle">反向工程推理 RUPR · PPL 拒绝采样 (阈值 4.6)</text>
+  <text x="450" y="155" font-size="11" fill="#3D4F65" text-anchor="middle">解决开放式推荐 CoT 无客观 metric 难题</text>
+
+  <line x1="450" y1="163" x2="450" y2="365" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="460" y="265" font-size="10" fill="#4B8BDA">SFT 初始化</text>
+
+  <!-- Left side: Semantic reward -->
+  <circle cx="155" cy="310" r="78" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="155" y="295" font-size="15" font-weight="700" fill="#1E3A5F" text-anchor="middle">语义奖励 r_s</text>
+  <text x="155" y="315" font-size="11" fill="#3D4F65" text-anchor="middle">LLM 世界知识</text>
+  <text x="155" y="332" font-size="11" fill="#3D4F65" text-anchor="middle">embedding 相似度</text>
+  <text x="155" y="225" font-size="10" fill="#4B8BDA" text-anchor="middle" font-style="italic">广义知识</text>
+
+  <!-- Right side: ID reward -->
+  <circle cx="745" cy="310" r="78" fill="#FDF1E6" stroke="#E89B5C" stroke-width="2"/>
+  <text x="745" y="295" font-size="15" font-weight="700" fill="#7A3F12" text-anchor="middle">协同奖励 r_id</text>
+  <text x="745" y="315" font-size="11" fill="#5C4326" text-anchor="middle">线上用户偏好</text>
+  <text x="745" y="332" font-size="11" fill="#5C4326" text-anchor="middle">CTCVR 信号</text>
+  <text x="745" y="225" font-size="10" fill="#E89B5C" text-anchor="middle" font-style="italic">行为偏好</text>
+
+  <!-- Center: balance / POPO -->
+  <!-- Fulcrum -->
+  <polygon points="450,442 412,498 488,498" fill="#1E3A5F"/>
+  <rect x="382" y="498" width="136" height="7" fill="#1E3A5F"/>
+
+  <!-- Balance beam (tilted slightly to suggest dynamic adjustment) -->
+  <g transform="rotate(-5 450 442)">
+    <rect x="230" y="436" width="440" height="12" rx="6" fill="url(#bal)"/>
+    <circle cx="260" cy="442" r="14" fill="#4B8BDA"/>
+    <text x="260" y="446" font-size="11" fill="#FFF" text-anchor="middle" font-weight="700">w_s</text>
+    <circle cx="640" cy="442" r="14" fill="#E89B5C"/>
+    <text x="640" y="446" font-size="11" fill="#FFF" text-anchor="middle" font-weight="700">w_id</text>
+  </g>
+
+  <!-- Hanging strings from beam tips to circles -->
+  <line x1="237" y1="453" x2="160" y2="388" stroke="#9AB3CC" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <line x1="662" y1="411" x2="740" y2="388" stroke="#D9B392" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+  <!-- POPO core badge -->
+  <rect x="365" y="370" width="170" height="58" rx="29" fill="#1E3A5F"/>
+  <text x="450" y="395" font-size="18" font-weight="700" fill="#FFF" text-anchor="middle">POPO</text>
+  <text x="450" y="415" font-size="11" fill="#C9D9E8" text-anchor="middle">梯度对齐 · 动态权重</text>
+
+  <!-- Pareto curve hint -->
+  <path d="M 105 472 Q 450 545 795 472" fill="none" stroke="#9AB3CC" stroke-width="1" stroke-dasharray="2,4"/>
+  <text x="105" y="467" font-size="10" fill="#7A8FA6">Pareto 前沿</text>
+
+  <!-- Bottom: deployment outcome -->
+  <line x1="450" y1="510" x2="450" y2="538" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="180" y="540" width="540" height="62" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="450" y="563" font-size="13" font-weight="700" fill="#1E3A5F" text-anchor="middle">线上 A/B：LLM 特征 + 跨用户序列 → 排序模型</text>
+  <text x="270" y="588" font-size="12" fill="#3D4F65" text-anchor="middle">长尾 ADVV +5.26%</text>
+  <text x="450" y="588" font-size="12" fill="#3D4F65" text-anchor="middle">全量 ADVV +2.83%</text>
+  <text x="630" y="588" font-size="12" fill="#3D4F65" text-anchor="middle">Revenue +3.30%</text>
+</svg>

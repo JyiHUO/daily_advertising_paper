@@ -1,0 +1,40 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="36" text-anchor="middle" font-family="Helvetica,Arial" font-size="20" font-weight="700" fill="#1E3A5F">POPO: 动态权衡两类奖励</text>
+  <text x="300" y="58" text-anchor="middle" font-family="Helvetica,Arial" font-size="12" fill="#3D4F65">谁还有学习空间，就多听谁的</text>
+
+  <!-- 支点 -->
+  <polygon points="300,330 270,380 330,380" fill="#1E3A5F"/>
+
+  <!-- 倾斜的天平横杆：左低右高 -->
+  <g transform="rotate(-8 300 320)">
+    <rect x="120" y="315" width="360" height="8" rx="3" fill="#4B8BDA"/>
+    <line x1="170" y1="319" x2="170" y2="260" stroke="#4B8BDA" stroke-width="2"/>
+    <line x1="430" y1="319" x2="430" y2="260" stroke="#4B8BDA" stroke-width="2"/>
+  </g>
+
+  <!-- 左盘：语义奖励（权重大） -->
+  <g>
+    <rect x="100" y="170" width="160" height="90" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="180" y="160" text-anchor="middle" font-family="Helvetica,Arial" font-size="13" font-weight="700" fill="#C8553D">权重 ↑</text>
+    <text x="180" y="198" text-anchor="middle" font-family="Helvetica,Arial" font-size="14" font-weight="700" fill="#1E3A5F">语义奖励 rs</text>
+    <text x="180" y="222" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65">梯度与总目标一致</text>
+    <text x="180" y="240" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65">组内方差仍较大</text>
+  </g>
+
+  <!-- 右盘：ID奖励（权重小） -->
+  <g>
+    <rect x="340" y="200" width="160" height="80" rx="10" fill="#FFF4E6" stroke="#E8A04B" stroke-width="2"/>
+    <text x="420" y="190" text-anchor="middle" font-family="Helvetica,Arial" font-size="13" font-weight="700" fill="#3D4F65">权重 ↓</text>
+    <text x="420" y="226" text-anchor="middle" font-family="Helvetica,Arial" font-size="14" font-weight="700" fill="#1E3A5F">ID 奖励 r_id</text>
+    <text x="420" y="250" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65">接近饱和，方差小</text>
+  </g>
+
+  <!-- 底部说明 -->
+  <text x="300" y="402" text-anchor="middle" font-family="Helvetica,Arial" font-size="12" fill="#1E3A5F">每步重新称量 → 逼近 Pareto 前沿</text>
+</svg>

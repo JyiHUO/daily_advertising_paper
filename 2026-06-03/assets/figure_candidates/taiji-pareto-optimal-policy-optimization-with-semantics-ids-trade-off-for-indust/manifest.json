@@ -1,0 +1,117 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-03/downloaded_pdfs/taiji-pareto-optimal-policy-optimization-with-semantics-ids-trade-off-for-indust.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-03/assets/figure_candidates/taiji-pareto-optimal-policy-optimization-with-semantics-ids-trade-off-for-indust",
+  "candidates": [
+    {
+      "id": "page-3-embedded-0-0",
+      "page_index": 3,
+      "caption": "第 4 页内嵌图片候选",
+      "clip": [
+        43.12099838256836,
+        71.68841552734375,
+        304.7139587402344,
+        210.593994140625
+      ],
+      "clip_area": 36336.72151964274,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image",
+      "xref": 304,
+      "score": 7.403741350218253,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-03/assets/figure_candidates/taiji-pareto-optimal-policy-optimization-with-semantics-ids-trade-off-for-indust/01-p4-embedded_image.png",
+      "filename": "01-p4-embedded_image.png"
+    },
+    {
+      "id": "page-2-embedded-0-0",
+      "page_index": 2,
+      "caption": "第 3 页内嵌图片候选",
+      "clip": [
+        60.0,
+        71.6998291015625,
+        551.9248046875,
+        306.052001953125
+      ],
+      "clip_area": 115283.64685809612,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image",
+      "xref": 299,
+      "score": 7.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-03/assets/figure_candidates/taiji-pareto-optimal-policy-optimization-with-semantics-ids-trade-off-for-indust/02-p3-embedded_image.png",
+      "filename": "02-p3-embedded_image.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.7129952735814687,
+      "score": -11.09083328,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-03/assets/figure_candidates/taiji-pareto-optimal-policy-optimization-with-semantics-ids-trade-off-for-indust/03-p1-layout_region_left_top.png",
+      "filename": "03-p1-layout_region_left_top.png"
+    },
+    {
+      "id": "page-1-region-upper-left",
+      "page_index": 1,
+      "caption": "第 2 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.8115419658341222,
+      "score": -11.09083328,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-03/assets/figure_candidates/taiji-pareto-optimal-policy-optimization-with-semantics-ids-trade-off-for-indust/04-p2-layout_region_left_top.png",
+      "filename": "04-p2-layout_region_left_top.png"
+    },
+    {
+      "id": "page-0-region-upper-right",
+      "page_index": 0,
+      "caption": "第 1 页右上区域主图候选",
+      "clip": [
+        318.24,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 82992.7296,
+      "kind": "layout_region_right_top",
+      "page_area": 484704.0,
+      "text_density": 0.5949855977649448,
+      "score": -17.07785856,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-03/assets/figure_candidates/taiji-pareto-optimal-policy-optimization-with-semantics-ids-trade-off-for-indust/05-p1-layout_region_right_top.png",
+      "filename": "05-p1-layout_region_right_top.png"
+    },
+    {
+      "id": "page-1-region-upper-right",
+      "page_index": 1,
+      "caption": "第 2 页右上区域主图候选",
+      "clip": [
+        318.24,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 82992.7296,
+      "kind": "layout_region_right_top",
+      "page_area": 484704.0,
+      "text_density": 0.7276749377795623,
+      "score": -17.07785856,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-03/assets/figure_candidates/taiji-pareto-optimal-policy-optimization-with-semantics-ids-trade-off-for-indust/06-p2-layout_region_right_top.png",
+      "filename": "06-p2-layout_region_right_top.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-03/assets/figure_candidates/taiji-pareto-optimal-policy-optimization-with-semantics-ids-trade-off-for-indust/contact-sheet.svg"
+}

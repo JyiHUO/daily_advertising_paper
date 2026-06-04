@@ -1,0 +1,69 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="-apple-system,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C9534A"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="36" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">反向造 CoT + PPL 筛选</text>
+  <text x="400" y="58" text-anchor="middle" font-size="12" fill="#3D4F65">先知答案再编理由，再用困惑度过滤</text>
+
+  <!-- Step 1: Known answer -->
+  <g>
+    <rect x="40" y="95" width="220" height="115" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="150" y="120" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">① 已知真值答案</text>
+    <text x="150" y="145" text-anchor="middle" font-size="11" fill="#3D4F65">用户画像 + 行为序列</text>
+    <text x="150" y="163" text-anchor="middle" font-size="11" fill="#3D4F65">+ 真实下一次购买物</text>
+    <text x="150" y="192" text-anchor="middle" font-size="11" fill="#C97B4A" font-weight="600">答案先锁定，再要解释</text>
+  </g>
+
+  <line x1="262" y1="152" x2="298" y2="152" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="280" y="144" text-anchor="middle" font-size="10" fill="#3D4F65">反向</text>
+
+  <!-- Step 2: Three CoT samples -->
+  <g>
+    <rect x="300" y="95" width="200" height="115" rx="10" fill="#FFF4EC" stroke="#C97B4A" stroke-width="1.5"/>
+    <text x="400" y="120" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">② QwQ-32B 采 3 条 CoT</text>
+    <text x="315" y="146" font-size="11" fill="#3D4F65">① 夏装需求…</text>
+    <text x="315" y="167" font-size="11" fill="#3D4F65">② 家纺升级…</text>
+    <text x="315" y="188" font-size="11" fill="#3D4F65">③ 节日送礼…</text>
+  </g>
+
+  <line x1="502" y1="152" x2="538" y2="152" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="520" y="144" text-anchor="middle" font-size="10" fill="#3D4F65">PPL</text>
+
+  <!-- Step 3: PPL filter -->
+  <g>
+    <polygon points="545,95 760,95 715,210 590,210" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="652" y="125" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">③ PPL 漏斗</text>
+    <text x="652" y="150" text-anchor="middle" font-size="11" fill="#3D4F65">学生视角困惑度</text>
+    <text x="652" y="172" text-anchor="middle" font-size="11" fill="#3D4F65">阈值 R = 4.6（中位数）</text>
+    <text x="652" y="196" text-anchor="middle" font-size="10" fill="#3D4F65">PPL 高 → 弃；低 → 留</text>
+  </g>
+
+  <!-- Splitter from funnel to two outputs -->
+  <line x1="615" y1="215" x2="320" y2="285" stroke="#C9534A" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arR)"/>
+  <line x1="685" y1="215" x2="540" y2="285" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#ar)"/>
+
+  <!-- Bottom: dropped vs kept -->
+  <g>
+    <rect x="120" y="290" width="260" height="140" rx="10" fill="#FFEFEF" stroke="#C9534A" stroke-width="1.5"/>
+    <text x="250" y="315" text-anchor="middle" font-size="13" font-weight="700" fill="#C9534A">丢弃</text>
+    <text x="250" y="345" text-anchor="middle" font-size="12" fill="#3D4F65">CoT①「夏装需求」</text>
+    <text x="250" y="380" text-anchor="middle" font-size="22" font-weight="700" fill="#C9534A">PPL = 28.4</text>
+    <text x="250" y="408" text-anchor="middle" font-size="11" fill="#3D4F65">推理跑偏，导不出真值</text>
+  </g>
+
+  <g>
+    <rect x="420" y="290" width="260" height="140" rx="10" fill="#E8F5EC" stroke="#3FA567" stroke-width="1.5"/>
+    <text x="550" y="315" text-anchor="middle" font-size="13" font-weight="700" fill="#3FA567">保留 → SFT DeepSeek-R1-7B</text>
+    <text x="550" y="345" text-anchor="middle" font-size="12" fill="#3D4F65">CoT②「家纺升级」</text>
+    <text x="550" y="380" text-anchor="middle" font-size="22" font-weight="700" fill="#3FA567">PPL = 1.2</text>
+    <text x="550" y="408" text-anchor="middle" font-size="11" fill="#3D4F65">推理顺畅，自然导出真值</text>
+  </g>
+
+  <text x="400" y="466" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">无标签开放式推荐 → 用学生视角的 PPL 当 CoT 质量代理</text>
+</svg>

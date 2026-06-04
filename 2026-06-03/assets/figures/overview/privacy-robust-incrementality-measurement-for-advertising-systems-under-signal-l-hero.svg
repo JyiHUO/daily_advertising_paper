@@ -1,0 +1,100 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="'Helvetica Neue',Arial,'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <linearGradient id="fog" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="0.45" stop-color="#C9D6E8" stop-opacity="0.85"/>
+      <stop offset="0.55" stop-color="#C9D6E8" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="600" fill="#FBFCFE"/>
+
+  <!-- Title -->
+  <text x="450" y="44" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">隐私退化下的广告增量度量</text>
+  <text x="450" y="68" text-anchor="middle" font-size="13" fill="#3D4F65">单点估计 → 兼容世界集合 → 三态决策</text>
+
+  <!-- LEFT: clean experiment world -->
+  <g>
+    <circle cx="150" cy="320" r="78" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.6"/>
+    <text x="150" y="305" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">干净实验世界</text>
+    <text x="150" y="328" text-anchor="middle" font-size="11" fill="#3D4F65">随机化 lift，真实增量 τ</text>
+    <text x="150" y="350" text-anchor="middle" font-size="10" fill="#3D4F65" font-style="italic">(不可观测)</text>
+  </g>
+
+  <!-- Privacy fog band -->
+  <rect x="248" y="180" width="120" height="280" fill="url(#fog)"/>
+  <text x="308" y="170" text-anchor="middle" font-size="11" font-weight="700" fill="#1E3A5F">隐私信号丢失</text>
+  <g font-size="10" fill="#3D4F65" text-anchor="middle">
+    <text x="308" y="220">匹配率 / 归因窗口</text>
+    <text x="308" y="245">聚合阈值 / 报告噪声</text>
+    <text x="308" y="270">可链接性 / 分群异质性</text>
+  </g>
+
+  <!-- Arrow into fog -->
+  <line x1="232" y1="320" x2="252" y2="320" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ar)"/>
+  <line x1="368" y1="320" x2="384" y2="320" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ar)"/>
+
+  <!-- CENTER: compatibility fiber -->
+  <g transform="translate(500,320)">
+    <ellipse cx="0" cy="0" rx="110" ry="110" fill="#FFF6E8" stroke="#E8A23A" stroke-width="2"/>
+    <text x="0" y="-80" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">兼容性纤维 F(r; U)</text>
+
+    <!-- scatter of candidate worlds -->
+    <g fill="#4B8BDA" opacity="0.7">
+      <circle cx="-55" cy="-20" r="4"/>
+      <circle cx="-30" cy="20" r="4"/>
+      <circle cx="-10" cy="-30" r="4"/>
+      <circle cx="20" cy="10" r="4"/>
+      <circle cx="45" cy="-15" r="4"/>
+      <circle cx="0" cy="35" r="4"/>
+      <circle cx="-40" cy="50" r="4"/>
+      <circle cx="55" cy="35" r="4"/>
+      <circle cx="30" cy="-45" r="4"/>
+      <circle cx="-15" cy="0" r="3.5"/>
+    </g>
+    <text x="0" y="80" text-anchor="middle" font-size="10" fill="#3D4F65">所有与报表相容的"原图"</text>
+
+    <!-- bracket showing range -->
+    <line x1="-92" y1="0" x2="92" y2="0" stroke="#E8A23A" stroke-width="1.2" stroke-dasharray="3,3"/>
+    <text x="-100" y="4" text-anchor="end" font-size="12" font-weight="700" fill="#1E3A5F">ℓ*</text>
+    <text x="100" y="4" text-anchor="start" font-size="12" font-weight="700" fill="#1E3A5F">u*</text>
+  </g>
+
+  <!-- Fan-out arrows to three decisions -->
+  <line x1="600" y1="252" x2="720" y2="180" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ar)"/>
+  <line x1="612" y1="320" x2="720" y2="320" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ar)"/>
+  <line x1="600" y1="388" x2="720" y2="460" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ar)"/>
+
+  <!-- THREE DECISIONS -->
+  <g>
+    <rect x="725" y="148" width="150" height="64" rx="8" fill="#E6F4EA" stroke="#3FA265" stroke-width="1.4"/>
+    <text x="800" y="172" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">认证 ✓</text>
+    <text x="800" y="190" text-anchor="middle" font-size="10" fill="#3D4F65">ℓ* &gt; 阈值 b</text>
+    <text x="800" y="204" text-anchor="middle" font-size="10" fill="#3D4F65">增量稳健成立</text>
+  </g>
+
+  <g>
+    <rect x="725" y="288" width="150" height="64" rx="8" fill="#FFF4E0" stroke="#E8A23A" stroke-width="1.4"/>
+    <text x="800" y="312" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">无法判定 ?</text>
+    <text x="800" y="330" text-anchor="middle" font-size="10" fill="#3D4F65">b ∈ [ℓ*, u*]</text>
+    <text x="800" y="344" text-anchor="middle" font-size="10" fill="#3D4F65">信息论不可识别</text>
+  </g>
+
+  <g>
+    <rect x="725" y="428" width="150" height="64" rx="8" fill="#FCE8E8" stroke="#D9534F" stroke-width="1.4"/>
+    <text x="800" y="452" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">拒绝 ✗</text>
+    <text x="800" y="470" text-anchor="middle" font-size="10" fill="#3D4F65">u* &lt; 阈值 b</text>
+    <text x="800" y="484" text-anchor="middle" font-size="10" fill="#3D4F65">增量不成立</text>
+  </g>
+
+  <!-- Bottom takeaway -->
+  <g>
+    <line x1="120" y1="538" x2="780" y2="538" stroke="#C9D6E8" stroke-width="1"/>
+    <text x="450" y="560" text-anchor="middle" font-size="11" fill="#1E3A5F" font-weight="700">Sharp 决策前沿 · 有限样本认证 · Minimax 下界 · 粒度–异质性权衡</text>
+    <text x="450" y="578" text-anchor="middle" font-size="10" fill="#3D4F65">Criteo Uplift 2.0M · Hillstrom 64K：干净 lift 为正，叠加噪声后多数场景落入"无法判定"</text>
+  </g>
+</svg>

@@ -1,0 +1,63 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="aro" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E89A5C"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">LLM 不打分，做“更懂你”的特征生产器</text>
+
+  <!-- User -->
+  <circle cx="80" cy="250" r="38" fill="#FFF1E6" stroke="#E89A5C" stroke-width="2"/>
+  <circle cx="80" cy="240" r="10" fill="#E89A5C"/>
+  <path d="M62 266 Q80 252 98 266 L98 278 L62 278 Z" fill="#E89A5C"/>
+  <text x="80" y="306" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">目标用户</text>
+
+  <line x1="120" y1="250" x2="192" y2="250" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- LLM -->
+  <circle cx="240" cy="250" r="46" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="240" y="246" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="700">LLM</text>
+  <text x="240" y="264" text-anchor="middle" font-size="11" fill="#3D4F65">CoT + Answer</text>
+
+  <line x1="288" y1="250" x2="378" y2="250" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Embedding pivot -->
+  <circle cx="395" cy="250" r="16" fill="#4B8BDA"/>
+  <text x="395" y="284" text-anchor="middle" font-size="11" fill="#3D4F65">语义向量</text>
+
+  <!-- Branch up -->
+  <line x1="408" y1="240" x2="555" y2="140" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <rect x="555" y="95" width="210" height="92" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="660" y="120" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">用户语义 ID</text>
+  <text x="660" y="139" text-anchor="middle" font-size="11" fill="#3D4F65">PQ 量化 → 稀疏特征</text>
+  <rect x="588" y="154" width="22" height="14" rx="2" fill="#4B8BDA"/>
+  <rect x="616" y="154" width="22" height="14" rx="2" fill="#9CC2EE"/>
+  <rect x="644" y="154" width="22" height="14" rx="2" fill="#4B8BDA"/>
+  <rect x="672" y="154" width="22" height="14" rx="2" fill="#9CC2EE"/>
+  <rect x="700" y="154" width="22" height="14" rx="2" fill="#4B8BDA"/>
+  <text x="660" y="86" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">“你大概是怎样的人”</text>
+
+  <!-- Branch down -->
+  <line x1="408" y1="260" x2="555" y2="360" stroke="#E89A5C" stroke-width="2" marker-end="url(#aro)"/>
+  <rect x="555" y="315" width="210" height="92" rx="10" fill="#FFF1E6" stroke="#E89A5C" stroke-width="2"/>
+  <text x="660" y="340" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">最相似用户序列</text>
+  <text x="660" y="359" text-anchor="middle" font-size="11" fill="#3D4F65">cosine top-1 · 最近 100 条行为</text>
+  <circle cx="588" cy="385" r="8" fill="#E89A5C"/>
+  <rect x="604" y="378" width="14" height="14" rx="2" fill="#E89A5C" opacity="0.85"/>
+  <rect x="624" y="378" width="14" height="14" rx="2" fill="#E89A5C" opacity="0.65"/>
+  <rect x="644" y="378" width="14" height="14" rx="2" fill="#E89A5C" opacity="0.5"/>
+  <rect x="664" y="378" width="14" height="14" rx="2" fill="#E89A5C" opacity="0.35"/>
+  <text x="700" y="389" font-size="11" fill="#3D4F65">…</text>
+  <text x="660" y="428" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">“像你的人在干嘛”</text>
+
+  <!-- Merge to ranker -->
+  <rect x="270" y="440" width="260" height="40" rx="8" fill="#F5F7FA" stroke="#1E3A5F" stroke-width="1.5"/>
+  <text x="400" y="465" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">CTR / CVR 排序模型</text>
+
+  <path d="M660 187 Q660 420 530 460" fill="none" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="4,4"/>
+  <path d="M660 407 Q660 440 530 460" fill="none" stroke="#E89A5C" stroke-width="1.5" stroke-dasharray="4,4"/>
+</svg>

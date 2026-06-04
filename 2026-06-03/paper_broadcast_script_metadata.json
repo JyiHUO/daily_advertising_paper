@@ -1,0 +1,13 @@
+{
+  "report_date": "2026-06-03",
+  "provider": "litellm-opus",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 2871,
+  "focus_titles": [
+    "Taiji: Pareto Optimal Policy Optimization with Semantics-IDs Trade-off for Industrial LLM-Enhanced Recommendation",
+    "Privacy-Robust Incrementality Measurement for Advertising Systems under Signal Loss"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Steve"
+}
