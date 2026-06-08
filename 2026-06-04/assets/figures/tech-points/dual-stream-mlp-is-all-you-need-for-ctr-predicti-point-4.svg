@@ -1,0 +1,82 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="300" y="32" text-anchor="middle" font-size="17" font-weight="700" fill="#1E3A5F">训练时有老师，上线时只剩学生</text>
+
+  <!-- Stage 1: Training with teacher -->
+  <g>
+    <text x="170" y="62" text-anchor="middle" font-size="12" fill="#3D4F65" font-weight="600">训练阶段</text>
+
+    <!-- Teacher (mortarboard) -->
+    <g transform="translate(60,110)">
+      <polygon points="0,0 45,-14 90,0 45,14" fill="#F4D9A8" stroke="#C9924B" stroke-width="1.5"/>
+      <rect x="22" y="0" width="46" height="22" rx="3" fill="#F4D9A8" stroke="#C9924B" stroke-width="1.5"/>
+      <line x1="68" y1="-6" x2="82" y2="14" stroke="#C9924B" stroke-width="1.5"/>
+      <circle cx="82" cy="16" r="3" fill="#C9924B"/>
+      <text x="45" y="46" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">教师 (复杂交叉)</text>
+    </g>
+
+    <!-- Distill arrow -->
+    <path d="M 158 122 L 215 122" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+    <text x="186" y="115" text-anchor="middle" font-size="10" fill="#4B8BDA">蒸馏</text>
+
+    <!-- Two students -->
+    <g transform="translate(220,95)">
+      <rect x="0" y="0" width="90" height="28" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+      <text x="45" y="18" text-anchor="middle" font-size="11" fill="#1E3A5F" font-weight="600">main MLP</text>
+      <rect x="0" y="36" width="90" height="28" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+      <text x="45" y="54" text-anchor="middle" font-size="11" fill="#1E3A5F" font-weight="600">parallel MLP</text>
+    </g>
+
+    <!-- Stage labels -->
+    <text x="170" y="205" text-anchor="middle" font-size="10" fill="#3D4F65">① 冻结教师，蒸馏 main MLP</text>
+    <text x="170" y="222" text-anchor="middle" font-size="10" fill="#3D4F65">② 移除教师，双路 BN 对齐微调</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="335" y1="55" x2="335" y2="320" stroke="#C9D5E3" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- Stage 2: Inference -->
+  <g>
+    <text x="470" y="62" text-anchor="middle" font-size="12" fill="#3D4F65" font-weight="600">上线推理</text>
+
+    <!-- Ghost teacher (faded out) -->
+    <g transform="translate(370,110)" opacity="0.3">
+      <polygon points="0,0 32,-10 64,0 32,10" fill="none" stroke="#C9924B" stroke-width="1.2" stroke-dasharray="3 3"/>
+      <rect x="14" y="0" width="36" height="18" rx="3" fill="none" stroke="#C9924B" stroke-width="1.2" stroke-dasharray="3 3"/>
+      <text x="32" y="36" text-anchor="middle" font-size="10" fill="#999">教师离场</text>
+    </g>
+
+    <!-- Two MLPs only -->
+    <rect x="455" y="95" width="100" height="28" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="505" y="113" text-anchor="middle" font-size="11" fill="#1E3A5F" font-weight="600">main MLP (3层)</text>
+
+    <rect x="455" y="131" width="100" height="28" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="505" y="149" text-anchor="middle" font-size="11" fill="#1E3A5F" font-weight="600">parallel MLP (3层)</text>
+
+    <!-- merge: two arrows into sum node -->
+    <path d="M 505 159 L 505 185" stroke="#4B8BDA" stroke-width="2" fill="none"/>
+    <path d="M 505 123 L 505 109" stroke="none"/>
+
+    <!-- sum node -->
+    <circle cx="505" cy="198" r="13" fill="#FFF4E5" stroke="#C9924B" stroke-width="1.5"/>
+    <text x="505" y="202" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="700">+</text>
+
+    <!-- to sigmoid -->
+    <path d="M 505 211 L 505 232" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+    <circle cx="505" cy="248" r="13" fill="#FFF4E5" stroke="#C9924B" stroke-width="1.5"/>
+    <text x="505" y="253" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="700">σ</text>
+
+    <text x="470" y="290" text-anchor="middle" font-size="11" fill="#1E3A5F" font-weight="600">仅两路并行 MLP，无 cross 结构</text>
+  </g>
+
+  <!-- Bottom takeaway -->
+  <rect x="60" y="335" width="480" height="46" rx="8" fill="#F5EFE6" stroke="#C9924B" stroke-width="1"/>
+  <text x="300" y="354" text-anchor="middle" font-size="11" fill="#1E3A5F" font-weight="600">训练靠蒸馏拿到显式交叉知识，推理只剩轻量双 MLP</text>
+  <text x="300" y="370" text-anchor="middle" font-size="10" fill="#3D4F65">Criteo 实测延迟 ≈ 59ms，与 DeepFM 同量级，AUC 更高</text>
+</svg>

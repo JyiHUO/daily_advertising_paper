@@ -1,0 +1,65 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="-apple-system,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="600" fill="#1E3A5F">按历史 GMV 分层 · 隔离方差源</text>
+  <text x="400" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">少数大R用户贡献绝大部分方差 → 关进小权重层，方差被 w² 压没</text>
+
+  <!-- Left: original mixed pool -->
+  <g>
+    <rect x="60" y="110" width="220" height="320" rx="12" fill="#FFF4E6" stroke="#E8A55C" stroke-width="1.5"/>
+    <text x="170" y="138" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">原始 GMV 分布</text>
+    <text x="170" y="156" text-anchor="middle" font-size="11" fill="#3D4F65">长尾 · 方差爆炸</text>
+
+    <g fill="#3D4F65" opacity="0.55">
+      <circle cx="100" cy="200" r="3"/><circle cx="130" cy="220" r="3"/><circle cx="160" cy="195" r="3"/>
+      <circle cx="190" cy="225" r="3"/><circle cx="220" cy="205" r="3"/><circle cx="250" cy="215" r="3"/>
+      <circle cx="115" cy="250" r="3"/><circle cx="145" cy="265" r="3"/><circle cx="175" cy="245" r="3"/>
+      <circle cx="205" cy="270" r="3"/><circle cx="235" cy="255" r="3"/><circle cx="125" cy="295" r="3"/>
+      <circle cx="165" cy="305" r="3"/><circle cx="200" cy="290" r="3"/><circle cx="240" cy="300" r="3"/>
+      <circle cx="105" cy="340" r="3"/><circle cx="155" cy="350" r="3"/><circle cx="210" cy="345" r="3"/>
+      <circle cx="255" cy="355" r="3"/><circle cx="135" cy="380" r="3"/><circle cx="185" cy="390" r="3"/>
+      <circle cx="225" cy="385" r="3"/>
+    </g>
+    <circle cx="170" cy="395" r="14" fill="#D9534F"/>
+    <circle cx="230" cy="160" r="11" fill="#D9534F"/>
+    <text x="170" y="420" text-anchor="middle" font-size="10" fill="#D9534F">大R用户主导方差</text>
+  </g>
+
+  <!-- Arrow -->
+  <line x1="290" y1="270" x2="425" y2="270" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#ar)"/>
+  <text x="357" y="260" text-anchor="middle" font-size="11" fill="#1E3A5F">预实验冻结阈值</text>
+  <text x="357" y="288" text-anchor="middle" font-size="10" fill="#3D4F65">(只用历史信息)</text>
+
+  <!-- Right: stratified -->
+  <g>
+    <!-- tail layer -->
+    <rect x="430" y="110" width="310" height="70" rx="8" fill="#FDECEC" stroke="#D9534F" stroke-width="1.5"/>
+    <circle cx="455" cy="145" r="13" fill="#D9534F"/>
+    <circle cx="485" cy="145" r="10" fill="#D9534F"/>
+    <text x="585" y="142" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">尾部层（大R）</text>
+    <text x="585" y="162" text-anchor="middle" font-size="11" fill="#3D4F65">w ≈ 0.0001 · w² → 1e-8</text>
+
+    <!-- non-tail -->
+    <rect x="430" y="200" width="310" height="100" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <g fill="#4B8BDA" opacity="0.7">
+      <circle cx="455" cy="240" r="3"/><circle cx="475" cy="248" r="3"/><circle cx="495" cy="235" r="3"/>
+      <circle cx="515" cy="255" r="3"/><circle cx="455" cy="270" r="3"/><circle cx="480" cy="278" r="3"/>
+      <circle cx="505" cy="265" r="3"/><circle cx="525" cy="275" r="3"/>
+    </g>
+    <text x="640" y="245" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">非尾部层</text>
+    <text x="640" y="265" text-anchor="middle" font-size="11" fill="#3D4F65">w ≈ 0.7（主导效应）</text>
+
+    <!-- new users -->
+    <rect x="430" y="320" width="310" height="70" rx="8" fill="#F3F0FB" stroke="#8E7CC3" stroke-width="1.5"/>
+    <text x="585" y="352" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">新用户 / 未消费</text>
+    <text x="585" y="372" text-anchor="middle" font-size="11" fill="#3D4F65">独立估计 · 避免污染</text>
+  </g>
+
+  <!-- bottom result -->
+  <rect x="160" y="450" width="480" height="38" rx="19" fill="#1E3A5F"/>
+  <text x="400" y="475" text-anchor="middle" font-size="14" font-weight="600" fill="#FFF">层内算 ATE → 按全平台占比加权 → 方差 ↓ 99%</text>
+</svg>

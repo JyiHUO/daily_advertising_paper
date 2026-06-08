@@ -1,0 +1,61 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97064"/>
+    </marker>
+    <marker id="arGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2E7D5B"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="38" text-anchor="middle" font-family="Helvetica,Arial" font-size="20" font-weight="600" fill="#1E3A5F">双指标护栏：方向一致才采信</text>
+
+  <!-- Left: raw GMV -->
+  <g>
+    <rect x="70" y="80" width="260" height="160" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="200" y="115" text-anchor="middle" font-family="Helvetica,Arial" font-size="15" font-weight="600" fill="#1E3A5F">原始 GMV</text>
+    <text x="200" y="135" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65">全体 ATE · 高方差</text>
+    <text x="200" y="200" text-anchor="middle" font-family="Helvetica,Arial" font-size="34" font-weight="700" fill="#2E7D5B">+5.0%</text>
+  </g>
+
+  <!-- Right: post-stratified GMV -->
+  <g>
+    <rect x="470" y="80" width="260" height="160" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="600" y="115" text-anchor="middle" font-family="Helvetica,Arial" font-size="15" font-weight="600" fill="#1E3A5F">后分层 GMV</text>
+    <text x="600" y="135" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65">大众平均 · 低方差</text>
+    <text x="600" y="200" text-anchor="middle" font-family="Helvetica,Arial" font-size="34" font-weight="700" fill="#C97064">−0.2%</text>
+  </g>
+
+  <!-- Decision diamond -->
+  <g>
+    <polygon points="400,265 482,322 400,379 318,322" fill="#FFF4E6" stroke="#D9A441" stroke-width="1.8"/>
+    <text x="400" y="318" text-anchor="middle" font-family="Helvetica,Arial" font-size="13" font-weight="600" fill="#1E3A5F">两者方向</text>
+    <text x="400" y="336" text-anchor="middle" font-family="Helvetica,Arial" font-size="13" font-weight="600" fill="#1E3A5F">是否一致？</text>
+  </g>
+
+  <!-- Top boxes to diamond -->
+  <line x1="200" y1="240" x2="350" y2="305" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="600" y1="240" x2="450" y2="305" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Outcomes -->
+  <g>
+    <rect x="60" y="410" width="280" height="60" rx="10" fill="#E8F4EC" stroke="#2E7D5B" stroke-width="1.5"/>
+    <text x="200" y="435" text-anchor="middle" font-family="Helvetica,Arial" font-size="13" font-weight="600" fill="#1E3A5F">一致 → 采信后分层</text>
+    <text x="200" y="455" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65">省 45% 流量，更快决策</text>
+  </g>
+
+  <g>
+    <rect x="460" y="410" width="280" height="60" rx="10" fill="#FBEDEA" stroke="#C97064" stroke-width="1.5"/>
+    <text x="600" y="435" text-anchor="middle" font-family="Helvetica,Arial" font-size="13" font-weight="600" fill="#1E3A5F">分歧 → 效应在尾部</text>
+    <text x="600" y="455" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65">回退原始指标 / 延长实验</text>
+  </g>
+
+  <!-- Diamond to outcomes with labels -->
+  <line x1="350" y1="345" x2="225" y2="408" stroke="#2E7D5B" stroke-width="2" marker-end="url(#arGreen)"/>
+  <line x1="450" y1="345" x2="575" y2="408" stroke="#C97064" stroke-width="2" marker-end="url(#arRed)"/>
+  <text x="270" y="378" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" font-weight="600" fill="#2E7D5B">是</text>
+  <text x="530" y="378" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" font-weight="600" fill="#C97064">否</text>
+</svg>

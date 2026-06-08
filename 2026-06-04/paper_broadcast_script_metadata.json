@@ -1,0 +1,13 @@
+{
+  "report_date": "2026-06-04",
+  "provider": "litellm-opus",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 2653,
+  "focus_titles": [
+    "Variance Reduction for Heavy-Tailed Monetization Metrics in Ranking Experiments via Post-Stratification",
+    "Dual-Stream MLP is All You Need for CTR Prediction"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Steve"
+}

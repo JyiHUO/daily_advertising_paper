@@ -1,0 +1,38 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="Helvetica, Arial, sans-serif">
+  <!-- Title -->
+  <text x="360" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">扣掉"可预测的那部分"，留下真正的增量</text>
+
+  <!-- Left: Actual GMV bar -->
+  <g>
+    <text x="130" y="92" text-anchor="middle" font-size="14" fill="#1E3A5F" font-weight="600">实验期实际 GMV</text>
+    <rect x="90" y="110" width="80" height="220" fill="#DBEAFE" stroke="#4B8BDA" stroke-width="2" rx="4"/>
+    <text x="130" y="350" text-anchor="middle" font-size="13" fill="#3D4F65">120</text>
+  </g>
+
+  <!-- Minus sign -->
+  <text x="220" y="232" text-anchor="middle" font-size="40" font-weight="700" fill="#4B8BDA">−</text>
+
+  <!-- Middle: Predicted from history -->
+  <g>
+    <text x="320" y="92" text-anchor="middle" font-size="14" fill="#1E3A5F" font-weight="600">历史可预测部分 (CUPED)</text>
+    <rect x="280" y="125" width="80" height="205" fill="#FEF3C7" stroke="#D97706" stroke-width="2" rx="4"/>
+    <text x="320" y="350" text-anchor="middle" font-size="13" fill="#3D4F65">≈ 105</text>
+  </g>
+
+  <!-- Equals sign -->
+  <text x="410" y="232" text-anchor="middle" font-size="34" font-weight="700" fill="#4B8BDA">=</text>
+
+  <!-- Right: True increment (small) -->
+  <g>
+    <text x="540" y="92" text-anchor="middle" font-size="14" fill="#1E3A5F" font-weight="600">真正的处理增量（噪声更小）</text>
+    <rect x="500" y="305" width="80" height="25" fill="#34A18B" stroke="#1E7A66" stroke-width="2" rx="4"/>
+    <text x="540" y="350" text-anchor="middle" font-size="13" fill="#1E7A66" font-weight="700">+15</text>
+  </g>
+
+  <!-- Bottom complement note -->
+  <g transform="translate(60,390)">
+    <rect x="0" y="0" width="600" height="50" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5" rx="6"/>
+    <text x="300" y="22" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">后分层：消除跨层异质性 ＋ CUPED：消除层内可预测差异</text>
+    <text x="300" y="40" text-anchor="middle" font-size="12" fill="#3D4F65">两者互补 → 长尾变现指标方差大幅降低</text>
+  </g>
+</svg>

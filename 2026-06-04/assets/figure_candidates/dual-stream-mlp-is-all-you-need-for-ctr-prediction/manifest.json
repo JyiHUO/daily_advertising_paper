@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-04/downloaded_pdfs/dual-stream-mlp-is-all-you-need-for-ctr-prediction.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-04/assets/figure_candidates/dual-stream-mlp-is-all-you-need-for-ctr-prediction",
+  "candidates": [
+    {
+      "id": "page-3-drawing-caption-29",
+      "page_index": 3,
+      "caption": "Fig. 1. The architecture of our proposed DS-MLP. Overall, it is trained with two main stages, namely knowledge distillation and fine-tuning.",
+      "clip": [
+        31.268848419189453,
+        36.98014831542969,
+        454.6192626953125,
+        286.86474609375
+      ],
+      "clip_area": 105788.74799067428,
+      "page_area": 349920.0,
+      "text_density": 0.29910836409880825,
+      "kind": "drawing_cluster_with_caption",
+      "score": 40.8534981540715,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-04/assets/figure_candidates/dual-stream-mlp-is-all-you-need-for-ctr-prediction/01-p4-drawing_cluster_with_caption.png",
+      "filename": "01-p4-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-3-block-29",
+      "page_index": 3,
+      "caption": "Fig. 1. The architecture of our proposed DS-MLP. Overall, it is trained with two main stages, namely knowledge distillation and fine-tuning.",
+      "clip": [
+        21.527999114990234,
+        18.0,
+        464.47422485351564,
+        241.10086059570312
+      ],
+      "clip_area": 98821.6841598836,
+      "page_area": 349920.0,
+      "text_density": 0.24068388771984817,
+      "kind": "captioned_figure",
+      "score": 32.35896673680911,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-04/assets/figure_candidates/dual-stream-mlp-is-all-you-need-for-ctr-prediction/02-p4-captioned_figure.png",
+      "filename": "02-p4-captioned_figure.png"
+    },
+    {
+      "id": "page-16-drawing-caption-22",
+      "page_index": 16,
+      "caption": "Fig. 2. The scaling effect for teacher v.s. student.",
+      "clip": [
+        33.22600173950195,
+        68.68222045898438,
+        455.257080078125,
+        250.10501098632812
+      ],
+      "clip_area": 76566.05592145701,
+      "page_area": 349920.0,
+      "text_density": 0.13646264032804273,
+      "kind": "drawing_cluster_with_caption",
+      "score": 17.462975535000293,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-04/assets/figure_candidates/dual-stream-mlp-is-all-you-need-for-ctr-prediction/03-p17-drawing_cluster_with_caption.png",
+      "filename": "03-p17-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-17-drawing-caption-10",
+      "page_index": 17,
+      "caption": "Fig. 4. Case study for our approach DS-MLP.",
+      "clip": [
+        46.38102722167969,
+        42.7545166015625,
+        455.13226318359375,
+        298.4052429199219
+      ],
+      "clip_area": 104497.55035719043,
+      "page_area": 349920.0,
+      "text_density": 0.17659309241077778,
+      "kind": "drawing_cluster_with_caption",
+      "score": 16.204414455353334,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-04/assets/figure_candidates/dual-stream-mlp-is-all-you-need-for-ctr-prediction/04-p18-drawing_cluster_with_caption.png",
+      "filename": "04-p18-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-16-drawing-cluster-0",
+      "page_index": 16,
+      "caption": "第 17 页矢量图主图候选",
+      "clip": [
+        35.22600173950195,
+        70.68222045898438,
+        453.257080078125,
+        248.10501098632812
+      ],
+      "clip_area": 74168.24044599314,
+      "page_area": 349920.0,
+      "text_density": 0.13490662382574511,
+      "kind": "drawing_cluster",
+      "score": 5.529694130966327,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-04/assets/figure_candidates/dual-stream-mlp-is-all-you-need-for-ctr-prediction/05-p17-drawing_cluster.png",
+      "filename": "05-p17-drawing_cluster.png"
+    },
+    {
+      "id": "page-16-block-22",
+      "page_index": 16,
+      "caption": "Fig. 2. The scaling effect for teacher v.s. student.",
+      "clip": [
+        129.7760040283203,
+        18.0,
+        356.22449951171876,
+        255.494873046875
+      ],
+      "clip_area": 53780.35668648557,
+      "page_area": 349920.0,
+      "text_density": 0.13929041701453915,
+      "kind": "captioned_figure",
+      "score": 5.04013449786638,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-04/assets/figure_candidates/dual-stream-mlp-is-all-you-need-for-ctr-prediction/06-p17-captioned_figure.png",
+      "filename": "06-p17-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-04/assets/figure_candidates/dual-stream-mlp-is-all-you-need-for-ctr-prediction/contact-sheet.svg"
+}

@@ -1,0 +1,18 @@
+{
+  "date": "2026-06-04",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 4,
+  "supplementary_count": 1,
+  "focus_titles": [
+    "Variance Reduction for Heavy-Tailed Monetization Metrics in Ranking Experiments via Post-Stratification",
+    "Dual-Stream MLP is All You Need for CTR Prediction"
+  ],
+  "focus_status": {
+    "Variance Reduction for Heavy-Tailed Monetization Metrics in Ranking Experiments via Post-Stratification": "completed",
+    "Dual-Stream MLP is All You Need for CTR Prediction": "completed"
+  }
+}
