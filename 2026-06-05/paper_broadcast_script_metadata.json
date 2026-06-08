@@ -1,0 +1,13 @@
+{
+  "report_date": "2026-06-05",
+  "provider": "litellm-opus",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 3286,
+  "focus_titles": [
+    "OneReason Technical Report",
+    "Scaling Laws for Behavioral Foundation Models over User Event Sequences"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Steve"
+}

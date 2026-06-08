@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-05/downloaded_pdfs/onereason-technical-report.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-05/assets/figure_candidates/onereason-technical-report",
+  "candidates": [
+    {
+      "id": "page-0-block-5",
+      "page_index": 0,
+      "caption": "Figure 1 | Performance overview: (1) compared with Qwen3-8B, OneReason-8B maintains its general capabilities; (2) OneReason-8B exhibits SOTA performance across real-world recommendation bench- marks; (3) OneReason-8B showing promising “thinking” advantage to recommendation tasks.",
+      "clip": [
+        40.36199951171875,
+        475.1730041503906,
+        554.9154052734375,
+        716.9019775390625
+      ],
+      "clip_area": 124382.466528425,
+      "page_area": 501156.9211820215,
+      "text_density": 0.054877463425700705,
+      "kind": "image_block_with_caption",
+      "score": 35.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-05/assets/figure_candidates/onereason-technical-report/01-p1-image_block_with_caption.png",
+      "filename": "01-p1-image_block_with_caption.png"
+    },
+    {
+      "id": "page-0-embedded-0-0",
+      "page_index": 0,
+      "caption": "Figure 1 | Performance overview: (1) compared with Qwen3-8B, OneReason-8B maintains its general capabilities; (2) OneReason-8B exhibits SOTA performance across real-world recommendation bench- marks; (3) OneReason-8B showing promising “thinking” advantage to recommendation tasks.",
+      "clip": [
+        50.36199951171875,
+        481.1730041503906,
+        544.9154052734375,
+        710.9019775390625
+      ],
+      "clip_area": 113613.24619151093,
+      "page_area": 501156.9211820215,
+      "text_density": 0.013935747654462396,
+      "kind": "embedded_image_with_caption",
+      "xref": 76,
+      "score": 34.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-05/assets/figure_candidates/onereason-technical-report/02-p1-embedded_image_with_caption.png",
+      "filename": "02-p1-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-11-block-2",
+      "page_index": 11,
+      "caption": "Figure 5 | Overview of our four-granularity pre-training recommendation corpora, ordered from fine-grained token-level semantics to coarse-grained user behavior modeling.",
+      "clip": [
+        60.2969970703125,
+        67.04159545898438,
+        534.9754638671875,
+        418.7790222167969
+      ],
+      "clip_area": 166962.18244847655,
+      "page_area": 501156.9211820215,
+      "text_density": 0.02697336604270056,
+      "kind": "image_block_with_caption",
+      "score": 31.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-05/assets/figure_candidates/onereason-technical-report/03-p12-image_block_with_caption.png",
+      "filename": "03-p12-image_block_with_caption.png"
+    },
+    {
+      "id": "page-11-embedded-0-0",
+      "page_index": 11,
+      "caption": "Figure 5 | Overview of our four-granularity pre-training recommendation corpora, ordered from fine-grained token-level semantics to coarse-grained user behavior modeling.",
+      "clip": [
+        70.2969970703125,
+        73.04159545898438,
+        524.9754638671875,
+        412.7790222167969
+      ],
+      "clip_area": 154471.2923117578,
+      "page_area": 501156.9211820215,
+      "text_density": 0.010510023071154805,
+      "kind": "embedded_image_with_caption",
+      "xref": 1393,
+      "score": 30.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-05/assets/figure_candidates/onereason-technical-report/04-p12-embedded_image_with_caption.png",
+      "filename": "04-p12-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-5-embedded-0-0",
+      "page_index": 5,
+      "caption": "Figure 3 | Three failure/success modes of MLLM chain-of-thought reasoning given the same visual input. (a) Alignment failure: the model miscounts due to weak visual grounding. (b) CoT quality failure: correct perception but faulty reasoning drift. (c) Robust reasoning: deep alignment and logical CoT lead to the correct answer.",
+      "clip": [
+        50.36199951171875,
+        135.88912963867188,
+        224.93185424804688,
+        310.458984375
+      ],
+      "clip_area": 30474.634182662703,
+      "page_area": 501156.9211820215,
+      "text_density": 0.012733289942726189,
+      "kind": "embedded_image_with_caption",
+      "xref": 1361,
+      "score": 21.33860704647403,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-05/assets/figure_candidates/onereason-technical-report/05-p6-embedded_image_with_caption.png",
+      "filename": "05-p6-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-5-drawing-caption-12",
+      "page_index": 5,
+      "caption": "Figure 3 | Three failure/success modes of MLLM chain-of-thought reasoning given the same visual input. (a) Alignment failure: the model miscounts due to weak visual grounding. (b) CoT quality failure: correct perception but faulty reasoning drift. (c) Robust reasoning: deep alignment and logical CoT lead to the correct answer.",
+      "clip": [
+        44.36199951171875,
+        69.03838348388672,
+        550.9174194335938,
+        340.8509826660156
+      ],
+      "clip_area": 137688.1453187596,
+      "page_area": 501156.9211820215,
+      "text_density": 0.28499226692449386,
+      "kind": "drawing_cluster_with_caption",
+      "score": 15.70046398453037,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-05/assets/figure_candidates/onereason-technical-report/06-p6-drawing_cluster_with_caption.png",
+      "filename": "06-p6-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-05/assets/figure_candidates/onereason-technical-report/contact-sheet.svg"
+}

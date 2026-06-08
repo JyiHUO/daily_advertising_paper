@@ -1,0 +1,18 @@
+{
+  "date": "2026-06-05",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 7,
+  "supplementary_count": 1,
+  "focus_titles": [
+    "OneReason Technical Report",
+    "Scaling Laws for Behavioral Foundation Models over User Event Sequences"
+  ],
+  "focus_status": {
+    "OneReason Technical Report": "completed",
+    "Scaling Laws for Behavioral Foundation Models over User Event Sequences": "completed"
+  }
+}

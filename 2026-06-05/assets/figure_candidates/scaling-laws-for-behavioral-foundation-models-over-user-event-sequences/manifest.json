@@ -1,0 +1,120 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-05/downloaded_pdfs/scaling-laws-for-behavioral-foundation-models-over-user-event-sequences.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-05/assets/figure_candidates/scaling-laws-for-behavioral-foundation-models-over-user-event-sequences",
+  "candidates": [
+    {
+      "id": "page-11-embedded-0-0",
+      "page_index": 11,
+      "caption": "(a) Stage 1 architecture/allocation sweeps ( n = 285 ).",
+      "clip": [
+        96.0,
+        59.999786376953125,
+        298.19598388671875,
+        232.72100830078125
+      ],
+      "clip_area": 34923.537405004725,
+      "page_area": 484704.0,
+      "text_density": 0.030949224537484808,
+      "kind": "embedded_image_with_caption",
+      "xref": 641,
+      "score": 21.38803930450005,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-05/assets/figure_candidates/scaling-laws-for-behavioral-foundation-models-over-user-event-sequences/01-p12-embedded_image_with_caption.png",
+      "filename": "01-p12-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-9-block-1",
+      "page_index": 9,
+      "caption": "Figure 5: Chinchilla frontier per metric. Left: N ⋆ ( C ) ; middle: D ⋆ ( C ) ; right: D ⋆ /N ⋆ . Switching the target from val_loss / recall@10 to NDCG@10 pushes the optimum toward smaller models trained on more tokens at every budget.",
+      "clip": [
+        87.97899627685547,
+        54.000953674316406,
+        524.0211486816406,
+        201.47198486328125
+      ],
+      "clip_area": 64303.58585698943,
+      "page_area": 484704.0,
+      "text_density": 0.07671020311801538,
+      "kind": "image_block_with_caption",
+      "score": 6.714484287299882,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-05/assets/figure_candidates/scaling-laws-for-behavioral-foundation-models-over-user-event-sequences/02-p10-image_block_with_caption.png",
+      "filename": "02-p10-image_block_with_caption.png"
+    },
+    {
+      "id": "page-11-embedded-1-0",
+      "page_index": 11,
+      "caption": "Figure 7: Spearman rank correlations between headline metrics. Within either stage the loss/perplexity/entropy/ranking metrics are essentially one quantity; coverage is the only metric that decouples meaningfully.",
+      "clip": [
+        313.8009948730469,
+        59.999786376953125,
+        515.9969787597656,
+        232.72100830078125
+      ],
+      "clip_area": 34923.537405004725,
+      "page_area": 484704.0,
+      "text_density": 0.030978221112128005,
+      "kind": "embedded_image_with_caption",
+      "xref": 642,
+      "score": 6.388039304500053,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-05/assets/figure_candidates/scaling-laws-for-behavioral-foundation-models-over-user-event-sequences/03-p12-embedded_image_with_caption.png",
+      "filename": "03-p12-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-10-embedded-0-0",
+      "page_index": 10,
+      "caption": "第 11 页内嵌图片候选",
+      "clip": [
+        105.9010009765625,
+        60.00434875488281,
+        506.0904235839844,
+        263.26898193359375
+      ],
+      "clip_area": 81344.35618829774,
+      "page_area": 484704.0,
+      "text_density": 0.02530286618173352,
+      "kind": "embedded_image",
+      "xref": 640,
+      "score": 5.9038261798699745,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-05/assets/figure_candidates/scaling-laws-for-behavioral-foundation-models-over-user-event-sequences/04-p11-embedded_image.png",
+      "filename": "04-p11-embedded_image.png"
+    },
+    {
+      "id": "page-8-embedded-0-0",
+      "page_index": 8,
+      "caption": "第 9 页内嵌图片候选",
+      "clip": [
+        97.97899627685547,
+        208.92247009277344,
+        514.0217590332031,
+        393.02301025390625
+      ],
+      "clip_area": 76593.69735357363,
+      "page_area": 484704.0,
+      "text_density": 0.02568089500516271,
+      "kind": "embedded_image",
+      "xref": 638,
+      "score": 5.851041081706374,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-05/assets/figure_candidates/scaling-laws-for-behavioral-foundation-models-over-user-event-sequences/05-p9-embedded_image.png",
+      "filename": "05-p9-embedded_image.png"
+    },
+    {
+      "id": "page-7-embedded-0-0",
+      "page_index": 7,
+      "caption": "第 8 页内嵌图片候选",
+      "clip": [
+        119.75900268554688,
+        60.001617431640625,
+        492.232421875,
+        263.83697509765625
+      ],
+      "clip_area": 75923.25262156595,
+      "page_area": 484704.0,
+      "text_density": 0.025737516201229563,
+      "kind": "embedded_image",
+      "xref": 635,
+      "score": 5.843591695795177,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-05/assets/figure_candidates/scaling-laws-for-behavioral-foundation-models-over-user-event-sequences/06-p8-embedded_image.png",
+      "filename": "06-p8-embedded_image.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-05/assets/figure_candidates/scaling-laws-for-behavioral-foundation-models-over-user-event-sequences/contact-sheet.svg"
+}

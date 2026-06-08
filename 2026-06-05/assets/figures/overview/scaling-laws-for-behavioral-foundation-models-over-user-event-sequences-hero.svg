@@ -1,0 +1,82 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E89B5C"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="620" fill="#FAFBFD"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">行为基础模型的 Scaling Law</text>
+  <text x="450" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">用户事件序列上 ~600 组实验 · 10¹⁵–10¹⁹ FLOPs</text>
+
+  <!-- Central balance: small embedder vs big context transformer -->
+  <polygon points="450,430 420,490 480,490" fill="#1E3A5F"/>
+  <rect x="380" y="488" width="140" height="8" fill="#1E3A5F"/>
+
+  <!-- Beam -->
+  <line x1="200" y1="350" x2="700" y2="350" stroke="#1E3A5F" stroke-width="4" stroke-linecap="round"/>
+  <line x1="450" y1="350" x2="450" y2="430" stroke="#1E3A5F" stroke-width="4"/>
+
+  <!-- Left pan: Embedder (small) -->
+  <line x1="240" y1="350" x2="200" y2="280" stroke="#1E3A5F" stroke-width="1.5"/>
+  <line x1="240" y1="350" x2="280" y2="280" stroke="#1E3A5F" stroke-width="1.5"/>
+  <circle cx="240" cy="250" r="38" fill="#FFF1E3" stroke="#E89B5C" stroke-width="2.5"/>
+  <text x="240" y="246" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">Embedder</text>
+  <text x="240" y="266" text-anchor="middle" font-size="15" font-weight="700" fill="#E89B5C">≈ 2%</text>
+  <text x="240" y="320" text-anchor="middle" font-size="11" fill="#3D4F65">item 多模态特征</text>
+
+  <!-- Right pan: Context Transformer (big) -->
+  <line x1="660" y1="350" x2="600" y2="240" stroke="#1E3A5F" stroke-width="1.5"/>
+  <line x1="660" y1="350" x2="720" y2="240" stroke="#1E3A5F" stroke-width="1.5"/>
+  <circle cx="660" cy="210" r="62" fill="#E8F1FC" stroke="#4B8BDA" stroke-width="2.5"/>
+  <text x="660" y="202" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">Decoder Transformer</text>
+  <text x="660" y="226" text-anchor="middle" font-size="18" font-weight="700" fill="#4B8BDA">≈ 98%</text>
+  <text x="660" y="305" text-anchor="middle" font-size="11" fill="#3D4F65">承载主要算力 · next-event</text>
+
+  <!-- Tilt indicator -->
+  <text x="450" y="395" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">算力最优分配</text>
+
+  <!-- Top-left: D/N ratio -->
+  <g transform="translate(40,100)">
+    <rect width="200" height="70" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.2"/>
+    <text x="100" y="24" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">数据/参数比 D/N</text>
+    <text x="100" y="44" text-anchor="middle" font-size="11" fill="#3D4F65">低算力 344 → 高算力 36</text>
+    <text x="100" y="60" text-anchor="middle" font-size="11" fill="#E89B5C">重数据 → Chinchilla</text>
+  </g>
+  <path d="M 160,175 Q 190,210 210,232" stroke="#4B8BDA" stroke-width="1.5" fill="none" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+
+  <!-- Top-right: critical batch size -->
+  <g transform="translate(660,100)">
+    <rect width="200" height="70" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.2"/>
+    <text x="100" y="24" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">临界 batch size B꜀</text>
+    <text x="100" y="44" text-anchor="middle" font-size="11" fill="#3D4F65">val-loss: B꜀ ≈ 570</text>
+    <text x="100" y="60" text-anchor="middle" font-size="11" fill="#3D4F65">NDCG@10: B꜀ ≈ 200</text>
+  </g>
+  <path d="M 740,175 Q 720,205 700,228" stroke="#4B8BDA" stroke-width="1.5" fill="none" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+
+  <!-- Bottom-left: negatives K -->
+  <g transform="translate(40,510)">
+    <rect width="220" height="70" rx="8" fill="#FFF6EC" stroke="#E89B5C" stroke-width="1.2"/>
+    <text x="110" y="24" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">负采样数 K</text>
+    <text x="110" y="44" text-anchor="middle" font-size="11" fill="#3D4F65">大算力越偏好更多负样本</text>
+    <text x="110" y="60" text-anchor="middle" font-size="11" fill="#E89B5C">10¹⁹ 后瓶颈 = 显存</text>
+  </g>
+
+  <!-- Bottom-right: deployment recipe -->
+  <g transform="translate(640,510)">
+    <rect width="220" height="70" rx="8" fill="#FFF6EC" stroke="#E89B5C" stroke-width="1.2"/>
+    <text x="110" y="24" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">面向部署的配方</text>
+    <text x="110" y="44" text-anchor="middle" font-size="11" fill="#3D4F65">先定上线指标</text>
+    <text x="110" y="60" text-anchor="middle" font-size="11" fill="#3D4F65">再拟合 scaling law</text>
+  </g>
+
+  <!-- Bottom takeaway arrow -->
+  <path d="M 270,545 L 630,545" stroke="#E89B5C" stroke-width="2" fill="none" marker-end="url(#arrOrange)"/>
+  <text x="450" y="538" text-anchor="middle" font-size="11" fill="#1E3A5F" font-weight="600">不同指标 → 不同最优配方</text>
+
+</svg>
