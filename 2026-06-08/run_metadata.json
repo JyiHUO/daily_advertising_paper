@@ -1,0 +1,18 @@
+{
+  "date": "2026-06-08",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 6,
+  "supplementary_count": 1,
+  "focus_titles": [
+    "SSRLive: Live Streaming Recommendation with Dynamic Semantic ID",
+    "Beyond Matching: Category-Guided Latent Intent Reasoning for Generative Retrieval in E-Commerce"
+  ],
+  "focus_status": {
+    "SSRLive: Live Streaming Recommendation with Dynamic Semantic ID": "completed",
+    "Beyond Matching: Category-Guided Latent Intent Reasoning for Generative Retrieval in E-Commerce": "completed"
+  }
+}

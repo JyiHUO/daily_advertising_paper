@@ -1,0 +1,58 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E89B5C"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="38" text-anchor="middle" font-size="20" font-weight="600" fill="#1E3A5F">生成只是探针，判别才出分</text>
+
+  <!-- Generative side: SID tokens -->
+  <g>
+    <rect x="50" y="80" width="240" height="130" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="170" y="105" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">生成式：语义压缩</text>
+    <rect x="70" y="125" width="60" height="30" rx="4" fill="#DBEAFE" stroke="#4B8BDA"/>
+    <text x="100" y="145" text-anchor="middle" font-size="12" fill="#1E3A5F">静态 SID</text>
+    <rect x="140" y="125" width="60" height="30" rx="4" fill="#FFE8D1" stroke="#E89B5C"/>
+    <text x="170" y="145" text-anchor="middle" font-size="12" fill="#1E3A5F">动态 SID</text>
+    <rect x="210" y="125" width="60" height="30" rx="4" fill="#DBEAFE" stroke="#4B8BDA"/>
+    <text x="240" y="145" text-anchor="middle" font-size="12" fill="#1E3A5F">静态 SID</text>
+    <text x="170" y="180" text-anchor="middle" font-size="11" fill="#3D4F65">直播间表征（顺手生成）</text>
+    <text x="170" y="198" text-anchor="middle" font-size="10" fill="#3D4F65" font-style="italic">SID 表达直播间实时状态</text>
+  </g>
+
+  <!-- Task Queries as probes -->
+  <g>
+    <rect x="430" y="80" width="240" height="130" rx="10" fill="#FFF7ED" stroke="#E89B5C" stroke-width="1.5"/>
+    <text x="550" y="105" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">任务 Query 探针</text>
+    <circle cx="475" cy="150" r="22" fill="#FFE8D1" stroke="#E89B5C"/>
+    <text x="475" y="154" text-anchor="middle" font-size="11" fill="#1E3A5F">看30s</text>
+    <circle cx="550" cy="150" r="22" fill="#FFE8D1" stroke="#E89B5C"/>
+    <text x="550" y="154" text-anchor="middle" font-size="11" fill="#1E3A5F">看200s</text>
+    <circle cx="625" cy="150" r="22" fill="#FFE8D1" stroke="#E89B5C"/>
+    <text x="625" y="154" text-anchor="middle" font-size="11" fill="#1E3A5F">下单</text>
+    <text x="550" y="198" text-anchor="middle" font-size="10" fill="#7A4A1F" font-style="italic">每任务一组 query，各取所需</text>
+  </g>
+
+  <!-- Probes reach into SID tokens -->
+  <path d="M430,150 C360,150 320,148 275,148" stroke="#E89B5C" stroke-width="1.8" fill="none" stroke-dasharray="4,3" marker-end="url(#arO)"/>
+
+  <!-- Discriminative scoring -->
+  <g>
+    <rect x="220" y="290" width="280" height="80" rx="10" fill="#E8F0F9" stroke="#1E3A5F" stroke-width="2"/>
+    <text x="360" y="318" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">判别式多任务塔</text>
+    <text x="360" y="340" text-anchor="middle" font-size="12" fill="#3D4F65">× 用户–主播交叉特征</text>
+    <text x="360" y="358" text-anchor="middle" font-size="11" fill="#3D4F65">→ 三路打分加权融合</text>
+  </g>
+
+  <!-- arrows down -->
+  <path d="M170,210 C170,255 270,275 285,290" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M550,210 C550,255 450,275 435,290" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+
+  <!-- final score -->
+  <path d="M360,370 L360,398" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="360" y="425" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">预排序分</text>
+</svg>

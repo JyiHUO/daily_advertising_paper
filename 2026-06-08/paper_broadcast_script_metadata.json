@@ -1,0 +1,13 @@
+{
+  "report_date": "2026-06-08",
+  "provider": "litellm-opus",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 2649,
+  "focus_titles": [
+    "SSRLive: Live Streaming Recommendation with Dynamic Semantic ID",
+    "Beyond Matching: Category-Guided Latent Intent Reasoning for Generative Retrieval in E-Commerce"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Steve"
+}

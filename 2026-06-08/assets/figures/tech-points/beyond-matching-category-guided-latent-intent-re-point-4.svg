@@ -1,0 +1,123 @@
+<svg height="600" width="960" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97B5C"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="32" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">想一次，分多路</text>
+  <text x="400" y="54" text-anchor="middle" font-size="13" fill="#3D4F65">潜在推理在 beam 展开之前完成，所有分支共享</text>
+
+  <!-- Left: Explicit CoT -->
+  <g>
+    <text x="190" y="92" text-anchor="middle" font-size="13" font-weight="700" fill="#C97B5C">显式 CoT：每条 beam 各想一遍</text>
+    <circle cx="100" cy="150" r="22" fill="#FBEEE6" stroke="#C97B5C" stroke-width="1.5"/>
+    <text x="100" y="154" text-anchor="middle" font-size="11" fill="#1E3A5F">query</text>
+
+    <g stroke="#C97B5C" stroke-width="1.5" fill="none">
+      <path d="M122,142 L168,120" marker-end="url(#arO)"/>
+      <path d="M122,150 L168,150" marker-end="url(#arO)"/>
+      <path d="M122,158 L168,180" marker-end="url(#arO)"/>
+    </g>
+
+    <g>
+      <circle cx="186" cy="120" r="5" fill="#C97B5C"/>
+      <circle cx="208" cy="120" r="5" fill="#C97B5C"/>
+      <circle cx="230" cy="120" r="5" fill="#C97B5C"/>
+      <rect x="246" y="111" width="40" height="18" rx="3" fill="#1E3A5F"/>
+      <text x="266" y="124" text-anchor="middle" fill="#fff" font-size="10">SID</text>
+
+      <circle cx="186" cy="150" r="5" fill="#C97B5C"/>
+      <circle cx="208" cy="150" r="5" fill="#C97B5C"/>
+      <circle cx="230" cy="150" r="5" fill="#C97B5C"/>
+      <rect x="246" y="141" width="40" height="18" rx="3" fill="#1E3A5F"/>
+      <text x="266" y="154" text-anchor="middle" fill="#fff" font-size="10">SID</text>
+
+      <circle cx="186" cy="180" r="5" fill="#C97B5C"/>
+      <circle cx="208" cy="180" r="5" fill="#C97B5C"/>
+      <circle cx="230" cy="180" r="5" fill="#C97B5C"/>
+      <rect x="246" y="171" width="40" height="18" rx="3" fill="#1E3A5F"/>
+      <text x="266" y="184" text-anchor="middle" fill="#fff" font-size="10">SID</text>
+    </g>
+
+    <text x="190" y="222" text-anchor="middle" font-size="11" fill="#C97B5C">开销 ∝ N × R（每 beam 重算一遍）</text>
+  </g>
+
+  <!-- divider -->
+  <line x1="400" y1="80" x2="400" y2="240" stroke="#D5DCE5" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- Right: CaLIR -->
+  <g>
+    <text x="600" y="92" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">CaLIR：先想好，再分叉</text>
+
+    <circle cx="440" cy="150" r="22" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="440" y="154" text-anchor="middle" font-size="11" fill="#1E3A5F">query</text>
+
+    <line x1="462" y1="150" x2="486" y2="150" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ar)"/>
+
+    <g>
+      <rect x="488" y="128" width="130" height="44" rx="6" fill="#DCEAF7" stroke="#4B8BDA" stroke-width="1.5"/>
+      <circle cx="510" cy="150" r="5" fill="#4B8BDA"/>
+      <circle cx="533" cy="150" r="5" fill="#4B8BDA"/>
+      <circle cx="556" cy="150" r="5" fill="#4B8BDA"/>
+      <circle cx="596" cy="150" r="5" fill="#4B8BDA"/>
+      <text x="576" y="153" text-anchor="middle" font-size="10" fill="#3D4F65">···</text>
+      <text x="553" y="190" text-anchor="middle" font-size="11" fill="#1E3A5F" font-weight="600">L 步潜在推理（仅一次）</text>
+    </g>
+
+    <g stroke="#4B8BDA" stroke-width="1.5" fill="none">
+      <path d="M620,138 L658,108" marker-end="url(#ar)"/>
+      <path d="M620,146 L658,138" marker-end="url(#ar)"/>
+      <path d="M620,154 L658,168" marker-end="url(#ar)"/>
+      <path d="M620,162 L658,198" marker-end="url(#ar)"/>
+    </g>
+
+    <g>
+      <rect x="660" y="100" width="54" height="16" rx="3" fill="#1E3A5F"/>
+      <text x="687" y="112" text-anchor="middle" font-size="10" fill="#fff">SID 1</text>
+      <rect x="660" y="130" width="54" height="16" rx="3" fill="#1E3A5F"/>
+      <text x="687" y="142" text-anchor="middle" font-size="10" fill="#fff">SID 2</text>
+      <rect x="660" y="160" width="54" height="16" rx="3" fill="#1E3A5F"/>
+      <text x="687" y="172" text-anchor="middle" font-size="10" fill="#fff">SID 3</text>
+      <rect x="660" y="190" width="54" height="16" rx="3" fill="#1E3A5F"/>
+      <text x="687" y="202" text-anchor="middle" font-size="10" fill="#fff">SID N</text>
+    </g>
+
+    <text x="600" y="222" text-anchor="middle" font-size="11" fill="#1E3A5F">开销 ∝ L（与 N、m 解耦）</text>
+  </g>
+
+  <!-- Bottom emphasis -->
+  <g>
+    <rect x="120" y="280" width="560" height="180" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.2"/>
+    <text x="400" y="308" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">关键：思考发生在分叉之前</text>
+
+    <g transform="translate(160,345)">
+      <rect x="0" y="0" width="110" height="56" rx="8" fill="#DCEAF7" stroke="#4B8BDA" stroke-width="1.5"/>
+      <text x="55" y="24" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">共享隐状态</text>
+      <text x="55" y="42" text-anchor="middle" font-size="10" fill="#3D4F65">batch 级一次</text>
+    </g>
+
+    <g stroke="#4B8BDA" stroke-width="1.4" fill="none">
+      <path d="M270,360 L418,355" marker-end="url(#ar)"/>
+      <path d="M270,373 L418,375" marker-end="url(#ar)"/>
+      <path d="M270,386 L418,395" marker-end="url(#ar)"/>
+    </g>
+
+    <g>
+      <rect x="420" y="346" width="100" height="18" rx="3" fill="#fff" stroke="#4B8BDA"/>
+      <text x="470" y="359" text-anchor="middle" font-size="10" fill="#1E3A5F">beam 1 → SID</text>
+      <rect x="420" y="366" width="100" height="18" rx="3" fill="#fff" stroke="#4B8BDA"/>
+      <text x="470" y="379" text-anchor="middle" font-size="10" fill="#1E3A5F">beam 2 → SID</text>
+      <rect x="420" y="386" width="100" height="18" rx="3" fill="#fff" stroke="#4B8BDA"/>
+      <text x="470" y="399" text-anchor="middle" font-size="10" fill="#1E3A5F">beam N → SID</text>
+    </g>
+
+    <text x="610" y="368" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="700">不随 N、m 放大</text>
+    <text x="610" y="388" text-anchor="middle" font-size="11" fill="#3D4F65">低延迟 + 推理收益</text>
+
+    <text x="400" y="442" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">想一次 · 分 N 路 · 各自解码 SID</text>
+  </g>
+</svg>

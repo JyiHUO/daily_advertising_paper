@@ -1,0 +1,9 @@
+{
+  "title": "AI计算广告论文播报 2026-06-08：当语义ID不再是静态身份证",
+  "shownotes_html": "<p>这一期我们聚焦一个工业界正在悄悄发生的范式转变：生成式推荐里的 Semantic ID，正在从'离线一次成型'走向'在线持续演化'。如果你在做生成式召回或排序，今天这三篇论文值得停下来认真看看。</p><p><strong>本期重点：</strong></p><ul><li><strong>直播推荐的动态语义ID（SSRLive: Live Streaming Recommendation with Dynamic Semantic ID）</strong>：淘宝把直播间的SID拆成静态+动态两张'身份证'，动态码本用EMA在线漂移，再配合用户侧前向的Partial Run把生成式开销藏进IO等待里，线上GMV和观看时长双增长。</li><li><strong>电商生成式检索的隐式思维链（Beyond Matching: Category-Guided Latent Intent Reasoning for Generative Retrieval in E-Commerce）</strong>：在解码SID前让模型先在隐空间走几步'类目规划'，配合预建类目trie做受限beam search，几乎不加延迟就拿到接近显式CoT的召回收益，对广告生成式召回是现成可迁移的套路。</li><li><strong>SID训练中持续精修（DREAM: Dynamic Refinement of Early Assignment Mappings）</strong>：直指当前SID普遍依赖一次性离线tokenization的痛点，把早期分配做动态精修，对冷启动和长尾item特别有意义。</li></ul><p><strong>今日趋势：</strong></p><ul><li>cs.IR只有17篇但工业级议题密度抬升，电商生成式检索、直播推荐、多业务线冷启动同时在攻击同一个问题——SID的静态性与语义鸿沟。</li><li>长上下文压缩正在成为跨领域的共性方向：从Yandex的长用户史编码到Agent工具注册表压缩，方法论殊途同归。</li></ul><p>如果你也在思考'你的SID配得上你业务的变化速度吗'，欢迎在评论区聊聊你们的落地经验。本期内容由 AI 自动生成，如有疏漏欢迎指正。</p>",
+  "report_date": "2026-06-08",
+  "provider": "litellm-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-06-08T21:48:01Z"
+}

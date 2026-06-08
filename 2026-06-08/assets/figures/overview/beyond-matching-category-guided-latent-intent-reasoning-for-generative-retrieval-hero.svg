@@ -1,0 +1,124 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E08A4B"/>
+    </marker>
+    <radialGradient id="brain" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#DCEAFB"/>
+      <stop offset="100%" stop-color="#A9C8EC"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">CaLIR：在生成 SID 之前，先在心里"想"一遍类目</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#3D4F65">类目引导的潜在意图推理 · 让生成式检索兼顾召回质量与线上延迟</text>
+
+  <!-- LEFT: Query -->
+  <g>
+    <rect x="40" y="200" width="170" height="120" rx="14" fill="#FFF3E6" stroke="#E08A4B" stroke-width="1.6"/>
+    <text x="125" y="228" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">用户查询</text>
+    <text x="125" y="258" text-anchor="middle" font-size="12" fill="#3D4F65">"MacBook 16寸</text>
+    <text x="125" y="276" text-anchor="middle" font-size="12" fill="#3D4F65">户外摄影保护壳"</text>
+    <text x="125" y="302" text-anchor="middle" font-size="11" fill="#9B6B3F" font-style="italic">短 · 噪声 · 多属性</text>
+  </g>
+
+  <!-- CENTER: Latent reasoning brain -->
+  <g>
+    <ellipse cx="450" cy="300" rx="195" ry="135" fill="url(#brain)" opacity="0.55"/>
+    <text x="450" y="180" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">潜在意图推理 (L 步，不出 token)</text>
+
+    <!-- HSR label above -->
+    <text x="450" y="234" text-anchor="middle" font-size="11" fill="#1E3A5F" font-weight="600">HSR · 层级类目对齐 (粗 → 细)</text>
+
+    <!-- Hierarchy chain h1->h4 -->
+    <g>
+      <circle cx="320" cy="300" r="32" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="2"/>
+      <text x="320" y="296" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">h₁</text>
+      <text x="320" y="312" text-anchor="middle" font-size="10" fill="#3D4F65">电子</text>
+
+      <circle cx="404" cy="300" r="32" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="2"/>
+      <text x="404" y="296" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">h₂</text>
+      <text x="404" y="312" text-anchor="middle" font-size="10" fill="#3D4F65">电脑</text>
+
+      <circle cx="488" cy="300" r="32" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="2"/>
+      <text x="488" y="296" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">h₃</text>
+      <text x="488" y="312" text-anchor="middle" font-size="10" fill="#3D4F65">配件</text>
+
+      <circle cx="572" cy="300" r="34" fill="#1E3A5F" stroke="#1E3A5F" stroke-width="2"/>
+      <text x="572" y="296" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF">h_L</text>
+      <text x="572" y="312" text-anchor="middle" font-size="10" fill="#DCEAFB">保护壳</text>
+
+      <line x1="352" y1="300" x2="370" y2="300" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+      <line x1="436" y1="300" x2="454" y2="300" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+      <line x1="520" y1="300" x2="536" y2="300" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+    </g>
+
+    <!-- QRE label below -->
+    <text x="450" y="370" text-anchor="middle" font-size="11" fill="#1E3A5F" font-weight="600">QRE · 多正例对比，靠近所有相关类目原型</text>
+
+    <!-- shared note -->
+    <text x="450" y="402" text-anchor="middle" font-size="10.5" fill="#9B6B3F" font-style="italic">一次"心算"，所有 beam 共享 → 不随 N、m 放大</text>
+  </g>
+
+  <!-- Arrow query -> brain -->
+  <line x1="212" y1="270" x2="284" y2="295" stroke="#E08A4B" stroke-width="2" marker-end="url(#arrOrange)"/>
+
+  <!-- RIGHT: Constrained decoding -->
+  <g>
+    <rect x="690" y="180" width="180" height="240" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.6"/>
+    <text x="780" y="208" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">动态前缀 Trie</text>
+    <text x="780" y="225" text-anchor="middle" font-size="10.5" fill="#3D4F65">Top-K 类目 trie 合并</text>
+
+    <!-- mini tree -->
+    <g stroke="#4B8BDA" stroke-width="1.5" fill="#FFFFFF">
+      <circle cx="780" cy="252" r="9"/>
+      <line x1="772" y1="259" x2="745" y2="285"/>
+      <line x1="780" y1="261" x2="780" y2="285"/>
+      <line x1="788" y1="259" x2="815" y2="285"/>
+      <circle cx="745" cy="294" r="8"/>
+      <circle cx="780" cy="294" r="8"/>
+      <circle cx="815" cy="294" r="8"/>
+      <line x1="745" y1="302" x2="735" y2="325"/>
+      <line x1="745" y1="302" x2="755" y2="325"/>
+      <line x1="780" y1="302" x2="780" y2="325"/>
+      <line x1="815" y1="302" x2="815" y2="325"/>
+      <circle cx="735" cy="333" r="6" fill="#1E3A5F"/>
+      <circle cx="755" cy="333" r="6"/>
+      <circle cx="780" cy="333" r="6" fill="#1E3A5F"/>
+      <circle cx="815" cy="333" r="6"/>
+    </g>
+
+    <text x="780" y="378" text-anchor="middle" font-size="11" fill="#3D4F65">受约束 beam search</text>
+    <text x="780" y="396" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">SID: ⟨a₁⟩⟨b₂⟩⟨c₃⟩⟨d₄⟩</text>
+  </g>
+
+  <!-- Arrow brain -> trie -->
+  <line x1="610" y1="290" x2="686" y2="262" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="648" y="258" text-anchor="middle" font-size="10" fill="#1E3A5F">类目分布</text>
+
+  <!-- Bottom takeaway bar -->
+  <g>
+    <rect x="120" y="475" width="660" height="95" rx="12" fill="#F7FAFD" stroke="#C9D7E8" stroke-width="1"/>
+    <text x="450" y="503" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">隐式推理替代显式 CoT：保留"先想清楚"的收益，砍掉逐 token 生成的延迟</text>
+
+    <g transform="translate(165,540)">
+      <circle r="5" fill="#E08A4B"/>
+      <text x="12" y="4" font-size="11.5" fill="#3D4F65">召回更准</text>
+    </g>
+    <g transform="translate(295,540)">
+      <circle r="5" fill="#4B8BDA"/>
+      <text x="12" y="4" font-size="11.5" fill="#3D4F65">线上低延迟</text>
+    </g>
+    <g transform="translate(430,540)">
+      <circle r="5" fill="#1E3A5F"/>
+      <text x="12" y="4" font-size="11.5" fill="#3D4F65">类目层级即"思维脚手架"</text>
+    </g>
+    <g transform="translate(640,540)">
+      <circle r="5" fill="#9B6B3F"/>
+      <text x="12" y="4" font-size="11.5" fill="#3D4F65">骨干可迁移</text>
+    </g>
+  </g>
+</svg>

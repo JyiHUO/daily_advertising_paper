@@ -1,0 +1,87 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="36" text-anchor="middle" font-size="20" font-weight="600" fill="#1E3A5F">推理感知约束解码：先选类目，再裁剪搜索空间</text>
+
+  <!-- Query input -->
+  <rect x="280" y="60" width="240" height="38" rx="19" fill="#FFF7ED" stroke="#E89A5C" stroke-width="1.5"/>
+  <text x="400" y="84" text-anchor="middle" font-size="13" fill="#1E3A5F">查询：MacBook 保护壳</text>
+
+  <!-- LEFT: Full Trie (huge, unconstrained) -->
+  <g>
+    <text x="160" y="128" text-anchor="middle" font-size="14" fill="#3D4F65">全量商品 Trie（盲解码）</text>
+    <circle cx="160" cy="150" r="8" fill="#C7D2DE"/>
+    <g stroke="#C7D2DE" stroke-width="1.2" fill="none" opacity="0.8">
+      <path d="M160,158 L70,210 M160,158 L110,210 M160,158 L160,210 M160,158 L210,210 M160,158 L250,210"/>
+      <path d="M70,218 L50,280 M70,218 L85,280 M110,218 L105,280 M110,218 L130,280 M160,218 L155,280 M160,218 L175,280 M210,218 L200,280 M210,218 L225,280 M250,218 L240,280 M250,218 L275,280"/>
+    </g>
+    <g fill="#C7D2DE">
+      <circle cx="50" cy="285" r="3.5"/><circle cx="85" cy="285" r="3.5"/>
+      <circle cx="105" cy="285" r="3.5"/><circle cx="130" cy="285" r="3.5"/>
+      <circle cx="155" cy="285" r="3.5"/><circle cx="175" cy="285" r="3.5"/>
+      <circle cx="200" cy="285" r="3.5"/><circle cx="225" cy="285" r="3.5"/>
+      <circle cx="240" cy="285" r="3.5"/><circle cx="275" cy="285" r="3.5"/>
+    </g>
+    <text x="160" y="320" text-anchor="middle" font-size="12" fill="#8A95A3">海量候选 · 慢且易偏</text>
+    <text x="160" y="430" text-anchor="middle" font-size="12" fill="#8A95A3">✗ 在全量 Trie 上盲解码</text>
+  </g>
+
+  <!-- Funnel: latent intent → top-K categories -->
+  <g transform="translate(340,120)">
+    <rect x="0" y="0" width="120" height="56" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="60" y="24" text-anchor="middle" font-size="13" fill="#1E3A5F">潜在意图推理</text>
+    <text x="60" y="42" text-anchor="middle" font-size="12" fill="#3D4F65">Top-K 类目</text>
+
+    <path d="M10,76 L110,76 L75,134 L45,134 Z" fill="#FFF1E6" stroke="#E89A5C" stroke-width="1.5"/>
+    <text x="60" y="105" text-anchor="middle" font-size="11" fill="#1E3A5F">类目过滤 · 合并 Trie</text>
+  </g>
+
+  <!-- arrow: query → latent reasoning -->
+  <line x1="400" y1="100" x2="400" y2="118" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- RIGHT: Small Trie (constrained) -->
+  <g>
+    <text x="640" y="128" text-anchor="middle" font-size="14" fill="#1E3A5F" font-weight="600">动态合并 Trie（受约束）</text>
+    <circle cx="640" cy="150" r="9" fill="#4B8BDA"/>
+    <g stroke="#4B8BDA" stroke-width="1.8" fill="none">
+      <path d="M640,159 L560,200 M640,159 L640,200 M640,159 L720,200"/>
+    </g>
+    <g>
+      <circle cx="560" cy="206" r="7" fill="#FFD9B8" stroke="#E89A5C"/>
+      <circle cx="640" cy="206" r="7" fill="#FFD9B8" stroke="#E89A5C"/>
+      <circle cx="720" cy="206" r="7" fill="#FFD9B8" stroke="#E89A5C"/>
+    </g>
+    <text x="560" y="228" text-anchor="middle" font-size="10" fill="#3D4F65">笔记本配件</text>
+    <text x="640" y="228" text-anchor="middle" font-size="10" fill="#3D4F65">平板配件</text>
+    <text x="720" y="228" text-anchor="middle" font-size="10" fill="#3D4F65">数码包</text>
+
+    <g stroke="#4B8BDA" stroke-width="1.4" fill="none">
+      <path d="M560,213 L540,265 M560,213 L580,265"/>
+      <path d="M640,213 L620,265 M640,213 L660,265"/>
+      <path d="M720,213 L700,265 M720,213 L740,265"/>
+    </g>
+    <g fill="#1E3A5F">
+      <circle cx="540" cy="270" r="4"/><circle cx="580" cy="270" r="4"/>
+      <circle cx="620" cy="270" r="4"/><circle cx="660" cy="270" r="4"/>
+      <circle cx="700" cy="270" r="4"/><circle cx="740" cy="270" r="4"/>
+    </g>
+
+    <path d="M640,295 L640,330" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+    <rect x="555" y="338" width="170" height="40" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="640" y="362" text-anchor="middle" font-size="13" fill="#1E3A5F">Beam Search → SID</text>
+
+    <text x="640" y="430" text-anchor="middle" font-size="12" fill="#1E3A5F">✓ 仅在类目子树内合法展开</text>
+  </g>
+
+  <!-- arrow funnel → small trie root -->
+  <line x1="418" y1="250" x2="628" y2="150" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#ar)"/>
+
+  <!-- arrow funnel → contrast with full trie (dashed, weakened path) -->
+  <line x1="380" y1="250" x2="200" y2="155" stroke="#C7D2DE" stroke-width="1.6" stroke-dasharray="4,3"/>
+
+  <text x="400" y="470" text-anchor="middle" font-size="12" fill="#3D4F65" font-style="italic">离线建 Trie · 在线只合并根 · 非法 token 概率置零</text>
+</svg>
