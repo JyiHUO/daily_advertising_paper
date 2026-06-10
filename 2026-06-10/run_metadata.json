@@ -1,0 +1,18 @@
+{
+  "date": "2026-06-10",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 12,
+  "supplementary_count": 2,
+  "focus_titles": [
+    "HMAF: A Hierarchical Multi-Slot GD-RTB Allocation Framework",
+    "DUET -- Dual User Embedding Transformers for Offsite Conversion Prediction"
+  ],
+  "focus_status": {
+    "HMAF: A Hierarchical Multi-Slot GD-RTB Allocation Framework": "completed",
+    "DUET -- Dual User Embedding Transformers for Offsite Conversion Prediction": "completed"
+  }
+}

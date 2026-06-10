@@ -1,0 +1,57 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="36" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E3A5F">离线算稀缺度，线上照价分配</text>
+
+  <!-- Warehouse / scarcity calculator -->
+  <g>
+    <rect x="40" y="90" width="200" height="240" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="140" y="118" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">离线对偶规划</text>
+    <text x="140" y="138" text-anchor="middle" font-size="11" fill="#3D4F65">(全局供需计算)</text>
+
+    <g transform="translate(70,160)">
+      <rect width="140" height="38" rx="6" fill="#FFFFFF" stroke="#C97B4A" stroke-width="1.5"/>
+      <circle cx="14" cy="19" r="5" fill="#C97B4A"/>
+      <text x="28" y="17" font-size="12" fill="#1E3A5F" font-weight="bold">α  合约紧迫度</text>
+      <text x="28" y="31" font-size="10" fill="#3D4F65">还差多少没投</text>
+    </g>
+    <g transform="translate(70,210)">
+      <rect width="140" height="38" rx="6" fill="#FFFFFF" stroke="#C97B4A" stroke-width="1.5"/>
+      <circle cx="14" cy="19" r="5" fill="#C97B4A"/>
+      <text x="28" y="17" font-size="12" fill="#1E3A5F" font-weight="bold">β  请求容量</text>
+      <text x="28" y="31" font-size="10" fill="#3D4F65">每次PV的预算</text>
+    </g>
+    <g transform="translate(70,260)">
+      <rect width="140" height="38" rx="6" fill="#FFFFFF" stroke="#C97B4A" stroke-width="1.5"/>
+      <circle cx="14" cy="19" r="5" fill="#C97B4A"/>
+      <text x="28" y="17" font-size="12" fill="#1E3A5F" font-weight="bold">δ  坑位上限</text>
+      <text x="28" y="31" font-size="10" fill="#3D4F65">页面曝光配额</text>
+    </g>
+  </g>
+
+  <!-- Arrow -->
+  <line x1="245" y1="210" x2="355" y2="210" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="300" y="200" text-anchor="middle" font-size="11" fill="#4B8BDA" font-style="italic">影子价格</text>
+
+  <!-- Online page -->
+  <g>
+    <rect x="360" y="110" width="200" height="200" rx="10" fill="#FFF6EC" stroke="#C97B4A" stroke-width="1.8"/>
+    <text x="460" y="135" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">线上页面</text>
+    <text x="460" y="152" text-anchor="middle" font-size="11" fill="#3D4F65">照价分配多坑位</text>
+
+    <rect x="385" y="170" width="150" height="34" rx="4" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="460" y="192" text-anchor="middle" font-size="12" fill="#1E3A5F">坑位 1</text>
+
+    <rect x="385" y="212" width="150" height="34" rx="4" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="460" y="234" text-anchor="middle" font-size="12" fill="#1E3A5F">坑位 2</text>
+
+    <rect x="385" y="254" width="150" height="34" rx="4" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="460" y="276" text-anchor="middle" font-size="12" fill="#1E3A5F">坑位 3</text>
+  </g>
+
+  <text x="300" y="385" text-anchor="middle" font-size="12" fill="#3D4F65">把NP-hard的全局组合，化作每个组合的一个“价格”</text>
+</svg>

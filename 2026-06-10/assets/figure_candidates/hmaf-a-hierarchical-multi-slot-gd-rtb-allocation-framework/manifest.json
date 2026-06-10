@@ -1,0 +1,119 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-10/downloaded_pdfs/hmaf-a-hierarchical-multi-slot-gd-rtb-allocation-framework.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-10/assets/figure_candidates/hmaf-a-hierarchical-multi-slot-gd-rtb-allocation-framework",
+  "candidates": [
+    {
+      "id": "page-1-block-2",
+      "page_index": 1,
+      "caption": "Figure 1: Flowchart of Meituan display advertising system",
+      "clip": [
+        38.43199920654297,
+        65.68048095703125,
+        309.4120178222656,
+        267.3079833984375
+      ],
+      "clip_area": 54637.02436501393,
+      "page_area": 484704.0,
+      "text_density": 0.0383255515371333,
+      "kind": "image_block_with_caption",
+      "score": 38.607078048500156,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-10/assets/figure_candidates/hmaf-a-hierarchical-multi-slot-gd-rtb-allocation-framework/01-p2-image_block_with_caption.png",
+      "filename": "01-p2-image_block_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-0-0",
+      "page_index": 1,
+      "caption": "Figure 1: Flowchart of Meituan display advertising system",
+      "clip": [
+        48.43199920654297,
+        71.68048095703125,
+        299.4120178222656,
+        261.3079833984375
+      ],
+      "clip_area": 47592.714092797134,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 304,
+      "score": 37.528807934364416,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-10/assets/figure_candidates/hmaf-a-hierarchical-multi-slot-gd-rtb-allocation-framework/02-p2-embedded_image_with_caption.png",
+      "filename": "02-p2-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-2-embedded-0-0",
+      "page_index": 2,
+      "caption": "Figure 2: Overview of HMAF.",
+      "clip": [
+        54.40899658203125,
+        71.68728637695312,
+        557.593017578125,
+        453.4779968261719
+      ],
+      "clip_area": 192110.98486279324,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 305,
+      "score": 31.746119292368686,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-10/assets/figure_candidates/hmaf-a-hierarchical-multi-slot-gd-rtb-allocation-framework/03-p3-embedded_image_with_caption.png",
+      "filename": "03-p3-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-2-block-2",
+      "page_index": 2,
+      "caption": "Figure 2: Overview of HMAF.",
+      "clip": [
+        44.40899658203125,
+        65.68728637695312,
+        567.593017578125,
+        459.4779968261719
+      ],
+      "clip_area": 206025.00732373074,
+      "page_area": 484704.0,
+      "text_density": 0.011389100882473488,
+      "kind": "image_block_with_caption",
+      "score": 31.597870261130033,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-10/assets/figure_candidates/hmaf-a-hierarchical-multi-slot-gd-rtb-allocation-framework/04-p3-image_block_with_caption.png",
+      "filename": "04-p3-image_block_with_caption.png"
+    },
+    {
+      "id": "page-7-embedded-0-0",
+      "page_index": 7,
+      "caption": "第 8 页内嵌图片候选",
+      "clip": [
+        305.9549865722656,
+        210.99221801757812,
+        450.00030517578125,
+        311.72900390625
+      ],
+      "clip_area": 14510.662418427877,
+      "page_area": 484704.0,
+      "text_density": 0.009933454533329182,
+      "kind": "embedded_image",
+      "xref": 318,
+      "score": 5.1612295824269765,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-10/assets/figure_candidates/hmaf-a-hierarchical-multi-slot-gd-rtb-allocation-framework/05-p8-embedded_image.png",
+      "filename": "05-p8-embedded_image.png"
+    },
+    {
+      "id": "page-7-embedded-1-0",
+      "page_index": 7,
+      "caption": "第 8 页内嵌图片候选",
+      "clip": [
+        426.1499938964844,
+        210.99221801757812,
+        570.1953125,
+        311.72900390625
+      ],
+      "clip_area": 14510.662418427877,
+      "page_area": 484704.0,
+      "text_density": 0.009799280118101694,
+      "kind": "embedded_image",
+      "xref": 319,
+      "score": 5.1612295824269765,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-10/assets/figure_candidates/hmaf-a-hierarchical-multi-slot-gd-rtb-allocation-framework/06-p8-embedded_image.png",
+      "filename": "06-p8-embedded_image.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-10/assets/figure_candidates/hmaf-a-hierarchical-multi-slot-gd-rtb-allocation-framework/contact-sheet.svg"
+}

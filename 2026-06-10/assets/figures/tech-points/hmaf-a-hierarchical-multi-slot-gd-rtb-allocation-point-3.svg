@@ -1,0 +1,51 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" font-family="-apple-system,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="aro" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E89B4A"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">没有真值标签？让评委自己造一个</text>
+
+  <!-- Generator -->
+  <g>
+    <rect x="50" y="110" width="170" height="110" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="135" y="146" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">Generator（学生）</text>
+    <text x="135" y="180" text-anchor="middle" font-size="12" fill="#3D4F65">出主排版 + 扰动候选</text>
+    <text x="135" y="200" text-anchor="middle" font-size="11" fill="#3D4F65">list₁  list₂  list₃</text>
+  </g>
+
+  <!-- Evaluator -->
+  <g>
+    <rect x="380" y="110" width="170" height="110" rx="14" fill="#FFF4E6" stroke="#E89B4A" stroke-width="2"/>
+    <text x="465" y="146" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">Evaluator（评委）</text>
+    <text x="465" y="180" text-anchor="middle" font-size="12" fill="#3D4F65">listwise eCPM 打分</text>
+    <text x="465" y="200" text-anchor="middle" font-size="11" fill="#B86518">挑出 S* → 伪标签</text>
+  </g>
+
+  <!-- forward arrow -->
+  <path d="M222,148 L376,148" stroke="#4B8BDA" stroke-width="2.2" fill="none" marker-end="url(#ar)"/>
+  <text x="299" y="140" text-anchor="middle" font-size="11" fill="#3D4F65">候选排版</text>
+
+  <!-- backward arrow -->
+  <path d="M378,188 L224,188" stroke="#E89B4A" stroke-width="2.2" fill="none" marker-end="url(#aro)"/>
+  <text x="299" y="208" text-anchor="middle" font-size="11" fill="#B86518">最优 S* 当老师</text>
+
+  <!-- Global state -->
+  <g>
+    <rect x="120" y="290" width="360" height="92" rx="14" fill="#F2F6FB" stroke="#1E3A5F" stroke-width="1.5" stroke-dasharray="5,3"/>
+    <text x="300" y="316" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">对偶变量 = 全局提醒</text>
+    <text x="300" y="342" text-anchor="middle" font-size="11" fill="#3D4F65">α 合约欠投度 · β 坑位价值 · δ 曝光约束</text>
+    <text x="300" y="364" text-anchor="middle" font-size="11" fill="#3D4F65">让生成与评估都感知全局稀缺度</text>
+  </g>
+
+  <!-- arrows from global state to both modules -->
+  <path d="M170,290 C150,260 138,240 135,222" stroke="#4B8BDA" stroke-width="1.8" fill="none" marker-end="url(#ar)"/>
+  <path d="M430,290 C450,260 462,240 465,222" stroke="#4B8BDA" stroke-width="1.8" fill="none" marker-end="url(#ar)"/>
+
+  <!-- bottom note -->
+  <text x="300" y="412" text-anchor="middle" font-size="11" fill="#1E3A5F" font-style="italic">损失 = 交叉熵对齐 S* ＋ 回归对齐线上真实结算 eCPM</text>
+</svg>

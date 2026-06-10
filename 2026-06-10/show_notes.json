@@ -1,0 +1,9 @@
+{
+  "title": "AI 计算广告论文播报 2026-06-10：美团 HMAF 与 Meta DUET",
+  "shownotes_html": "<p>cs.IR 今日只有 20 篇，但工业广告信号密度是这一周最高的一天——HMAF 管多坑位分配、DUET 管底层转化信号、Pacing 管预算不确定性，三篇拼在一起几乎是一条完整的工业广告决策栈。</p><p><strong>本期重点</strong></p><ul><li><strong>层次化多坑位 GD-RTB 分配框架（HMAF: A Hierarchical Multi-Slot GD-RTB Allocation Framework）</strong>：美团把保量合约履约和实时竞价耦合在同一优化层级，用离线对偶规划得到\"影子价格\"，把传统 PID 的全局加压改成\"按请求加压\"，再配 Generator-Evaluator 做 listwise 排序。</li><li><strong>双用户 Transformer 做离站转化预测（DUET -- Dual User Embedding Transformers for Offsite Conversion Prediction）</strong>：Meta 的思路很直接——点击和转化是两种\"语言\"，与其塞同一个上游模型，不如各训各的，再用静态画像 cross-attention 锚定稀疏转化序列，配事件触发异步推断和向量量化落地。</li><li><strong>流媒体广告 pacing 的决策校准 conformal 不确定性（Decision-Calibrated Conformal Uncertainty for Pacing Decisions in Streaming Advertising）</strong>：把 conformal 预测直接对齐 pacing 决策误差，而不是校准通用残差，给预算和库存控制提供可证明区间，正好补上 HMAF 与 DUET 之间的预算层。</li><li><strong>语义 ID 体检工具（SIDInspector）</strong>：第一次把生成式推荐里被反复复用的语义 ID tokenizer 当成可审计组件，做覆盖率、别名和行为一致性检查——当一个组件被反复复用，它就需要一个审计接口。</li></ul><p><strong>今日趋势</strong></p><ul><li>广告侧研究开始从\"堆模型\"转向\"拆模块\"：分配可证明、信号要分流、组件要可审计，整体气质明显更工程化。</li><li>SinkRec、SIDInspector、Atomic Intent 三篇从不同角度共同质疑同一件事——压缩之后的用户表征到底还能不能代表用户。</li></ul><p>欢迎在评论区聊聊：你的广告或推荐系统里，有没有哪个被反复复用、但从来没人正经体检过的组件？本期内容由 AI 自动生成，如有疏漏欢迎指正。</p>",
+  "report_date": "2026-06-10",
+  "provider": "litellm-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-06-10T21:52:13Z"
+}

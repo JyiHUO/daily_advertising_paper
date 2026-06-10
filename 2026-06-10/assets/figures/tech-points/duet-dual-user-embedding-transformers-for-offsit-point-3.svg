@@ -1,0 +1,61 @@
+<svg height="600" width="960" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#5BA66B"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-size="19" font-weight="600" fill="#1E3A5F">事件触发：算一次，存起来，反复查</text>
+
+  <!-- Trigger -->
+  <g transform="translate(60,170)">
+    <circle cx="55" cy="55" r="50" fill="#FFF4E0" stroke="#E8A33D" stroke-width="2"/>
+    <path d="M58 25 L40 60 L54 60 L46 88 L72 53 L58 53 Z" fill="#E8A33D"/>
+    <text x="55" y="135" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">触发事件</text>
+    <text x="55" y="154" text-anchor="middle" font-size="12" fill="#3D4F65">站内转化</text>
+  </g>
+
+  <!-- Big model -->
+  <g transform="translate(260,150)">
+    <rect x="0" y="0" width="180" height="120" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="90" y="40" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F">大模型前向</text>
+    <text x="90" y="64" text-anchor="middle" font-size="12" fill="#3D4F65">ConvAUN 单次推断</text>
+    <text x="90" y="92" text-anchor="middle" font-size="12" fill="#3D4F65">SIDE 量化压缩 ×1/4</text>
+  </g>
+
+  <!-- Feature store -->
+  <g transform="translate(560,150)">
+    <rect x="0" y="0" width="180" height="120" rx="10" fill="#F0F7F0" stroke="#5BA66B" stroke-width="2"/>
+    <rect x="22" y="28" width="136" height="56" rx="4" fill="#FFFFFF" stroke="#5BA66B"/>
+    <text x="90" y="50" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">量化嵌入</text>
+    <text x="90" y="72" text-anchor="middle" font-family="monospace" font-size="11" fill="#5BA66B">0x7A 3F C2</text>
+    <text x="90" y="106" text-anchor="middle" font-size="13" fill="#3D4F65">特征库</text>
+  </g>
+
+  <!-- top arrows -->
+  <line x1="170" y1="210" x2="255" y2="210" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#a)"/>
+  <line x1="445" y1="210" x2="555" y2="210" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#a)"/>
+
+  <!-- Online ranker -->
+  <g transform="translate(560,360)">
+    <rect x="0" y="0" width="180" height="80" rx="10" fill="#FFF4E0" stroke="#E8A33D" stroke-width="2"/>
+    <text x="90" y="34" text-anchor="middle" font-size="15" font-weight="600" fill="#1E3A5F">在线 Ranker</text>
+    <text x="90" y="58" text-anchor="middle" font-size="12" fill="#3D4F65">查表 · 毫秒级</text>
+  </g>
+
+  <!-- store -> ranker -->
+  <line x1="650" y1="270" x2="650" y2="355" stroke="#5BA66B" stroke-width="2.2" marker-end="url(#g)"/>
+  <text x="660" y="318" font-size="12" fill="#5BA66B">查询</text>
+
+  <!-- bottom-left notes -->
+  <g transform="translate(80,360)">
+    <text x="0" y="0" font-size="13" font-weight="600" fill="#1E3A5F">解耦的两条速度</text>
+    <text x="0" y="24" font-size="12" fill="#3D4F65">离线：贵的算一次</text>
+    <text x="0" y="46" font-size="12" fill="#3D4F65">在线：只查不算</text>
+    <text x="0" y="68" font-size="12" fill="#3D4F65">NE 校验拒绝退化</text>
+  </g>
+</svg>

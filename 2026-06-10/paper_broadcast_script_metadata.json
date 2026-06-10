@@ -1,0 +1,13 @@
+{
+  "report_date": "2026-06-10",
+  "provider": "litellm-opus",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 3297,
+  "focus_titles": [
+    "HMAF: A Hierarchical Multi-Slot GD-RTB Allocation Framework",
+    "DUET -- Dual User Embedding Transformers for Offsite Conversion Prediction"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Steve"
+}
