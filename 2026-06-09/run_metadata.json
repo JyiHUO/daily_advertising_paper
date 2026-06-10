@@ -1,0 +1,18 @@
+{
+  "date": "2026-06-09",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 15,
+  "supplementary_count": 4,
+  "focus_titles": [
+    "DeRes: Decoupling Residual Stability and Adaptivity for Scalable CTR Prediction",
+    "Beyond Item IDs: Scaling Short-Form-Video Recommendation via Semantic-Native Long Sequence Modeling"
+  ],
+  "focus_status": {
+    "DeRes: Decoupling Residual Stability and Adaptivity for Scalable CTR Prediction": "completed",
+    "Beyond Item IDs: Scaling Short-Form-Video Recommendation via Semantic-Native Long Sequence Modeling": "completed"
+  }
+}

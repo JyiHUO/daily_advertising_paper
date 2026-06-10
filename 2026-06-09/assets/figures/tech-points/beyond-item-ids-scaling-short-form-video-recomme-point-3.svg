@@ -1,0 +1,54 @@
+<svg height="600" width="960" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97B5C"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="36" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="19" font-weight="bold" fill="#1E3A5F">全局Query：空白笔记本从行为里抄写重点</text>
+
+  <!-- Global Query Token: empty notebook -->
+  <g>
+    <rect x="60" y="170" width="150" height="170" rx="6" fill="#FFF8E8" stroke="#E0A85C" stroke-width="2.5"/>
+    <line x1="80" y1="210" x2="190" y2="210" stroke="#E0A85C" stroke-width="1" stroke-dasharray="4,3"/>
+    <line x1="80" y1="240" x2="190" y2="240" stroke="#E0A85C" stroke-width="1" stroke-dasharray="4,3"/>
+    <line x1="80" y1="270" x2="190" y2="270" stroke="#E0A85C" stroke-width="1" stroke-dasharray="4,3"/>
+    <line x1="80" y1="300" x2="190" y2="300" stroke="#E0A85C" stroke-width="1" stroke-dasharray="4,3"/>
+    <text x="135" y="160" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">Global Query Token</text>
+    <text x="135" y="362" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65">空白 · 无画像污染</text>
+  </g>
+
+  <!-- Behavior super-tokens -->
+  <g font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#1E3A5F" text-anchor="middle">
+    <rect x="380" y="115" width="100" height="36" rx="4" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="430" y="138">超token ①</text>
+    <rect x="500" y="165" width="100" height="36" rx="4" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="550" y="188">超token ②</text>
+    <rect x="380" y="215" width="100" height="36" rx="4" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="430" y="238">超token ③</text>
+    <rect x="500" y="265" width="100" height="36" rx="4" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="550" y="288">超token ④</text>
+    <rect x="380" y="315" width="100" height="36" rx="4" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="430" y="338">超token ⑤</text>
+  </g>
+  <text x="490" y="378" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65">折叠后的行为序列（共200个超token）</text>
+
+  <!-- Attention arrows: notebook reads from behaviors -->
+  <path d="M210,220 Q295,160 380,133" fill="none" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M210,240 Q340,200 500,183" fill="none" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M210,255 L380,233" fill="none" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M210,275 Q340,290 500,283" fill="none" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M210,295 Q295,330 380,333" fill="none" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <text x="260" y="200" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#4B8BDA" font-style="italic">self-attention 抄写</text>
+
+  <!-- Pooling output -->
+  <path d="M135,340 Q135,430 290,455" fill="none" stroke="#C97B5C" stroke-width="2" marker-end="url(#ar2)"/>
+  <path d="M490,353 Q490,420 410,438" fill="none" stroke="#C97B5C" stroke-width="2" marker-end="url(#ar2)"/>
+
+  <rect x="290" y="445" width="320" height="40" rx="6" fill="#FBE9DC" stroke="#C97B5C" stroke-width="2"/>
+  <text x="450" y="471" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" fill="#1E3A5F">masked mean pooling → 用户向量</text>
+</svg>

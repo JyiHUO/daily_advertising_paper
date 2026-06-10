@@ -1,0 +1,13 @@
+{
+  "report_date": "2026-06-09",
+  "provider": "litellm-opus",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 2753,
+  "focus_titles": [
+    "DeRes: Decoupling Residual Stability and Adaptivity for Scalable CTR Prediction",
+    "Beyond Item IDs: Scaling Short-Form-Video Recommendation via Semantic-Native Long Sequence Modeling"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Steve"
+}

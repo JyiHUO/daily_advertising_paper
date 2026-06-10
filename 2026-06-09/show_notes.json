@@ -1,0 +1,9 @@
+{
+  "title": "AI计算广告论文播报 06-09：排序scaling的下一步是换连接方式",
+  "shownotes_html": "<p>本期聚焦工业排序与召回的三大新动向：更深的残差、更长的序列、更统一的生成式架构。我们用两篇硬货告诉你——单纯堆层数堆长度已经不是最划算的路径，残差怎么连、ID怎么编、token怎么打包，才决定你的scaling曲线还能不能继续往上走。</p><p><strong>本期重点</strong></p><ul><li><strong>解耦稳定性与适应性的可扩展CTR残差结构（DeRes: Decoupling Residual Stability and Adaptivity for Scalable CTR Prediction）</strong>：把残差拆成identity传送带和跨层注意力检索员两条并行通道，再用SiLU替Softmax让多兴趣可同时激活、无关历史可被负权重抑制；scaling指数是OneTrans的1.66倍，8层就能追平对手16层。</li><li><strong>超越Item ID的短视频长序列建模（Beyond Item IDs: Scaling Short-Form-Video Recommendation via Semantic-Native Long Sequence Modeling）</strong>：用RQ-VAE前两层粗粒度码替代Video ID解决冷启与embedding膨胀，再用零参数的时间折叠把相邻token拼成超事件，训练步时降八成多、显存降九成多，已在十亿用户产品上线。</li><li><strong>统一语义ID生成与item级打分的工业召回架构（Gryphon: A Unified Architecture for Semantic-ID Generation and Item-Level Scoring in Industrial Recommendations）</strong>：在同一架构里解决beam search只优化token序列似然的问题，A/B替换超过15个传统召回源，印证生成式范式正在向整条召回链路渗透。</li></ul><p><strong>今日趋势</strong></p><ul><li>cs.IR升至31篇，工业排序/召回沿\"更深残差、更长序列、更统一生成式\"三个维度同时scale，普遍用Semantic ID或残差解耦解决信号稀释。</li><li>Agent侧上下文压缩与推荐侧长序列压缩在方法论上趋同：都在用压缩+选择性记忆解决\"输入过长但决策证据稀疏\"的问题。</li></ul><p>如果要做一件具体的事，建议先看看自家排序模型的残差结构和序列侧ID表示——下一个零点几AUC可能就藏在那里。本期内容由 AI 自动生成，欢迎在评论区交流你的看法与实践经验。</p>",
+  "report_date": "2026-06-09",
+  "provider": "litellm-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-06-09T22:00:56Z"
+}

@@ -1,0 +1,117 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-09/downloaded_pdfs/beyond-item-ids-scaling-short-form-video-recommendation-via-semantic-native-long.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-09/assets/figure_candidates/beyond-item-ids-scaling-short-form-video-recommendation-via-semantic-native-long",
+  "candidates": [
+    {
+      "id": "page-1-block-15",
+      "page_index": 1,
+      "caption": "Figure 1: Semantic ID generation. Raw videos are quantized via RQ-VAE, followed by Bi-gram Truncation to flatten the path into a unified integer ID, preserving category-level se- mantics for sequence modeling.",
+      "clip": [
+        307.9679870605469,
+        404.7912292480469,
+        568.1734619140625,
+        543.1329956054688
+      ],
+      "clip_area": 35997.28500710707,
+      "page_area": 484704.0,
+      "text_density": 0.03457856069104908,
+      "kind": "image_block_with_caption",
+      "score": 73.3999698334123,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-09/assets/figure_candidates/beyond-item-ids-scaling-short-form-video-recommendation-via-semantic-native-long/01-p2-image_block_with_caption.png",
+      "filename": "01-p2-image_block_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-0-0",
+      "page_index": 1,
+      "caption": "Figure 1: Semantic ID generation. Raw videos are quantized via RQ-VAE, followed by Bi-gram Truncation to flatten the path into a unified integer ID, preserving category-level se- mantics for sequence modeling.",
+      "clip": [
+        317.9679870605469,
+        410.7912292480469,
+        558.1734619140625,
+        537.1329956054688
+      ],
+      "clip_area": 30347.983981716447,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 103,
+      "score": 72.33719982201907,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-09/assets/figure_candidates/beyond-item-ids-scaling-short-form-video-recommendation-via-semantic-native-long/02-p2-embedded_image_with_caption.png",
+      "filename": "02-p2-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-3-block-28",
+      "page_index": 3,
+      "caption": "In this work, we presented a scalable framework for modeling ultra-long user sequences using Semantic IDs, effectively resolving",
+      "clip": [
+        287.3549865722656,
+        372.7924072265625,
+        588.8041625976563,
+        681.5924072265625
+      ],
+      "clip_area": 93087.50555664064,
+      "page_area": 484704.0,
+      "text_density": 0.640554480352627,
+      "kind": "captioned_figure",
+      "score": 48.03430561729601,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-09/assets/figure_candidates/beyond-item-ids-scaling-short-form-video-recommendation-via-semantic-native-long/03-p4-captioned_figure.png",
+      "filename": "03-p4-captioned_figure.png"
+    },
+    {
+      "id": "page-1-block-6",
+      "page_index": 1,
+      "caption": "To reconcile real-time responsiveness with long-term memory, our system adopts Hybrid Synchronous-Asynchronous Framework[ 12 ], decoupling user interests modeling into two modules:",
+      "clip": [
+        22.92899932861328,
+        257.9528076171875,
+        325.6313720703125,
+        566.7528076171875
+      ],
+      "clip_area": 93474.49270263674,
+      "page_area": 484704.0,
+      "text_density": 0.6981582006427556,
+      "kind": "captioned_figure",
+      "score": 43.03860547447374,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-09/assets/figure_candidates/beyond-item-ids-scaling-short-form-video-recommendation-via-semantic-native-long/04-p2-captioned_figure.png",
+      "filename": "04-p2-captioned_figure.png"
+    },
+    {
+      "id": "page-2-block-11",
+      "page_index": 2,
+      "caption": "Figure 2: Global-Aware Compressed Transformer Overview.",
+      "clip": [
+        43.810997009277344,
+        476.57623291015625,
+        304.03582763671875,
+        629.4990234375
+      ],
+      "clip_area": 39794.30726405373,
+      "page_area": 484704.0,
+      "text_density": 0.07680692118297575,
+      "kind": "image_block_with_caption",
+      "score": 35.4421589696006,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-09/assets/figure_candidates/beyond-item-ids-scaling-short-form-video-recommendation-via-semantic-native-long/05-p3-image_block_with_caption.png",
+      "filename": "05-p3-image_block_with_caption.png"
+    },
+    {
+      "id": "page-2-embedded-0-0",
+      "page_index": 2,
+      "caption": "Figure 2: Global-Aware Compressed Transformer Overview.",
+      "clip": [
+        53.810997009277344,
+        482.57623291015625,
+        294.03582763671875,
+        623.4990234375
+      ],
+      "clip_area": 33853.15348597756,
+      "page_area": 484704.0,
+      "text_density": 0.010924782112878154,
+      "kind": "embedded_image_with_caption",
+      "xref": 109,
+      "score": 34.376146149844196,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-09/assets/figure_candidates/beyond-item-ids-scaling-short-form-video-recommendation-via-semantic-native-long/06-p3-embedded_image_with_caption.png",
+      "filename": "06-p3-embedded_image_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-09/assets/figure_candidates/beyond-item-ids-scaling-short-form-video-recommendation-via-semantic-native-long/contact-sheet.svg"
+}

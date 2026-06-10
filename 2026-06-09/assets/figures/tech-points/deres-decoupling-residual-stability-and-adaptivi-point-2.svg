@@ -1,0 +1,65 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="-apple-system, Helvetica, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">残差权重：零和竞争 → 自由共存</text>
+  <text x="400" y="60" text-anchor="middle" font-size="13" fill="#3D4F65">Softmax → SiLU （多兴趣并行 + 软遗忘）</text>
+
+  <!-- LEFT: Softmax (zero-sum seesaw) -->
+  <g>
+    <text x="200" y="105" text-anchor="middle" font-size="15" font-weight="700" fill="#B45A3C">Softmax · 抢一个冠军</text>
+
+    <!-- seesaw -->
+    <line x1="80" y1="240" x2="320" y2="240" stroke="#B45A3C" stroke-width="3" stroke-linecap="round"/>
+    <polygon points="200,240 180,290 220,290" fill="#B45A3C"/>
+    <line x1="180" y1="290" x2="220" y2="290" stroke="#B45A3C" stroke-width="3"/>
+
+    <!-- blocks on seesaw -->
+    <circle cx="110" cy="225" r="22" fill="#FCE8DF" stroke="#B45A3C" stroke-width="2"/>
+    <text x="110" y="230" text-anchor="middle" font-size="13" fill="#1E3A5F">B0 ↑</text>
+
+    <circle cx="200" cy="225" r="18" fill="#FCE8DF" stroke="#B45A3C" stroke-width="2" opacity="0.6"/>
+    <text x="200" y="229" text-anchor="middle" font-size="11" fill="#1E3A5F">B1</text>
+
+    <circle cx="290" cy="255" r="22" fill="#FCE8DF" stroke="#B45A3C" stroke-width="2"/>
+    <text x="290" y="260" text-anchor="middle" font-size="13" fill="#1E3A5F">B4 ↓</text>
+
+    <text x="200" y="350" text-anchor="middle" font-size="12" fill="#3D4F65">权重之和 = 1，此消彼长</text>
+    <text x="200" y="372" text-anchor="middle" font-size="12" font-style="italic" fill="#B45A3C">无法同时激活多个兴趣</text>
+  </g>
+
+  <!-- divider arrow -->
+  <line x1="355" y1="240" x2="445" y2="240" stroke="#4B8BDA" stroke-width="3" marker-end="url(#ar)"/>
+
+  <!-- RIGHT: SiLU (independent dials) -->
+  <g>
+    <text x="610" y="105" text-anchor="middle" font-size="15" font-weight="700" fill="#2E7D7D">SiLU · 各自独立打分</text>
+
+    <g>
+      <circle cx="510" cy="230" r="34" fill="#E0F2EF" stroke="#2E7D7D" stroke-width="2"/>
+      <text x="510" y="226" text-anchor="middle" font-size="13" fill="#1E3A5F">B0</text>
+      <text x="510" y="246" text-anchor="middle" font-size="13" font-weight="700" fill="#2E7D7D">+0.68</text>
+      <text x="510" y="285" text-anchor="middle" font-size="11" fill="#3D4F65">激活</text>
+    </g>
+
+    <g>
+      <circle cx="610" cy="230" r="34" fill="#E0F2EF" stroke="#2E7D7D" stroke-width="2"/>
+      <text x="610" y="226" text-anchor="middle" font-size="13" fill="#1E3A5F">B1</text>
+      <text x="610" y="246" text-anchor="middle" font-size="13" font-weight="700" fill="#2E7D7D">+0.55</text>
+      <text x="610" y="285" text-anchor="middle" font-size="11" fill="#3D4F65">同时激活</text>
+    </g>
+
+    <g>
+      <circle cx="710" cy="230" r="34" fill="#FDECEC" stroke="#C75450" stroke-width="2"/>
+      <text x="710" y="226" text-anchor="middle" font-size="13" fill="#1E3A5F">B4</text>
+      <text x="710" y="246" text-anchor="middle" font-size="13" font-weight="700" fill="#C75450">−0.12</text>
+      <text x="710" y="285" text-anchor="middle" font-size="11" fill="#C75450">软遗忘</text>
+    </g>
+
+    <text x="610" y="350" text-anchor="middle" font-size="12" fill="#3D4F65">无归一化分母：正值并行召回 + 负值主动抑制</text>
+    <text x="610" y="372" text-anchor="middle" font-size="12" font-weight="700" font-style="italic" fill="#2E7D7D">+0.08% AUC，推理延迟更低</text>
+  </g>
+</svg>
