@@ -1,0 +1,117 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E8A04A"/>
+    </marker>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#DCEAFB"/>
+      <stop offset="100%" stop-color="#A9C8EE"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1000" height="680" fill="#F7F9FC"/>
+
+  <!-- Title -->
+  <text x="500" y="48" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">十亿级在线推荐：LLM 自然语言用户画像</text>
+  <text x="500" y="72" text-anchor="middle" font-size="13" fill="#3D4F65">语义画像 → 在线召回 → A/B 正向 的工业链路</text>
+
+  <!-- LEFT: input cluster -->
+  <g>
+    <text x="125" y="160" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">观看历史 · 语义聚类</text>
+    <circle cx="75" cy="215" r="26" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <circle cx="140" cy="200" r="22" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <circle cx="195" cy="240" r="20" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <circle cx="105" cy="280" r="22" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <circle cx="170" cy="295" r="18" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="75" y="219" text-anchor="middle" font-size="10" fill="#3D4F65">烹饪</text>
+    <text x="140" y="204" text-anchor="middle" font-size="10" fill="#3D4F65">宠物</text>
+    <text x="195" y="244" text-anchor="middle" font-size="10" fill="#3D4F65">剧集</text>
+    <text x="105" y="284" text-anchor="middle" font-size="10" fill="#3D4F65">音乐</text>
+    <text x="170" y="299" text-anchor="middle" font-size="10" fill="#3D4F65">运动</text>
+  </g>
+
+  <!-- arrow into core -->
+  <path d="M 220 250 Q 290 280 350 320" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+  <!-- CORE: persona -->
+  <g>
+    <circle cx="500" cy="340" r="155" fill="url(#core)" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="500" y="218" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">自然语言用户画像</text>
+    <text x="500" y="236" text-anchor="middle" font-size="11" fill="#3D4F65">Gemini Nano · 蒸馏 · 异步生成</text>
+
+    <!-- left half: exploitation -->
+    <path d="M 500 340 m -130 0 a 130 130 0 0 1 130 -130 L 500 340 z" fill="#D9E8FB" opacity="0.55"/>
+    <text x="430" y="280" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">利用</text>
+    <text x="430" y="300" text-anchor="middle" font-size="10" fill="#3D4F65">总结已有兴趣</text>
+    <text x="430" y="324" text-anchor="middle" font-size="10" fill="#3D4F65">· 家庭烹饪</text>
+    <text x="430" y="340" text-anchor="middle" font-size="10" fill="#3D4F65">· 宠物日常</text>
+    <text x="430" y="356" text-anchor="middle" font-size="10" fill="#3D4F65">· 孟加拉剧</text>
+
+    <!-- right half: exploration -->
+    <path d="M 500 340 m 0 -130 a 130 130 0 0 1 0 260 L 500 340 z" fill="#FCEAD2" opacity="0.55"/>
+    <text x="570" y="280" text-anchor="middle" font-size="12" font-weight="700" fill="#A05A1F">探索</text>
+    <text x="570" y="300" text-anchor="middle" font-size="10" fill="#3D4F65">生成新颖话题</text>
+    <text x="570" y="324" text-anchor="middle" font-size="10" fill="#3D4F65">· 分子料理</text>
+    <text x="570" y="340" text-anchor="middle" font-size="10" fill="#3D4F65">· 宠物行为学</text>
+    <text x="570" y="356" text-anchor="middle" font-size="10" fill="#3D4F65">· 即兴喜剧</text>
+
+    <!-- divider -->
+    <line x1="500" y1="215" x2="500" y2="465" stroke="#FFFFFF" stroke-width="2"/>
+
+    <!-- random sample -->
+    <text x="500" y="410" text-anchor="middle" font-size="11" font-weight="600" fill="#1E3A5F">每次请求 · 各随机抽 1 条</text>
+    <circle cx="460" cy="430" r="6" fill="#4B8BDA"/>
+    <circle cx="540" cy="430" r="6" fill="#E8A04A"/>
+  </g>
+
+  <!-- Teacher distillation badge -->
+  <g>
+    <rect x="40" y="440" width="180" height="70" rx="10" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="130" y="465" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">教师 → 学生</text>
+    <text x="130" y="483" text-anchor="middle" font-size="10" fill="#3D4F65">Gemini Pro (CoT) 生成</text>
+    <text x="130" y="499" text-anchor="middle" font-size="10" fill="#3D4F65">Nano 微调 + 量化部署</text>
+  </g>
+  <path d="M 220 460 Q 290 430 355 385" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="4,3" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Async serving -->
+  <g>
+    <rect x="40" y="540" width="180" height="60" rx="10" fill="#FFF5E6" stroke="#E8A04A"/>
+    <text x="130" y="565" text-anchor="middle" font-size="12" font-weight="700" fill="#A05A1F">异步推理 + 缓存</text>
+    <text x="130" y="585" text-anchor="middle" font-size="10" fill="#3D4F65">前台不阻塞 · 安全回退</text>
+  </g>
+
+  <!-- RIGHT: outputs -->
+  <!-- Recall arrows -->
+  <path d="M 645 305 L 758 258" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <path d="M 645 380 L 758 430" stroke="#E8A04A" stroke-width="2" fill="none" marker-end="url(#arrO)"/>
+
+  <g>
+    <rect x="760" y="220" width="200" height="80" rx="10" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="860" y="245" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">语义召回</text>
+    <text x="860" y="265" text-anchor="middle" font-size="10" fill="#3D4F65">Transformer 序列模型</text>
+    <text x="860" y="283" text-anchor="middle" font-size="10" fill="#3D4F65">画像约束的近邻搜索</text>
+  </g>
+
+  <g>
+    <rect x="760" y="395" width="200" height="80" rx="10" fill="#FFF5E6" stroke="#E8A04A"/>
+    <text x="860" y="420" text-anchor="middle" font-size="12" font-weight="700" fill="#A05A1F">线上 A/B 收益</text>
+    <text x="860" y="440" text-anchor="middle" font-size="10" fill="#3D4F65">探索曝光 −41%</text>
+    <text x="860" y="458" text-anchor="middle" font-size="10" fill="#3D4F65">观看率 +13.6%</text>
+  </g>
+
+  <!-- Bottom keywords -->
+  <g font-size="11" fill="#1E3A5F">
+    <rect x="280" y="610" width="110" height="30" rx="15" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="335" y="630" text-anchor="middle">实时性</text>
+    <rect x="400" y="610" width="110" height="30" rx="15" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="455" y="630" text-anchor="middle">可解释</text>
+    <rect x="520" y="610" width="110" height="30" rx="15" fill="#FFFFFF" stroke="#4B8BDA"/>
+    <text x="575" y="630" text-anchor="middle">利用 vs 探索</text>
+    <rect x="640" y="610" width="110" height="30" rx="15" fill="#FFFFFF" stroke="#E8A04A"/>
+    <text x="695" y="630" text-anchor="middle" fill="#A05A1F">十亿级落地</text>
+  </g>
+</svg>

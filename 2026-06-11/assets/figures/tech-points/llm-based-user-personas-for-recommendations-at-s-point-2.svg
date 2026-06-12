@@ -1,0 +1,45 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="38" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="bold" fill="#1E3A5F">教师传授思考过程，学生学到推理</text>
+
+  <!-- Teacher -->
+  <circle cx="110" cy="200" r="60" fill="#DDE9F7" stroke="#1E3A5F" stroke-width="2"/>
+  <text x="110" y="196" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">教师 Pro</text>
+  <text x="110" y="216" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65">大而贵</text>
+
+  <!-- Student -->
+  <circle cx="500" cy="200" r="40" fill="#FCEFD9" stroke="#B8704A" stroke-width="2"/>
+  <text x="500" y="197" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" fill="#1E3A5F">学生 Nano</text>
+  <text x="500" y="215" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">小而快</text>
+
+  <!-- CoT box -->
+  <rect x="220" y="150" width="170" height="100" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="305" y="172" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#1E3A5F">推理痕迹 CoT</text>
+  <line x1="235" y1="184" x2="375" y2="184" stroke="#4B8BDA" stroke-width="1"/>
+  <text x="240" y="203" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">1. 总结兴趣</text>
+  <text x="240" y="222" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">2. 生成探索话题</text>
+  <text x="240" y="241" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">3. 过滤校验</text>
+
+  <!-- Arrows -->
+  <line x1="170" y1="200" x2="217" y2="200" stroke="#4B8BDA" stroke-width="2" marker-end="url(#a)"/>
+  <line x1="393" y1="200" x2="457" y2="200" stroke="#4B8BDA" stroke-width="2" marker-end="url(#a)"/>
+
+  <!-- Quality gates -->
+  <text x="300" y="305" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#1E3A5F">三把尺子选 checkpoint</text>
+
+  <g font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#1E3A5F">
+    <rect x="120" y="325" width="120" height="36" rx="18" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="180" y="348" text-anchor="middle">IFR · 格式</text>
+
+    <rect x="250" y="325" width="120" height="36" rx="18" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="310" y="348" text-anchor="middle">BLEURT · 保真</text>
+
+    <rect x="380" y="325" width="120" height="36" rx="18" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="440" y="348" text-anchor="middle">创造力 · 新颖</text>
+  </g>
+</svg>

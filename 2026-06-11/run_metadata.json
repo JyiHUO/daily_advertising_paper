@@ -1,0 +1,16 @@
+{
+  "date": "2026-06-11",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 2,
+  "supplementary_count": 0,
+  "focus_titles": [
+    "LLM-Based User Personas for Recommendations at Scale"
+  ],
+  "focus_status": {
+    "LLM-Based User Personas for Recommendations at Scale": "completed"
+  }
+}

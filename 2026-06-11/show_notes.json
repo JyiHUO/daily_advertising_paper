@@ -1,0 +1,9 @@
+{
+  "title": "AI计算广告论文播报 6月11日 LLM画像登上推荐在线链路",
+  "shownotes_html": "<p>周六9点半，今天我们聊一个分水岭事件：当Google把LLM真正塞进十亿用户视频推荐的在线服务路径，LLM在推荐与广告里的角色，正式从'离线特征供应商'切换成'在线决策参与者'。</p><p><strong>本期重点</strong></p><ul><li><strong>大规模LLM用户画像（LLM-Based User Personas for Recommendations at Scale）</strong>：Google的工业范本，一次prompt同时输出兴趣总结+探索话题，靠教师蒸馏+异步缓存+随机采样把LLM真的跑上线，A/B显示低活用户收益最大。</li><li><strong>扩散式冷启动（DiffCold）</strong>：用扩散模型直接生成冷启动物品的协同表示，绕开'内容映射到行为'的老路，给冷热seesaw困境一个生成式解法。</li><li><strong>解码无关LLM重排（CompRank）</strong>：通过token级压缩与不依赖解码的打分，把LLM重排成本压到接近向量检索量级，让排序链路LLM化更可部署。</li><li><strong>RAG向量稀释（When More Documents Hurt RAG）</strong>：明确指出盲目扩库会让稠密相似度失去区分度，提出领域受限、模型无关的检索范式，是对扩库式RAG的系统反思。</li></ul><p><strong>今日趋势</strong></p><ul><li>cs.IR只有19篇但工业含量高，用户侧画像、物品侧冷启动、排序侧重排同时往LLM化走，主线都是'怎么让LLM便宜到能上线'。</li><li>Agent与RAG的共同议题正在收敛：当检索/上下文规模上去之后如何避免质量塌陷，方法论共性是用结构化组织替代扁平top-k。</li></ul><p>对广告同学最直接的启发在用户理解层——LLM画像可以补足类目/兴趣ID覆盖不到的长尾语义，尤其适合低活与新用户；但异步画像不适合强即时意图场景，安全过滤和探索流量分配也要在工程上提前安排。</p><p>欢迎在评论区聊聊你怎么看LLM在推荐/广告在线链路的下一步落地。本期内容由 AI 自动生成，仅供研究参考。</p>",
+  "report_date": "2026-06-11",
+  "provider": "litellm-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-06-11T21:46:45Z"
+}

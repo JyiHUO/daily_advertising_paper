@@ -1,0 +1,119 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-11/downloaded_pdfs/llm-based-user-personas-for-recommendations-at-scale.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-11/assets/figure_candidates/llm-based-user-personas-for-recommendations-at-scale",
+  "candidates": [
+    {
+      "id": "page-3-block-7",
+      "page_index": 3,
+      "caption": "Figure 1: Training Data Collection with Multi-step Reasoning",
+      "clip": [
+        297.5429992675781,
+        65.68890380859375,
+        578.6083984375,
+        239.010009765625
+      ],
+      "clip_area": 48714.56583038531,
+      "page_area": 484704.0,
+      "text_density": 0.043509317426164165,
+      "kind": "image_block_with_caption",
+      "score": 22.541272953670948,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-11/assets/figure_candidates/llm-based-user-personas-for-recommendations-at-scale/01-p4-image_block_with_caption.png",
+      "filename": "01-p4-image_block_with_caption.png"
+    },
+    {
+      "id": "page-3-embedded-0-0",
+      "page_index": 3,
+      "caption": "Figure 1: Training Data Collection with Multi-step Reasoning",
+      "clip": [
+        307.5429992675781,
+        71.68890380859375,
+        568.6083984375,
+        233.010009765625
+      ],
+      "clip_area": 42115.358921205625,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 304,
+      "score": 21.467948432457842,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-11/assets/figure_candidates/llm-based-user-personas-for-recommendations-at-scale/02-p4-embedded_image_with_caption.png",
+      "filename": "02-p4-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-6-embedded-1-0",
+      "page_index": 6,
+      "caption": "Figure 4: The proposed method drives viewer value. Y-axis shows the degree of improvement of live metrics, X-axis represents the time.",
+      "clip": [
+        168.2050018310547,
+        296.6059875488281,
+        300.30804443359375,
+        391.5929870605469
+      ],
+      "clip_area": 12548.07164318394,
+      "page_area": 484704.0,
+      "text_density": 0.024879589924875035,
+      "kind": "embedded_image_with_caption",
+      "xref": 311,
+      "score": 18.1394230182576,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-11/assets/figure_candidates/llm-based-user-personas-for-recommendations-at-scale/03-p7-embedded_image_with_caption.png",
+      "filename": "03-p7-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-6-embedded-0-0",
+      "page_index": 6,
+      "caption": "Figure 4: The proposed method drives viewer value. Y-axis shows the degree of improvement of live metrics, X-axis represents the time.",
+      "clip": [
+        47.52799987792969,
+        298.579833984375,
+        179.63531494140625,
+        391.5929870605469
+      ],
+      "clip_area": 12287.717918481212,
+      "page_area": 484704.0,
+      "text_density": 0.03052085609096267,
+      "kind": "embedded_image_with_caption",
+      "xref": 310,
+      "score": 18.136530199094235,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-11/assets/figure_candidates/llm-based-user-personas-for-recommendations-at-scale/04-p7-embedded_image_with_caption.png",
+      "filename": "04-p7-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-4-block-11",
+      "page_index": 4,
+      "caption": "Figure 3: Offline evaluation: User representation",
+      "clip": [
+        295.9549865722656,
+        154.93368530273438,
+        582.0603637695312,
+        351.83599853515625
+      ],
+      "clip_area": 56334.81059837621,
+      "page_area": 484704.0,
+      "text_density": 0.046179508906351724,
+      "kind": "image_block_with_caption",
+      "score": 17.625942339981957,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-11/assets/figure_candidates/llm-based-user-personas-for-recommendations-at-scale/05-p5-image_block_with_caption.png",
+      "filename": "05-p5-image_block_with_caption.png"
+    },
+    {
+      "id": "page-4-embedded-0-0",
+      "page_index": 4,
+      "caption": "Figure 3: Offline evaluation: User representation",
+      "clip": [
+        305.9549865722656,
+        160.93368530273438,
+        572.0603637695312,
+        345.83599853515625
+      ],
+      "clip_area": 49203.49980736058,
+      "page_area": 484704.0,
+      "text_density": 0.003464476151418601,
+      "kind": "embedded_image_with_caption",
+      "xref": 306,
+      "score": 16.54670555341512,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-11/assets/figure_candidates/llm-based-user-personas-for-recommendations-at-scale/06-p5-embedded_image_with_caption.png",
+      "filename": "06-p5-embedded_image_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-11/assets/figure_candidates/llm-based-user-personas-for-recommendations-at-scale/contact-sheet.svg"
+}
