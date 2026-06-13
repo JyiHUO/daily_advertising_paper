@@ -1,0 +1,75 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="Helvetica, Arial, sans-serif">
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">每一位 SID = 一个可解释的词槽</text>
+  <text x="400" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">传统 SID 是黑盒码字，KAE 把每位绑到属性词典</text>
+
+  <!-- Traditional SID (left, faded) -->
+  <g opacity="0.6">
+    <text x="152" y="115" text-anchor="middle" font-size="13" fill="#3D4F65">传统 SID（不可解释）</text>
+    <g font-size="14" fill="#1E3A5F">
+      <rect x="60"  y="130" width="40" height="40" rx="6" fill="#E8ECF2" stroke="#9AA7B8"/>
+      <rect x="108" y="130" width="40" height="40" rx="6" fill="#E8ECF2" stroke="#9AA7B8"/>
+      <rect x="156" y="130" width="40" height="40" rx="6" fill="#E8ECF2" stroke="#9AA7B8"/>
+      <rect x="204" y="130" width="40" height="40" rx="6" fill="#E8ECF2" stroke="#9AA7B8"/>
+      <text x="80"  y="156" text-anchor="middle">37</text>
+      <text x="128" y="156" text-anchor="middle">12</text>
+      <text x="176" y="156" text-anchor="middle">94</text>
+      <text x="224" y="156" text-anchor="middle">06</text>
+    </g>
+  </g>
+
+  <!-- Arrow split -->
+  <text x="370" y="158" text-anchor="middle" font-size="26" fill="#4B8BDA">⇒</text>
+
+  <!-- KAE SID (right) -->
+  <text x="622" y="115" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">KAE：词槽化 SID</text>
+  <g>
+    <rect x="470" y="130" width="56" height="46" rx="6" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="498" y="148" text-anchor="middle" font-size="10" fill="#3D4F65">实体</text>
+    <text x="498" y="167" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">跑鞋</text>
+
+    <rect x="532" y="130" width="56" height="46" rx="6" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="560" y="148" text-anchor="middle" font-size="10" fill="#3D4F65">品牌</text>
+    <text x="560" y="167" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">Nike</text>
+
+    <rect x="594" y="130" width="56" height="46" rx="6" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="622" y="148" text-anchor="middle" font-size="10" fill="#3D4F65">材质</text>
+    <text x="622" y="167" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">编织</text>
+
+    <rect x="656" y="130" width="56" height="46" rx="6" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="684" y="148" text-anchor="middle" font-size="10" fill="#3D4F65">功能</text>
+    <text x="684" y="167" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">透气</text>
+
+    <rect x="718" y="130" width="56" height="46" rx="6" fill="#FFF6E6" stroke="#E0A14A" stroke-dasharray="4 3"/>
+    <text x="746" y="148" text-anchor="middle" font-size="10" fill="#8C6A2B">空槽</text>
+    <text x="746" y="168" text-anchor="middle" font-size="18" font-weight="700" fill="#C97A1A">+</text>
+  </g>
+
+  <!-- Arrows defs -->
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Pipeline: source -> scan -> slots -->
+  <rect x="50" y="275" width="220" height="64" rx="10" fill="#EFF6FF" stroke="#4B8BDA"/>
+  <text x="160" y="298" text-anchor="middle" font-size="12" fill="#3D4F65">商品文本</text>
+  <text x="160" y="320" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">Nike 白色透气跑鞋</text>
+
+  <rect x="310" y="275" width="180" height="64" rx="10" fill="#FFF6E6" stroke="#E0A14A"/>
+  <text x="400" y="298" text-anchor="middle" font-size="12" fill="#8C6A2B">扫属性词典</text>
+  <text x="400" y="320" text-anchor="middle" font-size="11" fill="#3D4F65">确定性、无需训练</text>
+
+  <rect x="530" y="275" width="220" height="64" rx="10" fill="#EFF6FF" stroke="#4B8BDA"/>
+  <text x="640" y="298" text-anchor="middle" font-size="12" fill="#3D4F65">填入对应词槽</text>
+  <text x="640" y="320" text-anchor="middle" font-size="11" fill="#1E3A5F">每位 = 一个真实词</text>
+
+  <line x1="270" y1="307" x2="308" y2="307" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ah)"/>
+  <line x1="490" y1="307" x2="528" y2="307" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ah)"/>
+
+  <!-- Bottom punchline -->
+  <rect x="120" y="380" width="560" height="62" rx="10" fill="#FFF6E6" stroke="#E0A14A" stroke-dasharray="4 3"/>
+  <text x="400" y="404" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">空槽 = 运营小时级注入新词</text>
+  <text x="400" y="426" text-anchor="middle" font-size="12" fill="#3D4F65">无需重训模型，保留倒排式实时可编辑性</text>
+</svg>

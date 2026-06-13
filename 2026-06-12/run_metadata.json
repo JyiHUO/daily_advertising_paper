@@ -1,0 +1,18 @@
+{
+  "date": "2026-06-12",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 11,
+  "supplementary_count": 10,
+  "focus_titles": [
+    "OneRetrieval: Unifying Multi-Branch E-commerce Retrieval with an Editable Generative Model",
+    "Cascade Classification of Dermoscopic Images of Skin Neoplasms with Controllable Sensitivity and External Clinical Validation"
+  ],
+  "focus_status": {
+    "OneRetrieval: Unifying Multi-Branch E-commerce Retrieval with an Editable Generative Model": "llm_failed",
+    "Cascade Classification of Dermoscopic Images of Skin Neoplasms with Controllable Sensitivity and External Clinical Validation": "llm_failed"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "title": "AI计算广告论文播报 2026-06-12：统一召回与归因绕过",
+  "shownotes_html": "<p>这一期我们聊两件正在被工业界重新认真对待的事：单一表示能不能取代手工拼装的多阶段召回，以及预测准能不能等同于归因对。两篇论文，分别给出了肯定和否定的答案。</p><p><strong>本期重点</strong></p><ul><li><strong>统一可编辑的生成式召回（OneRetrieval: Unifying Multi-Branch E-commerce Retrieval with an Editable Generative Model）</strong>：快手把倒排、向量、协同三路召回收敛到一个生成模型，关键是用可解释属性位+预留空槽，让运营小时级加新词（比如突然爆红的 LABUBU）而不重训模型——这是过去倒排迟迟拆不掉的真正原因。</li><li><strong>预测不等于归因（Forecasting Is Not Attribution: Localizing Decoder Bypass in Graph-Based Neural MMM）</strong>：作者用一组很狠的对照实验证明，无图、全连接图、真实因果图三种 MMM 的预测 MSE 几乎一样，但归因质量天差地别，并提出反事实扰动诊断 AR-CIG，戳穿了\"MSE 漂亮就能指导预算分配\"的幻觉。</li><li><strong>三边市场的延迟反馈 RL（DoorDash 三边调度多智能体强化学习）</strong>：用离线 RL 在线适配多目标权重，与广告出价里的多目标权重调节高度同构，是值得放进案头的工程范式。</li><li><strong>聚类索引的回归（Helmsman: Cost-Effective ANNS at Scale）</strong>：小红书证明在十亿级搜索/推荐/广告场景，聚类型 ANNS 在 SLA 约束下能比 HNSW 拿到更优性价比，重新打开了底层向量索引的选型空间。</li></ul><p><strong>今日趋势</strong></p><ul><li>工业排序栈正从\"手工融合的多阶段\"向\"可联合优化的单一表示\"收敛，OneRetrieval、Helmsman、PRISMR 在召回、索引、重排三个层面给出同一个信号。</li><li>商业系统中预测信号 ≠ 决策信号，归因可靠性与目标权重在线校正正在成为新的方法论焦点。</li></ul><p>欢迎在评论区聊聊你手上的归因或召回模型，最近一次扰动测试结果如何。本期内容由 AI 自动生成，仅作研究参考，下周见。</p>",
+  "report_date": "2026-06-12",
+  "provider": "litellm-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-06-12T21:51:35Z"
+}

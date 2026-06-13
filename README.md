@@ -4,20 +4,56 @@
 
 ## 最新日报
 
-- **日期**：2026-05-18
+- **日期**：2026-06-12
 - **分类**：cs.IR + cs.AI + cs.LG
-- **候选论文数**：5
+- **候选论文数**：11
 - **必读论文**：
-  - Generative Long-term User Interest Modeling for Click-Through Rate Prediction
-  - XSearch: Explainable Code Search via Concept-to-Code Alignment
-- **日报路径**：[2026-05-18/daily_report.md](2026-05-18/daily_report.md)
+  - OneRetrieval: Unifying Multi-Branch E-commerce Retrieval with an Editable Generative Model
+  - Cascade Classification of Dermoscopic Images of Skin Neoplasms with Controllable Sensitivity and External Clinical Validation
+- **日报路径**：[2026-06-12/daily_report.md](2026-06-12/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
-| 2026-05-18 | cs.IR + cs.AI + cs.LG | 5 | 1 | Generative Long-term User Interest Modeling for Click-Through Rate Prediction | [2026-05-18/daily_report.md](2026-05-18/daily_report.md) |
-|  |  |  | 2 | XSearch: Explainable Code Search via Concept-to-Code Alignment |  |
+| 2026-06-12 | cs.IR + cs.AI + cs.LG | 11 | 1 | OneRetrieval: Unifying Multi-Branch E-commerce Retrieval with an Editable Generative Model | [2026-06-12/daily_report.md](2026-06-12/daily_report.md) |
+|  |  |  | 2 | Cascade Classification of Dermoscopic Images of Skin Neoplasms with Controllable Sensitivity and External Clinical Validation |  |
+| 2026-06-11 | cs.IR + cs.AI + cs.LG | 2 | 1 | LLM-Based User Personas for Recommendations at Scale | [2026-06-11/daily_report.md](2026-06-11/daily_report.md) |
+| 2026-06-10 | cs.IR + cs.AI + cs.LG | 12 | 1 | HMAF: A Hierarchical Multi-Slot GD-RTB Allocation Framework | [2026-06-10/daily_report.md](2026-06-10/daily_report.md) |
+|  |  |  | 2 | DUET -- Dual User Embedding Transformers for Offsite Conversion Prediction |  |
+| 2026-06-09 | cs.IR + cs.AI + cs.LG | 15 | 1 | DeRes: Decoupling Residual Stability and Adaptivity for Scalable CTR Prediction | [2026-06-09/daily_report.md](2026-06-09/daily_report.md) |
+|  |  |  | 2 | Beyond Item IDs: Scaling Short-Form-Video Recommendation via Semantic-Native Long Sequence Modeling |  |
+| 2026-06-08 | cs.IR + cs.AI + cs.LG | 6 | 1 | SSRLive: Live Streaming Recommendation with Dynamic Semantic ID | [2026-06-08/daily_report.md](2026-06-08/daily_report.md) |
+|  |  |  | 2 | Beyond Matching: Category-Guided Latent Intent Reasoning for Generative Retrieval in E-Commerce |  |
+| 2026-06-05 | cs.IR + cs.AI + cs.LG | 7 | 1 | OneReason Technical Report | [2026-06-05/daily_report.md](2026-06-05/daily_report.md) |
+|  |  |  | 2 | Scaling Laws for Behavioral Foundation Models over User Event Sequences |  |
+| 2026-06-04 | cs.IR + cs.AI + cs.LG | 4 | 1 | Variance Reduction for Heavy-Tailed Monetization Metrics in Ranking Experiments via Post-Stratification | [2026-06-04/daily_report.md](2026-06-04/daily_report.md) |
+|  |  |  | 2 | Dual-Stream MLP is All You Need for CTR Prediction |  |
+| 2026-06-03 | cs.IR + cs.AI + cs.LG | 4 | 1 | Taiji: Pareto Optimal Policy Optimization with Semantics-IDs Trade-off for Industrial LLM-Enhanced Recommendation | [2026-06-03/daily_report.md](2026-06-03/daily_report.md) |
+|  |  |  | 2 | Privacy-Robust Incrementality Measurement for Advertising Systems under Signal Loss |  |
+| 2026-06-02 | cs.IR + cs.AI + cs.LG | 15 | 1 | Quantizing Intent: Cross-Domain Semantic IDs from Organic Activity for Industrial Ranking | [2026-06-02/daily_report.md](2026-06-02/daily_report.md) |
+|  |  |  | 2 | UniPinRec: Unifying Generative Retrieval and Ranking at Pinterest Scale |  |
+| 2026-06-01 | cs.IR + cs.AI + cs.LG | 6 | 1 | Model Monotonicity in Autobidding Auctions: When Do Better Predictions Lead to Better Outcomes? | [2026-06-01/daily_report.md](2026-06-01/daily_report.md) |
+|  |  |  | 2 | Graph-GRPO: Dependency-Aware Credit Assignment for Generative E-commerce Search Relevance |  |
+| 2026-05-29 | cs.IR + cs.AI + cs.LG | 15 | 1 | On the Practice of Scaling Search Conversion Rate Prediction | [2026-05-29/daily_report.md](2026-05-29/daily_report.md) |
+|  |  |  | 2 | Rec-Distill: An Industrial Distillation Pipeline for Large-Scale Recommendation Models |  |
+| 2026-05-28 | cs.IR + cs.AI + cs.LG | 16 | 1 | Constrained Auto-Bidding via Generative Response Modeling | [2026-05-28/daily_report.md](2026-05-28/daily_report.md) |
+|  |  |  | 2 | Fine-Tuned LLM as a Complementary Predictor Improving Ads System |  |
+| 2026-05-27 | cs.IR + cs.AI + cs.LG | 7 | 1 | Uniboost: Global Coordination with Value Alignment for Fair and Efficient Traffic Allocation | [2026-05-27/daily_report.md](2026-05-27/daily_report.md) |
+|  |  |  | 2 | Credit-assigned Policy Gradient for Early Stage Retrieval in Two-stage Ranking |  |
+| 2026-05-26 | cs.IR + cs.AI + cs.LG | 20 | 1 | Memento: Personalized RAG-Style Long-Retention Data Scaling for META Ads Recommendation | [2026-05-26/daily_report.md](2026-05-26/daily_report.md) |
+|  |  |  | 2 | SIREN: Unified Multi-Granularity Semantic Interaction for Multi-Modal Lifelong User Interest Modeling |  |
+| 2026-05-25 | cs.IR + cs.AI + cs.LG | 8 | 1 | HARNESS-LM: A Three-Phase Training Recipe for Harnessing SLMs in Sponsored Search Retrieval | [2026-05-25/daily_report.md](2026-05-25/daily_report.md) |
+|  |  |  | 2 | TubiFM: Unified Item, Carousel, and Search Ranking for Streaming Discovery |  |
+| 2026-05-22 | cs.IR + cs.AI + cs.LG | 9 | 1 | LLM Retrieval for Stable and Predictable Ad Recommendations | [2026-05-22/daily_report.md](2026-05-22/daily_report.md) |
+|  |  |  | 2 | Beyond Single Slot: Joint Optimization for Multi-Slot Guaranteed Display Advertising |  |
+| 2026-05-21 | cs.IR + cs.AI + cs.LG | 3 | 1 | 无 | [2026-05-21/daily_report.md](2026-05-21/daily_report.md) |
+| 2026-05-20 | cs.IR + cs.AI + cs.LG | 34 | 1 | Generative Auto-Bidding with Unified Modeling and Exploration | [2026-05-20/daily_report.md](2026-05-20/daily_report.md) |
+|  |  |  | 2 | LWGR: Lagrangian-Constrained Personalized World Knowledge for Generative Recommendation |  |
+| 2026-05-19 | cs.IR + cs.AI + cs.LG | 20 | 1 | LERA: LLM-Enhanced RAG for Ad Auction in Generative Chatbots | [2026-05-19/daily_report.md](2026-05-19/daily_report.md) |
+|  |  |  | 2 | Towards Sustainable Growth: A Multi-Value-Aware Retrieval Framework for E-Commerce Search |  |
+| 2026-05-18 | cs.IR + cs.AI + cs.LG | 2 | 1 | Generative Long-term User Interest Modeling for Click-Through Rate Prediction | [2026-05-18/daily_report.md](2026-05-18/daily_report.md) |
+|  |  |  | 2 | Fortress: A Case Study in Stabilizing Search Recommendations via Temporal Data Augmentation and Feature Pruning |  |
 | 2026-05-15 | cs.IR + cs.AI + cs.LG | 13 | 1 | Efficient Generative Retrieval for E-commerce Search with Semantic Cluster IDs and Expert-Guided RL | [2026-05-15/daily_report.md](2026-05-15/daily_report.md) |
 |  |  |  | 2 | Discrimination Is Generation: Unifying Ranking and Retrieval from a Tokenizer Perspective |  |
 | 2026-05-14 | cs.IR + cs.AI + cs.LG | 10 | 1 | Decision Support for Marketplace Policies under Incomplete Evidence: From Replay to Launch Readiness | [2026-05-14/daily_report.md](2026-05-14/daily_report.md) |

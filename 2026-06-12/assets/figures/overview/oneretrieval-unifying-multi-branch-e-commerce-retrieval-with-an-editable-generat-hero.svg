@@ -1,0 +1,125 @@
+<svg height="600" width="960" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <linearGradient id="goldfade" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#F4C77B"/>
+      <stop offset="1" stop-color="#E89B3C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="480" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">OneRetrieval：可编辑的生成式召回</text>
+  <text x="480" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">把倒排的「随时加新词」装进一个生成式模型</text>
+
+  <!-- Left: Inverted index (old) -->
+  <g>
+    <rect x="60" y="100" width="240" height="170" rx="14" fill="#FFF4E1" stroke="#E89B3C" stroke-width="1.5"/>
+    <text x="180" y="126" text-anchor="middle" font-size="14" font-weight="700" fill="#8A4B0F">倒排索引</text>
+    <text x="180" y="146" text-anchor="middle" font-size="11" fill="#8A4B0F">可编辑 ✓   转化低 ✗</text>
+
+    <rect x="80" y="166" width="70" height="22" rx="4" fill="#fff" stroke="#E89B3C"/>
+    <text x="115" y="181" text-anchor="middle" font-size="11" fill="#3D4F65">LABUBU</text>
+    <line x1="150" y1="177" x2="190" y2="177" stroke="#E89B3C" stroke-width="1.2"/>
+    <rect x="190" y="166" width="90" height="22" rx="4" fill="#fff" stroke="#E89B3C"/>
+    <text x="235" y="181" text-anchor="middle" font-size="11" fill="#3D4F65">商品集合</text>
+
+    <rect x="80" y="196" width="70" height="22" rx="4" fill="#fff" stroke="#E89B3C"/>
+    <text x="115" y="211" text-anchor="middle" font-size="11" fill="#3D4F65">新品牌</text>
+    <line x1="150" y1="207" x2="190" y2="207" stroke="#E89B3C" stroke-width="1.2"/>
+    <rect x="190" y="196" width="90" height="22" rx="4" fill="#fff" stroke="#E89B3C"/>
+    <text x="235" y="211" text-anchor="middle" font-size="11" fill="#3D4F65">商品集合</text>
+
+    <text x="180" y="248" text-anchor="middle" font-size="10.5" fill="#8A4B0F" font-style="italic">运营几小时即可上线</text>
+  </g>
+
+  <!-- Right: Closed-codebook GR (old) -->
+  <g>
+    <rect x="660" y="100" width="240" height="170" rx="14" fill="#EEF1F5" stroke="#9AA7B5" stroke-width="1.5"/>
+    <text x="780" y="126" text-anchor="middle" font-size="14" font-weight="700" fill="#3D4F65">闭码本生成式召回</text>
+    <text x="780" y="146" text-anchor="middle" font-size="11" fill="#3D4F65">召回强 ✓   不可编辑 ✗</text>
+
+    <rect x="690" y="170" width="32" height="32" rx="4" fill="#D7DDE4" stroke="#9AA7B5"/>
+    <rect x="728" y="170" width="32" height="32" rx="4" fill="#D7DDE4" stroke="#9AA7B5"/>
+    <rect x="766" y="170" width="32" height="32" rx="4" fill="#D7DDE4" stroke="#9AA7B5"/>
+    <rect x="804" y="170" width="32" height="32" rx="4" fill="#D7DDE4" stroke="#9AA7B5"/>
+    <rect x="842" y="170" width="32" height="32" rx="4" fill="#D7DDE4" stroke="#9AA7B5"/>
+    <text x="780" y="218" text-anchor="middle" font-size="10.5" fill="#3D4F65">训练时被冻结的量化码</text>
+
+    <g transform="translate(765,228)">
+      <rect x="0" y="6" width="30" height="22" rx="3" fill="#9AA7B5"/>
+      <path d="M6,6 v-6 a9,9 0 0 1 18,0 v6" fill="none" stroke="#9AA7B5" stroke-width="2.5"/>
+    </g>
+    <text x="780" y="262" text-anchor="middle" font-size="10.5" fill="#6E7A88" font-style="italic">新词 = 重训模型</text>
+  </g>
+
+  <!-- Center hub: KAE SID -->
+  <g>
+    <circle cx="480" cy="385" r="150" fill="#EFF6FF"/>
+    <circle cx="480" cy="385" r="112" fill="#DCE9FB" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="480" y="305" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">关键词对齐编码 KAE</text>
+    <text x="480" y="324" text-anchor="middle" font-size="11" fill="#3D4F65">每一位 SID = 一个可解释的属性词</text>
+
+    <!-- 6 SID slots -->
+    <g font-size="11" font-weight="600">
+      <rect x="335" y="358" width="46" height="46" rx="6" fill="#fff" stroke="#4B8BDA" stroke-width="1.5"/>
+      <text x="358" y="375" text-anchor="middle" fill="#6E7A88" font-size="9.5" font-weight="400">实体</text>
+      <text x="358" y="393" text-anchor="middle" fill="#1E3A5F">跑鞋</text>
+
+      <rect x="385" y="358" width="46" height="46" rx="6" fill="#fff" stroke="#4B8BDA" stroke-width="1.5"/>
+      <text x="408" y="375" text-anchor="middle" fill="#6E7A88" font-size="9.5" font-weight="400">品牌</text>
+      <text x="408" y="393" text-anchor="middle" fill="#1E3A5F">Nike</text>
+
+      <rect x="435" y="358" width="46" height="46" rx="6" fill="#fff" stroke="#4B8BDA" stroke-width="1.5"/>
+      <text x="458" y="375" text-anchor="middle" fill="#6E7A88" font-size="9.5" font-weight="400">材质</text>
+      <text x="458" y="393" text-anchor="middle" fill="#1E3A5F">编织</text>
+
+      <rect x="485" y="358" width="46" height="46" rx="6" fill="#fff" stroke="#4B8BDA" stroke-width="1.5"/>
+      <text x="508" y="375" text-anchor="middle" fill="#6E7A88" font-size="9.5" font-weight="400">场景</text>
+      <text x="508" y="393" text-anchor="middle" fill="#1E3A5F">夏季</text>
+
+      <rect x="535" y="358" width="46" height="46" rx="6" fill="#fff" stroke="#4B8BDA" stroke-width="1.5"/>
+      <text x="558" y="375" text-anchor="middle" fill="#6E7A88" font-size="9.5" font-weight="400">功能</text>
+      <text x="558" y="393" text-anchor="middle" fill="#1E3A5F">透气</text>
+
+      <rect x="585" y="358" width="46" height="46" rx="6" fill="url(#goldfade)" stroke="#C77A1F" stroke-width="2"/>
+      <text x="608" y="375" text-anchor="middle" fill="#fff" font-size="9.5" font-weight="400">预留</text>
+      <text x="608" y="394" text-anchor="middle" fill="#fff" font-weight="700">★</text>
+    </g>
+
+    <!-- annotation for reserved slot -->
+    <line x1="620" y1="358" x2="660" y2="335" stroke="#C77A1F" stroke-width="1.3"/>
+    <text x="668" y="332" font-size="11" fill="#8A4B0F" font-weight="600">预留槽位</text>
+    <text x="668" y="348" font-size="10.5" fill="#8A4B0F">运营随时绑定新词</text>
+
+    <text x="480" y="438" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">同一模型 · 召回质量 + 实时编辑</text>
+    <text x="480" y="468" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">六组码本 · 自路由监督 · 不重训上线</text>
+  </g>
+
+  <!-- Arrows merging into center -->
+  <path d="M270,270 C 320,310 360,340 395,360" fill="none" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#arr)"/>
+  <path d="M690,270 C 640,310 600,340 565,360" fill="none" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#arr)"/>
+
+  <text x="290" y="310" font-size="10.5" fill="#3D4F65">继承可编辑性</text>
+  <text x="670" y="310" font-size="10.5" fill="#3D4F65" text-anchor="end">继承召回能力</text>
+
+  <!-- bottom outcome bar -->
+  <g>
+    <rect x="120" y="515" width="720" height="55" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.2"/>
+    <text x="220" y="538" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">替换倒排支</text>
+    <text x="220" y="556" text-anchor="middle" font-size="11" fill="#3D4F65">订单量显著提升</text>
+
+    <line x1="360" y1="525" x2="360" y2="562" stroke="#B8CDE8"/>
+
+    <text x="480" y="538" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">扩展至全召回阶段</text>
+    <text x="480" y="556" text-anchor="middle" font-size="11" fill="#3D4F65">CTR↑ 转化保持</text>
+
+    <line x1="600" y1="525" x2="600" y2="562" stroke="#B8CDE8"/>
+
+    <text x="740" y="538" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">干预命中率</text>
+    <text x="740" y="556" text-anchor="middle" font-size="11" fill="#3D4F65">较闭码本高一个数量级</text>
+  </g>
+
+  <text x="480" y="590" text-anchor="middle" font-size="10.5" fill="#6E7A88">已部署于快手电商搜索 · 日均数亿 PV</text>
+</svg>

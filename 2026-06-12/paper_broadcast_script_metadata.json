@@ -1,0 +1,13 @@
+{
+  "report_date": "2026-06-12",
+  "provider": "litellm-opus",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 2736,
+  "focus_titles": [
+    "OneRetrieval: Unifying Multi-Branch E-commerce Retrieval with an Editable Generative Model",
+    "Forecasting Is Not Attribution: Localizing Decoder Bypass in Graph-Based Neural Marketing Mix Models"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Steve"
+}
