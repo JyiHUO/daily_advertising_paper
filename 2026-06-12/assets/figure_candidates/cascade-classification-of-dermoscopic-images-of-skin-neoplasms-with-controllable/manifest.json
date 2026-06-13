@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-12/downloaded_pdfs/cascade-classification-of-dermoscopic-images-of-skin-neoplasms-with-controllable.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-12/assets/figure_candidates/cascade-classification-of-dermoscopic-images-of-skin-neoplasms-with-controllable",
+  "candidates": [
+    {
+      "id": "page-6-drawing-caption-10",
+      "page_index": 6,
+      "caption": "Figure 1. Two-stage cascade classification scheme. Stage 1 triages by 𝑃 ( malignancy ) with a tunable threshold 𝜃 ; stage 2 is activated at 𝑃 ( malignancy ) ≥ 𝜃 and outputs the nosological class MEL / SCC / BCC. Stage 2 in the standalone (3-class) scheme is applied only to malignant lesions",
+      "clip": [
+        238.7244873046875,
+        445.1559143066406,
+        352.4754333496094,
+        562.62255859375
+      ],
+      "clip_area": 13361.941916381009,
+      "page_area": 501156.9211820215,
+      "text_density": 0.1471094354235894,
+      "kind": "drawing_cluster_with_caption",
+      "score": 36.12189989587776,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-12/assets/figure_candidates/cascade-classification-of-dermoscopic-images-of-skin-neoplasms-with-controllable/01-p7-drawing_cluster_with_caption.png",
+      "filename": "01-p7-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-9-drawing-caption-26",
+      "page_index": 9,
+      "caption": "Figure 3. Learning curves (stage 2, MEL / SCC / BCC): (a) training (solid) and validation (dashed) loss; (b) validation macro F1. The vertical dotted line marks the onset of overfitting ( ≈ epoch 7)",
+      "clip": [
+        81.21299743652344,
+        54.86595153808594,
+        570.7542724609375,
+        289.7659912109375
+      ],
+      "clip_area": 114993.2649247332,
+      "page_area": 501156.9211820215,
+      "text_density": 0.1704625462860442,
+      "kind": "drawing_cluster_with_caption",
+      "score": 17.572247222837348,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-12/assets/figure_candidates/cascade-classification-of-dermoscopic-images-of-skin-neoplasms-with-controllable/02-p10-drawing_cluster_with_caption.png",
+      "filename": "02-p10-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-8-drawing-caption-11",
+      "page_index": 8,
+      "caption": "Figure 2. Learning-rate schedule: linear warm-up followed by cosine annealing (AdamW, peak value 10 − 4 )",
+      "clip": [
+        149.2449951171875,
+        273.845458984375,
+        502.7408142089844,
+        439.78900146484375
+      ],
+      "clip_area": 58660.34847212769,
+      "page_area": 501156.9211820215,
+      "text_density": 0.16453212662538996,
+      "kind": "drawing_cluster_with_caption",
+      "score": 15.579854052166908,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-12/assets/figure_candidates/cascade-classification-of-dermoscopic-images-of-skin-neoplasms-with-controllable/03-p9-drawing_cluster_with_caption.png",
+      "filename": "03-p9-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-17-drawing-caption-29",
+      "page_index": 17,
+      "caption": "Figure 7. Comparison of macro F1 of single-stage four-class and cascade (binary → 3-class) schemes across four architectures on two clinical datasets",
+      "clip": [
+        90.28199768066406,
+        441.7588806152344,
+        561.6914672851562,
+        667.927978515625
+      ],
+      "clip_area": 106618.25448214961,
+      "page_area": 501156.9211820215,
+      "text_density": 0.21261461932794756,
+      "kind": "drawing_cluster_with_caption",
+      "score": 12.22777011234703,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-12/assets/figure_candidates/cascade-classification-of-dermoscopic-images-of-skin-neoplasms-with-controllable/04-p18-drawing_cluster_with_caption.png",
+      "filename": "04-p18-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-6-block-10",
+      "page_index": 6,
+      "caption": "Figure 1. Two-stage cascade classification scheme. Stage 1 triages by 𝑃 ( malignancy ) with a tunable threshold 𝜃 ; stage 2 is activated at 𝑃 ( malignancy ) ≥ 𝜃 and outputs the nosological class MEL / SCC / BCC. Stage 2 in the standalone (3-class) scheme is applied only to malignant lesions",
+      "clip": [
+        74.57219848632812,
+        220.41062011718748,
+        577.2760009765625,
+        549.1666259765625
+      ],
+      "clip_area": 165266.89423700958,
+      "page_area": 501156.9211820215,
+      "text_density": 0.6769615428362258,
+      "kind": "captioned_figure",
+      "score": 10.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-12/assets/figure_candidates/cascade-classification-of-dermoscopic-images-of-skin-neoplasms-with-controllable/05-p7-captioned_figure.png",
+      "filename": "05-p7-captioned_figure.png"
+    },
+    {
+      "id": "page-9-block-26",
+      "page_index": 9,
+      "caption": "Figure 3. Learning curves (stage 2, MEL / SCC / BCC): (a) training (solid) and validation (dashed) loss; (b) validation macro F1. The vertical dotted line marks the onset of overfitting ( ≈ epoch 7)",
+      "clip": [
+        79.50019989013671,
+        18.0,
+        572.6548522949219,
+        276.1634216308594
+      ],
+      "clip_area": 127314.49245799644,
+      "page_area": 501156.9211820215,
+      "text_density": 0.13488345812733296,
+      "kind": "captioned_figure",
+      "score": 7.7069925123600225,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-12/assets/figure_candidates/cascade-classification-of-dermoscopic-images-of-skin-neoplasms-with-controllable/06-p10-captioned_figure.png",
+      "filename": "06-p10-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-12/assets/figure_candidates/cascade-classification-of-dermoscopic-images-of-skin-neoplasms-with-controllable/contact-sheet.svg"
+}

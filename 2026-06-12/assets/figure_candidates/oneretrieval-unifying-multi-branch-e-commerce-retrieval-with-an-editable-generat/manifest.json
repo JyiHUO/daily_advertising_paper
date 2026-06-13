@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-12/downloaded_pdfs/oneretrieval-unifying-multi-branch-e-commerce-retrieval-with-an-editable-generat.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-12/assets/figure_candidates/oneretrieval-unifying-multi-branch-e-commerce-retrieval-with-an-editable-generat",
+  "candidates": [
+    {
+      "id": "page-5-block-2",
+      "page_index": 5,
+      "caption": "Figure 2: Cumulative information loss versus target group count; the second-difference knee falls at six.",
+      "clip": [
+        31.79800033569336,
+        65.68425750732422,
+        316.0500793457031,
+        202.843017578125
+      ],
+      "clip_area": 38987.662704560236,
+      "page_area": 484704.0,
+      "text_density": 0.05536566836096672,
+      "kind": "image_block_with_caption",
+      "score": 14.433196252272891,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-12/assets/figure_candidates/oneretrieval-unifying-multi-branch-e-commerce-retrieval-with-an-editable-generat/01-p6-image_block_with_caption.png",
+      "filename": "01-p6-image_block_with_caption.png"
+    },
+    {
+      "id": "page-5-embedded-0-0",
+      "page_index": 5,
+      "caption": "Figure 2: Cumulative information loss versus target group count; the second-difference knee falls at six.",
+      "clip": [
+        41.79800033569336,
+        71.68425750732422,
+        306.0500793457031,
+        196.843017578125
+      ],
+      "clip_area": 33073.4625550241,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 395,
+      "score": 13.367482917278046,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-12/assets/figure_candidates/oneretrieval-unifying-multi-branch-e-commerce-retrieval-with-an-editable-generat/02-p6-embedded_image_with_caption.png",
+      "filename": "02-p6-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-4-embedded-58-0",
+      "page_index": 4,
+      "caption": "Same architecture in all stages Task-dependent",
+      "clip": [
+        172.63668823242188,
+        102.45820617675781,
+        298.70587158203125,
+        235.0943603515625
+      ],
+      "clip_area": 16721.33163945051,
+      "page_area": 484704.0,
+      "text_density": 0.2858149545401161,
+      "kind": "embedded_image_with_caption",
+      "xref": 598,
+      "score": 8.836895301364708,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-12/assets/figure_candidates/oneretrieval-unifying-multi-branch-e-commerce-retrieval-with-an-editable-generat/03-p5-embedded_image_with_caption.png",
+      "filename": "03-p5-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-4-embedded-0-0",
+      "page_index": 4,
+      "caption": "Same architecture in all stages Task-dependent",
+      "clip": [
+        176.20162963867188,
+        107.14885711669922,
+        302.27081298828125,
+        239.59738159179688
+      ],
+      "clip_area": 16697.67731643631,
+      "page_area": 484704.0,
+      "text_density": 0.29002327394333527,
+      "kind": "embedded_image_with_caption",
+      "xref": 540,
+      "score": 8.584133311360286,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-12/assets/figure_candidates/oneretrieval-unifying-multi-branch-e-commerce-retrieval-with-an-editable-generat/04-p5-embedded_image_with_caption.png",
+      "filename": "04-p5-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-9-block-2",
+      "page_index": 9,
+      "caption": "Figure 4: Length axis of the codebook design. Order HR @350 of the uniform 𝑉 ℓ = 1024 family peaks at 𝐿 = 6 , while per-SID autoregressive latency grows linearly with 𝐿 ; the two curves cross at 𝐿 = 6 . The deployed L6-D3 configuration (gold star) lifts HR above the 𝐿 = 6 uniform point through density-aware non-uniform allocation.",
+      "clip": [
+        31.79800033569336,
+        65.68387603759766,
+        316.0421447753906,
+        220.26800537109375
+      ],
+      "clip_area": 43939.63358635511,
+      "page_area": 484704.0,
+      "text_density": 0.06012941273823544,
+      "kind": "image_block_with_caption",
+      "score": 7.488218150959501,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-12/assets/figure_candidates/oneretrieval-unifying-multi-branch-e-commerce-retrieval-with-an-editable-generat/05-p10-image_block_with_caption.png",
+      "filename": "05-p10-image_block_with_caption.png"
+    },
+    {
+      "id": "page-11-block-2",
+      "page_index": 11,
+      "caption": "Figure 5: Online CTR relative gains across the top 20 indus- tries; the dashed line marks the 1 . 00% average.",
+      "clip": [
+        31.79800033569336,
+        65.68769836425781,
+        316.021240234375,
+        175.323974609375
+      ],
+      "clip_area": 31161.177644814074,
+      "page_area": 484704.0,
+      "text_density": 0.08607810782740624,
+      "kind": "image_block_with_caption",
+      "score": 6.981548837520226,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-12/assets/figure_candidates/oneretrieval-unifying-multi-branch-e-commerce-retrieval-with-an-editable-generat/06-p12-image_block_with_caption.png",
+      "filename": "06-p12-image_block_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-12/assets/figure_candidates/oneretrieval-unifying-multi-branch-e-commerce-retrieval-with-an-editable-generat/contact-sheet.svg"
+}

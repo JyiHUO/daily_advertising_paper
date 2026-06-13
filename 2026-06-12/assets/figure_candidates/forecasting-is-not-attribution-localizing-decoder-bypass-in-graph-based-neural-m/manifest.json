@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-12/downloaded_pdfs/forecasting-is-not-attribution-localizing-decoder-bypass-in-graph-based-neural-m.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-12/assets/figure_candidates/forecasting-is-not-attribution-localizing-decoder-bypass-in-graph-based-neural-m",
+  "candidates": [
+    {
+      "id": "page-1-block-7",
+      "page_index": 1,
+      "caption": "2. We propose DICE-MMM, a two-stage graph-learning and diagnostic framework that protects the graph as an interface between discovery and high-capacity response modeling.",
+      "clip": [
+        48.59500732421875,
+        245.47825927734374,
+        570.76455078125,
+        554.2782592773438
+      ],
+      "clip_area": 161245.95501953128,
+      "page_area": 484704.0,
+      "text_density": 0.5530947164278026,
+      "kind": "captioned_figure",
+      "score": 23.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-12/assets/figure_candidates/forecasting-is-not-attribution-localizing-decoder-bypass-in-graph-based-neural-m/01-p2-captioned_figure.png",
+      "filename": "01-p2-captioned_figure.png"
+    },
+    {
+      "id": "page-4-block-18",
+      "page_index": 4,
+      "caption": "Figure 1 shows the implemented encoder pipeline. The important architectural point is that DICE is not simply a larger encoder. Its temporal blocks make the node summaries causal; its lag features make the edge",
+      "clip": [
+        41.400045776367186,
+        393.33323974609374,
+        570.8123413085938,
+        702.1332397460938
+      ],
+      "clip_area": 163482.51686035158,
+      "page_area": 484704.0,
+      "text_density": 0.592350294439036,
+      "kind": "captioned_figure",
+      "score": 15.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-12/assets/figure_candidates/forecasting-is-not-attribution-localizing-decoder-bypass-in-graph-based-neural-m/02-p5-captioned_figure.png",
+      "filename": "02-p5-captioned_figure.png"
+    },
+    {
+      "id": "page-8-embedded-0-0",
+      "page_index": 8,
+      "caption": "Figure 3: Synthetic heterogeneous causal structures for the R = 5 benchmark. The top row shows five graph prototypes over ten channel nodes and one KPI node, and the bottom row shows the corresponding directed causal matrices. We use the convention A ( i, j ) = 1 if source node i influences receiver node j .",
+      "clip": [
+        60.0,
+        69.86119079589844,
+        551.9890747070312,
+        277.61102294921875
+      ],
+      "clip_area": 102210.64769165311,
+      "page_area": 484704.0,
+      "text_density": 0.006665926730157151,
+      "kind": "embedded_image_with_caption",
+      "xref": 341,
+      "score": 7.13567386324059,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-12/assets/figure_candidates/forecasting-is-not-attribution-localizing-decoder-bypass-in-graph-based-neural-m/03-p9-embedded_image_with_caption.png",
+      "filename": "03-p9-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-8-block-1",
+      "page_index": 8,
+      "caption": "Figure 3: Synthetic heterogeneous causal structures for the R = 5 benchmark. The top row shows five graph prototypes over ten channel nodes and one KPI node, and the bottom row shows the corresponding directed causal matrices. We use the convention A ( i, j ) = 1 if source node i influences receiver node j .",
+      "clip": [
+        50.0,
+        63.86119079589844,
+        561.9890747070312,
+        283.61102294921875
+      ],
+      "clip_area": 112509.51323120389,
+      "page_area": 484704.0,
+      "text_density": 0.03102601419834944,
+      "kind": "image_block_with_caption",
+      "score": 7.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-12/assets/figure_candidates/forecasting-is-not-attribution-localizing-decoder-bypass-in-graph-based-neural-m/04-p9-image_block_with_caption.png",
+      "filename": "04-p9-image_block_with_caption.png"
+    },
+    {
+      "id": "page-5-embedded-0-0",
+      "page_index": 5,
+      "caption": "第 6 页内嵌图片候选",
+      "clip": [
+        60.0,
+        69.86700439453125,
+        551.9849853515625,
+        361.2869873046875
+      ],
+      "clip_area": 143374.25602320582,
+      "page_area": 484704.0,
+      "text_density": 0.004712138024118191,
+      "kind": "embedded_image",
+      "xref": 337,
+      "score": 5.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-12/assets/figure_candidates/forecasting-is-not-attribution-localizing-decoder-bypass-in-graph-based-neural-m/05-p6-embedded_image.png",
+      "filename": "05-p6-embedded_image.png"
+    },
+    {
+      "id": "page-7-embedded-0-0",
+      "page_index": 7,
+      "caption": "第 8 页内嵌图片候选",
+      "clip": [
+        83.5669937133789,
+        128.16305541992188,
+        541.3798217773438,
+        397.2037658691406
+      ],
+      "clip_area": 123170.28851509513,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image",
+      "xref": 407,
+      "score": 5.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-12/assets/figure_candidates/forecasting-is-not-attribution-localizing-decoder-bypass-in-graph-based-neural-m/06-p8-embedded_image.png",
+      "filename": "06-p8-embedded_image.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-12/assets/figure_candidates/forecasting-is-not-attribution-localizing-decoder-bypass-in-graph-based-neural-m/contact-sheet.svg"
+}
