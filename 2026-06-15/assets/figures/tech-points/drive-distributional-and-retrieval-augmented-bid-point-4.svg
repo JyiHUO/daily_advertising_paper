@@ -1,0 +1,54 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">即插即用：换头不换骨</text>
+  <text x="300" y="58" text-anchor="middle" font-size="12" fill="#3D4F65">任意 Transformer 骨干 + DRIVE 头部</text>
+
+  <!-- Four backbones on the left -->
+  <g font-size="13" fill="#1E3A5F">
+    <rect x="50" y="95"  width="110" height="44" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="105" y="122" text-anchor="middle">BC</text>
+
+    <rect x="50" y="155" width="110" height="44" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="105" y="182" text-anchor="middle">DT</text>
+
+    <rect x="50" y="215" width="110" height="44" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="105" y="242" text-anchor="middle">CDT</text>
+
+    <rect x="50" y="275" width="110" height="44" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="105" y="302" text-anchor="middle">PDiT</text>
+  </g>
+
+  <!-- DRIVE module -->
+  <g>
+    <rect x="245" y="140" width="190" height="140" rx="14" fill="#FFF4E6" stroke="#E89B4C" stroke-width="2"/>
+    <text x="340" y="168" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">DRIVE 头</text>
+    <text x="340" y="198" text-anchor="middle" font-size="12" fill="#3D4F65">GMM 多峰动作分布</text>
+    <text x="340" y="222" text-anchor="middle" font-size="12" fill="#3D4F65">检索历史好决策</text>
+    <text x="340" y="246" text-anchor="middle" font-size="12" fill="#3D4F65">IQL 价值打分选 bid</text>
+    <text x="340" y="270" text-anchor="middle" font-size="11" fill="#A06030">即插即用 · 无需重训骨干</text>
+  </g>
+
+  <!-- Arrows from backbones to DRIVE -->
+  <g stroke="#4B8BDA" stroke-width="2" fill="none">
+    <path d="M160,117 L243,170" marker-end="url(#ar)"/>
+    <path d="M160,177 L243,200" marker-end="url(#ar)"/>
+    <path d="M160,237 L243,230" marker-end="url(#ar)"/>
+    <path d="M160,297 L243,260" marker-end="url(#ar)"/>
+  </g>
+
+  <!-- Output: lift -->
+  <g>
+    <rect x="475" y="175" width="95" height="70" rx="10" fill="#E8F5EC" stroke="#4FA36C" stroke-width="2"/>
+    <text x="522" y="200" text-anchor="middle" font-size="13" fill="#1E3A5F">PDiT 回报</text>
+    <text x="522" y="225" text-anchor="middle" font-size="18" font-weight="700" fill="#2E7D4F">+19.2%</text>
+  </g>
+
+  <path d="M435,210 L473,210" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+
+  <text x="300" y="370" text-anchor="middle" font-size="12" fill="#3D4F65">例：CDT 369.6 → CDT+DRIVE 378.0，仅替换动作头</text>
+</svg>

@@ -1,0 +1,13 @@
+{
+  "report_date": "2026-06-15",
+  "provider": "bedrock-opus-47",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 2627,
+  "focus_titles": [
+    "DRIVE: Distributional and Retrieval-Augmented Bidding with Value Evaluation",
+    "CoRe: A Continuously Reward-Finetuned LLM Query Rewriter for Multi-Stage Context-Aware Relevance in Web-Scale Video Search"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Steve"
+}

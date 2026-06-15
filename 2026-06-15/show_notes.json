@@ -1,0 +1,9 @@
+{
+  "title": "AI计算广告论文播报 2026-06-15：出价的'平均陷阱'与改写的稳定性闸门",
+  "shownotes_html": "<p>本期聚焦商业化系统从'能用'到'经得起线上摔打'的工程化升级，三个关键词：奖励对齐、稳定性闸门、加性兜底。</p><p><strong>本期重点</strong></p><ul><li><strong>分布式检索增强出价（DRIVE: Distributional and Retrieval-Augmented Bidding with Value Evaluation）</strong>：揭露自动出价里隐蔽的'平均动作陷阱'——同状态下高低两种有效策略被回归头平均成谁也不像的中间价。论文用GMM多峰头+历史高回报检索+IQL critic的三件套即插即用解决，单步推断仅11ms，能挂在DT/CDT/PDiT等主流骨干上。</li><li><strong>持续奖励微调的查询改写器（CoRe: A Continuously Reward-Finetuned LLM Query Rewriter）</strong>：TikTok短视频搜索周更5个月的工业实录。最值得抄的两点是奖励函数的乘法结构与线上融合公式严格对齐，以及上线闸门同时盯收益指标与稳定性指标——真的拦下了'改写越写越长来刷奖励'的奖励作弊。</li><li><strong>时间感知的语义ID（ChronoID: Infusing Explicit Temporal Signals into Semantic IDs）</strong>：把显式时间信号注入生成式推荐的semantic ID，修正现在时间只能通过session或顺序隐式参与的根本缺陷，对生成式排序的时序漂移建模有直接借鉴价值。</li></ul><p><strong>今日趋势</strong></p><ul><li>商业化决策类工作（出价、查询改写、定价）正集体走向'离线训练+线上安全部署+奖励对齐下游消费者'的同一范式。</li><li>Agent方向的研究重心从能力榜单转向可观测、可审计、可回滚的工程化议题，路径与当年排序系统从刷AUC走向链路稳定性高度相似。</li></ul><p>如果今天只带走一个工程直觉：<strong>奖励函数的代数形式应该和线上融合公式长得一样；上线闸门应该同时盯着收益指标和行为指标</strong>。欢迎在评论区聊聊你们线上LLM组件的晋级闸门是怎么设计的。</p><p><em>本期内容由 AI 自动生成，如有疏漏欢迎指正。</em></p>",
+  "report_date": "2026-06-15",
+  "provider": "litellm-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-06-15T21:48:49Z"
+}

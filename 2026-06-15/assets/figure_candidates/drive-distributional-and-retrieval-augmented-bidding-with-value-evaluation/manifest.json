@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-15/downloaded_pdfs/drive-distributional-and-retrieval-augmented-bidding-with-value-evaluation.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-15/assets/figure_candidates/drive-distributional-and-retrieval-augmented-bidding-with-value-evaluation",
+  "candidates": [
+    {
+      "id": "page-15-drawing-cluster-0",
+      "page_index": 15,
+      "caption": "第 16 页矢量图主图候选",
+      "clip": [
+        88.04000091552734,
+        53.06089782714844,
+        508.84625244140625,
+        232.86546325683594
+      ],
+      "clip_area": 75662.88518570643,
+      "page_area": 484704.0,
+      "text_density": 0.08516267541477408,
+      "kind": "drawing_cluster",
+      "score": 8.530938199399182,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-15/assets/figure_candidates/drive-distributional-and-retrieval-augmented-bidding-with-value-evaluation/01-p16-drawing_cluster.png",
+      "filename": "01-p16-drawing_cluster.png"
+    },
+    {
+      "id": "page-16-drawing-cluster-0",
+      "page_index": 16,
+      "caption": "第 17 页矢量图主图候选",
+      "clip": [
+        88.04000091552734,
+        244.47122192382812,
+        508.8456115722656,
+        513.8380126953125
+      ],
+      "clip_area": 113351.05688124034,
+      "page_area": 484704.0,
+      "text_density": 0.14342375906486088,
+      "kind": "drawing_cluster",
+      "score": 4.194574456108347,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-15/assets/figure_candidates/drive-distributional-and-retrieval-augmented-bidding-with-value-evaluation/02-p17-drawing_cluster.png",
+      "filename": "02-p17-drawing_cluster.png"
+    },
+    {
+      "id": "page-4-drawing-cluster-0",
+      "page_index": 4,
+      "caption": "第 5 页矢量图主图候选",
+      "clip": [
+        44.30120086669922,
+        53.058502197265625,
+        552.5850830078125,
+        348.42315673828125
+      ],
+      "clip_area": 150129.09325737623,
+      "page_area": 484704.0,
+      "text_density": 0.16051030138717168,
+      "kind": "drawing_cluster",
+      "score": 3.1693819167696997,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-15/assets/figure_candidates/drive-distributional-and-retrieval-augmented-bidding-with-value-evaluation/03-p5-drawing_cluster.png",
+      "filename": "03-p5-drawing_cluster.png"
+    },
+    {
+      "id": "page-15-drawing-caption-29",
+      "page_index": 15,
+      "caption": "Figure 5. Visualizations of the AuctionNet and D4RL benchmarks.",
+      "clip": [
+        86.04000091552734,
+        51.06089782714844,
+        510.84625244140625,
+        234.86546325683594
+      ],
+      "clip_area": 78081.3284535287,
+      "page_area": 484704.0,
+      "text_density": 0.09659162262754,
+      "kind": "drawing_cluster_with_caption",
+      "score": 2.8720729584979194,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-15/assets/figure_candidates/drive-distributional-and-retrieval-augmented-bidding-with-value-evaluation/04-p16-drawing_cluster_with_caption.png",
+      "filename": "04-p16-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-17-drawing-cluster-0",
+      "page_index": 17,
+      "caption": "第 18 页矢量图主图候选",
+      "clip": [
+        63.61217498779297,
+        53.06010437011719,
+        533.1471557617188,
+        317.4639892578125
+      ],
+      "clip_area": 124146.8730072953,
+      "page_area": 484704.0,
+      "text_density": 0.1890597584857765,
+      "kind": "drawing_cluster",
+      "score": 1.45641449085341,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-15/assets/figure_candidates/drive-distributional-and-retrieval-augmented-bidding-with-value-evaluation/05-p18-drawing_cluster.png",
+      "filename": "05-p18-drawing_cluster.png"
+    },
+    {
+      "id": "page-3-drawing-caption-9",
+      "page_index": 3,
+      "caption": "Figure 2. Real failure cases in AuctionNet. The blue line denotes the suboptimal predicted average action, the red line the optimal action, and colored points indicate dataset actions with color intensity reflecting RTG.",
+      "clip": [
+        32.480552673339844,
+        48.07129669189453,
+        310.770263671875,
+        158.38800048828125
+      ],
+      "clip_area": 30700.003617807466,
+      "page_area": 484704.0,
+      "text_density": 0.2791299128314082,
+      "kind": "drawing_cluster_with_caption",
+      "score": 0.3933163814244818,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-15/assets/figure_candidates/drive-distributional-and-retrieval-augmented-bidding-with-value-evaluation/06-p4-drawing_cluster_with_caption.png",
+      "filename": "06-p4-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-15/assets/figure_candidates/drive-distributional-and-retrieval-augmented-bidding-with-value-evaluation/contact-sheet.svg"
+}

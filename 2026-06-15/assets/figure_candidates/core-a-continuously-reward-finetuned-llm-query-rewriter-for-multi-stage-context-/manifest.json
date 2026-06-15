@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-15/downloaded_pdfs/core-a-continuously-reward-finetuned-llm-query-rewriter-for-multi-stage-context-.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-15/assets/figure_candidates/core-a-continuously-reward-finetuned-llm-query-rewriter-for-multi-stage-context-",
+  "candidates": [
+    {
+      "id": "page-7-drawing-cluster-0",
+      "page_index": 7,
+      "caption": "第 8 页矢量图主图候选",
+      "clip": [
+        37.79800033569336,
+        69.687255859375,
+        310.04693603515625,
+        373.6719970703125
+      ],
+      "clip_area": 82759.52226355439,
+      "page_area": 484704.0,
+      "text_density": 0.10354057104848549,
+      "kind": "drawing_cluster",
+      "score": 7.507115984463698,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-15/assets/figure_candidates/core-a-continuously-reward-finetuned-llm-query-rewriter-for-multi-stage-context-/01-p8-drawing_cluster.png",
+      "filename": "01-p8-drawing_cluster.png"
+    },
+    {
+      "id": "page-3-drawing-cluster-0",
+      "page_index": 3,
+      "caption": "第 4 页矢量图主图候选",
+      "clip": [
+        79.13679504394531,
+        85.90888977050781,
+        532.86865234375,
+        428.31597900390625
+      ],
+      "clip_area": 155361.00455048983,
+      "page_area": 484704.0,
+      "text_density": 0.18517946568457244,
+      "kind": "drawing_cluster",
+      "score": 3.6892320589256533,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-15/assets/figure_candidates/core-a-continuously-reward-finetuned-llm-query-rewriter-for-multi-stage-context-/02-p4-drawing_cluster.png",
+      "filename": "02-p4-drawing_cluster.png"
+    },
+    {
+      "id": "page-4-drawing-cluster-0",
+      "page_index": 4,
+      "caption": "第 5 页矢量图主图候选",
+      "clip": [
+        316.119873046875,
+        75.0595703125,
+        560.0348510742188,
+        241.67999267578125
+      ],
+      "clip_area": 40641.21665964648,
+      "page_area": 484704.0,
+      "text_density": 0.186638705214219,
+      "kind": "drawing_cluster",
+      "score": 2.0532467611429333,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-15/assets/figure_candidates/core-a-continuously-reward-finetuned-llm-query-rewriter-for-multi-stage-context-/03-p5-drawing_cluster.png",
+      "filename": "03-p5-drawing_cluster.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.4644936058040554,
+      "score": -11.09083328,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-15/assets/figure_candidates/core-a-continuously-reward-finetuned-llm-query-rewriter-for-multi-stage-context-/04-p1-layout_region_left_top.png",
+      "filename": "04-p1-layout_region_left_top.png"
+    },
+    {
+      "id": "page-1-region-upper-left",
+      "page_index": 1,
+      "caption": "第 2 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.8695490692439491,
+      "score": -11.09083328,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-15/assets/figure_candidates/core-a-continuously-reward-finetuned-llm-query-rewriter-for-multi-stage-context-/05-p2-layout_region_left_top.png",
+      "filename": "05-p2-layout_region_left_top.png"
+    },
+    {
+      "id": "page-0-region-upper-right",
+      "page_index": 0,
+      "caption": "第 1 页右上区域主图候选",
+      "clip": [
+        318.24,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 82992.7296,
+      "kind": "layout_region_right_top",
+      "page_area": 484704.0,
+      "text_density": 0.44593804295853573,
+      "score": -17.07785856,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-15/assets/figure_candidates/core-a-continuously-reward-finetuned-llm-query-rewriter-for-multi-stage-context-/06-p1-layout_region_right_top.png",
+      "filename": "06-p1-layout_region_right_top.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-15/assets/figure_candidates/core-a-continuously-reward-finetuned-llm-query-rewriter-for-multi-stage-context-/contact-sheet.svg"
+}
