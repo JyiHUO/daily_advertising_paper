@@ -1,0 +1,54 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8A8576"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="300" y="32" text-anchor="middle" font-size="17" font-weight="700" fill="#1E3A5F">加性并行：多挂一根线</text>
+
+  <!-- Original query -->
+  <rect x="40" y="80" width="120" height="50" rx="8" fill="#F1F0EC" stroke="#8A8576" stroke-width="1.5"/>
+  <text x="100" y="111" text-anchor="middle" font-size="14" fill="#1E3A5F">原始 q</text>
+
+  <!-- Rewriter (cache) -->
+  <rect x="40" y="190" width="120" height="56" rx="8" fill="#FFF1E6" stroke="#E07A3C" stroke-width="1.5"/>
+  <text x="100" y="214" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">改写 q̃ (KV 缓存)</text>
+  <text x="100" y="232" text-anchor="middle" font-size="10" fill="#3D4F65">近线异步生成</text>
+
+  <!-- Three stages -->
+  <rect x="360" y="70" width="180" height="56" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="450" y="93" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">召回</text>
+  <text x="450" y="112" text-anchor="middle" font-size="11" fill="#3D4F65">原路 + 改写路</text>
+
+  <rect x="360" y="160" width="180" height="56" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="450" y="183" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">粗排</text>
+  <text x="450" y="202" text-anchor="middle" font-size="11" fill="#3D4F65">× s(q̃, d)</text>
+
+  <rect x="360" y="250" width="180" height="56" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="450" y="273" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">精排</text>
+  <text x="450" y="292" text-anchor="middle" font-size="11" fill="#3D4F65">× s(q̃, d)</text>
+
+  <!-- Original q baselines (gray, straight) -->
+  <path d="M160,100 L360,98" fill="none" stroke="#8A8576" stroke-width="1.6" marker-end="url(#arG)"/>
+  <path d="M160,110 L360,186" fill="none" stroke="#8A8576" stroke-width="1.6" marker-end="url(#arG)"/>
+  <path d="M160,120 L360,276" fill="none" stroke="#8A8576" stroke-width="1.6" marker-end="url(#arG)"/>
+
+  <!-- Additive rewrite arrows (blue dashed = the extra line) -->
+  <path d="M160,205 L360,108" fill="none" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arB)"/>
+  <path d="M160,215 L360,196" fill="none" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arB)"/>
+  <path d="M160,225 L360,286" fill="none" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arB)"/>
+
+  <!-- Fallback note -->
+  <g transform="translate(60,335)">
+    <rect width="480" height="62" rx="8" fill="#FBF5EC" stroke="#C9B79C" stroke-width="1.2"/>
+    <text x="16" y="24" font-size="12" fill="#1E3A5F" font-weight="600">缓存 miss / 服务宕机</text>
+    <text x="16" y="46" font-size="11.5" fill="#3D4F65">蓝色虚线消失 → 退化为原排序，不破坏链路</text>
+    <line x1="320" y1="38" x2="445" y2="38" stroke="#4B8BDA" stroke-width="2" stroke-dasharray="5,4"/>
+    <text x="455" y="43" font-size="16" fill="#E07A3C" font-weight="700">✕</text>
+  </g>
+</svg>

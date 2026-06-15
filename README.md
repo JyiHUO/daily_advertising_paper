@@ -4,18 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-06-12
+- **日期**：2026-06-15
 - **分类**：cs.IR + cs.AI + cs.LG
-- **候选论文数**：11
+- **候选论文数**：5
 - **必读论文**：
-  - OneRetrieval: Unifying Multi-Branch E-commerce Retrieval with an Editable Generative Model
-  - Cascade Classification of Dermoscopic Images of Skin Neoplasms with Controllable Sensitivity and External Clinical Validation
-- **日报路径**：[2026-06-12/daily_report.md](2026-06-12/daily_report.md)
+  - DRIVE: Distributional and Retrieval-Augmented Bidding with Value Evaluation
+  - CoRe: A Continuously Reward-Finetuned LLM Query Rewriter for Multi-Stage Context-Aware Relevance in Web-Scale Video Search
+- **日报路径**：[2026-06-15/daily_report.md](2026-06-15/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-06-15 | cs.IR + cs.AI + cs.LG | 5 | 1 | DRIVE: Distributional and Retrieval-Augmented Bidding with Value Evaluation | [2026-06-15/daily_report.md](2026-06-15/daily_report.md) |
+|  |  |  | 2 | CoRe: A Continuously Reward-Finetuned LLM Query Rewriter for Multi-Stage Context-Aware Relevance in Web-Scale Video Search |  |
 | 2026-06-12 | cs.IR + cs.AI + cs.LG | 11 | 1 | OneRetrieval: Unifying Multi-Branch E-commerce Retrieval with an Editable Generative Model | [2026-06-12/daily_report.md](2026-06-12/daily_report.md) |
 |  |  |  | 2 | Cascade Classification of Dermoscopic Images of Skin Neoplasms with Controllable Sensitivity and External Clinical Validation |  |
 | 2026-06-11 | cs.IR + cs.AI + cs.LG | 2 | 1 | LLM-Based User Personas for Recommendations at Scale | [2026-06-11/daily_report.md](2026-06-11/daily_report.md) |

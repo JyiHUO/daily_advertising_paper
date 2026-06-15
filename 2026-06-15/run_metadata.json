@@ -1,0 +1,18 @@
+{
+  "date": "2026-06-15",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 5,
+  "supplementary_count": 2,
+  "focus_titles": [
+    "DRIVE: Distributional and Retrieval-Augmented Bidding with Value Evaluation",
+    "CoRe: A Continuously Reward-Finetuned LLM Query Rewriter for Multi-Stage Context-Aware Relevance in Web-Scale Video Search"
+  ],
+  "focus_status": {
+    "DRIVE: Distributional and Retrieval-Augmented Bidding with Value Evaluation": "completed",
+    "CoRe: A Continuously Reward-Finetuned LLM Query Rewriter for Multi-Stage Context-Aware Relevance in Web-Scale Video Search": "completed"
+  }
+}

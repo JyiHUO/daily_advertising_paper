@@ -1,0 +1,62 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="-apple-system,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">同一状态，两种好策略</text>
+  <text x="400" y="60" text-anchor="middle" font-size="13" fill="#3D4F65">MSE 把双峰平均成中间值，GMM 同时保留两峰</text>
+
+  <!-- LEFT: MSE -->
+  <g>
+    <rect x="50" y="100" width="320" height="320" rx="12" fill="#FFF4EC" stroke="#E8A87C" stroke-width="1.5"/>
+    <text x="210" y="128" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">MSE 单峰回归</text>
+
+    <line x1="80" y1="360" x2="340" y2="360" stroke="#3D4F65" stroke-width="1.2"/>
+
+    <path d="M80,360 Q130,300 150,360" fill="#E8A87C" fill-opacity="0.35" stroke="none"/>
+    <path d="M270,360 Q320,260 340,360" fill="#E8A87C" fill-opacity="0.35" stroke="none"/>
+    <text x="115" y="380" text-anchor="middle" font-size="11" fill="#3D4F65">低价控本</text>
+    <text x="305" y="380" text-anchor="middle" font-size="11" fill="#3D4F65">高价抢量</text>
+
+    <line x1="210" y1="355" x2="210" y2="215" stroke="#C0392B" stroke-width="2" stroke-dasharray="4,3"/>
+    <circle cx="210" cy="208" r="9" fill="#C0392B"/>
+    <text x="210" y="194" text-anchor="middle" font-size="12" font-weight="700" fill="#C0392B">平均动作</text>
+
+    <text x="210" y="408" text-anchor="middle" font-size="12" fill="#C0392B" font-style="italic">两头都没抓住</text>
+  </g>
+
+  <!-- RIGHT: GMM -->
+  <g>
+    <rect x="430" y="100" width="320" height="320" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="590" y="128" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">GMM 多峰分布</text>
+
+    <line x1="460" y1="360" x2="720" y2="360" stroke="#3D4F65" stroke-width="1.2"/>
+
+    <path d="M460,360 Q515,230 540,360" fill="#4B8BDA" fill-opacity="0.45" stroke="#4B8BDA" stroke-width="1.5"/>
+    <path d="M640,360 Q700,210 720,360" fill="#4B8BDA" fill-opacity="0.45" stroke="#4B8BDA" stroke-width="1.5"/>
+
+    <text x="500" y="380" text-anchor="middle" font-size="11" fill="#3D4F65">峰 1</text>
+    <text x="680" y="380" text-anchor="middle" font-size="11" fill="#3D4F65">峰 2</text>
+
+    <circle cx="490" cy="300" r="5" fill="#1E3A5F"/>
+    <circle cx="510" cy="265" r="5" fill="#1E3A5F"/>
+    <circle cx="525" cy="290" r="5" fill="#1E3A5F"/>
+    <circle cx="665" cy="280" r="5" fill="#1E3A5F"/>
+    <circle cx="685" cy="245" r="5" fill="#1E3A5F"/>
+    <circle cx="700" cy="295" r="5" fill="#1E3A5F"/>
+
+    <text x="590" y="180" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">采样 L 个候选</text>
+    <line x1="560" y1="192" x2="525" y2="252" stroke="#4B8BDA" stroke-width="1.2" marker-end="url(#ar)"/>
+    <line x1="620" y1="192" x2="668" y2="236" stroke="#4B8BDA" stroke-width="1.2" marker-end="url(#ar)"/>
+
+    <text x="590" y="408" text-anchor="middle" font-size="12" fill="#1E3A5F" font-style="italic">两种策略都摆上桌</text>
+  </g>
+
+  <!-- center arrow -->
+  <line x1="372" y1="260" x2="428" y2="260" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="400" y="250" text-anchor="middle" font-size="11" fill="#1E3A5F" font-weight="700">替换动作头</text>
+
+  <text x="400" y="470" text-anchor="middle" font-size="12" fill="#3D4F65">用混合高斯的对数似然训练，推断时采样而非取均值</text>
+</svg>

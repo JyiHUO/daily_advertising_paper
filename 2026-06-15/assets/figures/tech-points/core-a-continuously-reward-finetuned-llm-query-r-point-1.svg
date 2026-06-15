@@ -1,0 +1,51 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">用同一把尺子打分</text>
+  <text x="300" y="56" text-anchor="middle" font-size="12" fill="#3D4F65">训练奖励 ≈ 线上排序公式</text>
+
+  <!-- Left: rewriter output -->
+  <rect x="40" y="170" width="120" height="70" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="100" y="200" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">改写候选 q̃</text>
+  <text x="100" y="220" text-anchor="middle" font-size="11" fill="#3D4F65">采样 N 个</text>
+
+  <!-- Middle: shared scorer (the ruler) -->
+  <rect x="220" y="150" width="160" height="110" rx="10" fill="#FFF3E6" stroke="#E8945A" stroke-width="2"/>
+  <line x1="240" y1="180" x2="360" y2="180" stroke="#1E3A5F" stroke-width="2"/>
+  <line x1="250" y1="180" x2="250" y2="190" stroke="#1E3A5F" stroke-width="1.5"/>
+  <line x1="270" y1="180" x2="270" y2="188" stroke="#1E3A5F" stroke-width="1.5"/>
+  <line x1="290" y1="180" x2="290" y2="192" stroke="#1E3A5F" stroke-width="1.5"/>
+  <line x1="310" y1="180" x2="310" y2="188" stroke="#1E3A5F" stroke-width="1.5"/>
+  <line x1="330" y1="180" x2="330" y2="190" stroke="#1E3A5F" stroke-width="1.5"/>
+  <line x1="350" y1="180" x2="350" y2="188" stroke="#1E3A5F" stroke-width="1.5"/>
+  <text x="300" y="218" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">线上多模态相关性模型</text>
+  <text x="300" y="238" text-anchor="middle" font-size="11" fill="#3D4F65">训练与线上共用同一把尺</text>
+
+  <!-- Right: three pools -->
+  <rect x="440" y="90" width="130" height="50" rx="8" fill="#E8F5E9" stroke="#5BA85B" stroke-width="1.5"/>
+  <text x="505" y="112" text-anchor="middle" font-size="11" font-weight="600" fill="#1E3A5F">正例 / 点击加权</text>
+  <text x="505" y="128" text-anchor="middle" font-size="10" fill="#3D4F65">分子 ↑</text>
+
+  <rect x="440" y="180" width="130" height="50" rx="8" fill="#FDECEC" stroke="#D17070" stroke-width="1.5"/>
+  <text x="505" y="202" text-anchor="middle" font-size="11" font-weight="600" fill="#1E3A5F">硬负 / 展未点</text>
+  <text x="505" y="218" text-anchor="middle" font-size="10" fill="#3D4F65">分母 ↓ (对应精排)</text>
+
+  <rect x="440" y="270" width="130" height="50" rx="8" fill="#F3F0FA" stroke="#8B7AB8" stroke-width="1.5"/>
+  <text x="505" y="292" text-anchor="middle" font-size="11" font-weight="600" fill="#1E3A5F">易负 / 随机</text>
+  <text x="505" y="308" text-anchor="middle" font-size="10" fill="#3D4F65">分母 ↓ (对应召回)</text>
+
+  <!-- Arrows -->
+  <line x1="160" y1="205" x2="218" y2="205" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="382" y1="170" x2="438" y2="125" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+  <line x1="382" y1="205" x2="438" y2="205" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+  <line x1="382" y1="240" x2="438" y2="285" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+
+  <!-- Bottom formula -->
+  <rect x="100" y="345" width="400" height="55" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="300" y="368" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">奖励 = (正例加权均分) / (负例加权均分)  乘性</text>
+  <text x="300" y="388" text-anchor="middle" font-size="11" fill="#3D4F65">与线上 rawrank / finerank 同代数结构</text>
+</svg>

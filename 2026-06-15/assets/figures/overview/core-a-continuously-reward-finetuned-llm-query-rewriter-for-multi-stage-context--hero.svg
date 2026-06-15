@@ -1,0 +1,91 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 640" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E89B5C"/>
+    </marker>
+  </defs>
+
+  <rect width="900" height="640" fill="#FAFBFD"/>
+
+  <!-- Title -->
+  <text x="450" y="46" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">CoRe：让查询改写器与线上排序"用同一把尺子"</text>
+  <text x="450" y="70" text-anchor="middle" font-size="13" fill="#3D4F65">周更 5 个月 · 20 次重训自动晋升 16 次 · TikTok 短视频搜索</text>
+
+  <!-- Top tension: offline reward gap -->
+  <g opacity="0.9">
+    <rect x="60" y="100" width="220" height="56" rx="10" fill="#FBEFE4" stroke="#E89B5C" stroke-width="1.3"/>
+    <text x="170" y="124" text-anchor="middle" font-size="13" font-weight="600" fill="#9A5A1F">离线 reranker 代理</text>
+    <text x="170" y="143" text-anchor="middle" font-size="11" fill="#9A5A1F">仿真—生产 gap</text>
+
+    <rect x="620" y="100" width="220" height="56" rx="10" fill="#FBEFE4" stroke="#E89B5C" stroke-width="1.3"/>
+    <text x="730" y="124" text-anchor="middle" font-size="13" font-weight="600" fill="#9A5A1F">全在线 GRPO</text>
+    <text x="730" y="143" text-anchor="middle" font-size="11" fill="#9A5A1F">每步同步 · 不可周更</text>
+  </g>
+
+  <text x="450" y="130" text-anchor="middle" font-size="12" font-style="italic" fill="#9A5A1F">忠实度 vs 训练成本</text>
+  <path d="M 280,128 Q 360,150 410,205" fill="none" stroke="#E89B5C" stroke-width="1.3" stroke-dasharray="4 3"/>
+  <path d="M 620,128 Q 540,150 490,205" fill="none" stroke="#E89B5C" stroke-width="1.3" stroke-dasharray="4 3"/>
+
+  <!-- Loop ring -->
+  <ellipse cx="450" cy="380" rx="300" ry="170" fill="none" stroke="#C9DCEF" stroke-width="2" stroke-dasharray="5 5"/>
+
+  <!-- Core node: Reward aligned -->
+  <g>
+    <circle cx="450" cy="380" r="78" fill="#1E3A5F"/>
+    <text x="450" y="368" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF">乘法比值奖励</text>
+    <text x="450" y="388" text-anchor="middle" font-size="11" fill="#C9DCEF">镜像线上融合代数</text>
+    <text x="450" y="406" text-anchor="middle" font-size="11" fill="#C9DCEF">正例 / 硬负 / 易负</text>
+  </g>
+
+  <!-- 1. Sampling rollouts (left) -->
+  <g>
+    <rect x="70" y="340" width="170" height="80" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="155" y="368" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">采样改写候选</text>
+    <text x="155" y="388" text-anchor="middle" font-size="11" fill="#3D4F65">phase 起点一次性</text>
+    <text x="155" y="405" text-anchor="middle" font-size="11" fill="#3D4F65">N 个 rollout / query</text>
+  </g>
+
+  <!-- 2. MPO top-k/bottom-k (top) -->
+  <g>
+    <rect x="350" y="220" width="200" height="76" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="450" y="246" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">半在线 MPO</text>
+    <text x="450" y="265" text-anchor="middle" font-size="11" fill="#3D4F65">top-k × bottom-k 偏好对</text>
+    <text x="450" y="282" text-anchor="middle" font-size="11" fill="#3D4F65">DPO + BCO + SFT</text>
+  </g>
+
+  <!-- 3. Promotion gate (right) -->
+  <g>
+    <rect x="660" y="340" width="180" height="80" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="750" y="368" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">双族晋升网关</text>
+    <text x="750" y="388" text-anchor="middle" font-size="11" fill="#3D4F65">奖励指标 + 稳定性</text>
+    <text x="750" y="405" text-anchor="middle" font-size="11" fill="#3D4F65">拦下奖励黑客 3 次</text>
+  </g>
+
+  <!-- 4. Online ranker (bottom) -->
+  <g>
+    <rect x="280" y="488" width="340" height="82" rx="12" fill="#EAF2FB" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="450" y="510" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">三段加性并行接入</text>
+    <text x="345" y="538" text-anchor="middle" font-size="12" fill="#1E3A5F">召回</text>
+    <text x="450" y="538" text-anchor="middle" font-size="12" fill="#1E3A5F">粗排</text>
+    <text x="555" y="538" text-anchor="middle" font-size="12" fill="#1E3A5F">精排</text>
+    <text x="450" y="558" text-anchor="middle" font-size="11" fill="#3D4F65">不替换原信号 · miss 即降级</text>
+  </g>
+
+  <!-- Loop arrows clockwise -->
+  <path d="M 200,340 Q 260,270 348,260" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ah)"/>
+  <path d="M 552,260 Q 640,270 700,338" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ah)"/>
+  <path d="M 750,420 Q 720,478 622,500" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ah)"/>
+  <path d="M 278,500 Q 180,478 155,420" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ah)"/>
+
+  <!-- reward feeds center (orange dashed, cleanly into core circle edge) -->
+  <line x1="240" y1="380" x2="370" y2="380" stroke="#E89B5C" stroke-width="1.5" stroke-dasharray="3 3" marker-end="url(#ah2)"/>
+  <line x1="450" y1="296" x2="450" y2="300" stroke="#E89B5C" stroke-width="1.5" stroke-dasharray="3 3" marker-end="url(#ah2)"/>
+  <line x1="660" y1="380" x2="530" y2="380" stroke="#E89B5C" stroke-width="1.5" stroke-dasharray="3 3" marker-end="url(#ah2)"/>
+  <line x1="450" y1="488" x2="450" y2="460" stroke="#E89B5C" stroke-width="1.5" stroke-dasharray="3 3" marker-end="url(#ah2)"/>
+
+  <!-- bottom outcome -->
+  <text x="450" y="612" text-anchor="middle" font-size="12" fill="#1E3A5F">闭环：奖励 = 线上打分 · 训练目标 = 上线接入信号 · 失败可回退</text>
+</svg>

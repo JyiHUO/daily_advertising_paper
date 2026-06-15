@@ -1,0 +1,55 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="40" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#1E3A5F">罕见场景：翻一本历史好案例册</text>
+
+  <!-- 当前状态：放大镜 -->
+  <g>
+    <circle cx="115" cy="250" r="50" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2.5"/>
+    <circle cx="105" cy="240" r="22" fill="none" stroke="#1E3A5F" stroke-width="3"/>
+    <line x1="122" y1="257" x2="140" y2="275" stroke="#1E3A5F" stroke-width="4" stroke-linecap="round"/>
+    <text x="115" y="335" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#1E3A5F" font-weight="bold">当前长尾状态</text>
+  </g>
+
+  <!-- 案例册 -->
+  <g>
+    <rect x="320" y="170" width="180" height="170" rx="6" fill="#FFF4E6" stroke="#E89B4C" stroke-width="2.5"/>
+    <rect x="328" y="178" width="172" height="162" rx="6" fill="#FEFAF3" stroke="#E89B4C" stroke-width="2.5"/>
+    <line x1="345" y1="210" x2="485" y2="210" stroke="#3D4F65" stroke-width="1.5"/>
+    <line x1="345" y1="235" x2="485" y2="235" stroke="#3D4F65" stroke-width="1.5"/>
+    <line x1="345" y1="260" x2="485" y2="260" stroke="#3D4F65" stroke-width="1.5"/>
+    <line x1="345" y1="285" x2="485" y2="285" stroke="#3D4F65" stroke-width="1.5"/>
+    <line x1="345" y1="310" x2="485" y2="310" stroke="#3D4F65" stroke-width="1.5"/>
+    <text x="412" y="365" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#1E3A5F" font-weight="bold">历史轨迹索引</text>
+  </g>
+
+  <!-- 箭头 1：相似检索 -->
+  <line x1="170" y1="240" x2="315" y2="215" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="242" y="208" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#3D4F65">① 相似检索</text>
+
+  <!-- 箭头 2：RTG排序 -->
+  <line x1="170" y1="275" x2="315" y2="300" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="242" y="325" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#3D4F65">② 按 RTG 排序</text>
+
+  <!-- 候选动作：金牌 -->
+  <g>
+    <circle cx="670" cy="200" r="32" fill="#FEF3C7" stroke="#E89B4C" stroke-width="2.5"/>
+    <text x="670" y="208" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" fill="#E89B4C">★</text>
+    <circle cx="670" cy="270" r="32" fill="#FEF3C7" stroke="#E89B4C" stroke-width="2.5"/>
+    <text x="670" y="278" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" fill="#E89B4C">★</text>
+    <circle cx="670" cy="340" r="32" fill="#FEF3C7" stroke="#E89B4C" stroke-width="2.5"/>
+    <text x="670" y="348" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" fill="#E89B4C">★</text>
+    <text x="670" y="400" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#1E3A5F" font-weight="bold">高回报候选动作</text>
+  </g>
+
+  <!-- 箭头 3 -->
+  <line x1="505" y1="225" x2="636" y2="208" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <line x1="505" y1="270" x2="636" y2="270" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <line x1="505" y1="310" x2="636" y2="328" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+
+  <text x="400" y="460" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#3D4F65" font-style="italic">不再凭空生成 bid，而是借鉴历史最赚钱的决策</text>
+</svg>
