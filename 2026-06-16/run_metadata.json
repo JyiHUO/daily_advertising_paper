@@ -1,0 +1,18 @@
+{
+  "date": "2026-06-16",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 43,
+  "supplementary_count": 10,
+  "focus_titles": [
+    "Interactor: Agentic RL oriented Iterative Creation for Ad Description Generation in Sponsored Search",
+    "Orchestrated Reality: From Role-Play to Living, Playable Game Worlds -- LLM-Driven World Simulation as a Parameterized-Action POMDP"
+  ],
+  "focus_status": {
+    "Interactor: Agentic RL oriented Iterative Creation for Ad Description Generation in Sponsored Search": "completed",
+    "Orchestrated Reality: From Role-Play to Living, Playable Game Worlds -- LLM-Driven World Simulation as a Parameterized-Action POMDP": "completed"
+  }
+}

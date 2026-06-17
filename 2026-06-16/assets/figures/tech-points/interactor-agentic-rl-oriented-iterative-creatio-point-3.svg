@@ -1,0 +1,64 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="36" text-anchor="middle" font-size="17" font-weight="700" fill="#1E3A5F">只对"自己说的话"回传梯度</text>
+
+  <!-- rollout strip -->
+  <g>
+    <text x="70" y="86" font-size="12" fill="#3D4F65">一条 rollout 序列</text>
+    <rect x="60" y="95" width="480" height="70" rx="10" fill="#F4F1EC" stroke="#C9B79C" stroke-width="1.5"/>
+
+    <rect x="70" y="105" width="80" height="50" rx="6" fill="#EFF6FF" stroke="#9BB8D9"/>
+    <text x="110" y="129" text-anchor="middle" font-size="11" fill="#3D4F65">prompt</text>
+    <text x="110" y="145" text-anchor="middle" font-size="10" fill="#8A6F4D">环境</text>
+
+    <rect x="155" y="105" width="80" height="50" rx="6" fill="#DCEAFB" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="195" y="129" text-anchor="middle" font-size="11" font-weight="700" fill="#1E3A5F">think</text>
+    <text x="195" y="145" text-anchor="middle" font-size="10" fill="#1E3A5F">策略</text>
+
+    <rect x="240" y="105" width="80" height="50" rx="6" fill="#EFF6FF" stroke="#9BB8D9"/>
+    <text x="280" y="129" text-anchor="middle" font-size="11" fill="#3D4F65">检索结果</text>
+    <text x="280" y="145" text-anchor="middle" font-size="10" fill="#8A6F4D">环境</text>
+
+    <rect x="325" y="105" width="80" height="50" rx="6" fill="#DCEAFB" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="365" y="129" text-anchor="middle" font-size="11" font-weight="700" fill="#1E3A5F">create</text>
+    <text x="365" y="145" text-anchor="middle" font-size="10" fill="#1E3A5F">策略</text>
+
+    <rect x="410" y="105" width="80" height="50" rx="6" fill="#EFF6FF" stroke="#9BB8D9"/>
+    <text x="450" y="129" text-anchor="middle" font-size="11" fill="#3D4F65">GenRM 理由</text>
+    <text x="450" y="145" text-anchor="middle" font-size="10" fill="#8A6F4D">环境</text>
+  </g>
+
+  <!-- mask layer -->
+  <g>
+    <text x="300" y="200" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">梯度掩码：环境 mask，策略 学习</text>
+
+    <g stroke="#B85C5C" stroke-width="2.2" fill="none" stroke-linecap="round">
+      <line x1="90" y1="220" x2="130" y2="252"/>
+      <line x1="130" y1="220" x2="90" y2="252"/>
+      <line x1="260" y1="220" x2="300" y2="252"/>
+      <line x1="300" y1="220" x2="260" y2="252"/>
+      <line x1="430" y1="220" x2="470" y2="252"/>
+      <line x1="470" y1="220" x2="430" y2="252"/>
+    </g>
+
+    <g stroke="#4B8BDA" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="178,240 192,254 218,222"/>
+      <polyline points="348,240 362,254 388,222"/>
+    </g>
+  </g>
+
+  <!-- reward feedback -->
+  <line x1="195" y1="260" x2="270" y2="312" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="365" y1="260" x2="330" y2="312" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <rect x="200" y="315" width="200" height="56" rx="28" fill="#FFF4E6" stroke="#D4A256" stroke-width="1.8"/>
+  <text x="300" y="340" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">GSPO 序列级 advantage</text>
+  <text x="300" y="358" text-anchor="middle" font-size="11" fill="#3D4F65">组内归一 + 批内归一</text>
+
+  <text x="300" y="398" text-anchor="middle" font-size="11" fill="#8A6F4D">环境 token 不算梯度，避免模型模仿环境文本</text>
+</svg>

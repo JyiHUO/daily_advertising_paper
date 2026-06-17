@@ -1,0 +1,56 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-size="19" font-weight="700" fill="#1E3A5F">Adstock 驱动的时间反聚合</text>
+  <text x="400" y="60" text-anchor="middle" font-size="13" fill="#3D4F65">周渠道增量 → 按"广告影响力曲线"分配到每一天</text>
+
+  <!-- Weekly bucket -->
+  <rect x="50" y="160" width="150" height="120" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+  <text x="125" y="195" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">周渠道增量</text>
+  <text x="125" y="225" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">100万</text>
+  <text x="125" y="255" text-anchor="middle" font-size="12" fill="#3D4F65">来自 MMM</text>
+
+  <!-- Arrow to weights -->
+  <line x1="205" y1="220" x2="303" y2="220" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Adstock curve as weight -->
+  <rect x="310" y="120" width="200" height="200" rx="10" fill="#FFF4E6" stroke="#E8A04A" stroke-width="1.8"/>
+  <text x="410" y="145" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">Adstock 影响力曲线</text>
+  <text x="410" y="163" text-anchor="middle" font-size="11" fill="#3D4F65">滞后 P 峰值，衰减率 D</text>
+
+  <!-- mini curve baseline -->
+  <line x1="330" y1="290" x2="490" y2="290" stroke="#3D4F65" stroke-width="1"/>
+  <path d="M330,288 Q360,285 380,260 T420,205 Q445,230 470,265 T490,286" fill="none" stroke="#E8A04A" stroke-width="2.2"/>
+  <circle cx="420" cy="205" r="3.5" fill="#E8A04A"/>
+  <text x="420" y="197" text-anchor="middle" font-size="10" fill="#1E3A5F">峰值</text>
+  <text x="410" y="307" text-anchor="middle" font-size="10" fill="#3D4F65">一 二 三 四 五 六 日</text>
+
+  <!-- Arrow to daily -->
+  <line x1="515" y1="220" x2="618" y2="220" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Daily allocation as bars -->
+  <rect x="620" y="130" width="140" height="180" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+  <text x="690" y="152" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">日级分配</text>
+
+  <!-- bars -->
+  <g>
+    <rect x="630" y="265" width="14" height="25" fill="#4B8BDA"/>
+    <rect x="648" y="245" width="14" height="45" fill="#4B8BDA"/>
+    <rect x="666" y="215" width="14" height="75" fill="#1E3A5F"/>
+    <rect x="684" y="220" width="14" height="70" fill="#1E3A5F"/>
+    <rect x="702" y="245" width="14" height="45" fill="#4B8BDA"/>
+    <rect x="720" y="260" width="14" height="30" fill="#4B8BDA"/>
+    <rect x="738" y="280" width="14" height="10" fill="#B8C9DD"/>
+  </g>
+  <text x="673" y="208" text-anchor="middle" font-size="10" fill="#1E3A5F" font-weight="700">20万</text>
+
+  <!-- Bottom contrast: naive vs adstock -->
+  <text x="400" y="380" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">对比：均分 vs Adstock 加权</text>
+  <text x="400" y="410" text-anchor="middle" font-size="11" fill="#3D4F65">均分每日 14.3万 ✗  →  Adstock 保留滞后/衰减结构 ✓</text>
+  <text x="400" y="438" text-anchor="middle" font-size="11" fill="#3D4F65">让媒体动态决定权重，下游活动级回归更稳</text>
+</svg>

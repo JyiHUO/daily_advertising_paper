@@ -1,0 +1,81 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="300" y="36" text-anchor="middle" font-size="17" font-weight="bold" fill="#1E3A5F">拆细到活动级，仍守住渠道总账</text>
+  <text x="300" y="56" text-anchor="middle" font-size="11" fill="#3D4F65">活动级日预测 → 加总回周渠道 → 对齐 MMM</text>
+
+  <!-- Left: many small campaign dots (granular) -->
+  <g>
+    <text x="110" y="100" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E3A5F">活动级 (日)</text>
+    <rect x="35" y="115" width="150" height="170" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.2"/>
+    <g fill="#4B8BDA">
+      <circle cx="60" cy="145" r="3"/><circle cx="80" cy="155" r="4"/><circle cx="100" cy="140" r="3"/>
+      <circle cx="125" cy="160" r="5"/><circle cx="150" cy="148" r="3"/><circle cx="170" cy="170" r="4"/>
+      <circle cx="65" cy="180" r="3"/><circle cx="95" cy="190" r="6"/><circle cx="120" cy="200" r="3"/>
+      <circle cx="145" cy="185" r="4"/><circle cx="170" cy="205" r="3"/><circle cx="55" cy="215" r="3"/>
+      <circle cx="85" cy="225" r="4"/><circle cx="110" cy="240" r="3"/><circle cx="140" cy="220" r="5"/>
+      <circle cx="165" cy="245" r="3"/><circle cx="70" cy="255" r="3"/><circle cx="100" cy="265" r="4"/>
+      <circle cx="130" cy="270" r="3"/><circle cx="160" cy="265" r="3"/>
+    </g>
+    <circle cx="95" cy="190" r="9" fill="none" stroke="#E07856" stroke-width="2"/>
+    <text x="110" y="305" text-anchor="middle" font-size="10" fill="#3D4F65">细粒度，可优化预算</text>
+  </g>
+
+  <!-- Arrow: aggregate up -->
+  <g stroke="#4B8BDA" stroke-width="2" fill="none">
+    <path d="M 188 200 L 273 200" marker-end="url(#arr)"/>
+  </g>
+  <text x="230" y="192" text-anchor="middle" font-size="10" fill="#3D4F65">∑ 日 → 周</text>
+
+  <!-- Middle: weekly channel block -->
+  <g>
+    <text x="350" y="100" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E3A5F">渠道级 (周)</text>
+    <rect x="280" y="115" width="140" height="170" rx="8" fill="#FFF4EC" stroke="#E07856" stroke-width="1.2"/>
+    <g font-size="10" fill="#1E3A5F">
+      <text x="295" y="145">Search</text>
+      <rect x="338" y="137" width="55" height="9" fill="#4B8BDA"/>
+      <rect x="338" y="148" width="53" height="6" fill="#E07856"/>
+      <text x="398" y="148" font-size="9" fill="#3D4F65">4.1%</text>
+
+      <text x="295" y="190">Social</text>
+      <rect x="338" y="182" width="50" height="9" fill="#4B8BDA"/>
+      <rect x="338" y="193" width="46" height="6" fill="#E07856"/>
+      <text x="398" y="193" font-size="9" fill="#3D4F65">5.97%</text>
+
+      <text x="295" y="235">Display</text>
+      <rect x="338" y="227" width="60" height="9" fill="#4B8BDA"/>
+      <rect x="338" y="238" width="58" height="6" fill="#E07856"/>
+      <text x="402" y="238" font-size="9" fill="#3D4F65">3.25%</text>
+    </g>
+    <text x="350" y="270" text-anchor="middle" font-size="9" fill="#3D4F65">蓝=IMA加总   橙=MMM   (周度 MAPE)</text>
+  </g>
+
+  <!-- Arrow: compare -->
+  <g stroke="#4B8BDA" stroke-width="2" fill="none">
+    <path d="M 423 200 L 497 200" marker-end="url(#arr)"/>
+  </g>
+
+  <!-- Right: alignment result -->
+  <g>
+    <rect x="500" y="140" width="85" height="120" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.2"/>
+    <text x="542" y="170" text-anchor="middle" font-size="11" fill="#1E3A5F">对齐 MMM</text>
+    <text x="542" y="210" text-anchor="middle" font-size="16" font-weight="bold" fill="#1E3A5F">R²</text>
+    <text x="542" y="240" text-anchor="middle" font-size="22" font-weight="bold" fill="#E07856">0.98</text>
+  </g>
+
+  <!-- Bottom note -->
+  <text x="300" y="335" text-anchor="middle" font-size="11" fill="#1E3A5F">精度仅多损 ~几个百分点，换来活动级粒度</text>
+  <text x="300" y="354" text-anchor="middle" font-size="10" fill="#3D4F65">贝叶斯收缩下仍能区分 低 / 中 / 高效活动</text>
+
+  <!-- legend -->
+  <g transform="translate(170, 388)" font-size="10" fill="#3D4F65">
+    <circle cx="0" cy="0" r="3" fill="#4B8BDA"/><text x="8" y="3">普通活动</text>
+    <circle cx="90" cy="0" r="5" fill="#4B8BDA" stroke="#E07856" stroke-width="2"/><text x="100" y="3">明星活动</text>
+    <circle cx="190" cy="0" r="2" fill="#9AAFC4"/><text x="198" y="3">低效活动</text>
+  </g>
+</svg>

@@ -4,18 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-06-15
+- **日期**：2026-06-16
 - **分类**：cs.IR + cs.AI + cs.LG
-- **候选论文数**：5
+- **候选论文数**：43
 - **必读论文**：
-  - DRIVE: Distributional and Retrieval-Augmented Bidding with Value Evaluation
-  - CoRe: A Continuously Reward-Finetuned LLM Query Rewriter for Multi-Stage Context-Aware Relevance in Web-Scale Video Search
-- **日报路径**：[2026-06-15/daily_report.md](2026-06-15/daily_report.md)
+  - Interactor: Agentic RL oriented Iterative Creation for Ad Description Generation in Sponsored Search
+  - Orchestrated Reality: From Role-Play to Living, Playable Game Worlds -- LLM-Driven World Simulation as a Parameterized-Action POMDP
+- **日报路径**：[2026-06-16/daily_report.md](2026-06-16/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-06-16 | cs.IR + cs.AI + cs.LG | 43 | 1 | Interactor: Agentic RL oriented Iterative Creation for Ad Description Generation in Sponsored Search | [2026-06-16/daily_report.md](2026-06-16/daily_report.md) |
+|  |  |  | 2 | Orchestrated Reality: From Role-Play to Living, Playable Game Worlds -- LLM-Driven World Simulation as a Parameterized-Action POMDP |  |
 | 2026-06-15 | cs.IR + cs.AI + cs.LG | 5 | 1 | DRIVE: Distributional and Retrieval-Augmented Bidding with Value Evaluation | [2026-06-15/daily_report.md](2026-06-15/daily_report.md) |
 |  |  |  | 2 | CoRe: A Continuously Reward-Finetuned LLM Query Rewriter for Multi-Stage Context-Aware Relevance in Web-Scale Video Search |  |
 | 2026-06-12 | cs.IR + cs.AI + cs.LG | 11 | 1 | OneRetrieval: Unifying Multi-Branch E-commerce Retrieval with an Editable Generative Model | [2026-06-12/daily_report.md](2026-06-12/daily_report.md) |

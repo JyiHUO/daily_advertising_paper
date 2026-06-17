@@ -1,0 +1,84 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 620" font-family="PingFang SC, Microsoft YaHei, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E08A4B"/>
+    </marker>
+  </defs>
+
+  <rect width="880" height="620" fill="#FAFBFC"/>
+
+  <!-- Title -->
+  <text x="440" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">Interactor：会读评语、反复改稿的广告文案 Agent</text>
+  <text x="440" y="64" text-anchor="middle" font-size="13" fill="#3D4F65">把单轮 RLHF 的"一个分数"升级为多轮迭代 + 可读反馈的 Agentic RL</text>
+
+  <!-- Left: Old paradigm -->
+  <g opacity="0.9">
+    <rect x="40" y="130" width="180" height="110" rx="10" fill="#F1F0EE" stroke="#C9C2BA" stroke-width="1.2"/>
+    <text x="130" y="156" text-anchor="middle" font-size="13" font-weight="700" fill="#7A6E5F">单轮 RLHF</text>
+    <text x="130" y="188" text-anchor="middle" font-size="20" fill="#7A6E5F">📝 → 🔢</text>
+    <text x="130" y="216" text-anchor="middle" font-size="11" fill="#7A6E5F">只有标量奖励，不知错在哪</text>
+  </g>
+
+  <!-- Big arrow to new paradigm -->
+  <path d="M 230 185 L 295 185" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
+  <text x="262" y="178" text-anchor="middle" font-size="11" fill="#4B8BDA" font-weight="600">升级</text>
+
+  <!-- Center: The iterative loop -->
+  <g>
+    <ellipse cx="540" cy="320" rx="280" ry="170" fill="#EFF6FF" stroke="#BFD7F0" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <text x="540" y="170" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">多轮迭代闭环 · 最多 3 轮</text>
+
+    <!-- Policy / Writer -->
+    <circle cx="400" cy="320" r="80" fill="#DCE9F8" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="400" y="302" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">策略 LLM</text>
+    <text x="400" y="322" text-anchor="middle" font-size="11" fill="#3D4F65">文案"实习生"</text>
+    <text x="400" y="344" text-anchor="middle" font-size="10" fill="#3D4F65">think · retrieve</text>
+    <text x="400" y="358" text-anchor="middle" font-size="10" fill="#3D4F65">create · reward</text>
+
+    <!-- GenRM / Reviewer -->
+    <circle cx="680" cy="320" r="80" fill="#FBE8D6" stroke="#E08A4B" stroke-width="2"/>
+    <text x="680" y="302" text-anchor="middle" font-size="14" font-weight="700" fill="#7A4416">生成式奖励模型</text>
+    <text x="680" y="322" text-anchor="middle" font-size="11" fill="#7A4416">会写评语的审稿人</text>
+    <text x="680" y="344" text-anchor="middle" font-size="10" fill="#7A4416">知识容量 · 落地页一致</text>
+    <text x="680" y="358" text-anchor="middle" font-size="10" fill="#7A4416">CTR 模型加权</text>
+
+    <!-- Top arrow: draft -->
+    <path d="M 460 280 Q 540 230 620 280" stroke="#4B8BDA" stroke-width="2.2" fill="none" marker-end="url(#arr)"/>
+    <text x="540" y="232" text-anchor="middle" font-size="11" fill="#4B8BDA" font-weight="600">初稿描述</text>
+
+    <!-- Bottom arrow: feedback -->
+    <path d="M 620 360 Q 540 420 460 360" stroke="#E08A4B" stroke-width="2.2" fill="none" marker-end="url(#arrOrange)"/>
+    <text x="540" y="418" text-anchor="middle" font-size="11" fill="#B36A2C" font-weight="600">二值分数 + 可读理由</text>
+    <text x="540" y="433" text-anchor="middle" font-size="10" fill="#B36A2C">例："包邮在落地页里没出现"</text>
+  </g>
+
+  <!-- Side annotation: ablation -->
+  <g transform="translate(40,380)">
+    <rect x="0" y="0" width="200" height="80" rx="8" fill="#FFF7EE" stroke="#E08A4B" stroke-width="1.2" stroke-dasharray="3 3"/>
+    <text x="100" y="22" text-anchor="middle" font-size="11" font-weight="700" fill="#7A4416">关键消融</text>
+    <text x="100" y="44" text-anchor="middle" font-size="10.5" fill="#7A4416">去掉"理由"只留分数：</text>
+    <text x="100" y="60" text-anchor="middle" font-size="10.5" fill="#7A4416">忠实度 0.872 → 0.706</text>
+    <text x="100" y="74" text-anchor="middle" font-size="10" fill="#B36A2C">→ 可读反馈才是关键</text>
+  </g>
+
+  <!-- Bottom: Outputs / Gains -->
+  <g>
+    <text x="440" y="525" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">百度搜索广告线上 A/B · 14 万广告主 · 6000 万曝光</text>
+
+    <g transform="translate(120,545)">
+      <rect x="0" y="0" width="170" height="36" rx="6" fill="#E8F1E8" stroke="#6FA86F"/>
+      <text x="85" y="22" text-anchor="middle" font-size="12" fill="#2F5F2F" font-weight="600">忠实度 0.73 → 0.87</text>
+    </g>
+    <g transform="translate(355,545)">
+      <rect x="0" y="0" width="170" height="36" rx="6" fill="#E8F1E8" stroke="#6FA86F"/>
+      <text x="85" y="22" text-anchor="middle" font-size="12" fill="#2F5F2F" font-weight="600">广告收入 +0.74%</text>
+    </g>
+    <g transform="translate(590,545)">
+      <rect x="0" y="0" width="170" height="36" rx="6" fill="#E8F1E8" stroke="#6FA86F"/>
+      <text x="85" y="22" text-anchor="middle" font-size="12" fill="#2F5F2F" font-weight="600">顶级描述率 +7pp</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,48 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system, 'Helvetica Neue', sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97B4A"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="32" text-anchor="middle" font-size="17" font-weight="600" fill="#1E3A5F">不只打分，还写评语</text>
+
+  <!-- Draft -->
+  <rect x="40" y="170" width="120" height="80" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="100" y="205" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">广告描述</text>
+  <text x="100" y="227" text-anchor="middle" font-size="11" fill="#3D4F65">候选稿</text>
+
+  <!-- Reviewer (GenRM) -->
+  <rect x="220" y="125" width="180" height="170" rx="12" fill="#FFF4EC" stroke="#C97B4A" stroke-width="1.8"/>
+  <text x="310" y="152" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">生成式奖励模型</text>
+
+  <!-- score -->
+  <text x="310" y="180" text-anchor="middle" font-size="12" fill="#3D4F65">二值分数 0 / 1 + 可读评语</text>
+
+  <line x1="240" y1="195" x2="380" y2="195" stroke="#E0CFC0" stroke-width="1"/>
+
+  <!-- rationale lines -->
+  <text x="236" y="220" font-size="11" fill="#3D4F65">· "包邮" 未出现在落地页</text>
+  <text x="236" y="242" font-size="11" fill="#3D4F65">· 检索到的知识未被使用</text>
+  <text x="236" y="264" font-size="11" fill="#3D4F65">· 品牌名一致 ✓</text>
+  <text x="236" y="284" font-size="10.5" fill="#8A6A52" font-style="italic">（评语直接拼回下一轮上下文）</text>
+
+  <!-- Revised -->
+  <rect x="450" y="170" width="120" height="80" rx="10" fill="#EAF4EC" stroke="#5A9A6F" stroke-width="1.5"/>
+  <text x="510" y="205" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="600">下一轮改写</text>
+  <text x="510" y="227" text-anchor="middle" font-size="11" fill="#3D4F65">精准修正</text>
+
+  <!-- Arrows -->
+  <line x1="160" y1="210" x2="218" y2="210" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="402" y1="210" x2="448" y2="210" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- feedback loop -->
+  <path d="M 510 250 Q 510 350 100 350 L 100 252" fill="none" stroke="#C97B4A" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#arO)"/>
+  <text x="305" y="372" text-anchor="middle" font-size="11" fill="#C97B4A" font-style="italic">读评语，再改一遍</text>
+
+  <!-- bottom note -->
+  <text x="300" y="402" text-anchor="middle" font-size="10.5" fill="#6B7A8F">仅二值分数 → 忠实度 0.706 ；加上评语 → 0.872</text>
+</svg>

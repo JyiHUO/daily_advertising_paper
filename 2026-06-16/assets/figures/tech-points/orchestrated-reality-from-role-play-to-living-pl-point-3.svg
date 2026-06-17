@@ -1,0 +1,72 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97B4A"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="36" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">单写者编排 + 注入式记忆</text>
+  <text x="400" y="58" text-anchor="middle" font-size="13" fill="#3D4F65">副手递条子，总管才能落笔；记忆从状态中按需取出</text>
+
+  <!-- Sub-agents (proposals only) -->
+  <text x="140" y="102" text-anchor="middle" font-size="11" fill="#C97B4A" font-style="italic">只读 · 只能建议</text>
+
+  <rect x="50" y="115" width="180" height="44" rx="8" fill="#FFF3E8" stroke="#C97B4A" stroke-width="1.5"/>
+  <text x="140" y="142" text-anchor="middle" font-size="13" fill="#1E3A5F">规则裁判 · proposal</text>
+
+  <rect x="50" y="173" width="180" height="44" rx="8" fill="#FFF3E8" stroke="#C97B4A" stroke-width="1.5"/>
+  <text x="140" y="200" text-anchor="middle" font-size="13" fill="#1E3A5F">战斗裁判 · proposal</text>
+
+  <rect x="50" y="231" width="180" height="44" rx="8" fill="#FFF3E8" stroke="#C97B4A" stroke-width="1.5"/>
+  <text x="140" y="258" text-anchor="middle" font-size="13" fill="#1E3A5F">环境事件 · proposal</text>
+
+  <!-- World agent (sole writer) -->
+  <rect x="320" y="160" width="180" height="110" rx="12" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="2.5"/>
+  <text x="410" y="195" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">World-Agent</text>
+  <text x="410" y="216" text-anchor="middle" font-size="12" fill="#3D4F65">唯一写者（PDVA）</text>
+  <g transform="translate(395,228)">
+    <path d="M0,18 L18,0 L24,6 L6,24 Z" fill="#1E3A5F"/>
+    <path d="M0,18 L6,24 L0,24 Z" fill="#3D4F65"/>
+  </g>
+
+  <!-- Canonical JSON state -->
+  <rect x="590" y="160" width="170" height="110" rx="12" fill="#E8F1F9" stroke="#1E3A5F" stroke-width="2"/>
+  <text x="675" y="190" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">Canonical State</text>
+  <text x="675" y="208" text-anchor="middle" font-size="12" fill="#3D4F65">JSON 实体树</text>
+  <text x="610" y="236" font-size="11" fill="#3D4F65" font-family="monospace">{ npc_07: {...},</text>
+  <text x="610" y="252" font-size="11" fill="#3D4F65" font-family="monospace">  rel: trust+ }</text>
+
+  <!-- proposals arrows (terminate at left edge x=320) -->
+  <path d="M230,137 Q275,150 318,180" fill="none" stroke="#C97B4A" stroke-width="1.6" stroke-dasharray="5,3" marker-end="url(#arO)"/>
+  <path d="M230,195 L318,212" fill="none" stroke="#C97B4A" stroke-width="1.6" stroke-dasharray="5,3" marker-end="url(#arO)"/>
+  <path d="M230,253 Q275,240 318,232" fill="none" stroke="#C97B4A" stroke-width="1.6" stroke-dasharray="5,3" marker-end="url(#arO)"/>
+
+  <!-- atomic commit: world-agent -> state -->
+  <path d="M500,195 L588,195" fill="none" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="544" y="187" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">atomic commit</text>
+
+  <!-- injected memory (state -> world agent) -->
+  <path d="M588,240 L500,240" fill="none" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <text x="544" y="258" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">context pack</text>
+
+  <!-- Memory illustration bottom -->
+  <rect x="80" y="330" width="640" height="160" rx="10" fill="#FAFBFC" stroke="#B8C5D6" stroke-width="1"/>
+  <text x="400" y="358" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">注入式记忆 ≠ 拉长 context</text>
+
+  <!-- left: long context (crossed) -->
+  <rect x="110" y="385" width="200" height="44" rx="6" fill="#F5E8E8" stroke="#B85450" stroke-width="1.2"/>
+  <text x="210" y="412" text-anchor="middle" font-size="12" fill="#3D4F65">长对话历史 · 侥幸命中</text>
+  <line x1="110" y1="385" x2="310" y2="429" stroke="#B85450" stroke-width="1.5"/>
+
+  <text x="360" y="412" text-anchor="middle" font-size="20" fill="#4B8BDA">→</text>
+
+  <!-- right: pick from JSON -->
+  <rect x="400" y="385" width="290" height="44" rx="6" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="1.5"/>
+  <text x="545" y="412" text-anchor="middle" font-size="12" fill="#1E3A5F">从 JSON 按相关性挑固定容量喂回</text>
+
+  <text x="400" y="458" text-anchor="middle" font-size="11" fill="#3D4F65">例：第 16 轮再次出场的 NPC，从其档案取 persona + 关系 + 上次互动注入 prompt</text>
+  <text x="400" y="476" text-anchor="middle" font-size="11" fill="#3D4F65">→ 模型自然写出"这是我第一个能信任的伙伴"</text>
+</svg>

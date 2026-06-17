@@ -1,0 +1,51 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">像实习生一样反复改稿，而非一次成文</text>
+
+  <!-- Round 1 -->
+  <g>
+    <circle cx="150" cy="200" r="70" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="150" y="172" text-anchor="middle" font-size="13" fill="#3D4F65">第 1 轮</text>
+    <text x="150" y="202" text-anchor="middle" font-size="16" font-weight="600" fill="#1E3A5F">查资料</text>
+    <text x="150" y="227" text-anchor="middle" font-size="12" fill="#3D4F65">retrieve</text>
+  </g>
+
+  <!-- Round 2 -->
+  <g>
+    <circle cx="400" cy="200" r="70" fill="#FFF4E6" stroke="#E89B4A" stroke-width="2"/>
+    <text x="400" y="172" text-anchor="middle" font-size="13" fill="#3D4F65">第 2 轮</text>
+    <text x="400" y="202" text-anchor="middle" font-size="16" font-weight="600" fill="#1E3A5F">写初稿</text>
+    <text x="400" y="227" text-anchor="middle" font-size="12" fill="#3D4F65">create + reward</text>
+  </g>
+
+  <!-- Round 3 -->
+  <g>
+    <circle cx="650" cy="200" r="75" fill="#E8F3EC" stroke="#4A9D6F" stroke-width="2.5"/>
+    <text x="650" y="170" text-anchor="middle" font-size="13" fill="#3D4F65">第 3 轮</text>
+    <text x="650" y="200" text-anchor="middle" font-size="16" font-weight="700" fill="#1E3A5F">改定稿</text>
+    <text x="650" y="227" text-anchor="middle" font-size="12" fill="#3D4F65">最终描述</text>
+  </g>
+
+  <!-- arrows -->
+  <path d="M 222 200 L 328 200" stroke="#4B8BDA" stroke-width="2.2" fill="none" marker-end="url(#ar)"/>
+  <path d="M 472 200 L 573 200" stroke="#4B8BDA" stroke-width="2.2" fill="none" marker-end="url(#ar)"/>
+
+  <!-- feedback labels above arrows -->
+  <text x="275" y="190" text-anchor="middle" font-size="12" fill="#3D4F65" font-style="italic">世界知识</text>
+  <text x="522" y="190" text-anchor="middle" font-size="12" fill="#3D4F65" font-style="italic">可读评语</text>
+
+  <!-- think bubbles below -->
+  <text x="150" y="320" text-anchor="middle" font-size="12" fill="#3D4F65">「该查什么？」</text>
+  <text x="400" y="320" text-anchor="middle" font-size="12" fill="#3D4F65">「初稿哪里错？」</text>
+  <text x="650" y="320" text-anchor="middle" font-size="12" fill="#3D4F65">「忠实 + 丰富」</text>
+
+  <!-- bottom contrast -->
+  <line x1="100" y1="380" x2="700" y2="380" stroke="#D4DCE5" stroke-width="1"/>
+  <text x="400" y="415" text-anchor="middle" font-size="13" fill="#1E3A5F">单轮 RLHF：一锤定音，只有分数  →  <tspan fill="#4A9D6F" font-weight="700">多轮 Agentic：思考-行动-观察，逐步打磨</tspan></text>
+  <text x="400" y="445" text-anchor="middle" font-size="11" fill="#7A8899">每轮的反馈被拼回上下文，让模型看见自己被挑刺的地方</text>
+</svg>

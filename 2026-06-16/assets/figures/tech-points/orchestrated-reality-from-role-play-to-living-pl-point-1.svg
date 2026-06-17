@@ -1,0 +1,76 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="300" y="36" text-anchor="middle" font-size="17" font-weight="bold" fill="#1E3A5F">世界 = 磁盘上的 JSON 状态树</text>
+  <text x="300" y="56" text-anchor="middle" font-size="11" fill="#3D4F65">不是对话历史，而是可哈希的结构化世界</text>
+
+  <!-- LEFT: World tree (the canonical state) -->
+  <g>
+    <rect x="40" y="90" width="200" height="280" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="140" y="113" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E3A5F">World State Tree</text>
+
+    <!-- root -->
+    <circle cx="70" cy="155" r="5" fill="#1E3A5F"/>
+    <text x="82" y="159" font-size="11" fill="#1E3A5F">world/</text>
+
+    <!-- trunk -->
+    <line x1="70" y1="160" x2="70" y2="310" stroke="#4B8BDA" stroke-width="1.2"/>
+
+    <g font-size="10.5" fill="#3D4F65">
+      <line x1="70" y1="190" x2="95" y2="190" stroke="#4B8BDA" stroke-width="1.2"/>
+      <rect x="97" y="180" width="110" height="20" rx="3" fill="#FFFFFF" stroke="#9DBCE0"/>
+      <text x="152" y="194" text-anchor="middle">towns.json</text>
+
+      <line x1="70" y1="220" x2="95" y2="220" stroke="#4B8BDA" stroke-width="1.2"/>
+      <rect x="97" y="210" width="110" height="20" rx="3" fill="#FFFFFF" stroke="#9DBCE0"/>
+      <text x="152" y="224" text-anchor="middle">npcs.json</text>
+
+      <line x1="70" y1="250" x2="95" y2="250" stroke="#4B8BDA" stroke-width="1.2"/>
+      <rect x="97" y="240" width="110" height="20" rx="3" fill="#FFFFFF" stroke="#9DBCE0"/>
+      <text x="152" y="254" text-anchor="middle">quests.json</text>
+
+      <line x1="70" y1="280" x2="95" y2="280" stroke="#4B8BDA" stroke-width="1.2"/>
+      <rect x="97" y="270" width="110" height="20" rx="3" fill="#FFFFFF" stroke="#9DBCE0"/>
+      <text x="152" y="284" text-anchor="middle">factions.json</text>
+
+      <line x1="70" y1="310" x2="95" y2="310" stroke="#4B8BDA" stroke-width="1.2"/>
+      <rect x="97" y="300" width="110" height="20" rx="3" fill="#FFFFFF" stroke="#9DBCE0"/>
+      <text x="152" y="314" text-anchor="middle">player.json</text>
+    </g>
+
+    <text x="140" y="350" text-anchor="middle" font-size="10.5" font-style="italic" fill="#C2691F">SHA-256 → state id</text>
+  </g>
+
+  <!-- Slice arrow: tree -> LLM -->
+  <path d="M245,200 C290,200 300,200 338,200" stroke="#4B8BDA" stroke-width="1.8" fill="none" marker-end="url(#ah)"/>
+  <text x="291" y="192" text-anchor="middle" font-size="10" fill="#1E3A5F">read slice</text>
+
+  <!-- RIGHT TOP: LLM as proposer -->
+  <g>
+    <rect x="340" y="170" width="220" height="80" rx="10" fill="#FFF4E6" stroke="#C2691F" stroke-width="1.5"/>
+    <text x="450" y="195" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">LLM</text>
+    <text x="450" y="215" text-anchor="middle" font-size="11" fill="#3D4F65">proposes a diff</text>
+    <text x="450" y="235" text-anchor="middle" font-size="10.5" fill="#C2691F">— suggester only —</text>
+  </g>
+
+  <!-- Diff arrow: LLM -> tree -->
+  <path d="M338,260 C290,260 290,260 245,260" stroke="#4B8BDA" stroke-width="1.8" fill="none" marker-end="url(#ah)"/>
+  <text x="291" y="275" text-anchor="middle" font-size="10" fill="#1E3A5F">commit diff</text>
+
+  <!-- RIGHT BOTTOM: New hash -->
+  <g>
+    <rect x="340" y="300" width="220" height="70" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="450" y="325" text-anchor="middle" font-size="12" font-weight="bold" fill="#1E3A5F">new state id</text>
+    <text x="450" y="346" text-anchor="middle" font-size="11" fill="#3D4F65" font-family="monospace">hash: 7af3…e1</text>
+    <text x="450" y="362" text-anchor="middle" font-size="9.5" fill="#3D4F65">auditable · replayable</text>
+  </g>
+
+  <!-- arrow LLM -> new hash -->
+  <path d="M450,250 L450,298" stroke="#4B8BDA" stroke-width="1.8" fill="none" marker-end="url(#ah)"/>
+
+</svg>

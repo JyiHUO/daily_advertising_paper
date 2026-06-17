@@ -1,0 +1,9 @@
+{
+  "title": "AI计算广告论文播报 2026-06-16｜广告系统的信号面扩张",
+  "shownotes_html": "<p>这一期我们聊的是广告系统正在经历的一次<strong>信号面扩张</strong>：从只盯点击到引入世界知识、隐式负反馈、聚合归因。两篇主菜分别来自百度搜索广告和 Lowe's 营销团队，都是直接打通广告链路的工业级工作。</p><p><strong>本期重点</strong></p><ul><li><strong>Interactor：面向赞助搜索广告描述生成的 Agentic RL 迭代创作（Interactor: Agentic RL oriented Iterative Creation for Ad Description Generation in Sponsored Search）</strong>——把\"写描述\"变成 think-retrieve-create-reward 的多轮 Agent 任务，用 rubric 化的生成式奖励模型把奖励从\"打分\"升级为\"写评语\"，已在百度搜索广告全量上线，覆盖十四万广告主，广告收入 +0.74%。</li><li><strong>整合营销归因：以 MMM 为锚的隐私安全活动级测量贝叶斯框架（Integrated Marketing Attribution: A Bayesian Framework for Privacy-Safe Granular Measurement Anchored in MMM）</strong>——三阶段把 MMM 的渠道周账，用 adstock 摊到天、再分配到活动；MMM 系数当贝叶斯先验抑制共线性，活动级拆完仍与 MMM 对齐到 R²=0.98，是隐私时代很值得参考的归因模板。</li><li><strong>OneRank：Transformer 原生的统一多任务排序架构（OneRank: Unified Transformer-Native Ranking Architecture for Multi-Task Recommendation）</strong>——把特征编码与多任务塔合进一个序列建模过程，挑战工业界用了多年的\"共享底座+多塔\"范式。</li><li><strong>超越正反馈：挖掘隐式负行为以增强用户序列建模（Beyond Positive Signals: Unlocking Implicit Negative Behaviors for Enhanced Sequential User Modeling）</strong>——CTR 序列建模显式引入\"看了没点、滑过去\"等隐式负信号，与 Interactor 的\"扩展输入面\"思路遥相呼应。</li></ul><p><strong>今日趋势</strong></p><ul><li>cs.IR 升至 35 篇，工业级排序、检索、重排论文密度明显抬升，OneRank、PIANO、Retrieval-as-a-Service 共同指向\"分层解耦+架构统一\"的工业演进方向。</li><li>测量精度与隐私风险是同一枚硬币的两面：IMA 在隐私约束下重建活动级归因，而 Attribute Inference from Interactive Targeted Ads 则提醒，定向广告的交互本身就是属性泄露通道。</li></ul><p>本期内容由 AI 自动生成，欢迎在评论区聊聊你最想深入的那一篇，或者对哪条趋势判断有不同看法。</p>",
+  "report_date": "2026-06-16",
+  "provider": "litellm-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-06-16T21:59:25Z"
+}
