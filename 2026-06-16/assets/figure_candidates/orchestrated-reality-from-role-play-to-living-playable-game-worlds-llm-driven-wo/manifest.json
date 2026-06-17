@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-16/downloaded_pdfs/orchestrated-reality-from-role-play-to-living-playable-game-worlds-llm-driven-wo.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-16/assets/figure_candidates/orchestrated-reality-from-role-play-to-living-playable-game-worlds-llm-driven-wo",
+  "candidates": [
+    {
+      "id": "page-0-block-9",
+      "page_index": 0,
+      "caption": "language models, and report work in progress on a framework— orchestrated reality —that makes the world a canonical object owned",
+      "clip": [
+        42.84100189208984,
+        18.0,
+        532.4349609375,
+        255.74411010742188
+      ],
+      "clip_area": 116398.0801072206,
+      "page_area": 484704.0,
+      "text_density": 0.3076635677530482,
+      "kind": "captioned_figure",
+      "score": 41.34018593481711,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-16/assets/figure_candidates/orchestrated-reality-from-role-play-to-living-playable-game-worlds-llm-driven-wo/01-p1-captioned_figure.png",
+      "filename": "01-p1-captioned_figure.png"
+    },
+    {
+      "id": "page-5-drawing-caption-20",
+      "page_index": 5,
+      "caption": "Fig. 1. The world-agent harness. A singleton world-agent (top) reads the canonical JSON state and integrates proposals from specialist sub-agents (rules, combat, ambient referees) and—in future work—parallel NPC minds (dashed group) through the PDVA validation stage, then commits one content-hashed update to an event-sourced history.",
+      "clip": [
+        126.81362915039062,
+        101.5167236328125,
+        478.3485412597656,
+        191.8726806640625
+      ],
+      "clip_area": 31763.273413538933,
+      "page_area": 484704.0,
+      "text_density": 0.13920978022653546,
+      "kind": "drawing_cluster_with_caption",
+      "score": 29.800338446558307,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-16/assets/figure_candidates/orchestrated-reality-from-role-play-to-living-playable-game-worlds-llm-driven-wo/02-p6-drawing_cluster_with_caption.png",
+      "filename": "02-p6-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-1-block-31",
+      "page_index": 1,
+      "caption": "player trust under LLM-driven NPCs [ 20 ] measure experiential effects of inconsistency, not the underlying architecture",
+      "clip": [
+        79.56100311279297,
+        219.2294189453125,
+        569.1595092773438,
+        528.0294189453125
+      ],
+      "clip_area": 151188.0187036133,
+      "page_area": 484704.0,
+      "text_density": 0.44742480666267853,
+      "kind": "captioned_figure",
+      "score": 25.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-16/assets/figure_candidates/orchestrated-reality-from-role-play-to-living-playable-game-worlds-llm-driven-wo/03-p2-captioned_figure.png",
+      "filename": "03-p2-captioned_figure.png"
+    },
+    {
+      "id": "page-1-block-39",
+      "page_index": 1,
+      "caption": "runtime world model that any such pipeline can read from and write into through a validated transition kernel.",
+      "clip": [
+        79.56100311279297,
+        328.818408203125,
+        548.3560424804688,
+        637.618408203125
+      ],
+      "clip_area": 144763.9081567383,
+      "page_area": 484704.0,
+      "text_density": 0.5085439311868001,
+      "kind": "captioned_figure",
+      "score": 23.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-16/assets/figure_candidates/orchestrated-reality-from-role-play-to-living-playable-game-worlds-llm-driven-wo/04-p2-captioned_figure.png",
+      "filename": "04-p2-captioned_figure.png"
+    },
+    {
+      "id": "page-7-block-15",
+      "page_index": 7,
+      "caption": "canonical JSON entities and whose transition kernel is the LLM-driven PDVA pipeline. The contribution is the world",
+      "clip": [
+        79.56100311279297,
+        18.0,
+        569.1569458007813,
+        296.2413024902344
+      ],
+      "clip_area": 136225.81278744002,
+      "page_area": 484704.0,
+      "text_density": 0.34645321031427,
+      "kind": "captioned_figure",
+      "score": 21.0128073811438,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-16/assets/figure_candidates/orchestrated-reality-from-role-play-to-living-playable-game-worlds-llm-driven-wo/05-p8-captioned_figure.png",
+      "filename": "05-p8-captioned_figure.png"
+    },
+    {
+      "id": "page-5-block-20",
+      "page_index": 5,
+      "caption": "Fig. 1. The world-agent harness. A singleton world-agent (top) reads the canonical JSON state and integrates proposals from specialist sub-agents (rules, combat, ambient referees) and—in future work—parallel NPC minds (dashed group) through the PDVA validation stage, then commits one content-hashed update to an event-sourced history.",
+      "clip": [
+        79.56100311279297,
+        18.0,
+        569.1621948242188,
+        248.47369384765625
+      ],
+      "clip_area": 112840.19516594682,
+      "page_area": 484704.0,
+      "text_density": 0.07898064796068066,
+      "kind": "captioned_figure",
+      "score": 21.0,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-16/assets/figure_candidates/orchestrated-reality-from-role-play-to-living-playable-game-worlds-llm-driven-wo/06-p6-captioned_figure.png",
+      "filename": "06-p6-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-16/assets/figure_candidates/orchestrated-reality-from-role-play-to-living-playable-game-worlds-llm-driven-wo/contact-sheet.svg"
+}

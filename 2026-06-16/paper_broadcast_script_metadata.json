@@ -1,12 +1,12 @@
 {
   "report_date": "2026-06-16",
-  "provider": "litellm-opus",
+  "provider": "bedrock-opus-47",
   "target_minutes": 12,
   "max_tokens": 6500,
-  "char_count": 2797,
+  "char_count": 2461,
   "focus_titles": [
     "Interactor: Agentic RL oriented Iterative Creation for Ad Description Generation in Sponsored Search",
-    "Integrated Marketing Attribution: A Bayesian Framework for Privacy-Safe Granular Measurement Anchored in MMM"
+    "Orchestrated Reality: From Role-Play to Living, Playable Game Worlds -- LLM-Driven World Simulation as a Parameterized-Action POMDP"
   ],
   "audio_provider": "moss",
   "audio_voice_name": "Steve"

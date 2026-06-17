@@ -1,0 +1,117 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-16/downloaded_pdfs/interactor-agentic-rl-oriented-iterative-creation-for-ad-description-generation-.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-16/assets/figure_candidates/interactor-agentic-rl-oriented-iterative-creation-for-ad-description-generation-",
+  "candidates": [
+    {
+      "id": "page-2-drawing-caption-31",
+      "page_index": 2,
+      "caption": "Figure 2: The overall workflow of the I NTERACTOR framework for generating informative ad descriptions.",
+      "clip": [
+        52.865997314453125,
+        54.86552429199219,
+        307.1302490234375,
+        288.87603759765625
+      ],
+      "clip_area": 59500.508057700004,
+      "page_area": 501156.9211820215,
+      "text_density": 0.34257135586027027,
+      "kind": "drawing_cluster_with_caption",
+      "score": 37.906835404580455,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-16/assets/figure_candidates/interactor-agentic-rl-oriented-iterative-creation-for-ad-description-generation-/01-p3-drawing_cluster_with_caption.png",
+      "filename": "01-p3-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-0-drawing-caption-18",
+      "page_index": 0,
+      "caption": "Figure 1: An example of ad description with query ‘Can black sesame turn white hair black?’. Compared to title, it has a longer span and should be more informative.",
+      "clip": [
+        273.9770812988281,
+        203.90682983398438,
+        542.4105224609375,
+        439.3665771484375
+      ],
+      "clip_area": 63205.270226779394,
+      "page_area": 501156.9211820215,
+      "text_density": 0.3410546441264416,
+      "kind": "drawing_cluster_with_caption",
+      "score": 24.039002132711055,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-16/assets/figure_candidates/interactor-agentic-rl-oriented-iterative-creation-for-ad-description-generation-/02-p1-drawing_cluster_with_caption.png",
+      "filename": "02-p1-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-0-embedded-0-0",
+      "page_index": 0,
+      "caption": "Figure 1: An example of ad description with query ‘Can black sesame turn white hair black?’. Compared to title, it has a longer span and should be more informative.",
+      "clip": [
+        290.2764587402344,
+        207.9068145751953,
+        486.85760498046875,
+        366.89605712890625
+      ],
+      "clip_area": 31254.287541075144,
+      "page_area": 501156.9211820215,
+      "text_density": 0.33589390055074375,
+      "kind": "embedded_image_with_caption",
+      "xref": 727,
+      "score": 16.99363582852288,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-16/assets/figure_candidates/interactor-agentic-rl-oriented-iterative-creation-for-ad-description-generation-/03-p1-embedded_image_with_caption.png",
+      "filename": "03-p1-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-1-block-8",
+      "page_index": 1,
+      "caption": "3 Methodology: The I NTERACTOR Framework",
+      "clip": [
+        276.3781982421875,
+        207.08719482421873,
+        522.2080444335937,
+        535.8432006835938
+      ],
+      "clip_area": 80818.0383549112,
+      "page_area": 501156.9211820215,
+      "text_density": 0.8400271502726713,
+      "kind": "captioned_figure",
+      "score": 16.89797820394346,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-16/assets/figure_candidates/interactor-agentic-rl-oriented-iterative-creation-for-ad-description-generation-/04-p2-captioned_figure.png",
+      "filename": "04-p2-captioned_figure.png"
+    },
+    {
+      "id": "page-0-embedded-0-1",
+      "page_index": 0,
+      "caption": "第 1 页内嵌图片候选",
+      "clip": [
+        290.2764587402344,
+        292.07818603515625,
+        486.85760498046875,
+        451.06744384765625
+      ],
+      "clip_area": 31254.290540665388,
+      "page_area": 501156.9211820215,
+      "text_density": 0.4200283484875923,
+      "kind": "embedded_image",
+      "xref": 727,
+      "score": -6.652730105103718,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-16/assets/figure_candidates/interactor-agentic-rl-oriented-iterative-creation-for-ad-description-generation-/05-p1-embedded_image.png",
+      "filename": "05-p1-embedded_image.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        151.54020263671873,
+        281.6852404785156,
+        471.45840820312503
+      ],
+      "clip_area": 84357.70896823303,
+      "kind": "layout_region_left_top",
+      "page_area": 501156.9211820215,
+      "text_density": 0.6089442796107623,
+      "score": -11.06269212257519,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-16/assets/figure_candidates/interactor-agentic-rl-oriented-iterative-creation-for-ad-description-generation-/06-p1-layout_region_left_top.png",
+      "filename": "06-p1-layout_region_left_top.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-16/assets/figure_candidates/interactor-agentic-rl-oriented-iterative-creation-for-ad-description-generation-/contact-sheet.svg"
+}
