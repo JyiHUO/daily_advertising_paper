@@ -1,0 +1,63 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97A4A"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="32" text-anchor="middle" font-size="16" font-weight="600" fill="#1E3A5F">每个模板贴一张「保鲜期」τ</text>
+  <text x="300" y="52" text-anchor="middle" font-size="11" fill="#3D4F65">缺货越久 → τ 越长 → 排到更后面也仍可选</text>
+
+  <!-- Three shelves with different tau lengths -->
+  <g>
+    <rect x="50" y="80" width="160" height="70" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="130" y="105" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">热门·开班少</text>
+    <text x="130" y="123" text-anchor="middle" font-size="11" fill="#3D4F65">已被大量收藏</text>
+    <text x="130" y="140" text-anchor="middle" font-size="11" fill="#C97A4A" font-weight="600">τ 短</text>
+  </g>
+
+  <g>
+    <rect x="220" y="80" width="160" height="70" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="300" y="105" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">普通模板</text>
+    <text x="300" y="140" text-anchor="middle" font-size="11" fill="#C97A4A" font-weight="600">τ 中</text>
+  </g>
+
+  <g>
+    <rect x="390" y="80" width="160" height="70" rx="8" fill="#FEF3E7" stroke="#C97A4A" stroke-width="1.5"/>
+    <text x="470" y="105" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">缺人·低曝光</text>
+    <text x="470" y="123" text-anchor="middle" font-size="11" fill="#3D4F65">分数跨轮累积</text>
+    <text x="470" y="140" text-anchor="middle" font-size="11" fill="#C97A4A" font-weight="600">τ 长</text>
+  </g>
+
+  <!-- Workers as queue with z values -->
+  <text x="40" y="220" font-size="12" fill="#1E3A5F" font-weight="600">工人队列  z = 到达时间</text>
+
+  <g font-size="11" fill="#1E3A5F">
+    <circle cx="130" cy="250" r="16" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="130" y="254" text-anchor="middle">z₁</text>
+    <circle cx="215" cy="250" r="16" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="215" y="254" text-anchor="middle">z₂</text>
+    <circle cx="300" cy="250" r="16" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="300" y="254" text-anchor="middle">z₃</text>
+    <circle cx="385" cy="250" r="16" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="385" y="254" text-anchor="middle">…</text>
+    <circle cx="470" cy="250" r="18" fill="#FEF3E7" stroke="#C97A4A" stroke-width="1.5"/>
+    <text x="470" y="254" text-anchor="middle" font-weight="600">zₙ</text>
+  </g>
+
+  <!-- arrows from shelves down to which worker can see -->
+  <path d="M130,150 L130,232" stroke="#4B8BDA" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+  <path d="M470,150 L470,230" stroke="#C97A4A" stroke-width="1.8" fill="none" marker-end="url(#b)"/>
+
+  <text x="100" y="285" font-size="10" fill="#4B8BDA">τ 短：仅靠前的工人可选</text>
+  <text x="380" y="285" font-size="10" fill="#C97A4A" font-weight="600">τ 长：靠后工人也能看到</text>
+
+  <!-- bottom annotation -->
+  <rect x="60" y="310" width="480" height="90" rx="8" fill="#F4F7FB" stroke="#4B8BDA" stroke-dasharray="3,3"/>
+  <text x="300" y="338" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">τ 预先算好 → 所有工人并行查各自清单</text>
+  <text x="300" y="362" text-anchor="middle" font-size="11" fill="#3D4F65">无需串行扣库存，百万级也能跑（替代 RSD）</text>
+  <text x="300" y="383" text-anchor="middle" font-size="11" fill="#C97A4A">被推荐才扣分 · 低曝光模板自动积累优先权</text>
+</svg>

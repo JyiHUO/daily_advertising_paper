@@ -1,0 +1,63 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="-apple-system, 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ahg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9CB4CC"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="34" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">自适应配额 · 按"缺人程度"分曝光</text>
+  <text x="360" y="54" text-anchor="middle" font-size="12" fill="#3D4F65">p = w₀·发岗容量 + w₁·未填容量</text>
+
+  <!-- Left: scarce exposure pie -->
+  <g transform="translate(150,230)">
+    <circle r="78" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <path d="M 0,0 L 78,0 A 78,78 0 1 1 -52,-58 Z" fill="#4B8BDA" opacity="0.85"/>
+    <path d="M 0,0 L -52,-58 A 78,78 0 0 1 78,0 Z" fill="#E8A87C" opacity="0.9"/>
+    <text x="20" y="20" font-size="13" font-weight="700" fill="#fff">A · 缺人</text>
+    <text x="14" y="-50" font-size="11" font-weight="700" fill="#1E3A5F">B</text>
+    <text x="0" y="118" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="600">配额 q̄：缺口大 → 分得多</text>
+  </g>
+
+  <!-- Arrow to RSD -->
+  <line x1="240" y1="230" x2="358" y2="230" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ah)"/>
+  <text x="299" y="222" text-anchor="middle" font-size="11" fill="#3D4F65">轮转分配</text>
+
+  <!-- Middle: workers picking -->
+  <g transform="translate(420,230)">
+    <text x="0" y="-90" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">轮转 RSD：随机排序，按偏好取一个</text>
+
+    <circle cx="-50" cy="-30" r="10" fill="#4B8BDA"/>
+    <circle cx="-50" cy="0" r="10" fill="#4B8BDA"/>
+    <circle cx="-50" cy="30" r="10" fill="#4B8BDA"/>
+    <circle cx="-50" cy="60" r="10" fill="#9CB4CC"/>
+    <text x="-50" y="84" text-anchor="middle" font-size="10" fill="#3D4F65">工人</text>
+
+    <line x1="-38" y1="-30" x2="20" y2="-30" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ah)"/>
+    <line x1="-38" y1="0" x2="20" y2="0" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ah)"/>
+    <line x1="-38" y1="30" x2="20" y2="30" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ah)"/>
+    <line x1="-38" y1="60" x2="60" y2="60" stroke="#9CB4CC" stroke-width="1.5" stroke-dasharray="3,3" marker-end="url(#ahg)"/>
+
+    <!-- A slots -->
+    <rect x="30" y="-40" width="20" height="20" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <rect x="30" y="-10" width="20" height="20" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <rect x="30" y="20" width="20" height="20" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <rect x="30" y="50" width="20" height="20" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="40" y="86" text-anchor="middle" font-size="11" font-weight="700" fill="#1E3A5F">A</text>
+
+    <!-- B slots -->
+    <rect x="70" y="-40" width="20" height="20" fill="#FBE5D6" stroke="#E8A87C"/>
+    <rect x="70" y="-10" width="20" height="20" fill="#F3F4F6" stroke="#9CB4CC" stroke-dasharray="2,2"/>
+    <line x1="72" y1="-8" x2="88" y2="8" stroke="#9CB4CC"/>
+    <line x1="72" y1="8" x2="88" y2="-8" stroke="#9CB4CC"/>
+    <text x="80" y="86" text-anchor="middle" font-size="11" font-weight="700" fill="#1E3A5F">B</text>
+    <text x="100" y="-15" font-size="10" fill="#E8A87C">B 配额耗尽 → 移出菜单</text>
+  </g>
+
+  <!-- Bottom takeaway -->
+  <rect x="150" y="380" width="420" height="50" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.2"/>
+  <text x="360" y="402" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">曝光从"热门但开班少"转向"真正缺人"</text>
+  <text x="360" y="420" text-anchor="middle" font-size="11" fill="#3D4F65">无需人工分类 · 可并行 · 提升匹配率</text>
+</svg>
