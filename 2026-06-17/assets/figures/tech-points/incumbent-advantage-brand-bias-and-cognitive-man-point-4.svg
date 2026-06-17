@@ -1,0 +1,50 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C25450"/>
+    </marker>
+    <marker id="arGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4A9B6E"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="34" text-anchor="middle" font-size="19" font-weight="bold" fill="#1E3A5F">RAG 并非品牌偏见的解药</text>
+  <text x="300" y="56" text-anchor="middle" font-size="12" fill="#3D4F65">检索把「品牌名」换成了「语义匹配」</text>
+
+  <!-- Query -->
+  <ellipse cx="80" cy="220" rx="55" ry="38" fill="#FFF5E6" stroke="#D9A14A" stroke-width="1.5"/>
+  <text x="80" y="216" text-anchor="middle" font-size="12" fill="#1E3A5F">用户 Query</text>
+  <text x="80" y="234" text-anchor="middle" font-size="11" fill="#3D4F65">语义向量</text>
+
+  <!-- Retrieval gate -->
+  <polygon points="200,150 280,150 260,290 220,290" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+  <text x="240" y="212" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">检索关卡</text>
+  <text x="240" y="230" text-anchor="middle" font-size="11" fill="#3D4F65">Top-K=5</text>
+
+  <!-- Real brand: blocked -->
+  <rect x="350" y="105" width="210" height="90" rx="8" fill="#FBECEC" stroke="#C25450" stroke-width="1.5"/>
+  <text x="455" y="130" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">真实品牌 (CeraVe)</text>
+  <text x="455" y="152" text-anchor="middle" font-size="11" fill="#3D4F65">相似度 0.41 · 排第 8</text>
+  <text x="455" y="172" text-anchor="middle" font-size="11" fill="#C25450">ISR: 100% → 0%</text>
+  <text x="455" y="188" text-anchor="middle" font-size="10" fill="#C25450">品牌名 ≠ 通行证</text>
+
+  <!-- GEO brand: passes -->
+  <rect x="350" y="245" width="210" height="90" rx="8" fill="#E8F4EC" stroke="#4A9B6E" stroke-width="1.5"/>
+  <text x="455" y="270" text-anchor="middle" font-size="13" font-weight="bold" fill="#1E3A5F">虚构品牌 + 权威话术</text>
+  <text x="455" y="292" text-anchor="middle" font-size="11" fill="#3D4F65">相似度 +0.028 (d=0.90)</text>
+  <text x="455" y="312" text-anchor="middle" font-size="11" fill="#4A9B6E">挤进 Top-5 ✓</text>
+  <text x="455" y="328" text-anchor="middle" font-size="10" fill="#4A9B6E">GEO 仍然有效</text>
+
+  <!-- arrows -->
+  <line x1="135" y1="220" x2="198" y2="220" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="268" y1="175" x2="348" y2="150" stroke="#C25450" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arRed)"/>
+  <line x1="262" y1="265" x2="348" y2="290" stroke="#4A9B6E" stroke-width="2" marker-end="url(#arGreen)"/>
+
+  <text x="298" y="158" font-size="10" fill="#C25450">拦截</text>
+  <text x="298" y="282" font-size="10" fill="#4A9B6E">放行</text>
+
+  <text x="300" y="395" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">护城河：从「被预训练记住」转向「描述与 query 语义对齐」</text>
+</svg>

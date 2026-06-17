@@ -1,63 +1,95 @@
-<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system, sans-serif">
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="-apple-system,Helvetica,Arial,sans-serif">
   <defs>
-    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
       <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
-    </marker>
-    <marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
-      <path d="M0,0 L10,5 L0,10 z" fill="#C97A4A"/>
     </marker>
   </defs>
 
-  <text x="300" y="32" text-anchor="middle" font-size="16" font-weight="600" fill="#1E3A5F">每个模板贴一张「保鲜期」τ</text>
-  <text x="300" y="52" text-anchor="middle" font-size="11" fill="#3D4F65">缺货越久 → τ 越长 → 排到更后面也仍可选</text>
+  <!-- Title -->
+  <text x="360" y="32" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">TEC：把"排队挑"变成"静态阈值"</text>
+  <text x="360" y="52" text-anchor="middle" font-size="12" fill="#3D4F65">高分模板阈值高 → 留到最后；低分早退场</text>
 
-  <!-- Three shelves with different tau lengths -->
+  <!-- Left: thresholds bars (templates) -->
   <g>
-    <rect x="50" y="80" width="160" height="70" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
-    <text x="130" y="105" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">热门·开班少</text>
-    <text x="130" y="123" text-anchor="middle" font-size="11" fill="#3D4F65">已被大量收藏</text>
-    <text x="130" y="140" text-anchor="middle" font-size="11" fill="#C97A4A" font-weight="600">τ 短</text>
+    <text x="150" y="92" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">模板阈值 τ</text>
+
+    <!-- X -->
+    <rect x="60" y="108" width="180" height="34" rx="4" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <rect x="60" y="108" width="180" height="34" rx="4" fill="#4B8BDA" opacity="0.55"/>
+    <text x="72" y="130" font-size="12" fill="#1E3A5F" font-weight="600">X (高分)  τ=1.0</text>
+
+    <!-- Y -->
+    <rect x="60" y="150" width="180" height="34" rx="4" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <rect x="60" y="150" width="126" height="34" rx="4" fill="#4B8BDA" opacity="0.4"/>
+    <text x="72" y="172" font-size="12" fill="#1E3A5F" font-weight="600">Y         τ=0.7</text>
+
+    <!-- Z -->
+    <rect x="60" y="192" width="180" height="34" rx="4" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <rect x="60" y="192" width="60" height="34" rx="4" fill="#4B8BDA" opacity="0.25"/>
+    <text x="72" y="214" font-size="12" fill="#1E3A5F" font-weight="600">Z (低分)  τ=0.3</text>
   </g>
 
+  <!-- Right: selection timeline -->
   <g>
-    <rect x="220" y="80" width="160" height="70" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
-    <text x="300" y="105" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">普通模板</text>
-    <text x="300" y="140" text-anchor="middle" font-size="11" fill="#C97A4A" font-weight="600">τ 中</text>
+    <text x="540" y="92" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">推荐位时点 z</text>
+
+    <!-- timeline axis -->
+    <line x1="380" y1="170" x2="700" y2="170" stroke="#3D4F65" stroke-width="1.5"/>
+    <text x="380" y="190" font-size="11" fill="#3D4F65">z=0 (位1)</text>
+    <text x="700" y="190" text-anchor="end" font-size="11" fill="#3D4F65">z=1 (位16)</text>
+
+    <!-- Z drops at 0.3 -->
+    <line x1="476" y1="165" x2="476" y2="175" stroke="#E07A5F" stroke-width="2"/>
+    <text x="476" y="156" text-anchor="middle" font-size="11" fill="#E07A5F">Z 退场</text>
+
+    <!-- Y drops at 0.7 -->
+    <line x1="604" y1="165" x2="604" y2="175" stroke="#E07A5F" stroke-width="2"/>
+    <text x="604" y="156" text-anchor="middle" font-size="11" fill="#E07A5F">Y 退场</text>
+
+    <!-- X persists -->
+    <circle cx="690" cy="170" r="5" fill="#4B8BDA"/>
+    <text x="690" y="156" text-anchor="middle" font-size="11" fill="#1E3A5F" font-weight="600">X 仍在</text>
+
+    <!-- mapping arrows from bars to timeline -->
+    <line x1="240" y1="125" x2="685" y2="165" stroke="#4B8BDA" stroke-width="1.2" opacity="0.5" marker-end="url(#ah)"/>
+    <line x1="240" y1="167" x2="600" y2="165" stroke="#4B8BDA" stroke-width="1.2" opacity="0.5" marker-end="url(#ah)"/>
+    <line x1="240" y1="209" x2="472" y2="165" stroke="#4B8BDA" stroke-width="1.2" opacity="0.5" marker-end="url(#ah)"/>
   </g>
 
+  <!-- Rule: visible iff τ >= z -->
+  <rect x="200" y="232" width="320" height="32" rx="6" fill="#FFF9E6" stroke="#D4A437"/>
+  <text x="360" y="252" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">可见条件：阈值 τ ≥ 时点 z</text>
+
+  <!-- Bottom: parallel workers -->
   <g>
-    <rect x="390" y="80" width="160" height="70" rx="8" fill="#FEF3E7" stroke="#C97A4A" stroke-width="1.5"/>
-    <text x="470" y="105" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">缺人·低曝光</text>
-    <text x="470" y="123" text-anchor="middle" font-size="11" fill="#3D4F65">分数跨轮累积</text>
-    <text x="470" y="140" text-anchor="middle" font-size="11" fill="#C97A4A" font-weight="600">τ 长</text>
+    <text x="360" y="290" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">每个工人独立筛选 · 无需排队</text>
+
+    <g transform="translate(100,315)">
+      <circle cx="0" cy="20" r="16" fill="#EFF6FF" stroke="#4B8BDA"/>
+      <text x="0" y="25" text-anchor="middle" font-size="12" fill="#1E3A5F">i₁</text>
+    </g>
+    <g transform="translate(200,315)">
+      <circle cx="0" cy="20" r="16" fill="#EFF6FF" stroke="#4B8BDA"/>
+      <text x="0" y="25" text-anchor="middle" font-size="12" fill="#1E3A5F">i₂</text>
+    </g>
+    <g transform="translate(300,315)">
+      <circle cx="0" cy="20" r="16" fill="#EFF6FF" stroke="#4B8BDA"/>
+      <text x="0" y="25" text-anchor="middle" font-size="12" fill="#1E3A5F">i₃</text>
+    </g>
+    <text x="370" y="340" text-anchor="middle" font-size="14" fill="#3D4F65">…</text>
+    <g transform="translate(440,315)">
+      <circle cx="0" cy="20" r="16" fill="#EFF6FF" stroke="#4B8BDA"/>
+      <text x="0" y="25" text-anchor="middle" font-size="11" fill="#1E3A5F">iₙ</text>
+    </g>
+
+    <!-- result box -->
+    <rect x="540" y="315" width="150" height="46" rx="6" fill="#FFF4E6" stroke="#E07A5F"/>
+    <text x="615" y="334" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">百万级并发计算</text>
+    <text x="615" y="351" text-anchor="middle" font-size="11" fill="#3D4F65">无串行依赖</text>
+
+    <line x1="460" y1="335" x2="535" y2="338" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#ah)"/>
   </g>
 
-  <!-- Workers as queue with z values -->
-  <text x="40" y="220" font-size="12" fill="#1E3A5F" font-weight="600">工人队列  z = 到达时间</text>
-
-  <g font-size="11" fill="#1E3A5F">
-    <circle cx="130" cy="250" r="16" fill="#EFF6FF" stroke="#4B8BDA"/>
-    <text x="130" y="254" text-anchor="middle">z₁</text>
-    <circle cx="215" cy="250" r="16" fill="#EFF6FF" stroke="#4B8BDA"/>
-    <text x="215" y="254" text-anchor="middle">z₂</text>
-    <circle cx="300" cy="250" r="16" fill="#EFF6FF" stroke="#4B8BDA"/>
-    <text x="300" y="254" text-anchor="middle">z₃</text>
-    <circle cx="385" cy="250" r="16" fill="#EFF6FF" stroke="#4B8BDA"/>
-    <text x="385" y="254" text-anchor="middle">…</text>
-    <circle cx="470" cy="250" r="18" fill="#FEF3E7" stroke="#C97A4A" stroke-width="1.5"/>
-    <text x="470" y="254" text-anchor="middle" font-weight="600">zₙ</text>
-  </g>
-
-  <!-- arrows from shelves down to which worker can see -->
-  <path d="M130,150 L130,232" stroke="#4B8BDA" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
-  <path d="M470,150 L470,230" stroke="#C97A4A" stroke-width="1.8" fill="none" marker-end="url(#b)"/>
-
-  <text x="100" y="285" font-size="10" fill="#4B8BDA">τ 短：仅靠前的工人可选</text>
-  <text x="380" y="285" font-size="10" fill="#C97A4A" font-weight="600">τ 长：靠后工人也能看到</text>
-
-  <!-- bottom annotation -->
-  <rect x="60" y="310" width="480" height="90" rx="8" fill="#F4F7FB" stroke="#4B8BDA" stroke-dasharray="3,3"/>
-  <text x="300" y="338" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">τ 预先算好 → 所有工人并行查各自清单</text>
-  <text x="300" y="362" text-anchor="middle" font-size="11" fill="#3D4F65">无需串行扣库存，百万级也能跑（替代 RSD）</text>
-  <text x="300" y="383" text-anchor="middle" font-size="11" fill="#C97A4A">被推荐才扣分 · 低曝光模板自动积累优先权</text>
+  <!-- Footer note -->
+  <text x="360" y="395" text-anchor="middle" font-size="11" fill="#3D4F65" font-style="italic">效果近似轮询 RSD，但去掉了串行依赖</text>
 </svg>

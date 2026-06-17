@@ -1,0 +1,67 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="-apple-system,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C2553A"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="32" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">GEO 的囚徒困境</text>
+  <text x="360" y="54" text-anchor="middle" font-size="13" fill="#3D4F65">权威话术从信号变噪音，老牌重夺垄断</text>
+
+  <!-- Left scene: S1 -->
+  <g>
+    <rect x="40" y="80" width="290" height="170" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="185" y="104" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">S1 · 1 家率先喊话</text>
+
+    <rect x="65" y="130" width="90" height="60" rx="6" fill="#F4C9BD" stroke="#C2553A" stroke-width="1.5"/>
+    <text x="110" y="154" text-anchor="middle" font-size="11" fill="#7A2E1A" font-weight="700">权威认证</text>
+    <text x="110" y="172" text-anchor="middle" font-size="10" fill="#7A2E1A">PureGlow</text>
+    <text x="110" y="187" text-anchor="middle" font-size="10" fill="#7A2E1A">+0.802</text>
+
+    <rect x="195" y="140" width="115" height="45" rx="6" fill="#DCE6F0" stroke="#7A8DA3"/>
+    <text x="252" y="160" text-anchor="middle" font-size="11" fill="#3D4F65">老牌 CeraVe</text>
+    <text x="252" y="176" text-anchor="middle" font-size="11" fill="#3D4F65">推荐率 19.8%</text>
+
+    <text x="185" y="222" text-anchor="middle" font-size="11" fill="#3D4F65">先动者独享红利，老牌被分走</text>
+  </g>
+
+  <!-- arrow between scenes -->
+  <path d="M338,165 L388,165" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <text x="363" y="156" text-anchor="middle" font-size="10" fill="#4B8BDA">人人跟进</text>
+
+  <!-- Right scene: S4 -->
+  <g>
+    <rect x="395" y="80" width="290" height="170" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="540" y="104" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">S4 · 9 家齐喊话</text>
+
+    <g fill="#F4C9BD" stroke="#C2553A" stroke-width="1">
+      <rect x="412" y="128" width="32" height="22" rx="3"/>
+      <rect x="448" y="128" width="32" height="22" rx="3"/>
+      <rect x="484" y="128" width="32" height="22" rx="3"/>
+      <rect x="412" y="154" width="32" height="22" rx="3"/>
+      <rect x="448" y="154" width="32" height="22" rx="3"/>
+      <rect x="484" y="154" width="32" height="22" rx="3"/>
+      <rect x="412" y="180" width="32" height="22" rx="3"/>
+      <rect x="448" y="180" width="32" height="22" rx="3"/>
+      <rect x="484" y="180" width="32" height="22" rx="3"/>
+    </g>
+    <text x="465" y="222" text-anchor="middle" font-size="11" fill="#C2553A">个体收益 +0.007</text>
+
+    <rect x="535" y="140" width="130" height="60" rx="8" fill="#B9D4EE" stroke="#1E3A5F" stroke-width="2"/>
+    <text x="600" y="164" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="700">老牌回归</text>
+    <text x="600" y="184" text-anchor="middle" font-size="12" fill="#1E3A5F" font-weight="700">93.8%</text>
+  </g>
+
+  <!-- insight band -->
+  <rect x="40" y="280" width="645" height="60" rx="8" fill="#FBF3EE" stroke="#C2553A" stroke-width="1.2"/>
+  <text x="362" y="305" text-anchor="middle" font-size="13" font-weight="700" fill="#7A2E1A">信号同质化 → 模型忽略话术，退回品牌识别</text>
+  <text x="362" y="325" text-anchor="middle" font-size="12" fill="#3D4F65">人人都做＝白做；谁不做＝0 次推荐</text>
+
+  <!-- bottom note -->
+  <text x="360" y="375" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="700">严格占优策略 · 集体陷阱</text>
+  <path d="M210,388 Q360,418 510,388" stroke="#C2553A" stroke-width="1.5" fill="none" marker-end="url(#arR)"/>
+  <text x="360" y="438" text-anchor="middle" font-size="11" fill="#3D4F65">每家被迫跟进，最终在位者反而恢复垄断</text>
+</svg>

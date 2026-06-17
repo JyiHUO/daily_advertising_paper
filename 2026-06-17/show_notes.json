@@ -1,0 +1,9 @@
+{
+  "title": "AI计算广告论文播报 06-17：当推荐变成分配机制",
+  "shownotes_html": "<p>这一期我们换个角度看推荐和 LLM——它们不只是在\"猜你喜欢\"，而是在决定<strong>谁能被看见、谁会被埋掉</strong>。从日本零工平台的真实 A/B 实验，到 LLM 推荐里的品牌偏向与 GEO 博弈，今天的两篇重点都直指广告分发的核心命题。</p><p><strong>本期重点</strong></p><ul><li><strong>稀缺曝光下的推荐分配机制（Designing Recommendation Exposure and Favorite Lists: A Field Experiment in a Spot-Work Platform）</strong>：Timee 用整县级 A/B 证明，贪心最大化\"收藏概率\"在稀缺供给下会让匹配率只有 57.6%，并提出可百万级并发的 TEC 阈值机制——这套思路几乎可以直接搬到广告预算平滑与库存约束分配上。</li><li><strong>LLM 推荐中的品牌偏向与 GEO 博弈（Incumbent Advantage: Brand Bias and Cognitive Manipulation Dynamics in LLM Recommendation Systems）</strong>：上万次实验揭示\"条件性垄断\"——规格相同时知名品牌 100% 通吃，但对手只要 +0.1 星就翻盘；权威话术约等于 +0.17 星，而所有人都做 GEO 时收益从 +0.802 跌到 +0.007，活脱脱一个囚徒困境。</li><li><strong>生成式推荐中的 LLM 记忆行为（On the Memorization Behavior of LLMs in Generative Recommendation）</strong>：研究指出 LLM 在生成式推荐里的大部分增益来自\"一跳记忆\"，并非真正的泛化——这对判断生成式推荐能否替代传统 ID 模型是个重要参照。</li></ul><p><strong>今日趋势</strong></p><ul><li>cs.AI 与 cs.LG 继续主导，LLM 研究重心从纯生成转向生成式检索调试、记忆行为分析、RAG 方法论等更工程化的议题。</li><li>三篇重点共同指向一个判断：<em>推荐和 LLM 正在被重新理解为\"分配机制\"</em>——双边市场、新型 LLM 渠道、生成式闭环都在补齐\"实验前可预测、运行中可验证\"的方法论。</li></ul><p>欢迎在评论区聊聊：你做的广告或推荐系统，真正在优化的是用户体验，还是分配规则的某个中间指标？本期内容由 AI 自动生成，如有疏漏欢迎指正，我们下期见。</p>",
+  "report_date": "2026-06-17",
+  "provider": "litellm-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-06-17T21:50:40Z"
+}
