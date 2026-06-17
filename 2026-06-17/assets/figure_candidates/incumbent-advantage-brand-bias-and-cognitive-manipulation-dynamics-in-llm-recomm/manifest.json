@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-17/downloaded_pdfs/incumbent-advantage-brand-bias-and-cognitive-manipulation-dynamics-in-llm-recomm.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-17/assets/figure_candidates/incumbent-advantage-brand-bias-and-cognitive-manipulation-dynamics-in-llm-recomm",
+  "candidates": [
+    {
+      "id": "page-0-block-7",
+      "page_index": 0,
+      "caption": "Figure 1: A real ChatGPT response (May 2026) to the query “I would like to buy a good face moisturizer, which is the best?” The model names CeraVe as “Best overall” and ranks it first. For other moisturizer brands, this raises a question: has the LLM become an unpaid promotion channel for already-dominant brands?",
+      "clip": [
+        284.1419982910156,
+        201.90614318847656,
+        546.4080810546875,
+        350.9320068359375
+      ],
+      "clip_area": 39084.42948929267,
+      "page_area": 501156.9211820215,
+      "text_density": 0.040875960272882594,
+      "kind": "image_block_with_caption",
+      "score": 52.43427143876992,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-17/assets/figure_candidates/incumbent-advantage-brand-bias-and-cognitive-manipulation-dynamics-in-llm-recomm/01-p1-image_block_with_caption.png",
+      "filename": "01-p1-image_block_with_caption.png"
+    },
+    {
+      "id": "page-0-embedded-0-0",
+      "page_index": 0,
+      "caption": "Figure 1: A real ChatGPT response (May 2026) to the query “I would like to buy a good face moisturizer, which is the best?” The model names CeraVe as “Best overall” and ranks it first. For other moisturizer brands, this raises a question: has the LLM become an unpaid promotion channel for already-dominant brands?",
+      "clip": [
+        294.1419982910156,
+        207.90614318847656,
+        536.4080810546875,
+        344.9320068359375
+      ],
+      "clip_area": 33196.71922317939,
+      "page_area": 501156.9211820215,
+      "text_density": 0.008385180247127436,
+      "kind": "embedded_image_with_caption",
+      "xref": 84,
+      "score": 51.3688524358131,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-17/assets/figure_candidates/incumbent-advantage-brand-bias-and-cognitive-manipulation-dynamics-in-llm-recomm/02-p1-embedded_image_with_caption.png",
+      "filename": "02-p1-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-7-block-1",
+      "page_index": 7,
+      "caption": "Figure 4: Experiment 3 Summary. (a) U-shaped ISR trajectory. (b) Incumbent rank recovery. (c) Per-brand payoff decay. (d) HHI market concentration. (e) KL divergence by model. (f) Subcategory variation.",
+      "clip": [
+        48.865997314453125,
+        52.864227294921875,
+        546.416259765625,
+        370.3650207519531
+      ],
+      "clip_area": 157972.6031130012,
+      "page_area": 501156.9211820215,
+      "text_density": 0.020720222494880855,
+      "kind": "image_block_with_caption",
+      "score": 33.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-17/assets/figure_candidates/incumbent-advantage-brand-bias-and-cognitive-manipulation-dynamics-in-llm-recomm/03-p8-image_block_with_caption.png",
+      "filename": "03-p8-image_block_with_caption.png"
+    },
+    {
+      "id": "page-7-embedded-0-0",
+      "page_index": 7,
+      "caption": "Figure 4: Experiment 3 Summary. (a) U-shaped ISR trajectory. (b) Incumbent rank recovery. (c) Per-brand payoff decay. (d) HHI market concentration. (e) KL divergence by model. (f) Subcategory variation.",
+      "clip": [
+        58.865997314453125,
+        58.864227294921875,
+        536.416259765625,
+        364.3650207519531
+      ],
+      "clip_area": 145891.98409444652,
+      "page_area": 501156.9211820215,
+      "text_density": 0.003783316653082724,
+      "kind": "embedded_image_with_caption",
+      "xref": 384,
+      "score": 32.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-17/assets/figure_candidates/incumbent-advantage-brand-bias-and-cognitive-manipulation-dynamics-in-llm-recomm/04-p8-embedded_image_with_caption.png",
+      "filename": "04-p8-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-6-embedded-0-0",
+      "page_index": 6,
+      "caption": "Figure 3: Experiment 2 Summary. (a) BR heatmap by bias × model. (b) Authority intensity curves: Claude inverted-U, GPT linear, Gemini saturated. (c) Stacking paradox. (d) Bias Surplus Value in rating-point equivalents.",
+      "clip": [
+        58.865997314453125,
+        58.855010986328125,
+        536.410400390625,
+        472.39300537109375
+      ],
+      "clip_area": 197482.75467779022,
+      "page_area": 501156.9211820215,
+      "text_density": 0.0036382402875365033,
+      "kind": "embedded_image_with_caption",
+      "xref": 383,
+      "score": 25.837850754449505,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-17/assets/figure_candidates/incumbent-advantage-brand-bias-and-cognitive-manipulation-dynamics-in-llm-recomm/05-p7-embedded_image_with_caption.png",
+      "filename": "05-p7-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-6-block-1",
+      "page_index": 6,
+      "caption": "Figure 3: Experiment 2 Summary. (a) BR heatmap by bias × model. (b) Authority intensity curves: Claude inverted-U, GPT linear, Gemini saturated. (c) Stacking paradox. (d) Bias Surplus Value in rating-point equivalents.",
+      "clip": [
+        48.865997314453125,
+        52.855010986328125,
+        546.410400390625,
+        478.39300537109375
+      ],
+      "clip_area": 211724.0474023996,
+      "page_area": 501156.9211820215,
+      "text_density": 0.01624640175528236,
+      "kind": "image_block_with_caption",
+      "score": 25.701177419397478,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-17/assets/figure_candidates/incumbent-advantage-brand-bias-and-cognitive-manipulation-dynamics-in-llm-recomm/06-p7-image_block_with_caption.png",
+      "filename": "06-p7-image_block_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-17/assets/figure_candidates/incumbent-advantage-brand-bias-and-cognitive-manipulation-dynamics-in-llm-recomm/contact-sheet.svg"
+}
