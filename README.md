@@ -4,18 +4,22 @@
 
 ## 最新日报
 
-- **日期**：2026-06-17
+- **日期**：2026-06-18
 - **分类**：cs.IR + cs.AI + cs.LG
-- **候选论文数**：3
+- **候选论文数**：26
 - **必读论文**：
-  - Designing Recommendation Exposure and Favorite Lists: A Field Experiment in a Spot-Work Platform
-- **日报路径**：[2026-06-17/daily_report.md](2026-06-17/daily_report.md)
+  - RankGraph-2: Lifecycle Co-Design for Billion-Node Graph Learning in Recommendation
+  - Private Learning with Public Feature Conditioning
+- **日报路径**：[2026-06-18/daily_report.md](2026-06-18/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
-| 2026-06-17 | cs.IR + cs.AI + cs.LG | 3 | 1 | Designing Recommendation Exposure and Favorite Lists: A Field Experiment in a Spot-Work Platform | [2026-06-17/daily_report.md](2026-06-17/daily_report.md) |
+| 2026-06-18 | cs.IR + cs.AI + cs.LG | 26 | 1 | RankGraph-2: Lifecycle Co-Design for Billion-Node Graph Learning in Recommendation | [2026-06-18/daily_report.md](2026-06-18/daily_report.md) |
+|  |  |  | 2 | Private Learning with Public Feature Conditioning |  |
+| 2026-06-17 | cs.IR + cs.AI + cs.LG | 4 | 1 | Designing Recommendation Exposure and Favorite Lists: A Field Experiment in a Spot-Work Platform | [2026-06-17/daily_report.md](2026-06-17/daily_report.md) |
+|  |  |  | 2 | Incumbent Advantage: Brand Bias and Cognitive Manipulation Dynamics in LLM Recommendation Systems |  |
 | 2026-06-16 | cs.IR + cs.AI + cs.LG | 43 | 1 | Interactor: Agentic RL oriented Iterative Creation for Ad Description Generation in Sponsored Search | [2026-06-16/daily_report.md](2026-06-16/daily_report.md) |
 |  |  |  | 2 | Orchestrated Reality: From Role-Play to Living, Playable Game Worlds -- LLM-Driven World Simulation as a Parameterized-Action POMDP |  |
 | 2026-06-15 | cs.IR + cs.AI + cs.LG | 5 | 1 | DRIVE: Distributional and Retrieval-Augmented Bidding with Value Evaluation | [2026-06-15/daily_report.md](2026-06-15/daily_report.md) |

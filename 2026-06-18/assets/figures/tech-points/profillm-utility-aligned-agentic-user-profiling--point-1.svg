@@ -1,0 +1,83 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="-apple-system,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="360" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">LLM 当数据分析师：四阶段调用 27 个工具</text>
+  <text x="360" y="56" text-anchor="middle" font-size="12" fill="#3D4F65">不读原始日志，只看工具返回的聚合结果</text>
+
+  <!-- 4-stage loop label -->
+  <text x="270" y="92" text-anchor="middle" font-size="11" font-weight="600" fill="#1E3A5F">Explore → Deepen → Validate → Synthesize</text>
+
+  <!-- Left: huge log -->
+  <g>
+    <rect x="40" y="140" width="110" height="200" rx="6" fill="#F4ECDF" stroke="#C9A86A" stroke-width="1.5"/>
+    <text x="95" y="168" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">原始日志</text>
+    <text x="95" y="186" text-anchor="middle" font-size="11" fill="#3D4F65">4400 万条</text>
+    <g stroke="#C9A86A" stroke-width="1" opacity="0.55">
+      <line x1="55" y1="204" x2="135" y2="204"/>
+      <line x1="55" y1="216" x2="130" y2="216"/>
+      <line x1="55" y1="228" x2="138" y2="228"/>
+      <line x1="55" y1="240" x2="125" y2="240"/>
+      <line x1="55" y1="252" x2="135" y2="252"/>
+      <line x1="55" y1="264" x2="128" y2="264"/>
+      <line x1="55" y1="276" x2="138" y2="276"/>
+      <line x1="55" y1="288" x2="120" y2="288"/>
+      <line x1="55" y1="300" x2="135" y2="300"/>
+      <line x1="55" y1="312" x2="130" y2="312"/>
+    </g>
+    <text x="95" y="330" text-anchor="middle" font-size="10" fill="#8B6F3A">超出上下文窗口</text>
+  </g>
+
+  <!-- Tools toolbox -->
+  <g>
+    <rect x="200" y="140" width="140" height="200" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="270" y="162" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">27 个分析工具</text>
+    <g font-size="10" fill="#3D4F65">
+      <rect x="215" y="178" width="50" height="22" rx="3" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="240" y="193" text-anchor="middle">统计</text>
+      <rect x="275" y="178" width="50" height="22" rx="3" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="300" y="193" text-anchor="middle">时空</text>
+      <rect x="215" y="208" width="50" height="22" rx="3" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="240" y="223" text-anchor="middle">上下文</text>
+      <rect x="275" y="208" width="50" height="22" rx="3" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="300" y="223" text-anchor="middle">因果</text>
+      <rect x="245" y="238" width="50" height="22" rx="3" fill="#FFFFFF" stroke="#4B8BDA"/>
+      <text x="270" y="253" text-anchor="middle">假设检验</text>
+    </g>
+    <text x="270" y="285" text-anchor="middle" font-size="10" fill="#3D4F65">Agent 自主选择调用顺序</text>
+    <text x="270" y="315" text-anchor="middle" font-size="10" fill="#3D4F65">迭代四阶段循环</text>
+  </g>
+
+  <!-- Arrow log -> tools -->
+  <line x1="152" y1="240" x2="198" y2="240" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+
+  <!-- iteration loop arrow above tools -->
+  <path d="M 215 140 Q 270 100 325 140" fill="none" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#ar)"/>
+
+  <!-- Right: three outputs -->
+  <g>
+    <rect x="400" y="140" width="280" height="50" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.3"/>
+    <text x="540" y="161" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">全局知识库</text>
+    <text x="540" y="178" text-anchor="middle" font-size="10.5" fill="#3D4F65">时段规律 · 天气影响 · 因果关系</text>
+
+    <rect x="400" y="215" width="280" height="50" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.3"/>
+    <text x="540" y="236" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">可解释聚类规则</text>
+    <text x="540" y="253" text-anchor="middle" font-size="10.5" fill="#3D4F65">活跃时段 ∧ 区域 ∧ 取消模式</text>
+
+    <rect x="400" y="290" width="280" height="50" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.3"/>
+    <text x="540" y="311" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">网格级供需先验</text>
+    <text x="540" y="328" text-anchor="middle" font-size="10.5" fill="#3D4F65">区域 × 时段</text>
+  </g>
+
+  <!-- Arrows tools -> outputs -->
+  <line x1="342" y1="200" x2="398" y2="165" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+  <line x1="342" y1="240" x2="398" y2="240" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+  <line x1="342" y1="280" x2="398" y2="315" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+
+  <!-- bottom note -->
+  <text x="360" y="400" text-anchor="middle" font-size="11.5" fill="#1E3A5F" font-weight="600">关键：经统计检验过滤后才沉淀为可复用产物</text>
+  <text x="360" y="420" text-anchor="middle" font-size="10.5" fill="#3D4F65">LLM 看的是工具结果，不是原始数据</text>
+</svg>

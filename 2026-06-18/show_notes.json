@@ -1,0 +1,9 @@
+{
+  "title": "AI计算广告论文播报 06-18：把下游约束变成上游设计",
+  "shownotes_html": "<p>这一期我们用一个判断串起当天最有分量的几篇工业论文：推荐与广告系统正在从「卷模型」转向「卷阶段间的接口」——让下游真正在乎的约束，反过来定义上游怎么做。</p><p><strong>本期重点</strong></p><ul><li><strong>RankGraph-2：十亿节点图召回的全生命周期协同设计（RankGraph-2: Lifecycle Co-Design for Billion-Node Graph Learning in Recommendation）</strong>。Meta把图构建、表征学习与在线服务当作一条流水线一起设计，用离线PPR邻居+共训练残差量化聚类索引，把在线KNN换成簇队列查表，服务成本大幅下降，对广告召回与look-alike极有参考价值。</li><li><strong>ProfiLLM：用下游效用对齐的Agent式用户画像（ProfiLLM: Utility-Aligned Agentic User Profiling for Industrial Ride-Hailing Dispatch）</strong>。滴滴的工程巧思是让LLM在画像里同时输出可执行Boolean规则，用规则与生产模型融合后的AUC增量当效用代理，再自动构造DPO偏好对微调小模型；线上只查簇级embedding，几乎零延迟，是LLM落地毫秒级业务的好范式。</li><li><strong>字节CUPED工程化实践（Ensuring Trustworthy Online A/B Testing）</strong>。从五个具体问题切入，把方差缩减方法在大规模A/B平台的可信落地讲透，决定的是商业化系统的迭代速度上限。</li></ul><p><strong>今日趋势</strong></p><ul><li>cs.IR数量虽少，但RankGraph-2、JourneyFormer、SAERec拼起来正好覆盖工业推荐「召回-序列-意图」的纵向链路。</li><li>LLM正在被工业界主动「降格」为可对齐、可审计的中间组件：要么用下游效用反向约束，要么把grounding抽离成独立可审计层。</li></ul><p>欢迎在评论区聊聊：你手上的链路里，最该被重新设计的「阶段接缝」是哪一段？本期内容由 AI 自动生成，仅供研究参考。</p>",
+  "report_date": "2026-06-18",
+  "provider": "litellm-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-06-18T21:49:28Z"
+}

@@ -1,0 +1,18 @@
+{
+  "date": "2026-06-18",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 26,
+  "supplementary_count": 10,
+  "focus_titles": [
+    "RankGraph-2: Lifecycle Co-Design for Billion-Node Graph Learning in Recommendation",
+    "Private Learning with Public Feature Conditioning"
+  ],
+  "focus_status": {
+    "RankGraph-2: Lifecycle Co-Design for Billion-Node Graph Learning in Recommendation": "llm_failed",
+    "Private Learning with Public Feature Conditioning": "llm_failed"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "report_date": "2026-06-18",
+  "provider": "litellm-opus",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 2980,
+  "focus_titles": [
+    "RankGraph-2: Lifecycle Co-Design for Billion-Node Graph Learning in Recommendation",
+    "ProfiLLM: Utility-Aligned Agentic User Profiling for Industrial Ride-Hailing Dispatch"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Steve"
+}

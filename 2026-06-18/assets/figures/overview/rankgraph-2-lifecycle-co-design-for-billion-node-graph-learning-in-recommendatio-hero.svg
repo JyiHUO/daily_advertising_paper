@@ -1,0 +1,91 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ahr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D4623A"/>
+    </marker>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFE9B8"/>
+      <stop offset="100%" stop-color="#F5B940"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="960" height="640" fill="#FAFBFD"/>
+
+  <!-- Title -->
+  <text x="480" y="50" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">RankGraph-2 · 十亿节点图召回的生命周期协同设计</text>
+  <text x="480" y="74" text-anchor="middle" font-size="13" fill="#3D4F65">下游约束反推上游 — 让构图、训练、服务作为一个闭环共同优化</text>
+
+  <!-- Legend -->
+  <g transform="translate(40,108)">
+    <line x1="0" y1="0" x2="28" y2="0" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#ah)"/>
+    <text x="34" y="4" font-size="10.5" fill="#3D4F65">数据流</text>
+    <line x1="110" y1="0" x2="138" y2="0" stroke="#D4623A" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#ahr)"/>
+    <text x="144" y="4" font-size="10.5" fill="#3D4F65">下游约束反推</text>
+  </g>
+
+  <!-- Construction (left) -->
+  <g>
+    <circle cx="180" cy="340" r="92" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="180" y="312" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">图构建</text>
+    <text x="180" y="335" text-anchor="middle" font-size="11" fill="#3D4F65">百万亿边 → 千亿边</text>
+    <text x="180" y="354" text-anchor="middle" font-size="11" fill="#3D4F65">PPR 预计算邻居</text>
+    <text x="180" y="373" text-anchor="middle" font-size="11" fill="#3D4F65">1 小时刷新 · 自包含样本</text>
+  </g>
+
+  <!-- Training (top right) -->
+  <g>
+    <circle cx="780" cy="220" r="92" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="780" y="194" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">训练</text>
+    <text x="780" y="217" text-anchor="middle" font-size="11" fill="#3D4F65">异构聚合器</text>
+    <text x="780" y="236" text-anchor="middle" font-size="11" fill="#3D4F65">嵌入 + 残差量化</text>
+    <text x="780" y="255" text-anchor="middle" font-size="11" fill="#3D4F65">共学聚类索引</text>
+  </g>
+
+  <!-- Serving (bottom right) -->
+  <g>
+    <circle cx="780" cy="460" r="92" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+    <text x="780" y="434" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">在线服务</text>
+    <text x="780" y="457" text-anchor="middle" font-size="11" fill="#3D4F65">查簇队列代替 KNN</text>
+    <text x="780" y="476" text-anchor="middle" font-size="11" fill="#3D4F65">U2U2I / U2I2I</text>
+    <text x="780" y="495" text-anchor="middle" font-size="11" fill="#3D4F65">成本 −83%</text>
+  </g>
+
+  <!-- Center: lifecycle co-design hub -->
+  <g>
+    <circle cx="480" cy="340" r="78" fill="url(#core)" stroke="#C98A14" stroke-width="2"/>
+    <text x="480" y="332" text-anchor="middle" font-size="14" font-weight="700" fill="#5a3d0a">生命周期</text>
+    <text x="480" y="354" text-anchor="middle" font-size="14" font-weight="700" fill="#5a3d0a">协同设计</text>
+  </g>
+
+  <!-- Forward flow arrows: Construct -> Train -> Serve -> back to Construct -->
+  <path d="M 248,288 Q 430,180 690,190" fill="none" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#ah)"/>
+  <path d="M 780,312 L 780,360" fill="none" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#ah)"/>
+  <path d="M 690,490 Q 430,580 248,392" fill="none" stroke="#4B8BDA" stroke-width="2.2" marker-end="url(#ah)"/>
+
+  <!-- Forward labels -->
+  <text x="445" y="170" text-anchor="middle" font-size="11" fill="#1E3A5F">边为中心的样本</text>
+  <text x="795" y="345" text-anchor="end" font-size="11" fill="#1E3A5F">嵌入 + 簇索引</text>
+  <text x="445" y="575" text-anchor="middle" font-size="11" fill="#1E3A5F">线上反馈 / 新行为日志</text>
+
+  <!-- Reverse constraint arrows (dashed) — downstream pushes upstream toward center -->
+  <path d="M 712,238 Q 610,288 558,318" fill="none" stroke="#D4623A" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#ahr)"/>
+  <path d="M 712,442 Q 610,392 558,362" fill="none" stroke="#D4623A" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#ahr)"/>
+  <path d="M 272,340 L 400,340" fill="none" stroke="#D4623A" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#ahr)"/>
+
+  <text x="640" y="262" text-anchor="middle" font-size="10.5" fill="#B14A20" font-style="italic">服务零 KNN 反推训练</text>
+  <text x="640" y="418" text-anchor="middle" font-size="10.5" fill="#B14A20" font-style="italic">小时级新鲜反推构图</text>
+  <text x="336" y="332" text-anchor="middle" font-size="10.5" fill="#B14A20" font-style="italic">自包含数据反推</text>
+
+  <!-- Bottom result bar -->
+  <g transform="translate(0,595)">
+    <rect x="100" y="0" width="760" height="34" rx="17" fill="#1E3A5F"/>
+    <text x="180" y="22" font-size="12" font-weight="600" fill="#FFE9B8">Recall ×3.8 vs GAT+DGI</text>
+    <text x="370" y="22" font-size="12" font-weight="600" fill="#FFE9B8">服务成本 −83%</text>
+    <text x="510" y="22" font-size="12" font-weight="600" fill="#FFE9B8">CTR +0.96%</text>
+    <text x="630" y="22" font-size="12" font-weight="600" fill="#FFE9B8">CVR +2.75%</text>
+    <text x="745" y="22" font-size="12" font-weight="600" fill="#FFE9B8">20+ 召回上线</text>
+  </g>
+</svg>
