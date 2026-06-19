@@ -1,0 +1,117 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-18/downloaded_pdfs/private-learning-with-public-feature-conditioning.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-18/assets/figure_candidates/private-learning-with-public-feature-conditioning",
+  "candidates": [
+    {
+      "id": "page-1-embedded-0-0",
+      "page_index": 1,
+      "caption": "Figure 1. Model architecture.",
+      "clip": [
+        295.44000244140625,
+        152.65765380859375,
+        460.36871337890625,
+        280.0830078125
+      ],
+      "clip_area": 21016.099376618862,
+      "page_area": 484704.0,
+      "text_density": 0.03928806205693932,
+      "kind": "embedded_image_with_caption",
+      "xref": 836,
+      "score": 49.23351221529577,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-18/assets/figure_candidates/private-learning-with-public-feature-conditioning/01-p2-embedded_image_with_caption.png",
+      "filename": "01-p2-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-3-embedded-0-0",
+      "page_index": 3,
+      "caption": "Figure 3. Model with conditioning matrix C trained by Cond-DP .",
+      "clip": [
+        342.239990234375,
+        55.058380126953125,
+        506.63629150390625,
+        182.093017578125
+      ],
+      "clip_area": 20884.02453008853,
+      "page_area": 484704.0,
+      "text_density": 0.04097652871971445,
+      "kind": "embedded_image_with_caption",
+      "xref": 902,
+      "score": 30.232044717000985,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-18/assets/figure_candidates/private-learning-with-public-feature-conditioning/02-p4-embedded_image_with_caption.png",
+      "filename": "02-p4-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-0-block-5",
+      "page_index": 0,
+      "caption": "Differential privacy (DP) ( Dwork & Roth , 2014 ) has be- come the leading framework for training machine learning models while providing formal guarantees on the privacy",
+      "clip": [
+        24.839998626708983,
+        269.27025146484374,
+        321.6934753417969,
+        578.0702514648438
+      ],
+      "clip_area": 91668.35360961915,
+      "page_area": 484704.0,
+      "text_density": 0.6783852355496977,
+      "kind": "captioned_figure",
+      "score": 24.018537262329104,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-18/assets/figure_candidates/private-learning-with-public-feature-conditioning/03-p1-captioned_figure.png",
+      "filename": "03-p1-captioned_figure.png"
+    },
+    {
+      "id": "page-7-drawing-caption-24",
+      "page_index": 7,
+      "caption": "Figure 4. Validation MSEs of different algorithms on synthetic data with varying spectrum power p .",
+      "clip": [
+        62.57994079589844,
+        62.192237854003906,
+        434.3307800292969,
+        175.96380615234375
+      ],
+      "clip_area": 42294.675995807745,
+      "page_area": 484704.0,
+      "text_density": 0.12096627503233737,
+      "kind": "drawing_cluster_with_caption",
+      "score": 11.01196434245762,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-18/assets/figure_candidates/private-learning-with-public-feature-conditioning/04-p8-drawing_cluster_with_caption.png",
+      "filename": "04-p8-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-7-drawing-caption-36",
+      "page_index": 7,
+      "caption": "Figure 5. Spectra of singu- lar values in synthetic .",
+      "clip": [
+        442.93194580078125,
+        66.31672668457031,
+        552.276611328125,
+        169.7686004638672
+      ],
+      "clip_area": 11311.9105365742,
+      "page_area": 484704.0,
+      "text_density": 0.1555685151073986,
+      "kind": "drawing_cluster_with_caption",
+      "score": 8.591576988406906,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-18/assets/figure_candidates/private-learning-with-public-feature-conditioning/05-p8-drawing_cluster_with_caption.png",
+      "filename": "05-p8-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-7-drawing-caption-63",
+      "page_index": 7,
+      "caption": "Figure 6. Validation MSEs of different algorithms for private linear models on real-world datasets across varying privacy budgets ϵ .",
+      "clip": [
+        289.44000244140625,
+        191.3059539794922,
+        559.4390869140625,
+        398.0660095214844
+      ],
+      "clip_area": 55825.02570185345,
+      "page_area": 484704.0,
+      "text_density": 0.32007705011947724,
+      "kind": "drawing_cluster_with_caption",
+      "score": 8.215655056185293,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-18/assets/figure_candidates/private-learning-with-public-feature-conditioning/06-p8-drawing_cluster_with_caption.png",
+      "filename": "06-p8-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-18/assets/figure_candidates/private-learning-with-public-feature-conditioning/contact-sheet.svg"
+}

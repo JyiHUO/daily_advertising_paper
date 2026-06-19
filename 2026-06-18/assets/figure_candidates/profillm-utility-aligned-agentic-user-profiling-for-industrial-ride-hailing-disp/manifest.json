@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-18/downloaded_pdfs/profillm-utility-aligned-agentic-user-profiling-for-industrial-ride-hailing-disp.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-18/assets/figure_candidates/profillm-utility-aligned-agentic-user-profiling-for-industrial-ride-hailing-disp",
+  "candidates": [
+    {
+      "id": "page-2-drawing-caption-118",
+      "page_index": 2,
+      "caption": "Figure 3: Overview of ProfiLLM. (a) Tool-Augmented Global Knowledge Mining and (b) Utility-Aligned Profile Exploration run offline; (c) is the online serving path.",
+      "clip": [
+        35.79800033569336,
+        67.685791015625,
+        576.2073974609375,
+        385.3689880371094
+      ],
+      "clip_area": 171678.98497920053,
+      "page_area": 484704.0,
+      "text_density": 0.25457522513383085,
+      "kind": "drawing_cluster_with_caption",
+      "score": 39.95774824518856,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-18/assets/figure_candidates/profillm-utility-aligned-agentic-user-profiling-for-industrial-ride-hailing-disp/01-p3-drawing_cluster_with_caption.png",
+      "filename": "01-p3-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-13-drawing-caption-101",
+      "page_index": 13,
+      "caption": "Figure 12: Cluster-count sensitivity for ProfiLLM (dashed) and ProfiLLM-DPO (solid) on City A, with each curve aggre- gated over 9 LLM backbones. Left: varying | 𝐴 𝐷 | with | 𝐴 𝑃 | = 64 . Right: varying | 𝐴 𝑃 | with | 𝐴 𝐷 | = 32 . The cross-model standard deviation across the 9 backbones is 0.05%–0.27%.",
+      "clip": [
+        299.9549865722656,
+        268.1178894042969,
+        576.20068359375,
+        400.75
+      ],
+      "clip_area": 36639.04983894061,
+      "page_area": 484704.0,
+      "text_density": 0.16866283502181187,
+      "kind": "drawing_cluster_with_caption",
+      "score": 17.087330452457294,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-18/assets/figure_candidates/profillm-utility-aligned-agentic-user-profiling-for-industrial-ride-hailing-disp/02-p14-drawing_cluster_with_caption.png",
+      "filename": "02-p14-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-12-drawing-caption-41",
+      "page_index": 12,
+      "caption": "Figure 9: t-SNE visualization of user cluster embeddings in City A, showing (a) driver clusters and (b) passenger clusters. Each point represents a user colored by cluster assignment; the top-8 largest clusters are labeled at their median positions.",
+      "clip": [
+        35.79800033569336,
+        67.6884765625,
+        573.9635009765625,
+        269.51300048828125
+      ],
+      "clip_area": 108614.99596012314,
+      "page_area": 484704.0,
+      "text_density": 0.13038418809499783,
+      "kind": "drawing_cluster_with_caption",
+      "score": 16.97694871430013,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-18/assets/figure_candidates/profillm-utility-aligned-agentic-user-profiling-for-industrial-ride-hailing-disp/03-p13-drawing_cluster_with_caption.png",
+      "filename": "03-p13-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-15-drawing-caption-40",
+      "page_index": 15,
+      "caption": "Figure 14: Offline cost breakdown. (a) Per-stage cost for the initial ProfiLLM run vs. a single-pass DPO refresh. (b) Total per-city offline cost for the two settings.",
+      "clip": [
+        299.9549865722656,
+        67.685791015625,
+        576.2029418945312,
+        189.4229736328125
+      ],
+      "clip_area": 33629.647784691304,
+      "page_area": 484704.0,
+      "text_density": 0.13948289882617396,
+      "kind": "drawing_cluster_with_caption",
+      "score": 16.8046888235928,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-18/assets/figure_candidates/profillm-utility-aligned-agentic-user-profiling-for-industrial-ride-hailing-disp/04-p16-drawing_cluster_with_caption.png",
+      "filename": "04-p16-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-14-drawing-caption-18",
+      "page_index": 14,
+      "caption": "Figure 13: Sensitivity of the LOGIC-rule utility proxy to the blending coefficient 𝜆 . Left: per-task LOGIC-fused AUC ver- sus 𝜆 ∈[ 0 , 1 ] , averaged across 494 cluster-task combinations; stars mark each task’s peak. Right: average AUC gain at the best 𝜆 for each task. 𝜆 = 1 . 0 denotes pure LOGIC with the base model discarded.",
+      "clip": [
+        35.79800033569336,
+        67.6876449584961,
+        312.04156494140625,
+        188.7979736328125
+      ],
+      "clip_area": 33455.94890356265,
+      "page_area": 484704.0,
+      "text_density": 0.17924538177648738,
+      "kind": "drawing_cluster_with_caption",
+      "score": 16.417009859005898,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-18/assets/figure_candidates/profillm-utility-aligned-agentic-user-profiling-for-industrial-ride-hailing-disp/05-p15-drawing_cluster_with_caption.png",
+      "filename": "05-p15-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-9-drawing-caption-50",
+      "page_index": 9,
+      "caption": "Figure 7: Behavioral heterogeneity invisible to structured fea- tures. (a) Passenger PCR decile gap under matched fee/ETA. (b) Driver DAR percentiles. (c) Driver DCR decile gap under matched conditions. (d) Share of dispatching rounds in which the same broadcasted order receives divergent accept/reject decisions from different drivers.",
+      "clip": [
+        299.9549865722656,
+        67.68449401855469,
+        576.2029418945312,
+        258.99200439453125
+      ],
+      "clip_area": 52848.30857915664,
+      "page_area": 484704.0,
+      "text_density": 0.16212640768867442,
+      "kind": "drawing_cluster_with_caption",
+      "score": 15.659618967336833,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-18/assets/figure_candidates/profillm-utility-aligned-agentic-user-profiling-for-industrial-ride-hailing-disp/06-p10-drawing_cluster_with_caption.png",
+      "filename": "06-p10-drawing_cluster_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-18/assets/figure_candidates/profillm-utility-aligned-agentic-user-profiling-for-industrial-ride-hailing-disp/contact-sheet.svg"
+}

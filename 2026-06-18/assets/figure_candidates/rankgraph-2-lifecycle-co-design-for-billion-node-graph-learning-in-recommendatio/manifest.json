@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-18/downloaded_pdfs/rankgraph-2-lifecycle-co-design-for-billion-node-graph-learning-in-recommendatio.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-18/assets/figure_candidates/rankgraph-2-lifecycle-co-design-for-billion-node-graph-learning-in-recommendatio",
+  "candidates": [
+    {
+      "id": "page-1-drawing-caption-17",
+      "page_index": 1,
+      "caption": "Figure 1 Lifecycle co-design in RankGraph-2. Serving and training impose requirements ( dashed red , left) on upstream stages. Each requirement is resolved by a co- designed solution ( solid blue , right), creating mutual dependencies across the pipeline.",
+      "clip": [
+        299.4718017578125,
+        225.41598510742188,
+        554.9108276367188,
+        413.0536804199219
+      ],
+      "clip_area": 47929.99010878801,
+      "page_area": 484704.0,
+      "text_density": 0.1889481990438761,
+      "kind": "drawing_cluster_with_caption",
+      "score": 65.99566350302064,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-18/assets/figure_candidates/rankgraph-2-lifecycle-co-design-for-billion-node-graph-learning-in-recommendatio/01-p2-drawing_cluster_with_caption.png",
+      "filename": "01-p2-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-1-block-17",
+      "page_index": 1,
+      "caption": "Figure 1 Lifecycle co-design in RankGraph-2. Serving and training impose requirements ( dashed red , left) on upstream stages. Each requirement is resolved by a co- designed solution ( solid blue , right), creating mutual dependencies across the pipeline.",
+      "clip": [
+        284.6130126953125,
+        89.93892211914061,
+        573.2762084960938,
+        398.7389221191406
+      ],
+      "clip_area": 89139.19486328127,
+      "page_area": 484704.0,
+      "text_density": 0.4792163534263653,
+      "kind": "captioned_figure",
+      "score": 42.990435498480906,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-18/assets/figure_candidates/rankgraph-2-lifecycle-co-design-for-billion-node-graph-learning-in-recommendatio/02-p2-captioned_figure.png",
+      "filename": "02-p2-captioned_figure.png"
+    },
+    {
+      "id": "page-5-block-7",
+      "page_index": 5,
+      "caption": "Model architecture (Figure 2 B). Let f t ( t ∈{ U, I } ) encode raw features of type t into embeddings. The",
+      "clip": [
+        40.265997314453124,
+        383.04405517578124,
+        328.55498657226565,
+        691.8440551757812
+      ],
+      "clip_area": 89023.63988281252,
+      "page_area": 484704.0,
+      "text_density": 0.6913617405676713,
+      "kind": "captioned_figure",
+      "score": 14.989151554253475,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-18/assets/figure_candidates/rankgraph-2-lifecycle-co-design-for-billion-node-graph-learning-in-recommendatio/03-p6-captioned_figure.png",
+      "filename": "03-p6-captioned_figure.png"
+    },
+    {
+      "id": "page-1-drawing-cluster-0",
+      "page_index": 1,
+      "caption": "第 2 页矢量图主图候选",
+      "clip": [
+        301.4718017578125,
+        227.41598510742188,
+        552.9108276367188,
+        411.0536804199219
+      ],
+      "clip_area": 46173.68322402239,
+      "page_area": 484704.0,
+      "text_density": 0.1764019583666514,
+      "kind": "drawing_cluster",
+      "score": 8.728923422712276,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-18/assets/figure_candidates/rankgraph-2-lifecycle-co-design-for-billion-node-graph-learning-in-recommendatio/04-p2-drawing_cluster.png",
+      "filename": "04-p2-drawing_cluster.png"
+    },
+    {
+      "id": "page-4-drawing-cluster-0",
+      "page_index": 4,
+      "caption": "第 5 页矢量图主图候选",
+      "clip": [
+        57.05584716796875,
+        49.90339660644531,
+        554.9595947265625,
+        333.79766845703125
+      ],
+      "clip_area": 141352.02186482493,
+      "page_area": 484704.0,
+      "text_density": 0.1511148505878663,
+      "kind": "drawing_cluster",
+      "score": 3.7331089647280216,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-18/assets/figure_candidates/rankgraph-2-lifecycle-co-design-for-billion-node-graph-learning-in-recommendatio/05-p5-drawing_cluster.png",
+      "filename": "05-p5-drawing_cluster.png"
+    },
+    {
+      "id": "page-3-block-4",
+      "page_index": 3,
+      "caption": "training, and construction requirements cascading across the pipeline. Table 1 contrasts the cross-stage coupling of each system.",
+      "clip": [
+        40.265997314453124,
+        18.0,
+        327.3640075683594,
+        260.31402587890625
+      ],
+      "clip_area": 69567.87468644754,
+      "page_area": 484704.0,
+      "text_density": 0.5775254329673658,
+      "kind": "captioned_figure",
+      "score": 2.7729763854049736,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-18/assets/figure_candidates/rankgraph-2-lifecycle-co-design-for-billion-node-graph-learning-in-recommendatio/06-p4-captioned_figure.png",
+      "filename": "06-p4-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-18/assets/figure_candidates/rankgraph-2-lifecycle-co-design-for-billion-node-graph-learning-in-recommendatio/contact-sheet.svg"
+}
