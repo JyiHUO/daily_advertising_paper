@@ -1,0 +1,18 @@
+{
+  "date": "2026-06-19",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 8,
+  "supplementary_count": 1,
+  "focus_titles": [
+    "VCG: A Multimodal Retrieval Framework for E-Commerce Video Feeds under Extreme Cold-Start Conditions",
+    "Token Factory: Efficiently Integrating Diverse Signals into Large Recommendation Models"
+  ],
+  "focus_status": {
+    "VCG: A Multimodal Retrieval Framework for E-Commerce Video Feeds under Extreme Cold-Start Conditions": "llm_failed",
+    "Token Factory: Efficiently Integrating Diverse Signals into Large Recommendation Models": "llm_failed"
+  }
+}

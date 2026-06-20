@@ -4,18 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-06-18
+- **日期**：2026-06-19
 - **分类**：cs.IR + cs.AI + cs.LG
-- **候选论文数**：26
+- **候选论文数**：8
 - **必读论文**：
-  - RankGraph-2: Lifecycle Co-Design for Billion-Node Graph Learning in Recommendation
-  - Private Learning with Public Feature Conditioning
-- **日报路径**：[2026-06-18/daily_report.md](2026-06-18/daily_report.md)
+  - VCG: A Multimodal Retrieval Framework for E-Commerce Video Feeds under Extreme Cold-Start Conditions
+  - Token Factory: Efficiently Integrating Diverse Signals into Large Recommendation Models
+- **日报路径**：[2026-06-19/daily_report.md](2026-06-19/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-06-19 | cs.IR + cs.AI + cs.LG | 8 | 1 | VCG: A Multimodal Retrieval Framework for E-Commerce Video Feeds under Extreme Cold-Start Conditions | [2026-06-19/daily_report.md](2026-06-19/daily_report.md) |
+|  |  |  | 2 | Token Factory: Efficiently Integrating Diverse Signals into Large Recommendation Models |  |
 | 2026-06-18 | cs.IR + cs.AI + cs.LG | 26 | 1 | RankGraph-2: Lifecycle Co-Design for Billion-Node Graph Learning in Recommendation | [2026-06-18/daily_report.md](2026-06-18/daily_report.md) |
 |  |  |  | 2 | Private Learning with Public Feature Conditioning |  |
 | 2026-06-17 | cs.IR + cs.AI + cs.LG | 4 | 1 | Designing Recommendation Exposure and Favorite Lists: A Field Experiment in a Spot-Work Platform | [2026-06-17/daily_report.md](2026-06-17/daily_report.md) |
