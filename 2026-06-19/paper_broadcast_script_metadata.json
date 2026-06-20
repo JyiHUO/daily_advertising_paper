@@ -1,0 +1,13 @@
+{
+  "report_date": "2026-06-19",
+  "provider": "bedrock-opus-47",
+  "target_minutes": 12,
+  "max_tokens": 6500,
+  "char_count": 2786,
+  "focus_titles": [
+    "VCG: A Multimodal Retrieval Framework for E-Commerce Video Feeds under Extreme Cold-Start Conditions",
+    "Token Factory: Efficiently Integrating Diverse Signals into Large Recommendation Models"
+  ],
+  "audio_provider": "moss",
+  "audio_voice_name": "Steve"
+}
