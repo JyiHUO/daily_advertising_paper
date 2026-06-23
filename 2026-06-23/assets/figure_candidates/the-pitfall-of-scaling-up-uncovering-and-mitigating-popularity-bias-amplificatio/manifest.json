@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-23/downloaded_pdfs/the-pitfall-of-scaling-up-uncovering-and-mitigating-popularity-bias-amplificatio.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-23/assets/figure_candidates/the-pitfall-of-scaling-up-uncovering-and-mitigating-popularity-bias-amplificatio",
+  "candidates": [
+    {
+      "id": "page-4-drawing-caption-8",
+      "page_index": 4,
+      "caption": "Figure 3: Popular items tend to receive disproportionately higher attention scores compared to long-tail items. As illus- trated, the top-20% popular items account for over 75% of the total attention weights, thereby dominating the aggregation process and amplifying popularity bias.",
+      "clip": [
+        47.810997009277344,
+        67.68606567382812,
+        300.0375671386719,
+        200.052978515625
+      ],
+      "clip_area": 33386.45242470293,
+      "page_area": 484704.0,
+      "text_density": 0.21598777535295177,
+      "kind": "drawing_cluster_with_caption",
+      "score": 22.211694061319594,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-23/assets/figure_candidates/the-pitfall-of-scaling-up-uncovering-and-mitigating-popularity-bias-amplificatio/01-p5-drawing_cluster_with_caption.png",
+      "filename": "01-p5-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-4-block-8",
+      "page_index": 4,
+      "caption": "Figure 3: Popular items tend to receive disproportionately higher attention scores compared to long-tail items. As illus- trated, the top-20% popular items account for over 75% of the total attention weights, thereby dominating the aggregation process and amplifying popularity bias.",
+      "clip": [
+        23.198000335693358,
+        18.0,
+        326.2539001464844,
+        180.7169952392578
+      ],
+      "clip_area": 49312.34540674148,
+      "page_area": 484704.0,
+      "text_density": 0.16524540635861082,
+      "kind": "captioned_figure",
+      "score": 13.433190567447145,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-23/assets/figure_candidates/the-pitfall-of-scaling-up-uncovering-and-mitigating-popularity-bias-amplificatio/02-p5-captioned_figure.png",
+      "filename": "02-p5-captioned_figure.png"
+    },
+    {
+      "id": "page-7-drawing-caption-63",
+      "page_index": 7,
+      "caption": "Figure 5: Pareto frontier of accuracy and fairness for SPRINT and representative baselines on the SASRec++ backbone.",
+      "clip": [
+        35.79800033569336,
+        67.68582153320312,
+        576.2007446289062,
+        393.7560119628906
+      ],
+      "clip_area": 176209.22574041365,
+      "page_area": 484704.0,
+      "text_density": 0.25444416651222385,
+      "kind": "drawing_cluster_with_caption",
+      "score": 1.5917554905158582,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-23/assets/figure_candidates/the-pitfall-of-scaling-up-uncovering-and-mitigating-popularity-bias-amplificatio/03-p8-drawing_cluster_with_caption.png",
+      "filename": "03-p8-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-4-drawing-cluster-0",
+      "page_index": 4,
+      "caption": "第 5 页矢量图主图候选",
+      "clip": [
+        49.810997009277344,
+        69.68606567382812,
+        298.0375671386719,
+        198.052978515625
+      ],
+      "clip_area": 31864.078492818167,
+      "page_area": 484704.0,
+      "text_density": 0.19553985848335143,
+      "kind": "drawing_cluster",
+      "score": 1.4216538075857823,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-23/assets/figure_candidates/the-pitfall-of-scaling-up-uncovering-and-mitigating-popularity-bias-amplificatio/04-p5-drawing_cluster.png",
+      "filename": "04-p5-drawing_cluster.png"
+    },
+    {
+      "id": "page-3-drawing-cluster-2",
+      "page_index": 3,
+      "caption": "第 4 页矢量图主图候选",
+      "clip": [
+        301.95501708984375,
+        69.68661499023438,
+        574.1979370117188,
+        206.9339599609375
+      ],
+      "clip_area": 37364.617946349084,
+      "page_area": 484704.0,
+      "text_density": 0.23172709159384547,
+      "kind": "drawing_cluster",
+      "score": 1.3115369259953749,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-23/assets/figure_candidates/the-pitfall-of-scaling-up-uncovering-and-mitigating-popularity-bias-amplificatio/05-p4-drawing_cluster.png",
+      "filename": "05-p4-drawing_cluster.png"
+    },
+    {
+      "id": "page-7-drawing-cluster-0",
+      "page_index": 7,
+      "caption": "第 8 页矢量图主图候选",
+      "clip": [
+        37.79800033569336,
+        69.68582153320312,
+        574.2007446289062,
+        391.7560119628906
+      ],
+      "clip_area": 172759.33400152205,
+      "page_area": 484704.0,
+      "text_density": 0.2552863483512981,
+      "kind": "drawing_cluster",
+      "score": -3.1740745104990626,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-23/assets/figure_candidates/the-pitfall-of-scaling-up-uncovering-and-mitigating-popularity-bias-amplificatio/06-p8-drawing_cluster.png",
+      "filename": "06-p8-drawing_cluster.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-23/assets/figure_candidates/the-pitfall-of-scaling-up-uncovering-and-mitigating-popularity-bias-amplificatio/contact-sheet.svg"
+}

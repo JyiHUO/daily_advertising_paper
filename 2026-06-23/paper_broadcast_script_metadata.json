@@ -1,9 +1,9 @@
 {
   "report_date": "2026-06-23",
-  "provider": "litellm-opus",
+  "provider": "bedrock-opus-47",
   "target_minutes": 12,
   "max_tokens": 6500,
-  "char_count": 2712,
+  "char_count": 3294,
   "focus_titles": [
     "The Pitfall of Scaling Up: Uncovering and Mitigating Popularity Bias Amplification in Scaling Transformer-based Recommenders",
     "A Rank-One Popularity Component in Dot-Product Recommender Scores:Population Theory and Prior-Separation Evidence"

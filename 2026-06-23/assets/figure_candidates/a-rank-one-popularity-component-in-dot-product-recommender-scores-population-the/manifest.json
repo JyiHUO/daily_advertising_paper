@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-23/downloaded_pdfs/a-rank-one-popularity-component-in-dot-product-recommender-scores-population-the.pdf",
+  "output_dir": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-23/assets/figure_candidates/a-rank-one-popularity-component-in-dot-product-recommender-scores-population-the",
+  "candidates": [
+    {
+      "id": "page-10-drawing-caption-23",
+      "page_index": 10,
+      "caption": "Figure 1: In the matched synthetic setting, popularity strength causes spectral concentration when the item prior must be represented inside the dot product. Error bars show one standard deviation over five seeds.",
+      "clip": [
+        54.0,
+        55.99867248535156,
+        558.0145874023438,
+        218.8590087890625
+      ],
+      "clip_area": 82083.98520632181,
+      "page_area": 484704.0,
+      "text_density": 0.08777935473997632,
+      "kind": "drawing_cluster_with_caption",
+      "score": 61.44528299567166,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-23/assets/figure_candidates/a-rank-one-popularity-component-in-dot-product-recommender-scores-population-the/01-p11-drawing_cluster_with_caption.png",
+      "filename": "01-p11-drawing_cluster_with_caption.png"
+    },
+    {
+      "id": "page-10-block-23",
+      "page_index": 10,
+      "caption": "Figure 1: In the matched synthetic setting, popularity strength causes spectral concentration when the item prior must be represented inside the dot product. Error bars show one standard deviation over five seeds.",
+      "clip": [
+        41.4,
+        18.0,
+        570.6060424804688,
+        210.06460571289062
+      ],
+      "clip_area": 101641.74988989049,
+      "page_area": 484704.0,
+      "text_density": 0.0672311704932862,
+      "kind": "captioned_figure",
+      "score": 50.12935277655434,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-23/assets/figure_candidates/a-rank-one-popularity-component-in-dot-product-recommender-scores-population-the/02-p11-captioned_figure.png",
+      "filename": "02-p11-captioned_figure.png"
+    },
+    {
+      "id": "page-10-drawing-cluster-0",
+      "page_index": 10,
+      "caption": "第 11 页矢量图主图候选",
+      "clip": [
+        56.0,
+        57.99867248535156,
+        556.0145874023438,
+        216.8590087890625
+      ],
+      "clip_area": 79432.4855114976,
+      "page_area": 484704.0,
+      "text_density": 0.08602895618939249,
+      "kind": "drawing_cluster",
+      "score": 8.520845800986423,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-23/assets/figure_candidates/a-rank-one-popularity-component-in-dot-product-recommender-scores-population-the/03-p11-drawing_cluster.png",
+      "filename": "03-p11-drawing_cluster.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.5392033899675385,
+      "score": -11.09083328,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-23/assets/figure_candidates/a-rank-one-popularity-component-in-dot-product-recommender-scores-population-the/04-p1-layout_region_left_top.png",
+      "filename": "04-p1-layout_region_left_top.png"
+    },
+    {
+      "id": "page-1-region-upper-left",
+      "page_index": 1,
+      "caption": "第 2 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.6826805198833028,
+      "score": -11.09083328,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-23/assets/figure_candidates/a-rank-one-popularity-component-in-dot-product-recommender-scores-population-the/05-p2-layout_region_left_top.png",
+      "filename": "05-p2-layout_region_left_top.png"
+    },
+    {
+      "id": "page-0-region-upper-right",
+      "page_index": 0,
+      "caption": "第 1 页右上区域主图候选",
+      "clip": [
+        318.24,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 82992.7296,
+      "kind": "layout_region_right_top",
+      "page_area": 484704.0,
+      "text_density": 0.4951224351114804,
+      "score": -17.07785856,
+      "image_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-23/assets/figure_candidates/a-rank-one-popularity-component-in-dot-product-recommender-scores-population-the/06-p1-layout_region_right_top.png",
+      "filename": "06-p1-layout_region_right_top.png"
+    }
+  ],
+  "contact_sheet_path": "/Users/hjy/project/arxiv_daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-23/assets/figure_candidates/a-rank-one-popularity-component-in-dot-product-recommender-scores-population-the/contact-sheet.svg"
+}
