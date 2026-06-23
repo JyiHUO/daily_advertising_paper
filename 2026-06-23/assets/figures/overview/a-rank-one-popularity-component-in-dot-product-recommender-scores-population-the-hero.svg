@@ -1,0 +1,71 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E07B4A"/>
+    </marker>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E07B4A" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#E07B4A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="900" height="620" fill="#FAFBFD"/>
+
+  <!-- Title -->
+  <text x="450" y="44" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">点积打分里那条"流行度方向"从哪来？</text>
+  <text x="450" y="68" text-anchor="middle" font-size="13" fill="#3D4F65">把 log p(i) 从点积中分离出来 — 流行度方向能量 ↓ 98.6%</text>
+
+  <!-- Central equation card -->
+  <g>
+    <rect x="200" y="200" width="500" height="120" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="450" y="232" text-anchor="middle" font-size="14" fill="#3D4F65">最优 logit 的总体分解</text>
+    <text x="450" y="272" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">h·e  =  PMI(c,i)  +  <tspan fill="#E07B4A">log p(i)</tspan>  +  a(c)</text>
+    <text x="450" y="300" text-anchor="middle" font-size="12" fill="#6B7A8F" font-style="italic">相关性   ·   流行度 (rank-one)   ·   行平移</text>
+  </g>
+
+  <!-- Center top: input cause -->
+  <g>
+    <rect x="340" y="100" width="220" height="50" rx="25" fill="#FFFFFF" stroke="#1E3A5F" stroke-width="1.5"/>
+    <text x="450" y="124" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">长尾 item 分布 p(i)</text>
+    <text x="450" y="142" text-anchor="middle" font-size="11" fill="#6B7A8F">是 decoder 之锅，非 Transformer 之锅</text>
+  </g>
+  <line x1="450" y1="150" x2="450" y2="196" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Left: Standard softmax (problem) -->
+  <g>
+    <circle cx="120" cy="450" r="78" fill="url(#halo)"/>
+    <circle cx="120" cy="450" r="58" fill="#FFFFFF" stroke="#E07B4A" stroke-width="2"/>
+    <text x="120" y="438" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">标准 softmax</text>
+    <text x="120" y="458" text-anchor="middle" font-size="11" fill="#3D4F65">点积硬编码热门方向</text>
+    <line x1="120" y1="450" x2="68"  y2="412" stroke="#E07B4A" stroke-width="2"/>
+    <line x1="120" y1="450" x2="62"  y2="450" stroke="#E07B4A" stroke-width="2"/>
+    <line x1="120" y1="450" x2="72"  y2="492" stroke="#E07B4A" stroke-width="2"/>
+    <text x="120" y="560" text-anchor="middle" font-size="11" fill="#E07B4A" font-weight="600">PC1 能量 64.5% · embedding 被热门主导</text>
+  </g>
+
+  <!-- Right: Prior-adjusted (solution) -->
+  <g>
+    <circle cx="780" cy="450" r="78" fill="#EFF6FF"/>
+    <circle cx="780" cy="450" r="58" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="780" y="438" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">prior 分离</text>
+    <text x="780" y="458" text-anchor="middle" font-size="11" fill="#3D4F65">logit += τ·log p(i)</text>
+    <line x1="780" y1="450" x2="732" y2="414" stroke="#4B8BDA" stroke-width="2"/>
+    <line x1="780" y1="450" x2="828" y2="414" stroke="#4B8BDA" stroke-width="2"/>
+    <line x1="780" y1="450" x2="732" y2="486" stroke="#4B8BDA" stroke-width="2"/>
+    <line x1="780" y1="450" x2="828" y2="486" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="780" y="560" text-anchor="middle" font-size="11" fill="#4B8BDA" font-weight="600">流行度能量 → 0.1% · NDCG@50 +2.7</text>
+  </g>
+
+  <!-- Arrows: equation -> left &amp; right -->
+  <path d="M 250 320 Q 180 380 158 402" fill="none" stroke="#E07B4A" stroke-width="2" stroke-dasharray="5,4" marker-end="url(#arO)"/>
+  <text x="170" y="355" font-size="11" fill="#E07B4A">塞进点积</text>
+
+  <path d="M 650 320 Q 720 380 742 402" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="700" y="355" font-size="11" fill="#4B8BDA">外置为 bias</text>
+
+  <!-- Bottom verification -->
+  <text x="450" y="605" text-anchor="middle" font-size="11" fill="#6B7A8F" font-style="italic">合成数据 + 阿里 / 天池日志 · 2000 次置换检验方向特异性</text>
+</svg>

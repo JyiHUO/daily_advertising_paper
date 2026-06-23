@@ -1,0 +1,63 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D97757"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="38" text-anchor="middle" font-family="Helvetica,Arial" font-size="20" font-weight="700" fill="#1E3A5F">注意力与FFN咬合，把热门信号指数放大</text>
+
+  <!-- Gear 1: Attention -->
+  <g transform="translate(210,230)">
+    <circle r="92" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2.5"/>
+    <g fill="#4B8BDA">
+      <rect x="-10" y="-108" width="20" height="22" rx="3"/>
+      <rect x="-10" y="86" width="20" height="22" rx="3"/>
+      <rect x="-108" y="-10" width="22" height="20" rx="3"/>
+      <rect x="86" y="-10" width="22" height="20" rx="3"/>
+      <rect x="-80" y="-80" width="22" height="20" rx="3" transform="rotate(-45)"/>
+      <rect x="-80" y="60" width="22" height="20" rx="3" transform="rotate(45)"/>
+      <rect x="60" y="-80" width="22" height="20" rx="3" transform="rotate(45)"/>
+      <rect x="60" y="60" width="22" height="20" rx="3" transform="rotate(-45)"/>
+    </g>
+    <circle r="42" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="2"/>
+    <text y="-4" text-anchor="middle" font-family="Helvetica,Arial" font-size="14" font-weight="700" fill="#1E3A5F">Attention</text>
+    <text y="14" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65">Top20%→75%</text>
+  </g>
+
+  <!-- Gear 2: FFN -->
+  <g transform="translate(540,230)">
+    <circle r="92" fill="#FFF4EC" stroke="#D97757" stroke-width="2.5"/>
+    <g fill="#D97757">
+      <rect x="-10" y="-108" width="20" height="22" rx="3"/>
+      <rect x="-10" y="86" width="20" height="22" rx="3"/>
+      <rect x="-108" y="-10" width="22" height="20" rx="3"/>
+      <rect x="86" y="-10" width="22" height="20" rx="3"/>
+      <rect x="-80" y="-80" width="22" height="20" rx="3" transform="rotate(-45)"/>
+      <rect x="-80" y="60" width="22" height="20" rx="3" transform="rotate(45)"/>
+      <rect x="60" y="-80" width="22" height="20" rx="3" transform="rotate(45)"/>
+      <rect x="60" y="60" width="22" height="20" rx="3" transform="rotate(-45)"/>
+    </g>
+    <circle r="42" fill="#FFFFFF" stroke="#D97757" stroke-width="2"/>
+    <text y="-4" text-anchor="middle" font-family="Helvetica,Arial" font-size="14" font-weight="700" fill="#1E3A5F">FFN</text>
+    <text y="14" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65">主方向独大</text>
+  </g>
+
+  <!-- coupling arrows between gears -->
+  <path d="M310,212 Q375,182 440,212" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M440,250 Q375,280 310,250" stroke="#D97757" stroke-width="2" fill="none" marker-end="url(#arRed)"/>
+  <text x="375" y="172" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65" font-style="italic">层层相乘 · 深度 L ↑</text>
+
+  <!-- output: spectral collapse -->
+  <g transform="translate(400,420)">
+    <rect x="-240" y="-30" width="480" height="60" rx="8" fill="#FEF3F2" stroke="#D97757" stroke-width="2"/>
+    <text y="-6" text-anchor="middle" font-family="Helvetica,Arial" font-size="15" font-weight="700" fill="#1E3A5F">谱坍缩：表示退化为单一"热门方向"，长尾被挤压</text>
+    <text y="16" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65">σ₁ 随层数 L 指数增长</text>
+  </g>
+
+  <path d="M255,322 L355,388" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M495,322 L445,388" stroke="#D97757" stroke-width="2" fill="none" marker-end="url(#arRed)"/>
+</svg>

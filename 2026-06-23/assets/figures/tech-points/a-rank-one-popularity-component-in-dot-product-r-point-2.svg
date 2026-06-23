@@ -1,0 +1,59 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="-apple-system,Helvetica,Arial">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="40" font-size="20" font-weight="700" fill="#1E3A5F" text-anchor="middle">点积里的流行度方向 是否传到 embedding？</text>
+  <text x="400" y="65" font-size="13" fill="#3D4F65" text-anchor="middle">取决于 H 与 E 的正则是否对称（balanced）</text>
+
+  <!-- 中心源：score 的 rank-one 流行度方向 -->
+  <circle cx="400" cy="240" r="58" fill="#FEF3E8" stroke="#E8A765" stroke-width="2"/>
+  <text x="400" y="235" font-size="13" font-weight="700" fill="#1E3A5F" text-anchor="middle">score 中</text>
+  <text x="400" y="255" font-size="13" font-weight="700" fill="#1E3A5F" text-anchor="middle">rank-one 流行度</text>
+
+  <!-- 左：balanced 天平 -->
+  <g>
+    <rect x="60" y="140" width="220" height="200" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="170" y="168" font-size="14" font-weight="700" fill="#1E3A5F" text-anchor="middle">对称正则 (balanced)</text>
+
+    <line x1="170" y1="195" x2="170" y2="275" stroke="#1E3A5F" stroke-width="2"/>
+    <line x1="105" y1="220" x2="235" y2="220" stroke="#1E3A5F" stroke-width="2"/>
+    <rect x="90" y="220" width="40" height="22" fill="#4B8BDA"/>
+    <rect x="210" y="220" width="40" height="22" fill="#4B8BDA"/>
+    <text x="110" y="236" font-size="11" fill="#fff" text-anchor="middle">H</text>
+    <text x="230" y="236" font-size="11" fill="#fff" text-anchor="middle">E</text>
+    <polygon points="155,275 185,275 170,290" fill="#1E3A5F"/>
+
+    <text x="170" y="315" font-size="12" fill="#3D4F65" text-anchor="middle">主方向 1:1 传到 E</text>
+    <text x="170" y="332" font-size="11" fill="#3D4F65" text-anchor="middle">E 被热门方向吃掉</text>
+  </g>
+
+  <!-- 右：unbalanced -->
+  <g>
+    <rect x="520" y="140" width="220" height="200" rx="10" fill="#FBEFEF" stroke="#C97064" stroke-width="2"/>
+    <text x="630" y="168" font-size="14" font-weight="700" fill="#1E3A5F" text-anchor="middle">非对称 / prior 外置</text>
+
+    <line x1="630" y1="195" x2="630" y2="275" stroke="#1E3A5F" stroke-width="2"/>
+    <line x1="555" y1="212" x2="705" y2="238" stroke="#1E3A5F" stroke-width="2"/>
+    <rect x="540" y="202" width="40" height="22" fill="#C97064"/>
+    <rect x="680" y="228" width="40" height="22" fill="#C97064"/>
+    <text x="560" y="218" font-size="11" fill="#fff" text-anchor="middle">H</text>
+    <text x="700" y="244" font-size="11" fill="#fff" text-anchor="middle">E</text>
+    <polygon points="615,275 645,275 630,290" fill="#1E3A5F"/>
+
+    <text x="630" y="315" font-size="12" fill="#3D4F65" text-anchor="middle">流行度被剥离, 不进 E</text>
+    <text x="630" y="332" font-size="11" fill="#3D4F65" text-anchor="middle">log p(i) 作为外置 bias</text>
+  </g>
+
+  <!-- 箭头从中心 -->
+  <line x1="342" y1="240" x2="284" y2="240" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <line x1="458" y1="240" x2="516" y2="240" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+
+  <!-- 底部结论 -->
+  <rect x="100" y="395" width="600" height="80" rx="8" fill="#F4F7FB" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="400" y="420" font-size="13" font-weight="700" fill="#1E3A5F" text-anchor="middle">合成：balanced 时 PC1 能量 64.5%，prior 外置后降至 21.6%</text>
+  <text x="400" y="442" font-size="12" fill="#3D4F65" text-anchor="middle">是否把 log p(i) 放进点积，直接决定 embedding 是否被热门吃掉</text>
+  <text x="400" y="463" font-size="11" fill="#8A6A3D" text-anchor="middle">真实数据 balance error ≈ 0.86：现实里只部分传递</text>
+</svg>

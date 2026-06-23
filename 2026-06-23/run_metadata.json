@@ -1,0 +1,18 @@
+{
+  "date": "2026-06-23",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 9,
+  "supplementary_count": 4,
+  "focus_titles": [
+    "The Pitfall of Scaling Up: Uncovering and Mitigating Popularity Bias Amplification in Scaling Transformer-based Recommenders",
+    "A Rank-One Popularity Component in Dot-Product Recommender Scores:Population Theory and Prior-Separation Evidence"
+  ],
+  "focus_status": {
+    "The Pitfall of Scaling Up: Uncovering and Mitigating Popularity Bias Amplification in Scaling Transformer-based Recommenders": "completed",
+    "A Rank-One Popularity Component in Dot-Product Recommender Scores:Population Theory and Prior-Separation Evidence": "completed"
+  }
+}

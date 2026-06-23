@@ -1,0 +1,69 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="40" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="20" font-weight="bold" fill="#1E3A5F">SPRINT: 双闸门压制谱范数</text>
+  <text x="400" y="62" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65">从两个源头限制 Transformer 放大热门偏置</text>
+
+  <!-- Left: Attention regularizer -->
+  <g>
+    <rect x="40" y="100" width="320" height="200" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="200" y="126" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" fill="#1E3A5F">注意力闸门 · 压最大列和</text>
+
+    <!-- attention matrix mini -->
+    <g transform="translate(80,150)">
+      <rect x="0" y="0" width="20" height="20" fill="#DBE7F5"/>
+      <rect x="20" y="0" width="20" height="20" fill="#DBE7F5"/>
+      <rect x="40" y="0" width="20" height="20" fill="#E55A4C"/>
+      <rect x="60" y="0" width="20" height="20" fill="#DBE7F5"/>
+      <rect x="0" y="20" width="20" height="20" fill="#DBE7F5"/>
+      <rect x="20" y="20" width="20" height="20" fill="#DBE7F5"/>
+      <rect x="40" y="20" width="20" height="20" fill="#E55A4C"/>
+      <rect x="60" y="20" width="20" height="20" fill="#DBE7F5"/>
+      <rect x="0" y="40" width="20" height="20" fill="#DBE7F5"/>
+      <rect x="20" y="40" width="20" height="20" fill="#DBE7F5"/>
+      <rect x="40" y="40" width="20" height="20" fill="#E55A4C"/>
+      <rect x="60" y="40" width="20" height="20" fill="#DBE7F5"/>
+      <rect x="0" y="60" width="20" height="20" fill="#DBE7F5"/>
+      <rect x="20" y="60" width="20" height="20" fill="#DBE7F5"/>
+      <rect x="40" y="60" width="20" height="20" fill="#E55A4C"/>
+      <rect x="60" y="60" width="20" height="20" fill="#DBE7F5"/>
+    </g>
+    <text x="170" y="252" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#3D4F65">热门列被所有 token 关注</text>
+
+    <!-- arrow squeeze -->
+    <path d="M 180 280 L 180 200" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)" opacity="0"/>
+    <path d="M 250 190 L 310 190" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+    <text x="325" y="186" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#1E3A5F">logsumexp</text>
+    <text x="325" y="202" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#1E3A5F">平滑压扁</text>
+  </g>
+
+  <!-- Right: FFN regularizer -->
+  <g>
+    <rect x="440" y="100" width="320" height="200" rx="10" fill="#FFF3EC" stroke="#E89766" stroke-width="1.5"/>
+    <text x="600" y="126" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" fill="#1E3A5F">FFN 闸门 · 压最大奇异值</text>
+
+    <!-- ellipse stretched representing singular -->
+    <ellipse cx="600" cy="200" rx="80" ry="22" fill="none" stroke="#E55A4C" stroke-width="2"/>
+    <line x1="520" y1="200" x2="680" y2="200" stroke="#E55A4C" stroke-width="1.5" stroke-dasharray="3,3"/>
+    <circle cx="520" cy="200" r="3" fill="#E55A4C"/>
+    <circle cx="680" cy="200" r="3" fill="#E55A4C"/>
+    <text x="600" y="245" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#3D4F65">表示被拉成单一方向</text>
+
+    <!-- squeeze arrows pointing inward toward ellipse -->
+    <path d="M 470 200 L 510 200" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+    <path d="M 730 200 L 690 200" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+    <text x="600" y="275" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#3D4F65">幂迭代估上界并惩罚</text>
+  </g>
+
+  <!-- Bottom convergence -->
+  <path d="M 200 305 Q 300 360 380 385" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M 600 305 Q 500 360 420 385" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+
+  <rect x="280" y="395" width="240" height="75" rx="10" fill="#1E3A5F"/>
+  <text x="400" y="422" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF">预测矩阵谱范数上界 ↓</text>
+  <text x="400" y="442" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#DBE7F5">深层不再放大热门偏置 · +3% 训练开销</text>
+</svg>

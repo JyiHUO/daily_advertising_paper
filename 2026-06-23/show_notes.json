@@ -1,0 +1,9 @@
+{
+  "title": "AI计算广告论文播报 2026-06-23：放大Transformer为什么越推越热门？",
+  "shownotes_html": "<p>当你把推荐模型的Transformer从两层堆到八层，离线NDCG还在涨，但前20%的热门商品却吃掉了七成五的推荐位——这期我们就来聊聊为什么\"做大模型\"反而让推荐系统更像一个热度排行榜。</p><p><strong>本期重点：</strong></p><ul><li><strong>放大Transformer会放大流行度偏置（The Pitfall of Scaling Up）</strong>：浙大与中科大的工作，把\"越大越偏热门\"这一反直觉现象拆解到注意力和FFN两个组件，并提出几乎零额外成本的SPRINT双正则方案，对广告排序模型的scaling路线特别有借鉴价值。</li><li><strong>点积打分天然含秩一流行度分量（A Rank-One Popularity Component）</strong>：从群体最优角度证明任何点积+softmax解码器在长尾数据上都会自带一个log p(i)主成分，把过去归咎于Transformer的\"表示退化\"重新定位到解码器层面，并给出\"把流行度从点积里拆出来当显式偏置\"的优雅干预。</li><li><strong>URecJPQ：多模态推荐的显存压缩</strong>：把RecJPQ量化扩展到工业级多模态召回，用可控精度损失换显存大幅下降，是近期\"模型与索引规模膨胀后系统瓶颈优先\"趋势的一个代表样本。</li></ul><p><strong>今日趋势：</strong></p><ul><li>两篇推荐系统论文从经验现象与数学证明两条路径，共同把流行度偏置定位成\"点积softmax + 长尾分布\"的结构性产物，而非Transformer架构的锅。</li><li>Agent方向明显从\"能跑通任务\"转向\"可审计、可治理\"，AgentRiskBOM、AI-SDLC协议语言与LLM-as-Judge类工作共同勾勒出一条\"可信赖输出与可控过程\"的方法论暗线。</li></ul><p>留一个开放问题给你：如果流行度偏置真的是点积softmax加长尾数据的\"出厂设置\"，那未来五年我们在召回排序上做的所有架构创新，到底是在解决这个问题，还是在更花哨地复刻它？欢迎在评论区聊聊你的看法。</p><p><em>本期内容由 AI 自动生成，如有疏漏欢迎指正。</em></p>",
+  "report_date": "2026-06-23",
+  "provider": "litellm-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-06-23T21:58:15Z"
+}

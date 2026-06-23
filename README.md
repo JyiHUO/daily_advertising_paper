@@ -4,18 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-06-19
+- **日期**：2026-06-23
 - **分类**：cs.IR + cs.AI + cs.LG
-- **候选论文数**：8
+- **候选论文数**：9
 - **必读论文**：
-  - VCG: A Multimodal Retrieval Framework for E-Commerce Video Feeds under Extreme Cold-Start Conditions
-  - Token Factory: Efficiently Integrating Diverse Signals into Large Recommendation Models
-- **日报路径**：[2026-06-19/daily_report.md](2026-06-19/daily_report.md)
+  - The Pitfall of Scaling Up: Uncovering and Mitigating Popularity Bias Amplification in Scaling Transformer-based Recommenders
+  - A Rank-One Popularity Component in Dot-Product Recommender Scores:Population Theory and Prior-Separation Evidence
+- **日报路径**：[2026-06-23/daily_report.md](2026-06-23/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-06-23 | cs.IR + cs.AI + cs.LG | 9 | 1 | The Pitfall of Scaling Up: Uncovering and Mitigating Popularity Bias Amplification in Scaling Transformer-based Recommenders | [2026-06-23/daily_report.md](2026-06-23/daily_report.md) |
+|  |  |  | 2 | A Rank-One Popularity Component in Dot-Product Recommender Scores:Population Theory and Prior-Separation Evidence |  |
 | 2026-06-19 | cs.IR + cs.AI + cs.LG | 8 | 1 | VCG: A Multimodal Retrieval Framework for E-Commerce Video Feeds under Extreme Cold-Start Conditions | [2026-06-19/daily_report.md](2026-06-19/daily_report.md) |
 |  |  |  | 2 | Token Factory: Efficiently Integrating Diverse Signals into Large Recommendation Models |  |
 | 2026-06-18 | cs.IR + cs.AI + cs.LG | 26 | 1 | RankGraph-2: Lifecycle Co-Design for Billion-Node Graph Learning in Recommendation | [2026-06-18/daily_report.md](2026-06-18/daily_report.md) |

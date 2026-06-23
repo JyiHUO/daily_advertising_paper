@@ -1,0 +1,104 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C9572C"/>
+    </marker>
+    <linearGradient id="sp1" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#C9572C"/>
+      <stop offset="1" stop-color="#E8A87C"/>
+    </linearGradient>
+    <linearGradient id="sp2" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#4B8BDA"/>
+      <stop offset="1" stop-color="#A8C8E8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="42" font-size="22" font-weight="700" fill="#1E3A5F" text-anchor="middle">Scaling 的陷阱：Transformer 推荐器中的流行度偏置放大</text>
+  <text x="450" y="66" font-size="13" fill="#3D4F65" text-anchor="middle">SPRINT — 用谱正则化拆掉「越大越偏头部」的死结</text>
+
+  <!-- Center: spectrum collapse metaphor -->
+  <g transform="translate(450,330)">
+    <circle r="150" fill="#EFF6FF" stroke="#A8C8E8" stroke-width="1" stroke-dasharray="3 4"/>
+    <text y="-115" font-size="13" fill="#1E3A5F" text-anchor="middle" font-weight="600">谱坍缩 ≈ 热门偏置</text>
+
+    <!-- Left bars: collapsed -->
+    <g transform="translate(-110,40)">
+      <text y="38" font-size="11" fill="#C9572C" text-anchor="middle" font-weight="600">深层 / 大模型</text>
+      <text y="54" font-size="10" fill="#3D4F65" text-anchor="middle">σ₁ 独大</text>
+      <rect x="-30" y="-80" width="14" height="80" fill="url(#sp1)"/>
+      <rect x="-12" y="-14" width="14" height="14" fill="#E8A87C"/>
+      <rect x="6"  y="-8"  width="14" height="8"  fill="#E8A87C"/>
+      <rect x="24" y="-5"  width="14" height="5"  fill="#E8A87C"/>
+      <line x1="-35" y1="0" x2="42" y2="0" stroke="#1E3A5F" stroke-width="1"/>
+    </g>
+
+    <!-- Right bars: balanced -->
+    <g transform="translate(110,40)">
+      <text y="38" font-size="11" fill="#2A6FBF" text-anchor="middle" font-weight="600">SPRINT 之后</text>
+      <text y="54" font-size="10" fill="#3D4F65" text-anchor="middle">σ 分布平衡</text>
+      <rect x="-30" y="-44" width="14" height="44" fill="url(#sp2)"/>
+      <rect x="-12" y="-36" width="14" height="36" fill="#A8C8E8"/>
+      <rect x="6"  y="-30" width="14" height="30" fill="#A8C8E8"/>
+      <rect x="24" y="-24" width="14" height="24" fill="#A8C8E8"/>
+      <line x1="-35" y1="0" x2="42" y2="0" stroke="#1E3A5F" stroke-width="1"/>
+    </g>
+
+    <!-- Arrow between -->
+    <path d="M -55,20 Q 0,-5 55,20" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+    <text y="-15" font-size="11" fill="#2A6FBF" text-anchor="middle" font-weight="600">谱正则化</text>
+  </g>
+
+  <!-- Left: two culprits -->
+  <g transform="translate(80,170)">
+    <rect width="200" height="70" rx="10" fill="#FDECE3" stroke="#C9572C" stroke-width="1.2"/>
+    <text x="100" y="28" font-size="13" font-weight="700" fill="#1E3A5F" text-anchor="middle">Attention 层层相乘</text>
+    <text x="100" y="50" font-size="11" fill="#3D4F65" text-anchor="middle">热门 item 列权重被指数放大</text>
+  </g>
+
+  <g transform="translate(80,280)">
+    <rect width="200" height="70" rx="10" fill="#FDECE3" stroke="#C9572C" stroke-width="1.2"/>
+    <text x="100" y="28" font-size="13" font-weight="700" fill="#1E3A5F" text-anchor="middle">FFN 权重连乘</text>
+    <text x="100" y="50" font-size="11" fill="#3D4F65" text-anchor="middle">主奇异方向挤压长尾表达</text>
+  </g>
+
+  <!-- arrows from culprits into center halo -->
+  <path d="M 285,200 Q 330,230 305,290" stroke="#C9572C" stroke-width="2" fill="none" marker-end="url(#arR)"/>
+  <path d="M 285,310 Q 330,330 308,335" stroke="#C9572C" stroke-width="2" fill="none" marker-end="url(#arR)"/>
+  <text x="305" y="255" font-size="11" fill="#C9572C" text-anchor="middle" font-style="italic">协同放大</text>
+
+  <!-- Right: SPRINT two regularizers -->
+  <g transform="translate(620,170)">
+    <rect width="200" height="70" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.2"/>
+    <text x="100" y="28" font-size="13" font-weight="700" fill="#1E3A5F" text-anchor="middle">注意力列和正则</text>
+    <text x="100" y="50" font-size="11" fill="#3D4F65" text-anchor="middle">logsumexp 平滑列权重</text>
+  </g>
+
+  <g transform="translate(620,280)">
+    <rect width="200" height="70" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.2"/>
+    <text x="100" y="28" font-size="13" font-weight="700" fill="#1E3A5F" text-anchor="middle">FFN 谱范数正则</text>
+    <text x="100" y="50" font-size="11" fill="#3D4F65" text-anchor="middle">幂迭代估 σ₁，约 +3% 训练成本</text>
+  </g>
+
+  <path d="M 595,335 Q 640,330 615,310" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M 595,290 Q 640,230 615,200" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <text x="595" y="255" font-size="11" fill="#2A6FBF" text-anchor="middle" font-style="italic">结构层修复</text>
+
+  <!-- Bottom: outcome -->
+  <g transform="translate(450,520)">
+    <rect x="-330" y="-30" width="660" height="60" rx="12" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="-230" y="-6" font-size="12" fill="#3D4F65" text-anchor="middle">参数规模</text>
+    <text x="-230" y="16" font-size="13" font-weight="700" fill="#1E3A5F" text-anchor="middle">0.05M → 0.34B</text>
+    <text x="-75" y="-6" font-size="12" fill="#3D4F65" text-anchor="middle">准确率</text>
+    <text x="-75" y="16" font-size="13" font-weight="700" fill="#2A6FBF" text-anchor="middle">持续上升 ↑</text>
+    <text x="90" y="-6" font-size="12" fill="#3D4F65" text-anchor="middle">长尾公平 Fair-0.95</text>
+    <text x="90" y="16" font-size="13" font-weight="700" fill="#2A6FBF" text-anchor="middle">不再掉头 ↗</text>
+    <text x="245" y="-6" font-size="12" fill="#3D4F65" text-anchor="middle">生态</text>
+    <text x="245" y="16" font-size="13" font-weight="700" fill="#2A6FBF" text-anchor="middle">可持续 scaling</text>
+  </g>
+
+  <path d="M 450,482 L 450,488" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+</svg>

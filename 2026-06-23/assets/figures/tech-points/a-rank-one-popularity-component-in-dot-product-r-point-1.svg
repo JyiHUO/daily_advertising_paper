@@ -1,0 +1,64 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="-apple-system,Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="42" text-anchor="middle" font-size="20" font-weight="600" fill="#1E3A5F">最优 logit 的强制分解</text>
+  <text x="400" y="66" text-anchor="middle" font-size="13" fill="#3D4F65">点积 softmax 必然挤出一个跨 context 共享的 rank-one 流行度方向</text>
+
+  <!-- Left: the dot product score -->
+  <rect x="60" y="120" width="200" height="100" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="160" y="160" text-anchor="middle" font-size="16" fill="#1E3A5F" font-weight="600">最优 logit</text>
+  <text x="160" y="190" text-anchor="middle" font-size="15" fill="#3D4F65">⟨h_c , e_i⟩</text>
+
+  <text x="293" y="180" font-size="26" fill="#4B8BDA" font-weight="600">=</text>
+
+  <!-- PMI part -->
+  <rect x="340" y="100" width="280" height="70" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="480" y="128" text-anchor="middle" font-size="14" fill="#1E3A5F" font-weight="600">PMI(c, i)</text>
+  <text x="480" y="152" text-anchor="middle" font-size="12" fill="#3D4F65">真正的 context–item 相关性</text>
+
+  <text x="635" y="142" font-size="22" fill="#4B8BDA" font-weight="600">+</text>
+
+  <!-- log p(i) part -->
+  <rect x="340" y="195" width="280" height="80" rx="10" fill="#FEF3E8" stroke="#E89B5A" stroke-width="1.5"/>
+  <text x="480" y="222" text-anchor="middle" font-size="14" fill="#1E3A5F" font-weight="600">log p(i)  →  rank-one 方向 1·fᵀ</text>
+  <text x="480" y="246" text-anchor="middle" font-size="12" fill="#3D4F65">item 流行度（与 c 无关）</text>
+  <text x="480" y="264" text-anchor="middle" font-size="11" fill="#A66524" font-style="italic">行平移消不掉，是 gauge-invariant 的</text>
+
+  <line x1="265" y1="160" x2="336" y2="135" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+  <line x1="265" y1="180" x2="336" y2="230" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+
+  <!-- Bottom illustration: matrix with shared column shift -->
+  <g transform="translate(60,330)">
+    <text x="0" y="-8" font-size="13" fill="#1E3A5F" font-weight="600">所有 context 的打分矩阵：</text>
+
+    <rect x="0" y="10" width="220" height="110" fill="#F7FAFC" stroke="#3D4F65" stroke-width="1"/>
+    <text x="-12" y="42" font-size="11" fill="#3D4F65">c₁</text>
+    <text x="-12" y="77" font-size="11" fill="#3D4F65">c₂</text>
+    <text x="-12" y="112" font-size="11" fill="#3D4F65">c₃</text>
+
+    <rect x="40"  y="10" width="35" height="110" fill="#FEF3E8" opacity="0.85"/>
+    <rect x="110" y="10" width="35" height="110" fill="#FCE4C8" opacity="0.85"/>
+    <rect x="180" y="10" width="35" height="110" fill="#F8D29A" opacity="0.85"/>
+
+    <text x="57"  y="138" text-anchor="middle" font-size="11" fill="#3D4F65">长尾</text>
+    <text x="127" y="138" text-anchor="middle" font-size="11" fill="#3D4F65">中部</text>
+    <text x="197" y="138" text-anchor="middle" font-size="11" fill="#3D4F65">爆款</text>
+
+    <text x="110" y="158" text-anchor="middle" font-size="11" fill="#A66524" font-style="italic">每一列都被加上同一个 f_i = log p(i)</text>
+  </g>
+
+  <!-- consequence -->
+  <g transform="translate(400,340)">
+    <rect x="0" y="0" width="340" height="120" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="170" y="30" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">后果：embedding 第一主方向</text>
+    <text x="170" y="56" text-anchor="middle" font-size="12" fill="#3D4F65">被流行度独占（≈ 98.6% 能量）</text>
+    <text x="170" y="82" text-anchor="middle" font-size="12" fill="#3D4F65">长尾被压缩 · 各向异性 · 双塔退化</text>
+    <text x="170" y="106" text-anchor="middle" font-size="11" fill="#A66524" font-style="italic">显式减去 log p(i) 即可剥离</text>
+  </g>
+
+  <line x1="285" y1="395" x2="395" y2="395" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+</svg>

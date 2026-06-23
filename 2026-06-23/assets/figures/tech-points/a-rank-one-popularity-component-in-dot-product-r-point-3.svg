@@ -1,0 +1,48 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Helvetica,Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="34" text-anchor="middle" font-size="19" font-weight="600" fill="#1E3A5F">把"流行度方向"从点积里抽出来</text>
+  <text x="400" y="56" text-anchor="middle" font-size="13" fill="#3D4F65">q(i|c) ∝ exp( h·e + τ·log p(i) )</text>
+
+  <!-- LEFT: before -->
+  <g>
+    <text x="180" y="100" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">标准点积 softmax</text>
+    <circle cx="180" cy="240" r="100" fill="#FFF1E6" stroke="#E8A87C" stroke-width="2"/>
+    <line x1="180" y1="240" x2="260" y2="180" stroke="#C46A4A" stroke-width="2"/>
+    <line x1="180" y1="240" x2="268" y2="205" stroke="#C46A4A" stroke-width="2"/>
+    <line x1="180" y1="240" x2="272" y2="230" stroke="#C46A4A" stroke-width="2"/>
+    <line x1="180" y1="240" x2="270" y2="255" stroke="#C46A4A" stroke-width="2"/>
+    <line x1="180" y1="240" x2="263" y2="278" stroke="#C46A4A" stroke-width="2"/>
+    <line x1="180" y1="240" x2="295" y2="225" stroke="#1E3A5F" stroke-width="3" stroke-dasharray="6 4"/>
+    <text x="180" y="370" text-anchor="middle" font-size="13" fill="#3D4F65">embedding 挤在热门锥</text>
+    <text x="180" y="392" text-anchor="middle" font-size="13" font-weight="600" fill="#C46A4A">26% 能量在 popularity 方向</text>
+  </g>
+
+  <!-- arrow middle -->
+  <g>
+    <line x1="305" y1="240" x2="485" y2="240" stroke="#4B8BDA" stroke-width="3" marker-end="url(#ar)"/>
+    <text x="395" y="226" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">外置 bias  τ·log p(i)</text>
+    <text x="395" y="262" text-anchor="middle" font-size="12" fill="#3D4F65">训练时把流行度从 logit 里抽走</text>
+  </g>
+
+  <!-- RIGHT: after -->
+  <g>
+    <text x="620" y="100" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">Prior 分离后</text>
+    <circle cx="620" cy="240" r="100" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <line x1="620" y1="240" x2="560" y2="170" stroke="#2F6FB5" stroke-width="2"/>
+    <line x1="620" y1="240" x2="695" y2="175" stroke="#2F6FB5" stroke-width="2"/>
+    <line x1="620" y1="240" x2="710" y2="235" stroke="#2F6FB5" stroke-width="2"/>
+    <line x1="620" y1="240" x2="680" y2="310" stroke="#2F6FB5" stroke-width="2"/>
+    <line x1="620" y1="240" x2="550" y2="300" stroke="#2F6FB5" stroke-width="2"/>
+    <line x1="620" y1="240" x2="535" y2="220" stroke="#2F6FB5" stroke-width="2"/>
+    <line x1="620" y1="240" x2="720" y2="225" stroke="#1E3A5F" stroke-width="1" stroke-dasharray="3 5" opacity="0.35"/>
+    <text x="620" y="370" text-anchor="middle" font-size="13" fill="#3D4F65">点积专注语义 (PMI)</text>
+    <text x="620" y="392" text-anchor="middle" font-size="13" font-weight="600" fill="#2F6FB5">0.1% 能量　↓ 98.6%</text>
+  </g>
+
+  <text x="400" y="455" text-anchor="middle" font-size="12" fill="#3D4F65">2000 次 item label 置换检验：无一次达到此降幅 → item-身份特异，非数值偶然</text>
+</svg>
