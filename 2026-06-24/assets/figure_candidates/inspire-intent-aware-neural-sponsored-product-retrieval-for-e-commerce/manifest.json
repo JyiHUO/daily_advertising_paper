@@ -1,0 +1,118 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-24/downloaded_pdfs/inspire-intent-aware-neural-sponsored-product-retrieval-for-e-commerce.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-24/assets/figure_candidates/inspire-intent-aware-neural-sponsored-product-retrieval-for-e-commerce",
+  "candidates": [
+    {
+      "id": "page-13-block-1",
+      "page_index": 13,
+      "caption": "Figure 2: Offline pipelines for generating structured intents for items and queries. Item intents are extracted from catalog metadata and stored in the index. Query Intents come from an upstream intent prediction model(not shown here).",
+      "clip": [
+        50.0,
+        47.60748291015625,
+        545.2742919921875,
+        243.52703857421875
+      ],
+      "clip_area": 97033.91921894252,
+      "page_area": 501156.9211820215,
+      "text_density": 0.049589784579832596,
+      "kind": "image_block_with_caption",
+      "score": 46.07815465798825,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-24/assets/figure_candidates/inspire-intent-aware-neural-sponsored-product-retrieval-for-e-commerce/01-p14-image_block_with_caption.png",
+      "filename": "01-p14-image_block_with_caption.png"
+    },
+    {
+      "id": "page-13-embedded-0-0",
+      "page_index": 13,
+      "caption": "Figure 2: Offline pipelines for generating structured intents for items and queries. Item intents are extracted from catalog metadata and stored in the index. Query Intents come from an upstream intent prediction model(not shown here).",
+      "clip": [
+        60.0,
+        53.60748291015625,
+        535.2742919921875,
+        237.52703857421875
+      ],
+      "clip_area": 87412.23660175502,
+      "page_area": 501156.9211820215,
+      "text_density": 0.02644606101391238,
+      "kind": "embedded_image_with_caption",
+      "xref": 347,
+      "score": 44.971247073352835,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-24/assets/figure_candidates/inspire-intent-aware-neural-sponsored-product-retrieval-for-e-commerce/02-p14-embedded_image_with_caption.png",
+      "filename": "02-p14-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-14-embedded-0-0",
+      "page_index": 14,
+      "caption": "Figure 3: End-to-end serving architecture for intent-aware retrieval. The offline system generates item intents and caches query intents for frequent queries, while the online system performs real-time query intent inference and retrieves candidates from an intent-augmented index to produce final ranked results.",
+      "clip": [
+        60.0,
+        53.602630615234375,
+        535.2791137695312,
+        277.00299072265625
+      ],
+      "clip_area": 106177.52516764961,
+      "page_area": 501156.9211820215,
+      "text_density": 0.021771875975805204,
+      "kind": "embedded_image_with_caption",
+      "xref": 348,
+      "score": 35.17975027964055,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-24/assets/figure_candidates/inspire-intent-aware-neural-sponsored-product-retrieval-for-e-commerce/03-p15-embedded_image_with_caption.png",
+      "filename": "03-p15-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-14-block-1",
+      "page_index": 14,
+      "caption": "Figure 3: End-to-end serving architecture for intent-aware retrieval. The offline system generates item intents and caches query intents for frequent queries, while the online system performs real-time query intent inference and retrieves candidates from an intent-augmented index to produce final ranked results.",
+      "clip": [
+        50.0,
+        47.602630615234375,
+        545.2791137695312,
+        283.00299072265625
+      ],
+      "clip_area": 116588.88173503242,
+      "page_area": 501156.9211820215,
+      "text_density": 0.0412720805468865,
+      "kind": "image_block_with_caption",
+      "score": 35.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-24/assets/figure_candidates/inspire-intent-aware-neural-sponsored-product-retrieval-for-e-commerce/04-p15-image_block_with_caption.png",
+      "filename": "04-p15-image_block_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-0-0",
+      "page_index": 1,
+      "caption": "第 2 页内嵌图片候选",
+      "clip": [
+        60.0,
+        53.60240173339844,
+        535.2430419921875,
+        229.44500732421875
+      ],
+      "clip_area": 83567.97479281388,
+      "page_area": 501156.9211820215,
+      "text_density": 0.018474881459313534,
+      "kind": "embedded_image",
+      "xref": 337,
+      "score": 11.928533053253487,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-24/assets/figure_candidates/inspire-intent-aware-neural-sponsored-product-retrieval-for-e-commerce/05-p2-embedded_image.png",
+      "filename": "05-p2-embedded_image.png"
+    },
+    {
+      "id": "page-10-block-6",
+      "page_index": 10,
+      "caption": "Model and Training Objective. We adopt a bi-encoder architecture based on a MiniLM Sentence- Transformer. [ 17 , 31 , 32 ] Queries and items are encoded independently:",
+      "clip": [
+        41.90919647216796,
+        18.0,
+        554.8815979003906,
+        311.48773193359375
+      ],
+      "clip_area": 150551.10663969803,
+      "page_area": 501156.9211820215,
+      "text_density": 0.460239654937563,
+      "kind": "captioned_figure",
+      "score": 10.0,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-24/assets/figure_candidates/inspire-intent-aware-neural-sponsored-product-retrieval-for-e-commerce/06-p11-captioned_figure.png",
+      "filename": "06-p11-captioned_figure.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-24/assets/figure_candidates/inspire-intent-aware-neural-sponsored-product-retrieval-for-e-commerce/contact-sheet.svg"
+}
