@@ -1,0 +1,47 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2E7D32"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="36" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#1E3A5F">能用小模型就别用大模型</text>
+  <text x="400" y="60" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#3D4F65">逐类校准置信度，过阈值即盖章</text>
+
+  <!-- Small model -->
+  <circle cx="150" cy="240" r="58" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="150" y="236" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#1E3A5F">184M cross-encoder</text>
+  <text x="150" y="256" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">解决 74.5%</text>
+
+  <!-- Mid model -->
+  <circle cx="400" cy="240" r="72" fill="#FFF4E6" stroke="#E89B3C" stroke-width="2"/>
+  <text x="400" y="236" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#1E3A5F">2B LoRA LLM</text>
+  <text x="400" y="256" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">中等档兜底</text>
+
+  <!-- Large model -->
+  <circle cx="660" cy="240" r="90" fill="#FDECEC" stroke="#C9534F" stroke-width="2"/>
+  <text x="660" y="236" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#1E3A5F">8B LLM</text>
+  <text x="660" y="256" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">+ 投票兜底</text>
+
+  <!-- Escalation arrows -->
+  <path d="M208,240 L326,240" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <path d="M472,240 L568,240" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+  <text x="267" y="230" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65" font-style="italic">不自信，升级</text>
+  <text x="520" y="230" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65" font-style="italic">还不自信，升级</text>
+
+  <!-- Pass-through (confident exit) arrows -->
+  <path d="M150,298 L150,395" stroke="#2E7D32" stroke-width="2" fill="none" marker-end="url(#arrG)"/>
+  <path d="M400,312 L400,395" stroke="#2E7D32" stroke-width="2" fill="none" marker-end="url(#arrG)"/>
+  <path d="M660,330 L660,395" stroke="#2E7D32" stroke-width="2" fill="none" marker-end="url(#arrG)"/>
+
+  <!-- Stamp bar -->
+  <rect x="120" y="400" width="560" height="38" rx="8" fill="#E8F5E9" stroke="#2E7D32" stroke-width="2"/>
+  <text x="400" y="424" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#2E7D32">过该档校准阈值 → 盖章落标</text>
+
+  <!-- Bottom note -->
+  <text x="400" y="470" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#1E3A5F">与人工一致率 89.1% ｜ 算力省约一半</text>
+</svg>

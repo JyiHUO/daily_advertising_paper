@@ -1,0 +1,55 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97064"/>
+    </marker>
+    <marker id="arGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5B9279"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E3A5F">Hidden Intent → Explicit Tag</text>
+  <text x="400" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">structured attributes joined to query and title</text>
+
+  <!-- Query bubble -->
+  <rect x="60" y="110" width="240" height="90" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="180" y="145" text-anchor="middle" font-size="15" fill="#1E3A5F" font-weight="bold">"no dairy creamer"</text>
+  <text x="180" y="175" text-anchor="middle" font-size="12" fill="#C97064" font-style="italic">implicit intent</text>
+
+  <!-- Tag enrichment -->
+  <rect x="340" y="105" width="160" height="100" rx="14" fill="#FFF4E6" stroke="#E0A458" stroke-width="1.5"/>
+  <text x="420" y="138" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">attach tag</text>
+  <text x="420" y="172" text-anchor="middle" font-size="13" fill="#5B9279" font-weight="bold">dietary: dairy free</text>
+
+  <!-- Enriched query -->
+  <rect x="540" y="110" width="220" height="90" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="650" y="142" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="bold">no dairy creamer ;</text>
+  <text x="650" y="165" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="bold">dietary: dairy free</text>
+  <text x="650" y="188" text-anchor="middle" font-size="11" fill="#5B9279" font-style="italic">constraint visible</text>
+
+  <line x1="300" y1="155" x2="338" y2="155" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="500" y1="155" x2="538" y2="155" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <text x="400" y="270" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">constraint-level matching</text>
+
+  <!-- Nutpods (correct) -->
+  <rect x="100" y="300" width="260" height="130" rx="14" fill="#EAF4EE" stroke="#5B9279" stroke-width="1.8"/>
+  <text x="230" y="332" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">Nutpods</text>
+  <text x="230" y="354" text-anchor="middle" font-size="12" fill="#3D4F65">dietary: dairy free</text>
+  <text x="230" y="392" text-anchor="middle" font-size="14" fill="#3D4F65">score 0.46 → <tspan font-size="18" font-weight="bold" fill="#5B9279">0.86</tspan></text>
+  <text x="230" y="416" text-anchor="middle" font-size="11" fill="#5B9279" font-style="italic">pulled closer</text>
+
+  <!-- Coffee Mate (wrong) -->
+  <rect x="440" y="300" width="260" height="130" rx="14" fill="#FBECEA" stroke="#C97064" stroke-width="1.8"/>
+  <text x="570" y="332" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">Coffee Mate</text>
+  <text x="570" y="354" text-anchor="middle" font-size="12" fill="#3D4F65">dietary: contains dairy</text>
+  <text x="570" y="392" text-anchor="middle" font-size="14" fill="#3D4F65">score 0.59 → <tspan font-size="18" font-weight="bold" fill="#C97064">0.51</tspan></text>
+  <text x="570" y="416" text-anchor="middle" font-size="11" fill="#C97064" font-style="italic">pushed away</text>
+
+  <!-- arrows from enriched query to products -->
+  <path d="M 600 200 Q 430 250 290 300" fill="none" stroke="#5B9279" stroke-width="2" marker-end="url(#arGreen)"/>
+  <path d="M 690 200 Q 640 250 560 300" fill="none" stroke="#C97064" stroke-width="2" marker-end="url(#arRed)"/>
+</svg>

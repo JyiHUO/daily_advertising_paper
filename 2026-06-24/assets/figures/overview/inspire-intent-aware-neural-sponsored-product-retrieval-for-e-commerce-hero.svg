@@ -1,0 +1,100 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" font-family="'Helvetica Neue', 'PingFang SC', sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E89B5A"/>
+    </marker>
+    <radialGradient id="prism" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#DCE9FA"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="900" height="600" fill="#FAFBFC"/>
+
+  <!-- Title -->
+  <text x="450" y="40" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">INSPIRE：让赞助召回看懂 query 背后的隐式意图</text>
+  <text x="450" y="62" text-anchor="middle" font-size="12" fill="#6B7A8F">Walmart 食品饮料赞助搜索 · 结构化意图 + 双塔召回</text>
+
+  <!-- LEFT: raw query -->
+  <g>
+    <rect x="40" y="150" width="180" height="80" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.3"/>
+    <text x="130" y="178" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">原始 query</text>
+    <text x="130" y="200" text-anchor="middle" font-size="12" fill="#3D4F65">"no dairy creamer"</text>
+    <text x="130" y="218" text-anchor="middle" font-size="11" fill="#9AA5B5">短 · 模糊 · 隐式偏好</text>
+
+    <rect x="40" y="360" width="180" height="80" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.3"/>
+    <text x="130" y="388" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">商品标题</text>
+    <text x="130" y="408" text-anchor="middle" font-size="11" fill="#3D4F65">Nutpods Almond Creamer</text>
+    <text x="130" y="424" text-anchor="middle" font-size="11" fill="#3D4F65">Coffee Mate Original ...</text>
+  </g>
+
+  <!-- CENTER: Prism = intent extractor -->
+  <g>
+    <polygon points="450,140 560,300 450,460 340,300" fill="url(#prism)" stroke="#1E3A5F" stroke-width="1.8"/>
+    <text x="450" y="290" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">意图棱镜</text>
+    <text x="450" y="310" text-anchor="middle" font-size="11" fill="#3D4F65">LLM 教师 → LoRA 学生</text>
+    <text x="450" y="326" text-anchor="middle" font-size="10" fill="#6B7A8F">Phi-4-mini · 结构化属性</text>
+
+    <!-- Teacher trio badge -->
+    <g transform="translate(450,200)">
+      <circle cx="-22" cy="0" r="9" fill="#E89B5A" opacity="0.85"/>
+      <circle cx="0" cy="0" r="9" fill="#E89B5A" opacity="0.85"/>
+      <circle cx="22" cy="0" r="9" fill="#E89B5A" opacity="0.85"/>
+      <text x="0" y="-14" text-anchor="middle" font-size="10" fill="#7A4A1F">三教师共识投票</text>
+    </g>
+  </g>
+
+  <!-- arrows into prism -->
+  <line x1="222" y1="195" x2="358" y2="245" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#ar)"/>
+  <line x1="222" y1="395" x2="358" y2="355" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#ar)"/>
+
+  <!-- RIGHT: refracted attributes -->
+  <g font-size="11" fill="#1E3A5F">
+    <!-- query side -->
+    <line x1="555" y1="245" x2="685" y2="190" stroke="#4B8BDA" stroke-width="1.4" marker-end="url(#ar)"/>
+    <rect x="695" y="170" width="180" height="34" rx="6" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="705" y="185" font-size="10" fill="#6B7A8F">query 端</text>
+    <text x="705" y="198" font-weight="600">dietary: dairy free</text>
+
+    <line x1="555" y1="275" x2="685" y2="235" stroke="#4B8BDA" stroke-width="1.4" marker-end="url(#ar)"/>
+    <rect x="695" y="218" width="180" height="28" rx="6" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="705" y="237" font-weight="600">subtype: creamer</text>
+
+    <!-- product side -->
+    <line x1="555" y1="325" x2="685" y2="320" stroke="#E89B5A" stroke-width="1.4" marker-end="url(#arO)"/>
+    <rect x="695" y="300" width="180" height="34" rx="6" fill="#FDF1E5" stroke="#E89B5A"/>
+    <text x="705" y="315" font-size="10" fill="#9C6536">商品端</text>
+    <text x="705" y="328" font-weight="600" fill="#7A4A1F">Nutpods: dairy free ✓</text>
+
+    <line x1="555" y1="355" x2="685" y2="370" stroke="#E89B5A" stroke-width="1.4" marker-end="url(#arO)"/>
+    <rect x="695" y="352" width="180" height="28" rx="6" fill="#FDF1E5" stroke="#E89B5A"/>
+    <text x="705" y="371" font-weight="600" fill="#7A4A1F">Coffee Mate: has dairy ✗</text>
+  </g>
+
+  <!-- arrow from prism to bi-encoder -->
+  <path d="M450,460 L450,495" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)" fill="none"/>
+
+  <!-- Bottom: bi-encoder matching -->
+  <g>
+    <rect x="160" y="500" width="580" height="70" rx="12" fill="#1E3A5F"/>
+    <text x="195" y="528" font-size="13" font-weight="700" fill="#FFFFFF">双塔召回</text>
+    <text x="195" y="548" font-size="11" fill="#B8C8DC">query ⊕ 意图  ↔  商品 ⊕ 意图</text>
+
+    <!-- score comparison -->
+    <g transform="translate(420,518)">
+      <text x="0" y="0" font-size="11" fill="#B8C8DC">Nutpods</text>
+      <text x="90" y="0" font-size="11" fill="#9AA5B5" text-decoration="line-through">0.46</text>
+      <text x="135" y="0" font-size="12" fill="#7FD49C" font-weight="700">→ 0.86</text>
+
+      <text x="0" y="22" font-size="11" fill="#B8C8DC">Coffee Mate</text>
+      <text x="90" y="22" font-size="11" fill="#9AA5B5" text-decoration="line-through">0.59</text>
+      <text x="135" y="22" font-size="12" fill="#E89B5A" font-weight="700">→ 0.51</text>
+    </g>
+  </g>
+
+  <!-- bottom caption -->
+  <text x="450" y="590" text-anchor="middle" font-size="11" fill="#6B7A8F">把隐式偏好解出来 → 在表示层做约束级匹配，相对顺序被纠正</text>
+</svg>

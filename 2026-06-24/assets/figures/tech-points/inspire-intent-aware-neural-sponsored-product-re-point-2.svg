@@ -1,0 +1,49 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="Helvetica, Arial, sans-serif">
+  <text x="300" y="38" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">三师投票 → 小模型蒸馏</text>
+  <text x="300" y="60" text-anchor="middle" font-size="12" fill="#3D4F65">至少两家一致，才算共识标签</text>
+
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <g>
+    <circle cx="90" cy="160" r="38" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="90" y="158" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">Gemma</text>
+    <text x="90" y="174" text-anchor="middle" font-size="10" fill="#3D4F65">teacher</text>
+
+    <circle cx="90" cy="245" r="38" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="90" y="243" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">LLaMA</text>
+    <text x="90" y="259" text-anchor="middle" font-size="10" fill="#3D4F65">teacher</text>
+
+    <circle cx="90" cy="330" r="38" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="90" y="328" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">Qwen</text>
+    <text x="90" y="344" text-anchor="middle" font-size="10" fill="#3D4F65">teacher</text>
+  </g>
+
+  <line x1="131" y1="178" x2="262" y2="232" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="131" y1="245" x2="262" y2="245" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="131" y1="312" x2="262" y2="258" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <g>
+    <polygon points="270,205 365,205 340,275 295,275" fill="#FEF3E2" stroke="#D9883C" stroke-width="2"/>
+    <text x="317" y="238" text-anchor="middle" font-size="12" font-weight="700" fill="#7A4A1A">2/3 共识</text>
+    <text x="317" y="256" text-anchor="middle" font-size="10" fill="#7A4A1A">过滤</text>
+  </g>
+
+  <text x="408" y="230" text-anchor="middle" font-size="10" fill="#3D4F65">高置信标签</text>
+  <line x1="365" y1="240" x2="463" y2="240" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+
+  <g>
+    <rect x="465" y="195" width="105" height="90" rx="10" fill="#EFF6FF" stroke="#1E3A5F" stroke-width="2"/>
+    <text x="517" y="223" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">Phi-4-mini</text>
+    <text x="517" y="244" text-anchor="middle" font-size="11" fill="#3D4F65">LoRA SFT</text>
+    <text x="517" y="268" text-anchor="middle" font-size="10" fill="#4B8BDA">轻量・上线</text>
+  </g>
+
+  <g>
+    <rect x="60" y="372" width="480" height="34" rx="6" fill="#F6F7F9" stroke="#CBD5E1"/>
+    <text x="300" y="393" text-anchor="middle" font-size="11" fill="#3D4F65">例：sugar-free / fat-free 三家都说 → 保留；vegan 仅一家 → 丢弃</text>
+  </g>
+</svg>
