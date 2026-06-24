@@ -5,8 +5,8 @@
     "cs.AI",
     "cs.LG"
   ],
-  "candidate_count": 4,
-  "supplementary_count": 1,
+  "candidate_count": 5,
+  "supplementary_count": 2,
   "focus_titles": [
     "Scaling Dense Retrieval with LLM-Annotated Training Data: Structured Mining and Progressive Curriculum for E-Commerce Sponsored Search",
     "INSPIRE: Intent-aware Neural Sponsored Product Retrieval for E-commerce"

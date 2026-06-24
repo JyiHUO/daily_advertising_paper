@@ -1,0 +1,9 @@
+{
+  "title": "AI 计算广告论文播报 2026-06-24：沃尔玛把广告召回链路用 LLM 重写了一遍",
+  "shownotes_html": "<p>这期我们把镜头对准沃尔玛赞助搜索团队同一天放出的两篇广告召回论文，看看工业级电商搜索是怎么被 LLM 从数据生产、意图理解到召回训练端到端重做一遍的。</p><p><strong>本期重点</strong></p><ul><li><strong>用 LLM 标注数据做稠密召回（Scaling Dense Retrieval with LLM-Annotated Training Data）</strong>：沃尔玛用词典、BM25、向量召回三路的分歧自动切出 5 档难度样本，再用 184M→2B→8B 级联 LLM 打标加分档校准，最后用 BCE→MNR→Triplet 三阶段课程训练；线上 A/B 广告花费 +2.8%，是今天最值得读的工业广告召回论文。</li><li><strong>意图感知的赞助商品召回（INSPIRE: Intent-aware Neural Sponsored Product Retrieval）</strong>：把品牌、饮食偏好、成分、菜系等 8 类结构化属性显式拼进双塔输入，配合三大模型共识打标 + LoRA 蒸馏到 Phi-4-mini 全目录刷意图；离线 Top1 精度 +4.2%、最糟糕召回直接砍半，对带硬约束的垂类广告很有参考价值。</li><li><strong>顺带提一下 ScaleToT</strong>：把 LLM 的 Tree-of-Thought 推理蒸馏到十亿级低活用户 LTV 预测，代表了另一条路径——不只用 LLM 做标注，而是把推理能力本身搬下去。</li></ul><p><strong>今日趋势</strong></p><ul><li>cs.IR 今天只有 17 篇，但工业级电商搜索论文集中爆发，沃尔玛一家就贡献了赞助搜索召回 + 多任务相关性的完整施工图。</li><li>LLM 的角色正在从\"上线推理\"前移到\"离线造数据\"：标注器、特征抽取器、领域桥梁的范式被反复复用，长上下文 KV 压缩与推理可控性也是当天的高频议题。</li></ul><p>如果你们团队还在用纯点击日志训广告召回，这期可能会给你一个重新审视训练范式的理由。欢迎在评论区聊聊你对\"LLM 标注驱动召回\"的看法。本期内容由 AI 自动生成，仅供参考，我们下期见。</p>",
+  "report_date": "2026-06-24",
+  "provider": "litellm-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-06-24T21:46:53Z"
+}

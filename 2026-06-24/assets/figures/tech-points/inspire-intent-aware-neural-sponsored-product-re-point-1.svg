@@ -1,55 +1,38 @@
-<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="Helvetica, Arial, sans-serif">
-  <defs>
-    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
-      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
-    </marker>
-    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
-      <path d="M0,0 L10,5 L0,10 z" fill="#C97064"/>
-    </marker>
-    <marker id="arGreen" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
-      <path d="M0,0 L10,5 L0,10 z" fill="#5B9279"/>
-    </marker>
-  </defs>
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <text x="300" y="32" text-anchor="middle" font-size="17" font-weight="700" fill="#1E3A5F">给 Query 与商品贴上"意图标签卡"</text>
 
-  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="bold" fill="#1E3A5F">Hidden Intent → Explicit Tag</text>
-  <text x="400" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">structured attributes joined to query and title</text>
+  <!-- Query side -->
+  <rect x="50" y="70" width="200" height="58" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="150" y="92" text-anchor="middle" font-size="12" fill="#3D4F65">Query</text>
+  <text x="150" y="114" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">sugar free chocolate</text>
 
-  <!-- Query bubble -->
-  <rect x="60" y="110" width="240" height="90" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
-  <text x="180" y="145" text-anchor="middle" font-size="15" fill="#1E3A5F" font-weight="bold">"no dairy creamer"</text>
-  <text x="180" y="175" text-anchor="middle" font-size="12" fill="#C97064" font-style="italic">implicit intent</text>
+  <rect x="70" y="158" width="160" height="48" rx="6" fill="#FFF4E6" stroke="#E89B3C" stroke-width="1.5"/>
+  <text x="150" y="177" text-anchor="middle" font-size="11" fill="#8B5A1F">dietary preference</text>
+  <text x="150" y="196" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">sugar free</text>
 
-  <!-- Tag enrichment -->
-  <rect x="340" y="105" width="160" height="100" rx="14" fill="#FFF4E6" stroke="#E0A458" stroke-width="1.5"/>
-  <text x="420" y="138" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">attach tag</text>
-  <text x="420" y="172" text-anchor="middle" font-size="13" fill="#5B9279" font-weight="bold">dietary: dairy free</text>
+  <!-- Item A (relevant) -->
+  <rect x="350" y="70" width="200" height="58" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="450" y="104" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">Lily's Dark Chocolate</text>
 
-  <!-- Enriched query -->
-  <rect x="540" y="110" width="220" height="90" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
-  <text x="650" y="142" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="bold">no dairy creamer ;</text>
-  <text x="650" y="165" text-anchor="middle" font-size="13" fill="#1E3A5F" font-weight="bold">dietary: dairy free</text>
-  <text x="650" y="188" text-anchor="middle" font-size="11" fill="#5B9279" font-style="italic">constraint visible</text>
+  <rect x="370" y="158" width="160" height="48" rx="6" fill="#FFF4E6" stroke="#E89B3C" stroke-width="1.5"/>
+  <text x="450" y="177" text-anchor="middle" font-size="11" fill="#8B5A1F">dietary preference</text>
+  <text x="450" y="196" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">sugar free</text>
 
-  <line x1="300" y1="155" x2="338" y2="155" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
-  <line x1="500" y1="155" x2="538" y2="155" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <!-- Match line -->
+  <line x1="230" y1="182" x2="370" y2="182" stroke="#2E7D4F" stroke-width="2" stroke-dasharray="5,4"/>
+  <text x="300" y="174" text-anchor="middle" font-size="12" font-weight="700" fill="#2E7D4F">match ✓  cos = 0.84</text>
 
-  <text x="400" y="270" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">constraint-level matching</text>
+  <!-- Item B (irrelevant) -->
+  <rect x="350" y="252" width="200" height="58" rx="10" fill="#FAFAFA" stroke="#B8B8B8" stroke-width="1.2"/>
+  <text x="450" y="286" text-anchor="middle" font-size="13" font-weight="600" fill="#3D4F65">Hershey Milk Chocolate</text>
 
-  <!-- Nutpods (correct) -->
-  <rect x="100" y="300" width="260" height="130" rx="14" fill="#EAF4EE" stroke="#5B9279" stroke-width="1.8"/>
-  <text x="230" y="332" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">Nutpods</text>
-  <text x="230" y="354" text-anchor="middle" font-size="12" fill="#3D4F65">dietary: dairy free</text>
-  <text x="230" y="392" text-anchor="middle" font-size="14" fill="#3D4F65">score 0.46 → <tspan font-size="18" font-weight="bold" fill="#5B9279">0.86</tspan></text>
-  <text x="230" y="416" text-anchor="middle" font-size="11" fill="#5B9279" font-style="italic">pulled closer</text>
+  <rect x="370" y="328" width="160" height="48" rx="6" fill="#F5E8E8" stroke="#C77777" stroke-width="1.2"/>
+  <text x="450" y="347" text-anchor="middle" font-size="11" fill="#8B3A3A">dietary preference</text>
+  <text x="450" y="366" text-anchor="middle" font-size="13" font-weight="700" fill="#8B3A3A">contains sugar</text>
 
-  <!-- Coffee Mate (wrong) -->
-  <rect x="440" y="300" width="260" height="130" rx="14" fill="#FBECEA" stroke="#C97064" stroke-width="1.8"/>
-  <text x="570" y="332" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3A5F">Coffee Mate</text>
-  <text x="570" y="354" text-anchor="middle" font-size="12" fill="#3D4F65">dietary: contains dairy</text>
-  <text x="570" y="392" text-anchor="middle" font-size="14" fill="#3D4F65">score 0.59 → <tspan font-size="18" font-weight="bold" fill="#C97064">0.51</tspan></text>
-  <text x="570" y="416" text-anchor="middle" font-size="11" fill="#C97064" font-style="italic">pushed away</text>
+  <!-- Mismatch line: from query-tag right edge to item B box left edge -->
+  <line x1="230" y1="206" x2="350" y2="281" stroke="#C77777" stroke-width="1.8" stroke-dasharray="3,4"/>
+  <text x="248" y="258" font-size="12" font-weight="700" fill="#8B3A3A">mismatch ✗  cos = 0.45</text>
 
-  <!-- arrows from enriched query to products -->
-  <path d="M 600 200 Q 430 250 290 300" fill="none" stroke="#5B9279" stroke-width="2" marker-end="url(#arGreen)"/>
-  <path d="M 690 200 Q 640 250 560 300" fill="none" stroke="#C97064" stroke-width="2" marker-end="url(#arRed)"/>
+  <text x="300" y="406" text-anchor="middle" font-size="12" fill="#3D4F65">表示层显式对齐结构化意图，而非只看字面相似</text>
 </svg>

@@ -1,60 +1,46 @@
-<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="Helvetica, Arial, sans-serif">
-  <text x="300" y="38" text-anchor="middle" font-size="18" font-weight="bold" fill="#1E3A5F">两层老师，一个学生</text>
-  <text x="300" y="60" text-anchor="middle" font-size="12" fill="#3D4F65">相关性把关，行为分微调</text>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="1200" height="800">
   <defs>
-    <marker id="ah" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
-      <path d="M0,0 L8,3 L0,6 z" fill="#4B8BDA"/>
-    </marker>
-    <marker id="ao" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
-      <path d="M0,0 L8,3 L0,6 z" fill="#E89B4A"/>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
     </marker>
   </defs>
 
-  <!-- Teacher 1: Relevance -->
-  <g>
-    <rect x="50" y="100" width="180" height="90" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
-    <text x="140" y="128" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">相关性老师</text>
-    <text x="140" y="150" text-anchor="middle" font-size="11" fill="#3D4F65">LLM 级联打分 (0–4)</text>
-    <text x="140" y="170" text-anchor="middle" font-size="11" fill="#3D4F65">决定是否准许发言</text>
-  </g>
+  <!-- Title -->
+  <text x="300" y="30" text-anchor="middle" font-family="Helvetica" font-size="16" font-weight="bold" fill="#1E3A5F">Distill the giant, serve the small</text>
+  <text x="300" y="50" text-anchor="middle" font-family="Helvetica" font-size="11" fill="#3D4F65">teacher labels → LoRA student → full-catalog inference</text>
 
-  <!-- Teacher 2: Behavior -->
-  <g>
-    <rect x="50" y="230" width="180" height="90" rx="10" fill="#FFF3E6" stroke="#E89B4A" stroke-width="1.8"/>
-    <text x="140" y="258" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">行为老师</text>
-    <text x="140" y="280" text-anchor="middle" font-size="11" fill="#3D4F65">点击 / 加购 / 下单</text>
-    <text x="140" y="300" text-anchor="middle" font-size="11" fill="#9C5A1F">仅当相关性 ≥ 2 生效</text>
-  </g>
+  <!-- Teacher (big) -->
+  <circle cx="90" cy="160" r="60" fill="#FEF3E2" stroke="#E8A857" stroke-width="2"/>
+  <text x="90" y="156" text-anchor="middle" font-family="Helvetica" font-size="16" font-weight="bold" fill="#1E3A5F">Teacher</text>
+  <text x="90" y="176" text-anchor="middle" font-family="Helvetica" font-size="11" fill="#3D4F65">LLM (heavy)</text>
 
-  <!-- Gate symbol between teachers -->
-  <g>
-    <line x1="140" y1="190" x2="140" y2="230" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="3,3"/>
-    <rect x="112" y="203" width="56" height="16" rx="3" fill="#fff" stroke="#4B8BDA" stroke-width="1"/>
-    <text x="140" y="215" text-anchor="middle" font-size="10" fill="#1E3A5F">门控</text>
-  </g>
-
-  <!-- Arrows to student -->
-  <path d="M230 145 Q 310 165 383 205" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ah)"/>
-  <path d="M230 275 Q 310 255 383 235" stroke="#E89B4A" stroke-width="2" fill="none" marker-end="url(#ao)"/>
+  <!-- arrow teacher -> student -->
+  <path d="M 150 160 Q 220 160 268 178" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <text x="205" y="150" text-anchor="middle" font-family="Helvetica" font-size="11" fill="#3D4F65">labels</text>
 
   <!-- Student -->
-  <g>
-    <rect x="385" y="170" width="170" height="110" rx="12" fill="#E8F0FF" stroke="#1E3A5F" stroke-width="2"/>
-    <text x="470" y="198" text-anchor="middle" font-size="14" font-weight="bold" fill="#1E3A5F">双塔学生</text>
-    <text x="470" y="220" text-anchor="middle" font-size="11" fill="#3D4F65">MiniLM bi-encoder</text>
-    <text x="470" y="240" text-anchor="middle" font-size="11" fill="#3D4F65">MNR + 余弦回归</text>
-    <text x="470" y="262" text-anchor="middle" font-size="10" fill="#4B8BDA">对齐到连续刻度 y∈(0,1)</text>
+  <circle cx="300" cy="190" r="42" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="300" y="187" text-anchor="middle" font-family="Helvetica" font-size="14" font-weight="bold" fill="#1E3A5F">Student</text>
+  <text x="300" y="205" text-anchor="middle" font-family="Helvetica" font-size="10" fill="#3D4F65">Phi-4-mini+LoRA</text>
+
+  <!-- loss-on-completion strip below student -->
+  <text x="300" y="270" text-anchor="middle" font-family="Helvetica" font-size="11" fill="#3D4F65" font-style="italic">train only on completion</text>
+  <g transform="translate(220,280)">
+    <rect x="0" y="0" width="70" height="22" fill="#E5E7EB" rx="3"/>
+    <rect x="70" y="0" width="90" height="22" fill="#FFD6A5" rx="3"/>
+    <text x="35" y="15" text-anchor="middle" font-family="Helvetica" font-size="10" fill="#6B7280">prompt (ignore)</text>
+    <text x="115" y="15" text-anchor="middle" font-family="Helvetica" font-size="10" fill="#1E3A5F" font-weight="bold">answer (loss)</text>
   </g>
 
-  <!-- Bottom example -->
-  <g>
-    <text x="300" y="358" text-anchor="middle" font-size="11" font-weight="bold" fill="#1E3A5F">query: "sugar free chocolate"</text>
+  <!-- arrow student -> catalog -->
+  <path d="M 342 190 Q 410 200 430 250" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <text x="405" y="215" font-family="Helvetica" font-size="11" fill="#3D4F65">vLLM</text>
 
-    <rect x="110" y="370" width="180" height="32" rx="6" fill="#EAF7EE" stroke="#3DA56A" stroke-width="1.2"/>
-    <text x="200" y="390" text-anchor="middle" font-size="11" fill="#1E3A5F">Lily's  0.44 → 0.84 ↑</text>
-
-    <rect x="310" y="370" width="180" height="32" rx="6" fill="#FBEAEA" stroke="#C45C5C" stroke-width="1.2"/>
-    <text x="400" y="390" text-anchor="middle" font-size="11" fill="#1E3A5F">Hershey's  0.61 → 0.45 ↓</text>
-  </g>
+  <!-- Catalog -->
+  <rect x="430" y="255" width="140" height="110" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2" rx="4"/>
+  <text x="500" y="280" text-anchor="middle" font-family="Helvetica" font-size="13" font-weight="bold" fill="#1E3A5F">Catalog</text>
+  <line x1="445" y1="292" x2="555" y2="292" stroke="#4B8BDA" stroke-width="1"/>
+  <text x="500" y="315" text-anchor="middle" font-family="Helvetica" font-size="10" fill="#3D4F65">{brand, diet,</text>
+  <text x="500" y="330" text-anchor="middle" font-family="Helvetica" font-size="10" fill="#3D4F65">flavor, subtype}</text>
+  <text x="500" y="355" text-anchor="middle" font-family="Helvetica" font-size="10" fill="#E8A857" font-weight="bold">millions of SKUs</text>
 </svg>
