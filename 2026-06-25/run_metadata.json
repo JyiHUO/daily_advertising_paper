@@ -1,0 +1,18 @@
+{
+  "date": "2026-06-25",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 4,
+  "supplementary_count": 1,
+  "focus_titles": [
+    "Recommendation as Generation: Unifying Personalized Video Generation and Recommendation at Industrial Scale",
+    "Extreme Meta-Classification for Large-Scale Zero-Shot Retrieval"
+  ],
+  "focus_status": {
+    "Recommendation as Generation: Unifying Personalized Video Generation and Recommendation at Industrial Scale": "completed",
+    "Extreme Meta-Classification for Large-Scale Zero-Shot Retrieval": "completed"
+  }
+}

@@ -1,0 +1,54 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" font-family="-apple-system,Helvetica,Arial,sans-serif">
+  <text x="300" y="34" text-anchor="middle" font-size="17" font-weight="700" fill="#1E3A5F">一个主目标 + 自动及格线</text>
+  <text x="300" y="56" text-anchor="middle" font-size="12" fill="#3D4F65">SCRL：约束式跨域奖励</text>
+
+  <!-- Target -->
+  <g>
+    <circle cx="300" cy="140" r="52" fill="#FFF1E6" stroke="#E89A5B" stroke-width="2"/>
+    <text x="300" y="135" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">用户反馈</text>
+    <text x="300" y="156" text-anchor="middle" font-size="11" fill="#3D4F65">唯一主目标 ↑</text>
+  </g>
+
+  <text x="300" y="228" text-anchor="middle" font-size="10" fill="#3D4F65" font-style="italic">约束：达标即可，不必更高</text>
+
+  <!-- Bars -->
+  <g transform="translate(70,260)">
+    <rect x="0" y="0" width="140" height="90" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="70" y="24" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">兴趣对齐 (IM)</text>
+    <line x1="12" y1="54" x2="128" y2="54" stroke="#E89A5B" stroke-width="2" stroke-dasharray="4,3"/>
+    <text x="70" y="48" text-anchor="middle" font-size="9" fill="#E89A5B">及格线 k=0.8</text>
+    <text x="70" y="76" text-anchor="middle" font-size="10" fill="#3D4F65">中等约束</text>
+  </g>
+
+  <g transform="translate(230,260)">
+    <rect x="0" y="0" width="140" height="90" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="70" y="24" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">视频质量 (VGAs)</text>
+    <line x1="12" y1="54" x2="128" y2="54" stroke="#E89A5B" stroke-width="2" stroke-dasharray="4,3"/>
+    <text x="70" y="48" text-anchor="middle" font-size="9" fill="#E89A5B">及格线 k=1.1</text>
+    <text x="70" y="76" text-anchor="middle" font-size="10" fill="#3D4F65">最严约束</text>
+  </g>
+
+  <g transform="translate(390,260)">
+    <rect x="0" y="0" width="140" height="90" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="70" y="24" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">GRM 对齐</text>
+    <line x1="12" y1="54" x2="128" y2="54" stroke="#E89A5B" stroke-width="2" stroke-dasharray="4,3"/>
+    <text x="70" y="48" text-anchor="middle" font-size="9" fill="#E89A5B">及格线 k=0.3</text>
+    <text x="70" y="76" text-anchor="middle" font-size="10" fill="#3D4F65">最宽约束</text>
+  </g>
+
+  <!-- PID -->
+  <g transform="translate(300,392)">
+    <rect x="-150" y="-16" width="300" height="32" rx="16" fill="#F4EEFB" stroke="#8A6FBF" stroke-width="1.4"/>
+    <text x="0" y="5" text-anchor="middle" font-size="11" fill="#3D4F65">违约才扣分 · PID 自动调节拉格朗日乘子 λ</text>
+  </g>
+
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <path d="M 150 260 Q 210 215 262 180" fill="none" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M 300 260 L 300 195" fill="none" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#ar)"/>
+  <path d="M 450 260 Q 390 215 338 180" fill="none" stroke="#4B8BDA" stroke-width="1.6" marker-end="url(#ar)"/>
+</svg>

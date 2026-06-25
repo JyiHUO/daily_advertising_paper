@@ -4,19 +4,21 @@
 
 ## 最新日报
 
-- **日期**：2026-06-24
+- **日期**：2026-06-25
 - **分类**：cs.IR + cs.AI + cs.LG
 - **候选论文数**：4
 - **必读论文**：
-  - Scaling Dense Retrieval with LLM-Annotated Training Data: Structured Mining and Progressive Curriculum for E-Commerce Sponsored Search
-  - INSPIRE: Intent-aware Neural Sponsored Product Retrieval for E-commerce
-- **日报路径**：[2026-06-24/daily_report.md](2026-06-24/daily_report.md)
+  - Recommendation as Generation: Unifying Personalized Video Generation and Recommendation at Industrial Scale
+  - Extreme Meta-Classification for Large-Scale Zero-Shot Retrieval
+- **日报路径**：[2026-06-25/daily_report.md](2026-06-25/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
-| 2026-06-24 | cs.IR + cs.AI + cs.LG | 4 | 1 | Scaling Dense Retrieval with LLM-Annotated Training Data: Structured Mining and Progressive Curriculum for E-Commerce Sponsored Search | [2026-06-24/daily_report.md](2026-06-24/daily_report.md) |
+| 2026-06-25 | cs.IR + cs.AI + cs.LG | 4 | 1 | Recommendation as Generation: Unifying Personalized Video Generation and Recommendation at Industrial Scale | [2026-06-25/daily_report.md](2026-06-25/daily_report.md) |
+|  |  |  | 2 | Extreme Meta-Classification for Large-Scale Zero-Shot Retrieval |  |
+| 2026-06-24 | cs.IR + cs.AI + cs.LG | 5 | 1 | Scaling Dense Retrieval with LLM-Annotated Training Data: Structured Mining and Progressive Curriculum for E-Commerce Sponsored Search | [2026-06-24/daily_report.md](2026-06-24/daily_report.md) |
 |  |  |  | 2 | INSPIRE: Intent-aware Neural Sponsored Product Retrieval for E-commerce |  |
 | 2026-06-23 | cs.IR + cs.AI + cs.LG | 9 | 1 | The Pitfall of Scaling Up: Uncovering and Mitigating Popularity Bias Amplification in Scaling Transformer-based Recommenders | [2026-06-23/daily_report.md](2026-06-23/daily_report.md) |
 |  |  |  | 2 | A Rank-One Popularity Component in Dot-Product Recommender Scores:Population Theory and Prior-Separation Evidence |  |

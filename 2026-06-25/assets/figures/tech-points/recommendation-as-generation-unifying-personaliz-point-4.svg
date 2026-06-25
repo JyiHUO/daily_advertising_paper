@@ -1,0 +1,65 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <!-- Title -->
+  <text x="400" y="38" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">实时预测兴趣 · 近线生成视频</text>
+  <text x="400" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">用缓存命中弥合速度鸿沟</text>
+
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="ap" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8B6FB8"/>
+    </marker>
+  </defs>
+
+  <!-- Left: fast interest -->
+  <circle cx="115" cy="250" r="70" fill="#FEF3E2" stroke="#E8A857" stroke-width="2"/>
+  <text x="115" y="242" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">兴趣 SID</text>
+  <text x="115" y="264" text-anchor="middle" font-size="11" fill="#3D4F65">实时 · 毫秒级预测</text>
+
+  <!-- Middle: cache library -->
+  <rect x="265" y="155" width="240" height="195" rx="14" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2.5"/>
+  <text x="385" y="183" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">个性化视频库</text>
+  <text x="385" y="202" text-anchor="middle" font-size="11" fill="#3D4F65">按 SID 索引 · 持续扩充</text>
+
+  <!-- Three hit cases -->
+  <g>
+    <rect x="283" y="218" width="204" height="34" rx="6" fill="#D7F0DC" stroke="#4FA968"/>
+    <circle cx="298" cy="235" r="5" fill="#4FA968"/>
+    <text x="310" y="239" font-size="11" fill="#1E3A5F">完全命中 → 直接返回</text>
+  </g>
+  <g>
+    <rect x="283" y="258" width="204" height="34" rx="6" fill="#FFF4D6" stroke="#E8A857"/>
+    <circle cx="298" cy="275" r="5" fill="#E8A857"/>
+    <text x="310" y="279" font-size="11" fill="#1E3A5F">内容命中 → 异步补创意</text>
+  </g>
+  <g>
+    <rect x="283" y="298" width="204" height="34" rx="6" fill="#FCE4E4" stroke="#D97070"/>
+    <circle cx="298" cy="315" r="5" fill="#D97070"/>
+    <text x="310" y="319" font-size="11" fill="#1E3A5F">未命中 → 最近邻应急</text>
+  </g>
+
+  <!-- Right: slow video generation -->
+  <rect x="595" y="185" width="150" height="130" rx="12" fill="#E8E0F4" stroke="#8B6FB8" stroke-width="2"/>
+  <text x="670" y="218" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">视频生成</text>
+  <text x="670" y="240" text-anchor="middle" font-size="11" fill="#3D4F65">近线 · 慢</text>
+  <text x="670" y="260" text-anchor="middle" font-size="11" fill="#3D4F65">按 SID 离线产出</text>
+  <text x="670" y="290" text-anchor="middle" font-size="10" fill="#8B6FB8">高优队列补缺口</text>
+
+  <!-- Interest queries library -->
+  <path d="M185 250 L263 250" stroke="#4B8BDA" stroke-width="2.5" fill="none" marker-end="url(#ar)"/>
+  <text x="224" y="242" text-anchor="middle" font-size="10" fill="#4B8BDA">查询 SID</text>
+
+  <!-- Library -> Generation: missing SID enqueued -->
+  <path d="M507 305 Q 555 315 593 280" stroke="#8B6FB8" stroke-width="2" fill="none" stroke-dasharray="5,4" marker-end="url(#ap)"/>
+  <text x="550" y="325" text-anchor="middle" font-size="10" fill="#8B6FB8">缺口入队</text>
+
+  <!-- Generation -> Library: backfill -->
+  <path d="M593 215 Q 555 195 507 210" stroke="#8B6FB8" stroke-width="2" fill="none" marker-end="url(#ap)"/>
+  <text x="550" y="190" text-anchor="middle" font-size="10" fill="#8B6FB8">回填缓存</text>
+
+  <!-- Bottom note -->
+  <line x1="280" y1="420" x2="520" y2="420" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="400" y="442" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">共享语义 ID 空间</text>
+  <text x="400" y="462" text-anchor="middle" font-size="11" fill="#3D4F65">让"推什么"与"生成什么"在同一语言上对齐</text>
+</svg>

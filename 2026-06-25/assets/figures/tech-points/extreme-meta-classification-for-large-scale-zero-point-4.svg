@@ -1,0 +1,37 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="36" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#1E3A5F">新广告冷启动 · 借用老分类器</text>
+
+  <!-- New ad (left) -->
+  <circle cx="80" cy="220" r="46" fill="#FFF3E6" stroke="#E89B5A" stroke-width="2"/>
+  <text x="80" y="218" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1E3A5F" font-weight="bold">新广告</text>
+  <text x="80" y="236" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">无点击数据</text>
+
+  <!-- Old classifiers cluster (middle) -->
+  <g>
+    <circle cx="290" cy="160" r="26" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <circle cx="340" cy="220" r="26" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <circle cx="270" cy="285" r="26" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="300" y="345" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#3D4F65">老广告分类器</text>
+  </g>
+
+  <!-- Arrow new -> old -->
+  <line x1="128" y1="218" x2="238" y2="218" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="183" y="208" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#1E3A5F">&lt;1ms 合成</text>
+
+  <!-- Synthesized classifier (right) -->
+  <rect x="440" y="180" width="130" height="80" rx="10" fill="#E6F0E6" stroke="#5BA361" stroke-width="2"/>
+  <text x="505" y="212" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1E3A5F">即得分类器</text>
+  <text x="505" y="232" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">高质量召回</text>
+
+  <!-- Arrow cluster -> synth -->
+  <line x1="370" y1="220" x2="436" y2="220" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+
+  <!-- Online gains -->
+  <text x="300" y="395" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#1E3A5F" font-weight="bold">CTR +4.2%   ·   好关键词 +13%   ·   时延 +0.4ms</text>
+</svg>

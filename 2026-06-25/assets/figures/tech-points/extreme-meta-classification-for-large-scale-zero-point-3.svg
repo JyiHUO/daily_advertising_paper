@@ -1,0 +1,37 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="32" text-anchor="middle" font-family="Helvetica,Arial" font-size="17" font-weight="bold" fill="#1E3A5F">Zero-shot 泛化的天平</text>
+
+  <!-- Fulcrum -->
+  <polygon points="300,300 285,330 315,330" fill="#1E3A5F"/>
+  <line x1="200" y1="330" x2="400" y2="330" stroke="#1E3A5F" stroke-width="2"/>
+
+  <!-- Balance beam, tilted: left heavy (bad), right light (good) -->
+  <line x1="110" y1="230" x2="490" y2="170" stroke="#1E3A5F" stroke-width="3"/>
+  <line x1="300" y1="300" x2="300" y2="200" stroke="#1E3A5F" stroke-width="2"/>
+
+  <!-- Left pan: heavy / overfitting -->
+  <line x1="110" y1="230" x2="90" y2="250" stroke="#1E3A5F" stroke-width="1.5"/>
+  <line x1="110" y1="230" x2="130" y2="250" stroke="#1E3A5F" stroke-width="1.5"/>
+  <rect x="50" y="250" width="140" height="70" rx="8" fill="#FCE4D6" stroke="#C97B5A" stroke-width="1.5"/>
+  <text x="120" y="275" text-anchor="middle" font-family="Helvetica,Arial" font-size="13" font-weight="bold" fill="#1E3A5F">大 K · 解冻 W</text>
+  <text x="120" y="298" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65">√L 复杂度 → 过拟合</text>
+
+  <!-- Right pan: light / generalize -->
+  <line x1="490" y1="170" x2="470" y2="190" stroke="#1E3A5F" stroke-width="1.5"/>
+  <line x1="490" y1="170" x2="510" y2="190" stroke="#1E3A5F" stroke-width="1.5"/>
+  <rect x="410" y="190" width="160" height="70" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+  <text x="490" y="215" text-anchor="middle" font-family="Helvetica,Arial" font-size="13" font-weight="bold" fill="#1E3A5F">适中 K · 冻结 W</text>
+  <text x="490" y="238" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65">√log(K+1) · 新 item 更稳</text>
+
+  <!-- Arrow indicating preferred direction -->
+  <path d="M 200 115 Q 300 95 410 135" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <text x="305" y="100" text-anchor="middle" font-family="Helvetica,Arial" font-size="12" fill="#4B8BDA" font-style="italic">泛化误差更小</text>
+
+  <text x="300" y="375" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65">Rademacher 上界指导设计：宁简勿繁</text>
+</svg>

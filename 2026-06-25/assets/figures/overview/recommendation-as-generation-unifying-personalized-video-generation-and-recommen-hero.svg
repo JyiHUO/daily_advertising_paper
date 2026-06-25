@@ -1,0 +1,116 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="-apple-system,'PingFang SC','Microsoft YaHei',sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E89855"/>
+    </marker>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFF7E8"/>
+      <stop offset="100%" stop-color="#FCE3B8"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="900" height="620" fill="#FAFBFD"/>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">推荐即生成 · RaG</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#3D4F65">从"在视频池里挑" → "按兴趣实时生成个性化广告视频"</text>
+
+  <!-- LEFT: traditional -->
+  <g>
+    <text x="135" y="115" text-anchor="middle" font-size="13" font-weight="600" fill="#7A8699">传统 GRM</text>
+    <rect x="55" y="135" width="160" height="120" rx="10" fill="#EEF1F6" stroke="#C9D2DF"/>
+    <text x="135" y="158" text-anchor="middle" font-size="11" fill="#5A6878">固定视频池</text>
+    <g fill="#B8C2D1">
+      <rect x="72" y="170" width="32" height="22" rx="3"/>
+      <rect x="112" y="170" width="32" height="22" rx="3"/>
+      <rect x="152" y="170" width="32" height="22" rx="3"/>
+      <rect x="72" y="198" width="32" height="22" rx="3"/>
+      <rect x="112" y="198" width="32" height="22" rx="3"/>
+      <rect x="152" y="198" width="32" height="22" rx="3"/>
+    </g>
+    <text x="135" y="245" text-anchor="middle" font-size="11" fill="#9AA5B7">长尾兴趣匹配不上</text>
+  </g>
+
+  <!-- Arrow left -> center -->
+  <path d="M 220 195 Q 260 230 340 270" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+  <text x="240" y="218" font-size="11" fill="#4B8BDA" font-style="italic">范式跃迁</text>
+
+  <!-- CENTER: Semantic ID core -->
+  <g>
+    <circle cx="450" cy="305" r="100" fill="url(#core)" stroke="#E89855" stroke-width="2"/>
+    <text x="450" y="285" text-anchor="middle" font-size="14" font-weight="700" fill="#1E3A5F">解耦语义 ID</text>
+    <text x="450" y="303" text-anchor="middle" font-size="11" fill="#5A6878">D-SIDs 共享接口</text>
+
+    <line x1="450" y1="320" x2="450" y2="370" stroke="#E89855" stroke-width="1" stroke-dasharray="3,3"/>
+    <text x="415" y="338" text-anchor="middle" font-size="11" font-weight="600" fill="#C45A2E">内容</text>
+    <text x="415" y="354" text-anchor="middle" font-size="10" fill="#7A8699">讲什么</text>
+    <text x="485" y="338" text-anchor="middle" font-size="11" font-weight="600" fill="#C45A2E">创意</text>
+    <text x="485" y="354" text-anchor="middle" font-size="10" fill="#7A8699">怎么讲</text>
+    <text x="450" y="388" text-anchor="middle" font-size="10" fill="#9C7344">正交解耦</text>
+  </g>
+
+  <!-- GRM input box -->
+  <g>
+    <rect x="290" y="160" width="130" height="46" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="355" y="180" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">GRM 预测</text>
+    <text x="355" y="197" text-anchor="middle" font-size="10" fill="#3D4F65">兴趣 → SID 串</text>
+  </g>
+  <path d="M 380 208 Q 395 235 415 240" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Center -> VGA -->
+  <path d="M 485 240 Q 510 215 535 208" stroke="#E89855" stroke-width="2" fill="none" marker-end="url(#arrOrange)"/>
+
+  <!-- VGA box -->
+  <g>
+    <rect x="540" y="160" width="160" height="46" rx="8" fill="#FFF4E6" stroke="#E89855"/>
+    <text x="620" y="180" text-anchor="middle" font-size="12" font-weight="600" fill="#1E3A5F">VGAs 多智能体</text>
+    <text x="620" y="197" text-anchor="middle" font-size="10" fill="#3D4F65">分镜 · 配音 · 特效</text>
+  </g>
+
+  <!-- VGA -> generated video -->
+  <path d="M 660 210 Q 720 240 740 280" stroke="#E89855" stroke-width="2" fill="none" marker-end="url(#arrOrange)"/>
+
+  <g>
+    <rect x="680" y="285" width="160" height="100" rx="10" fill="#FFF4E6" stroke="#E89855" stroke-width="1.5"/>
+    <text x="760" y="308" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">按需生成的</text>
+    <text x="760" y="326" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">个性化广告视频</text>
+    <circle cx="760" cy="358" r="14" fill="#E89855"/>
+    <path d="M 755 351 L 755 365 L 767 358 z" fill="#FFF"/>
+  </g>
+
+  <!-- SCRL reward bar -->
+  <g>
+    <rect x="290" y="430" width="320" height="50" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="450" y="452" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">SCRL · 约束式跨域奖励</text>
+    <text x="450" y="470" text-anchor="middle" font-size="10" fill="#3D4F65">用户反馈为主目标 ｜ 兴趣对齐 &amp; 视频质量为约束</text>
+  </g>
+
+  <!-- closed loop: reward -> GRM -->
+  <path d="M 355 430 L 355 210" stroke="#4B8BDA" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+  <text x="362" y="420" font-size="10" fill="#4B8BDA">反馈调 GRM</text>
+
+  <!-- closed loop: reward -> generated video -->
+  <path d="M 610 455 Q 700 455 740 390" stroke="#4B8BDA" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+  <text x="660" y="448" font-size="10" fill="#4B8BDA">反馈调生成</text>
+
+  <!-- Result bar -->
+  <g>
+    <rect x="55" y="525" width="790" height="68" rx="10" fill="#1E3A5F"/>
+    <text x="90" y="555" font-size="13" font-weight="700" fill="#FFD89C">快手广告 · 4亿 DAU 线上 A/B</text>
+    <text x="90" y="577" font-size="11" fill="#C9D2DF">在强基线 GRM 之上，闭环生成式系统进一步驱动收益</text>
+    <text x="720" y="552" text-anchor="middle" font-size="11" fill="#C9D2DF">广告收入</text>
+    <text x="720" y="582" text-anchor="middle" font-size="26" font-weight="800" fill="#FFD89C">+1.87%</text>
+  </g>
+
+  <!-- near-line cache side tag -->
+  <g>
+    <rect x="55" y="310" width="160" height="58" rx="8" fill="#FFFFFF" stroke="#C9D2DF" stroke-dasharray="3,2"/>
+    <text x="135" y="330" text-anchor="middle" font-size="11" font-weight="600" fill="#1E3A5F">近线生成 + SID 缓存</text>
+    <text x="135" y="347" text-anchor="middle" font-size="10" fill="#5A6878">命中即返 · 缺口补生成</text>
+    <text x="135" y="361" text-anchor="middle" font-size="10" fill="#5A6878">应对生成延迟</text>
+  </g>
+  <path d="M 215 335 L 348 320" stroke="#B8C2D1" stroke-width="1.2" fill="none" stroke-dasharray="3,3"/>
+</svg>

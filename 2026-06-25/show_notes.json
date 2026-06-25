@@ -1,0 +1,9 @@
+{
+  "title": "AI计算广告论文播报 2026-06-25：当推荐变成现做视频",
+  "shownotes_html": "<p>今天这期我们聊一个有点科幻的话题：工业级推荐和广告系统，正在从\"挑货架上的东西\"变成\"按你的样子现做\"。快手已经在4亿日活的盘子上把它跑通了，广告收入还涨了。</p><p><strong>本期重点：</strong></p><ul><li><strong>推荐即生成（Recommendation as Generation）</strong>：快手RaG把短视频生成和推荐合成一个闭环，用解耦的\"内容SID+创意SID\"当接口，多Agent接力做视频，广告A/B收入+1.87%，是生成式推荐第一次明确撬动广告收入。</li><li><strong>极端元分类零样本召回（Extreme Meta-Classification）</strong>：微软给新广告\"秒级造分类器\"，用ANN挑邻居+轻量Transformer把老广告的分类器揉成新广告的分类器，搜索广告线上CTR+4.2%，新关键词1ms内可被召回。</li><li><strong>用户Token化建模（TokenMinds）</strong>：YouTube用LLM生成离散用户token替代固定维度embedding，缓解长尾兴趣表达瓶颈，已全量上线排序。</li><li><strong>自动相关性标注（AutoRelAnnotator）</strong>：带置信度校准的模型级联，在赞助搜索生产环境产出1.5亿+标注，把人工评测换成成本可控的自动管线。</li></ul><p><strong>今日趋势：</strong></p><ul><li>大模型范式正在同时渗透推荐链路的<strong>内容生成层、用户表征层、物品召回层</strong>，而不只是替换最后一道排序。</li><li>\"重生成、深度个性化\"和\"按需计算、节流优先\"正在形成张力——生成式推荐一旦落地，下一个绕不开的问题就是推理成本与复杂度路由。</li></ul><p>如果你在做广告召回或创意，今天这两篇里有挺多可直接借鉴的动作，欢迎在评论区聊聊你会怎么落地。本期内容由 AI 自动生成，如有疏漏欢迎指正。</p>",
+  "report_date": "2026-06-25",
+  "provider": "litellm-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-06-25T21:46:32Z"
+}

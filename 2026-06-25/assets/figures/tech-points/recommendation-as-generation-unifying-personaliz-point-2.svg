@@ -1,0 +1,62 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrGray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#A0A8B5"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="36" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="20" font-weight="bold" fill="#1E3A5F">一脑三角色 · 同一底座扮演剧组</text>
+
+  <!-- Shared brain -->
+  <ellipse cx="400" cy="430" rx="220" ry="42" fill="#FFF4E0" stroke="#E0A352" stroke-width="2"/>
+  <text x="400" y="425" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="15" fill="#1E3A5F" font-weight="bold">Qwen2.5-32B 共享底座</text>
+  <text x="400" y="448" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65">role prompt 切换 · KV cache 复用</text>
+
+  <!-- Visual Agent -->
+  <g>
+    <rect x="80" y="140" width="180" height="170" rx="12" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="170" y="178" text-anchor="middle" font-size="30">🎬</text>
+    <text x="170" y="212" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">Visual Agent · 导演</text>
+    <text x="170" y="234" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65">分镜与时长</text>
+    <text x="170" y="278" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">拆快递→特写→暖光→定格</text>
+  </g>
+
+  <!-- Audio Agent -->
+  <g>
+    <rect x="310" y="140" width="180" height="170" rx="12" fill="#EAF4EC" stroke="#5BA876" stroke-width="2"/>
+    <text x="400" y="178" text-anchor="middle" font-size="30">🎙</text>
+    <text x="400" y="212" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">Audio Agent · 配音师</text>
+    <text x="400" y="234" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65">TTS 与 BGM</text>
+    <text x="400" y="278" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">女声温柔 + 轻快流行</text>
+  </g>
+
+  <!-- Effect Agent -->
+  <g>
+    <rect x="540" y="140" width="180" height="170" rx="12" fill="#FBEFEF" stroke="#D77878" stroke-width="2"/>
+    <text x="630" y="178" text-anchor="middle" font-size="30">✨</text>
+    <text x="630" y="212" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">Effect Agent · 后期</text>
+    <text x="630" y="234" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65">字幕与 CTA</text>
+    <text x="630" y="278" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">贴纸 + 音效 + 下单按钮</text>
+  </g>
+
+  <!-- Append-only arrows -->
+  <line x1="260" y1="225" x2="307" y2="225" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arr)"/>
+  <line x1="490" y1="225" x2="537" y2="225" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="283" y="217" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#4B8BDA">append</text>
+  <text x="513" y="217" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#4B8BDA">append</text>
+
+  <!-- shared base dashed lines -->
+  <line x1="170" y1="392" x2="170" y2="312" stroke="#E0A352" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="400" y1="392" x2="400" y2="312" stroke="#E0A352" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="630" y1="392" x2="630" y2="312" stroke="#E0A352" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- reflection loop -->
+  <path d="M 620 130 Q 400 70 182 128" fill="none" stroke="#A0A8B5" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrGray)"/>
+  <text x="400" y="78" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65" font-style="italic">最多 2 轮反思 · Observe–Think–Act</text>
+
+  <!-- Unified generator G -->
+  <text x="690" y="395" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">→ 统一生成算子 G 合成视频</text>
+</svg>
