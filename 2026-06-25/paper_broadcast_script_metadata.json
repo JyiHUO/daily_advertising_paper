@@ -1,9 +1,9 @@
 {
   "report_date": "2026-06-25",
-  "provider": "litellm-opus",
+  "provider": "bedrock-opus-47",
   "target_minutes": 12,
   "max_tokens": 6500,
-  "char_count": 2403,
+  "char_count": 2698,
   "focus_titles": [
     "Recommendation as Generation: Unifying Personalized Video Generation and Recommendation at Industrial Scale",
     "Extreme Meta-Classification for Large-Scale Zero-Shot Retrieval"

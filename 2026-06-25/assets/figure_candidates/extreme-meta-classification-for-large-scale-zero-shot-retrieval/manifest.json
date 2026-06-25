@@ -1,0 +1,115 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-25/downloaded_pdfs/extreme-meta-classification-for-large-scale-zero-shot-retrieval.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-25/assets/figure_candidates/extreme-meta-classification-for-large-scale-zero-shot-retrieval",
+  "candidates": [
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.6605576100166732,
+      "score": -11.09083328,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-25/assets/figure_candidates/extreme-meta-classification-for-large-scale-zero-shot-retrieval/01-p1-layout_region_left_top.png",
+      "filename": "01-p1-layout_region_left_top.png"
+    },
+    {
+      "id": "page-1-region-upper-left",
+      "page_index": 1,
+      "caption": "第 2 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.8695490692439491,
+      "score": -11.09083328,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-25/assets/figure_candidates/extreme-meta-classification-for-large-scale-zero-shot-retrieval/02-p2-layout_region_left_top.png",
+      "filename": "02-p2-layout_region_left_top.png"
+    },
+    {
+      "id": "page-0-region-upper-right",
+      "page_index": 0,
+      "caption": "第 1 页右上区域主图候选",
+      "clip": [
+        318.24,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 82992.7296,
+      "kind": "layout_region_right_top",
+      "page_area": 484704.0,
+      "text_density": 0.4858136708792951,
+      "score": -17.07785856,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-25/assets/figure_candidates/extreme-meta-classification-for-large-scale-zero-shot-retrieval/03-p1-layout_region_right_top.png",
+      "filename": "03-p1-layout_region_right_top.png"
+    },
+    {
+      "id": "page-1-region-upper-right",
+      "page_index": 1,
+      "caption": "第 2 页右上区域主图候选",
+      "clip": [
+        318.24,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 82992.7296,
+      "kind": "layout_region_right_top",
+      "page_area": 484704.0,
+      "text_density": 0.4758802945402089,
+      "score": -17.07785856,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-25/assets/figure_candidates/extreme-meta-classification-for-large-scale-zero-shot-retrieval/04-p2-layout_region_right_top.png",
+      "filename": "04-p2-layout_region_right_top.png"
+    },
+    {
+      "id": "page-0-region-upper-full",
+      "page_index": 0,
+      "caption": "第 1 页上半页主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 173352.96000000002,
+      "kind": "layout_region_upper_page",
+      "page_area": 484704.0,
+      "text_density": 0.567364081014969,
+      "score": -22.705882352941174,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-25/assets/figure_candidates/extreme-meta-classification-for-large-scale-zero-shot-retrieval/05-p1-layout_region_upper_page.png",
+      "filename": "05-p1-layout_region_upper_page.png"
+    },
+    {
+      "id": "page-1-region-upper-full",
+      "page_index": 1,
+      "caption": "第 2 页上半页主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        594.0,
+        443.52000000000004
+      ],
+      "clip_area": 173352.96000000002,
+      "kind": "layout_region_upper_page",
+      "page_area": 484704.0,
+      "text_density": 0.6485633672230461,
+      "score": -22.705882352941174,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-25/assets/figure_candidates/extreme-meta-classification-for-large-scale-zero-shot-retrieval/06-p2-layout_region_upper_page.png",
+      "filename": "06-p2-layout_region_upper_page.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-25/assets/figure_candidates/extreme-meta-classification-for-large-scale-zero-shot-retrieval/contact-sheet.svg"
+}
