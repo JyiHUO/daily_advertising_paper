@@ -1,9 +1,9 @@
 {
   "report_date": "2026-06-26",
-  "provider": "litellm-opus",
+  "provider": "bedrock-opus-47",
   "target_minutes": 12,
   "max_tokens": 6500,
-  "char_count": 2974,
+  "char_count": 2815,
   "focus_titles": [
     "Attributed, But Not Incremental: Cannibalization-Corrected Attribution for Large-Scale Advertising",
     "NOVA: A Verification-Aware Agent Harness for Architecture Evolution in Industrial Recommender Systems"

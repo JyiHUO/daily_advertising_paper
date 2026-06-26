@@ -1,61 +1,80 @@
 <svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
   <defs>
-    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
       <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrowOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E89F4C"/>
     </marker>
   </defs>
 
-  <text x="400" y="36" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="20" font-weight="bold" fill="#1E3A5F">ETDC：把稀疏实验点扩成连续校准曲线</text>
+  <text x="400" y="40" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#1E3A5F">ETDC：用稀疏实验校准每一天</text>
+  <text x="400" y="62" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#3D4F65">Sparse experiments to daily lift via proxy signals</text>
 
-  <!-- Sparse experiment dots -->
+  <!-- Left: sparse experiment anchors -->
   <g>
-    <text x="400" y="70" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#3D4F65">稀疏实验 lift（真值）</text>
-    <line x1="60" y1="170" x2="740" y2="170" stroke="#C9D4E2" stroke-width="1.5"/>
-    <text x="55" y="174" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#7A8AA0">时间</text>
+    <rect x="60" y="110" width="180" height="180" rx="10" fill="#FFF4E6" stroke="#E89F4C" stroke-width="1.5"/>
+    <text x="150" y="135" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#1E3A5F">稀疏实验锚点</text>
+    <text x="150" y="152" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">Causal lift, few days</text>
 
-    <circle cx="140" cy="140" r="6" fill="#E07A5F"/>
-    <circle cx="300" cy="120" r="6" fill="#E07A5F"/>
-    <circle cx="480" cy="145" r="6" fill="#E07A5F"/>
-    <circle cx="640" cy="125" r="6" fill="#E07A5F"/>
-
-    <text x="740" y="120" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#E07A5F" font-style="italic">稀疏 · 延迟 · 贵</text>
-  </g>
-
-  <!-- Arrows: dots -> model (straight) -->
-  <line x1="140" y1="146" x2="300" y2="232" stroke="#4B8BDA" stroke-width="1.6" stroke-dasharray="4,3" marker-end="url(#ar)"/>
-  <line x1="300" y1="126" x2="370" y2="232" stroke="#4B8BDA" stroke-width="1.6" stroke-dasharray="4,3" marker-end="url(#ar)"/>
-  <line x1="480" y1="151" x2="430" y2="232" stroke="#4B8BDA" stroke-width="1.6" stroke-dasharray="4,3" marker-end="url(#ar)"/>
-  <line x1="640" y1="131" x2="500" y2="232" stroke="#4B8BDA" stroke-width="1.6" stroke-dasharray="4,3" marker-end="url(#ar)"/>
-
-  <!-- Model in middle -->
-  <g>
-    <rect x="250" y="240" width="300" height="70" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
-    <text x="400" y="268" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">GLM + Huber loss</text>
-    <text x="400" y="292" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65">特征：代理变量 · 时间结构 · 渠道状态</text>
-  </g>
-
-  <!-- Arrow model -> curve -->
-  <line x1="400" y1="310" x2="400" y2="395" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
-
-  <!-- Output: continuous curve every day -->
-  <g>
-    <line x1="60" y1="450" x2="740" y2="450" stroke="#C9D4E2" stroke-width="1.5"/>
-    <path d="M60,425 Q140,400 220,415 T380,413 T540,400 T720,410"
-          stroke="#4B8BDA" stroke-width="2.5" fill="none"/>
-    <g fill="#4B8BDA">
-      <circle cx="100" cy="420" r="2.5"/>
-      <circle cx="160" cy="407" r="2.5"/>
-      <circle cx="220" cy="415" r="2.5"/>
-      <circle cx="280" cy="416" r="2.5"/>
-      <circle cx="340" cy="414" r="2.5"/>
-      <circle cx="400" cy="411" r="2.5"/>
-      <circle cx="460" cy="407" r="2.5"/>
-      <circle cx="520" cy="402" r="2.5"/>
-      <circle cx="580" cy="403" r="2.5"/>
-      <circle cx="640" cy="407" r="2.5"/>
-      <circle cx="700" cy="410" r="2.5"/>
+    <g fill="#D9DEE5">
+      <circle cx="90" cy="180" r="6"/><circle cx="115" cy="180" r="6"/><circle cx="140" cy="180" r="6"/><circle cx="165" cy="180" r="6"/><circle cx="190" cy="180" r="6"/><circle cx="215" cy="180" r="6"/>
+      <circle cx="90" cy="210" r="6"/><circle cx="115" cy="210" r="6"/><circle cx="140" cy="210" r="6"/><circle cx="165" cy="210" r="6"/><circle cx="190" cy="210" r="6"/><circle cx="215" cy="210" r="6"/>
+      <circle cx="90" cy="240" r="6"/><circle cx="115" cy="240" r="6"/><circle cx="140" cy="240" r="6"/><circle cx="165" cy="240" r="6"/><circle cx="190" cy="240" r="6"/><circle cx="215" cy="240" r="6"/>
+      <circle cx="90" cy="270" r="6"/><circle cx="115" cy="270" r="6"/><circle cx="140" cy="270" r="6"/><circle cx="165" cy="270" r="6"/><circle cx="190" cy="270" r="6"/><circle cx="215" cy="270" r="6"/>
     </g>
-    <text x="400" y="482" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#3D4F65">每日预测 lift → 校准归因（C-t、A-t）</text>
-    <text x="740" y="395" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#4B8BDA" font-style="italic">天级 · 连续 · 平滑</text>
+    <g fill="#E89F4C">
+      <circle cx="115" cy="180" r="8"/>
+      <circle cx="190" cy="210" r="8"/>
+      <circle cx="140" cy="270" r="8"/>
+    </g>
   </g>
+
+  <!-- Middle: GLM bridge -->
+  <g>
+    <rect x="310" y="160" width="180" height="120" rx="60" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="400" y="198" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#1E3A5F">GLM 映射</text>
+    <text x="400" y="222" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#3D4F65">f(代理·时间·渠道)</text>
+    <text x="400" y="242" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">Huber loss</text>
+
+    <text x="400" y="118" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">代理变量 · 日历 · 渠道状态</text>
+    <line x1="400" y1="126" x2="400" y2="158" stroke="#4B8BDA" stroke-width="1.5" marker-end="url(#arrow)"/>
+  </g>
+
+  <!-- Right: every-day lift curve -->
+  <g>
+    <rect x="560" y="110" width="200" height="180" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="660" y="135" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#1E3A5F">日级 Lift</text>
+    <text x="660" y="152" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">Every channel, every day</text>
+
+    <path d="M 580 250 Q 605 200 625 230 T 670 215 T 715 200 T 745 240"
+          fill="none" stroke="#4B8BDA" stroke-width="2.5"/>
+    <g fill="#4B8BDA">
+      <circle cx="585" cy="245" r="3"/>
+      <circle cx="610" cy="218" r="3"/>
+      <circle cx="635" cy="225" r="3"/>
+      <circle cx="660" cy="218" r="3"/>
+      <circle cx="685" cy="208" r="3"/>
+      <circle cx="710" cy="205" r="3"/>
+      <circle cx="735" cy="232" r="3"/>
+    </g>
+    <line x1="580" y1="270" x2="740" y2="270" stroke="#3D4F65" stroke-width="1"/>
+    <text x="660" y="285" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#3D4F65">days</text>
+  </g>
+
+  <!-- Arrows -->
+  <line x1="240" y1="220" x2="306" y2="220" stroke="#E89F4C" stroke-width="2.5" marker-end="url(#arrowOrange)"/>
+  <text x="273" y="210" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">训练</text>
+
+  <line x1="492" y1="220" x2="556" y2="220" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <text x="524" y="210" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">外推</text>
+
+  <!-- Bottom takeaway -->
+  <g>
+    <rect x="160" y="400" width="480" height="60" rx="8" fill="#FFF4E6" stroke="#E89F4C" stroke-width="1.5"/>
+    <text x="400" y="425" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1E3A5F">学的是"因果尺度"，不是广告效果绝对值</text>
+    <text x="400" y="445" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#3D4F65">把几次实验的 lift 比例，迁移到所有未做实验的日子</text>
+  </g>
+
+  <line x1="400" y1="282" x2="400" y2="398" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
 </svg>

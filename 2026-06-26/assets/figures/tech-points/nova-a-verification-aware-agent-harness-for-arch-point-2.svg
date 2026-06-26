@@ -1,48 +1,46 @@
-<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" font-family="-apple-system,Helvetica,Arial,sans-serif">
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
   <defs>
-    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
       <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
     </marker>
-    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
-      <path d="M0,0 L10,5 L0,10 z" fill="#C9543E"/>
+    <marker id="arrRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C9633F"/>
     </marker>
   </defs>
 
-  <text x="300" y="34" text-anchor="middle" font-size="17" font-weight="600" fill="#1E3A5F">训练之前的语义体检：能跑 ≠ 语义正确</text>
+  <text x="400" y="40" text-anchor="middle" font-family="Helvetica,Arial" font-size="20" font-weight="bold" fill="#1E3A5F">Silent Failure: 跑得通 ≠ 语义对</text>
 
-  <!-- candidate -->
-  <circle cx="75" cy="225" r="44" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
-  <text x="75" y="222" text-anchor="middle" font-size="12" fill="#1E3A5F">候选架构</text>
-  <text x="75" y="240" text-anchor="middle" font-size="11" fill="#3D4F65">code OK</text>
+  <!-- Candidate -->
+  <circle cx="100" cy="240" r="46" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="100" y="236" text-anchor="middle" font-family="Helvetica,Arial" font-size="13" fill="#1E3A5F">候选架构</text>
+  <text x="100" y="254" text-anchor="middle" font-family="Helvetica,Arial" font-size="13" fill="#1E3A5F">改动</text>
 
-  <!-- sieve / gate -->
-  <path d="M205,150 L395,150 L345,235 L345,305 L255,305 L255,235 Z" fill="#FFF4E6" stroke="#D89A4E" stroke-width="2"/>
-  <text x="300" y="178" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">语义门</text>
-  <text x="300" y="202" text-anchor="middle" font-size="10" fill="#3D4F65">mask 方向 / 特征→token 路由 / logit 融合</text>
-  <text x="300" y="222" text-anchor="middle" font-size="10" fill="#3D4F65">shape · dtype · aux loss 索引</text>
+  <!-- Semantic Gate -->
+  <rect x="260" y="170" width="200" height="140" rx="10" fill="#FFF3E6" stroke="#C9633F" stroke-width="2.5"/>
+  <text x="360" y="198" text-anchor="middle" font-family="Helvetica,Arial" font-size="15" font-weight="bold" fill="#1E3A5F">语义门 (懂推荐的审稿人)</text>
+  <text x="360" y="228" text-anchor="middle" font-family="Helvetica,Arial" font-size="12" fill="#3D4F65">检查 mask 方向</text>
+  <text x="360" y="252" text-anchor="middle" font-family="Helvetica,Arial" font-size="12" fill="#3D4F65">检查 attention 交互</text>
+  <text x="360" y="276" text-anchor="middle" font-family="Helvetica,Arial" font-size="12" fill="#3D4F65">检查 logit 融合路径</text>
 
-  <!-- arrow in -->
-  <line x1="120" y1="225" x2="250" y2="225" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="146" y1="240" x2="256" y2="240" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
 
-  <!-- pass down -->
-  <line x1="300" y1="305" x2="300" y2="343" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
-  <text x="312" y="328" font-size="11" fill="#3D4F65">通过</text>
-  <rect x="225" y="348" width="150" height="44" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
-  <text x="300" y="368" text-anchor="middle" font-size="12" fill="#1E3A5F">昂贵训练 → 离线 AUC</text>
-  <text x="300" y="384" text-anchor="middle" font-size="11" fill="#3D4F65">在线 A/B：GMV · Bias</text>
+  <!-- Pass -->
+  <rect x="560" y="150" width="180" height="64" rx="8" fill="#E8F1E8" stroke="#5A8A5A" stroke-width="2"/>
+  <text x="650" y="176" text-anchor="middle" font-family="Helvetica,Arial" font-size="13" font-weight="bold" fill="#1E3A5F">✓ 通过 → 训练</text>
+  <text x="650" y="197" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65">离线 AUC / 在线 A/B</text>
 
-  <!-- reject right -->
-  <line x1="345" y1="225" x2="465" y2="225" stroke="#C9543E" stroke-width="2" marker-end="url(#arRed)"/>
-  <text x="405" y="216" text-anchor="middle" font-size="11" fill="#C9543E">silent fail</text>
+  <line x1="464" y1="210" x2="556" y2="190" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
 
-  <!-- blacklist memory -->
-  <rect x="468" y="180" width="118" height="92" rx="6" fill="#FCE9E4" stroke="#C9543E" stroke-width="1.8"/>
-  <text x="527" y="206" text-anchor="middle" font-size="12" font-weight="600" fill="#7A2E1E">禁忌方向</text>
-  <text x="527" y="226" text-anchor="middle" font-size="10" fill="#7A2E1E">写回轨迹记忆 H</text>
-  <text x="527" y="246" text-anchor="middle" font-size="10" fill="#7A2E1E">屏蔽同类 pattern</text>
-  <text x="527" y="264" text-anchor="middle" font-size="10" fill="#7A2E1E">架构梯度规避</text>
+  <!-- Reject -->
+  <rect x="560" y="266" width="180" height="64" rx="8" fill="#FBE8E0" stroke="#C9633F" stroke-width="2"/>
+  <text x="650" y="292" text-anchor="middle" font-family="Helvetica,Arial" font-size="13" font-weight="bold" fill="#1E3A5F">✗ 拒绝 + 记忆</text>
+  <text x="650" y="313" text-anchor="middle" font-family="Helvetica,Arial" font-size="11" fill="#3D4F65">forbidden pattern</text>
 
-  <!-- feedback loop -->
-  <path d="M468,200 Q360,90 200,90 Q110,90 80,182" fill="none" stroke="#C9543E" stroke-width="1.6" stroke-dasharray="5,4" marker-end="url(#arRed)"/>
-  <text x="285" y="80" text-anchor="middle" font-size="11" fill="#C9543E">下一轮搜索绕开</text>
+  <line x1="464" y1="270" x2="556" y2="290" stroke="#C9633F" stroke-width="2" marker-end="url(#arrRed)"/>
+
+  <!-- Feedback loop -->
+  <path d="M 650 330 Q 650 420 360 420 Q 100 420 100 290" fill="none" stroke="#C9633F" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#arrRed)"/>
+  <text x="380" y="412" text-anchor="middle" font-family="Helvetica,Arial" font-size="12" fill="#C9633F" font-style="italic">失败模式 → 下一轮的禁止方向</text>
+
+  <text x="400" y="470" text-anchor="middle" font-family="Helvetica,Arial" font-size="12" fill="#3D4F65">在烧 GPU 之前，先挡住语义错误</text>
 </svg>

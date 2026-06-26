@@ -1,53 +1,60 @@
-<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 440" font-family="-apple-system,Segoe UI,sans-serif">
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <text x="360" y="40" text-anchor="middle" font-size="20" font-weight="600" fill="#1E3A5F">风险越高，越需要人盯着</text>
+  <text x="360" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">技能规范覆盖度决定 AutoRun 还是 Copilot</text>
+
+  <!-- Baseline -->
+  <line x1="90" y1="400" x2="640" y2="400" stroke="#B8C5D6" stroke-width="1.5"/>
+
+  <!-- Arrow marker -->
   <defs>
-    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <marker id="arrA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
       <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arrB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#D9624C"/>
     </marker>
   </defs>
 
-  <text x="300" y="36" text-anchor="middle" font-size="18" font-weight="700" fill="#1E3A5F">风险越高 · 人越靠近方向盘</text>
+  <!-- L1 -->
+  <circle cx="120" cy="335" r="22" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="120" y="340" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">L1</text>
+  <text x="120" y="425" text-anchor="middle" font-size="12" fill="#3D4F65">L1 原子调参</text>
 
-  <!-- Ladder bars -->
-  <rect x="80" y="80" width="180" height="56" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
-  <text x="100" y="114" font-size="15" font-weight="700" fill="#1E3A5F">L1</text>
-  <text x="140" y="107" font-size="12" fill="#3D4F65">原子调参</text>
-  <text x="140" y="125" font-size="11" fill="#7A8A9E">低风险</text>
+  <!-- L2 -->
+  <circle cx="295" cy="305" r="32" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+  <text x="295" y="310" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">L2</text>
+  <text x="295" y="425" text-anchor="middle" font-size="12" fill="#3D4F65">L2 约束 ScaleUp</text>
 
-  <rect x="80" y="146" width="240" height="56" rx="8" fill="#EFF6FF" stroke="#4B8BDA"/>
-  <text x="100" y="180" font-size="15" font-weight="700" fill="#1E3A5F">L2</text>
-  <text x="140" y="173" font-size="12" fill="#3D4F65">约束感知 ScaleUp</text>
-  <text x="140" y="191" font-size="11" fill="#7A8A9E">预算守门</text>
+  <!-- L3 -->
+  <circle cx="465" cy="260" r="44" fill="#FFF1E6" stroke="#E89B5A" stroke-width="2"/>
+  <text x="465" y="265" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">L3</text>
+  <text x="465" y="425" text-anchor="middle" font-size="12" fill="#3D4F65">L3 论文到生产</text>
 
-  <rect x="80" y="212" width="320" height="56" rx="8" fill="#FFF4E6" stroke="#E89B4C"/>
-  <text x="100" y="246" font-size="15" font-weight="700" fill="#1E3A5F">L3</text>
-  <text x="140" y="239" font-size="12" fill="#3D4F65">论文 → 生产迁移</text>
-  <text x="140" y="257" font-size="11" fill="#A66A2C">语义易破</text>
+  <!-- L4 -->
+  <circle cx="615" cy="195" r="58" fill="#FFE4E1" stroke="#D9624C" stroke-width="2"/>
+  <text x="615" y="201" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">L4</text>
+  <text x="615" y="425" text-anchor="middle" font-size="12" fill="#3D4F65">L4 开放创新</text>
 
-  <rect x="80" y="278" width="420" height="56" rx="8" fill="#FBE4E4" stroke="#C9504C"/>
-  <text x="100" y="312" font-size="15" font-weight="700" fill="#1E3A5F">L4</text>
-  <text x="140" y="305" font-size="12" fill="#3D4F65">开放式架构创新</text>
-  <text x="140" y="323" font-size="11" fill="#9A3A36">未知边界</text>
+  <!-- AutoRun label (covers L1, L2) -->
+  <g>
+    <rect x="75" y="115" width="170" height="55" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <text x="160" y="138" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">AutoRun · 自动执行</text>
+    <text x="160" y="157" text-anchor="middle" font-size="11" fill="#3D4F65">技能规范已覆盖 · 低风险</text>
+  </g>
+  <line x1="135" y1="170" x2="125" y2="310" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrA)"/>
+  <line x1="185" y1="170" x2="285" y2="278" stroke="#4B8BDA" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrA)"/>
 
-  <!-- Right column: mode -->
-  <text x="540" y="70" text-anchor="middle" font-size="12" font-weight="700" fill="#1E3A5F">执行模式</text>
+  <!-- Copilot label (covers L3, L4) -->
+  <g>
+    <rect x="475" y="80" width="185" height="55" rx="8" fill="#FFE4E1" stroke="#D9624C" stroke-width="1.5"/>
+    <text x="567" y="103" text-anchor="middle" font-size="14" font-weight="600" fill="#1E3A5F">Copilot · 人工确认</text>
+    <text x="567" y="122" text-anchor="middle" font-size="11" fill="#3D4F65">未覆盖 / 高风险 · L4 默认</text>
+  </g>
+  <line x1="510" y1="135" x2="475" y2="226" stroke="#D9624C" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrB)"/>
+  <line x1="610" y1="135" x2="612" y2="142" stroke="#D9624C" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrB)"/>
 
-  <circle cx="540" cy="108" r="18" fill="#4B8BDA"/>
-  <text x="540" y="112" text-anchor="middle" font-size="10" font-weight="700" fill="#FFFFFF">AUTO</text>
-
-  <circle cx="540" cy="174" r="18" fill="#4B8BDA"/>
-  <text x="540" y="178" text-anchor="middle" font-size="10" font-weight="700" fill="#FFFFFF">AUTO</text>
-
-  <circle cx="540" cy="240" r="18" fill="#E89B4C"/>
-  <text x="540" y="244" text-anchor="middle" font-size="10" font-weight="700" fill="#FFFFFF">±人</text>
-
-  <circle cx="540" cy="306" r="18" fill="#C9504C"/>
-  <text x="540" y="310" text-anchor="middle" font-size="10" font-weight="700" fill="#FFFFFF">人</text>
-
-  <!-- Skill spec gauge arrow -->
-  <line x1="50" y1="90" x2="50" y2="330" stroke="#4B8BDA" stroke-width="2" marker-end="url(#a)"/>
-  <text x="30" y="210" font-size="11" fill="#1E3A5F" transform="rotate(-90 30 210)" text-anchor="middle">Skill Spec 覆盖收缩</text>
-
-  <!-- Bottom note -->
-  <text x="300" y="385" text-anchor="middle" font-size="12" fill="#3D4F65">覆盖到 → AutoRun ·  覆盖外 → Copilot</text>
-  <text x="300" y="405" text-anchor="middle" font-size="11" fill="#7A8A9E">能力边界随 skill spec 完善而渐进扩展</text>
+  <!-- Risk legend -->
+  <text x="90" y="455" font-size="11" fill="#7A8A9E">低风险 · 可放手</text>
+  <text x="360" y="455" text-anchor="middle" font-size="11" fill="#7A8A9E">→ 风险递增 ／ 圆越大代表改动越大 →</text>
+  <text x="640" y="455" text-anchor="end" font-size="11" fill="#7A8A9E">高风险 · 必须人审</text>
 </svg>

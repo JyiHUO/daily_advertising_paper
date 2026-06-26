@@ -1,42 +1,50 @@
-<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="-apple-system,Segoe UI,sans-serif">
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
   <defs>
-    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
       <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
     </marker>
   </defs>
 
-  <rect width="720" height="460" fill="#FBF8F3"/>
+  <text x="400" y="40" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="20" font-weight="bold" fill="#1E3A5F">蚕食率：归因里有多少是虚报</text>
 
-  <text x="360" y="40" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">归因 ≠ 真实增量</text>
-  <text x="360" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">蚕食率 C_t = 1 − Lift_t / A_t</text>
+  <!-- Label above bar -->
+  <text x="140" y="90" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">归因报出 A = 10000</text>
 
-  <!-- Attribution label -->
-  <text x="100" y="108" font-size="13" fill="#1E3A5F" font-weight="600">归因 A_t = 1000</text>
+  <!-- Big bar background -->
+  <rect x="120" y="100" width="560" height="70" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2" rx="4"/>
 
-  <!-- Big bar background (attribution total) -->
-  <rect x="100" y="120" width="520" height="70" rx="6" fill="#DCE7F5" stroke="#4B8BDA" stroke-width="1.5"/>
+  <!-- Real Lift portion -->
+  <rect x="120" y="100" width="336" height="70" fill="#A8D08D" stroke="#5E8C3A" stroke-width="2" rx="4"/>
+  <text x="288" y="135" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="16" font-weight="bold" fill="#1E3A5F">真实增量 Lift = 6000</text>
+  <text x="288" y="155" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#3D4F65">广告功劳</text>
 
-  <!-- Lift portion -->
-  <rect x="100" y="120" width="370" height="70" rx="6" fill="#A9C8EC" stroke="#1E3A5F" stroke-width="1.5"/>
-  <text x="285" y="160" text-anchor="middle" font-size="15" fill="#1E3A5F" font-weight="700">真实增量 Lift = 750</text>
+  <!-- Cannibalization portion -->
+  <rect x="456" y="100" width="224" height="70" fill="#F2B6B6" stroke="#B8504F" stroke-width="2" rx="4"/>
+  <text x="568" y="135" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="16" font-weight="bold" fill="#1E3A5F">蚕食量 H = 4000</text>
+  <text x="568" y="155" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#3D4F65">本来就会来</text>
 
-  <!-- Cannibalization gap -->
-  <rect x="470" y="120" width="150" height="70" rx="6" fill="#E8B4A0" stroke="#C66B4A" stroke-width="1.5"/>
-  <text x="545" y="155" text-anchor="middle" font-size="13" fill="#7A3520" font-weight="700">蚕食缺口</text>
-  <text x="545" y="174" text-anchor="middle" font-size="13" fill="#7A3520" font-weight="700">H = 250</text>
+  <!-- Causal anchor: experiment -->
+  <circle cx="170" cy="290" r="50" fill="#FFF4E0" stroke="#D89A3D" stroke-width="2"/>
+  <text x="170" y="287" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" fill="#1E3A5F">增量实验</text>
+  <text x="170" y="306" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65">因果锚点</text>
 
-  <!-- Bracket / labels -->
-  <text x="285" y="215" text-anchor="middle" font-size="12" fill="#3D4F65">广告真的带来的 (增量)</text>
-  <text x="545" y="215" text-anchor="middle" font-size="12" fill="#C66B4A">本来就会来的 (高估)</text>
+  <!-- Formula box -->
+  <rect x="280" y="240" width="240" height="100" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2" rx="6"/>
+  <text x="400" y="268" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">蚕食率 C = 1 − Lift / A</text>
+  <text x="400" y="298" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="15" fill="#3D4F65">= 1 − 6000 / 10000</text>
+  <text x="400" y="325" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="16" font-weight="bold" fill="#B8504F">= 40%</text>
 
-  <!-- Formula -->
-  <text x="360" y="285" text-anchor="middle" font-size="14" fill="#1E3A5F" font-weight="600">校正后增量 = A_t × (1 − C_t) = 1000 × 0.75</text>
+  <!-- Output: corrected -->
+  <rect x="585" y="240" width="160" height="100" fill="#E6F4EA" stroke="#5E8C3A" stroke-width="2" rx="6"/>
+  <text x="665" y="270" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" fill="#1E3A5F">校正归因 I = A·(1−C)</text>
+  <text x="665" y="300" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#3D4F65">真正算作广告增量</text>
+  <text x="665" y="325" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="16" font-weight="bold" fill="#5E8C3A">6000</text>
 
-  <!-- Arrow -->
-  <line x1="360" y1="300" x2="360" y2="345" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+  <!-- Arrows -->
+  <path d="M 220 290 L 278 290" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
+  <path d="M 520 290 L 583 290" fill="none" stroke="#4B8BDA" stroke-width="2" marker-end="url(#arr)"/>
 
-  <!-- Output box -->
-  <rect x="230" y="355" width="260" height="60" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
-  <text x="360" y="382" text-anchor="middle" font-size="14" fill="#1E3A5F" font-weight="700">送给预算分配的数字：750</text>
-  <text x="360" y="401" text-anchor="middle" font-size="12" fill="#3D4F65">（而不是归因报出的 1000）</text>
+  <!-- Bottom note -->
+  <text x="400" y="410" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#3D4F65">用稀疏实验反推虚报比例，再修正每日归因</text>
+  <text x="400" y="432" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#B8504F">C &lt; 0 时不直接采用，仅作为诊断信号</text>
 </svg>
