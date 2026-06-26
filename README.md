@@ -4,18 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-06-25
+- **日期**：2026-06-26
 - **分类**：cs.IR + cs.AI + cs.LG
-- **候选论文数**：4
+- **候选论文数**：11
 - **必读论文**：
-  - Recommendation as Generation: Unifying Personalized Video Generation and Recommendation at Industrial Scale
-  - Extreme Meta-Classification for Large-Scale Zero-Shot Retrieval
-- **日报路径**：[2026-06-25/daily_report.md](2026-06-25/daily_report.md)
+  - Attributed, But Not Incremental: Cannibalization-Corrected Attribution for Large-Scale Advertising
+  - NOVA: A Verification-Aware Agent Harness for Architecture Evolution in Industrial Recommender Systems
+- **日报路径**：[2026-06-26/daily_report.md](2026-06-26/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-06-26 | cs.IR + cs.AI + cs.LG | 11 | 1 | Attributed, But Not Incremental: Cannibalization-Corrected Attribution for Large-Scale Advertising | [2026-06-26/daily_report.md](2026-06-26/daily_report.md) |
+|  |  |  | 2 | NOVA: A Verification-Aware Agent Harness for Architecture Evolution in Industrial Recommender Systems |  |
 | 2026-06-25 | cs.IR + cs.AI + cs.LG | 4 | 1 | Recommendation as Generation: Unifying Personalized Video Generation and Recommendation at Industrial Scale | [2026-06-25/daily_report.md](2026-06-25/daily_report.md) |
 |  |  |  | 2 | Extreme Meta-Classification for Large-Scale Zero-Shot Retrieval |  |
 | 2026-06-24 | cs.IR + cs.AI + cs.LG | 5 | 1 | Scaling Dense Retrieval with LLM-Annotated Training Data: Structured Mining and Progressive Curriculum for E-Commerce Sponsored Search | [2026-06-24/daily_report.md](2026-06-24/daily_report.md) |

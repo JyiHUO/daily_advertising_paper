@@ -1,0 +1,42 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" font-family="-apple-system,Segoe UI,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <rect width="720" height="460" fill="#FBF8F3"/>
+
+  <text x="360" y="40" text-anchor="middle" font-size="20" font-weight="700" fill="#1E3A5F">归因 ≠ 真实增量</text>
+  <text x="360" y="62" text-anchor="middle" font-size="13" fill="#3D4F65">蚕食率 C_t = 1 − Lift_t / A_t</text>
+
+  <!-- Attribution label -->
+  <text x="100" y="108" font-size="13" fill="#1E3A5F" font-weight="600">归因 A_t = 1000</text>
+
+  <!-- Big bar background (attribution total) -->
+  <rect x="100" y="120" width="520" height="70" rx="6" fill="#DCE7F5" stroke="#4B8BDA" stroke-width="1.5"/>
+
+  <!-- Lift portion -->
+  <rect x="100" y="120" width="370" height="70" rx="6" fill="#A9C8EC" stroke="#1E3A5F" stroke-width="1.5"/>
+  <text x="285" y="160" text-anchor="middle" font-size="15" fill="#1E3A5F" font-weight="700">真实增量 Lift = 750</text>
+
+  <!-- Cannibalization gap -->
+  <rect x="470" y="120" width="150" height="70" rx="6" fill="#E8B4A0" stroke="#C66B4A" stroke-width="1.5"/>
+  <text x="545" y="155" text-anchor="middle" font-size="13" fill="#7A3520" font-weight="700">蚕食缺口</text>
+  <text x="545" y="174" text-anchor="middle" font-size="13" fill="#7A3520" font-weight="700">H = 250</text>
+
+  <!-- Bracket / labels -->
+  <text x="285" y="215" text-anchor="middle" font-size="12" fill="#3D4F65">广告真的带来的 (增量)</text>
+  <text x="545" y="215" text-anchor="middle" font-size="12" fill="#C66B4A">本来就会来的 (高估)</text>
+
+  <!-- Formula -->
+  <text x="360" y="285" text-anchor="middle" font-size="14" fill="#1E3A5F" font-weight="600">校正后增量 = A_t × (1 − C_t) = 1000 × 0.75</text>
+
+  <!-- Arrow -->
+  <line x1="360" y1="300" x2="360" y2="345" stroke="#4B8BDA" stroke-width="2.5" marker-end="url(#ar)"/>
+
+  <!-- Output box -->
+  <rect x="230" y="355" width="260" height="60" rx="8" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+  <text x="360" y="382" text-anchor="middle" font-size="14" fill="#1E3A5F" font-weight="700">送给预算分配的数字：750</text>
+  <text x="360" y="401" text-anchor="middle" font-size="12" fill="#3D4F65">（而不是归因报出的 1000）</text>
+</svg>

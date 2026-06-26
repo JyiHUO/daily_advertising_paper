@@ -1,0 +1,153 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" font-family="-apple-system,'Helvetica Neue',Arial,sans-serif">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#E07B5A"/>
+    </marker>
+    <linearGradient id="bar1" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#4B8BDA"/>
+      <stop offset="70%" stop-color="#4B8BDA"/>
+      <stop offset="70%" stop-color="#E07B5A"/>
+      <stop offset="100%" stop-color="#E07B5A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-size="22" font-weight="700" fill="#1E3A5F">归因 ≠ 增量：用稀疏实验校准每日蚕食</text>
+  <text x="450" y="66" text-anchor="middle" font-size="13" fill="#3D4F65">Cannibalization-Corrected Attribution for Large-Scale Advertising</text>
+
+  <!-- Left: the tension -->
+  <g>
+    <text x="155" y="110" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">核心张力</text>
+
+    <!-- Attribution bar -->
+    <text x="60" y="148" font-size="12" fill="#3D4F65">归因 A_t</text>
+    <rect x="60" y="155" width="220" height="26" fill="url(#bar1)" rx="3"/>
+    <text x="125" y="173" text-anchor="middle" font-size="11" fill="#FFFFFF" font-weight="600">真实增量 Lift</text>
+    <text x="250" y="173" text-anchor="middle" font-size="10" fill="#FFFFFF" font-weight="600">蚕食</text>
+
+    <!-- True lift bar -->
+    <text x="60" y="208" font-size="12" fill="#3D4F65">实际增量</text>
+    <rect x="60" y="215" width="154" height="26" fill="#4B8BDA" rx="3"/>
+    <text x="137" y="233" text-anchor="middle" font-size="11" fill="#FFFFFF" font-weight="600">Lift_t</text>
+
+    <!-- Gap annotation -->
+    <line x1="214" y1="248" x2="280" y2="248" stroke="#E07B5A" stroke-width="1.5"/>
+    <line x1="214" y1="244" x2="214" y2="252" stroke="#E07B5A" stroke-width="1.5"/>
+    <line x1="280" y1="244" x2="280" y2="252" stroke="#E07B5A" stroke-width="1.5"/>
+    <text x="247" y="266" text-anchor="middle" font-size="11" fill="#E07B5A" font-weight="600">高估缺口 H_t</text>
+    <text x="247" y="281" text-anchor="middle" font-size="10" fill="#3D4F65">→ 预算分配失真</text>
+  </g>
+
+  <!-- Center: the mechanism (anchor + diffusion) -->
+  <g transform="translate(450,260)">
+    <!-- outer ring -->
+    <circle cx="0" cy="0" r="135" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="92" fill="#FFFFFF" stroke="#4B8BDA" stroke-width="1" stroke-dasharray="3 3"/>
+
+    <!-- sparse experiment anchors -->
+    <circle cx="-95" cy="-60" r="9" fill="#E07B5A"/>
+    <circle cx="80" cy="-78" r="9" fill="#E07B5A"/>
+    <circle cx="100" cy="55" r="9" fill="#E07B5A"/>
+    <circle cx="-70" cy="85" r="9" fill="#E07B5A"/>
+
+    <!-- daily dots (calibrated) -->
+    <g fill="#4B8BDA">
+      <circle cx="-40" cy="-55" r="3"/>
+      <circle cx="-10" cy="-70" r="3"/>
+      <circle cx="25" cy="-58" r="3"/>
+      <circle cx="50" cy="-30" r="3"/>
+      <circle cx="60" cy="0" r="3"/>
+      <circle cx="55" cy="30" r="3"/>
+      <circle cx="30" cy="55" r="3"/>
+      <circle cx="-5" cy="65" r="3"/>
+      <circle cx="-35" cy="55" r="3"/>
+      <circle cx="-55" cy="25" r="3"/>
+      <circle cx="-60" cy="-10" r="3"/>
+      <circle cx="-50" cy="-35" r="3"/>
+      <circle cx="15" cy="-20" r="3"/>
+      <circle cx="-20" cy="15" r="3"/>
+      <circle cx="25" cy="20" r="3"/>
+    </g>
+
+    <!-- core label -->
+    <text x="0" y="-4" text-anchor="middle" font-size="15" font-weight="700" fill="#1E3A5F">ETDC</text>
+    <text x="0" y="14" text-anchor="middle" font-size="10" fill="#3D4F65">实验→天级校准</text>
+
+    <!-- legend inside ring -->
+    <circle cx="-95" cy="118" r="5" fill="#E07B5A"/>
+    <text x="-85" y="122" font-size="10" fill="#3D4F65">稀疏实验锚点</text>
+    <circle cx="15" cy="118" r="3" fill="#4B8BDA"/>
+    <text x="23" y="122" font-size="10" fill="#3D4F65">每日校准 Ĉ_t</text>
+  </g>
+
+  <!-- Arrow left → center -->
+  <path d="M 285 200 Q 340 180 318 145" fill="none" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+  <text x="335" y="180" font-size="11" fill="#1E3A5F" font-weight="600">校准</text>
+
+  <!-- Right side: HCA hierarchy -->
+  <g transform="translate(680,150)">
+    <text x="60" y="0" text-anchor="middle" font-size="13" font-weight="600" fill="#1E3A5F">HCA 层级分摊</text>
+    <text x="60" y="16" text-anchor="middle" font-size="10" fill="#3D4F65">结构一致 · 兄弟归一</text>
+
+    <!-- parent -->
+    <rect x="25" y="32" width="70" height="28" rx="4" fill="#4B8BDA"/>
+    <text x="60" y="51" text-anchor="middle" font-size="11" fill="#FFFFFF" font-weight="600">渠道 H</text>
+
+    <!-- children -->
+    <line x1="60" y1="60" x2="10" y2="86" stroke="#4B8BDA" stroke-width="1.2"/>
+    <line x1="60" y1="60" x2="45" y2="86" stroke="#4B8BDA" stroke-width="1.2"/>
+    <line x1="60" y1="60" x2="80" y2="86" stroke="#4B8BDA" stroke-width="1.2"/>
+    <line x1="60" y1="60" x2="115" y2="86" stroke="#4B8BDA" stroke-width="1.2"/>
+
+    <rect x="-8" y="86" width="36" height="22" rx="3" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="10" y="101" text-anchor="middle" font-size="10" fill="#1E3A5F">120</text>
+    <rect x="30" y="86" width="36" height="22" rx="3" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="48" y="101" text-anchor="middle" font-size="10" fill="#1E3A5F">90</text>
+    <rect x="68" y="86" width="36" height="22" rx="3" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="86" y="101" text-anchor="middle" font-size="10" fill="#1E3A5F">60</text>
+    <rect x="106" y="86" width="36" height="22" rx="3" fill="#EFF6FF" stroke="#4B8BDA"/>
+    <text x="124" y="101" text-anchor="middle" font-size="10" fill="#1E3A5F">30</text>
+
+    <text x="60" y="128" text-anchor="middle" font-size="10" fill="#3D4F65">∑子 = 父校准量</text>
+  </g>
+
+  <!-- arrow center → HCA -->
+  <path d="M 580 220 Q 640 200 680 210" fill="none" stroke="#4B8BDA" stroke-width="1.8" marker-end="url(#ar)"/>
+  <text x="615" y="200" font-size="11" fill="#1E3A5F" font-weight="600">分摊</text>
+
+  <!-- Bottom: outcome -->
+  <g transform="translate(0,460)">
+    <rect x="80" y="0" width="740" height="120" rx="10" fill="#FFF5EF" stroke="#E07B5A" stroke-width="1.2"/>
+
+    <text x="450" y="26" text-anchor="middle" font-size="13" font-weight="700" fill="#1E3A5F">部署结果 · TikTok 多市场</text>
+
+    <!-- metric 1 -->
+    <g transform="translate(140,48)">
+      <text x="0" y="0" font-size="11" fill="#3D4F65">归一化校准误差</text>
+      <text x="0" y="40" font-size="28" font-weight="700" fill="#E07B5A">−91%</text>
+      <text x="0" y="58" font-size="10" fill="#3D4F65">vs 原始归因</text>
+    </g>
+
+    <!-- metric 2 -->
+    <g transform="translate(390,48)">
+      <text x="0" y="0" font-size="11" fill="#3D4F65">设备级 ML 基线仅</text>
+      <text x="0" y="40" font-size="28" font-weight="700" fill="#3D4F65">−69%</text>
+      <text x="0" y="58" font-size="10" fill="#3D4F65">分布更宽 · 时有反向偏</text>
+    </g>
+
+    <!-- metric 3 -->
+    <g transform="translate(620,48)">
+      <text x="0" y="0" font-size="11" fill="#3D4F65">实测蚕食率</text>
+      <text x="0" y="40" font-size="28" font-weight="700" fill="#E07B5A">−15pp</text>
+      <text x="0" y="58" font-size="10" fill="#3D4F65">预算策略调整后</text>
+    </g>
+  </g>
+
+  <!-- arrow mechanism → outcome -->
+  <path d="M 450 398 L 450 455" fill="none" stroke="#E07B5A" stroke-width="2" marker-end="url(#arO)"/>
+  <text x="462" y="430" font-size="11" fill="#E07B5A" font-weight="600">上线</text>
+
+</svg>

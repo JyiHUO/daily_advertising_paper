@@ -1,0 +1,9 @@
+{
+  "title": "AI 计算广告论文播报 2026-06-26：归因别只看数字，Agent别只看测试通过",
+  "shownotes_html": "<p>这一期我们聊两件事：广告归因里那些被悄悄高估的数字，以及让 Agent 改推荐架构时那些悄悄失败的代码。它们看起来一个偏度量、一个偏工程，但底下是同一个判断——算法侧边际收益变薄，真正的增长来自把系统里那些<em>看起来在工作、其实没在工作</em>的环节修对。</p><p><strong>本期重点</strong></p><ul><li><strong>归因了，但不是增量（Attributed, But Not Incremental: Cannibalization-Corrected Attribution for Large-Scale Advertising）</strong>：TikTok 用稀疏的增量实验当因果锚点，去校准每天都在跑的归因数字，再用层级一致分配把蚕食量切到 campaign 级；线上整体蚕食率下降约 15 个百分点。</li><li><strong>NOVA：工业推荐架构演进的验证感知 Agent（NOVA: A Verification-Aware Agent Harness for Architecture Evolution in Industrial Recommender Systems）</strong>：在烧 GPU 之前先做一层\"懂推荐语义\"的代码审稿，拦住那些\"代码能跑但架构错了\"的 silent failure，并把失败模式沉淀成下一轮的禁止方向，A/B 拿到 pCVR/GMV 双增。</li><li><strong>CHAUN：未观测混杂下的 Uplift 网络（Cross-Head Attention Uplift Network with IPS under Unobserved Confounding）</strong>：用跨头注意力共享组间相似性表征，结合鲁棒对抗式 IPS 去偏，把 Uplift 在判别力和去混杂两侧同时往前推。</li><li><strong>AIGP：电商定价的长期价值对齐（AIGP: An LLM-Based Framework for Long-Term Value Alignment in E-Commerce Pricing）</strong>：淘宝用 LLM 编码非结构化商品信息 + 离线 RL 优化累计 GMV/ROI，与广告出价的长期价值优化高度同构，值得对照看。</li></ul><p><strong>今日趋势</strong></p><ul><li>归因、Uplift、长期定价三篇拼在一起，正好覆盖商业化决策从度量到个体增量再到长期对齐的整条链路。</li><li>NOVA 与 AgentX 同日出现，工业排序系统正集体走向\"Agent 驱动自迭代\"；与此同时 GPUSparse、TileMaxSim 等把检索打到 IO 级 GPU 优化，效率工程成为新的增长来源。</li></ul><p>本期内容由 AI 自动生成，欢迎在评论区留下你想听的论文或方向，我们下期见。</p>",
+  "report_date": "2026-06-26",
+  "provider": "litellm-opus",
+  "archive_url": "",
+  "fallback": false,
+  "generated_at": "2026-06-26T21:45:13Z"
+}

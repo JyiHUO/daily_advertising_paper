@@ -1,0 +1,18 @@
+{
+  "date": "2026-06-26",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 11,
+  "supplementary_count": 2,
+  "focus_titles": [
+    "Attributed, But Not Incremental: Cannibalization-Corrected Attribution for Large-Scale Advertising",
+    "NOVA: A Verification-Aware Agent Harness for Architecture Evolution in Industrial Recommender Systems"
+  ],
+  "focus_status": {
+    "Attributed, But Not Incremental: Cannibalization-Corrected Attribution for Large-Scale Advertising": "completed",
+    "NOVA: A Verification-Aware Agent Harness for Architecture Evolution in Industrial Recommender Systems": "completed"
+  }
+}

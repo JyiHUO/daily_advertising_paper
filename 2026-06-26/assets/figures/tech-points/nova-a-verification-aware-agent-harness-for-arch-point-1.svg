@@ -1,0 +1,56 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+    <marker id="arRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#C97064"/>
+    </marker>
+  </defs>
+
+  <text x="300" y="36" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="18" font-weight="bold" fill="#1E3A5F">架构梯度 = 笔记式 SGD</text>
+
+  <!-- Notebook (memory of past trials) -->
+  <rect x="40" y="90" width="180" height="230" rx="8" fill="#FFF6E5" stroke="#D9A441" stroke-width="2"/>
+  <text x="130" y="115" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" fill="#1E3A5F">轨迹笔记</text>
+  <line x1="60" y1="128" x2="200" y2="128" stroke="#D9A441" stroke-width="1"/>
+
+  <text x="60" y="152" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">· 上次修改 e</text>
+  <text x="60" y="174" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">· 验证诊断</text>
+  <text x="60" y="196" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#3D4F65">· ΔAUC</text>
+  <text x="60" y="224" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#C97064">✗ 单独放大 token-dim</text>
+  <text x="60" y="246" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#C97064">✗ 去掉 seq-mask</text>
+  <text x="130" y="290" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#7A6240" font-style="italic">离散结构 · 无法求导</text>
+
+  <!-- Gradient core -->
+  <circle cx="330" cy="205" r="62" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2.5"/>
+  <text x="330" y="200" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">架构梯度 g</text>
+  <text x="330" y="222" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#4B8BDA">LLM 总结</text>
+
+  <!-- Arrow notebook -> g -->
+  <path d="M220 205 L268 205" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <text x="244" y="197" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#3D4F65">聚合</text>
+
+  <!-- Three outputs -->
+  <rect x="440" y="100" width="130" height="50" rx="6" fill="#EAF4EA" stroke="#5B9F5B" stroke-width="1.8"/>
+  <text x="505" y="122" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#1E3A5F">薄弱组件</text>
+  <text x="505" y="140" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#3D4F65">瓶颈在哪</text>
+
+  <rect x="440" y="180" width="130" height="50" rx="6" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="1.8"/>
+  <text x="505" y="202" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#1E3A5F">推荐方向</text>
+  <text x="505" y="220" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#3D4F65">下一步往哪改</text>
+
+  <rect x="440" y="260" width="130" height="50" rx="6" fill="#FBEDEC" stroke="#C97064" stroke-width="1.8"/>
+  <text x="505" y="282" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" fill="#1E3A5F">禁止方向</text>
+  <text x="505" y="300" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#3D4F65">踩过的雷</text>
+
+  <path d="M378 170 L440 130" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M392 205 L440 205" stroke="#4B8BDA" stroke-width="2" fill="none" marker-end="url(#ar)"/>
+  <path d="M378 240 L440 280" stroke="#C97064" stroke-width="2" fill="none" marker-end="url(#arRed)"/>
+
+  <!-- Feedback loop: outputs feed back into notebook -->
+  <path d="M440 285 Q 130 360 130 320" stroke="#8AA0B5" stroke-width="1.5" stroke-dasharray="5,4" fill="none" marker-end="url(#ar)" opacity="0.7"/>
+  <text x="300" y="355" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="10" fill="#5A6B80">新试验结果写回笔记</text>
+
+  <text x="300" y="400" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65" font-style="italic">文字诊断当作"梯度方向"，驱动下一轮架构改写</text>
+</svg>

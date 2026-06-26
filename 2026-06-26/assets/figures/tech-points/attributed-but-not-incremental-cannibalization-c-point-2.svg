@@ -1,0 +1,61 @@
+<svg height="960" width="1440" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#4B8BDA"/>
+    </marker>
+  </defs>
+
+  <text x="400" y="36" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="20" font-weight="bold" fill="#1E3A5F">ETDC：把稀疏实验点扩成连续校准曲线</text>
+
+  <!-- Sparse experiment dots -->
+  <g>
+    <text x="400" y="70" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#3D4F65">稀疏实验 lift（真值）</text>
+    <line x1="60" y1="170" x2="740" y2="170" stroke="#C9D4E2" stroke-width="1.5"/>
+    <text x="55" y="174" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#7A8AA0">时间</text>
+
+    <circle cx="140" cy="140" r="6" fill="#E07A5F"/>
+    <circle cx="300" cy="120" r="6" fill="#E07A5F"/>
+    <circle cx="480" cy="145" r="6" fill="#E07A5F"/>
+    <circle cx="640" cy="125" r="6" fill="#E07A5F"/>
+
+    <text x="740" y="120" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#E07A5F" font-style="italic">稀疏 · 延迟 · 贵</text>
+  </g>
+
+  <!-- Arrows: dots -> model (straight) -->
+  <line x1="140" y1="146" x2="300" y2="232" stroke="#4B8BDA" stroke-width="1.6" stroke-dasharray="4,3" marker-end="url(#ar)"/>
+  <line x1="300" y1="126" x2="370" y2="232" stroke="#4B8BDA" stroke-width="1.6" stroke-dasharray="4,3" marker-end="url(#ar)"/>
+  <line x1="480" y1="151" x2="430" y2="232" stroke="#4B8BDA" stroke-width="1.6" stroke-dasharray="4,3" marker-end="url(#ar)"/>
+  <line x1="640" y1="131" x2="500" y2="232" stroke="#4B8BDA" stroke-width="1.6" stroke-dasharray="4,3" marker-end="url(#ar)"/>
+
+  <!-- Model in middle -->
+  <g>
+    <rect x="250" y="240" width="300" height="70" rx="10" fill="#EFF6FF" stroke="#4B8BDA" stroke-width="2"/>
+    <text x="400" y="268" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" fill="#1E3A5F">GLM + Huber loss</text>
+    <text x="400" y="292" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="12" fill="#3D4F65">特征：代理变量 · 时间结构 · 渠道状态</text>
+  </g>
+
+  <!-- Arrow model -> curve -->
+  <line x1="400" y1="310" x2="400" y2="395" stroke="#4B8BDA" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Output: continuous curve every day -->
+  <g>
+    <line x1="60" y1="450" x2="740" y2="450" stroke="#C9D4E2" stroke-width="1.5"/>
+    <path d="M60,425 Q140,400 220,415 T380,413 T540,400 T720,410"
+          stroke="#4B8BDA" stroke-width="2.5" fill="none"/>
+    <g fill="#4B8BDA">
+      <circle cx="100" cy="420" r="2.5"/>
+      <circle cx="160" cy="407" r="2.5"/>
+      <circle cx="220" cy="415" r="2.5"/>
+      <circle cx="280" cy="416" r="2.5"/>
+      <circle cx="340" cy="414" r="2.5"/>
+      <circle cx="400" cy="411" r="2.5"/>
+      <circle cx="460" cy="407" r="2.5"/>
+      <circle cx="520" cy="402" r="2.5"/>
+      <circle cx="580" cy="403" r="2.5"/>
+      <circle cx="640" cy="407" r="2.5"/>
+      <circle cx="700" cy="410" r="2.5"/>
+    </g>
+    <text x="400" y="482" text-anchor="middle" font-family="Helvetica,Arial,sans-serif" font-size="13" fill="#3D4F65">每日预测 lift → 校准归因（C-t、A-t）</text>
+    <text x="740" y="395" text-anchor="end" font-family="Helvetica,Arial,sans-serif" font-size="11" fill="#4B8BDA" font-style="italic">天级 · 连续 · 平滑</text>
+  </g>
+</svg>
