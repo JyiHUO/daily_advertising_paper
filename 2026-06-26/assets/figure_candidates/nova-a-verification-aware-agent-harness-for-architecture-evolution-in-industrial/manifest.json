@@ -1,0 +1,117 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-26/downloaded_pdfs/nova-a-verification-aware-agent-harness-for-architecture-evolution-in-industrial.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-26/assets/figure_candidates/nova-a-verification-aware-agent-harness-for-architecture-evolution-in-industrial",
+  "candidates": [
+    {
+      "id": "page-0-block-6",
+      "page_index": 0,
+      "caption": "Recommender systems, architecture evolution, multi-agent systems, model verification, industrial advertising",
+      "clip": [
+        23.198000335693358,
+        295.650927734375,
+        325.6295104980469,
+        604.450927734375
+      ],
+      "clip_area": 93390.85033813478,
+      "page_area": 484704.0,
+      "text_density": 0.763934026592497,
+      "kind": "captioned_figure",
+      "score": 78.03767611486816,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-26/assets/figure_candidates/nova-a-verification-aware-agent-harness-for-architecture-evolution-in-industrial/01-p1-captioned_figure.png",
+      "filename": "01-p1-captioned_figure.png"
+    },
+    {
+      "id": "page-4-block-13",
+      "page_index": 4,
+      "caption": "Figure 2: Silent-failure-aware verification cascade. 𝐾 can- didate architecture modifications pass through structure- semantic checking, local executability testing, offline evalu- ation, and online validation. Failed candidates are recorded in trajectory memory 𝐻 and fed back as forbidden directions for the next architecture gradient 𝑔 𝑡 .",
+      "clip": [
+        295.9549865722656,
+        260.8821716308594,
+        580.1585083007812,
+        402.0060119628906
+      ],
+      "clip_area": 40107.89242221601,
+      "page_area": 484704.0,
+      "text_density": 0.04842058597305732,
+      "kind": "image_block_with_caption",
+      "score": 47.445643249135735,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-26/assets/figure_candidates/nova-a-verification-aware-agent-harness-for-architecture-evolution-in-industrial/02-p5-image_block_with_caption.png",
+      "filename": "02-p5-image_block_with_caption.png"
+    },
+    {
+      "id": "page-4-embedded-0-0",
+      "page_index": 4,
+      "caption": "Figure 2: Silent-failure-aware verification cascade. 𝐾 can- didate architecture modifications pass through structure- semantic checking, local executability testing, offline evalu- ation, and online validation. Failed candidates are recorded in trajectory memory 𝐻 and fed back as forbidden directions for the next architecture gradient 𝑔 𝑡 .",
+      "clip": [
+        305.9549865722656,
+        266.8821716308594,
+        570.1585083007812,
+        396.0060119628906
+      ],
+      "clip_area": 34114.9733548332,
+      "page_area": 484704.0,
+      "text_density": 0.007934907409338308,
+      "kind": "embedded_image_with_caption",
+      "xref": 364,
+      "score": 46.379055259498145,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-26/assets/figure_candidates/nova-a-verification-aware-agent-harness-for-architecture-evolution-in-industrial/03-p5-embedded_image_with_caption.png",
+      "filename": "03-p5-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-3-block-9",
+      "page_index": 3,
+      "caption": "4.1 Overview: Level-Aware Architecture-Gradient Workflow",
+      "clip": [
+        23.198000335693358,
+        194.67857666015624,
+        271.2491851806641,
+        503.47857666015625
+      ],
+      "clip_area": 76598.20588012696,
+      "page_area": 484704.0,
+      "text_density": 0.39372623412024055,
+      "kind": "captioned_figure",
+      "score": 38.851091176445856,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-26/assets/figure_candidates/nova-a-verification-aware-agent-harness-for-architecture-evolution-in-industrial/04-p4-captioned_figure.png",
+      "filename": "04-p4-captioned_figure.png"
+    },
+    {
+      "id": "page-8-block-10",
+      "page_index": 8,
+      "caption": "Figure 3: Future evolution roadmap of NOVA across full- funnel scope expansion, full-lifecycle R&D automation, self- evolving skills, and gradient-aware resource scheduling.",
+      "clip": [
+        295.9549865722656,
+        65.68421936035156,
+        580.1686401367188,
+        217.29901123046875
+      ],
+      "clip_area": 43090.99393182015,
+      "page_area": 484704.0,
+      "text_density": 0.029276018348414565,
+      "kind": "image_block_with_caption",
+      "score": 31.47878882146467,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-26/assets/figure_candidates/nova-a-verification-aware-agent-harness-for-architecture-evolution-in-industrial/05-p9-image_block_with_caption.png",
+      "filename": "05-p9-image_block_with_caption.png"
+    },
+    {
+      "id": "page-8-embedded-0-0",
+      "page_index": 8,
+      "caption": "Figure 3: Future evolution roadmap of NOVA across full- funnel scope expansion, full-lifecycle R&D automation, self- evolving skills, and gradient-aware resource scheduling.",
+      "clip": [
+        305.9549865722656,
+        71.68421936035156,
+        570.1686401367188,
+        211.29901123046875
+      ],
+      "clip_area": 36888.13425164437,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 367,
+      "score": 30.409868158351603,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-26/assets/figure_candidates/nova-a-verification-aware-agent-harness-for-architecture-evolution-in-industrial/06-p9-embedded_image_with_caption.png",
+      "filename": "06-p9-embedded_image_with_caption.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-26/assets/figure_candidates/nova-a-verification-aware-agent-harness-for-architecture-evolution-in-industrial/contact-sheet.svg"
+}

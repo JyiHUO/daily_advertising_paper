@@ -1,0 +1,117 @@
+{
+  "pdf_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-26/downloaded_pdfs/attributed-but-not-incremental-cannibalization-corrected-attribution-for-large-s.pdf",
+  "output_dir": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-26/assets/figure_candidates/attributed-but-not-incremental-cannibalization-corrected-attribution-for-large-s",
+  "candidates": [
+    {
+      "id": "page-1-block-2",
+      "page_index": 1,
+      "caption": "Figure 1: Attribution-cannibalization mismatch and cor- rection. Panel (a) shows the non-incremental excess 𝐻 𝑡 = 𝐴 𝑡 − 𝐿𝑖𝑓𝑡 𝑡 ; panel (b) shows experiment-calibrated correction toward incrementality-aligned attribution. Schematic, not drawn to scale.",
+      "clip": [
+        31.79800033569336,
+        65.68726348876953,
+        316.0425720214844,
+        211.4169921875
+      ],
+      "clip_area": 41422.88431585717,
+      "page_area": 484704.0,
+      "text_density": 0.052349816646522385,
+      "kind": "image_block_with_caption",
+      "score": 68.4602542701762,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-26/assets/figure_candidates/attributed-but-not-incremental-cannibalization-corrected-attribution-for-large-s/01-p2-image_block_with_caption.png",
+      "filename": "01-p2-image_block_with_caption.png"
+    },
+    {
+      "id": "page-1-embedded-0-0",
+      "page_index": 1,
+      "caption": "Figure 1: Attribution-cannibalization mismatch and cor- rection. Panel (a) shows the non-incremental excess 𝐻 𝑡 = 𝐴 𝑡 − 𝐿𝑖𝑓𝑡 𝑡 ; panel (b) shows experiment-calibrated correction toward incrementality-aligned attribution. Schematic, not drawn to scale.",
+      "clip": [
+        41.79800033569336,
+        71.68726348876953,
+        306.0425720214844,
+        205.4169921875
+      ],
+      "clip_area": 35337.35488165307,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 110,
+      "score": 67.3926372764628,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-26/assets/figure_candidates/attributed-but-not-incremental-cannibalization-corrected-attribution-for-large-s/02-p2-embedded_image_with_caption.png",
+      "filename": "02-p2-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-2-embedded-0-0",
+      "page_index": 2,
+      "caption": "Figure 2: Overview of the proposed ETDC+HCA framework.",
+      "clip": [
+        305.9549865722656,
+        71.68458557128906,
+        570.1991577148438,
+        182.04498291015625
+      ],
+      "clip_area": 29162.091721774545,
+      "page_area": 484704.0,
+      "text_density": 0.0,
+      "kind": "embedded_image_with_caption",
+      "xref": 113,
+      "score": 39.32402324135305,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-26/assets/figure_candidates/attributed-but-not-incremental-cannibalization-corrected-attribution-for-large-s/03-p3-embedded_image_with_caption.png",
+      "filename": "03-p3-embedded_image_with_caption.png"
+    },
+    {
+      "id": "page-2-block-15",
+      "page_index": 2,
+      "caption": "lightweight add-on layer without modifying the underlying produc- tion attribution pipeline, reducing deployment cost and operational risk.",
+      "clip": [
+        295.9549865722656,
+        65.68458557128906,
+        580.1991577148438,
+        188.04498291015625
+      ],
+      "clip_area": 34780.229722262826,
+      "page_area": 484704.0,
+      "text_density": 0.061288737349564304,
+      "kind": "image_block_with_caption",
+      "score": 38.38644699691403,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-26/assets/figure_candidates/attributed-but-not-incremental-cannibalization-corrected-attribution-for-large-s/04-p3-image_block_with_caption.png",
+      "filename": "04-p3-image_block_with_caption.png"
+    },
+    {
+      "id": "page-0-region-upper-left",
+      "page_index": 0,
+      "caption": "第 1 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.7211806972276603,
+      "score": -11.09083328,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-26/assets/figure_candidates/attributed-but-not-incremental-cannibalization-corrected-attribution-for-large-s/05-p1-layout_region_left_top.png",
+      "filename": "05-p1-layout_region_left_top.png"
+    },
+    {
+      "id": "page-1-region-upper-left",
+      "page_index": 1,
+      "caption": "第 2 页左上区域主图候选",
+      "clip": [
+        18.0,
+        142.56,
+        289.88,
+        443.52000000000004
+      ],
+      "clip_area": 81825.00480000001,
+      "kind": "layout_region_left_top",
+      "page_area": 484704.0,
+      "text_density": 0.6702014152677026,
+      "score": -11.09083328,
+      "image_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-26/assets/figure_candidates/attributed-but-not-incremental-cannibalization-corrected-attribution-for-large-s/06-p2-layout_region_left_top.png",
+      "filename": "06-p2-layout_region_left_top.png"
+    }
+  ],
+  "contact_sheet_path": "/home/ubuntu/arxiv-daily/csir-ad-paper-insights/daily_advertising_paper/2026-06-26/assets/figure_candidates/attributed-but-not-incremental-cannibalization-corrected-attribution-for-large-s/contact-sheet.svg"
+}
