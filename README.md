@@ -4,18 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-06-26
+- **日期**：2026-06-29
 - **分类**：cs.IR + cs.AI + cs.LG
-- **候选论文数**：11
+- **候选论文数**：15
 - **必读论文**：
-  - Attributed, But Not Incremental: Cannibalization-Corrected Attribution for Large-Scale Advertising
-  - NOVA: A Verification-Aware Agent Harness for Architecture Evolution in Industrial Recommender Systems
-- **日报路径**：[2026-06-26/daily_report.md](2026-06-26/daily_report.md)
+  - Graph Dimensionality Reduction for Contextual Bandits: Structure-Specific Regret Bounds under Approximate Smoothness and Noisy Eigenspaces
+  - Benchmarking Multi-Modal Graph-based Social Media Popularity Prediction
+- **日报路径**：[2026-06-29/daily_report.md](2026-06-29/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-06-29 | cs.IR + cs.AI + cs.LG | 15 | 1 | Graph Dimensionality Reduction for Contextual Bandits: Structure-Specific Regret Bounds under Approximate Smoothness and Noisy Eigenspaces | [2026-06-29/daily_report.md](2026-06-29/daily_report.md) |
+|  |  |  | 2 | Benchmarking Multi-Modal Graph-based Social Media Popularity Prediction |  |
 | 2026-06-26 | cs.IR + cs.AI + cs.LG | 11 | 1 | Attributed, But Not Incremental: Cannibalization-Corrected Attribution for Large-Scale Advertising | [2026-06-26/daily_report.md](2026-06-26/daily_report.md) |
 |  |  |  | 2 | NOVA: A Verification-Aware Agent Harness for Architecture Evolution in Industrial Recommender Systems |  |
 | 2026-06-25 | cs.IR + cs.AI + cs.LG | 4 | 1 | Recommendation as Generation: Unifying Personalized Video Generation and Recommendation at Industrial Scale | [2026-06-25/daily_report.md](2026-06-25/daily_report.md) |

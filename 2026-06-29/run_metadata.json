@@ -1,0 +1,18 @@
+{
+  "date": "2026-06-29",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 15,
+  "supplementary_count": 9,
+  "focus_titles": [
+    "Graph Dimensionality Reduction for Contextual Bandits: Structure-Specific Regret Bounds under Approximate Smoothness and Noisy Eigenspaces",
+    "Benchmarking Multi-Modal Graph-based Social Media Popularity Prediction"
+  ],
+  "focus_status": {
+    "Graph Dimensionality Reduction for Contextual Bandits: Structure-Specific Regret Bounds under Approximate Smoothness and Noisy Eigenspaces": "llm_failed",
+    "Benchmarking Multi-Modal Graph-based Social Media Popularity Prediction": "llm_failed"
+  }
+}
