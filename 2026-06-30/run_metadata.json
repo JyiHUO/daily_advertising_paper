@@ -1,0 +1,18 @@
+{
+  "date": "2026-06-30",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 60,
+  "supplementary_count": 10,
+  "focus_titles": [
+    "POEM: Partial-Order Enhanced Real-Time Sequential Modeling for Recommendation",
+    "EvoRec: Self Evolving Agentic Recommender Systems"
+  ],
+  "focus_status": {
+    "POEM: Partial-Order Enhanced Real-Time Sequential Modeling for Recommendation": "llm_failed",
+    "EvoRec: Self Evolving Agentic Recommender Systems": "llm_failed"
+  }
+}
