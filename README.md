@@ -4,18 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-06-30
+- **日期**：2026-07-01
 - **分类**：cs.IR + cs.AI + cs.LG
-- **候选论文数**：60
+- **候选论文数**：21
 - **必读论文**：
-  - POEM: Partial-Order Enhanced Real-Time Sequential Modeling for Recommendation
-  - EvoRec: Self Evolving Agentic Recommender Systems
-- **日报路径**：[2026-06-30/daily_report.md](2026-06-30/daily_report.md)
+  - Personalizing Marketplace Policies with Competing Objectives and Constrained Experiments: Evidence from a Job Marketplace
+  - Estimating Supply Incrementality in Two-sided Marketplaces: A Causal Machine Learning Approach
+- **日报路径**：[2026-07-01/daily_report.md](2026-07-01/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-07-01 | cs.IR + cs.AI + cs.LG | 21 | 1 | Personalizing Marketplace Policies with Competing Objectives and Constrained Experiments: Evidence from a Job Marketplace | [2026-07-01/daily_report.md](2026-07-01/daily_report.md) |
+|  |  |  | 2 | Estimating Supply Incrementality in Two-sided Marketplaces: A Causal Machine Learning Approach |  |
 | 2026-06-30 | cs.IR + cs.AI + cs.LG | 60 | 1 | POEM: Partial-Order Enhanced Real-Time Sequential Modeling for Recommendation | [2026-06-30/daily_report.md](2026-06-30/daily_report.md) |
 |  |  |  | 2 | EvoRec: Self Evolving Agentic Recommender Systems |  |
 | 2026-06-29 | cs.IR + cs.AI + cs.LG | 15 | 1 | Graph Dimensionality Reduction for Contextual Bandits: Structure-Specific Regret Bounds under Approximate Smoothness and Noisy Eigenspaces | [2026-06-29/daily_report.md](2026-06-29/daily_report.md) |

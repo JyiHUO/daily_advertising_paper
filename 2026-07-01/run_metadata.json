@@ -1,0 +1,18 @@
+{
+  "date": "2026-07-01",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 21,
+  "supplementary_count": 10,
+  "focus_titles": [
+    "Personalizing Marketplace Policies with Competing Objectives and Constrained Experiments: Evidence from a Job Marketplace",
+    "Estimating Supply Incrementality in Two-sided Marketplaces: A Causal Machine Learning Approach"
+  ],
+  "focus_status": {
+    "Personalizing Marketplace Policies with Competing Objectives and Constrained Experiments: Evidence from a Job Marketplace": "llm_failed",
+    "Estimating Supply Incrementality in Two-sided Marketplaces: A Causal Machine Learning Approach": "llm_failed"
+  }
+}
