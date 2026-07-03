@@ -1,0 +1,18 @@
+{
+  "date": "2026-07-03",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 19,
+  "supplementary_count": 10,
+  "focus_titles": [
+    "Planning over Matrix-Factorization MDPs for Candidate Generation",
+    "VLAFlow: A Unified Training Framework for Vision-Language-Action Models via Co-training and Future Latent Alignment"
+  ],
+  "focus_status": {
+    "Planning over Matrix-Factorization MDPs for Candidate Generation": "llm_failed",
+    "VLAFlow: A Unified Training Framework for Vision-Language-Action Models via Co-training and Future Latent Alignment": "llm_failed"
+  }
+}

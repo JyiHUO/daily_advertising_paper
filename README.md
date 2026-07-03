@@ -4,18 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-07-02
+- **日期**：2026-07-03
 - **分类**：cs.IR + cs.AI + cs.LG
-- **候选论文数**：23
+- **候选论文数**：19
 - **必读论文**：
-  - AI Native Games: A Survey and Roadmap
-  - A Methodology for Investigating AI Patterns Prevalence in Software Repositories
-- **日报路径**：[2026-07-02/daily_report.md](2026-07-02/daily_report.md)
+  - Planning over Matrix-Factorization MDPs for Candidate Generation
+  - VLAFlow: A Unified Training Framework for Vision-Language-Action Models via Co-training and Future Latent Alignment
+- **日报路径**：[2026-07-03/daily_report.md](2026-07-03/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-07-03 | cs.IR + cs.AI + cs.LG | 19 | 1 | Planning over Matrix-Factorization MDPs for Candidate Generation | [2026-07-03/daily_report.md](2026-07-03/daily_report.md) |
+|  |  |  | 2 | VLAFlow: A Unified Training Framework for Vision-Language-Action Models via Co-training and Future Latent Alignment |  |
 | 2026-07-02 | cs.IR + cs.AI + cs.LG | 23 | 1 | AI Native Games: A Survey and Roadmap | [2026-07-02/daily_report.md](2026-07-02/daily_report.md) |
 |  |  |  | 2 | A Methodology for Investigating AI Patterns Prevalence in Software Repositories |  |
 | 2026-07-01 | cs.IR + cs.AI + cs.LG | 21 | 1 | Personalizing Marketplace Policies with Competing Objectives and Constrained Experiments: Evidence from a Job Marketplace | [2026-07-01/daily_report.md](2026-07-01/daily_report.md) |
