@@ -1,0 +1,18 @@
+{
+  "date": "2026-07-07",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 45,
+  "supplementary_count": 10,
+  "focus_titles": [
+    "Next-Gen Sponsored Search: Crafting the Perfect Query with Inventory-Aware RAG (InvAwr-RAG) Based GenAI",
+    "CanniUplift: A Holistic Framework for Mitigating Seller and Incentive Cannibalization in E-commerce Uplift Modeling"
+  ],
+  "focus_status": {
+    "Next-Gen Sponsored Search: Crafting the Perfect Query with Inventory-Aware RAG (InvAwr-RAG) Based GenAI": "llm_failed",
+    "CanniUplift: A Holistic Framework for Mitigating Seller and Incentive Cannibalization in E-commerce Uplift Modeling": "llm_failed"
+  }
+}
