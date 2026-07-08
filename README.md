@@ -4,18 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-07-07
+- **日期**：2026-07-08
 - **分类**：cs.IR + cs.AI + cs.LG
-- **候选论文数**：45
+- **候选论文数**：22
 - **必读论文**：
-  - Next-Gen Sponsored Search: Crafting the Perfect Query with Inventory-Aware RAG (InvAwr-RAG) Based GenAI
-  - CanniUplift: A Holistic Framework for Mitigating Seller and Incentive Cannibalization in E-commerce Uplift Modeling
-- **日报路径**：[2026-07-07/daily_report.md](2026-07-07/daily_report.md)
+  - Contextual Procurement Auctions with Bandit Learning
+  - Contrastive Predictive Coding with Compression for Enhanced Channel State Feedback in Wireless Networks
+- **日报路径**：[2026-07-08/daily_report.md](2026-07-08/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-07-08 | cs.IR + cs.AI + cs.LG | 22 | 1 | Contextual Procurement Auctions with Bandit Learning | [2026-07-08/daily_report.md](2026-07-08/daily_report.md) |
+|  |  |  | 2 | Contrastive Predictive Coding with Compression for Enhanced Channel State Feedback in Wireless Networks |  |
 | 2026-07-07 | cs.IR + cs.AI + cs.LG | 45 | 1 | Next-Gen Sponsored Search: Crafting the Perfect Query with Inventory-Aware RAG (InvAwr-RAG) Based GenAI | [2026-07-07/daily_report.md](2026-07-07/daily_report.md) |
 |  |  |  | 2 | CanniUplift: A Holistic Framework for Mitigating Seller and Incentive Cannibalization in E-commerce Uplift Modeling |  |
 | 2026-07-03 | cs.IR + cs.AI + cs.LG | 19 | 1 | Planning over Matrix-Factorization MDPs for Candidate Generation | [2026-07-03/daily_report.md](2026-07-03/daily_report.md) |

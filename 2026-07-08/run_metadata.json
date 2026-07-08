@@ -1,0 +1,18 @@
+{
+  "date": "2026-07-08",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 22,
+  "supplementary_count": 10,
+  "focus_titles": [
+    "Contextual Procurement Auctions with Bandit Learning",
+    "Contrastive Predictive Coding with Compression for Enhanced Channel State Feedback in Wireless Networks"
+  ],
+  "focus_status": {
+    "Contextual Procurement Auctions with Bandit Learning": "llm_failed",
+    "Contrastive Predictive Coding with Compression for Enhanced Channel State Feedback in Wireless Networks": "llm_failed"
+  }
+}
