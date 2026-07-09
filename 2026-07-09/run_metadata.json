@@ -1,0 +1,18 @@
+{
+  "date": "2026-07-09",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 22,
+  "supplementary_count": 9,
+  "focus_titles": [
+    "Ad Headline Generation using Self-Critical Masked Language Model",
+    "Robust Federated Learning Under Real-World Client Churn"
+  ],
+  "focus_status": {
+    "Ad Headline Generation using Self-Critical Masked Language Model": "llm_failed",
+    "Robust Federated Learning Under Real-World Client Churn": "llm_failed"
+  }
+}
