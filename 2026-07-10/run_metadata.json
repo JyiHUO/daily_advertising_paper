@@ -1,0 +1,18 @@
+{
+  "date": "2026-07-10",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 23,
+  "supplementary_count": 10,
+  "focus_titles": [
+    "COBART: Controlled, Optimized, Bidirectional and Auto-Regressive Transformer for Ad Headline Generation",
+    "From Triggers to Emotions: A CPM-Grounded Appraisal Multi-Agent for Dynamic Emotional Evolution in Persona-Based Dialogue"
+  ],
+  "focus_status": {
+    "COBART: Controlled, Optimized, Bidirectional and Auto-Regressive Transformer for Ad Headline Generation": "llm_failed",
+    "From Triggers to Emotions: A CPM-Grounded Appraisal Multi-Agent for Dynamic Emotional Evolution in Persona-Based Dialogue": "llm_failed"
+  }
+}

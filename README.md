@@ -4,18 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-07-09
+- **日期**：2026-07-10
 - **分类**：cs.IR + cs.AI + cs.LG
-- **候选论文数**：22
+- **候选论文数**：23
 - **必读论文**：
-  - Ad Headline Generation using Self-Critical Masked Language Model
-  - Robust Federated Learning Under Real-World Client Churn
-- **日报路径**：[2026-07-09/daily_report.md](2026-07-09/daily_report.md)
+  - COBART: Controlled, Optimized, Bidirectional and Auto-Regressive Transformer for Ad Headline Generation
+  - From Triggers to Emotions: A CPM-Grounded Appraisal Multi-Agent for Dynamic Emotional Evolution in Persona-Based Dialogue
+- **日报路径**：[2026-07-10/daily_report.md](2026-07-10/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-07-10 | cs.IR + cs.AI + cs.LG | 23 | 1 | COBART: Controlled, Optimized, Bidirectional and Auto-Regressive Transformer for Ad Headline Generation | [2026-07-10/daily_report.md](2026-07-10/daily_report.md) |
+|  |  |  | 2 | From Triggers to Emotions: A CPM-Grounded Appraisal Multi-Agent for Dynamic Emotional Evolution in Persona-Based Dialogue |  |
 | 2026-07-09 | cs.IR + cs.AI + cs.LG | 22 | 1 | Ad Headline Generation using Self-Critical Masked Language Model | [2026-07-09/daily_report.md](2026-07-09/daily_report.md) |
 |  |  |  | 2 | Robust Federated Learning Under Real-World Client Churn |  |
 | 2026-07-08 | cs.IR + cs.AI + cs.LG | 22 | 1 | Contextual Procurement Auctions with Bandit Learning | [2026-07-08/daily_report.md](2026-07-08/daily_report.md) |
