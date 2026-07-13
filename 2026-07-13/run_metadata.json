@@ -1,0 +1,18 @@
+{
+  "date": "2026-07-13",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 23,
+  "supplementary_count": 6,
+  "focus_titles": [
+    "Agora: Enhancing LLM Agent Reasoning Via Auction-Based Task Allocation",
+    "iLENS: Interpretable LLM-Guided Mixture-of-Experts for Neuroimaging Survival Analysis"
+  ],
+  "focus_status": {
+    "Agora: Enhancing LLM Agent Reasoning Via Auction-Based Task Allocation": "llm_failed",
+    "iLENS: Interpretable LLM-Guided Mixture-of-Experts for Neuroimaging Survival Analysis": "llm_failed"
+  }
+}
