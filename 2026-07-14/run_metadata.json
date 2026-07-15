@@ -1,0 +1,18 @@
+{
+  "date": "2026-07-14",
+  "categories": [
+    "cs.IR",
+    "cs.AI",
+    "cs.LG"
+  ],
+  "candidate_count": 53,
+  "supplementary_count": 10,
+  "focus_titles": [
+    "ZoRRO: A Zero-Weight Personalized Recommender System for Scalable News Recommendation",
+    "Prompt Generation Technical Report"
+  ],
+  "focus_status": {
+    "ZoRRO: A Zero-Weight Personalized Recommender System for Scalable News Recommendation": "llm_failed",
+    "Prompt Generation Technical Report": "llm_failed"
+  }
+}

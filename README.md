@@ -4,18 +4,20 @@
 
 ## 最新日报
 
-- **日期**：2026-07-13
+- **日期**：2026-07-14
 - **分类**：cs.IR + cs.AI + cs.LG
-- **候选论文数**：23
+- **候选论文数**：53
 - **必读论文**：
-  - Agora: Enhancing LLM Agent Reasoning Via Auction-Based Task Allocation
-  - iLENS: Interpretable LLM-Guided Mixture-of-Experts for Neuroimaging Survival Analysis
-- **日报路径**：[2026-07-13/daily_report.md](2026-07-13/daily_report.md)
+  - ZoRRO: A Zero-Weight Personalized Recommender System for Scalable News Recommendation
+  - Prompt Generation Technical Report
+- **日报路径**：[2026-07-14/daily_report.md](2026-07-14/daily_report.md)
 
 ## 历史记录
 
 | 日期 | 分类 | 候选数 | 论文序号 | 必读论文 | 日报 |
 |---|---|---:|---:|---|---|
+| 2026-07-14 | cs.IR + cs.AI + cs.LG | 53 | 1 | ZoRRO: A Zero-Weight Personalized Recommender System for Scalable News Recommendation | [2026-07-14/daily_report.md](2026-07-14/daily_report.md) |
+|  |  |  | 2 | Prompt Generation Technical Report |  |
 | 2026-07-13 | cs.IR + cs.AI + cs.LG | 23 | 1 | Agora: Enhancing LLM Agent Reasoning Via Auction-Based Task Allocation | [2026-07-13/daily_report.md](2026-07-13/daily_report.md) |
 |  |  |  | 2 | iLENS: Interpretable LLM-Guided Mixture-of-Experts for Neuroimaging Survival Analysis |  |
 | 2026-07-10 | cs.IR + cs.AI + cs.LG | 23 | 1 | COBART: Controlled, Optimized, Bidirectional and Auto-Regressive Transformer for Ad Headline Generation | [2026-07-10/daily_report.md](2026-07-10/daily_report.md) |
